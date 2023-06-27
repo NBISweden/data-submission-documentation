@@ -7,6 +7,6 @@ Resources: # Links to ontologies, checklists and other resources
 - <link>
 ---
 
-# <Redmine ID> - <Project>
+# Redmine ID - Project
 
 
