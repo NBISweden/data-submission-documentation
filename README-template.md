@@ -1,5 +1,5 @@
 ---
-Redmine_issue: [https://](https://projects.nbis.se/issues/<id>)
+Redmine_issue: https://projects.nbis.se/issues/<id>
 Repository: <repo>
 Data_generating_platforms:
 - <pf>
