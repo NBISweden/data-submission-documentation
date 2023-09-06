@@ -1,0 +1,1 @@
+cp ./NGI_Ion_all_2023_03_01/$1.xls ./NGI_Ion_all_2023_03_01/$1.tsv

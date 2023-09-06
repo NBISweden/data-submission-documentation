@@ -1,0 +1,17 @@
+Column_name         Column_label
+CHROM               Name of reference sequence
+POS                 Position in reference sequence
+REF                 Reference allele
+ALT                 Alternative allele
+VARTYPE             Variant type (i.e. SNP, INS, DEL)
+GEN[*].GT           Genotype (Homozygous/heterozygous)
+ANN[*].GENE         Gene name
+ANN[*].FEATUREID    Protein ID
+EFF[*].RANK         Ranking of the functional effect of the variant
+ANN[*].HGVS_C       Nucleotide substitution
+ANN[*].HGVS_P       Amino acid substitution
+ANN[*].EFFECT       Effect on protein (synonymous, nonsynonymous etc)
+EFF[*].IMPACT       Impact of the variant
+AF                  Allele frequency
+QUAL                Quality score
+DP                  Sequencing depth
