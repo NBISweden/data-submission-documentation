@@ -4,8 +4,6 @@ Repository: ENA
 Submission_type: RNAseq # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Resources: # Links to ontologies, checklists and other resources
-- <link>
 Top_level_acccession: PRJEB63328
 ---
 

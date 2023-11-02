@@ -1,12 +1,10 @@
 ---
-Redmine_issue: <https://projects.nbis.se/issues/6159>
-Repository: <https://www.ebi.ac.uk/biostudies/>
+Redmine_issue: https://projects.nbis.se/issues/6159
+Repository: https://www.ebi.ac.uk/biostudies/
 Submission_type: <type> # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
-- <NGI>
-Resources: # Links to ontologies, checklists and other resources
-- <link>
-Top_level_acccession: <https://www.ebi.ac.uk/biostudies/studies/S-BSST1185>
+- NGI
+Top_level_acccession: https://www.ebi.ac.uk/biostudies/studies/S-BSST1185
 ---
 
 # 6159 - Sharing SARS-CoV-2 variant analysis from Swedish wastewater samples
