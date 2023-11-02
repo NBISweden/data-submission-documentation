@@ -4,8 +4,6 @@ Repository: <repo>
 Submission_type: <type> # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - <pf>
-Resources: # Links to ontologies, checklists and other resources
-- <link>
 Top_level_acccession: <AC>
 ---
 
@@ -19,8 +17,8 @@ _Preconditions etc_
 * this
 * that
 
-
 ## Lessons learned
+<!-- What went well? What did not went so well? What would you have done differently? -->
 
 ## Detailed step by step description
 
