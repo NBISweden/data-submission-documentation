@@ -29,7 +29,7 @@ Data was generated in 2017-2018. PacBio reads were the basis of the assembly, wi
 
 # 2. First scheduled meeting
 
-First meeting between Data Steward (DS) and researchers on 2022-12-02 via Zoom. This was followed up in the week after with communication between Bioinformaticians and researchers on what files to submit, resulting in a list of files for submission consisting of:
+First meeting between Data Steward (DS) and researchers on 2022-12-02 via Zoom. This was followed up in the week after with communication between Bioinformaticians and researchers on which files to submit, resulting in a list of files for submission consisting of:
 
   - 1 file of PacBio RSII filtered subreads in .FASTQ format (1.02G zipped)
   - 4 files of PacBio Sequel reads in .BAM format (3.74G + 4.05G + 2.6G + 2.43G unzipped)
@@ -49,11 +49,11 @@ Data Steward decided to begin submission with the PacBio RSII sequel reads. Sing
   - Submission to be done using the ENA webin-cli client due to the various file formats in the projects. Keeping all submissions to a single solution makes trouble shooting easier. Further, the client java executable, e.g. `webin-cli-6.1.0.jar` was not installed and put in PATH, but was kept in the active submission folder and executed in the Terminal in the respective folder.
   - Researchers provided DS with access to project folder at UPPMAX, for brokering purposes.
   - DS provided with paths to respective files
-> Note: The file tree was rather complex and not easy to navigate. Printed a tree topology to store locally on laptop to facilitate orientation
+> Note: The file tree was rather complex and not easy to navigate. Printed a tree topology to store locally on laptop to facilitate orientation.
 
 # 4. Locus tags
 
-To prepare the assembly data for submission, proper locus tags had to be decided. After consultation the researchers decided on the abbreviation GBAR for the species under study (Geodia BARretti). The locus tag is essential to perform the conversion of .GFF to .EMBL using emblmygff3 later on.
+To prepare the assembly data for submission, proper locus tags had to be decided. After consultation the researchers decided on the abbreviation GBAR for the species under study (Geodia BARretti). The locus tag is essential to perform the conversion of .GFF to .EMBL using EMBLmyGFF3 later on.
 
 # 5. Raw data submissions to ENA
 
@@ -93,7 +93,7 @@ A successful submission was verified by command line output.
 
 ## 5.3 Second submission round (PacBio Sequel reads)
 
-Sinilar to the previous submission of RSII reads (# 5.1 and # 5.2) the 4 .BAM files were downloaded from UPPMAX, validated, and zipped like above. A new manifest file was made in .TXT format (manifest_Sequel_reads.txt) as:
+Similar to the previous submission of RSII reads (# 5.1 and # 5.2) the four .BAM files were downloaded from UPPMAX, validated, and zipped like above. A new manifest file was made in .TXT format (manifest_Sequel_reads.txt) as:
 
 ```
 STUDY PRJEB58046
@@ -121,7 +121,7 @@ After validation pass the command line was changed to:
 
 ## 5.4 Third submission round (HiSeqX reads)
 
-For the two larger HiSeqX files they were, just as before, downloaded from UPPMAX, validated, and zipped. THe manifest (manifest_HiSeqX.txt) was defined as:
+For the two larger HiSeqX files they were, just as before, downloaded from UPPMAX, validated, and zipped. The manifest (manifest_HiSeqX.txt) was defined as:
 
 ```
 STUDY PRJEB58046
