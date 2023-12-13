@@ -87,7 +87,7 @@ The box for "Will you provide a functional genome annotation?" was checked, and 
 
 As the sample metadata is submitted to ENA via COPO there are no visible records at ENA to reference. Instead the submission refers to the BioSample accession numbers. For *Parnassus mnemosyne*, these were copied from BioSamples and kept locally on the laptop.
 
-Three samples were registered for *Parnassius mnemosyne*, one for 'thorax' and two for 'whole body'. The latter two were identical, but one had been included in a shipping to Antwerpen for sequencing. After communication it was determined the 'thorax' sample was used for RNA-seq, and the 'whole body' for genome (re-)sequencing. 
+Three samples were registered for *Parnassius mnemosyne*, one for 'thorax' and two for 'whole body'. The latter two were identical, but one had been included in a shipping to Antwerpen for sequencing. After communication with the PI it was determined the 'thorax' sample was used for RNA-seq, and the 'whole body' for genome (re-)sequencing. 
 
 # 6. Raw data submissions to ENA
 
