@@ -222,13 +222,19 @@ Validation failed with multiple error messages referring to duplicate/overlappin
 There are two solutions to the problem, one being manually removing either of the duplications, or the other, to run the .gff through AGAT to merge duplicates. Prior to contacting the bioinformatician the overlapping genes had to be identified. As ENA assembly validation is made on .gz files and the error message refers to numbered rows in the .gz file, the gene identification had to be extracted from the compressed file. This was done using the below command line, capturing a number of rows before and after the span indicated in the validation process, and give output only in the command window:
 
 ```
-gunzip -c PARMNEM_for_ENA.embl.gz | awk -v from=18969820 -v to=18969898 'NR>=from { print NR,$0; if (NR>=to) exit 1}' 
+gunzip -c [filename].embl.gz | awk -v from=18969820 -v to=18969898 'NR>=from { print NR,$0; if (NR>=to) exit 1}' 
 ```
 
 An alternative to the above is to use zgrep and point the output to a .txt-file:
 
 ```
-zgrep '18969820,18969898!d' PARMNEM_for_ENA.embl.gz > out.txt
+zgrep '18969820,18969898!d' [filename].embl.gz > out.txt
+```
+
+or:
+
+```
+gunzip -c [filename].embl.gz | sed -n '18969820,18969820;18969898' > out.txt
 ```
 
 After contact with the bioinformatician who produced the .gff the overlappping issue was fixed (unknown exactly how), and the assembly passed validation. The assembly was then submitted using the commmand:
