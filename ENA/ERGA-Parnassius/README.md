@@ -245,7 +245,7 @@ or:
 gunzip -c [filename].embl.gz | sed -n '18969820,18969820;18969898' > out.txt
 ```
 
-After contact with the bioinformatician who produced the .gff the overlappping issue was fixed (unknown exactly how), and the assembly passed validation. The assembly was then submitted using the commmand:
+After contact with the bioinformatician who produced the .gff the overlappping issue was fixed (unknown exactly how), a new EMBL flatfile was constructed as described above, and the assembly passed validation. The assembly was then finally submitted using the commmand:
 
 ```
 java -jar webin-cli-6.7.1.jar -ascp -context=genome -manifest=PARMNEM_manifest.txt -userName=[username] -password=[password] -submit
