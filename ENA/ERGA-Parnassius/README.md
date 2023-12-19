@@ -194,7 +194,15 @@ With the HiFi, Hi-C and RNA-seq data submitted, the raw data was finally registe
 
 # 7. Assembly submission to ENA
 
-The assembly for *Parnassius mnemosyne* was downloaded locally to laptop and converted to EMBL flatfile using the EMBLmyGFF3 script. After conversion a manifest file was made:
+The assembly for *Parnassius mnemosyne* was downloaded locally to laptop and converted to EMBL flatfile using the EMBLmyGFF3 script.
+
+The flatfile was constructed using the provided GFF (pmne_functional_edit1.gff) together with a scaffolded fasta (pmnemosyne_scaffolds.fa) running the following command line: 
+
+```
+EMBLmyGFF3 -i PARMNEM -p PRJEB67749 -r 1 -s 'Parnassius mnemosyne' -t linear -m 'genomic DNA' pmne_functional_edit1.gff pmnemosyne_scaffolds.fa -o PARMNEM_for_ENA.embl
+```
+
+After successful conversion a manifest file was made:
 
 ```
 STUDY           PRJEB67749
