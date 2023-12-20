@@ -65,15 +65,15 @@ This was the initial request, though it turns out that it is a gtf file, not gff
 
 * Files were transfered as follows:
 
-```
-ssh -X user@rackham.uppmax.uu.se
+  ```
+  ssh -X user@rackham.uppmax.uu.se
 
-interactive -A naiss2023-22-289 module load ascp
+  interactive -A naiss2023-22-289 module load ascp
 
-ascp -QT -l300M -L- /uppmax-path/a.obtectus/raw_data/genome/HiC/P17301/P17301_102/02-FASTQ/201218_A00621_0323_AHGVMKDSXY/P17301_102_S3_L004_R1_001.fastq.gz Webin-XXXXX@webin.ebi.ac.uk:/P17301_102_S3_L004_R1_001.fastq.gz
+  ascp -QT -l300M -L- /uppmax-path/a.obtectus/raw_data/genome/HiC/P17301/P17301_102/02-FASTQ/201218_A00621_0323_AHGVMKDSXY/P17301_102_S3_L004_R1_001.fastq.gz Webin-XXXXX@webin.ebi.ac.uk:/P17301_102_S3_L004_R1_001.fastq.gz
 
-ascp -QT -l300M -L- /uppmax-path/a.obtectus/raw_data/genome/HiC/P17301/P17301_102/02-FASTQ/201218_A00621_0323_AHGVMKDSXY/P17301_102_S3_L004_R2_001.fastq.gz Webin-XXXXX@webin.ebi.ac.uk:/P17301_102_S3_L004_R2_001.fastq.gz
-```
+  ascp -QT -l300M -L- /uppmax-path/a.obtectus/raw_data/genome/HiC/P17301/P17301_102/02-FASTQ/201218_A00621_0323_AHGVMKDSXY/P17301_102_S3_L004_R2_001.fastq.gz Webin-XXXXX@webin.ebi.ac.uk:/P17301_102_S3_L004_R2_001.fastq.gz
+  ```
 
 * The experiment metadata was copy-pasted from the metadata template and saved as tsv ([PRJEB69220-experiment.tsv](./data/PRJEB69220-experiment.tsv)) using Visual Studio
 * The uploaded tsv accession numbers: ERX11670345 (experiment) and ERR12260057 (run)
