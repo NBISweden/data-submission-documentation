@@ -1,0 +1,11 @@
+STUDY: PRJEB69220
+SAMPLE: AobtHiC
+ASSEMBLYNAME: AobtHiC_assembly
+ASSEMBLY_TYPE: isolate
+COVERAGE: 80
+PROGRAM: Juicer, Arima Genomics (https://github.com/ArimaGenomics/Scripts), 3D-DNA (v. 180922), JBAT method, Liftoff
+PLATFORM: Illumina
+MOLECULETYPE: genomic DNA
+DESCRIPTION: The annotated reference genome assembly of Acanthoscelides obtectus reported in Immonen et al. (2023) was used as input for scaffolding (ENA project ID: PRJEB51445; genome accession ID: GCA_933228535). The Hi-C reads were pre-processed using Juicer (git-rev. 84f6957) (Durand et al. 2016) and a script provided by Arima Genomics (https://github.com/ArimaGenomics/Scripts) to generate ligation site positions in the input assembly. The resulting list of valid Hi-C pairs was used as input for the scaffolder 3D-DNA (v. 180922). The resulting draft scaffolded assembly was manually error corrected and curated using the JBAT method provided by the authors of 3D-DNA (Dudchenko et al. 2017). The resulting Hi-C genome assembly was annotated by performing a coordinate conversion of the extant annotation. We performed the liftover using Liftoff (Shumate and Salzberg 2021), using default parameters apart from a few that were set to more stringent criteria (coverage >80%, sequence identity >90%, distance scaling 5).
+RUN_REF: ERR12260057
+FLATFILE: AOBTE_PRJEB69220.embl.gz
