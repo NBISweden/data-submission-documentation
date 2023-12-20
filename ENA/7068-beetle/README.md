@@ -18,9 +18,6 @@ This was the initial request, though it turns out that it is a gtf file, not gff
 ### Links
 
 * [NBIS Create EMBL file](https://github.com/NBISweden/annotation-cluster/wiki/ENA-submission#create-embl-file)
-* Issues with [CDS phase loss](https://github.com/agshumate/Liftoff/issues/67) when using LiftOff
-* <https://github.com/NBISweden/AGAT/blob/master/README.md#using-docker>
-* <https://agat.readthedocs.io/en/latest/tools/agat_convert_sp_gxf2gxf.html>
 
 ### Steps
 * Create metadata template file

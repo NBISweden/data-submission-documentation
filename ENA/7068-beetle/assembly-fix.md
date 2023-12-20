@@ -1,5 +1,11 @@
 # The process of getting a valid EMBL flatfile
 
+## Links
+The links below was collected when I myself tried to fix the assembly file, but in the end the researcher had to do this, with help from NBIS bioinformatician.
+* Issues with [CDS phase loss](https://github.com/agshumate/Liftoff/issues/67) when using LiftOff
+* <https://github.com/NBISweden/AGAT/blob/master/README.md#using-docker>
+* <https://agat.readthedocs.io/en/latest/tools/agat_convert_sp_gxf2gxf.html>
+
 ## First trial
 
 * I did a test submission of all levels, interactively for study, sample and experiment, Webin-CLI for the assembly. This meant that I had to create a new embl-file, with the test study accession id, but since unsure if the embl file would be accepted, it is worth it.
