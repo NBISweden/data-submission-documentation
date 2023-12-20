@@ -11,27 +11,27 @@ The links below was collected when I myself tried to fix the assembly file, but 
 * I did a test submission of all levels, interactively for study, sample and experiment, Webin-CLI for the assembly. This meant that I had to create a new embl-file, with the test study accession id, but since unsure if the embl file would be accepted, it is worth it.
 * The annotation file was not in .gff format but in .gtf, but I tried using EMBLmyGFF3 script anyway.
 
-```
-  conda activate py38
-  EMBLmyGFF3 A.obtectus_v2.0.fasta_liftoff_clean.gtf.gz A.obtectus_v2.0.fasta --topology linear --molecule_type 'genomic DNA' --transl_table 1 --species "Acanthoscelides obtectus" --locus_tag ACAOB --project_id PRJEB67631 -o ACAOB_PRJEB67631_test.embl
-  gzip ACAOB_PRJEB67631_test.embl
-```
+    ```
+    conda activate py38
+    EMBLmyGFF3 A.obtectus_v2.0.fasta_liftoff_clean.gtf.gz A.obtectus_v2.0.fasta --topology linear --molecule_type 'genomic DNA' --transl_table 1 --species "Acanthoscelides obtectus" --locus_tag ACAOB --project_id PRJEB67631 -o ACAOB_PRJEB67631_test.embl
+    gzip ACAOB_PRJEB67631_test.embl
+    ```
 * I ran into memory issues on my laptop, turns out I had to increase the amount Ubuntu/WSL could use, but after that the embl.file was created
 
 * Webin-CLI:
-```
-java -jar ../../Downloads/webin-cli-6.3.0.jar -context genome -userName Webin-XXXXX -password YYYYY -manifest ./manifest_template_assembly_test.txt -validate -test
-```
-Produced a lot of errors (only the last one was expected):
-```
-ERROR: "exon" Features locations are duplicated - consider merging qualifiers. [ line: 1688 of ACAOB_PRJEB67631_test.embl.gz,  line: 1605 of ACAOB_PRJEB67631_test.embl.gz]
-```
-```
-ERROR: Abutting features cannot be adjacent between neighbouring exons. [ line: 253930 of ACAOB_PRJEB67631_test.embl.gz]
-```
-```
-ERROR: Illegal /locus_tag value "ACAOB_LOCUS1 ". locus_tag prefix "ACAOB" is not registered with the project. [ line: 35 of ACAOB_PRJEB67631_test.embl.gz]
-```
+    ```
+    java -jar ../../Downloads/webin-cli-6.3.0.jar -context genome -userName Webin-XXXXX -password YYYYY -manifest ./manifest_template_assembly_test.txt -validate -test
+    ```
+    Produced a lot of errors (only the last one was expected):
+    ```
+    ERROR: "exon" Features locations are duplicated - consider merging qualifiers. [ line: 1688 of ACAOB_PRJEB67631_test.embl.gz,  line: 1605 of ACAOB_PRJEB67631_test.embl.gz]
+    ```
+    ```
+    ERROR: Abutting features cannot be adjacent between neighbouring exons. [ line: 253930 of ACAOB_PRJEB67631_test.embl.gz]
+    ```
+    ```
+    ERROR: Illegal /locus_tag value "ACAOB_LOCUS1 ". locus_tag prefix "ACAOB" is not registered with the project. [ line: 35 of ACAOB_PRJEB67631_test.embl.gz]
+    ```
 
 * The researcher created a gff-formatted file, but the errors remained when it came to validation.
 
@@ -39,7 +39,7 @@ ERROR: Illegal /locus_tag value "ACAOB_LOCUS1 ". locus_tag prefix "ACAOB" is not
 
 * The bioinformatician also told me to expose the json file of the EMBLmyGFF3 script.
 
-## Expose translations EMBLmyGFF3
+### Expose translations EMBLmyGFF3
 
 ```
 conda activate py38
