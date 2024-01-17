@@ -7,15 +7,15 @@ Data_generating_platforms:
 Top_level_acccession: PRJEB71153
 ---
 
-# ERGA Vulpes lagopus (arctic fox)
+# ERGA *Vulpes lagopus* (arctic fox)
 
 ## Submission task description
-Submit genomic and assembly data for the arctic fox, Vulpes lagopus, as part of the ERGA pilot project. The sample metadata has already been submitted via COPO.
+Submit genomic and assembly data for the arctic fox, *Vulpes lagopus*, as part of the ERGA pilot project. The sample metadata has already been submitted via COPO.
 
 ## Procedure overview and links to examples
 
 ### Links
-* [Metadata template](/data/ERGA-Vulpes-lagopus-metadata.xlsx)
+* [Metadata template](./data/ERGA-Vulpes-lagopus-metadata.xlsx)
 * [Biosamples query](https://www.ebi.ac.uk/biosamples/samples?text=Vulpes+lagopus&filter=attr:project+name:ERGA) gave 2 ids: [SAMEA12927189](https://www.ebi.ac.uk/biosamples/samples/SAMEA12927189) and [SAMEA12927190](https://www.ebi.ac.uk/biosamples/samples/SAMEA12927190)
 * Notes on how to [Create EMBL file](https://github.com/NBISweden/annotation-cluster/wiki/ENA-submission#create-embl-file)
 * [ENA WebFeat](https://www.ebi.ac.uk/ena/WebFeat/) - lookup for embl format features
@@ -40,7 +40,7 @@ Submit genomic and assembly data for the arctic fox, Vulpes lagopus, as part of 
 ## Detailed step by step description
 ### Collect metadata
 
-* [Metadata template](https://docs.google.com/spreadsheets/d/1RPtxpa62pWYfimf6JAPuKZVCjet2ixlR/)
+* [Metadata template](./data/ERGA-Vulpes-lagopus-metadata.xlsx)
 * [Biosamples query](https://www.ebi.ac.uk/biosamples/samples?text=Vulpes+lagopus&filter=attr:project+name:ERGA) gave 2 ids: [SAMEA12927189](https://www.ebi.ac.uk/biosamples/samples/SAMEA12927189) and [SAMEA12927190](https://www.ebi.ac.uk/biosamples/samples/SAMEA12927190)
 
 * PI has taken over this project from someone else, and had not been the person who registered the sample to BioSample, but could confirm that it was the muscle sample (SAMEA12927190) that had been used for sequencing.
@@ -59,12 +59,12 @@ Submit genomic and assembly data for the arctic fox, Vulpes lagopus, as part of 
 
 ### Submit experiments using manifests
 
-* [HiC manifest](/data/PRJEB71153-HiC-manifest.txt)
-* [HiFi manifest 1](/data/PRJEB71153-HiFi-mVulLag1-1-manifest.txt)
-* [HiFi manifest 2](/data/PRJEB71153-HiFi-mVulLag1-2-manifest.txt)
-* [HiFi manifest 3](/data/PRJEB71153-HiFi-mVulLag1-3-manifest.txt)
+* [HiC manifest](./data/PRJEB71153-HiC-manifest.txt)
+* [HiFi manifest 1](./data/PRJEB71153-HiFi-mVulLag1-1-manifest.txt)
+* [HiFi manifest 2](./data/PRJEB71153-HiFi-mVulLag1-2-manifest.txt)
+* [HiFi manifest 3](./data/PRJEB71153-HiFi-mVulLag1-3-manifest.txt)
 
-* When completed, the manifests were copied to Uppmax, where the actual submission took place, calling the script [webin-cli](/scripts/webin-cli-args.sh):
+* When completed, the manifests were copied to Uppmax, where the actual submission took place, calling the script [webin-cli](./scripts/webin-cli-args.sh):
 
 ```
   interactive -t 08:00:00 -A naiss2023-5-307
@@ -82,7 +82,7 @@ Submit genomic and assembly data for the arctic fox, Vulpes lagopus, as part of 
 
 * I didn't see any annotation on the CDS level in the gff (final_annotation.gff), only on mRNA level. I contacted the responsible bioinformatician who realized that they had given me the wrong gff file. A new file, with annotation on CDS level was created ENA_compatible_final_annotation.gff
 
-* I copied the gff3 and fasta file to my local computer, and updated [attribute](/data/translation_gff_attribute_to_embl_qualifier.json) and [feature](/data/translation_gff_feature_to_embl_feature.json) json files as recommended in [Create EMBL file](https://github.com/NBISweden/annotation-cluster/wiki/ENA-submission#create-embl-file):
+* I copied the gff3 and fasta file to my local computer, and updated [attribute](./data/translation_gff_attribute_to_embl_qualifier.json) and [feature](./data/translation_gff_feature_to_embl_feature.json) json files as recommended in [Create EMBL file](https://github.com/NBISweden/annotation-cluster/wiki/ENA-submission#create-embl-file):
     ```
     conda activate py38
     EMBLmyGFF3 --expose_translations
@@ -107,6 +107,8 @@ Submit genomic and assembly data for the arctic fox, Vulpes lagopus, as part of 
     }   
     ```
 
+  **Note:** A third json file is exposed [translation_gff_other_to_embl_qualifier.json](./data/translation_gff_other_to_embl_qualifier.json), but this one is not necessary to update.
+
 * Then I tried running EMBLmyGFF3: 
 
     ```
@@ -126,7 +128,7 @@ Submit genomic and assembly data for the arctic fox, Vulpes lagopus, as part of 
     conda activate /home/asoares/.conda/envs/EMBLmyGFF3
     EMBLmyGFF3 --expose_translations
     ```
-  * Update the attribute and feature json files as described above, and then run the EMBLmyGFF3 command as is or, (run via a shell script [run_emblmygff3.sh](/scripts/run_emblmygff3.sh) by typing `sbatch run_emblmygff3.sh`):
+  * Update the attribute and feature json files as described above, and then run the EMBLmyGFF3 command as is or, (run via a shell script [run_emblmygff3.sh](./scripts/run_emblmygff3.sh) by typing `sbatch run_emblmygff3.sh`):
 
     ```
     EMBLmyGFF3 /projects/annotation/arctic_fox/Delivery/gff/ENA_compatible_final_annotation.gff /projects/annotation/arctic_fox/Delivery/fasta/genome.fa --topology linear --molecule_type 'genomic DNA' --transl_table 1 --species "Vulpes lagopus" --locus_tag VULLAG --project_id PRJEB71153 -o PRJEB71153-VulLag.embl
@@ -137,7 +139,7 @@ Submit genomic and assembly data for the arctic fox, Vulpes lagopus, as part of 
 ### Validate assembly using manifest
 
 * External RNA sequencing data was used for annotation, and reference to these were added to the run_ref section of the manifest.
-* The [manifest](/data/PRJEB71153-assembly-manifest.txt) used
+* The [manifest](./data/PRJEB71153-assembly-manifest.txt) used
 
 * Note on RUN_REFS: It was not accepted to write a span of accession numbers (i.e. ERRXXX1-ERRXXX9), all numbers needs to be explicitly written
 
