@@ -1,0 +1,12 @@
+STUDY:	PRJEB71153
+SAMPLE:	SAMEA12927190
+ASSEMBLYNAME:	Vulpes_lagopus_2023_11
+ASSEMBLY_TYPE:	isolate
+COVERAGE:	19.93
+PROGRAM:	IPA HiFi Genome Assembler 1.8.0
+PLATFORM:	PacBio HiFi, Illumina Hi-C
+MINGAPLENGTH:	500
+MOLECULETYPE:	genomic DNA
+DESCRIPTION:	Initial assembly with IPA HiFi Genome Assembler, then Hi-C scaffolding with Juicer and 3D-DNA. Hi-C reads processed with Omni-C. Gene annotation was performed using a soft-masked version of the genome (species specific RepeatModeler 1.0.11 repeat library). Gene predictions were done in BRAKER3 3.0.3. RNA-Seq from public databases. Functional annotation was done with InterProScan 5.53-87.0.
+RUN_REF:	SRR10811364, SRR10811365, SRR10811366, SRR10811367, SRR10811368, SRR10811369, SRR10811370, SRR10811371, SRR10811372, SRR10811373, SRR10811374, SRR10811375, SRR10811376, SRR10811377, SRR10811378, SRR10811379, SRR10811380, SRR10811381, SRR10811382, SRR10811383, SRR10811384, ERR12381328, ERR12381330, ERR12381331, ERR12423593
+FLATFILE:	PRJEB71153-VulLag.embl.gz
