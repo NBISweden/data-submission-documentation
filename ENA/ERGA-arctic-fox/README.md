@@ -7,7 +7,7 @@ Data_generating_platforms:
 Top_level_acccession: PRJEB71153
 ---
 
-# 5440 - ERGA Vulpes lagopus (arctic fox)
+# ERGA Vulpes lagopus (arctic fox)
 
 ## Submission task description
 Submit genomic and assembly data for the arctic fox, Vulpes lagopus, as part of the ERGA pilot project. The sample metadata has already been submitted via COPO.
