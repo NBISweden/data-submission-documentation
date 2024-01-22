@@ -1,0 +1,1 @@
+id	strain1	linear-chromosome
