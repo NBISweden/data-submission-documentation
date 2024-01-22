@@ -6,9 +6,9 @@ In order to link the individual studies, and have a main entry point, an umbrell
 
 * ENA documentation on [umbrella studies](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#umbrella-studies)
 
-* Umrella projects can only be registered programatically, using xml files and curl command.
+* Umbrella projects can only be registered programatically, using xml files and curl command.
 
-* The [submission.xml](./data/submission.xml) file contains the action to be made ,in this case `ADD` and the release date. 
+* The [submission.xml](./data/submission.xml) file contains the action to be made, in this case `ADD` and the release date. 
     * Set the release date to the same date as che children projects.
 
 * The [umbrella.xml](./data/umbrella.xml) contains a project alias, title, description, and the accession numbers of the children projects.
@@ -16,7 +16,7 @@ In order to link the individual studies, and have a main entry point, an umbrell
     * Set `title` to `<species name> umbrella project, <biodiversity project name>`, e.g. `Stylops ater umbrella project, ERGA pilot`
     * Set `description` to e.g.:
     ```
-    This project connects the sequencing and assembly data of Stylops ater (host), with two Wolbachia sp. symbionts. The project is part of the  ERGA pilot (https://www.erga-biodiversity.eu/pilot-project).
+    This project connects the sequencing and assembly data of Stylops ater (host), with two Wolbachia sp. symbionts. The project is part of the ERGA pilot (https://www.erga-biodiversity.eu/pilot-project).
     ```
 
 * Submit using curl:
@@ -25,4 +25,6 @@ In order to link the individual studies, and have a main entry point, an umbrell
     ```
     * Note down the received accession number from the receipt
 
-    * **Note:** according to [ENA documentation on umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#releasing-umbrella-studies): "*Umbrella studies do not appear in the list of studies shown in your Webin account.*"
+* **Note:** according to [ENA documentation on umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#releasing-umbrella-studies): "*Umbrella studies do not appear in the list of studies shown in your Webin account.*"
+
+## How to update an umbrella project
