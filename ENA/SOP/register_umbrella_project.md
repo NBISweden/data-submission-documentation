@@ -28,3 +28,20 @@ In order to link the individual studies, and have a main entry point, an umbrell
 * **Note:** according to [ENA documentation on umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#releasing-umbrella-studies): "*Umbrella studies do not appear in the list of studies shown in your Webin account.*"
 
 ## How to update an umbrella project
+
+* Whenever an update is needed, e.g. to add another child project, it is recommended to create copies of the submission and umbrella xml files used to create the umbrella project. This way one will not accidentally remove a child or release date previously added. 
+* Rename the copies appropriately in order to identify the action, e.g. `submission-modify.xml` and `umbrella-add-mito.xml`.
+* In the submission-modify.xml file, change the `ADD` action to `MODIFY`
+* In the umbrella-add-mito.xml file, add another `RELATED_OBJECT` section with the project accession number of the child project:
+    ```
+    <RELATED_PROJECT>
+        <CHILD_PROJECT accession="TODO:child_accession"/>
+    </RELATED_PROJECT>
+
+    ```
+* Submit using curl:
+    ```
+    curl -u Username:Password -F SUBMISSION=@submission-modify.xml" -F "PROJECT=@umbrella-add-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+
+    ```
+* Check that the receipt contains `submissionFile="submission-add-mito.xml" success="true"`, and copy the whole receipt to the documentation (for future reference).
