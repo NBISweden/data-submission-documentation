@@ -8,7 +8,7 @@ For data where there is no pre-registered study, you first need to register a st
 
 2. `Release date [This is when your study will be made public]`
     
-    The default release date at ENA is two months from the project registratin date. Instead, set the release date to the maximum date from present day (2 years). The data will be released automatically when referenced in a published journal paper. At the end of an embargo period the release date can be consecutively extended in multiple two year intervals if desired.
+    The default release date at ENA is two months from the project registration date. Instead, set the release date to the maximum date from present day (2 years). The data will be released automatically when referenced in a published journal paper. At the end of an embargo period the release date can be consecutively extended in multiple two year intervals if desired.
 
 3. `Study name`
     
@@ -36,7 +36,7 @@ For data where there is no pre-registered study, you first need to register a st
 
     "This project collects genomic data generated for [Genus species], (vernacular name), to facilitate assembly and annotation as part of the ERGA pilot (https://www.erga-biodiversity.eu/pilot-project)."
 
-6. `Will you provide functionable genome annotation?`
+6. `Will you provide functional genome annotation?`
 
     Check this box for all EBP/ERGA studies as they aim at de novo assemblies and annotations.
 
