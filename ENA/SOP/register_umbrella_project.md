@@ -29,19 +29,28 @@ In order to link the individual studies, and have a main entry point, an umbrell
 
 ## How to update an umbrella project
 
-* Whenever an update is needed, e.g. to add another child project, it is recommended to create copies of the submission and umbrella xml files used to create the umbrella project. This way one will not accidentally remove a child or release date previously added. 
-* Rename the copies appropriately in order to identify the action, e.g. `submission-modify.xml` and `umbrella-add-mito.xml`.
-* In the submission-modify.xml file, change the `ADD` action to `MODIFY`
-* In the umbrella-add-mito.xml file, add another `RELATED_OBJECT` section with the project accession number of the child project:
-    ```
-    <RELATED_PROJECT>
-        <CHILD_PROJECT accession="TODO:child_accession"/>
-    </RELATED_PROJECT>
+* ENA doc on [Adding Children To An Umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella)
+
+
+* First, create an [update.xml](./data/update.xml) (or copy the linked one).
+* Then, copy the umbrella.xml file used to create the umbrella project, and rename it appropriately in order to identify the action, e.g. `umbrella-add-mito.xml`.
+* It is important that the `TITLE`, `DESCRIPTION` and `alias` remains the same.
+* Replace the `RELATED_PROJECTS` block with the block below ( i.e. there should be only a single `RELATED_PROJECT` block):
 
     ```
+    <RELATED_PROJECTS>
+        <RELATED_PROJECT>
+            <CHILD_PROJECT accession="TODO:child_accession"/>
+        </RELATED_PROJECT>
+    </RELATED_PROJECTS>
+    ```
+* Replace `TODO:child_accession` with the new child project accession number (PRJEB...).
+* **Note:** Unlike other updates using xml, where everything already existing needs to be kept in order not to be removed, already exisiting child projects in the umbrella project will not be affected by not being listed. In fact, the only way that projects can be removed from an umbrella is by contacting [ENA helpdesk](https://www.ebi.ac.uk/ena/browser/support).
+
+
 * Submit using curl:
     ```
-    curl -u Username:Password -F SUBMISSION=@submission-modify.xml" -F "PROJECT=@umbrella-add-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u Username:Password -F SUBMISSION=@update.xml" -F "PROJECT=@umbrella-add-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 
     ```
-* Check that the receipt contains `submissionFile="submission-add-mito.xml" success="true"`, and copy the whole receipt to the documentation (for future reference).
+* Check that the receipt contains `submissionFile="update.xml" success="true"`, and copy the whole receipt to the documentation (for future reference).
