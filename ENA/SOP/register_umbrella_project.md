@@ -62,6 +62,6 @@ ENA has service endpoints documented using Swagger, that can be used to query EN
 * Click on the green `Authorize` button to the right, and enter the broker account credentials.
 * In order to see the metadata for an umbrella project, scroll down to `GET /projects/xml/{ids}`, under **project controller** header, and click on the down arrow next to the lock image.
 * When expanded, click on the `Try it out` button, enter the project accession number in the 'ids' field, and then click on the blue `Execute` bar.
-* Scroll down to the response body, therein one will see what metadata has been registered with the umbrella project.
+* Scroll down to the response body, therein one will see what metadata has been registered with the umbrella project. It is also possible to download the xml.
 
 **Note:** The child projects that have been added will not be shown.
