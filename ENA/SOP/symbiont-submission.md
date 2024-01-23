@@ -33,7 +33,7 @@ The assembly is typically in a fasta file with one big contig. In order to submi
 * ENA on [Chromosome Assembly](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#chromosome-assembly)
 * ENA on [Chromosome List File](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file)
 
-Create a [symbiont chromosome list](./data/symbiont-chromosome_list.txt) file containing three columns:
+* Create a [symbiont chromosome list](./data/symbiont-chromosome_list.txt) file containing three columns:
     * The first column, `OBJECT_NAME` must be identical to the identifier in the FASTA sequence file. E.g. if the sequence file has a header `>wolbachia_strain1` then `wolbachia_strain1` is put in the first column.
     * The second column, `CHROMOSOME_NAME` in this case can be set to `strain1`.
     * The third column, `TOPOLOGY-CHROMOSOME_TYPE` in this case can be set to `linear-chromosome`.
