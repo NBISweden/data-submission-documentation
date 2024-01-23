@@ -25,7 +25,7 @@ In order to link the individual studies, and have a main entry point, an umbrell
     ```
     * Note down the received accession number from the receipt
 
-* **Note:** according to [ENA documentation on umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#releasing-umbrella-studies): "*Umbrella studies do not appear in the list of studies shown in your Webin account.*"
+* **Note:** according to [ENA documentation on umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#releasing-umbrella-studies): "*Umbrella studies do not appear in the list of studies shown in your Webin account.*". This means that the only way to check what is submitted for a private umbrella project is to query programatically. See how to use [Swagger-UI](#swagger-ui) further down.
 
 ## How to update an umbrella project
 
@@ -53,3 +53,15 @@ In order to link the individual studies, and have a main entry point, an umbrell
     curl -u Username:Password -F SUBMISSION=@update.xml" -F "PROJECT=@umbrella-add-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Check that the receipt contains `submissionFile="update.xml" success="true"` (i.e. no error messages or success="false"), and copy the whole receipt to the documentation (for future reference).
+
+## Swagger-UI
+
+ENA has service endpoints documented using Swagger, that can be used to query ENA programatically.
+
+* Go to <https://www.ebi.ac.uk/ena/submit/report/swagger-ui.html>
+* Click on the green `Authorize` button to the right, and enter the broker account credentials.
+* In order to see the metadata for an umbrella project, scroll down to `GET /projects/xml/{ids}`, under **project controller** header, and click on the down arrow next to the lock image.
+* When expanded, click on the `Try it out` button, enter the project accession number in the 'ids' field, and then click on the blue `Execute` bar.
+* Scroll down to the response body, therein one will see what metadata has been registered with the umbrella project.
+
+**Note:** The child projects that have been added will not be shown.
