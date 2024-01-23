@@ -51,6 +51,5 @@ In order to link the individual studies, and have a main entry point, an umbrell
 * Submit using curl:
     ```
     curl -u Username:Password -F SUBMISSION=@update.xml" -F "PROJECT=@umbrella-add-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-
     ```
-* Check that the receipt contains `submissionFile="update.xml" success="true"`, and copy the whole receipt to the documentation (for future reference).
+* Check that the receipt contains `submissionFile="update.xml" success="true"` (i.e. no error messages or success="false"), and copy the whole receipt to the documentation (for future reference).
