@@ -12,7 +12,7 @@ For data where there is no pre-registered study, you first need to register a st
 
 3. `Study name`
     
-    Use a short abbreviation as Study name following a modified version of the ToLID (Tree of Life ID) format, restricted to the thee first letters of the genus name plus the first three letters of the species name, followed by an index number.
+    Use a short abbreviation as Study name following a modified version of the ToLID (Tree of Life ID) format, restricted to the three first letters of the genus name plus the first three letters of the species name, followed by an index number.
 
     Example: For *Vulpes lagopus* -  VulLag1
 

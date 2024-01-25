@@ -23,25 +23,45 @@ In order to link the individual studies, and have a main entry point, an umbrell
     ```
     curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
-    * Note down the received accession number from the receipt
+    * Note down the received accession number from the receipt, as well make a copy of the receipt itself.
 
-* **Note:** according to [ENA documentation on umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#releasing-umbrella-studies): "*Umbrella studies do not appear in the list of studies shown in your Webin account.*"
+* **Note:** according to [ENA documentation on umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#releasing-umbrella-studies): "*Umbrella studies do not appear in the list of studies shown in your Webin account.*". This means that the only way to check what is submitted for a private umbrella project is to query programatically. See how to use [Swagger-UI](#swagger-ui) further down.
 
 ## How to update an umbrella project
 
-* Whenever an update is needed, e.g. to add another child project, it is recommended to create copies of the submission and umbrella xml files used to create the umbrella project. This way one will not accidentally remove a child or release date previously added. 
-* Rename the copies appropriately in order to identify the action, e.g. `submission-modify.xml` and `umbrella-add-mito.xml`.
-* In the submission-modify.xml file, change the `ADD` action to `MODIFY`
-* In the umbrella-add-mito.xml file, add another `RELATED_OBJECT` section with the project accession number of the child project:
-    ```
-    <RELATED_PROJECT>
-        <CHILD_PROJECT accession="TODO:child_accession"/>
-    </RELATED_PROJECT>
+* ENA doc on [Adding Children To An Umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella)
+
+
+* First, create an [update.xml](./data/update.xml) (or copy the linked one).
+* Then, copy the umbrella.xml file used to create the umbrella project, and rename it appropriately in order to identify the action, e.g. `umbrella-add-mito.xml`.
+* It is important that the `TITLE`, `DESCRIPTION` and `alias` remains the same.
+* Replace the `RELATED_PROJECTS` block with the block below ( i.e. there should be only a single `RELATED_PROJECT` block):
 
     ```
+    <RELATED_PROJECTS>
+        <RELATED_PROJECT>
+            <CHILD_PROJECT accession="TODO:child_accession"/>
+        </RELATED_PROJECT>
+    </RELATED_PROJECTS>
+    ```
+* Replace `TODO:child_accession` with the new child project accession number (PRJEB...).
+* **Note:** Unlike other updates using xml, where everything already existing needs to be kept in order not to be removed, already exisiting child projects in the umbrella project will not be affected by not being listed. In fact, the only way that projects can be removed from an umbrella is by contacting [ENA helpdesk](https://www.ebi.ac.uk/ena/browser/support).
+
+
 * Submit using curl:
     ```
-    curl -u Username:Password -F SUBMISSION=@submission-modify.xml" -F "PROJECT=@umbrella-add-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-
+    curl -u Username:Password -F SUBMISSION=@update.xml" -F "PROJECT=@umbrella-add-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
-* Check that the receipt contains `submissionFile="submission-add-mito.xml" success="true"`, and copy the whole receipt to the documentation (for future reference).
+* Check that the receipt contains `submissionFile="update.xml" success="true"` (i.e. no error messages or success="false"), and copy the whole receipt to the documentation (for future reference).
+
+## Swagger-UI
+
+ENA has service endpoints documented using Swagger, that can be used to query ENA programatically.
+
+* Go to <https://www.ebi.ac.uk/ena/submit/report/swagger-ui.html>
+* Click on the green `Authorize` button to the right, and enter the broker account credentials.
+* In order to see the metadata for an umbrella project, scroll down to `GET /projects/xml/{ids}`, under **project controller** header, and click on the down arrow next to the lock image.
+* When expanded, click on the `Try it out` button, enter the project accession number in the 'ids' field, and then click on the blue `Execute` bar.
+* Scroll down to the response body, therein one will see what metadata has been registered with the umbrella project. It is also possible to download the xml.
+
+**Note:** The child projects that have been added will not be shown. It is currently not possible to check this, only ENA helpdesk can.
