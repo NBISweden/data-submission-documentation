@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <PROJECT_SET>
+    <PROJECT alias="all-StyAte1" center_name="National Bioinformatics Infrastructure Sweden" broker_name="National Bioinformatics Infrastructure Sweden" accession="PRJEB71963" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <IDENTIFIERS>
+        <PRIMARY_ID>PRJEB71963</PRIMARY_ID>
+        <SUBMITTER_ID namespace="National Bioinformatics Infrastructure Sweden">all-StyAte1</SUBMITTER_ID>
+      </IDENTIFIERS>
+      <TITLE>Stylops ater umbrella project, ERGA pilot</TITLE>
+      <DESCRIPTION>This project connects the sequencing and assembly data of Stylops ater (host), with two Wolbachia sp. symbionts. The project is part of the  ERGA pilot (https://www.erga-biodiversity.eu/pilot-project).</DESCRIPTION>
+      <UMBRELLA_PROJECT/>
+    </PROJECT>
+  </PROJECT_SET>

@@ -1,0 +1,12 @@
+STUDY: PRJEB70320
+SAMPLE: SAMEA12922144
+ASSEMBLYNAME: StyAte-mito-assembly
+ASSEMBLY_TYPE: isolate
+COVERAGE: 8400
+PROGRAM: MitoHifi (3.0.0)
+PLATFORM: PacBio
+MOLECULETYPE: genomic DNA
+DESCRIPTION: The mitochondrial genome was assembled using MitoHiFi (3.0.0).
+RUN_REF: ERR12312109
+FASTA: ivStyAter_mito.fasta.gz
+CHROMOSOME_LIST: chromosome_list.txt.gz
