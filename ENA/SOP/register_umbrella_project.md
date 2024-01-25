@@ -23,7 +23,7 @@ In order to link the individual studies, and have a main entry point, an umbrell
     ```
     curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
-    * Note down the received accession number from the receipt
+    * Note down the received accession number from the receipt, as well make a copy of the receipt itself.
 
 * **Note:** according to [ENA documentation on umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#releasing-umbrella-studies): "*Umbrella studies do not appear in the list of studies shown in your Webin account.*". This means that the only way to check what is submitted for a private umbrella project is to query programatically. See how to use [Swagger-UI](#swagger-ui) further down.
 
