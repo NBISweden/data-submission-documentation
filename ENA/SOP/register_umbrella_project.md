@@ -64,4 +64,4 @@ ENA has service endpoints documented using Swagger, that can be used to query EN
 * When expanded, click on the `Try it out` button, enter the project accession number in the 'ids' field, and then click on the blue `Execute` bar.
 * Scroll down to the response body, therein one will see what metadata has been registered with the umbrella project. It is also possible to download the xml.
 
-**Note:** The child projects that have been added will not be shown.
+**Note:** The child projects that have been added will not be shown. It is currently not possible to check this, only ENA helpdesk can.
