@@ -1,0 +1,9 @@
+STUDY:	PRJEB71491
+SAMPLE:	ERS17850496
+NAME:	PACBIO-HIFI-gfPorChry1-1
+INSTRUMENT:	Sequel IIe
+LIBRARY_SOURCE:	GENOMIC
+LIBRARY_SELECTION:	RANDOM
+LIBRARY_STRATEGY:	WGS
+DESCRIPTION:	Preparing HiFi SMRTbell® Libraries using the SMRTbell Express Template Prep Kit 2.0.
+FASTQ:	/proj/snic2022-6-208/asm-VREBP-Porodaedalea_chrysoloma/TO_ENA/pacbio/demultiplex.bc1010_BAK8A_OA--bc1010_BAK8A_OA.hifi_reads.fastq.gz
