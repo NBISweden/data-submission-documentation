@@ -1,0 +1,12 @@
+STUDY: PRJEB71935
+SAMPLE: ERS17750877
+ASSEMBLYNAME: Wolbachia-assembly-2
+ASSEMBLY_TYPE: isolate
+COVERAGE: 1048
+PROGRAM: hifiasm (0.19.4-r575)
+PLATFORM: PacBio
+MOLECULETYPE: genomic DNA
+DESCRIPTION: Assembly was carried out with Hifiasm (0.19.4-r575).
+RUN_REF: ERR12312109
+FASTA: ivStyAter_wolbachia2.fasta.gz
+CHROMOSOME_LIST: wolbachia2-chromosome_list.txt.gz

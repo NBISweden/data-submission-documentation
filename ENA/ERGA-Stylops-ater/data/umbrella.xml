@@ -1,0 +1,15 @@
+<PROJECT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <PROJECT center_name="" alias="all-StyAte1">
+        <TITLE>Stylops ater umbrella project, ERGA pilot</TITLE>
+        <DESCRIPTION>This project connects the sequencing and assembly data of Stylops ater (host), with two Wolbachia sp. symbionts. The project is part of the  ERGA pilot (https://www.erga-biodiversity.eu/pilot-project).</DESCRIPTION>
+        <UMBRELLA_PROJECT/>
+        <RELATED_PROJECTS>
+          <RELATED_PROJECT>
+            <CHILD_PROJECT accession="PRJEB70320"/>
+          </RELATED_PROJECT>
+          <RELATED_PROJECT>
+            <CHILD_PROJECT accession="PRJEB71935"/>
+          </RELATED_PROJECT>
+        </RELATED_PROJECTS>
+    </PROJECT>
+</PROJECT_SET>

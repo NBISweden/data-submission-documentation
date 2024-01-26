@@ -1,0 +1,11 @@
+STUDY:	PRJEB70320
+SAMPLE:	SAMEA12922144
+NAME:	ILLUMINA-RNA-StyAte2
+INSTRUMENT:	Illumina NovaSeq 6000
+INSERT_SIZE:	160
+LIBRARY_SOURCE:	TRANSCRIPTOMIC
+LIBRARY_SELECTION:	RANDOM
+LIBRARY_STRATEGY:	RNA-Seq
+LIBRARY_CONSTRUCTION_PROTOCOL:	polyA capture protocol using Illumina Stranded mRNA Prep kit (manufacturers protocol). MagBio HighPrep PCR magnetic beads for library cleanup. RNA library denatured into two separate pools for paired-end sequencing using NovaSeq 6000 S1 Reagent Kit v1.5 (300 cycles) and SP Reagent Kit v1.5 (300 cycles), respectively, in dual-indexed running mode 10:151:151:10 bp cycles.
+FASTQ:	/proj/snic2022-6-208/INBOX/ERGA_Stylops_ater/rnaseq/ST_2_R1_001.fastq.gz
+FASTQ:	/proj/snic2022-6-208/INBOX/ERGA_Stylops_ater/rnaseq/ST_2_R2_001.fastq.gz
