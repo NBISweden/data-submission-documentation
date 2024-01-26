@@ -1,0 +1,11 @@
+STUDY: PRJEB71491
+SAMPLE: ERS17850496
+ASSEMBLYNAME: hifiasm-gfPorChry1
+ASSEMBLY_TYPE: isolate
+COVERAGE: 135
+PROGRAM: hifiasm (0.19.4-r575)
+PLATFORM: PacBio
+MOLECULETYPE: genomic DNA
+DESCRIPTION: Assembly was carried out with Hifiasm (0.19.4-r575) and haplotypic duplication was identified and removed with purge_dups (1.2.5). The assembly was checked for contaminations with BlobToolKit (4.1.7). Error polishing of homozygous errors was done with DeepVariant (1.5.0). The gene annotation was carried out with Braker (3.0.3).
+RUN_REF: ERR12529623
+FLATFILE: PRJEB71491.embl.gz

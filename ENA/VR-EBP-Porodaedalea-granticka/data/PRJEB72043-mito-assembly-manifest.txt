@@ -1,0 +1,12 @@
+STUDY: PRJEB72043
+SAMPLE: ERS17850496
+ASSEMBLYNAME: MitoHiFi-gfPorChry1
+ASSEMBLY_TYPE: isolate
+COVERAGE: 1200
+PROGRAM: MitoHiFi (3.0.3)
+PLATFORM: PacBio
+MOLECULETYPE: genomic DNA
+DESCRIPTION: The mitochondrial genome was assembled using MitoHiFi (3.0.3).
+RUN_REF: ERR12529623
+FASTA: gfPorChry.mito.20230803.fa.gz
+CHROMOSOME_LIST: chromosome_list.txt.gz
