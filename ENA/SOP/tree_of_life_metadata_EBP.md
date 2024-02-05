@@ -1,5 +1,9 @@
 # Metadata templates for biodiversity projects (EBP) that do not use the ERGA template
 
+This SOP describes sample metadata registration in biodiversity projects not adhering to the ERGA sample manifest. 
+
+## Details
+
 Some of the biodiversity projects in the EBP umbrella initiative do not apply to the same metadata standard as ERGA (e.g. VR-EBP), yet should still, as flagship initiatives, aim for as high metadata quality as possible.
 
 For ERGA the [metadata sample manifest](https://github.com/ERGA-consortium/ERGA-sample-manifest) is updated by the ERGA consortium. The [EBP standards recommendations](https://www.pnas.org/doi/10.1073/pnas.2115639118) does not mention an alternative to the ERGA checklist for similar EBP projects such as the VR-EBP, but a sufficiently close approxiamation would be to use the ENA [Tree of Life (ToL) Checklist](https://www.sanger.ac.uk/programme/tree-of-life/). 

@@ -1,5 +1,9 @@
 # Locus tags for biodiversity projects
 
+This SOP describes how to register a locus tag for assembly submissions to ENA.
+
+## Details
+
 All species in the EBP and ERGA initiatives will aim to have assemblies/annotations submitted. For a functional assembly there must be a locus tag registered for the species prior to the assembly being submitted.
 
 There are two ways to register a locus tag.

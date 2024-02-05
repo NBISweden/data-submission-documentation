@@ -1,5 +1,9 @@
 # Register Tree of Life ID (ToLID) for biodiversity projects
 
+This SOP describes the process of registering a Tree of Life ID (ToLID) for species in projects where the metadata is handled in ENA checklists outside of COPO. A ToLID allows for unique specimen identifier of a species, anhancing precision and metadata quality for benchmark biodiveristy projects.
+
+## Details
+
 [Tree of Life ID webpage](https://id.tol.sanger.ac.uk/)
 
 A ToLID is an standardised identifier for a single specimen of a species for genome sequence purposes. The identifier uniquely points to a particular specimen with a name that provides species recognition, differentiates between specimen of the same species, and adds taxonomic context.
@@ -29,7 +33,7 @@ All species registering for a ToLID must have an official taxonomy ID. In case o
 ## How to register a ToLID
 In the [Tree of Life ID webpage](https://id.tol.sanger.ac.uk/), begin by checking if the species is already registered with a ToLID by using the search function and providing either ToLID prefix (e.g. mHomSap), taxonomy ID (e.g. 9606), species name (e.g. Homo sapiens) or ToLID (e.g. mHomSap1). If it is, a list of registered specimen will be shown, and you can get an idea of what your ToLID will be.
 
-Continue by loggin in to the platform. The login is federated, so check if your university is available (e.g. Uppsala University is). Once logged in you can select "CREATE" from the top bar.
+Continue by logging in to the platform. The login is federated, so check if your university is available (e.g. Uppsala University is). Once logged in you can select "CREATE" from the top bar.
 
 Provide the following:
 1. NCBI taxonomy ID (if there is no ID for your species, make sure to register it first!).

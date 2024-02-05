@@ -1,5 +1,9 @@
 # Reference BioSamples in ERGA projects
 
+This SOP describes how to locate and reference BioSample accession numbers for ERGA projects where the sample metadata is registered, handled and verified by the COPO portal.
+
+## Details
+
 For ERGA associated projects all samples will already be registered in the [COPO](https://copo-project.org/) (**C**ollaborative **OP**en **O**mics) portal. The registered metadata will follow the [sample manifest](https://github.com/ERGA-consortium/ERGA-sample-manifest) established and updated by the ERGA consortium.
 
 The person responsible for metadata registration, and updates of the records, is the PI of each project (species). In case the Data Stewards spots errors or inconsistencies in the metadata, the PI should be alerted. No changes or updates are to be made by the Data Steward! Also note that submitted metadata may be registered in an earlier version of the metadata template. 

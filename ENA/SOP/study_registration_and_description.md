@@ -1,4 +1,8 @@
-# Study registration for biodiversity projects
+# Study registration and description for biodiversity projects
+
+This SOP describes how to register a new biodiversity project at ENA and what conventions to adhere to for study title, description, release date, abstract, and a short description of locus tag registration.
+
+## Details
 
 At ENA, a study is the highest level of order and is used to group objects together, e.g. experiments and data (raw reads). By accessing the Study (Project accession number) anyone can find and access the data associated with it. 
 
@@ -48,5 +52,7 @@ For data where there is no pre-registered study, you first need to register a st
    A locus tag for EBP/ERGA is made from the three first letters of the genus name plus the first three letters of the species name, all in capital letters.
 
    Example: *Bofotes viridis* - BUFVIR
+
+   For more information on locus tag registration, see [here](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/SOP/locus_tag_registration.md).
 
 8. Submit the study using the green `Submit` button at the bottom of the screen. The study is made on-the-fly and can be referenced using its accession number immediately. All studies are assigned two different acecssion numbers, one BioProject accession with the prefix `PRJEB`, and another called the study accession with the prefix `ERP`. The former is usually the one used in publications. 
