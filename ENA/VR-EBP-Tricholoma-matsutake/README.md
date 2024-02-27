@@ -46,18 +46,28 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
     * Study alias: `TriMat1` 
     * Locus tag: `TRIMAT` 
     * Release date: `2026-02-05`
-* A study for the mitochondrial assembly was registered in the Webin Portal with a release date of `2026-02-05`, study alias `mito-TriMat1`. The accession number obtained was ``.
+* A study for the mitochondrial assembly was registered in the Webin Portal with a release date of `2026-02-05`, study alias `mito-TriMat1`. The accession number obtained was `PRJEB73337`.
 * An umbrella study was submitted programmatically, with a release date of `2026-02-05`, using [submission.xml](./data/submission.xml) and [umbrella.xml](./data/umbrella.xml):
 
     ```
     curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"    
     ```
 
-    * Accession number received: ``
+    * Accession number received: `PRJEB73338`
     * Receipt of the sumbission:
 
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-02-27T09:15:58.272Z" submissionFile="submission.xml" success="true">
+        <PROJECT accession="PRJEB73338" alias="all-TriMat1" status="PRIVATE" holdUntilDate="2026-02-05Z"/>
+        <SUBMISSION accession="ERA29182228" alias="SUBMISSION-27-02-2024-09:15:58:087"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Register sample
