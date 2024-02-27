@@ -61,8 +61,14 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
     ```
 
 ### Register sample
-* The sample was registered using the Webin Portal uploading [sample-metadata.tsv]()
-* Received accession number: ``
+* A ToLID was not provided, so I asked for one according to [SOP](../SOP/register_ToLID.md)
+    * Taxonomy id: `40145`
+    * Specimen ID: `TM_Rim_1`
+    * Scientific name: `Tricholoma matsutake`
+    * Received id: `gfTriMats1`
+    **Note:** I did not get a notification via email, but when searching at [TOLID homepage](https://id.tol.sanger.ac.uk/search) I found the identifier (specimen ID matched)
+* The sample was registered using the Webin Portal uploading [PRJEB72359-sample-metadata.tsv](./data/PRJEB72359-sample-metadata.tsv)
+* Received accession number: `ERS18360571`
 
 ### Register experiment
 * Manifests were created and copied (using WinSCP) to Uppmax, for each of the three types of sequences:
