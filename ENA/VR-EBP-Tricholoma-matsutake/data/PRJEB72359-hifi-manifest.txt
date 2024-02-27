@@ -1,9 +1,9 @@
 STUDY:	PRJEB72359
-SAMPLE:	
+SAMPLE:	ERS18360571
 NAME:	PACBIO-HIFI-TriMat1-1
 INSTRUMENT:	Sequel IIe
-LIBRARY_SOURCE:	
-LIBRARY_SELECTION:	
-LIBRARY_STRATEGY:	
-DESCRIPTION:	
+LIBRARY_SOURCE:	GENOMIC
+LIBRARY_SELECTION:	size fractionation
+LIBRARY_STRATEGY:	WGS
+DESCRIPTION:	Preparing HiFi SMRTbell® Libraries using the SMRTbell Express Template Prep Kit 2.0
 FASTQ:	/proj/snic2022-6-208/VREBP-Tricholoma_matsutake-2023-AsmAnno/data/to_ENA/PacBio/HIFI_WGS/demultiplex.bc1012_BAK8A_OA--bc1012_BAK8A_OA.hifi_reads.fastq.gz

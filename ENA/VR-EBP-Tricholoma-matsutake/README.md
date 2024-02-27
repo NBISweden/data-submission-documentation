@@ -79,12 +79,13 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
     ```
     interactive -t 08:00:00 -A naiss2023-5-307
     module load ascp
-    java -jar ../webin-cli-6.5.0.jar -ascp -context reads -userName $1 -password $2 -manifest $3 -outputDir Webin_output/ -validate
-    java -jar ../webin-cli-6.5.0.jar -ascp -context reads -userName $1 -password $2 -manifest $3 -outputDir Webin_output/ -submit
+    mkdir Webin_output
+    java -jar ../webin-cli-7.0.1.jar -ascp -context reads -userName $1 -password $2 -manifest $3 -outputDir Webin_output/ -validate
+    java -jar ../webin-cli-7.0.1.jar -ascp -context reads -userName $1 -password $2 -manifest $3 -outputDir Webin_output/ -submit
     ```
-* HiFi: ``, ``
-* Isoseq: ``, ``
-* RNA: ``, ``, ``
+* HiFi: `ERX12084821`, `ERR12710834`
+* Isoseq: `ERX12084825`, `ERR12710838`
+* RNA: `ERX12084862`, `ERR12710875`
 
 ### Genome assembly
 * The bioinformatician needed to fix the gff file, so that the annotation is also on CDS level and not only on mRNA level
@@ -120,7 +121,7 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
     ```
 * Validation and submission of [PRJEB72359-genome-manifest.txt](./data/PRJEB72359-genome-manifest.txt) was done using webin-cli
     ```
-    java -jar ../../../Downloads/webin-cli-6.5.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB72359-genome-manifest.txt -validate
+    java -jar ../../../Downloads/webin-cli-7.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB72359-genome-manifest.txt -validate
     ```
 * Accession number: ``
 
@@ -131,6 +132,6 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
     * The [naming convention](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file)
 * Validation and submission of [PRJEBXXXX-mito-manifest.txt](./data/PRJEBXXXXX-mito-manifest.txt) was done using webin-cli
     ```
-    java -jar ../../../Downloads/webin-cli-6.5.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEBXXXX-mito-manifest.txt -validate
+    java -jar ../../../Downloads/webin-cli-7.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEBXXXX-mito-manifest.txt -validate
     ```
 * Accession number: ``

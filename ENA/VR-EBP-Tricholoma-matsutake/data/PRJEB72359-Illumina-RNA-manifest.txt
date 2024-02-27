@@ -1,10 +1,11 @@
 STUDY:	PRJEB72359
-SAMPLE:	
+SAMPLE:	ERS18360571
 NAME:	ILLUMINA-RNA-TriMat1-1
 INSTRUMENT:	Illumina NovaSeq 6000
+INSERT_SIZE:	150
 LIBRARY_SOURCE:	TRANSCRIPTOMIC
-LIBRARY_SELECTION:	
+LIBRARY_SELECTION:	Oligo-dT
 LIBRARY_STRATEGY:	RNA-Seq
-DESCRIPTION:	
+DESCRIPTION:	TruSeq Stranded mRNA Sample Preparation. Sequencing libraries were prepared from 400ng total RNA using the TruSeq stranded mRNA library preparation kit (cat# 20020595, Illumina Inc.) including polyA selection. Unique dual indexes (cat# 20022371, Illumina Inc.) were used. The library preparation was performed according to the manufacturers’ protocol (#1000000040498).
 FASTQ:	/proj/snic2022-6-208/VREBP-Tricholoma_matsutake-2023-AsmAnno/data/to_ENA/Illumina/RNA/WA-3572-Goliat-RE009-1A-NGI11738_S57_L004_R1_001.fastq.gz
 FASTQ:	/proj/snic2022-6-208/VREBP-Tricholoma_matsutake-2023-AsmAnno/data/to_ENA/Illumina/RNA/WA-3572-Goliat-RE009-1A-NGI11738_S57_L004_R2_001.fastq.gz
