@@ -2,11 +2,11 @@ STUDY: PRJEB
 SAMPLE: 
 ASSEMBLYNAME: GomCla1-mito-assembly
 ASSEMBLY_TYPE: isolate
-COVERAGE: 
-PROGRAM: MitoHifi (3.0.0)
+COVERAGE: 3000
+PROGRAM: MBG (v1.0.16)
 PLATFORM: PacBio
 MOLECULETYPE: genomic DNA
-DESCRIPTION: The mitochondrial genome was assembled using MitoHiFi (3.0.0).
+DESCRIPTION: HiFi reads were mapped to the Ramaria rubella (NC_068232) mitochondria with minimap2. Mapped reads were extracted and assembled with MBG into a circular contig.
 RUN_REF: 
-FASTA: 
+FASTA: glomcla_mtdna.fasta.gz
 CHROMOSOME_LIST: chromosome_list.txt.gz

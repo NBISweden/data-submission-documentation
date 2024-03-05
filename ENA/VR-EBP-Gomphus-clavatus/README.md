@@ -61,6 +61,11 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
     ```
 
 ### Register sample
+* A ToLID was not provided, so I asked for one according to [SOP](../SOP/register_ToLID.md)
+    * Taxonomy id: `80588`
+    * Specimen ID: ``
+    * Scientific name: `Gomphus clavatus`
+    * Received id: `gfGomClav1`
 * The sample was registered using the Webin Portal uploading [sample-metadata.tsv]()
 * Received accession number: ``
 
@@ -81,6 +86,7 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
 
 ### Genome assembly
 * The bioinformatician produced the embl flat file, which I copied to my laptop
+* However, it turned out that it was created without exposing variables of EMBLmyGFF3, so I redid the embl file using `sbatch run_emblmygff3_GOMCLA.sh` on nac-login cluster (script [run_emblmygff3_GOMCLA.sh](./scripts/run_emblmygff3_GOMCLA.sh))
 * Validation and submission of [PRJEB72358-genome-manifest.txt](./data/PRJEB72358-genome-manifest.txt) was done using webin-cli
     ```
     java -jar ../../../Downloads/webin-cli-6.5.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB72358-genome-manifest.txt -validate

@@ -2,8 +2,8 @@ STUDY:	PRJEB72358
 SAMPLE:	
 NAME:	PACBIO-HIFI-GomCla1-1
 INSTRUMENT:	Sequel IIe
-LIBRARY_SOURCE:	
-LIBRARY_SELECTION:	
-LIBRARY_STRATEGY:	
-DESCRIPTION:	
+LIBRARY_SOURCE:	GENOMIC
+LIBRARY_SELECTION:	size fractionation
+LIBRARY_STRATEGY:	WGS
+DESCRIPTION:	Preparing HiFi SMRTbell® Libraries using the SMRTbell Express Template Prep Kit 2.0
 FASTQ:	/proj/snic2021-6-194/INBOX/VR_Gomphus_clavatus/pt_152/ccsreads/pt_152_001/pt_152_001.ccsreads.fastq.gz

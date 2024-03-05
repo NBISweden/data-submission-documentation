@@ -2,10 +2,10 @@ STUDY: PRJEB72358
 SAMPLE: 
 ASSEMBLYNAME: GomCla1-assembly
 ASSEMBLY_TYPE: isolate
-COVERAGE: 
-PROGRAM: hifiasm (0.19.4-r575)
+COVERAGE: 146
+PROGRAM: hifiasm (v0.19.8)
 PLATFORM: Illumina, PacBio
 MOLECULETYPE: genomic DNA
-DESCRIPTION: Assembly was carried out with Hifiasm (0.19.4-r575) and haplotypic duplication was identified and removed with purge_dups (1.2.5). The assembly was checked for contaminations with BlobToolKit (4.1.7). Error polishing of homozygous errors was done with DeepVariant (1.5.0) and bcftools consensus (1.17). The gene annotation was carried out with Braker (3.0.3). Protein evidences were downloaded from UniProt based on the taxon group Arthropods including PE-level 1, 2 and 3. Illumina RNAseq reads were mapped with Hisat2 (2.1.0) and a restricted maximum intron length of 20000 to avoid gene fusions in this densely packed genome. And the bam file was provided to Braker.
+DESCRIPTION: The genome assembly was produced from ~146X PacBio HiFi reads using hifiasm v0.19.8 with default settings. Putative contamination was removed after analysis with the blobtoolkit pipeline v4.1.7.
 RUN_REF: 
-FLATFILE: 
+FLATFILE: gomcla.embl.gz
