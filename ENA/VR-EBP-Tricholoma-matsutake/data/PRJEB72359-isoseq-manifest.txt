@@ -1,0 +1,9 @@
+STUDY:	PRJEB72359
+SAMPLE:	ERS18360571
+NAME:	PACBIO-Isoseq-TriMat1-1
+INSTRUMENT:	Sequel IIe
+LIBRARY_SOURCE:	TRANSCRIPTOMIC
+LIBRARY_SELECTION:	size fractionation
+LIBRARY_STRATEGY:	RNA-Seq
+DESCRIPTION:	Library was prepared using the Procedure and Checklist - Iso-Seq™ Express Template Preparation for Sequel® and Sequel II Systems, https://www.pacb.com/wp-content/uploads/Procedure-Checklist-Iso-Seq-Express-Template-Preparation-for-Sequel-and-Sequel-II-Systems.pdf
+FASTQ:	/proj/snic2022-6-208/VREBP-Tricholoma_matsutake-2023-AsmAnno/data/to_ENA/PacBio/ISOSEQ/pt_141_001.ccsreads.fastq.gz

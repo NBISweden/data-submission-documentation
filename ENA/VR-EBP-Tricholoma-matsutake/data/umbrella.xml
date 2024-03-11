@@ -1,0 +1,15 @@
+<PROJECT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <PROJECT center_name="" alias="all-TriMat1">
+        <TITLE>Tricholoma matsutake umbrella project</TITLE>
+        <DESCRIPTION>This project connects the sequencing, genomic and mitochrondrial assembly data of Tricholoma matsutake as part of the project "A Swedish Earth Biogenome Project platform: building a pipeline and proof of principle studies” at NBIS (National Bioinformatics Infrastructure Sweden, https://nbis.se/) and NGI (National Genomics Infrastructure, https://www.scilifelab.se/units/ngi/) and funded by Vetenskapsrådet in Sweden, project number 2020-06174_VR.</DESCRIPTION>
+        <UMBRELLA_PROJECT/>
+        <RELATED_PROJECTS>
+          <RELATED_PROJECT>
+            <CHILD_PROJECT accession="PRJEB72359"/>
+          </RELATED_PROJECT>
+          <RELATED_PROJECT>
+            <CHILD_PROJECT accession="PRJEB73337"/>
+          </RELATED_PROJECT>
+        </RELATED_PROJECTS>
+    </PROJECT>
+</PROJECT_SET>
