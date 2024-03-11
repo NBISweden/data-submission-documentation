@@ -2,11 +2,11 @@ STUDY: PRJEB73337
 SAMPLE: ERS18360571
 ASSEMBLYNAME: TriMat1-mito-assembly
 ASSEMBLY_TYPE: isolate
-COVERAGE: 
+COVERAGE: 1300
 PROGRAM: MitoHifi (3.0.0)
 PLATFORM: PacBio
 MOLECULETYPE: genomic DNA
 DESCRIPTION: The mitochondrial genome was assembled using MitoHiFi (3.0.0).
-RUN_REF: 
+RUN_REF: ERR12710834
 FASTA: gfTriMats.mito.20231213.fa.gz
 CHROMOSOME_LIST: chromosome_list.txt.gz

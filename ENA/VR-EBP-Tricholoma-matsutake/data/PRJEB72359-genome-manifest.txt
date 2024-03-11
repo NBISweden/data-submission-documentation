@@ -2,10 +2,10 @@ STUDY: PRJEB72359
 SAMPLE: ERS18360571
 ASSEMBLYNAME: TriMat1-assembly
 ASSEMBLY_TYPE: isolate
-COVERAGE: 
-PROGRAM: hifiasm (0.19.4-r575)
+COVERAGE: 42
+PROGRAM: hifiasm (0.19.6-r595)
 PLATFORM: Illumina, PacBio
 MOLECULETYPE: genomic DNA
-DESCRIPTION: 
+DESCRIPTION: Assembly was carried out with Hifiasm (0.19.6-r595) and haplotypic duplication was identified and removed with purge_dups (1.2.5). The assembly was checked for contaminations with BlobToolKit (4.1.7). The gene annotation was performed in two independent steps followed by an integration step. (1.) BRAKER (v3.0.6) was used incorporating external evidence in the form of Illumina RNA-seq reads and all fungal proteins from OrthoDB v11. (2.) The set of high quality transcripts from PacBio iso-seq data were aligned to the genome using minimap2 (v2.24-r1163) and used to obtain gene predictions with GeneMarkS-T (v5.1) following the long_read protocol from BRAKER. The gene models obtained in the two steps above were integrated and filtered using TSEBRA (long_reads branch, commit 9654bc0).
 RUN_REF: ERR12710834, ERR12710838, ERR12710875
-FLATFILE: PRJEB72359.embl.gz
+FLATFILE: PRJEB72359-TRIMAT.embl.gz

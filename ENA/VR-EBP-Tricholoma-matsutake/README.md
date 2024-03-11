@@ -80,6 +80,8 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
 * The sample was registered using the Webin Portal uploading [PRJEB72359-sample-metadata.tsv](./data/PRJEB72359-sample-metadata.tsv)
 * Received accession number: `ERS18360571`
 
+* Logged in to ENA and updated 'project_name' in the sample to 'The Swedish EBP pilot' so that it matches the other VR_EBP projects.
+
 ### Register experiment
 * Manifests were created and copied (using WinSCP) to Uppmax, for each of the three types of sequences:
     * [PacBio HiFi manifest](./data/PRJEB72359-hifi-manifest.txt)
@@ -99,10 +101,11 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
 
 ### Genome assembly
 * The bioinformatician needed to fix the gff file, so that the annotation is also on CDS level and not only on mRNA level
-* I copied the gff3 and fasta file to my local computer
+* I copied the gff3 and fasta file to nac-login cluster
 * I exposed EMBLmyGFF3 variables and changed in 2 of the json files exposed, according to instructions in [Create EMBL file](https://github.com/NBISweden/annotation-cluster/wiki/ENA-submission#create-embl-file):
     ```
-    conda activate py38
+    source /projects/martin/prog/bin/conda_init.sh
+    conda activate /home/asoares/.conda/envs/EMBLmyGFF3
     EMBLmyGFF3 --expose_translations
     ```
     Add to file [translation_gff_attribute_to_embl_qualifier.json](./data/translation_gff_attribute_to_embl_qualifier.json) the following modification:
@@ -125,23 +128,47 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
     },
     ```
     There is a third file exposed [translation_gff_other_to_embl_qualifier.json](./data/translation_gff_other_to_embl_qualifier.json), which is unaltered.
+
+    Run script [run_emblmygff3_TRIMAT.sh](./scripts/run_emblmygff3_TRIMAT.sh), using command `sbatch run_emblmygff3_TRIMAT.sh`:
     ```
-    EMBLmyGFF3 .gff.gz gfTriMats.pri.20231213.fa.gz --topology linear --molecule_type 'genomic DNA' --transl_table 1 --species "Tricholoma matsutake" --locus_tag TRIMAT --project_id PRJEB72359 -o PRJEB72359.embl
-    gzip PRJEB72359.embl
+    EMBLmyGFF3 gfTriMats.pri.20231213.ENAconform.gff gfTriMats.pri.20231213.fa.gz --topology linear --molecule_type 'genomic DNA' --transl_table 1 --species "Tricholoma matsutake" --locus_tag TRIMAT --project_id PRJEB72359 -o PRJEB72359-TRIMAT.embl
+    gzip PRJEB72359-TRIMAT.embl
+    ```
+    Output EMBLmyGFF3:
+    ```
+    08:28:19 WARNING feature: Unknown qualifier 'uniprot_id' - skipped
+    08:28:20 ERROR feature: >>stop_codon<< is not a valid EMBL feature type. You can ignore this message if you don't need the feature. Otherwise tell me which EMBL feature it corresponds to by adding the information within the json mapping file.
+    08:28:20 ERROR feature: >>start_codon<< is not a valid EMBL feature type. You can ignore this message if you don't need the feature. Otherwise tell me which EMBL feature it corresponds to by adding the information within the json mapping file.
+    08:28:21 ERROR feature: >>five_prime_utr<< is not a valid EMBL feature type. You can ignore this message if you don't need the feature. Otherwise tell me which EMBL feature it corresponds to by adding the information within the json mapping file.
+    08:28:21 ERROR feature: >>three_prime_utr<< is not a valid EMBL feature type. You can ignore this message if you don't need the feature. Otherwise tell me which EMBL feature it corresponds to by adding the information within the json mapping file.
     ```
 * Validation and submission of [PRJEB72359-genome-manifest.txt](./data/PRJEB72359-genome-manifest.txt) was done using webin-cli
     ```
-    java -jar ../../../Downloads/webin-cli-7.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB72359-genome-manifest.txt -validate
+    java -jar ../../../../../Downloads/webin-cli-7.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest PRJEB72359-genome-manifest.txt -validate
     ```
-* Accession number: ``
+* Validation of flatfile (embl) showed several (more than 1600) error messages regarding intron duplications.
+    * This needs to be handled by bioinformatician, but I was curious on how to connect the error message to embl-file and then to corresponding position in gff
+    * First look at the error message and extract the line numbers, e.g. `ERROR: "intron" Features locations are duplicated - consider merging qualifiers. [ line: 128910 of PRJEB72359-TRIMAT.embl.gz,  line: 128883 of PRJEB72359-TRIMAT.embl.gz]
+
+    * Then do a sed command to extract line in embl file , e.g. `sed -n '128883,128915p;128916q' PRJEB72359-TRIMAT.embl > err2` (note that the error message might put the line numbers in wrong order)
+    * Then, using `more` on the err2 file see the intron number, then check these in the gff file
+    * The bioinformatician fixed the gff file, and also created an embl flatfile. I was told that we can update the `translation_gff_feature_to_embl_feature.json` file, adding the following snippet:
+    ```
+    "intron": {
+        "remove": true
+    },
+    ```
+* I updated the script [run_emblmygff3_TRIMAT.sh](./scripts/run_emblmygff3_TRIMAT.sh)
+* A new validation of the resulting embl file produced no errors, thus could be submitted. **Note:** Submission produced an error, suggesting enclosing password in single quotes, which I already had. When removing the quotes, submission was completed successfully...
+* Accession number: `ERZ23774140`
 
 ### Mito assembly
 * Since mito assemblies consists of only one sequence in the sequence file, a [chromosome assembly](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#chromosome-assembly) submission is the way to go:
     * The manifest needs one additional file, therein referenced as `CHROMOSOME_LIST: chromosome_list.txt.gz`
     * In this [chromosome_list.txt](./data/chromosome_list.txt), a single row is added `ptg000014c_rc_rotated	MIT	Linear-Chromosome	Mitochondrion`
     * The [naming convention](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file)
-* Validation and submission of [PRJEBXXXX-mito-manifest.txt](./data/PRJEBXXXXX-mito-manifest.txt) was done using webin-cli
+* Validation and submission of [PRJEB73337-mito-manifest.txt](./data/PRJEB73337-mito-manifest.txt) was done using webin-cli
     ```
-    java -jar ../../../Downloads/webin-cli-7.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEBXXXX-mito-manifest.txt -validate
+    java -jar ../../../../../Downloads/webin-cli-7.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB73337-mito-manifest.txt -validate
     ```
-* Accession number: ``
+* Accession number: `ERZ23581694`

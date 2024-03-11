@@ -12,6 +12,9 @@
  "exon": {
    "remove": true
  },
+ "intron": {
+  "remove": true
+},
  "transcript": {
  	"target": "mRNA"
  }
