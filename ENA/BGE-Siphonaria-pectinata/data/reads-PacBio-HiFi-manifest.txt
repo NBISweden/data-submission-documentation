@@ -1,0 +1,9 @@
+STUDY:	PRJEB74038
+SAMPLE:	SAMEA113595495
+NAME:	PacBio-HiFi-SipPec1
+INSTRUMENT:	Revio
+LIBRARY_SOURCE:	GENOMIC
+LIBRARY_SELECTION:	size fractionation
+LIBRARY_STRATEGY:	WGS
+LIBRARY_CONSTRUCTION_PROTOCOL:	Preparing HiFi SMRTbell® Libraries using the SMRTbell Express Template Prep Kit 2.0
+BAM:	/proj/snic2021-6-194/INBOX/BGE_Siphonaria_pectinata/files/pr_034/rawdata/pr_034_001/m84045_231124_112655_s2.hifi_reads.default.bam
