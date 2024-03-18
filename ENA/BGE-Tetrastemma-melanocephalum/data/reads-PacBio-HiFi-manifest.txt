@@ -1,0 +1,9 @@
+STUDY:	PRJEB74039
+SAMPLE:	SAMEA113595480
+NAME:	PacBio-HiFi-TetMel1
+INSTRUMENT:	Revio
+LIBRARY_SOURCE:	GENOMIC
+LIBRARY_SELECTION:	size fractionation
+LIBRARY_STRATEGY:	WGS
+LIBRARY_CONSTRUCTION_PROTOCOL:	Preparing HiFi SMRTbell® Libraries using the SMRTbell Express Template Prep Kit 2.0
+BAM:	/proj/snic2021-6-194/INBOX/BGE_Tetrastemma_melanocephalum/DataDelivery_2024-03-04_15-13-35_ugc00251/files/pr_033/rawdata/pr_033_001/m84045_240223_133910_s2.hifi_reads.bam

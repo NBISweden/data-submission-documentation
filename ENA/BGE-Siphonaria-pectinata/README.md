@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: <AC>
+Top_level_acccession: PRJEB74038
 ---
 
 # BGE - *Siphonaria pectinata*
