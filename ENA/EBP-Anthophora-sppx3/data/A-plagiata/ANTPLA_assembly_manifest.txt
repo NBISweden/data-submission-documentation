@@ -1,0 +1,11 @@
+STUDY           PRJEB72356
+SAMPLE          SAMEA115349256
+ASSEMBLYNAME    iyAntPlag1
+ASSEMBLY_TYPE   isolate
+COVERAGE        98.5
+PROGRAM         Flye v2.9
+PLATFORM        OXFORD_NANOPORE
+MOLECULETYPE    genomic DNA
+DESCRIPTION     'The genome assembly was produced from ~98.5X OXford Nanopore reads using Flye v2.9 with default settings. Putative haplotype duplications were removed using Purge_dups v1.2.5. The resulting assembly was polished with Medaka.'
+RUN_REF:        ERX12086664, ERX12093365, ERX12093466
+FLATFILE:       antpla.embl.gz

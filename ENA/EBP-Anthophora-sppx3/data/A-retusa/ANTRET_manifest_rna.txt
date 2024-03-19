@@ -1,0 +1,11 @@
+STUDY PRJEB72357
+SAMPLE SAMEA115406052
+NAME ILLUMINA-RNA-AntRet1-1
+INSTRUMENT Illumina NovaSeq 6000
+INSERT_SIZE 150
+LIBRARY_SOURCE TRANSCRIPTOMIC
+LIBRARY_SELECTION Oligo-dT
+LIBRARY_STRATEGY RNA-Seq
+LIBRARY_CONSTRUCTION_PROTOCOL 'TruSeq Stranded mRNA Sample Preparation. Sequencing libraries were prepared from 400ng total RNA using the TruSeq stranded mRNA library preparation kit (cat# 20020595, Illumina Inc.) including polyA selection. Unique dual indexes (cat# 20022371, Illumina Inc.) were used. The library preparation was performed according to the manufacturers’ protocol (#1000000040498).'
+FASTQ WA-3572-AR4-RE011-1A-NGI11226_S60_L004_R1_001.fastq.gz
+FASTQ WA-3572-AR4-RE011-1A-NGI11226_S60_L004_R2_001.fastq.gz

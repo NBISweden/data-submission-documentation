@@ -1,0 +1,11 @@
+STUDY PRJEB72355 
+SAMPLE SAMEA115398051
+ASSEMBLYNAME iyAntQuad1
+ASSEMBLY_TYPE isolate
+COVERAGE 21.5
+PROGRAM hifiasm v0.16.0
+PLATFORM PACBIO_SMRT
+MOLECULETYPE genomic DNA
+DESCRIPTION 'The genome assembly was produced from ~21.5X PacBio HiFi reads using hifiasm v0.16.0 with default settings.'
+RUN_REF: ERR12736836
+FLATFILE: antqua.embl.gz
