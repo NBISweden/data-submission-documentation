@@ -1,0 +1,11 @@
+STUDY PRJEB72357 
+SAMPLE SAMEA115406051         
+ASSEMBLYNAME iyAntRet1
+ASSEMBLY_TYPE isolate
+COVERAGE 16.7
+PROGRAM hifiasm v0.16.0
+PLATFORM PACBIO_SMRT
+MOLECULETYPE genomic DNA
+DESCRIPTION 'The genome assembly was produced from ~16.7X PacBio HiFi reads using hifiasm v0.16.0 with default settings.'
+RUN_REF ERR12742923
+FLATFILE antret.embl.gz
