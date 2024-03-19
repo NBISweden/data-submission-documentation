@@ -1,10 +1,10 @@
 ---
-Redmine_issue: https://projects.nbis.se/issues/<id>
+Redmine_issue: https://projects.nbis.se/issues/6717
 Repository: ENA
 Submission_type: VR-EBP, HiFi, Iso-Seq, RNA-seq, Nanopore, assembly, annotation # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB72355, PRJEB72356, PRJEB72357
+Top_level_acccession: PRJEB72355  PRJEB72356  PRJEB72357
 ---
 
 # VR-EBP *Anthophora* spp. x3 
