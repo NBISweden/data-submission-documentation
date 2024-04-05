@@ -1,0 +1,11 @@
+STUDY:	PRJEB74311
+SAMPLE:	ERS18607826
+NAME:	P11453_101
+INSTRUMENT:	Illumina NovaSeq 6000
+INSERT_SIZE:	151
+LIBRARY_SOURCE:	GENOMIC
+LIBRARY_SELECTION:	other
+LIBRARY_STRATEGY:	WGS
+DESCRIPTION:	High molecular weight (HMW) genomic DNA was extracted from the whole body of one individual L. sclopetarius spider using MagAttract HMW DNA Kit (Qiagen). The HMW DNA was used to generate the 10X linked read libraries on 10X genomics Chromium platform (Genome Library Kit & Gel Bead Kit v2 PN-1000017, genome Chip Kit v2 PN120257) following the manufacturer’s guidelines. The 10X libraries were sequenced on Illumina NovaSeq6000 instrument (NovaSeq Control Software 1.6.0/RTA v3.4.4) with 151bp paired end setup using NovaSeqXp workflow in S4 flowcell. The Bcl to FastQ conversion was performed using bcl2fastq_v2.19.1.403 from the CASAVA software suite. Sanger / phred33 / Illumina 1.8+ was used as the quality scale.
+FASTQ:	/uppstore/path/P11453_101_S1_L001_R1_001.fastq.gz
+FASTQ:	/uppstore/path/P11453_101_S1_L001_R2_001.fastq.gz
