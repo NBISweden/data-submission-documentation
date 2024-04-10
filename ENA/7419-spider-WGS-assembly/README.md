@@ -118,3 +118,26 @@ Research group registered an ENA account, and added also data stewards.
 * New, cleaned files (copied to nac-login cluster):
   * LSc.v1.2.fa
   * Lsc.v1.2.gff
+
+* [assembly-manifest.txt](./data/assembly-manifest.txt) was validated using Webin-CLI:
+  ```
+  java -jar ../../../Downloads/webin-cli-7.1.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./assembly-manifest.txt -validate     
+  ```
+
+* Validation errors:
+  ```
+  ERROR: Feature Qualifier "product" has invalid value 3,5-cyclic"" /product=" 1" /product=" nucleotide" /product=" phosphodiesterase" /product="Calcium/calmodulin-dependent" /standard_name="pde1c_2. [ line: 4376826]
+  ERROR: Feature Qualifier "product" has invalid value 2-O-methyltransferase"" /product=" fibrillarin" /product="rRNA" /standard_name="fib. [ line: 14022661]
+  ERROR: Feature Qualifier "product" has invalid value 5-AMP-activated"" /standard_name="prkaa2_iso2. [ line: 14023856]
+  ERROR: Feature Qualifier "product" has invalid value 5-AMP-activated"" /standard_name="prkaa2_iso1. [ line: 14023913]
+  ERROR: Feature Qualifier "product" has invalid value 5-AMP-activated"" /standard_name="prkab1_2. [ line: 15938751]
+  ERROR: Feature Qualifier "product" has invalid value 5"" /standard_name="dclre1b. [ line: 21691346]
+  ```
+* I gunzipped the embl file and looked at the offending lines. The errors were due to extra `"`, once removed it worked.
+* [assembly-manifest.txt](./data/assembly-manifest.txt) was re-validated and submitted using Webin-CLI:
+  ```
+  java -jar ../../../Downloads/webin-cli-7.1.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./assembly-manifest.txt -validate
+  java -jar ../../../Downloads/webin-cli-7.1.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./assembly-manifest.txt -submit      
+  ```
+
+* Received accession number: `ERZ23875418`
