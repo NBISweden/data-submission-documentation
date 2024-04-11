@@ -98,6 +98,24 @@ Research group registered an ENA account, and added also data stewards.
   ```
 * Received accession numbers: `ERX12204293`, `ERR12831479`
 
+### PacBio Iso-Seq long transcript reads dataset
+
+* All metadata was collected from the draft journal article and entered into [PacBio_Iso-seq-metadata_template_default_ERC000011.xlsx](./data/PacBio_Iso-seq-metadata_template_default_ERC000011.xlsx)
+* Study was registered interactively via browser, received accession number: `PRJEB74494`
+* Sample was registered by modification of an aldready registered sample by uploading [PacBio_Iso-seq_sample.tsv](.data/PacBio_Iso-seq_sample.tsv). Received accession number: `SAMEA115465569`
+
+#### Experiment
+
+Data consisted of a single bam-file, and due to the presumed size (>50Gb) it was decided to submit the file directly from storage (Uppmax) to ENA using Webin-CLI.
+
+Java client for Webin-CLI v7.1.1 was uploaded to the Uppmax data folder along with the text manifest using standard `scp`.
+
+The submission command line was initially run with a `-validate` flag before submission - `java -jar ../webin-cli-7.1.1.jar -ascp -context reads -userName Webin-XXXXX -password 'my_password' -manifest PacBio_Iso-seq_manifest.txt -validate`
+
+This resulted in extremly long initial handshakes with the ENA server, and several attempts were made over several days without success. Eventually it was discovered the .bam-file was extremely large (~950 Gb), and communication with the researcher and Bioinformatician revealed the file to be a [consensus full reads version](https://ngisweden.scilifelab.se/bioinformatics/pacbio-isoseq-analysis/). After more communication a more polished and re-useable friendly file version (demultiplexed flnc) was settled on as more publication friendly, bringning the file size down to ~7 Gb.
+
+The flnc file was validated and then submitted to ENA without further issues.
+
 ### Assembly dataset
 
 * All metadata was collected in [assembly-metadata_template_default_ERC000011.xlsx](./data/assembly-metadata_template_default_ERC000011.xlsx)
