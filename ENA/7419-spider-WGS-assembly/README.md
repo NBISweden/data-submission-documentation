@@ -4,24 +4,26 @@ Repository: ENA
 Submission_type: WGS, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB74310, PRJEB74311, PRJEB74312
+Top_level_acccession: PRJEB74310, PRJEB74311, PRJEB74494, PRJEB74312
 ---
 
 # 7419 - Spider WGS & assembly
 
 ## Submission task description
-The Spider partner project has produced several datasets of which this documentation describes the submission to ENA of 3 datasets:2 whole genome sequencing datasets (PacBio long reads and Chromium 10X short reads) and 1 annotated assembly. There are two sequencing datasets, one . The WGS datasets, together with an Isoseq dataset documented separately, were used to create the annotated assembly.
+The Spider partner project has produced several datasets of which this documentation describes the submission to ENA of 4 datasets: 3 whole genome sequencing datasets (PacBio long reads, Chromium 10X short reads, and PacBio Iso-seq) and 1 annotated assembly. The WGS datasets were used to create the annotated assembly.
 
 ## Procedure overview and links to examples
 
 Metadata templates
 * [PacBio metadata template](./data/PacBio-metadata_template_default_ERC000011.xlsx)
 * [Chromium 10x metadata template](./data/chromium10x-metadata_template_default_ERC000011.xlsx)
+* [PacBio Iso-seq metadata template](./data/PacBio_Iso-seq-metadata_template_default_ERC000011.xlsx)
 * [Assembly metadata template](./data/assembly-metadata_template_default_ERC000011.xlsx)
 
 Internal links
 * [PacBio dataset](#pacbio-dataset)
 * [Chromium 10x dataset](#chromium-10x-dataset)
+* [PacBio Iso-seq dataset](#pacbio-iso-seq-long-transcript-reads-dataset)
 * [Assembly dataset](#assembly-dataset)
 
 ## Lessons learned
