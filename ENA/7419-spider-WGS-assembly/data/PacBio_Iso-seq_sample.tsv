@@ -1,0 +1,4 @@
+Checklist	ERC000011	ENA default sample checklist																						
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)	dev_stage	tissue_type	isolation_source	geographic location (latitude)	geographic location (longitude)	collected_by	geographic location (region and locality)	sex										
+#units										DD	DD													
+280406	Larinioides sclopetarius	LarScl-PacBio-Isoseq	PacBio Iso-seq data from L. sclopetarius WGS	Adult female spider collected from Skarholmen in Uppsala, Sweden, with the purpose of whole genome sequencing using PacBio Isoseq sequencing.	2018-11	Sweden	adult	whole body	L. sclopetarius adult female spiders were collected in the wild in a small habitat in Uppsala, Sweden, and were then kept in big containers that allowed them to spin webs.	59.78233273	17.62738681	Anna Rising	Skarholmen, Uppsala	female										

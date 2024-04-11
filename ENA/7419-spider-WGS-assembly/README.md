@@ -4,24 +4,26 @@ Repository: ENA
 Submission_type: WGS, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB74310, PRJEB74311, PRJEB74312
+Top_level_acccession: PRJEB74310, PRJEB74311, PRJEB74494, PRJEB74312
 ---
 
 # 7419 - Spider WGS & assembly
 
 ## Submission task description
-The Spider partner project has produced several datasets of which this documentation describes the submission to ENA of 3 datasets:2 whole genome sequencing datasets (PacBio long reads and Chromium 10X short reads) and 1 annotated assembly. There are two sequencing datasets, one . The WGS datasets, together with an Isoseq dataset documented separately, were used to create the annotated assembly.
+The Spider partner project has produced several datasets of which this documentation describes the submission to ENA of 4 datasets: 3 whole genome sequencing datasets (PacBio long reads, Chromium 10X short reads, and PacBio Iso-seq) and 1 annotated assembly. The WGS datasets were used to create the annotated assembly.
 
 ## Procedure overview and links to examples
 
 Metadata templates
 * [PacBio metadata template](./data/PacBio-metadata_template_default_ERC000011.xlsx)
 * [Chromium 10x metadata template](./data/chromium10x-metadata_template_default_ERC000011.xlsx)
+* [PacBio Iso-seq metadata template](./data/PacBio_Iso-seq-metadata_template_default_ERC000011.xlsx)
 * [Assembly metadata template](./data/assembly-metadata_template_default_ERC000011.xlsx)
 
 Internal links
 * [PacBio dataset](#pacbio-dataset)
 * [Chromium 10x dataset](#chromium-10x-dataset)
+* [PacBio Iso-seq dataset](#pacbio-iso-seq-long-transcript-reads-dataset)
 * [Assembly dataset](#assembly-dataset)
 
 ## Lessons learned
@@ -97,6 +99,24 @@ Research group registered an ENA account, and added also data stewards.
   java -jar ../webin-cli-7.0.1.jar -ascp -context reads -userName Webin-XXXXX -password 'my_password' -manifest chromium10x-experiment-manifest.txt -outputDir Webin_output/ -submit
   ```
 * Received accession numbers: `ERX12204293`, `ERR12831479`
+
+### PacBio Iso-Seq long transcript reads dataset
+
+* All metadata was collected from the draft journal article and entered into [PacBio_Iso-seq-metadata_template_default_ERC000011.xlsx](./data/PacBio_Iso-seq-metadata_template_default_ERC000011.xlsx)
+* Study was registered interactively via browser, received accession number: `PRJEB74494`
+* Sample was registered by modification of an aldready registered sample by uploading [PacBio_Iso-seq_sample.tsv](.data/PacBio_Iso-seq_sample.tsv). Received accession number: `SAMEA115465569`
+
+#### Experiment
+
+Data consisted of a single bam-file, and due to the presumed size (>50Gb) it was decided to submit the file directly from storage (Uppmax) to ENA using Webin-CLI.
+
+Java client for Webin-CLI v7.1.1 was uploaded to the Uppmax data folder along with the text manifest using standard `scp`.
+
+The submission command line was initially run with a `-validate` flag before submission - `java -jar ../webin-cli-7.1.1.jar -ascp -context reads -userName Webin-XXXXX -password 'my_password' -manifest PacBio_Iso-seq_manifest.txt -validate`
+
+This resulted in extremly long initial handshakes with the ENA server, and several attempts were made over several days without success. Eventually it was discovered the .bam-file was extremely large (~950 Gb), and communication with the researcher and Bioinformatician revealed the file to be a [consensus full reads version](https://ngisweden.scilifelab.se/bioinformatics/pacbio-isoseq-analysis/). After more communication a more polished and re-useable friendly file version (demultiplexed flnc) was settled on as more publication friendly, bringning the file size down to ~7 Gb.
+
+The flnc file was validated and then submitted to ENA without further issues.
 
 ### Assembly dataset
 
