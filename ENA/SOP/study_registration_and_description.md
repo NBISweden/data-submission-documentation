@@ -8,6 +8,8 @@ At ENA, a study is the highest level of order and is used to group objects toget
 
 For data where there is no pre-registered study, you first need to register a study under which experiments and runs can later be submitted.
 
+ERGA-BGE has a [submission guide](https://github.com/ERGA-consortium/ERGA-submission/blob/main/BGE/ERGA-BGE_ReadData_Submission_Guide.md)
+
 1. Login to your individual or broker ENA account and under `Studies (Projects)` select `Register Study`.
 
 2. `Release date [This is when your study will be made public]`
@@ -18,11 +20,12 @@ For data where there is no pre-registered study, you first need to register a st
     
     Use a short abbreviation as Study name following a modified version of the ToLID (Tree of Life ID) format, restricted to the three first letters of the genus name plus the first three letters of the species name, followed by an index number.
 
-    Example: For *Vulpes lagopus* -  VulLag1
+    * Example: For *Vulpes lagopus* -  VulLag1
+    * BGE: ToLID, e.g. tnTetMela7
 
 4. `Short descriptive study title`
 
-    - EBP - "[Genus species] (vernacular name), genomic and transcriptomic data"
+    - EBP/BGE - "[Genus species] (vernacular name), genomic and transcriptomic data"
 
     Example: "Lemmus lemmus, genomic and transcriptomic data" 
 
@@ -40,6 +43,10 @@ For data where there is no pre-registered study, you first need to register a st
 
     "This project collects genomic data generated for [Genus species], (vernacular name), to facilitate assembly and annotation as part of the ERGA pilot (https://www.erga-biodiversity.eu/pilot-project)."
 
+    For BGE:
+
+    "This project collects the genomic and transcriptomic data generated for [Genus species] (vernacular name) to facilitate genome assembly and annotation as part of the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/) and organised by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) initiative.
+
 6. `Will you provide functional genome annotation?`
 
     Check this box for all EBP/ERGA studies as they aim at de novo assemblies and annotations.
@@ -55,4 +62,8 @@ For data where there is no pre-registered study, you first need to register a st
 
    For more information on locus tag registration, see [here](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/SOP/locus_tag_registration.md).
 
-8. Submit the study using the green `Submit` button at the bottom of the screen. The study is made on-the-fly and can be referenced using its accession number immediately. All studies are assigned two different acecssion numbers, one BioProject accession with the prefix `PRJEB`, and another called the study accession with the prefix `ERP`. The former is usually the one used in publications. 
+8. `Add study attributes` (BGE)
+
+    Click “+” and add the tag “keyword” and the value “ERGA-BGE”. Then click Add.
+
+9. Submit the study using the green `Submit` button at the bottom of the screen. The study is made on-the-fly and can be referenced using its accession number immediately. All studies are assigned two different acecssion numbers, one BioProject accession with the prefix `PRJEB`, and another called the study accession with the prefix `ERP`. The former is usually the one used in publications. 
