@@ -27,6 +27,7 @@ Submission of raw reads for *Tetrastemma melanocephalum* to facilitate assembly 
 * Title and abstract for the study was decided together with a colleague.
 * Release date was set 2 years in the future, 2026-03-07, but it is likely that the study will be released as soon as the rest of the sequencing datasets have been produced and submitted. At the latest, we expect the datasets to be public when the assembly has been submitted as well.
 * The study was registered via the browser, using NBIS DM broker account, received accession number: `PRJEB74039`
+* Study was updated according to instructions in ERGA-BGE submission guide, with new title, name, and description. Also, added a study attribute (keyword, ERGA-BGE).
 
 ### Submit HiFi
 * NGI filled and checked the experiment metadata
