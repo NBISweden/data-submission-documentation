@@ -31,6 +31,7 @@ As it turned out, there are several assemblies, one annotated genome assembly, o
     * [Update of genome assembly](#update-of-assembly)
 * Prepare and submit [mito assembly](#submission-mito-assembly)
     * [Update of mito assembly study association](#update-of-mito-assembly-project-association)
+    * [Update mito assembly](#update-mito-assembly)
 * Prepare and submit [symbiont assemblies](#submission-symbionts)
 * Prepare and submit an [umbrella project](#submission-umbrella-project)
 
@@ -315,10 +316,17 @@ Only gives the umbrella metadata, not which children have been added:
 ```
 * I've asked ENA (on ELIXIR Slack) for guidance. I got a confirmation that all three children are connected to the umbrella project. Also, at the moment it is not possible for people outside of ENA to query ENA directly themselves, but this will be raised as a desired feature to implement in the future.
 
-**Note:**
-* I was notified by the responsible bioinformatician that an improved mito assembly will be made, so there will be an update of the submission:
+#### Update mito assembly
+* I was notified by the responsible bioinformatician that an improved mito assembly has been made, so an update of the submission is needed:
     * Create new manifest, with new assembly name and the new assembly file
     * Submit using Webin-CLI
+* Manifest - [PRJEB71993-mito-assembly-update-manifest.txt](./data/PRJEB71993-mito-assembly-update-manifest.txt)
+* Validate and submit:
+    ```
+    java -jar ../../../../../Downloads/webin-cli-7.1.1.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./PRJEB71993-mito-assembly-update-manifest.txt -validate
+    java -jar ../../../../../Downloads/webin-cli-7.1.1.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./PRJEB71993-mito-assembly-update-manifest.txt -submit
+    ```
+* Received accession number: `ERZ23878276`
 -------------
 ### Submission symbionts
 
