@@ -16,6 +16,7 @@ Submission of raw reads for *Siphonaria pectinata* to facilitate assembly and an
 
 * [Metadata template](./data/BGE-Siphonaria-pectinata-metadata.xlsx)
 * [ERGA-BGE_ReadData_Submission_Guide](https://github.com/ERGA-consortium/ERGA-submission/blob/main/BGE/ERGA-BGE_ReadData_Submission_Guide.md)
+* [BGE mRupRup umbrella project](https://www.ncbi.nlm.nih.gov/bioproject/1084634)
 
 ## Lessons learned
 * When it comes to preregistered samples, done via COPO, there is a struggle to identify which sample has been used for sequencing. Ideally the data producer would use the BioSample accession number instead of an identifier that is found in several of the registered samples.
@@ -30,6 +31,7 @@ Submission of raw reads for *Siphonaria pectinata* to facilitate assembly and an
 * Release date was set 2 years in the future, 2026-03-07, but it is likely that the study will be released as soon as the rest of the sequencing datasets have been produced and submitted. At the latest, we expect the datasets to be public when the assembly has been submitted as well.
 * The study was registered via the browser, using NBIS DM broker account, received accession number: `PRJEB74038`
 * Study was updated according to instructions in ERGA-BGE submission guide, with new title, name, and description. Also, added a study attribute (keyword, ERGA-BGE).
+* By looking at actual examples of submission, study name was changed (index removed, ToLID with index is used for study name of assembly).
 
 ### Submit HiFi
 * NGI filled and checked the experiment metadata
