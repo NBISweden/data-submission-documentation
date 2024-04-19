@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN alias="run_xbPinRudi1_Hifi_WGS_pr_036_001_bam_1" center_name="SCILIFELAB">
+		<EXPERIMENT_REF refname="exp_xbPinRudi1_Hifi_WGS_pr_036_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="f8f45212bc42404d0891334cd9e477a4" checksum_method="MD5" filename="/proj/snic2021-6-194/INBOX/BGE_Pinna_rudis/files/pr_036/rawdata/pr_036_001/m84045_231124_115801_s3.hifi_reads.default.bam" filetype="BAM"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
