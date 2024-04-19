@@ -327,6 +327,11 @@ Only gives the umbrella metadata, not which children have been added:
     java -jar ../../../../../Downloads/webin-cli-7.1.1.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./PRJEB71993-mito-assembly-update-manifest.txt -submit
     ```
 * Received accession number: `ERZ23878276`
+* Received assembly accession:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC | STUDY_ID | SAMPLE_ID | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
+    StyAte-mito-assembly-v2 | GCA_964030495 | PRJEB71993 | ERS10521290 |  |  | OZ034823-OZ034823
+    ```
 -------------
 ### Submission symbionts
 
