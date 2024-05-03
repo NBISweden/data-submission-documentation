@@ -1,0 +1,14 @@
+STUDY	ERP154169
+SAMPLE	ERS16799655
+ASSEMBLYNAME	Pabies02
+ASSEMBLY_TYPE	clone
+COVERAGE	30
+PROGRAM	HiFiasm version 0.12-r304
+PLATFORM	PacBio Sequel II
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	We used HiFiasm version 0.12-r304 for a pure HiFi assembly, rendering an almost fully diploid assembly. Haplotig purging was done using purge_dups version 1.2.3, complemented with in-house purging using 50X Illumina reads from diploid and haploid tissues. Hi-C scaffolding was performed using Salsa2 version 2.2, as well as wih an ultra-dense genetic map with ~21,000 markers. The Hi-C contact map was visualised with juicer_tools version 1.14 for two rounds of manual curation, in combination with genetic map marker evaluations for a final haploid representation of the genome. 
+RUN_REF	ERR12257171, ERR12257172, ERR12257173, ERR12257174, ERR12257175, ERR12257176, ERR12257177, ERR12257178, ERR12257179, ERR12303672, ERR12303673, ERR12303674, ERR12303675, ERR12303676, ERR12303677, ERR12303678, ERR12303679, ERR12303680, ERR12303681, ERR12303682, ERR12303683, ERR12303684, ERR12303685, ERR12303686, ERR12303687, ERR12303688, ERR12303689, ERR12303690, ERR12303691, ERR12303692, ERR12303693, ERR12303694, ERR12303695, ERR12303696
+FLATFILE	ERP154169-PABIES-fixlocustag-nosort-v4.embl.gz
+CHROMOSOME_LIST	UPSC-0208.ChromosomeList.txt.gz
+UNLOCALISED_LIST	UPSC-0208.UnlocalisedList.txt.gz

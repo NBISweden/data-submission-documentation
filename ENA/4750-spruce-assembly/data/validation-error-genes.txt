@@ -1,0 +1,24 @@
+The following genes didn't pass through ENA validation, either because the 
+introns were shorter than 10 nucleotides, or had a stop codon that didn't match 
+the boundaries of the CDS.
+
+Introns shorter than 10 nt:
+PA_chr01_G002390	line 17506: intron	491515537	491515541
+PA_chr01_G005891	line 48326: intron	1282489235	1282489242
+PA_chr01_G005891	line 48328: intron	1282489808	1282489808
+PA_chr04_G002213	line 186266: intron	594209236	594209236
+PA_chr04_G002783	line 192371: intron	761368145	761368145
+PA_chr05_G000114	line 215805: intron	19555353	19555353
+PA_chr05_G002089	line 233923: intron	545462508	545462511
+PA_chr07_G002782	line 335267: intron	640377375	640377380
+PA_chr07_G002782	line 335268: intron	640377405	640377413
+PA_chr07_G004647	line 352921: intron	1116903913	1116903915
+PA_chr08_G004752	line 399104: intron	979363801	979363801
+PA_chr10_G001046	line 476739: intron	243138698	243138698
+PA_chr11_G001440	line 527947: intron	375670292	375670296
+
+Partial codon appears after the stop codon:
+PA_chr01_G001645	line 14193-14213
+PA_chr03_G006719	line 151501-151509
+PA_chr06_G002507	line 294531-294542
+PA_chr12_G001638	line 567289-567297
