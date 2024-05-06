@@ -87,5 +87,5 @@ ERROR: Invalid linkage evidence for object: "PA_chr01". [ line: 2]
 java -jar ../../../../Downloads/webin-cli-7.1.1.jar -ascp -context genome -userName Webin-XXX -password 'YYYY' -manifest UPSC-0208.Manifest-ykUpdate.txt -validate
 java -jar ../../../../Downloads/webin-cli-7.1.1.jar -ascp -context genome -userName Webin-XXX -password 'YYYY' -manifest UPSC-0208.Manifest-ykUpdate.txt -submit
 ```
-* Accession number: ``
+* Accession number: `ERZ23880246`
 * Genome accession: ``
