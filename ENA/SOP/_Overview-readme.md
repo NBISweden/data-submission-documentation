@@ -4,7 +4,7 @@ The following readme provides an overview of the submission process (mainly, but
 
 In the first set of examples the descriptions are organised after sub-processes of the larger ENA submission process. Each sub-process is described as a stand alone standard operating procedure (SOP) with extensive information on how-to.
 
-The second set is a list of example submissions of various organisms (those within ERGA/BGE are marked as such), describing the chronological process of submission to ENA as  well as descriptions of issues and problems encountered and how they were solved.
+The second set is a list of example submissions of various organisms (those within ERGA/BGE are marked as such), describing the chronological process of submission to ENA as well as descriptions of issues and problems encountered and how they were solved.
 
 The SOP's should be seen as a work in progress, and may be changed, completed, and/or added to in the future.
 
