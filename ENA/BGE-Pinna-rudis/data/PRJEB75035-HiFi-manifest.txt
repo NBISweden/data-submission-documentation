@@ -1,0 +1,11 @@
+STUDY:	PRJEB75035
+SAMPLE:	SAMEA112748815
+NAME:	Pinna rudis PacBio Hifi WGS data
+PLATFORM:	PACBIO_SMRT
+INSTRUMENT:	Revio
+LIBRARY_NAME:	pr_036_001 PacBio Hifi WGS
+LIBRARY_SOURCE:	GENOMIC
+LIBRARY_SELECTION:	size fractionation
+LIBRARY_STRATEGY:	WGS
+DESCRIPTION:	Preparing HiFi SMRTbell® Libraries using the SMRTbell Express Template Prep Kit 2.0
+BAM:	/proj/snic2021-6-194/INBOX/BGE_Pinna_rudis/files/pr_036/rawdata/pr_036_001/m84045_231124_115801_s3.hifi_reads.default.bam
