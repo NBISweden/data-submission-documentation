@@ -19,6 +19,12 @@ Within the VR-EBP (Earth Biogenome Project), granticka, *Porodaedalea chrysoloma
 * Notes on how to [Create EMBL file](https://github.com/NBISweden/annotation-cluster/wiki/ENA-submission#create-embl-file)
 * Umbrella project at ENA [how to](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#umbrella-studies)
 * [SOP Umbrella projects](../SOP/register_umbrella_projects.md)
+* Accession numbers received:
+    * PRJEB71491 (raw reads and genome), PRJEB72043 (mito genome), PRJEB72049 (umbrella)
+    * Sample: ERS17850496
+    * HiFi raw reads: ERX11903837
+    * Genomassembly: ERZ22530149, GCA_963926545, CAWUYF010000001-CAWUYF010000025
+    * Mito assembly: ERZ22530150, GCA_963926555, OZ004980-OZ004980
 
 ### Steps
 * [Collect metadata](#collect-metadata)
@@ -59,7 +65,6 @@ Within the VR-EBP (Earth Biogenome Project), granticka, *Porodaedalea chrysoloma
   ![terrestial ecosystem terms](./images/envo-ecosystem.png)
 * VR-EBP does not have a set term for `Project name`, which is part of the sample checklist, we decided that it should be `The Swedish EBP pilot`
 
-* **Note:** `Specimen voucher` is not available at the moment, but this can be added later
 -------
 ### Register study
 
@@ -102,6 +107,7 @@ Within the VR-EBP (Earth Biogenome Project), granticka, *Porodaedalea chrysoloma
     </SAMPLE_ATTRIBUTE>
     ```
 * Submitted to production server, will add sample attribute block later (between sex and tolid, I tested with dummy value in order to see where it would show up in the xml file).
+* Added specimen_voucher `UPS:UPS:F-1121145`, by looking up `UPS` institution code as well as collection code in [INSDC controlled vocabulary](https://ftp.ncbi.nih.gov/pub/taxonomy/biocollections/).
 * Recieved accession number: `ERS17850496`
 ------
 ### Register experiment
@@ -191,7 +197,7 @@ gzip PRJEB71491.embl
     java -jar ../../../Downloads/webin-cli-6.5.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB71491-genome-assembly-manifest.txt -validate
     java -jar ../../../Downloads/webin-cli-6.5.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB71491-genome-assembly-manifest.txt -submit
     ```
-* Received accession number: `ERZ22530149`
+* Received accession number: `ERZ22530149`, `GCA_963926545`, `CAWUYF010000001-CAWUYF010000025`
 -------
 ### Mito assembly
 
@@ -211,4 +217,4 @@ gzip PRJEB71491.embl
 java -jar ../../../Downloads/webin-cli-6.5.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB72043-mito-assembly-manifest.txt -validate
 java -jar ../../../Downloads/webin-cli-6.5.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB72043-mito-assembly-manifest.txt -submit
 ```
-* Received accession number: `ERZ22530150`
+* Received accession number: `ERZ22530150`, `GCA_963926555`, `OZ004980-OZ004980`
