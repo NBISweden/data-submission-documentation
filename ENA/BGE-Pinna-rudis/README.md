@@ -49,7 +49,7 @@ Submission of raw reads for *Pinna rudis* to facilitate assembly and annotation 
     module load ascp
     java -jar ../webin-cli-7.0.1.jar -ascp -context reads -userName $1 -password $2 -manifest PRJEB75035-HiFi-manifest.txt -outputDir Webin_output/ -submit
     ```
-* Accession number received: ``
+* Accession number received: `ERX12523198`, `ERR13151803`
 * Added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
 ### About ERGA scripts
