@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT alias="erga-bge-fValHis-study-rawdata-2024-05-07" center_name="CNAG">
+		<NAME>fValHis</NAME>
+		<TITLE>Valencia hispanica, genomic and transcriptomic data. </TITLE>
+		<DESCRIPTION>This project collects the genomic and transcriptomic data generated for Valencia hispanica to facilitate genome assembly and annotation as part of the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/) and organised by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) initiative.</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE TAG="Keyword" VALUE="ERGA-BGE"/>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+	<PROJECT alias="erga-bge-fValHis1_primary-2024-05-07" center_name="CNAG">
+		<NAME>fValHis1</NAME>
+		<TITLE>Valencia hispanica, genome assembly, fValHis1. </TITLE>
+		<DESCRIPTION>This project provides the genome assembly of Valencia hispanica. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE TAG="Keyword" VALUE="ERGA-BGE"/>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+</PROJECT_SET>
