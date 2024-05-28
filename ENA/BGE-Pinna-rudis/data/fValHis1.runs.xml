@@ -1,0 +1,379 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN alias="run_fValHis1_ONT_WGS_FS38820303_fastq_1" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_ONT_WGS_FS38820303"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="6d682a7f78861e4681acf95de68d5bf3" checksum_method="MD5" filename="PAO53193_1_0.readids.fastq.gz" filetype="fastq"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_ONT_WGS_FS38820303_fast5s_1" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_ONT_WGS_FS38820303"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="a9cca3d4e6ad53ff4ee119d28151bfaa" checksum_method="MD5" filename="PAO53193_1.fast5.tar.gz" filetype="OxfordNanopore_native"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Hi-C_FS38820295_fastq_1" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Hi-C_FS38820295"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="6b3895ef30abc0852d003854b51293fd" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25K3DSX7.1.185UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="e8a04425c4466900b072b07e238081bf" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25K3DSX7.1.185UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Hi-C_FS38820295_fastq_2" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Hi-C_FS38820295"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="55ad87585d974e47c02c319fa75b4c9e" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25K3DSX7.2.185UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="75ca35765e1a40f946c6ea7e3a1c5b09" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25K3DSX7.2.185UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Hi-C_FS38820295_fastq_3" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Hi-C_FS38820295"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="9912bd371f8d276b3619c1a42a8b3aef" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25K3DSX7.3.185UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="7de22f2affc21e813edcba2fb6c95679" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25K3DSX7.3.185UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Hi-C_FS38820295_fastq_4" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Hi-C_FS38820295"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="4b70fa7ffbf6e8fcd78b498532fd23de" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25K3DSX7.4.185UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="3d6ba3a3477d79928373e596f68c6b8c" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25K3DSX7.4.185UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Hi-C_FS38820295_fastq_5" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Hi-C_FS38820295"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="e65000608a4d7a5c1e589488ff1a4677" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25MWDSX7.1.185UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="fca8b0059f05702c4b3bfd607c939de9" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25MWDSX7.1.185UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Hi-C_FS38820295_fastq_6" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Hi-C_FS38820295"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="d78c768aaa6972aefcf381321d945dae" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25MWDSX7.2.185UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="a8356be45a40bdf8c623ffeb9601bd1a" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25MWDSX7.2.185UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Hi-C_FS38820295_fastq_7" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Hi-C_FS38820295"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="5c261e421154d9afaafeed4c02f95a73" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25MWDSX7.3.185UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="1d400f1e88f39171021e54144f0fd04b" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25MWDSX7.3.185UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Hi-C_FS38820295_fastq_8" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Hi-C_FS38820295"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="e45cca7634674343b774ac7eff885a96" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25MWDSX7.4.185UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="14bdce04bffc6648a1b7864a9fdd1a4d" checksum_method="MD5" filename="AZ8138.ERGA_MV_414X_001_2.BGE_08.7996AH.H25MWDSX7.4.185UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_RNA-Seq_AZ8615_fastq_1" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_RNA-Seq_AZ8615"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="0f875989b3d902b3d4a6405637cb8d10" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYMWDSX7.1.87UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="d0e4bdaa3cb684117f20ef1c0da1004b" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYMWDSX7.1.87UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_RNA-Seq_AZ8615_fastq_2" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_RNA-Seq_AZ8615"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="df544ed97bf0bcb38ca07a9e8b9c0b1a" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYMWDSX7.2.87UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="e1bd8f3e4dc2f9018edd131253e10aad" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYMWDSX7.2.87UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_RNA-Seq_AZ8615_fastq_3" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_RNA-Seq_AZ8615"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="1af2a32e9d1a5cb956d4e7b660e9c09b" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYMWDSX7.3.87UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="021a40dac3a58de7ad910609cfb4e92b" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYMWDSX7.3.87UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_RNA-Seq_AZ8615_fastq_4" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_RNA-Seq_AZ8615"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="812cd6c8fdc8f24063287d2b168cd157" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYMWDSX7.4.87UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="5d26a187c1f50844e3a02ce29e5a32f8" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYMWDSX7.4.87UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_RNA-Seq_AZ8615_fastq_5" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_RNA-Seq_AZ8615"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="8a961d5f92cba9717c1049f370f8342c" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYTWDSX7.1.87UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="5ab33f01f2eff4ae986eac4ed5c2c57e" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYTWDSX7.1.87UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_RNA-Seq_AZ8615_fastq_6" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_RNA-Seq_AZ8615"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="f9da2e4f1f6749069403be5364f4e0a5" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYTWDSX7.2.87UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="3bb1ec739701e5b7878136ea19293d3b" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYTWDSX7.2.87UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_RNA-Seq_AZ8615_fastq_7" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_RNA-Seq_AZ8615"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="ecc3dfca57e471d2e583ef8e55d3ca14" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYTWDSX7.3.87UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="6f8dd3968438c88565af08fe7db2b389" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYTWDSX7.3.87UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_RNA-Seq_AZ8615_fastq_8" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_RNA-Seq_AZ8615"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="91a5c950343310981f90b782b1628430" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYTWDSX7.4.87UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="00cf074bec67b9ce3d4cf890bb6430f4" checksum_method="MD5" filename="AZ8615.ERGA_MV_414X_001_pool.BGE_09.9178AH.HFYTWDSX7.4.87UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_WGS_FS38820303_fastq_1" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_WGS_FS38820303"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="4976c31ac64e3a8aad2cc28063a17e9a" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYNJDSX7.1.269UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="2e46b4f5e5fa332a44f7cfa09c390482" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYNJDSX7.1.269UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_WGS_FS38820303_fastq_2" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_WGS_FS38820303"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="0789d71710533b65f4344f6888b235fd" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYNJDSX7.2.269UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="28f59ea33ceaf59d704f16f5f1922838" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYNJDSX7.2.269UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_WGS_FS38820303_fastq_3" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_WGS_FS38820303"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="642e6252571b175dcd9551f6dae3c2e7" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYNJDSX7.3.269UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="34a2561ac477c1c22030a9c240d73396" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYNJDSX7.3.269UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_WGS_FS38820303_fastq_4" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_WGS_FS38820303"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="e2e73e839d257504945dbcb77de280d0" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYNJDSX7.4.269UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="3b70884db5b9b3b75039269ad46d33e0" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYNJDSX7.4.269UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_WGS_FS38820303_fastq_5" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_WGS_FS38820303"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="283162d9ad005d77f2ea0f288c2769b9" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYTLDSX7.1.269UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="c56a90aa161fba8a80c125aee2b56d67" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYTLDSX7.1.269UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_WGS_FS38820303_fastq_6" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_WGS_FS38820303"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="3c5bff949341f07f9fb8cf95f3680f0a" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYTLDSX7.2.269UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="1c7bfb2b45400e324492f005a2503a0f" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYTLDSX7.2.269UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_WGS_FS38820303_fastq_7" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_WGS_FS38820303"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="215be753728059ae0fbebca52a7da80f" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYTLDSX7.3.269UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="b9a05ab39168947d27f73f564762bbba" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYTLDSX7.3.269UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_fValHis1_Illumina_WGS_FS38820303_fastq_8" center_name="CNAG">
+		<EXPERIMENT_REF refname="exp_fValHis1_Illumina_WGS_FS38820303"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="37e100fae846f1dd283c08453dfd3c49" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYTLDSX7.4.269UDI-idt-UMI.1.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="4d044c58f8a9a5423eeafbdb129c46fb" checksum_method="MD5" filename="AZ8383.ERGA_MV_414X_001.BGE_12.9343AH.HFYTLDSX7.4.269UDI-idt-UMI.2.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
