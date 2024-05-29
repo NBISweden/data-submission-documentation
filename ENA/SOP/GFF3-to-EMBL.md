@@ -5,7 +5,7 @@ This SOP describes the necessary steps in how to convert a genome assembly in GF
 The conversion requires three things:
 
 - [Download and install the EMBLmyGFF3 tool](https://github.com/NBISweden/EMBLmyGFF3)
-- A genome assembly in [GFF3 format](https://www.ncbi.nlm.nih.gov/datasets/docs/v1/reference-docs/file-formats/about-ncbi-gff3/). Additional documentation and explanation [here](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md).
+- A genome assembly in [GFF3 format](https://www.ncbi.nlm.nih.gov/datasets/docs/v1/reference-docs/file-formats/about-ncbi-gff3/). Additional documentation and explanation at [Sequence Ontology GitHub](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md).
 - The genome sequence in fasta format
 
 After installing EMBLmyGFF3, open a command line terminal and navigate to the folder where the GFF and FASTA files are located. 
@@ -26,11 +26,11 @@ EMBLmyGFF3 -i [XYZ] -p [PRJEB00000] -r [1] -s '[Genus species]' -t [linear] -m '
 
 Executing the script will take some time depending on the size of the GFF and FASTA. A small genome might take under a minute, while large genomes of several Gb is known to have taken hours, or even days.
 
-Common error messages are warnings about duplicate and/or overlapping exons/introns as described e.g. [here](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/5894-Geodia-assembly/README.md) with solutions.
+Common error messages are warnings about duplicate and/or overlapping exons/introns as described e.g. in [5894-Geodia-assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/5894-Geodia-assembly/README.md) with solutions.
 
 The finished EMBL file must then be compressed using gzip:
 
 ```
 gzip -k [File].embl
 ````
-With the `-k` flag active to force gzip to retain the original file. The zipped file can then be uploaded to ENA using the Webin-CLI client as described [here](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/5894-Geodia-assembly/README.md).
+With the `-k` flag active to force gzip to retain the original file. The zipped file can then be uploaded to ENA using the Webin-CLI client as described in [5894-Geodia-assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/5894-Geodia-assembly/README.md).
