@@ -20,9 +20,7 @@ The SOP's should be seen as a work in progress, and may be changed, completed, a
 
 1. [How to reference Biosamples in ERGA submission](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/reference_biosamples_in_erga.md)
 
-1. Experiment naming convention
-
-1. Library construction description
+1. [Submitting an experiment](https://github.com/NBISweden/data-submission-documentation/blob/7aef3400ec6f5cc56b0d43a0f96c6ea43d80932e/ENA/SOP/experiment-submission.md)
 
 1. [Register a locus tag for assembly submission](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/locus_tag_registration.md)
 
