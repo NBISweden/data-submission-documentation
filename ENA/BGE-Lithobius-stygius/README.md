@@ -29,6 +29,17 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Creating xml
 * I copied [submission.xml](./data/submission.xml) from BGE-Crayfish, using the same embargo date
 * Running the script:
-```
-../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qcLitStyg-hifi.tsv -p ERGA-BGE -o qcLitStyg-HiFi
-```
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qcLitStyg-hifi.tsv -p ERGA-BGE -o qcLitStyg-HiFi
+    ```
+
+### Data transfer
+* Create folder `bge-lithobius` at ENA upload area using Filezilla
+* Using aspera from Uppmax to ENA upload area:
+    ```
+    interactive -t 03:00:00 -A naiss2023-5-307
+    module load ascp
+    export ASPERA_SCP_PASS='password'
+    ascp -k 3 -d -q --mode=send -QT -l300M --host=webin.ebi.ac.uk --user=Webin-XXXX /proj/snic2021-6-194/INBOX/BGE_Lithobius_stygius/EBP_pr_087/files/pr_087/rawdata/pr_087_001/m84045_240505_040448_s4.hifi_reads.bc2087.bam /bge-lithobius/ &
+    ```
+* Keep track of progress using FileZilla
