@@ -16,7 +16,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ## Procedure overview and links to examples
 
 * [Metadata template](./data/BGE-Lithobius-stygius-metadata.xlsx)
-* [BGE HiFi metadata](./data/bge-hifi.tsv)
+* [BGE HiFi metadata](./data/qcLitStyg-hifi.tsv)
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
@@ -26,3 +26,9 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Collecting metadata
 * I went to [BioSamples](https://www.ebi.ac.uk/biosamples/samples?text=Lithobius+stygius) and extracted all samples for this species, where SCILIFELAB was the GAL. I then looked at the delivery README for the HiFi dataset (on Uppmax) and extracted the Name (`FS42595405`). This I then pasted as filter in `Tube or well id` field, in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA115117740](https://www.ebi.ac.uk/biosamples/samples/SAMEA115117740).
 
+### Creating xml
+* I copied [submission.xml](./data/submission.xml) from BGE-Crayfish, using the same embargo date
+* Running the script:
+```
+../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qcLitStyg-hifi.tsv -p ERGA-BGE -o qcLitStyg-HiFi
+```
