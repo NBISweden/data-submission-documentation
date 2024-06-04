@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PROJECT_SET>
-	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icAstAngu-study-rawdata-2024-06-03">
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icAstAngu-study-rawdata-2024-06-04">
 		<NAME>icAstAngu</NAME>
 		<TITLE>Astagobius angustatus, genomic and transcriptomic data. </TITLE>
 		<DESCRIPTION>This project collects the genomic and transcriptomic data generated for Astagobius angustatus to facilitate genome assembly and annotation as part of the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/) and organised by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) initiative.</DESCRIPTION>
@@ -11,7 +11,7 @@
 			<PROJECT_ATTRIBUTE TAG="Keyword" VALUE="ERGA-BGE"/>
 		</PROJECT_ATTRIBUTES>
 	</PROJECT>
-	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icAstAngu6_primary-2024-06-03">
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icAstAngu6_primary-2024-06-04">
 		<NAME>icAstAngu6</NAME>
 		<TITLE>Astagobius angustatus, genome assembly, icAstAngu6. </TITLE>
 		<DESCRIPTION>This project provides the genome assembly of Astagobius angustatus. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
