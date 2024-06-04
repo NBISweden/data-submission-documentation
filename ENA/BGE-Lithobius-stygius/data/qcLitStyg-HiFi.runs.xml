@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <RUN_SET>
-	<RUN center_name="SCILIFELAB" alias="run_qcLitStyg1_Hifi_WGS_FS42595405_bam_1">
-		<EXPERIMENT_REF refname="exp_qcLitStyg1_Hifi_WGS_FS42595405"/>
+	<RUN center_name="SCILIFELAB" alias="run_qcLitStyg1_HiFi_WGS_FS42595405_bam_1">
+		<EXPERIMENT_REF refname="exp_qcLitStyg1_HiFi_WGS_FS42595405"/>
 		<DATA_BLOCK>
 			<FILES>
 				<FILE filename="/bge-lithobius/m84045_240505_040448_s4.hifi_reads.bc2087.bam" checksum_method="MD5" checksum="2f2b850ec5f32825225339715ad6fa20" filetype="bam"/>

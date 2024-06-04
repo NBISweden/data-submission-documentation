@@ -43,3 +43,36 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ascp -k 3 -d -q --mode=send -QT -l300M --host=webin.ebi.ac.uk --user=Webin-XXXX /proj/snic2021-6-194/INBOX/BGE_Lithobius_stygius/EBP_pr_087/files/pr_087/rawdata/pr_087_001/m84045_240505_040448_s4.hifi_reads.bc2087.bam /bge-lithobius/ &
     ```
 * Keep track of progress using FileZilla
+
+### Programmatic submission
+* Copy all xml files to Uppmax:
+    ```
+    scp submission.xml qcLitStyg-HiFi*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-lithobius/
+    ```
+* Submit both projects and experiment in one go, i.e:
+    ```
+    interactive -t 03:00:00 -A naiss2023-5-307
+    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@qcLitStyg-HiFi.study.xml" -F "EXPERIMENT=@qcLitStyg-HiFi.exp.xml" -F "RUN=@qcLitStyg-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-06-04T08:44:47.136+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX12562222" alias="exp_qcLitStyg1_HiFi_WGS_FS42595405" status="PRIVATE"/>
+        <RUN accession="ERR13191080" alias="run_qcLitStyg1_HiFi_WGS_FS42595405_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB76283" alias="erga-bge-qcLitStyg-study-rawdata-2024-06-04" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP160841" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB76284" alias="erga-bge-qcLitStyg1_primary-2024-06-04" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP160842" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA30577677" alias="SUBMISSION-04-06-2024-08:44:46:768"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
