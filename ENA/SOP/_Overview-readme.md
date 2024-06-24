@@ -22,6 +22,8 @@ The SOP's should be seen as a work in progress, and may be changed, completed, a
 
 1. [Submitting an experiment](https://github.com/NBISweden/data-submission-documentation/blob/7aef3400ec6f5cc56b0d43a0f96c6ea43d80932e/ENA/SOP/experiment-submission.md)
 
+1. [Convert a GFF and genome fasta to an EMBL flat file](https://github.com/NBISweden/data-submission-documentation/blob/98380c7506f43d393948712670912769d9792698/ENA/SOP/GFF3-to-EMBL.md)
+
 1. [Register a locus tag for assembly submission](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/locus_tag_registration.md)
 
 1. [How to register an umbrella project](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/register_umbrella_project.md])
