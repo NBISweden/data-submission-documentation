@@ -68,7 +68,7 @@ ENA has service endpoints documented using Swagger, that can be used to query EN
 
 ## Lessons learned
 
-After going through the above steps to register an umbrella project for a mitchondiron assembly submission, as addition to an already existing genome assembly study, the outcome was not as anticipated. All steps worked fine. The mito study and assembly was submitted, and the umbrella study registered without errors. Release date was set to two weeks after submission date. 
+After going through the above steps to register an umbrella project for a mitchondrion assembly submission, as addition to an already existing genome assembly study, the outcome was not as anticipated. All steps worked fine. The mito study and assembly was submitted, and the umbrella study registered without errors. Release date was set to two weeks after submission date. 
 
 After release of the umbrella study the mito study showed up empty, without a link to the by then accepted and accessioned mito assembly. Further, the umbrella study was registered but returned an error when searching for it.
 
