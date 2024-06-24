@@ -65,3 +65,13 @@ ENA has service endpoints documented using Swagger, that can be used to query EN
 * Scroll down to the response body, therein one will see what metadata has been registered with the umbrella project. It is also possible to download the xml.
 
 **Note:** The child projects that have been added will not be shown. It is currently not possible to check this, only ENA helpdesk can.
+
+## Lessons learned
+
+After going through the above steps to register an umbrella project for a mitchondiron assembly submission, as addition to an already existing genome assembly study, the outcome was not as anticipated. All steps worked fine. The mito study and assembly was submitted, and the umbrella study registered without errors. Release date was set to two weeks after submission date. 
+
+After release of the umbrella study the mito study showed up empty, without a link to the by then accepted and accessioned mito assembly. Further, the umbrella study was registered but returned an error when searching for it.
+
+Submission was done on June 3rd. By June 24th the umbrella and mito assembly finally showed in the ENA browser as expected.
+
+It is worth noting that even if the submission process is immediate and reports no errors, the correct display of the study and umbrella may be delayed by several days or even weeks. 
