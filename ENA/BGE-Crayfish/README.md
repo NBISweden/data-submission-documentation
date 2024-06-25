@@ -40,6 +40,12 @@ While not complete information yet, I wanted to try using the script on this spe
     * Answer: I didn't have 'native_file_name' column name, only 'file_name'
 * For Hi-C, there's an additional read type line, apart from PAIRED: `<READ_TYPE>sample_barcode</READ_TYPE>`, should it be there?
 * There is not place to put insert_size in tsv, is it? But for paired reads it is mandatory, isn't it? When I did a trial submission (see below), I got no error so if it is not possible to get the insert size from NGI, at least programmatic submission is a way to escape.
+* We received insert size for th HiC data, **this must be added manually** to the experiment xml:
+    ```
+    <LIBRARY_LAYOUT>
+        <PAIRED NOMINAL_LENGTH=""/>
+    </LIBRARY_LAYOUT>
+    ```
 
 ### Upload sequences to ENA
 
@@ -68,9 +74,8 @@ While not complete information yet, I wanted to try using the script on this spe
     ```
 * I think I will do a test drive, since I've never submitted programmatically, is it possible to submit both projects and experiment in one go, i.e:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@qmAusTorr.study.xml" -F "EXPERIMENT=@qmAusTorr.exp.xml" -F "RUN=@qmAusTorr.runs.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@qmAusTorr.study.xml" -F "EXPERIMENT=@qmAusTorr.exp.xml" -F "RUN=@qmAusTorr.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
-
 
 ### Test programmatic submission
 * Copy all xml files to Uppmax:
@@ -124,3 +129,5 @@ While not complete information yet, I wanted to try using the script on this spe
      <ACTIONS>HOLD</ACTIONS>
 ```
 * Since it *is* possible to submit all at once, I will wait until I have all HiC metadata before I submit for real.
+
+* The xml script is not fully funtioning, insert size for paired reads is missing, and read_type 'sample_barcode' should likely be added to HiFi data, hence these needs to be added manually in the output run xmls for now.
