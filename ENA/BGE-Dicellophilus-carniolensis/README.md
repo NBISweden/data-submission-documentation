@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB77038, PRJEB77039
 ---
 
 # BGE - *Dicellophilus carniolensis*
@@ -41,7 +41,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ### Submit HiFi
 * Created a subdirectory at ENA upload area, `bge-dicellophilus-HiFi` using FileZilla
-* **Ongoing** At Uppmax:
+* At Uppmax:
     ```
     cd /proj/naiss2024-22-345/nobackup/yvonnek/
     interactive -t 08:00:00 -A naiss2024-22-345
@@ -55,11 +55,32 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Transfer xml files to Uppmax no backup using MobaXterm:
     * Start the app and connect to Rackham using 2FA
     * Start a local terminal session in the app, and write the scp command as usual, `scp *.xml yvonnek@rackham.uppmax.uu.se:/proj/naiss2024-22-345/nobackup/yvonnek/BGE-Dicellophilus/`
-* **TO DO** Do the acutal submission:
+* Do the acutal submission:
     ```
     curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@qcDicCarn-hifi.study.xml" -F "EXPERIMENT=@qcDicCarn-hifi.exp.xml" -F "RUN=@qcDicCarn-hifi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
-
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-06-28T14:47:57.023+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX12704040" alias="exp_qcDicCarn1_HiFi_WGS_FS42595415" status="PRIVATE"/>
+        <RUN accession="ERR13333054" alias="run_qcDicCarn1_HiFi_WGS_FS42595415_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB77038" alias="erga-bge-qcDicCarn-study-rawdata-2024-06-28" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP161518" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB77039" alias="erga-bge-qcDicCarn1_primary-2024-06-28" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP161519" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA30654581" alias="SUBMISSION-28-06-2024-14:47:56:763"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+    
 ### Submit Hi-C
 
 ### Submit RNAseq
