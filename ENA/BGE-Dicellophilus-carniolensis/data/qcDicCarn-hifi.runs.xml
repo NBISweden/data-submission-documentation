@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qcDicCarn1_HiFi_WGS_FS42595415_bam_1">
+		<EXPERIMENT_REF refname="exp_qcDicCarn1_HiFi_WGS_FS42595415"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-dicellophilus-HiFi/m84045_240531_164906_s1.hifi_reads.bc2040.bam" checksum_method="MD5" checksum="1a52416ad58227ec38f66f2d21265419" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
