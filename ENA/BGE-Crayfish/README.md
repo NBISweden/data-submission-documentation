@@ -29,12 +29,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Looking at the HiFi deliveries, in the README files (there are 3 of them), all refer to 2(!) samples, ERGA_DS_328X_04_(01+02) as UGC_user_id (UGC_id is pr_047_001). Which sample do we submit the datasets to? Need to ask NGI/UGC
     * Answer from NGI is to use [SAMEA112878228](https://www.ebi.ac.uk/biosamples/samples/SAMEA112878228)
 * Looking at the HiC delivery, they only have 8 'internal' samples, no indication on which BioSample might have been used. Need to ask NGI/SNP&SEQ.
-* There are still some missing metadata for the HiC, but HiFi is complete
+* There are still some missing metadata for the HiC, but HiFi is complete.
 
 ### Upload sequences to ENA
 
 * Use 2 subdirectories at ENA upload area, `bge-crayfish-HiFi` and `bge-crayfish-HiC` (create them previous to upload using FileZilla)
-* Create a shell script, go-ascp-crayfish.sh with aspera commands, use the version that loggs transfers which can continue partial (failed) transfers:
+* Create a shell script, go-ascp-crayfish.sh with aspera commands, use the version that logs transfers which can continue partial (failed) transfers:
     ```
     ascp -k 3 -d -q --mode=send -QT -l300M --host=webin.ebi.ac.uk --user=Webin-XXXX /path/to/*.bam /bge-crayfish-HiFi/ &
     ascp -k 3 -d -q --mode=send -QT -l300M --host=webin.ebi.ac.uk --user=Webin-XXXX /path/to/*.fastq /bge-crayfish-HiC/ &
@@ -49,7 +49,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ./go-ascp-crayfish.sh &
     ```
 * In the end I decided to remove the & ending each line, in order to run sequentially, and also divided HiC into one script and HiFi into another, and just run those in background (i.e. using &). 
-* Keep track of upload success using FileZilla
+* Keep track of upload success using FileZilla.
 
 ### Create xml
 
@@ -194,4 +194,4 @@ While not complete information yet, I wanted to try using the script on this spe
 ```
 * Since it *is* possible to submit all at once, I will wait until I have all HiC metadata before I submit for real.
 
-* The xml script is not fully funtioning, insert size for paired reads is missing, and read_type 'sample_barcode' should likely be added to HiFi data, hence these needs to be added manually in the output run xmls for now.
+* The xml script is not fully functioning, insert size for paired reads is missing, and read_type 'sample_barcode' should likely be added to HiFi data, hence these needs to be added manually in the output run xmls for now.
