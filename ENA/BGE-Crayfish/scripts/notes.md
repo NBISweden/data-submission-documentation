@@ -1,5 +1,5 @@
 # Need for additions
-* `PACBIO_SMRT` as platform for HiFi, not only `ILLUMINA` - when tried with the PacBio Revio input, which is the means of SciLifeLab HiFi sequencing, the xml put out an ILLUMINA capture
+* `PACBIO_SMRT` as platform for HiFi, not only `ILLUMINA` - when tried with the PacBio Revio input, which is the means of SciLifeLab HiFi sequencing, the xml output an ILLUMINA capture
 * `library_construction_protocol` (or possibly `design_description`) - currently no text explanation of how the samples were prepared for sequencing is included, which is something we as data stewards stress is important for future reuse
 * documentation - not that easy to find out how to contribute without the code additions being ugly hacks instead of real, valuable solutions. At least comments in the code explaining functions, would be helpful.
 
@@ -22,7 +22,7 @@ Using `exp_attr` variable to be put as library construction protocol, all places
 
 ### PROJECT_ATTRIBUTES
 
-* The Keyword-ERGA-BGE attributes does not take (i.e. there are no attributes registered) when using the script. Hence, the code needs to be updated to write:
+* The Keyword-ERGA-BGE attributes does not stick (i.e. there are no attributes registered) when using the script. Hence, the code needs to be updated to write:
     ```
     <PROJECT_ATTRIBUTES>
         <PROJECT_ATTRIBUTE>
