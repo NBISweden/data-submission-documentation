@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_1">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_pr_047_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-crayfish-HiFi/m84045_240208_211222_s3.hifi_reads.bam" checksum_method="MD5" checksum="37d9738932e3a41f65e13f2464170372" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_2">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_pr_047_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-crayfish-HiFi/m84045_240208_231139_s4.hifi_reads.bam" checksum_method="MD5" checksum="e4832e63414998d72e39bf4c7788ad44" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_3">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_pr_047_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-crayfish-HiFi/m84045_240201_071430_s4.hifi_reads.bam" checksum_method="MD5" checksum="1eadf4257e868225f9de5d65004cc7dc" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_4">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_pr_047_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-crayfish-HiFi/m84045_240409_125300_s2.hifi_reads.bam" checksum_method="MD5" checksum="071466c40acf559d2065c710104e4471" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_5">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_pr_047_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-crayfish-HiFi/m84045_240409_105338_s1.hifi_reads.bam" checksum_method="MD5" checksum="e98e8a10208f5829148852de3b7c03e1" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_6">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_pr_047_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-crayfish-HiFi/m84045_240422_144522_s1.hifi_reads.bam" checksum_method="MD5" checksum="09cd5c5035ae14d08d24419fbe0a2dd9" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_7">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_pr_047_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-crayfish-HiFi/m84045_240422_164432_s2.hifi_reads.bam" checksum_method="MD5" checksum="e90afdae5133a8402864cf2765ce6bb9" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

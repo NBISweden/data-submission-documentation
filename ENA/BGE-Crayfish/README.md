@@ -18,7 +18,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * [BGE metadata](./data/qmAusTorr-BGE.tsv)
 
 ## Lessons learned
-* Trying programmatic submission, using CNAG scripts to produce xml files for studies and experiments
+* Trying programmatic submission, using CNAG script to produce xml files for studies and experiments
+* The script had to be updated in several places in order to produce the wanted and expected output xml's
 * There's been some struggle regarding HiFi sequencing on this species, has been done in several rounds, resulting in 3 separate deliveries from NGI. There was some uncertanties on which datasets to submit.
 
 ## Detailed step by step description
@@ -28,24 +29,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Looking at the HiFi deliveries, in the README files (there are 3 of them), all refer to 2(!) samples, ERGA_DS_328X_04_(01+02) as UGC_user_id (UGC_id is pr_047_001). Which sample do we submit the datasets to? Need to ask NGI/UGC
     * Answer from NGI is to use [SAMEA112878228](https://www.ebi.ac.uk/biosamples/samples/SAMEA112878228)
 * Looking at the HiC delivery, they only have 8 'internal' samples, no indication on which BioSample might have been used. Need to ask NGI/SNP&SEQ.
-
-### Create xml
-* A [submission.xml](./data/submission.xml) needs to be created manually, which includes the action (ADD) and release date (HOLD).
-
-While not complete information yet, I wanted to try using the script on this species:
-```
-../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qmAusTorr-BGE.tsv -p ERGA-BGE -o qmAusTorr
-```
-* Only run.xml for HiC data, why? 
-    * Answer: I didn't have 'native_file_name' column name, only 'file_name'
-* For Hi-C, there's an additional read type line, apart from PAIRED: `<READ_TYPE>sample_barcode</READ_TYPE>`, should it be there?
-* There is not place to put insert_size in tsv, is it? But for paired reads it is mandatory, isn't it? When I did a trial submission (see below), I got no error so if it is not possible to get the insert size from NGI, at least programmatic submission is a way to escape.
-* We received insert size for th HiC data, **this must be added manually** to the experiment xml:
-    ```
-    <LIBRARY_LAYOUT>
-        <PAIRED NOMINAL_LENGTH=""/>
-    </LIBRARY_LAYOUT>
-    ```
+* There are still some missing metadata for the HiC, but HiFi is complete
 
 ### Upload sequences to ENA
 
@@ -67,7 +51,96 @@ While not complete information yet, I wanted to try using the script on this spe
 * In the end I decided to remove the & ending each line, in order to run sequentially, and also divided HiC into one script and HiFi into another, and just run those in background (i.e. using &). 
 * Keep track of upload success using FileZilla
 
-### Programmatic submission
+### Create xml
+
+#### Submission xml
+* [submission.xml](./data/submission.xml) needs to be created manually, which includes the action (ADD) and release date (HOLD)
+
+    * **Note:** The projects should be released to public as soon as there is at least one dataset registered within it, in order to be able to show progress for milestones within the BGE project. Hence, while not ideal, we will use an embargo of the raw data project only until the HiFi is uploaded. Thus, the HiFi and RNA-seq datasets will become public directly, since we will receive this data at a later stage (well, we do have HiC for this species, but not the metadata, and a deadline of July 15 is approaching fast).The assembly project however, will still be under embargo until an assembly has been registered.
+
+#### HiFi xml
+* I started doing some [Tests](#tests) of the CNAG script using this species. Since I didn't have all the metadata, I did some (programmatic) submissions of other species before returning to this one. Hence, the original CNAG script has been edited several times. What remained, when returning back to this species, was the following:
+
+    * Project attributes (Keyword:ERGA-BGE) are not registered if written in the xml as original script. I had to edit the script so that it is written on 2 rows insead of compact form
+    * Library construction protocol has to be put in the lib_attr column of the tsv file, in the form `LIBRARY_CONSTRUCTION_PROTOCOL:Preparing HiFi SMRTbell® Libraries using the SMRTbell Express Template Prep Kit 3.0`
+
+* I've put the [current version](./scripts/get_ENA_xml_files.py) of my additions of the CNAG script, along with the [notes](./scripts/notes.md) I've made, in the scripts folder. This version works for the [qmAusTorr-HiFi-BGE.tsv](./data/qmAusTorr-HiFi-BGE.tsv) file, but might not work for the Hi-C data (for which I haven't received the full metadata yet).
+    ```
+    ./scripts/get_ENA_xml_files.py  -f qmAusTorr-HiFi-BGE.tsv -p ERGA-BGE -o qmAusTorr-HiFi
+    ```
+#### Hi-C & RNA-seq xml
+
+**TO DO**
+* Figure out what needs to be done in order to create HiC and RNA-seq xml's so that it they correctly are added to the existing study. 
+* Figure out a way to avoid adding insert size for paired reads manually
+    ```
+    <LIBRARY_LAYOUT>
+        <PAIRED NOMINAL_LENGTH="insert_size_value"/>
+    </LIBRARY_LAYOUT>
+    ```
+     * CNAG says it *should* be possible to put it in “Library_attributes” column, but how will the script know where to add it (i.e. to the PAIRED row in library layout section), compared to the library construction protocol, which is also put in the lib_attr column but added after the library layout section?
+ 
+### Programmatic submission HiFi
+
+* Copy all xml files to Uppmax:
+    ```
+    scp submission.xml qmAusTorr-HiFi.*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-crayfish/
+    ```
+* Submit:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@qmAusTorr-HiFi.study.xml" -F "EXPERIMENT=@qmAusTorr-HiFi.exp.xml" -F "RUN=@qmAusTorr-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-07-03T06:04:43.956+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX12711150" alias="exp_qmAusTorr_HiFi_WGS_pr_047_001" status="PRIVATE"/>
+        <RUN accession="ERR13340176" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR13340177" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_2" status="PRIVATE"/>
+        <RUN accession="ERR13340178" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_3" status="PRIVATE"/>
+        <RUN accession="ERR13340179" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_4" status="PRIVATE"/>
+        <RUN accession="ERR13340180" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_5" status="PRIVATE"/>
+        <RUN accession="ERR13340181" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_6" status="PRIVATE"/>
+        <RUN accession="ERR13340182" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_7" status="PRIVATE"/>
+        <PROJECT accession="PRJEB77106" alias="erga-bge-qmAusTorr-study-rawdata-2024-07-02" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP161588" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB77107" alias="erga-bge-qmAusTorr9_primary-2024-07-02" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP161589" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA30663094" alias="SUBMISSION-03-07-2024-06:04:43:289"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+
+### Programmatic submission HiC & RNAseq
+
+
+## Tests
+
+### Test create xml
+* A [submission.xml](./data/submission.xml) needs to be created manually, which includes the action (ADD) and release date (HOLD).
+
+While not complete information yet, I wanted to try using the script on this species:
+```
+../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qmAusTorr-BGE.tsv -p ERGA-BGE -o qmAusTorr
+```
+* Only run.xml for HiC data, why? 
+    * Answer: I didn't have 'native_file_name' column name, only 'file_name'
+* For Hi-C, there's an additional read type line, apart from PAIRED: `<READ_TYPE>sample_barcode</READ_TYPE>`, should it be there?
+* There is not place to put insert_size in tsv, is it? But for paired reads it is mandatory, isn't it? When I did a trial submission (see below), I got no error so if it is not possible to get the insert size from NGI, at least programmatic submission is a way to escape.
+* We received insert size for th HiC data, **this must be added manually** to the experiment xml:
+    ```
+    <LIBRARY_LAYOUT>
+        <PAIRED NOMINAL_LENGTH=""/>
+    </LIBRARY_LAYOUT>
+    ```
+### Test programmatic submission
 * Copy all xml files to Uppmax:
     ```
     scp submission.xml qmAusTorr.*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-crayfish/
@@ -77,16 +150,7 @@ While not complete information yet, I wanted to try using the script on this spe
     curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@qmAusTorr.study.xml" -F "EXPERIMENT=@qmAusTorr.exp.xml" -F "RUN=@qmAusTorr.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 
-### Test programmatic submission
-* Copy all xml files to Uppmax:
-    ```
-    scp submission.xml qmAusTorr.*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-crayfish/
-    ```
-* I think I will do a test drive, since I've never submitted programmatically, is it possible to submit both projects and experiment in one go, i.e:
-    ```
-    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@qmAusTorr.study.xml" -F "EXPERIMENT=@qmAusTorr.exp.xml" -F "RUN=@qmAusTorr.runs.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* If not possible to submit both levels of data, I will need to create another submission.xml file, without the release dat, for experiment submission.
+* If not possible to submit both levels of data, I will need to create another submission.xml file, without the release date, for experiment submission.
 * There's also a possibility to submit xmls via Webin Portal
 
 ```
