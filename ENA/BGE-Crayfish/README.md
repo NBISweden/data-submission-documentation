@@ -117,7 +117,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
-
+* When the Hifi runs were to become public, there were errors on 2 of them regarding the checksums. Apparently I had switched them when copy-pasting.
+ 
 ### Programmatic submission HiC & RNAseq
 
 
