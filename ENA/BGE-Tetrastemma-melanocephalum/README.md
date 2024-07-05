@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB74039
+Top_level_acccession: PRJEB77287, PRJEB74039
 ---
 
 # BGE - *Tetrastemma melanocephalum*
@@ -49,3 +49,29 @@ Submission of raw reads for *Tetrastemma melanocephalum* to facilitate assembly 
 
 ### Submit assembly
 
+For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
+
+* There is a CNAG script, that should do the deed of creating the xml file:
+    ```
+    ./script/get_umbrella_xml_ENA.py -s "Tetrastemma melanocephalum" -t tnTetMela7 -p ERGA-BGE -c SCILIFELAB -a PRJEB74039 -x 307678
+    ```
+* Create a submission-umbrella.xml
+* Submit using curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-07-05T13:37:05.023+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB77287" alias="erga-bge-tnTetMela-study-umbrella-2024-07-05" status="PRIVATE" holdUntilDate="2024-07-07+01:00"/>
+        <SUBMISSION accession="ERA30670089" alias="SUBMISSION-05-07-2024-13:37:04:733"/>
+        <MESSAGES>
+              <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* **Note:** Add the assembly project when it has been created and submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.

@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB74038
+Top_level_acccession: PRJEB77286, PRJEB74038
 ---
 
 # BGE - *Siphonaria pectinata*
@@ -52,3 +52,29 @@ Submission of raw reads for *Siphonaria pectinata* to facilitate assembly and an
 
 ### Submit assembly
 
+For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
+
+* There is a CNAG script, that should do the deed of creating the xml file:
+    ```
+    ./script/get_umbrella_xml_ENA.py -s "Siphonaria pectinata" -t xgSipPect2 -p ERGA-BGE -c SCILIFELAB -a PRJEB74038 -x 57642
+    ```
+* Create a submission-umbrella.xml
+* Submit using curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-07-05T13:32:34.259+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB77286" alias="erga-bge-xgSipPect-study-umbrella-2024-07-05" status="PRIVATE" holdUntilDate="2024-07-07+01:00"/>
+        <SUBMISSION accession="ERA30670067" alias="SUBMISSION-05-07-2024-13:32:34:071"/>
+        <MESSAGES>
+              <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* **Note:** Add the assembly project when it has been created and submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
