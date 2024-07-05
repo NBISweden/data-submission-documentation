@@ -30,7 +30,7 @@ Submission of raw reads for *Hydropglyphus hamulatus* to facilitate assembly and
 * The study was registered via the browser, using NBIS DM broker account, received accession number: `PRJEB76972`
 
 ### Submit HiFi
-* Information on experiment metadata was provided by NGI via Slack and entered into a [spreadsheet](/Users/stephannylinder/Documents/GitHub/data-submission-documentation/ENA/BGE-Hydroglyphus-hamulatus/data/PRJEB76972-experiment.tsv). Staff at NGI also told that the genome size was smaller than initially anticipated, and that sufficient coverage was reached with a single HiFi run (two were produced). It was decided that both raw data files (.bam) would be published even if these were to be joined by the Bioinformatician working with the data. 
+* Information on experiment metadata was provided by NGI via Slack and entered into a [spreadsheet](./data/PRJEB76972-experiment.tsv). Staff at NGI also told that the genome size was smaller than initially anticipated, and that sufficient coverage was reached with a single HiFi run (two were produced). It was decided that both raw data files (.bam) would be published even if these were to be joined by the Bioinformatician working with the data. 
 
 * Sequence files were ingested to the ENA via terminal from the file directory Rackham using the command line: 
 ```
