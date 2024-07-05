@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-qmAusTorr-study-umbrella-2024-07-05">
+		<NAME>qmAusTorr</NAME>
+		<TITLE>Austropotamobius torrentium</TITLE>
+		<DESCRIPTION>This project collects the sequencing data and assemblies generated for Austropotamobius torrentium by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) for the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<UMBRELLA_PROJECT>
+			<ORGANISM>
+				<TAXON_ID>94942</TAXON_ID>
+				<SCIENTIFIC_NAME>Austropotamobius torrentium</SCIENTIFIC_NAME>
+			</ORGANISM>
+		</UMBRELLA_PROJECT>
+		<RELATED_PROJECTS>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB77106"/>
+			</RELATED_PROJECT>
+			<RELATED_PROJECT>
+				<PARENT_PROJECT accession="PRJEB61747"/>
+			</RELATED_PROJECT>
+		</RELATED_PROJECTS>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE TAG="Keyword" VALUE="ERGA-BGE"/>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+</PROJECT_SET>

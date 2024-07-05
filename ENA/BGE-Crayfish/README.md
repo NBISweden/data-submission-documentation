@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB77280, PRJEB77106, PRJEB77107 
 ---
 
 # BGE - *Austropotamobius torrentium* (stone crayfish)
@@ -196,3 +196,31 @@ While not complete information yet, I wanted to try using the script on this spe
 * Since it *is* possible to submit all at once, I will wait until I have all HiC metadata before I submit for real.
 
 * The xml script is not fully functioning, insert size for paired reads is missing, and read_type 'sample_barcode' should likely be added to HiFi data, hence these needs to be added manually in the output run xmls for now.
+
+### Register umbrella projekt
+
+For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
+
+* There is a CNAG script, that should do the deed of creating the xml file:
+    ```
+    ./script/get_umbrella_xml_ENA.py -s "Austropotamobius torrentium" -t qmAusTorr9 -p ERGA-BGE -c SCILIFELAB -a PRJEB77106 -x 94942
+    ```
+* Create a submission-umbrella.xml
+* Submit using curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-07-05T12:58:43.699+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB77280" alias="erga-bge-qmAusTorr-study-umbrella-2024-07-05" status="PRIVATE" holdUntilDate="2024-07-07+01:00"/>
+        <SUBMISSION accession="ERA30670049" alias="SUBMISSION-05-07-2024-12:58:42:488"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    ```
+* **Note:** Add the assembly project `PRJEB77107` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
