@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icHydHamu2_HiFi_WGS_pr_089_001_bam_1">
+		<EXPERIMENT_REF refname="exp_icHydHamu2_HiFi_WGS_pr_089_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="m84045_240620_060113_s4.hifi_reads.bc2052.bam" checksum_method="MD5" checksum="f57462fb87c23a86c050918725783332" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_icHydHamu2_HiFi_WGS_pr_089_002_bam_1">
+		<EXPERIMENT_REF refname="exp_icHydHamu2_HiFi_WGS_pr_089_002"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="m84045_240620_060113_s4.hifi_reads.bc2053.bam" checksum_method="MD5" checksum="5f3df44d71cc2b21fd14880ba04db5a2" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
