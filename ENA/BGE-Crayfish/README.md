@@ -79,7 +79,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     </LIBRARY_LAYOUT>
     ```
      * CNAG says it *should* be possible to put it in “Library_attributes” column, but how will the script know where to add it (i.e. to the PAIRED row in library layout section), compared to the library construction protocol, which is also put in the lib_attr column but added after the library layout section?
- 
+ * Initial attempt, where I've added both insert size and library construction protocol (separated by semicolon) in the lib_attr columne of [qmAusTorr-HiC-BGE.tsv](./data/qmAusTorr-HiC-BGE.tsv):
+    ```
+    conda deactivate
+     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py  -f qmAusTorr-HiC-BGE.tsv -p ERGA-BGE -o qmAusTorr-HiC
+    ```
+* The resulting [qmAusTorr-HiC.exp.xml](./data/qmAusTorr-HiC.exp.xml) refers to the wrong study (the script creates a study.xml, can this be avoided? check arguments of the script). Hence, need to manually change the STUDY_REF to `accession="PRJEB77106"` instead of `refname="erga-bge-qmAusTorr-study-rawdata-2024-09-02"`
+* There are 8 paired reads, but only 1 experiment (meaning there will be only one insert_size although they differe btw the pairs). Is it supposed to be 8 experiments or only 1?
+
 ### Programmatic submission HiFi
 
 * Copy all xml files to Uppmax:

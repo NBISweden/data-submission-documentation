@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN alias="run_qmAusTorr_Hi-C_XD-3967_fastq_1" center_name="SCILIFELAB">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_Hi-C_XD-3967"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="f4c618e104417cb0f93f2b98f9859abd" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2A1A_S77_L003_R1_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="e8100bf0412d119aad38cae86813ba1a" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2A1A_S77_L003_R2_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_qmAusTorr_Hi-C_XD-3967_fastq_2" center_name="SCILIFELAB">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_Hi-C_XD-3967"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="ee3e87e7d7c89c8b6cfe642d4efa285f" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2A1B_S78_L003_R1_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="15da864b19ddc971510b4810825adc67" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2A1B_S78_L003_R2_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_qmAusTorr_Hi-C_XD-3967_fastq_3" center_name="SCILIFELAB">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_Hi-C_XD-3967"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="feec1f2d53d8beddabd18ff789e22fe9" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2A1C_S79_L003_R1_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="7d3fe85518b5a4164db2c918f741e4a3" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2A1C_S79_L003_R2_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_qmAusTorr_Hi-C_XD-3967_fastq_4" center_name="SCILIFELAB">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_Hi-C_XD-3967"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="10a7ad10d70c7ad447af241c92eba2cd" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2B1A_S80_L003_R1_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="9d75f4fa1e114c8ab40125d51fb65852" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2B1A_S80_L003_R2_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_qmAusTorr_Hi-C_XD-3967_fastq_5" center_name="SCILIFELAB">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_Hi-C_XD-3967"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="b713e51f414758450e56220c8a024f47" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2C1A_S81_L003_R1_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="64acf927b1baa33721b9482066feeab7" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2C1A_S81_L003_R2_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_qmAusTorr_Hi-C_XD-3967_fastq_6" center_name="SCILIFELAB">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_Hi-C_XD-3967"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="6c7a94d44295887a3c1511d465eff6bf" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2D1A_S82_L003_R1_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="6e543b9e6f4d6d0b020ae347e1a4e29a" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2D1A_S82_L003_R2_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_qmAusTorr_Hi-C_XD-3967_fastq_7" center_name="SCILIFELAB">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_Hi-C_XD-3967"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="12f04bb0e159ddef60a1c851b994ae16" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2D1B_S83_L003_R1_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="d59064eef6a0a9617859b5240aa9a310" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2D1B_S83_L003_R2_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN alias="run_qmAusTorr_Hi-C_XD-3967_fastq_8" center_name="SCILIFELAB">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_Hi-C_XD-3967"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE checksum="3ced272d59edd71d3434b3c70a938520" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2D1C_S84_L003_R1_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE checksum="ce9b9a7aa89054561ef4d50f709ef50c" checksum_method="MD5" filename="/bge-crayfish-HiC/XD-3967-HC008-2D1C_S84_L003_R2_001.fastq.gz" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

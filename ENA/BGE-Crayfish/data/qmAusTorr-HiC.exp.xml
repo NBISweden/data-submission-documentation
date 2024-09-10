@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<EXPERIMENT_SET>
+	<EXPERIMENT alias="exp_qmAusTorr_Hi-C_XD-3967" center_name="SCILIFELAB">
+		<TITLE>Austropotamobius torrentium Hi-C data</TITLE>
+		<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-02"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA112878228"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>XD-3967 Hi-C</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED/>
+				</LIBRARY_LAYOUT>
+				<INSERT_SIZE>700</INSERT_SIZE>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>Size selection done using SPRISelect Beads according to the protocol, Dovetail Omni-C kit Version 2.0, step 5.5.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+</EXPERIMENT_SET>
