@@ -68,15 +68,13 @@ For each of the BGE species, an umbrella project has to be created and linked to
     ```
 * Receipt:
     ```
-    <?xml version="1.0" encoding="UTF-8"?>
-    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-    <RECEIPT receiptDate="2024-07-05T13:49:57.156+01:00" submissionFile="submission-umbrella.xml" success="true">
-        <PROJECT accession="PRJEB77288" alias="erga-bge-icHydHamu-study-umbrella-2024-07-05" status="PRIVATE" holdUntilDate="2024-07-07+01:00"/>
-        <SUBMISSION accession="ERA30670091" alias="SUBMISSION-05-07-2024-13:49:56:891"/>
-        <MESSAGES>
-            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
-        </MESSAGES>
-        <ACTIONS>ADD</ACTIONS>
-        <ACTIONS>HOLD</ACTIONS>
-    </RECEIPT>
+ <RECEIPT receiptDate="2024-09-12T14:41:48.893+01:00" submissionFile="submission-umbrella.xml" success="true">
+     <PROJECT accession="PRJEB80085" alias="erga-bge-heTriNodu-study-umbrella-2024-09-12" status="PRIVATE" holdUntilDate="2026-09-12+01:00"/>
+     <SUBMISSION accession="ERA30790827" alias="SUBMISSION-12-09-2024-14:41:48:346"/>
+     <MESSAGES>
+          <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+     <ACTIONS>HOLD</ACTIONS>
+</RECEIPT>          
     ```
