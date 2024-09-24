@@ -101,7 +101,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     * Seems to work for this case, but I need to be aware that it might look odd for RNA-seq or HiFi in future runs of the script
 * With some help of a colleague, I managed to fix so that insert_size is put in the right place. However, the solution requires an additional column in the tsv file. I've updated the template accordingly.
 * Manual update of study reference is still required for all experiments.
-* A final rerun of the [script](./scripts/) produced:
+* A final rerun of the [script](./scripts/get_ENA_xml_files.py) produced:
     * [qmAusTorr-HiC.study.xml](./data/qmAusTorr-HiC.study.xml) (not to be used)
     * [qmAusTorr-HiC.exp.xml](./data/qmAusTorr-HiC.exp.xml)
     * [qmAusTorr-HiC.runs.xml](./data/qmAusTorr-HiC.runs.xml)
