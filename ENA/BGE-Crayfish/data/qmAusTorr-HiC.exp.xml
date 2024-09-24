@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <EXPERIMENT_SET>
-	<EXPERIMENT alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-1" center_name="SCILIFELAB">
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-1">
 		<TITLE>Austropotamobius torrentium Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-13"/>
+		<STUDY_REF accession="PRJEB77106"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA112878228"/>
@@ -12,9 +12,8 @@
 				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
 				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
 				<LIBRARY_LAYOUT>
-					<PAIRED/>
+					<PAIRED NOMINAL_LENGTH="700"/>
 				</LIBRARY_LAYOUT>
-				<INSERT_SIZE>700</INSERT_SIZE>
 				<LIBRARY_CONSTRUCTION_PROTOCOL>Size selection done using SPRISelect Beads according to the protocol, Dovetail Omni-C kit Version 2.0, step 5.5.</LIBRARY_CONSTRUCTION_PROTOCOL>
 			</LIBRARY_DESCRIPTOR>
 		</DESIGN>
@@ -24,9 +23,9 @@
 			</ILLUMINA>
 		</PLATFORM>
 	</EXPERIMENT>
-	<EXPERIMENT alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-2" center_name="SCILIFELAB">
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-2">
 		<TITLE>Austropotamobius torrentium Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-13"/>
+		<STUDY_REF accession="PRJEB77106"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA112878228"/>
@@ -36,9 +35,8 @@
 				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
 				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
 				<LIBRARY_LAYOUT>
-					<PAIRED/>
+					<PAIRED NOMINAL_LENGTH="700"/>
 				</LIBRARY_LAYOUT>
-				<INSERT_SIZE>700</INSERT_SIZE>
 				<LIBRARY_CONSTRUCTION_PROTOCOL>Size selection done using SPRISelect Beads according to the protocol, Dovetail Omni-C kit Version 2.0, step 5.5.</LIBRARY_CONSTRUCTION_PROTOCOL>
 			</LIBRARY_DESCRIPTOR>
 		</DESIGN>
@@ -48,9 +46,9 @@
 			</ILLUMINA>
 		</PLATFORM>
 	</EXPERIMENT>
-	<EXPERIMENT alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-3" center_name="SCILIFELAB">
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-3">
 		<TITLE>Austropotamobius torrentium Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-13"/>
+		<STUDY_REF accession="PRJEB77106"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA112878228"/>
@@ -60,9 +58,8 @@
 				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
 				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
 				<LIBRARY_LAYOUT>
-					<PAIRED/>
+					<PAIRED NOMINAL_LENGTH="630"/>
 				</LIBRARY_LAYOUT>
-				<INSERT_SIZE>630</INSERT_SIZE>
 				<LIBRARY_CONSTRUCTION_PROTOCOL>Size selection done using SPRISelect Beads according to the protocol, Dovetail Omni-C kit Version 2.0, step 5.5.</LIBRARY_CONSTRUCTION_PROTOCOL>
 			</LIBRARY_DESCRIPTOR>
 		</DESIGN>
@@ -72,9 +69,9 @@
 			</ILLUMINA>
 		</PLATFORM>
 	</EXPERIMENT>
-	<EXPERIMENT alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-4" center_name="SCILIFELAB">
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-4">
 		<TITLE>Austropotamobius torrentium Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-13"/>
+		<STUDY_REF accession="PRJEB77106"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA112878228"/>
@@ -84,9 +81,8 @@
 				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
 				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
 				<LIBRARY_LAYOUT>
-					<PAIRED/>
+					<PAIRED NOMINAL_LENGTH="630"/>
 				</LIBRARY_LAYOUT>
-				<INSERT_SIZE>630</INSERT_SIZE>
 				<LIBRARY_CONSTRUCTION_PROTOCOL>Size selection done using SPRISelect Beads according to the protocol, Dovetail Omni-C kit Version 2.0, step 5.5.</LIBRARY_CONSTRUCTION_PROTOCOL>
 			</LIBRARY_DESCRIPTOR>
 		</DESIGN>
@@ -96,9 +92,9 @@
 			</ILLUMINA>
 		</PLATFORM>
 	</EXPERIMENT>
-	<EXPERIMENT alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-5" center_name="SCILIFELAB">
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-5">
 		<TITLE>Austropotamobius torrentium Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-13"/>
+		<STUDY_REF accession="PRJEB77106"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA112878228"/>
@@ -108,9 +104,8 @@
 				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
 				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
 				<LIBRARY_LAYOUT>
-					<PAIRED/>
+					<PAIRED NOMINAL_LENGTH="630"/>
 				</LIBRARY_LAYOUT>
-				<INSERT_SIZE>630</INSERT_SIZE>
 				<LIBRARY_CONSTRUCTION_PROTOCOL>Size selection done using SPRISelect Beads according to the protocol, Dovetail Omni-C kit Version 2.0, step 5.5.</LIBRARY_CONSTRUCTION_PROTOCOL>
 			</LIBRARY_DESCRIPTOR>
 		</DESIGN>
@@ -120,9 +115,9 @@
 			</ILLUMINA>
 		</PLATFORM>
 	</EXPERIMENT>
-	<EXPERIMENT alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-6" center_name="SCILIFELAB">
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-6">
 		<TITLE>Austropotamobius torrentium Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-13"/>
+		<STUDY_REF accession="PRJEB77106"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA112878228"/>
@@ -132,9 +127,8 @@
 				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
 				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
 				<LIBRARY_LAYOUT>
-					<PAIRED/>
+					<PAIRED NOMINAL_LENGTH="850"/>
 				</LIBRARY_LAYOUT>
-				<INSERT_SIZE>850</INSERT_SIZE>
 				<LIBRARY_CONSTRUCTION_PROTOCOL>Size selection done using SPRISelect Beads according to the protocol, Dovetail Omni-C kit Version 2.0, step 5.5.</LIBRARY_CONSTRUCTION_PROTOCOL>
 			</LIBRARY_DESCRIPTOR>
 		</DESIGN>
@@ -144,9 +138,9 @@
 			</ILLUMINA>
 		</PLATFORM>
 	</EXPERIMENT>
-	<EXPERIMENT alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-7" center_name="SCILIFELAB">
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-7">
 		<TITLE>Austropotamobius torrentium Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-13"/>
+		<STUDY_REF accession="PRJEB77106"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA112878228"/>
@@ -156,9 +150,8 @@
 				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
 				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
 				<LIBRARY_LAYOUT>
-					<PAIRED/>
+					<PAIRED NOMINAL_LENGTH="850"/>
 				</LIBRARY_LAYOUT>
-				<INSERT_SIZE>850</INSERT_SIZE>
 				<LIBRARY_CONSTRUCTION_PROTOCOL>Size selection done using SPRISelect Beads according to the protocol, Dovetail Omni-C kit Version 2.0, step 5.5.</LIBRARY_CONSTRUCTION_PROTOCOL>
 			</LIBRARY_DESCRIPTOR>
 		</DESIGN>
@@ -168,9 +161,9 @@
 			</ILLUMINA>
 		</PLATFORM>
 	</EXPERIMENT>
-	<EXPERIMENT alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-8" center_name="SCILIFELAB">
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-8">
 		<TITLE>Austropotamobius torrentium Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-13"/>
+		<STUDY_REF accession="PRJEB77106"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA112878228"/>
@@ -180,9 +173,8 @@
 				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
 				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
 				<LIBRARY_LAYOUT>
-					<PAIRED/>
+					<PAIRED NOMINAL_LENGTH="820"/>
 				</LIBRARY_LAYOUT>
-				<INSERT_SIZE>820</INSERT_SIZE>
 				<LIBRARY_CONSTRUCTION_PROTOCOL>Size selection done using SPRISelect Beads according to the protocol, Dovetail Omni-C kit Version 2.0, step 5.5.</LIBRARY_CONSTRUCTION_PROTOCOL>
 			</LIBRARY_DESCRIPTOR>
 		</DESIGN>

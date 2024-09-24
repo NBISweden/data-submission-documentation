@@ -85,7 +85,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
      ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py  -f qmAusTorr-HiC-BGE.tsv -p ERGA-BGE -o qmAusTorr-HiC
     ```
 
-    * The resulting [qmAusTorr-HiC.exp.xml](./data/qmAusTorr-HiC.exp.xml) refers to the **wrong study** (the script creates a study.xml, can this be avoided? check arguments of the script). Hence, need to manually change the STUDY_REF to `accession="PRJEB77106"` instead of `refname="erga-bge-qmAusTorr-study-rawdata-2024-09-02"`
+    * The resulting qmAusTorr-HiC.exp.xml refers to the **wrong study** (the script creates a study.xml, can this be avoided? check arguments of the script). Hence, need to manually change the STUDY_REF to `accession="PRJEB77106"` instead of `refname="erga-bge-qmAusTorr-study-rawdata-2024-09-02"`
     * There are 8 paired reads, but **only 1 experiment** (meaning there will be only one insert_size although they differe btw the pairs). Is it supposed to be 8 experiments or only 1?
     * The **insert sizes** are added in **wrong place**
 
@@ -99,8 +99,13 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * A rerun with updated script was made, but the library names didn't look good, e.g. `XD-3967 Hi-C XD-3967-1` where I would have liked it to be `XD-3967-1 Hi-C`. Question is if I should accept the script and instead change my naming convention, or if I should change the script?  
     * I decided to change the script, wherever 'flowcell' was mentioned, i replaced it with 'library_id' (and removed the trailing library_id that was introduced with the update)
     * Seems to work for this case, but I need to be aware that it might look odd for RNA-seq or HiFi in future runs of the script
-* Manual update of insert_sizes are still required
+* With some help of a colleague, I managed to fix so that insert_size is put in the right place. However, the solution requires an additional column in the tsv file. I've updated the template accordingly.
 * Manual update of study reference is still required for all experiments.
+* A final rerun of the [script](./scripts/) produced:
+    * [qmAusTorr-HiC.study.xml](./data/qmAusTorr-HiC.study.xml) (not to be used)
+    * [qmAusTorr-HiC.exp.xml](./data/qmAusTorr-HiC.exp.xml)
+    * [qmAusTorr-HiC.runs.xml](./data/qmAusTorr-HiC.runs.xml)
+* `qmAusTorr-HiC.exp.xml` was manually updated, replacing 8 occurences of `<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-24"/>` with `<STUDY_REF accession="PRJEB77106"/>`
 
 #### RNA-seq xml
 
@@ -143,8 +148,9 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * When the Hifi runs were to become public, there were errors on 2 of them regarding the checksums. Apparently I had switched them when copy-pasting.
  
-### Programmatic submission HiC & RNAseq
+### Programmatic submission HiC
 
+### Programmatic submission RNAseq
 
 ## Tests
 

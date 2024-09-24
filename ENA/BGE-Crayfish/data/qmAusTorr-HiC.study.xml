@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PROJECT_SET>
-	<PROJECT alias="erga-bge-qmAusTorr-study-rawdata-2024-09-13" center_name="SCILIFELAB">
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-qmAusTorr-study-rawdata-2024-09-24">
 		<NAME>qmAusTorr</NAME>
 		<TITLE>Austropotamobius torrentium, genomic and transcriptomic data. </TITLE>
 		<DESCRIPTION>This project collects the genomic and transcriptomic data generated for Austropotamobius torrentium to facilitate genome assembly and annotation as part of the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/) and organised by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) initiative.</DESCRIPTION>
@@ -14,7 +14,7 @@
 			</PROJECT_ATTRIBUTE>
 		</PROJECT_ATTRIBUTES>
 	</PROJECT>
-	<PROJECT alias="erga-bge-qmAusTorr9_primary-2024-09-13" center_name="SCILIFELAB">
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-qmAusTorr9_primary-2024-09-24">
 		<NAME>qmAusTorr9</NAME>
 		<TITLE>Austropotamobius torrentium, genome assembly, qmAusTorr9. </TITLE>
 		<DESCRIPTION>This project provides the genome assembly of Austropotamobius torrentium. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
