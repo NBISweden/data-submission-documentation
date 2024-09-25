@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_heTriNodu1_HiFi_WGS_pr_111_bam_1">
+		<EXPERIMENT_REF refname="5c8af342-0b7f-473d-ac05-9f77a39caa50"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="m84045_240818_005314_s2.hifi_reads.bc2118.bam" checksum_method="MD5" checksum="8d7ceb9b9662738c1666f206387d4703" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

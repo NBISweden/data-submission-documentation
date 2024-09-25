@@ -78,7 +78,7 @@ For each of the BGE species, an umbrella project has to be created and linked to
     ```
     <?xml version="1.0" encoding="UTF-8"?>
     <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-    <RECEIPT receiptDate="2024-07-05T13:49:57.156+01:00" submissionFile="submission-umbrella.xml" success="true">
+   <RECEIPT receiptDate="2024-07-05T13:49:57.156+01:00" submissionFile="submission-umbrella.xml" success="true">
         <PROJECT accession="PRJEB77288" alias="erga-bge-icHydHamu-study-umbrella-2024-07-05" status="PRIVATE" holdUntilDate="2024-07-07+01:00"/>
         <SUBMISSION accession="ERA30670091" alias="SUBMISSION-05-07-2024-13:49:56:891"/>
         <MESSAGES>
@@ -87,6 +87,11 @@ For each of the BGE species, an umbrella project has to be created and linked to
         <ACTIONS>ADD</ACTIONS>
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
+
+ 
+ 
+ 
+                                                                                                                                                                                                                   
     ```
 
 
