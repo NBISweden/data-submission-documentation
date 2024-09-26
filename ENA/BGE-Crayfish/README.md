@@ -150,6 +150,81 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
  
 ### Programmatic submission HiC
 
+* Copy all xml files to Uppmax:
+    ```
+    scp submission.xml qmAusTorr-HiC.*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-crayfish/
+    ```
+* Test submission:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qmAusTorr-HiC.exp.xml" -F "RUN=@qmAusTorr-HiC.runs.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-09-24T09:59:34.327+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX13076590" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-1" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076591" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-2" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076592" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-3" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076593" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-4" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076594" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-5" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076595" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-6" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076596" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-7" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076597" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-8" status="PRIVATE"/>
+        <RUN accession="ERR13706046" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-1_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706047" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-2_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706048" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-3_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706049" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-4_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706050" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-5_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706051" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-6_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706052" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-7_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706053" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-8_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA30839066" alias="SUBMISSION-24-09-2024-09:59:32:712"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+            <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+    * Seems to work, but is it always only the first run file in every pair that shows?
+    * Logging in to wwwdev and checking, shows that also the pair is submitted, so likely will be ok.
+    * I've asked a colleague to check the xml files before submission to prod-server, since the study is already public and this is the first time we submit HiC for BGE
+
+
+* Submit (NOTE: not the study xml, since study already exists):
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qmAusTorr-HiC.exp.xml" -F "RUN=@qmAusTorr-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-09-26T06:34:44.226+01:00" submissionFile="submission.xml" success="true">
+     <EXPERIMENT accession="ERX13089422" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-1" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089423" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-2" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089424" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-3" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089425" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-4" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089426" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-5" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089427" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-6" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089428" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-7" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089429" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-8" status="PRIVATE"/>
+     <RUN accession="ERR13719323" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-1_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719324" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-2_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719325" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-3_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719326" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-4_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719327" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-5_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719328" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-6_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719329" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-7_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719330" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-8_fastq_1" status="PRIVATE"/>
+     <SUBMISSION accession="ERA30841577" alias="SUBMISSION-26-09-2024-06:34:43:262"/>
+     <MESSAGES>
+          <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+     <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
 ### Programmatic submission RNAseq
 
 ## Tests
