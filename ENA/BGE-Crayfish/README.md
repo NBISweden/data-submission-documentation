@@ -225,6 +225,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
      <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
+* Copy received accession numbers to the google sheet overview, and mark as submitted in same overview
+* Realized that the submission xml said hold until 2026, but the study referenced is already public, need to check status on ENA.
+    * Checked at ENA, the HOLD date was disregarded, the experiments are indeed public
+
 ### Programmatic submission RNAseq
 
 ## Tests
