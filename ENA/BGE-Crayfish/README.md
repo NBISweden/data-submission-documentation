@@ -21,6 +21,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Trying programmatic submission, using CNAG script to produce xml files for studies and experiments
 * The script had to be updated in several places in order to produce the wanted and expected output xml's
 * There's been some struggle regarding HiFi sequencing on this species, has been done in several rounds, resulting in 3 separate deliveries from NGI. There was some uncertanties on which datasets to submit.
+* The Hi-C data came with a necessary update of the script (by CNAG) and update of mandatory fields in the tsv file, in order to accomodate that sometimes the runs for a datatype needs to be submitted to separate experiments, e.g. due to varying insert sizes.
 
 ## Detailed step by step description
 
@@ -64,13 +65,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     * Project attributes (Keyword:ERGA-BGE) are not registered if written in the xml as original script. I had to edit the script so that it is written on 2 rows insead of compact form
     * Library construction protocol has to be put in the lib_attr column of the tsv file, in the form `LIBRARY_CONSTRUCTION_PROTOCOL:Preparing HiFi SMRTbell® Libraries using the SMRTbell Express Template Prep Kit 3.0`
 
-* I've put the [current version](./scripts/get_ENA_xml_files.py) of my additions of the CNAG script, along with the [notes](./scripts/notes.md) I've made, in the scripts folder. This version works for the [qmAusTorr-HiFi-BGE.tsv](./data/qmAusTorr-HiFi-BGE.tsv) file, but might not work for the Hi-C data (for which I haven't received the full metadata yet).
+* I've put  my updates to CNAG scripts in a forked repository [YvonneKallberg/ERGA-submission](https://github.com/YvonneKallberg/ERGA-submission), along with the notes I've made and the original xml file(s) (though the original will not be updated when upstream/main changes). This version works for the [qmAusTorr-HiFi-BGE.tsv](./data/qmAusTorr-HiFi-BGE.tsv) file, but might not work for the Hi-C data (for which I haven't received the full metadata yet).
     ```
-    ./scripts/get_ENA_xml_files.py  -f qmAusTorr-HiFi-BGE.tsv -p ERGA-BGE -o qmAusTorr-HiFi
+    ../../.././ERGA-submission/get_submission_xmls/get_ENA_xml_files.py/get_ENA_xml_files.py  -f qmAusTorr-HiFi-BGE.tsv -p ERGA-BGE -o qmAusTorr-HiFi
     ```
-#### Hi-C & RNA-seq xml
+#### Hi-C xml
 
-**TO DO**
 * Figure out what needs to be done in order to create HiC and RNA-seq xml's so that it they correctly are added to the existing study. 
 * Figure out a way to avoid adding insert size for paired reads manually
     ```
@@ -79,7 +79,36 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     </LIBRARY_LAYOUT>
     ```
      * CNAG says it *should* be possible to put it in “Library_attributes” column, but how will the script know where to add it (i.e. to the PAIRED row in library layout section), compared to the library construction protocol, which is also put in the lib_attr column but added after the library layout section?
- 
+* Initial attempt, where I've added both insert size and library construction protocol (separated by semicolon) in the lib_attr column of [qmAusTorr-HiC-BGE.tsv](./data/qmAusTorr-HiC-BGE.tsv):
+    ```
+    conda deactivate
+     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py  -f qmAusTorr-HiC-BGE.tsv -p ERGA-BGE -o qmAusTorr-HiC
+    ```
+
+    * The resulting qmAusTorr-HiC.exp.xml refers to the **wrong study** (the script creates a study.xml, can this be avoided? check arguments of the script). Hence, need to manually change the STUDY_REF to `accession="PRJEB77106"` instead of `refname="erga-bge-qmAusTorr-study-rawdata-2024-09-02"`
+    * There are 8 paired reads, but **only 1 experiment** (meaning there will be only one insert_size although they differe btw the pairs). Is it supposed to be 8 experiments or only 1?
+    * The **insert sizes** are added in **wrong place**
+
+* I asked CNAG for help:  
+    * For now, the study needs to be manually updated in order to refer to an existing one.  
+    * Regarding the 8 paired reads, the get_ENA_xml_files.py has now been updated, so that it requries a field `library_name`. I have no instructions on how to populate that field, so I created my own convention:  
+        * Copy the value from `sample_tube_or_well_id` 
+        * *If* it is required with separate experiments for the runs, add a dash (`-`) and an incremental index
+        * E.g in this case `XD-3967-1`, `XD-3967-2`, etc
+    * Insert sizes we have to add in right place manually, at least until I can figure out how to fix the script myself.
+* A rerun with updated script was made, but the library names didn't look good, e.g. `XD-3967 Hi-C XD-3967-1` where I would have liked it to be `XD-3967-1 Hi-C`. Question is if I should accept the script and instead change my naming convention, or if I should change the script?  
+    * I decided to change the script, wherever 'flowcell' was mentioned, i replaced it with 'library_id' (and removed the trailing library_id that was introduced with the update)
+    * Seems to work for this case, but I need to be aware that it might look odd for RNA-seq or HiFi in future runs of the script
+* With some help of a colleague, I managed to fix so that insert_size is put in the right place. However, the solution requires an additional column in the tsv file. I've updated the template accordingly.
+* Manual update of study reference is still required for all experiments.
+* A final rerun of the [script](./scripts/get_ENA_xml_files.py) produced:
+    * [qmAusTorr-HiC.study.xml](./data/qmAusTorr-HiC.study.xml) (not to be used)
+    * [qmAusTorr-HiC.exp.xml](./data/qmAusTorr-HiC.exp.xml)
+    * [qmAusTorr-HiC.runs.xml](./data/qmAusTorr-HiC.runs.xml)
+* `qmAusTorr-HiC.exp.xml` was manually updated, replacing 8 occurences of `<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-24"/>` with `<STUDY_REF accession="PRJEB77106"/>`
+
+#### RNA-seq xml
+
 ### Programmatic submission HiFi
 
 * Copy all xml files to Uppmax:
@@ -119,8 +148,88 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * When the Hifi runs were to become public, there were errors on 2 of them regarding the checksums. Apparently I had switched them when copy-pasting.
  
-### Programmatic submission HiC & RNAseq
+### Programmatic submission HiC
 
+* Copy all xml files to Uppmax:
+    ```
+    scp submission.xml qmAusTorr-HiC.*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-crayfish/
+    ```
+* Test submission:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qmAusTorr-HiC.exp.xml" -F "RUN=@qmAusTorr-HiC.runs.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-09-24T09:59:34.327+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX13076590" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-1" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076591" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-2" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076592" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-3" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076593" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-4" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076594" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-5" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076595" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-6" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076596" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-7" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13076597" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-8" status="PRIVATE"/>
+        <RUN accession="ERR13706046" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-1_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706047" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-2_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706048" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-3_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706049" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-4_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706050" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-5_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706051" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-6_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706052" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-7_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR13706053" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-8_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA30839066" alias="SUBMISSION-24-09-2024-09:59:32:712"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+            <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+    * Seems to work, but is it always only the first run file in every pair that shows?
+    * Logging in to wwwdev and checking, shows that also the pair is submitted, so likely will be ok.
+    * I've asked a colleague to check the xml files before submission to prod-server, since the study is already public and this is the first time we submit HiC for BGE
+
+
+* Submit (NOTE: not the study xml, since study already exists):
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qmAusTorr-HiC.exp.xml" -F "RUN=@qmAusTorr-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-09-26T06:34:44.226+01:00" submissionFile="submission.xml" success="true">
+     <EXPERIMENT accession="ERX13089422" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-1" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089423" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-2" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089424" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-3" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089425" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-4" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089426" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-5" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089427" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-6" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089428" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-7" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX13089429" alias="exp_qmAusTorr_Hi-C_XD-3967_XD-3967-8" status="PRIVATE"/>
+     <RUN accession="ERR13719323" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-1_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719324" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-2_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719325" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-3_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719326" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-4_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719327" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-5_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719328" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-6_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719329" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-7_fastq_1" status="PRIVATE"/>
+     <RUN accession="ERR13719330" alias="run_qmAusTorr_Hi-C_XD-3967_XD-3967-8_fastq_1" status="PRIVATE"/>
+     <SUBMISSION accession="ERA30841577" alias="SUBMISSION-26-09-2024-06:34:43:262"/>
+     <MESSAGES>
+          <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+     <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* Copy received accession numbers to the google sheet overview, and mark as submitted in same overview
+* Realized that the submission xml said hold until 2026, but the study referenced is already public, need to check status on ENA.
+    * Checked at ENA, the HOLD date was disregarded, the experiments are indeed public
+
+### Programmatic submission RNAseq
 
 ## Tests
 

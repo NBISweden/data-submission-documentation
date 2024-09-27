@@ -15,11 +15,9 @@ import pandas as pd
 #Contact email: jessica.gomez@cnag.eu
 #Date:20230602
 
-# Updated by Yvonne, last update 2024-07-02
-
 script_loc = os.path.dirname(sys.argv[0])
 env = jinja2.Environment(loader=jinja2.FileSystemLoader(script_loc + "/templates/"))
-
+print(script_loc)
 def get_attributes (root, parent, child, attr, **element):
     child = root.createElement(attr)
     if element:
@@ -178,16 +176,16 @@ def get_study_xml(project, center, alias, study_name, study_title, description, 
         kw_attr = get_attributes (root["study"], study_attr, kw_attr, 'VALUE', **{project:""})
 
 
-#add exp_attr as argument in function
-def get_experiments (center, alias, species, read_type, instrument, study_alias, sample_ref, flowcell, library_strategy, library_selection, exp_attr, add_lib, add_exp):
+#add exp_attr & insert_size as argument in function
+def get_experiments (center, alias, species, read_type, instrument, study_alias, sample_ref, flowcell, library_strategy, library_selection, exp_attr, add_lib, add_exp, library_id, insert_size):
     exp_title = species + " " + read_type + " " + library_strategy +  " data"
-    lib_name = flowcell + " " + read_type + " " + library_strategy
+    lib_name = library_id + " " + read_type + " " + library_strategy
     if read_type == library_strategy:
         exp_title = species + " " + library_strategy +  " data"
-        lib_name = flowcell + " " + library_strategy     
+        lib_name = library_id + " " + library_strategy     
     if read_type == "HiFi": # added code for including PacBio in title and library name
         exp_title = species + " " + "PacBio" + " " + read_type + " " + library_strategy +  " data"
-        lib_name = flowcell + " " + "PacBio" + " " + read_type + " " + library_strategy
+        lib_name = library_id + " " + "PacBio" + " " + read_type + " " + library_strategy
     source = "GENOMIC"
     if library_strategy == "RNA-Seq":
         source = 'TRANSCRIPTOMIC'
@@ -202,9 +200,9 @@ def get_experiments (center, alias, species, read_type, instrument, study_alias,
         model = 'PACBIO_SMRT'
 
     if 'all' in args.xml or "experiment" in args.xml:
-        get_exp_xml (center, alias, exp_title,study_alias, sample_ref, lib_name, library_strategy, source, layout,  library_selection, add_lib, exp_attr, add_exp, model, instrument) #add exp_attr
+        get_exp_xml (center, alias, exp_title,study_alias, sample_ref, lib_name, library_strategy, source, layout, library_selection, add_lib, exp_attr, add_exp, model, instrument, insert_size) #add exp_attr, insert_size
 
-def get_exp_xml (center, alias, exp_title, study_alias, sample_ref, lib_name, library_strategy, source,layout, library_selection, add_lib, exp_attr, add_exp, model, instrument): #add exp_attr
+def get_exp_xml (center, alias, exp_title, study_alias, sample_ref, lib_name, library_strategy, source,layout, library_selection, add_lib, exp_attr, add_exp, model, instrument, insert_size): #add exp_attr, insert_size
  
     experiments = ""
     elements = {}
@@ -230,7 +228,9 @@ def get_exp_xml (center, alias, exp_title, study_alias, sample_ref, lib_name, li
     layout_lib = ""
     library  = get_attributes (root["exp"],design, library, 'LIBRARY_LAYOUT' )
 
-    layout_lib  = get_attributes (root["exp"],library,layout_lib, layout )
+    # handle insert_size if paired reads, requires an extra column insert_size in tsv
+    #    layout_lib  = get_attributes (root["exp"],library,layout_lib,layout) # original row
+    layout_lib  = get_attributes (root["exp"],library,layout_lib,layout,**{"NOMINAL_LENGTH":str(insert_size)})
     if add_lib:
         my_dict = add_lib.split(';')
         for dict in my_dict:
@@ -386,11 +386,13 @@ if __name__ == "__main__":
                 exit ("Library selection value is required to get the experiment xml")
             library_selection = in_file["library_selection"][i]      
 
-            #added code for handling exp_attr
+            #added code for handling exp_attr & insert_size
             exp_attr = ""
             if "exp_attr" in in_file and not in_file["exp_attr"][i] == "-":
                 exp_attr =  in_file["exp_attr"][i]
-
+            insert_size = ""
+            if "insert_size" in in_file and not in_file["insert_size"][i] == "-":
+                insert_size = in_file["insert_size"][i]
         if 'all' in args.xml or 'experiment' in args.xml or 'runs' in args.xml:
             if "library_strategy" not in in_file or pd.isna(in_file["library_strategy"][i]) or in_file["library_strategy"][i] == "-":
                 exit ("Library strategy value is required to get the experiment xml")
@@ -425,7 +427,7 @@ if __name__ == "__main__":
              
         
         study_type = {}
-        #if read_type == "ONT" or read_type == "Hifi":
+        #if read_type == "ONT" or read_type == "HiFi":
         study_type[tolid] = []
 
         if aim.lower() == "assembly":
@@ -450,12 +452,19 @@ if __name__ == "__main__":
             if "annotation" in alternate.lower():
                 alternate_annot = "yes"
 
+        library_id = in_file["library_name"][i]
+        add_lib = {}
+        library_attributes = ""
+        if "lib_attr" in in_file and not pd.isna(in_file["lib_attr"][i]) and not in_file["lib_attr"][i] == "-":
+            library_attributes = in_file["lib_attr"][i] 
+            add_lib = library_attributes.replace('{','').replace('}','')
+                                                                 
         if read_type == library_strategy:
-            rname = tolid_pref + "_" + read_type + "_" + sample_id
-            experiments[rname] = "exp_" + tolid_pref + "_" + library_strategy + "_" + sample_id
+            rname = tolid_pref + "_" + read_type + "_" + sample_id + "_" + library_id
+            experiments[rname] = "exp_" + tolid_pref + "_" + library_strategy + "_" + sample_id  + "_" + library_id
         else:
-            rname = tolid_pref + "_" + read_type + "_" + library_strategy + "_" + sample_id
-            experiments[rname] = "exp_" + tolid_pref + "_" + read_type + "_" + library_strategy + "_" + sample_id
+            rname = tolid_pref + "_" + read_type + "_" + library_strategy + "_" + sample_id + "_" + library_id
+            experiments[rname] = "exp_" + tolid_pref + "_" + read_type + "_" + library_strategy + "_" + sample_id + "_" + library_id
        
 
         forward_file_name = ""
@@ -533,10 +542,10 @@ if __name__ == "__main__":
                     )
 
         if 'all' in args.xml or "experiment" in args.xml:
-            if "exp_" + tolid_pref + "_" + read_type + "_" + library_strategy + "_" + sample_id not in experiment_register and "exp_" + tolid + "_" + library_strategy + "_" + sample_id not in experiment_register:
-                experiment_register["exp_" + tolid_pref + "_" + read_type + "_" + library_strategy + "_" + sample_id] = ""
+            if "exp_" + tolid_pref + "_" + read_type + "_" + library_strategy + "_" + sample_id not in experiment_register and "exp_" + tolid + "_" + library_strategy + "_" + sample_id + "_" + library_id not in experiment_register:
+                experiment_register["exp_" + tolid_pref + "_" + read_type + "_" + library_strategy + "_" + sample_id + "_" + library_id] = ""
                 if read_type == library_strategy:
-                    experiment_register["exp_" + tolid_pref + "_" + library_strategy + "_" + sample_id] = ""
+                    experiment_register["exp_" + tolid_pref + "_" + library_strategy + "_" + sample_id + "_" + library_id] = ""
                
                 get_experiments(
                     center,
@@ -552,6 +561,8 @@ if __name__ == "__main__":
                     exp_attr, #addition so that library_construction_protocol is written
                     add_lib,
                     add_exp,
+                    library_id,
+                    insert_size #addition for paired reads
                 )
 
     if 'all' in args.xml or "runs" in args.xml:
