@@ -1,0 +1,998 @@
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)	geographic location (region and locality)	geographic location (latitude)	geographic location (longitude)	
+#units								DD	DD	
+48032	Carum carvi	App-1	Äppelö, Hammarland, individual 1	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-2	Äppelö, Hammarland, individual 2	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-3	Äppelö, Hammarland, individual 3	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-4	Äppelö, Hammarland, individual 4	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-5	Äppelö, Hammarland, individual 5	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-6	Äppelö, Hammarland, individual 6	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-7	Äppelö, Hammarland, individual 7	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-8	Äppelö, Hammarland, individual 8	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-9	Äppelö, Hammarland, individual 9	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-10	Äppelö, Hammarland, individual 10	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-11	Äppelö, Hammarland, individual 11	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-12	Äppelö, Hammarland, individual 12	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-13	Äppelö, Hammarland, individual 13	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-14	Äppelö, Hammarland, individual 14	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-15	Äppelö, Hammarland, individual 15	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-16	Äppelö, Hammarland, individual 16	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-17	Äppelö, Hammarland, individual 17	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-18	Äppelö, Hammarland, individual 18	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-19	Äppelö, Hammarland, individual 19	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	App-20	Äppelö, Hammarland, individual 20	Individual sampled from wild population at Äppelö, Hammarland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-29	Finland	Åland, Hammarland, Äppelö	60.368104	19.706964	
+48032	Carum carvi	EkoS-1	Søndre Ekornholmen, individual 1	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-2	Søndre Ekornholmen, individual 2	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-3	Søndre Ekornholmen, individual 3	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-4	Søndre Ekornholmen, individual 4	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-5	Søndre Ekornholmen, individual 5	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-6	Søndre Ekornholmen, individual 6	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-7	Søndre Ekornholmen, individual 7	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-8	Søndre Ekornholmen, individual 8	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-9	Søndre Ekornholmen, individual 9	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-10	Søndre Ekornholmen, individual 10	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-11	Søndre Ekornholmen, individual 11	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-12	Søndre Ekornholmen, individual 12	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-13	Søndre Ekornholmen, individual 13	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-14	Søndre Ekornholmen, individual 14	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-15	Søndre Ekornholmen, individual 15	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-16	Søndre Ekornholmen, individual 16	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-17	Søndre Ekornholmen, individual 17	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-18	Søndre Ekornholmen, individual 18	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	EkoS-19	Søndre Ekornholmen, individual 19	Individual sampled from wild population at Søndre Ekornholmen. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-13	Norway	Søndre Ekornholmen	59.205740	10.483060	
+48032	Carum carvi	FH-1	Fljótshlí_, Hlí_arendi, individual 1	Individual sampled from wild population at Fljótshlí_, Hlí_arendi. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-12	Iceland	Fljótshlí_, Hlí_arendi 	63.72460	-19.951296	
+48032	Carum carvi	FH-2	Fljótshlí_, Hlí_arendi, individual 2	Individual sampled from wild population at Fljótshlí_, Hlí_arendi. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-12	Iceland	Fljótshlí_, Hlí_arendi 	63.72460	-19.951296	
+48032	Carum carvi	FH-3	Fljótshlí_, Hlí_arendi, individual 3	Individual sampled from wild population at Fljótshlí_, Hlí_arendi. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-12	Iceland	Fljótshlí_, Hlí_arendi 	63.72460	-19.951296	
+48032	Carum carvi	FH-4	Fljótshlí_, Hlí_arendi, individual 4	Individual sampled from wild population at Fljótshlí_, Hlí_arendi. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-12	Iceland	Fljótshlí_, Hlí_arendi 	63.72460	-19.951296	
+48032	Carum carvi	FH-5	Fljótshlí_, Hlí_arendi, individual 5	Individual sampled from wild population at Fljótshlí_, Hlí_arendi. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-12	Iceland	Fljótshlí_, Hlí_arendi 	63.72460	-19.951296	
+48032	Carum carvi	FH-9	Fljótshlí_, Hlí_arendi, individual 9	Individual sampled from wild population at Fljótshlí_, Hlí_arendi. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-12	Iceland	Fljótshlí_, Hlí_arendi 	63.72460	-19.951296	
+48032	Carum carvi	FH-10	Fljótshlí_, Hlí_arendi, individual 10	Individual sampled from wild population at Fljótshlí_, Hlí_arendi. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-12	Iceland	Fljótshlí_, Hlí_arendi 	63.72460	-19.951296	
+48032	Carum carvi	FH-15	Fljótshlí_, Hlí_arendi, individual 15	Individual sampled from wild population at Fljótshlí_, Hlí_arendi. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-12	Iceland	Fljótshlí_, Hlí_arendi 	63.72460	-19.951296	
+48032	Carum carvi	FH-20	Fljótshlí_, Hlí_arendi, individual 20	Individual sampled from wild population at Fljótshlí_, Hlí_arendi. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-12	Iceland	Fljótshlí_, Hlí_arendi 	63.72460	-19.951296	
+48032	Carum carvi	GH-1	Grænum_rartunga, Hrútafjör_ur, individual 1	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-2	Grænum_rartunga, Hrútafjör_ur, individual 2	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-3	Grænum_rartunga, Hrútafjör_ur, individual 3	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-4	Grænum_rartunga, Hrútafjör_ur, individual 4	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-5	Grænum_rartunga, Hrútafjör_ur, individual 5	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-7	Grænum_rartunga, Hrútafjör_ur, individual 7	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-8	Grænum_rartunga, Hrútafjör_ur, individual 8	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-9	Grænum_rartunga, Hrútafjör_ur, individual 9	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-10	Grænum_rartunga, Hrútafjör_ur, individual 10	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-15	Grænum_rartunga, Hrútafjör_ur, individual 15	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-17	Grænum_rartunga, Hrútafjör_ur, individual 17	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-18	Grænum_rartunga, Hrútafjör_ur, individual 18	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-19	Grænum_rartunga, Hrútafjör_ur, individual 19	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	GH-20	Grænum_rartunga, Hrútafjör_ur, individual 20	Individual sampled from wild population at Grænum_rartunga, Hrútafjör_ur. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-03	Iceland	Grænum_rartunga, Hrútafjör_ur 	65.084354	-21.086964	
+48032	Carum carvi	Hal-1	Haltiala, Helsinki, individual 1	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Hal-2	Haltiala, Helsinki, individual 2	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Hal-3	Haltiala, Helsinki, individual 3	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Hal-4	Haltiala, Helsinki, individual 4	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Hal-5	Haltiala, Helsinki, individual 5	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Hal-7	Haltiala, Helsinki, individual 7	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Hal-8	Haltiala, Helsinki, individual 8	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Hal-9	Haltiala, Helsinki, individual 9	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Hal-10	Haltiala, Helsinki, individual 10	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Hal-17	Haltiala, Helsinki, individual 17	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Hal-19	Haltiala, Helsinki, individual 19	Individual sampled from wild population at Haltiala, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-04	Finland	Haltiala, Helsinki 	60.267135	24.949370	
+48032	Carum carvi	Kvr-1	Kristianstad Vattenrike, individual 1	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-2	Kristianstad Vattenrike, individual 2	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-3	Kristianstad Vattenrike, individual 3	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-4	Kristianstad Vattenrike, individual 4	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-5	Kristianstad Vattenrike, individual 5	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-6	Kristianstad Vattenrike, individual 6	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-7	Kristianstad Vattenrike, individual 7	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-9	Kristianstad Vattenrike, individual 9	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-15	Kristianstad Vattenrike, individual 15	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-17	Kristianstad Vattenrike, individual 17	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-18	Kristianstad Vattenrike, individual 18	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Kvr-19	Kristianstad Vattenrike, individual 19	Individual sampled from wild population at Kristianstad Vattenrike. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-17	Sweden	Kristianstad Vattenrike 	56.014000	14.555200	
+48032	Carum carvi	Nato-1	Nåtö, Lemland, individual 1	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-2	Nåtö, Lemland, individual 2	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-3	Nåtö, Lemland, individual 3	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-4	Nåtö, Lemland, individual 4	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-5	Nåtö, Lemland, individual 5	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-6	Nåtö, Lemland, individual 6	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-7	Nåtö, Lemland, individual 7	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-8	Nåtö, Lemland, individual 8	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-9	Nåtö, Lemland, individual 9	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-10	Nåtö, Lemland, individual 10	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-15	Nåtö, Lemland, individual 15	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-16	Nåtö, Lemland, individual 16	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-17	Nåtö, Lemland, individual 17	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-18	Nåtö, Lemland, individual 18	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-19	Nåtö, Lemland, individual 19	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nato-20	Nåtö, Lemland, individual 20	Individual sampled from wild population at Nåtö, Lemland. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-09-27	Finland	Åland, Lemland, Nåtö	60.046213	19.971988	
+48032	Carum carvi	Nord-1	Nordmarka, Oslo, individual 1	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-2	Nordmarka, Oslo, individual 2	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-3	Nordmarka, Oslo, individual 3	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-4	Nordmarka, Oslo, individual 4	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-5	Nordmarka, Oslo, individual 5	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-7	Nordmarka, Oslo, individual 7	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-8	Nordmarka, Oslo, individual 8	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-9	Nordmarka, Oslo, individual 9	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-10	Nordmarka, Oslo, individual 10	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-15	Nordmarka, Oslo, individual 15	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-16	Nordmarka, Oslo, individual 16	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-17	Nordmarka, Oslo, individual 17	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-18	Nordmarka, Oslo, individual 18	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-19	Nordmarka, Oslo, individual 19	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Nord-20	Nordmarka, Oslo, individual 20	Individual sampled from wild population at Nordmarka, Oslo . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-19	Norway	Nordmarka, Oslo	60.026328	10.645864	
+48032	Carum carvi	Oul-1	Oulanka, Kuusamo, individual 1	Individual sampled from wild population at Oulanka, Kuusamo. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-25	Finland	Oulanka, Kuusamo 	66.361838	29.625024	
+48032	Carum carvi	Oul-2	Oulanka, Kuusamo, individual 2	Individual sampled from wild population at Oulanka, Kuusamo. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-25	Finland	Oulanka, Kuusamo 	66.361838	29.625024	
+48032	Carum carvi	Oul-3	Oulanka, Kuusamo, individual 3	Individual sampled from wild population at Oulanka, Kuusamo. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-25	Finland	Oulanka, Kuusamo 	66.361838	29.625024	
+48032	Carum carvi	Oul-4	Oulanka, Kuusamo, individual 4	Individual sampled from wild population at Oulanka, Kuusamo. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-25	Finland	Oulanka, Kuusamo 	66.361838	29.625024	
+48032	Carum carvi	Oul-5	Oulanka, Kuusamo, individual 5	Individual sampled from wild population at Oulanka, Kuusamo. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-07-25	Finland	Oulanka, Kuusamo 	66.361838	29.625024	
+48032	Carum carvi	Ram-1	Ramsholmen, Jomala, individual 1	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ram-2	Ramsholmen, Jomala, individual 2	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ram-3	Ramsholmen, Jomala, individual 3	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ram-4	Ramsholmen, Jomala, individual 4	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ram-5	Ramsholmen, Jomala, individual 5	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ram-6	Ramsholmen, Jomala, individual 6	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ram-7	Ramsholmen, Jomala, individual 7	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ram-8	Ramsholmen, Jomala, individual 8	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ram-9	Ramsholmen, Jomala, individual 9	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ram-10	Ramsholmen, Jomala, individual 10	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ram-20	Ramsholmen, Jomala, individual 20	Individual sampled from wild population at Ramsholmen, Jomala. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-10-08	Finland	Åland, Ramsholmen, Jomala	60.109861	19.885591	
+48032	Carum carvi	Ring-1	Ringebu, Innlandet, invidivual 1	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Ring-2	Ringebu, Innlandet, invidivual 2	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Ring-3	Ringebu, Innlandet, invidivual 3	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Ring-4	Ringebu, Innlandet, invidivual 4	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Ring-5	Ringebu, Innlandet, invidivual 5	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Ring-7	Ringebu, Innlandet, invidivual 7	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Ring-8	Ringebu, Innlandet, invidivual 8	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Ring-9	Ringebu, Innlandet, invidivual 9	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Ring-10	Ringebu, Innlandet, invidivual 10	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Ring-15	Ringebu, Innlandet, invidivual 15	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Ring-20	Ringebu, Innlandet, invidivual 20	Individual sampled from wild population at Ringebu, Innlandet. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-08-20	Norway	Ringebu, Innlandet	61.511000	10.173430	
+48032	Carum carvi	Sel-1	Selsø, individual 1	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-2	Selsø, individual 2	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-3	Selsø, individual 3	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-4	Selsø, individual 4	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-5	Selsø, individual 5	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-6	Selsø, individual 6	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-7	Selsø, individual 7	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-8	Selsø, individual 8	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-9	Selsø, individual 9	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-10	Selsø, individual 10	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-15	Selsø, individual 15	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Sel-20	Selsø, individual 20	Individual sampled from wild population at Selsø. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-10-17	Denmark	Selsø	55.745400	11.593309	
+48032	Carum carvi	Skjo-1	Lebesby Skjøtningberg, individual 1	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-2	Lebesby Skjøtningberg, individual 2	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-3	Lebesby Skjøtningberg, individual 3	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-4	Lebesby Skjøtningberg, individual 4	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-5	Lebesby Skjøtningberg, individual 5	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-7	Lebesby Skjøtningberg, individual 7	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-8	Lebesby Skjøtningberg, individual 8	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-9	Lebesby Skjøtningberg, individual 9	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-15	Lebesby Skjøtningberg, individual 15	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-17	Lebesby Skjøtningberg, individual 17	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-18	Lebesby Skjøtningberg, individual 18	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	Skjo-19	Lebesby Skjøtningberg, individual 19	Individual sampled from wild population at Lebesby Skjøtningberg . Resuls of genome DNA sequenced using a quaddRAD approach.	2021-07-10	Norway	Lebesby Skjøtningberg 	71.017230	27.368630	
+48032	Carum carvi	SS-1	Sel, Skaftafell, individual 1	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-2	Sel, Skaftafell, individual 2	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-3	Sel, Skaftafell, individual 3	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-4	Sel, Skaftafell, individual 4	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-5	Sel, Skaftafell, individual 5	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-6	Sel, Skaftafell, individual 6	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-9	Sel, Skaftafell, individual 9	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-10	Sel, Skaftafell, individual 10	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-15	Sel, Skaftafell, individual 15	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-16	Sel, Skaftafell, individual 16	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-17	Sel, Skaftafell, individual 17	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-18	Sel, Skaftafell, individual 18	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-19	Sel, Skaftafell, individual 19	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	SS-20	Sel, Skaftafell, individual 20	Individual sampled from wild population at Sel, Skaftafell. Resuls of genome DNA sequenced using a quaddRAD approach.	2021-06-23	Iceland	Sel, Skaftafell 	64.021842	-16.991153	
+48032	Carum carvi	Suo-1	Suomenlinna, Helsinki, individual 1	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-2	Suomenlinna, Helsinki, individual 2	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-3	Suomenlinna, Helsinki, individual 3	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-4	Suomenlinna, Helsinki, individual 4	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-5	Suomenlinna, Helsinki, individual 5	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-6	Suomenlinna, Helsinki, individual 6	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-8	Suomenlinna, Helsinki, individual 8	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-9	Suomenlinna, Helsinki, individual 9	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-10	Suomenlinna, Helsinki, individual 10	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-15	Suomenlinna, Helsinki, individual 15	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-16	Suomenlinna, Helsinki, individual 16	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-17	Suomenlinna, Helsinki, individual 17	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-18	Suomenlinna, Helsinki, individual 18	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Suo-19	Suomenlinna, Helsinki, individual 19	Individual sampled from wild population at Suomenlinna, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-17	Finland	Suomenlinna, Helsinki 	60.139698	24.987044	
+48032	Carum carvi	Tam-1	Tammisto, Helsinki, individual 1	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-2	Tammisto, Helsinki, individual 2	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-3	Tammisto, Helsinki, individual 3	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-4	Tammisto, Helsinki, individual 4	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-5	Tammisto, Helsinki, individual 5	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-6	Tammisto, Helsinki, individual 6	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-7	Tammisto, Helsinki, individual 7	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-8	Tammisto, Helsinki, individual 8	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-9	Tammisto, Helsinki, individual 9	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-10	Tammisto, Helsinki, individual 10	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-15	Tammisto, Helsinki, individual 15	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+48032	Carum carvi	Tam-20	Tammisto, Helsinki, individual 20	Individual sampled from wild population at Tammisto, Helsinki. Resuls of genome DNA sequenced using a quaddRAD approach.	2022-06-15	Finland	Tammisto, Helsinki 	60.274972	24.954764	
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
