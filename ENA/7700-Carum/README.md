@@ -56,5 +56,5 @@ This required two steps:
 
 For the first step a DS colleague [assisted in adapting an already available script](https://github.com/NBISweden/nbisdm-ena-xml-generator) that was used to generate correctly updated samples in xml-format.
 
-The two files, [samples.xml](./data/samples.xml) and [submission]((./data/submission.xml).xml, was then uploaded programmatically in the samples section in the ENA online portal and confirmed. 
+The two files, [samples.xml](./data/samples.xml) and [submission.xml](./data/submission.xml), was then uploaded programmatically in the samples section in the ENA online portal and confirmed. 
 
