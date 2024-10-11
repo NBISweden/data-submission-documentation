@@ -35,9 +35,26 @@ ascp -k 3 -d -q --mode=send -QT -l300M --host=webin2.ebi.ac.uk --user=Webin-XXXX
 
 File transfer required approximately three minutes in total.
 
+### Submit samples
+
+Samples were extracted from the spreadsheet in .tsv format and submitted via the ENA portal. The PI had included more samples than used in experiments, which was only discovered after samples submission was complete. It was decided the extra samples would be of no problem for the study since they were not referenced.
+
 ### Submit experiments
 
 Experiments were saved in .tsv format with sample aliases transfered from the samples tab. Md5 checksums were calculated for the set of files on Rackham and entered in the spreadsheet. The .tsv was uploaded in the ENA online portal, and files were ingested overnight. 
 
 ## Lessons learned
-Upon submitting the samples, all letters related to nordic alphabets rendered as question marks in the ENA portal. It could probably have been avoided by making sure the .tsv was formatted as UTF-8 prior to submission. Post submission bulk edits of sample records are only possible programmatically using xml-files. A DS colleague [adapted an already available script](https://github.com/NBISweden/nbisdm-ena-xml-generator) that was used to generate correctly updated samples in xml format. Samples were re-submitted to ENA programatically by making an modify/update xml [submission.xml](./data/submission.xml), plus an updated [samples.xml](./data/samples.xml).
+Upon submitting the samples, all letters related to nordic alphabets rendered as question marks in the ENA portal. It could probably have been avoided by making sure the .tsv was formatted as UTF-8 prior to submission. 
+
+Post submission bulk edits of sample records at ENA can only be made programmatically using xml-files.
+
+This required two steps:
+
+* The [samples](./data/Carum_samples.tsv) had to be transformed from .tsv into xml format, and encoded in UTF-8.
+
+* Make an associated [submission update-file in xml](./data/submission.xml).
+
+For the first step a DS colleague [assisted in adapting an already available script](https://github.com/NBISweden/nbisdm-ena-xml-generator) that was used to generate correctly updated samples in xml-format.
+
+The two files, [samples.xml](./data/samples.xml) and [submission]((./data/submission.xml).xml, was then uploaded programmatically in the samples section in the ENA online portal and confirmed. 
+
