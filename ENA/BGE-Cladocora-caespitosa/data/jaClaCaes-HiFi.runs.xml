@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_jaClaCaes_HiFi_WGS_FS42595244_FS42595244_bam_1">
+		<EXPERIMENT_REF refname="exp_jaClaCaes_HiFi_WGS_FS42595244_FS42595244"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-cladocora/m84045_240925_162103_s2.hifi_reads.bc2135.bam" checksum_method="MD5" checksum="8850194a997cc84ea30ba65d9871a9c1" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
