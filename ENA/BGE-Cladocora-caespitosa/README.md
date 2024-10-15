@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB81311 (umbrella), PRJEB81307 (experiment), PRJEB81308 (assembly)
 ---
 
 # BGE - *Cladocora caespitosa*
@@ -100,12 +100,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ### Programmatic submission RNAseq
 
-### Umbrella Project (TODO)
+### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
-* There is a CNAG script, that should do the deed of creating the xml file:
+* There is a CNAG script, that should do the deed of creating the umbrella.xml file:
     ```
-    ./script/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Cladocora caespitosa" -t jaClaCaes1 -p ERGA-BGE -c SCILIFELAB -a PRJEB81307 -x 130055
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"
@@ -114,12 +114,23 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     * -x: NCBI taxonomy id e.g. 2750798
 
 * Copy `submission-umbrella.xml` from any of the previous BGE species, check that the hold date is as wanted.
-* Submit using curl:
+
+* Submit using curl (can be done from laptop):
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-10-15T14:45:12.569+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB81311" alias="erga-bge-jaClaCaes-study-umbrella-2024-10-15" status="PRIVATE" holdUntilDate="2026-03-07Z"/>
+        <SUBMISSION accession="ERA30876363" alias="SUBMISSION-15-10-2024-14:45:12:356"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* **Note:** Add the assembly project `PRJEB81308` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
