@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB79726 PRJEB79727
+Top_level_acccession: PRJEB79726 (experiment), PRJEB79727 (assembly)
 ---
 
 # BGE - *Alectoris graeca*
@@ -93,12 +93,23 @@ For each of the BGE species, an umbrella project has to be created and linked to
     * Got error message: `ImportError: No module named jinja2`
     * Had to update 1st line of python script to `#!/usr/bin/env python3` instead of `#!/usr/bin/env python` 
 * Create a [submission-umbrella.xml](./data/submission-umbrella.xml). I put a release date of 2026-03-07, but this might not be necessary, if we wait with submitting the umbrella until at least the HiFi data is public.
-* **TODO**: Submit using curl:
+* Submit using curl:
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-10-15T14:53:02.125+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB81312" alias="erga-bge-bAleGra-study-umbrella-2024-10-15" status="PRIVATE" holdUntilDate="2026-03-07Z"/>
+        <SUBMISSION accession="ERA30876368" alias="SUBMISSION-15-10-2024-14:53:01:967"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * **Note:** Add the assembly project `PRJEB79727` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
 
