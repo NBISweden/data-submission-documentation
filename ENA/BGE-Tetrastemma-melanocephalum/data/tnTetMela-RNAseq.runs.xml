@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_tnTetMela_Illumina_RNA-Seq_FS42595041_RE018-1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_tnTetMela_Illumina_RNA-Seq_FS42595041_RE018-1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-rnaseq/Tetrastemma_melanocephalum_RE018-1A_R1_001.fastq.gz" checksum_method="MD5" checksum="1e6dd5625046f748ed23258215773ced" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="/bge-rnaseq/Tetrastemma_melanocephalum_RE018-1A_R2_001.fastq.gz" checksum_method="MD5" checksum="093791e984f3fe66ffaf5baa590cd338" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

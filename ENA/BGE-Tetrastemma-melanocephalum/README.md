@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB77287, PRJEB74039
+Top_level_acccession: PRJEB77287 (umbrella), PRJEB74039 (experiment)
 ---
 
 # BGE - *Tetrastemma melanocephalum*
@@ -45,10 +45,46 @@ Submission of raw reads for *Tetrastemma melanocephalum* to facilitate assembly 
 
 ### Submit Hi-C
 
-### Submit RNAseq
+### Submit RNA-Seq
+* Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
+* Create [tnTetMela-RNAseq.tsv](./data/tnTetMela-RNAseq.tsv)
+    * Note: used biosample with well id `FS42595041` in erga tracking portal
+* Create [submission-noHold.xml](./data/submission-noHold.xml), without any hold date since study is public already
+* Run CNAG script
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f tnTetMela-RNAseq.tsv -p ERGA-BGE -o tnTetMela-RNAseq
+    ```
+* Validate output (ignore the study xml)
+* Update tnTetMela-RNAseq.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB74039"/>
+    ```
+* Copy xml files to Uppmax
+    ```
+    scp tnTetMela-RNAseq.exp.xml tnTetMela-RNAseq.runs.xml submission-noHold.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-tetrastemma/
+    ```
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@tnTetMela-RNAseq.exp.xml" -F "RUN=@tnTetMela-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"   
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-10-18T13:22:56.968+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX13254412" alias="exp_tnTetMela_Illumina_RNA-Seq_FS42595041_RE018-1A" status="PRIVATE"/>
+        <RUN accession="ERR13851646" alias="run_tnTetMela_Illumina_RNA-Seq_FS42595041_RE018-1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA30886794" alias="SUBMISSION-18-10-2024-13:22:56:753"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+
+* Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
 
 ### Submit assembly
 
+### Umbrella project
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
 * There is a CNAG script, that should do the deed of creating the xml file:
