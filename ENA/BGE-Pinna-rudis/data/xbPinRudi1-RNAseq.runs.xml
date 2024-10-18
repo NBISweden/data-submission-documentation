@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_xbPinRudi_Illumina_RNA-Seq_ERGA_JdC_1421_002_RE018-4A_fastq_1">
+		<EXPERIMENT_REF refname="exp_xbPinRudi_Illumina_RNA-Seq_ERGA_JdC_1421_002_RE018-4A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-rnaseq/Pinna_rudis_RE018-4A_R1_001.fastq.gz" checksum_method="MD5" checksum="74c1b11c8035be3317cd7e27aa400c61" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="/bge-rnaseq/Pinna_rudis_RE018-4A_R2_001.fastq.gz" checksum_method="MD5" checksum="b7108b1ea13e6ad61147f3c91818844d" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
