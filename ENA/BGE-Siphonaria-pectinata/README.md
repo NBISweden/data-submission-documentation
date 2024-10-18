@@ -51,7 +51,7 @@ Submission of raw reads for *Siphonaria pectinata* to facilitate assembly and an
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
 * Create [xgSipPect-RNAseq.tsv](./data/xgSipPect-RNAseq.tsv)
-    * Note: Will use same biosample as for HiFi and HiC
+    * Note: used biosample with well id `Spec-3` in erga tracking portal
 * Create [submission-noHold.xml](./data/submission-noHold.xml), without any hold date since study is public already
 * Run CNAG script
     ```
