@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB77283, PRJEB76283, PRJEB76284
+Top_level_acccession: PRJEB77283 (umbrella), PRJEB76283 (experiment), PRJEB76284 (assembly)
 ---
 
 # BGE - *Lithobius stygius*
@@ -77,6 +77,44 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
+### Submit RNA-Seq
+* Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
+* Create [qcLitStyg-RNAseq.tsv](./data/qcLitStyg-RNAseq.tsv)
+    * Note: used biosample with well id `FS42595406` in erga tracking portal
+* Create [submission-noHold.xml](./data/submission-noHold.xml), without any hold date since study is public already
+* Run CNAG script
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qcLitStyg-RNAseq.tsv -p ERGA-BGE -o qcLitStyg-RNAseq
+    ```
+* Validate output (ignore the study xml)
+* Update qcLitStyg-RNAseq.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB76283"/>
+    ```
+* Copy xml files to Uppmax
+    ```
+    scp qcLitStyg-RNAseq.exp.xml qcLitStyg-RNAseq.runs.xml submission-noHold.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-lithobius/
+    ```
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@qcLitStyg-RNAseq.exp.xml" -F "RUN=@qcLitStyg-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"   
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-10-18T14:07:32.612+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX13254552" alias="exp_qcLitStyg_Illumina_RNA-Seq_FS42595406_RE023-1A" status="PRIVATE"/>
+        <RUN accession="ERR13851786" alias="run_qcLitStyg_Illumina_RNA-Seq_FS42595406_RE023-1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA30887149" alias="SUBMISSION-18-10-2024-14:07:32:414"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+
+* Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
+
+## Umbrella project
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
 * There is a CNAG script, that should do the deed of creating the xml file:
