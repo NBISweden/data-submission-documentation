@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_Illumina_RNA-Seq_ERGA_DS_382X_03_RE019-2B_fastq_1">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_Illumina_RNA-Seq_ERGA_DS_382X_03_RE019-2B"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-rnaseq/Austropotamobius_torrentium_RE019-2B_R1_001.fastq.gz" checksum_method="MD5" checksum="679dd7997db5591127029c02062a92fe" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="/bge-rnaseq/Austropotamobius_torrentium_RE019-2B_R2_001.fastq.gz" checksum_method="MD5" checksum="7d408bfbd02d8339e1183dbc85000c34" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
