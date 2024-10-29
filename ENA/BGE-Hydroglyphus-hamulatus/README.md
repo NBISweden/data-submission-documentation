@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB76972
+Top_level_acccession: PRJEB77288 (umbrella), PRJEB76972 (experiment)
 ---
 
 # BGE - *Hydropglyphus hamulatus*
@@ -18,6 +18,8 @@ Submission of raw reads for *Hydropglyphus hamulatus* to facilitate assembly and
 * [BGE mRupRup umbrella project](https://www.ncbi.nlm.nih.gov/bioproject/1084634)
 
 ## Lessons learned
+
+* Create a virtual sample, when 2 (or more) biosamples have been used in order to create enough material
 
 ## Detailed step by step description
 
@@ -39,13 +41,13 @@ ascp -QT -l300M -k 1 m84045_240620_060113_s4.hifi_reads.bc205[2/3].bam Webin-399
 
 Since upload speeds were very low, a solution was to copy the files to `nobackup` on Rackham where upload speeds were significantly higher (for some reason).
 
-* Manifests were made from the metadata spreadsheet by using a modified script [get_ENA_XML_files_yv.py](scripts/get_ENA_XML_files_yv.py), generating XML files for Study (not used), [Experiment](ENA/BGE-Hydroglyphus-hamulatus/data/PRJEB76972.exp.xml) and [Runs](ENA/BGE-Hydroglyphus-hamulatus/data/PRJEB76972.runs.xml). Also, md5 sums had calculated for each data file and included in the spreadsheet. 
+* Manifests were made from the metadata spreadsheet by using a modified script [get_ENA_XML_files_yv.py](./scripts/get_ENA_XML_files_yv.py), generating XML files for Study (not used), [Experiment](./data/PRJEB76972.exp.xml) and [Runs](./data/PRJEB76972.runs.xml). Also, md5 sums had calculated for each data file and included in the spreadsheet. 
 
 * Since the scripts automatically separated the two datasets into separate Studies, the XML's were modified to include both datasets in the already registered Study. Also, since the Study was already registered via the ENA portal, the referencing line was changed to:
 
   `<STUDY_REF accession="PRJEB76972"/>`
 
-* A [submission.xml](ENA/BGE-Hydroglyphus-hamulatus/data/submission.xml) file was made according to ENA specifications.
+* A [submission.xml](./data/submission.xml) file was made according to ENA specifications.
 
 * Manifests were submitted to ENA via curl:
 
@@ -57,7 +59,44 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
 
 ### Submit Hi-C
 
-### Submit RNAseq
+### Submit RNA-Seq
+* Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
+* Create [icHydHamu-RNAseq.tsv](./data/icHydHamu-RNAseq.tsv)
+    * Note: the RNAsheet delivered by SNP&SEQ indicates 2 tube or well id's `FS55571879+FS55571880`. In erga tracking portal, these point to 2 different biosamples which in turn are derived from 2 different original samples: `FS55571879 -> SAMEA114554676 -> SAMEA114554658`, `FS55571880 -> SAMEA114554677 -> SAMEA114554659`. The ToLId's varies as well, what to do? On both of these it states that they are extra sequencing exemplars of specimen id `ERGA JB 4431 00001` (`SAMEA114554670`), should I use that one instead? It is ToLId icHydHamu1, tube or well id `FS55571873`. I've asked NGI coordinators (in dedicated #bge_ngi_metadata slack channel)
+    * I had to create a virtual sample, that refers to them both, and submit to ENA: [icHydHamu-virtual-sample.tsv](./data/icHydHamu-virtual-sample.tsv)
+    * Accession number received: ERS21379198
+* Create [submission-noHold.xml](./data/submission-noHold.xml), without any hold date since study is public already
+* Run CNAG script
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icHydHamu-RNAseq.tsv -p ERGA-BGE -o icHydHamu-RNAseq
+    ```
+* Validate output (ignore the study xml)
+* Update icHydHamu-RNAseq.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB76972"/>
+    ```
+* Copy xml files to Uppmax
+    ```
+    scp icHydHamu-RNAseq.exp.xml icHydHamu-RNAseq.runs.xml submission-noHold.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-hydroglyphus/
+    ```
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@icHydHamu-RNAseq.exp.xml" -F "RUN=@icHydHamu-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"   
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-10-29T13:29:23.215Z" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX13311160" alias="exp_icHydHamu_Illumina_RNA-Seq_FS55571879_FS55571880_RE021-2A" status="PRIVATE"/>
+        <RUN accession="ERR13909341" alias="run_icHydHamu_Illumina_RNA-Seq_FS55571879_FS55571880_RE021-2A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA30918368" alias="SUBMISSION-29-10-2024-13:29:22:983"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+
+* Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
 
 ### Submit assembly
 
