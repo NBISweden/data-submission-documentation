@@ -52,6 +52,44 @@ Submission of raw reads for *Pinna rudis* to facilitate assembly and annotation 
 * Accession number received: `ERX12523198`, `ERR13151803`
 * Added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
+### Submit RNA-Seq
+* Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
+* Create [xbPinRudi1-RNAseq.tsv](./data/xbPinRudi1-RNAseq.tsv)
+* Create [submission.xml](./data/submission.xml), without any hold date since study is public already
+* Run CNAG script
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xbPinRudi1-RNAseq.tsv -p ERGA-BGE -o xbPinRudi1-RNAseq
+    ```
+* Validate output (ignore the study xml)
+* Update xbPinRudi1-RNAseq.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB75035"/>
+    ```
+* Copy xml files to Uppmax
+    ```
+    scp xbPinRudi1-RNAseq.exp.xml xbPinRudi1-RNAseq.runs.xml submission.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-pinna/
+    ```
+* Submit using curl (first test server, since first time for RNAseq data):
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml"  -F  "EXPERIMENT=@xbPinRudi1-RNAseq.exp.xml" -F "RUN=@xbPinRudi1-RNAseq.runs.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml"  -F  "EXPERIMENT=@xbPinRudi1-RNAseq.exp.xml" -F "RUN=@xbPinRudi1-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"    
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-10-18T09:37:35.498+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX13250128" alias="exp_xbPinRudi_Illumina_RNA-Seq_ERGA_JdC_1421_002_RE018-4A" status="PRIVATE"/>
+        <RUN accession="ERR13847362" alias="run_xbPinRudi_Illumina_RNA-Seq_ERGA_JdC_1421_002_RE018-4A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA30885143" alias="SUBMISSION-18-10-2024-09:37:35:263"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+    * Note: Why is status set to *Private* when the project is public? Is it perhaps due to the need to process the files/submission, i.e. it will shortly become public?
+* Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
+
+### Umbrella project
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
 * There is a CNAG script, that should do the deed of creating the xml file:

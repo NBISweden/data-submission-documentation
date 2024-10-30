@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icAstAngu_Illumina_RNA-Seq_FS42595226_RE019-1B_fastq_1">
+		<EXPERIMENT_REF refname="exp_icAstAngu_Illumina_RNA-Seq_FS42595226_RE019-1B"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-rnaseq/Astagobius_angustatus_RE019-1B_R1_001.fastq.gz" checksum_method="MD5" checksum="d3d4a7eca9ac9dc365f734b4e4ea1b44" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="/bge-rnaseq/Astagobius_angustatus_RE019-1B_R2_001.fastq.gz" checksum_method="MD5" checksum="1be0f86532727c30900cc0c78dd7dd86" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

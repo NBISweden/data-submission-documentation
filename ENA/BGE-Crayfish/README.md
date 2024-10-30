@@ -107,8 +107,6 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     * [qmAusTorr-HiC.runs.xml](./data/qmAusTorr-HiC.runs.xml)
 * `qmAusTorr-HiC.exp.xml` was manually updated, replacing 8 occurences of `<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-24"/>` with `<STUDY_REF accession="PRJEB77106"/>`
 
-#### RNA-seq xml
-
 ### Programmatic submission HiFi
 
 * Copy all xml files to Uppmax:
@@ -229,7 +227,42 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Realized that the submission xml said hold until 2026, but the study referenced is already public, need to check status on ENA.
     * Checked at ENA, the HOLD date was disregarded, the experiments are indeed public
 
-### Programmatic submission RNAseq
+### Submit RNA-Seq
+* Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
+* Create [qmAusTorr-RNAseq.tsv](./data/qmAusTorr-RNAseq.tsv)
+    * Note: Will use same biosample as for HiFi and HiC
+* Create [submission-noHold.xml](./data/submission-noHold.xml), without any hold date since study is public already
+* Run CNAG script
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qmAusTorr-RNAseq.tsv -p ERGA-BGE -o qmAusTorr-RNAseq
+    ```
+* Validate output (ignore the study xml)
+* Update qmAusTorr-RNAseq.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB77106"/>
+    ```
+* Copy xml files to Uppmax
+    ```
+    scp qmAusTorr-RNAseq.exp.xml qmAusTorr-RNAseq.runs.xml submission-noHold.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-crayfish/
+    ```
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F  "EXPERIMENT=@qmAusTorr-RNAseq.exp.xml" -F "RUN=@qmAusTorr-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"   
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-10-18T12:28:04.419+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX13251216" alias="exp_qmAusTorr_Illumina_RNA-Seq_ERGA_DS_382X_03_RE019-2B" status="PRIVATE"/>
+        <RUN accession="ERR13848450" alias="run_qmAusTorr_Illumina_RNA-Seq_ERGA_DS_382X_03_RE019-2B_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA30886629" alias="SUBMISSION-18-10-2024-12:28:04:105"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+
+* Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
 
 ## Tests
 

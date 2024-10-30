@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_bAleGra_Illumina_RNA-Seq_ERGA_BP_5516_03_RE022-1-4-pool_fastq_1">
+		<EXPERIMENT_REF refname="exp_bAleGra_Illumina_RNA-Seq_ERGA_BP_5516_03_RE022-1-4-pool"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-rnaseq/Alectoris_graeca_RE022-1-4-pool_R1_001.fastq.gz" checksum_method="MD5" checksum="7025d82df7495d8f478c20863e9e8e2a" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="/bge-rnaseq/Alectoris_graeca_RE022-1-4-pool_R2_001.fastq.gz" checksum_method="MD5" checksum="8d6fbcfa05b0e349a71fd0435267e9ef" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

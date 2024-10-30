@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<EXPERIMENT_SET>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_tnTetMela_Illumina_RNA-Seq_FS42595041_RE018-1A">
+		<TITLE>Tetrastemma melanocephalum Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB74039"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA113595492"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>RE018-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+</EXPERIMENT_SET>

@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB77281, PRJEB76281
+Top_level_acccession: PRJEB77281 (umbrella), PRJEB76281 (experiment)
 ---
 
 # BGE - *Astagobius angustatus*
@@ -78,6 +78,43 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     </RECEIPT>
     ```
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+
+### Submit RNA-Seq
+* Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
+* Create [icAstAngu-RNAseq.tsv](./data/icAstAngu-RNAseq.tsv)
+    * Note: Another biosample (compared to HiFi) will be referred to
+* Create [submission-noHold.xml](./data/submission-noHold.xml), without any hold date since study is public already
+* Run CNAG script
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icAstAngu-RNAseq.tsv -p ERGA-BGE -o icAstAngu-RNAseq
+    ```
+* Validate output (ignore the study xml)
+* Update icAstAngu-RNAseq.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB76281"/>
+    ```
+* Copy xml files to Uppmax
+    ```
+    scp icAstAngu-RNAseq.exp.xml icAstAngu-RNAseq.runs.xml submission-noHold.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-astagobius/
+    ```
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F  "EXPERIMENT=@icAstAngu-RNAseq.exp.xml" -F "RUN=@icAstAngu-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"   
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-10-18T10:30:52.089+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX13250204" alias="exp_icAstAngu_Illumina_RNA-Seq_FS42595226_RE019-1B" status="PRIVATE"/>
+        <RUN accession="ERR13847438" alias="run_icAstAngu_Illumina_RNA-Seq_FS42595226_RE019-1B_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA30885809" alias="SUBMISSION-18-10-2024-10:30:51:779"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+
+* Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
 
 ### Register umbrella projekt
 

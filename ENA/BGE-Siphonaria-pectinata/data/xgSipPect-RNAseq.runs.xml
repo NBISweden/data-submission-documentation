@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_xgSipPect_Illumina_RNA-Seq_Spec-3_RE018-2B_fastq_1">
+		<EXPERIMENT_REF refname="exp_xgSipPect_Illumina_RNA-Seq_Spec-3_RE018-2B"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-rnaseq/Siphonaria_pectinata_RE018-2B_R1_001.fastq.gz" checksum_method="MD5" checksum="d45fb1b7429cd0edf98dcf4abc2e2039" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="/bge-rnaseq/Siphonaria_pectinata_RE018-2B_R2_001.fastq.gz" checksum_method="MD5" checksum="e24ee41a111684b93089b721d9e71793" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB79726 (experiment), PRJEB79727 (assembly)
+Top_level_acccession: PRJEB81312 (umbrella), PRJEB79726 (experiment), PRJEB79727 (assembly)
 ---
 
 # BGE - *Alectoris graeca*
@@ -82,6 +82,50 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
+### Submit RNA-Seq
+* Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
+* Create [bAleGra-RNAseq.tsv](./data/bAleGra-RNAseq.tsv)
+    * Note: used origin biosample since this was a pooled sample from 4 biosamples. As tube or well id, id put the specimen id.
+* Reuse [submission.xml](./data/submission.xml), from HiFi submission
+* Run CNAG script
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f bAleGra-RNAseq.tsv -p ERGA-BGE -o bAleGra-RNAseq
+    ```
+* Validate output (ignore the study xml)
+* Update bAleGra-RNAseq.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB79726"/>
+    ```
+* Copy xml files to Uppmax
+    ```
+    scp bAleGra-RNAseq.exp.xml bAleGra-RNAseq.runs.xml submission.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-alectoris/
+    ```
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@bAleGra-RNAseq.exp.xml" -F "RUN=@bAleGra-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"   
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-10-22T08:58:51.915+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX13268864" alias="exp_bAleGra_Illumina_RNA-Seq_ERGA_BP_5516_03_RE022-1-4-pool" status="PRIVATE"/>
+        <RUN accession="ERR13866126" alias="run_bAleGra_Illumina_RNA-Seq_ERGA_BP_5516_03_RE022-1-4-pool_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA30899814" alias="SUBMISSION-22-10-2024-08:58:51:494"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+
+* Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
+
+### Submit Hi-C
+
+### Submit assembly
+
 ### Register umbrella project
 
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
@@ -112,10 +156,3 @@ For each of the BGE species, an umbrella project has to be created and linked to
     </RECEIPT>
     ```
 * **Note:** Add the assembly project `PRJEB79727` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
-
-### Submit Hi-C
-
-### Submit RNAseq
-
-### Submit assembly
-

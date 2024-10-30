@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qcDicCarn_Illumina_RNA-Seq_FS42595422_RE024-2A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qcDicCarn_Illumina_RNA-Seq_FS42595422_RE024-2A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-rnaseq/Dicellophilus_carniolensis_RE024-2A_R1_001.fastq.gz" checksum_method="MD5" checksum="817e5427b807860acdeae0420b3c18bf" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="/bge-rnaseq/Dicellophilus_carniolensis_RE024-2A_R2_001.fastq.gz" checksum_method="MD5" checksum="8f365a189a2bbf0e61a8c5f89332c140" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

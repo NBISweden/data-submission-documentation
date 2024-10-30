@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qcLitStyg_Illumina_RNA-Seq_FS42595406_RE023-1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qcLitStyg_Illumina_RNA-Seq_FS42595406_RE023-1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-rnaseq/Lithobius_stygius_RE023-1A_R1_001.fastq.gz" checksum_method="MD5" checksum="1ba67cd0c189ac64d572bc18b3bafc6e" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="/bge-rnaseq/Lithobius_stygius_RE023-1A_R2_001.fastq.gz" checksum_method="MD5" checksum="398eb3293db6e362bb1190b2107776a2" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
