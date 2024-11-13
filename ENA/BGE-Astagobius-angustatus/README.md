@@ -26,8 +26,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Collecting metadata
 * I then looked at the delivery README for the HiFi dataset (on Uppmax) and extracted the Name (`ERGA_TD_5269_06`). I then went to [BioSamples](https://www.ebi.ac.uk/biosamples/samples?text=Astagobius+angustatus&page=2) and extracted the 2 samples that had this name as `specimen_id`. Since `SAMEA113399603` was the same as `SAMEA113399597`, I decided to use the latter. 
 * I checked the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/), using both the biosample accession number as well as the species name, but there was no hit. I guess in this case we will not have a tube or well id, so will use UGC user id (`pr_056_001`) instead.
-
-### Creating xml
+### Submit HiFi
+#### Creating xml
 * I copied [submission.xml](./data/submission.xml) from BGE-Crayfish, using the same embargo date
 * I updated the get_ENA_xml_files.py script so that library name and title also includes PacBio
 * Running the script:
@@ -35,7 +35,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icAstAngu-hifi.tsv -p ERGA-BGE -o icAstAngu-HiFi
     ```
 
-### Data transfer
+#### Data transfer
 * Create folder `bge-astagobius` at ENA upload area using Filezilla
 * Using aspera from Uppmax to ENA upload area:
     ```
@@ -46,7 +46,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Keep track of progress using FileZilla
 
-### Programmatic submission
+#### Programmatic submission
 * Copy all xml files to Uppmax:
     ```
     scp submission.xml icAstAngu-HiFi*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-astagobius/
@@ -78,6 +78,13 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     </RECEIPT>
     ```
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+
+### Submit HiC
+* 2 samples were used, so a virtual sample had to be registered, referring to:
+    * SAMEA113399598, well id FS42595176, icAstAngu1
+    * SAMEA113399599, well id FS42595225, icAstAngu2
+    * create a [icAstAngu-virtual-sample.tsv](./data/icAstAngu-virtual-sample.tsv) based on what was done for RNAseq of [Hydroglyphus hamulatus](../BGE-Hydroglyphus-hamulatus/data/icHydHamu-virtual-sample.tsv)
+    * Accession number received: ERS22139083
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
