@@ -82,6 +82,13 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
+### Submit Hi-C
+* This one is a bit special since 2 libraries were created, one from tissue and one from blood.
+* The sample metadata received from NGI had the 'tube or well id' so it was a matter of looking them up in ERGA tracking portal in order to obtain the biosamples:
+    * SAMEA115117743 (blood, lib1, FS42595444)
+    * SAMEA115117741 (tissue, lib2, FS42594031)
+* Note to self, need to make sure that these comes out correctly from script, but since there are 2 biosamples it *should* be ok.
+
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
 * Create [bAleGra-RNAseq.tsv](./data/bAleGra-RNAseq.tsv)

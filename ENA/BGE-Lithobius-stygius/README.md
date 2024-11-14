@@ -26,14 +26,15 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Collecting metadata
 * I went to [BioSamples](https://www.ebi.ac.uk/biosamples/samples?text=Lithobius+stygius) and extracted all samples for this species, where SCILIFELAB was the GAL. I then looked at the delivery README for the HiFi dataset (on Uppmax) and extracted the Name (`FS42595405`). This I then pasted as filter in `Tube or well id` field, in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA115117740](https://www.ebi.ac.uk/biosamples/samples/SAMEA115117740).
 
-### Creating xml
+### Submitting HiFi
+#### Creating xml
 * I copied [submission.xml](./data/submission.xml) from BGE-Crayfish, using the same embargo date
 * Running the script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qcLitStyg-hifi.tsv -p ERGA-BGE -o qcLitStyg-HiFi
     ```
 
-### Data transfer
+#### Data transfer
 * Create folder `bge-lithobius` at ENA upload area using Filezilla
 * Using aspera from Uppmax to ENA upload area:
     ```
@@ -44,7 +45,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Keep track of progress using FileZilla
 
-### Programmatic submission
+#### Programmatic submission
 * Copy all xml files to Uppmax:
     ```
     scp submission.xml qcLitStyg-HiFi*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-lithobius/
@@ -76,6 +77,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     </RECEIPT>
     ```
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+
+### Submit HiC
+* For the sample data, `ERGA EB 5301 05` was given from NGI. I went to Biosample, and found 2 possible samples, SAMEA115117737 and SAMEA115117716
+* In the ERGA tracking portal, only the first was found (which is derived/same as the second). Hence, SAMEA115117737 with tube id FS42595408, was used.
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)

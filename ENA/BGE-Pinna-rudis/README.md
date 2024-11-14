@@ -28,6 +28,10 @@ Submission of raw reads for *Pinna rudis* to facilitate assembly and annotation 
 
 ### Collect metadata
 * After some struggle biosample [SAMEA112748815](https://www.ebi.ac.uk/biosamples/samples/SAMEA112748815) was identified as origin.
+    * I received the sample label `ERGA_JdC_1421_001` from NGI. However, none of the 14 biosamples for this species has this value as specimen id, rather `ERGA_JdC_1421_002`. 
+    * In contact with NGI, it turns out that the samples recieved were mislabelled.
+    * All 14 biosamples have the same specimen id as well as ToLID, 13 of them are same as or derived from SAMEA112748815, and I got an okay from NGI to use this one for HiFi.
+    * I've decided to use this sample also for the other data types.
 
 ### Register sequencing study
 * BGE projects should follow a certain standard when it comes to naming, which was followed in this study:
@@ -51,6 +55,9 @@ Submission of raw reads for *Pinna rudis* to facilitate assembly and annotation 
     ```
 * Accession number received: `ERX12523198`, `ERR13151803`
 * Added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+
+### Submit Hi-C
+* Since there are some sample mislabelling going on with this species, I decided to use the origin, SAMEA112748815.
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)

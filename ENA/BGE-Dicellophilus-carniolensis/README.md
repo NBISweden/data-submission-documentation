@@ -82,6 +82,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     
 ### Submit Hi-C
+* Recieved sample label `FS42595418` from NGI, looking it up in the ERGA tracking portal, it leads to biosample `SAMEA115117727`, from which I collected the ToLID.
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
