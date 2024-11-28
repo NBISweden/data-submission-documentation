@@ -25,43 +25,38 @@ Submission will be done via CNAG script and programmatic submission route using 
 
 ## Detailed step by step description
 
-### Collecting metadata
-* I went to [BioSamples](https://www.ebi.ac.uk/biosamples/samples?text=) and extracted all samples for this species, where SCILIFELAB was the GAL. * I then went to the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) and filtered on the species name, collecting `Tube or well id` fields.
-* I noticed that one of the GAL/sample collector id's seems to have a typo. 
-    * It says `warg ad3 erga MYC 2023` but I think it should be `warg ad2 erga MYC 2023` for biosamples `SAMEA114530803` and `SAMEA114530802` 
-    * Since the specimen id is `ERGA MYC 9212 02` and ToLID is `xoWirArge2` (and the other GAL and collector ids seems to be based on specimen id and ToLID)
-
 ### Data transfer
-**To be done**
 * Create folder `bge-wirenia-argentea` at ENA upload area using Filezilla
 * Using aspera from Uppmax to ENA upload area:
     ```
     interactive -t 03:00:00 -A naiss2024-22-345
     module load ascp
     export ASPERA_SCP_PASS='password'
-    ascp -k 3 -d -q --mode=send -QT -l300M --host=webin.ebi.ac.uk --user=Webin-XXXX /proj/snic2021-6-194/INBOX/BGE_.bam /bge-wirenia-argentea/ &
+    ascp -k 3 -d -q --mode=send -QT -l300M --host=webin.ebi.ac.uk --user=Webin-XXXX /proj/snic2022-6-208/INBOX/BGE_Wirenia-argentea/...bam /bge-wirenia-argentea/ &
     ```
 * Keep track of progress using FileZilla
+* Note: Done for HiFi, but ascp didn't work so I used lftp instead.
 
-### Submit Hi-C
+### HiFi
+#### Collecting metadata
+* The README file from the data delivery gave the tube id `FS42595739`, and via the ERGA tracking tool I deduced that the biosample should be `SAMEA114530807`, and the ToLID is `xoWirArge3`
+* I've asked NGI for help with the experiment metadata. Since it was a while since previous HiFi submissions, I wanted to check if the library construction protocol is still valid.
+
+#### Submit
 **To be done**
-* This is the first dataset for this species, so both study and experiment needs to be created.
-* For the sample, I received the label `wargBGO23-4`, and I'm unable to connect this to a biosample, specimen id or ToLID, so I've asked NGI for assistance.
-
 * Copy a [submission.xml](./data/submission.xml) with hold date, from earlier submission
-
+* This is the first dataset for this species, so both study and experiment needs to be created.
 * Running the script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-hic.tsv -p ERGA-BGE -o xoWirArge-HiC
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-hifi.tsv -p ERGA-BGE -o xoWirArge-HiFi
     ```
-
 * Copy all xml files to Uppmax:
     ```
-    scp submission.xml xoWirArge-HiC*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-Wirenia-argentea/
+    scp submission.xml xoWirArge-HiFi*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-Wirenia-argentea/
     ```
-* Submit both project and experiment in one go, i.e:
+* Submit both study and experiment:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@xoWirArge-HiC.study.xml" -F "EXPERIMENT=@xoWirArge-HiC.exp.xml" -F "RUN=@xoWirArge-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@xoWirArge-HiFi.study.xml" -F "EXPERIMENT=@xoWirArge-HiFi.exp.xml" -F "RUN=@xoWirArge-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -69,26 +64,37 @@ Submission will be done via CNAG script and programmatic submission route using 
     ```
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
-### Submit HiFi
+### HiC
+#### Collecting metadata
+* I went to [BioSamples](https://www.ebi.ac.uk/biosamples/samples?text=Wirena+argentea) and extracted all samples for this species, where SCILIFELAB was the GAL. 
+* I then went to the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) and filtered on the species name, collecting `Tube or well id` fields.
+* I noticed that one of the GAL/sample collector id's seems to have a typo. 
+    * It says `warg ad3 erga MYC 2023` but I think it should be `warg ad2 erga MYC 2023` for biosamples `SAMEA114530803` and `SAMEA114530802` 
+    * Since the specimen id is `ERGA MYC 9212 02` and ToLID is `xoWirArge2` (and the other GAL and collector ids seems to be based on specimen id and ToLID)
+* For the sample, I received the label `wargBGO23-4` (from an excel sheet via slack), and I'm unable to connect this to a biosample, specimen id or ToLID, so I've asked NGI for assistance.
+    * Turns out that the samples for the material used haven't been registered in COPO (and hence does not exist in BioSamples). Only 3 samples are listed in the tracking tool, and SciLifeLab received 18 in total.
+    * BGE has contacted sample provider, but no response yet. Once she uploads the updated Manifest, it will appear in the Tracking tool.
+
+#### Submit Hi-C
 **To be done**
-* Identify the sample
 
 * Running the script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-hifi.tsv -p ERGA-BGE -o xoWirArge-HiFi
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-hic.tsv -p ERGA-BGE -o xoWirArge-HiC
     ```
 * Validate output (ignore the study xml)
-* Update xoWirArge-HiFi.exp.xml to reference accession number of previously registered study (HiC):
+* Update xoWirArge-HiC.exp.xml to reference accession number of previously registered study (HiFi):
     ```
     <STUDY_REF accession=""/>
     ```
+
 * Copy all xml files to Uppmax:
     ```
-    scp submission.xml xoWirArge-HiFi*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-Wirenia-argentea/
+    scp submission.xml xoWirArge-HiC*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-Wirenia-argentea/
     ```
-* Submit only experiment:
+* Submit:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "EXPERIMENT=@xoWirArge-HiFi.exp.xml" -F "RUN=@xoWirArge-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@xoWirArge-HiC.exp.xml" -F "RUN=@xoWirArge-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
