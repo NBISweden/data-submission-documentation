@@ -85,6 +85,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     * SAMEA113399599, well id FS42595225, icAstAngu2
     * create a [icAstAngu-virtual-sample.tsv](./data/icAstAngu-virtual-sample.tsv) based on what was done for RNAseq of [Hydroglyphus hamulatus](../BGE-Hydroglyphus-hamulatus/data/icHydHamu-virtual-sample.tsv)
     * Accession number received: ERS22139083
+* However, as it turned out the HiC data was useless, and there's no more material to re-sequence, so this species will not have HiC.
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
@@ -122,6 +123,11 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 
 * Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
+
+### Submit assembly
+* Since HiC failed for this species, the assembly (and HiFi + RNAseq) should still be submitted and made public, but denoted as a draft:
+    * *"BGE wants us to upload the assembly for Astagobius, which I guess means that they want the reads uploaded as well. However, it should be marked as draft! This is what Christian writes: "Could you please upload the draft genomes and make them public? Additionally, it would be helpful to include a label in the BioProject description indicating the draft nature of these genomes, rather than referring to them as BGE or using other terminology."*
+    * In practice I'm guessing that we remove the BGE label/keyword on study level and instead add 'draft', but not sure about the description/abstract part.
 
 ### Register umbrella projekt
 
