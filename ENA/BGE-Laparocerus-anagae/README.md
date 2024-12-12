@@ -16,7 +16,7 @@ Submission will be done via CNAG script and programmatic submission route using 
 ## Procedure overview and links to examples
 
 * [Metadata template](./data/BGE-Laparocerus-anagae-metadata.xlsx)
-* [BGE HiFi metadata](./data/-hifi.tsv)
+* [BGE HiFi metadata](./data/icLapAnag-hifi.tsv)
 * [BGE HiC metadata](./data/-hic.tsv)
 * [BGE RNAseq metadata](./data/-rnaseq.tsv)
 
@@ -47,15 +47,16 @@ Submission will be done via CNAG script and programmatic submission route using 
 #### Collecting metadata
 * I looked at the delivery README for the HiFi dataset (on Uppmax) and extracted the Name (`FS38819783`). I looked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/), filtered on the organism, and saw that the Name was registered with biosample [SAMEA115808865](https://www.ebi.ac.uk/biosamples/samples/SAMEA115808865).
 * I copied the sample metadata (tube id, ToLID, BioSample id, species name) into the BGE-sheet of the metadata template.
-* Need to check the experimental metadata with NGI.
+* Need to check the experimental metadata with NGI. Answer: The same as previous HiFi datasets.
 
 #### HiFi xml
-* **Note:** There are 2 bam files, need to make sure that the script works
 * I copied [submission.xml](./data/submission.xml) from BGE-Crayfish, using the same embargo date
+* **Note:** There are 2 bam files, need to make sure that the script works
 * Running the script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icLapAnag-hifi.tsv -p ERGA-BGE -o icLapAnag-HiFi
     ```
+    * As suspected, the script now creates 2 experiments and also wrongly adds `<SINGLE>NOMINAL_LENGTH</SINGLE>` in LIBRARY_LAYOUT. I guess we need 2 versions of the script now... For now, I will manually edit the exp .xml file, remove the second experiment and change the layout to `</SINGLE>`.
 
 ### Programmatic submission HiFi
 * Copy all xml files to Uppmax:
@@ -68,8 +69,40 @@ Submission will be done via CNAG script and programmatic submission route using 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-12-12T14:38:38.308Z" success="false">
+        <MESSAGES>
+            <ERROR>experiment xml is not valid, error parsing the file: "icLapAnag-HiFi.exp.xml".</ERROR>
+        </MESSAGES>
+    </RECEIPT>
     ```
+    * I have no idea why it didn't work, and what to do. I've compared to e.g. crayfish HiFi submission, and they are similar. Would like a better explanation, the only difference is that I now submitted from laptop and not from Uppmax, but that cannot be why.
+    * I tried submitting the xml files via browser, thinking it might produce better error messages, but it didn't.
+    * I then copied the rows from Cladocora caespitosa experiment xml file, and edited only what differed, and for some reason this worked...
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-12-12T15:30:57.930Z" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX13461187" alias="exp_icLapAnag_HiFi_WGS_FS38819783_pr_136" status="PRIVATE"/>
+        <RUN accession="ERR14058183" alias="run_icLapAnag_HiFi_WGS_FS38819783_pr_136_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR14058184" alias="run_icLapAnag_HiFi_WGS_FS38819783_pr_136_bam_2" status="PRIVATE"/>
+        <PROJECT accession="PRJEB83457" alias="erga-bge-icLapAnag-study-rawdata-2024-12-12" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP167091" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB83458" alias="erga-bge-icLapAnag1_primary-2024-12-12" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP167092" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA31041307" alias="SUBMISSION-12-12-2024-15:30:57:279"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
 ### HiC submission
