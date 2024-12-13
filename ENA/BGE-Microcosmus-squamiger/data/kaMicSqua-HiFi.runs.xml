@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_kaMicSqua_HiFi_WGS_FS42549340_pr_144_bam_1">
+		<EXPERIMENT_REF refname="exp_kaMicSqua_HiFi_WGS_FS42549340_pr_144"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-microcosmus-squamiger/m84045_241120_191039_s3.hifi_reads.bc2167.bam" checksum_method="MD5" checksum="6c8faa62471a00ae14f5410aa148357a" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_kaMicSqua_HiFi_WGS_FS42549340_pr_144_bam_2">
+		<EXPERIMENT_REF refname="exp_kaMicSqua_HiFi_WGS_FS42549340_pr_144"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-microcosmus-squamiger/m84045_241128_191657_s4.hifi_reads.bc2167.bam" checksum_method="MD5" checksum="a291750a2a51ed9edfdb3c1b108f5107" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
