@@ -4,13 +4,13 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB83554 (experiment), PRJEB83555 (assembly)
 ---
 
 # BGE - *Wirenia argentea*
 
 ## Submission task description
-Submission of raw reads for *Wirenia argentea* to facilitate assembly and annotation as part of ERGA (https://www.erga-biodiversity.eu/) - BGE (https://biodiversitygenomics.eu/). HiFi, Hi-C and RNAseq datasets will be produced and submitted. There will also be an assembly to be submitted. For BGE projects there will be no annotation done, instead this will be handled by Ensembl. The sample used for sequencing has already been submitted via COPO.
+Submission of raw reads for *Wirenia argentea* to facilitate assembly and annotation as part of ERGA (https://www.erga-biodiversity.eu/) - BGE (https://biodiversitygenomics.eu/). HiFi, Hi-C and RNAseq datasets will be produced and submitted. There will also be an assembly to be submitted. For BGE projects there will be no annotation done, instead this will be handled by Ensembl. The sample(s) used for sequencing has already been submitted via COPO.
 Submission will be done via CNAG script and programmatic submission route using xml files produced by the script.
 
 ## Procedure overview and links to examples
@@ -27,45 +27,65 @@ Submission will be done via CNAG script and programmatic submission route using 
 
 ### Data transfer
 * Create folder `bge-wirenia-argentea` at ENA upload area using Filezilla
-* Using aspera from Uppmax to ENA upload area:
+* Using aspera from Uppmax didn't work, used lftp:
     ```
-    interactive -t 03:00:00 -A naiss2024-22-345
-    module load ascp
-    export ASPERA_SCP_PASS='password'
-    ascp -k 3 -d -q --mode=send -QT -l300M --host=webin.ebi.ac.uk --user=Webin-XXXX /proj/snic2022-6-208/INBOX/BGE_Wirenia-argentea/...bam /bge-wirenia-argentea/ &
+    interactive -t 05:00:00 -A naiss2024-22-345
+    lftp webin2.ebi.ac.uk -u Webin-XXX
+    cd bge-wirenia-argentea
+    mput /proj/snic2022-6-208/INBOX/BGE_Wirenia-argentea/EBP_pr_123/files/pr_123/rawdata/pr_123_001/*.bam
     ```
 * Keep track of progress using FileZilla
-* Note: Done for HiFi, but ascp didn't work so I used lftp instead.
 
-### HiFi
+### HiFi submission
 #### Collecting metadata
-* The README file from the data delivery gave the tube id `FS42595739`, and via the ERGA tracking tool I deduced that the biosample should be `SAMEA114530807`, and the ToLID is `xoWirArge3`
-* I've asked NGI for help with the experiment metadata. Since it was a while since previous HiFi submissions, I wanted to check if the library construction protocol is still valid.
+* I looked at the delivery README for the HiFi dataset (on Uppmax) and extracted the Name (`FS42595739`). I looked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/), filtered on the organism, and saw that the Name was registered with biosample [SAMEA114530807](https://www.ebi.ac.uk/biosamples/samples/SAMEA114530807).
+* I copied the sample metadata (tube id, ToLID, BioSample id, species name) into the BGE-sheet of the metadata template.
+* NGI says that the experimental metadata is the same as previous HiFi datasets.
+* Created the tsv file [xoWirArge-hifi.tsv](./data/xoWirArge-hifi.tsv)
 
-#### Submit
-**To be done**
-* Copy a [submission.xml](./data/submission.xml) with hold date, from earlier submission
-* This is the first dataset for this species, so both study and experiment needs to be created.
+#### HiFi xml
+* I copied [submission.xml](./data/submission.xml) from BGE-Crayfish, using the same embargo date
+
 * Running the script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-hifi.tsv -p ERGA-BGE -o xoWirArge-HiFi
     ```
-* Copy all xml files to Uppmax:
-    ```
-    scp submission.xml xoWirArge-HiFi*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-Wirenia-argentea/
-    ```
-* Submit both study and experiment:
+    * The script wrongly adds `<SINGLE>NOMINAL_LENGTH</SINGLE>` in LIBRARY_LAYOUT. I changed the layout to `</SINGLE>`, but as with Laparocerus anagae I then get error upon submission.
+    * If I copy L. anagae xml file and change to the values of W. argentea, and then calculate checksums on both exp xml files, they differ.
+    * I changed the CNAG script so that it handles single vs paired layouts differently, and the resulting xml file could be submitted without errors.
+
+#### Programmatic submission HiFi
+* Submit both projects and experiment in one go, i.e:
     ```
     curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@xoWirArge-HiFi.study.xml" -F "EXPERIMENT=@xoWirArge-HiFi.exp.xml" -F "RUN=@xoWirArge-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
+
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-12-13T07:06:35.951Z" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX13464201" alias="exp_xoWirArge_HiFi_WGS_FS42595739_pr_123" status="PRIVATE"/>
+        <RUN accession="ERR14061198" alias="run_xoWirArge_HiFi_WGS_FS42595739_pr_123_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB83554" alias="erga-bge-xoWirArge-study-rawdata-2024-12-13" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP167144" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB83555" alias="erga-bge-xoWirArge3_primary-2024-12-13" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP167145" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA31041431" alias="SUBMISSION-13-12-2024-07:06:35:336"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
+
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
-### HiC
-#### Collecting metadata
+### HiC submission
+#### Collect metadata
 * I went to [BioSamples](https://www.ebi.ac.uk/biosamples/samples?text=Wirena+argentea) and extracted all samples for this species, where SCILIFELAB was the GAL. 
 * I then went to the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) and filtered on the species name, collecting `Tube or well id` fields.
 * I noticed that one of the GAL/sample collector id's seems to have a typo. 
@@ -74,8 +94,9 @@ Submission will be done via CNAG script and programmatic submission route using 
 * For the sample, I received the label `wargBGO23-4` (from an excel sheet via slack), and I'm unable to connect this to a biosample, specimen id or ToLID, so I've asked NGI for assistance.
     * Turns out that the samples for the material used haven't been registered in COPO (and hence does not exist in BioSamples). Only 3 samples are listed in the tracking tool, and SciLifeLab received 18 in total.
     * BGE has contacted sample provider, but no response yet. Once she uploads the updated Manifest, it will appear in the Tracking tool.
+* The HiC sequencing failed, and new library has been ordered. Since I don't know which samples to use, I will let the text above remain until new HiC dataset arrives.
 
-#### Submit Hi-C
+#### Create xml
 **To be done**
 
 * Running the script:
@@ -88,10 +109,8 @@ Submission will be done via CNAG script and programmatic submission route using 
     <STUDY_REF accession=""/>
     ```
 
-* Copy all xml files to Uppmax:
-    ```
-    scp submission.xml xoWirArge-HiC*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-Wirenia-argentea/
-    ```
+#### Submission
+**To be done**
 * Submit:
     ```
     curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@xoWirArge-HiC.exp.xml" -F "RUN=@xoWirArge-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
@@ -129,16 +148,13 @@ Submission will be done via CNAG script and programmatic submission route using 
     
     ```
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
-
-
 ### Umbrella project
-**To be done, add project number**
-
+* **TODO**
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ./script/get_umbrella_xml_ENA.py -s "Wirenia argentea" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 669229
+    ./script/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"
@@ -146,7 +162,7 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     * -a: the accession number of the raw reads project e.g. PRJEB76283
     * -x: NCBI taxonomy id e.g. 2750798
 
-* Copy `submission-umbrella.xml` from any of the previous BGE species, check that the hold date is as wanted. (**done**)
+* Copy `submission-umbrella.xml` from any of the previous BGE species, check that the hold date is as wanted.
 * Submit using curl:
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"

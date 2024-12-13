@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_xoWirArge_HiFi_WGS_FS42595739_pr_123_bam_1">
+		<EXPERIMENT_REF refname="exp_xoWirArge_HiFi_WGS_FS42595739_pr_123"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-wirenia-argentea/m84045_241029_173701_s2.hifi_reads.bc2042.bam" checksum_method="MD5" checksum="f3706306f8659fac0e9f644946082445" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

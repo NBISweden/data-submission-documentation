@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icLapAnag_HiFi_WGS_FS38819783_pr_136_bam_1">
+		<EXPERIMENT_REF refname="exp_icLapAnag_HiFi_WGS_FS38819783_pr_136"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="bge-laparocerus-anagae/m84045_241108_131607_s2.hifi_reads.bc2163.bam" checksum_method="MD5" checksum="fe1b61624ae4048def67f7ee2e1c0751" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_icLapAnag_HiFi_WGS_FS38819783_pr_136_bam_2">
+		<EXPERIMENT_REF refname="exp_icLapAnag_HiFi_WGS_FS38819783_pr_136"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="bge-laparocerus-anagae/m84045_241108_151519_s3.hifi_reads.bc2163.bam" checksum_method="MD5" checksum="c40af74e56d77ea863cad06441d9c1ca" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
