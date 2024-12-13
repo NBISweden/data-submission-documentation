@@ -44,6 +44,7 @@ Submission of raw reads for *Tetrastemma melanocephalum* to facilitate assembly 
 * Received accession number: `ERX12137345`, `ERR12764136`
 
 ### Submit Hi-C
+* Received the sample label `ERGA FAFA 7377 005` from NGI, and when looking at biosamples, there are 2 samples with this value as specimen id, SAMEA113595478 and SAMEA113595488. I looked at the ERGA tracking portal, and saw only one of them, `SAMEA113595488` with well id `FS42595037`, so this one will be used.
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)

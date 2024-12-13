@@ -19,8 +19,6 @@ Submission of raw reads for *Triaenophorus nodulosus* to facilitate assembly and
 ## Lessons learned
 For this particular species it was not possible to identify an NGI tube or well ID. The BioSample used for sequencing (SAMEA115098039) is not referenced with a tube or well ID in the [ERGA portal](https://genomes.cnag.cat/erga-stream/). Actually, it is not referenced at all. To proceed with the submission the NGI delivery folder name was used (`pr_111`).
 
-### Collect metadata
-* There were 18 BioSamples collected and registered for the species. The NGI tube register number was not possible to bridge (see above). After contact with NGI it was determined that the sample used ((SAMEA115098039) was identified as TolID `heTriNodu1`, corresponding to the specimen ID `ERGA AV 5534 02`. 
 
 ### Register study
 * Title, abstract, and keyword for the study was set according to ERGA recommendations.
@@ -28,6 +26,9 @@ For this particular species it was not possible to identify an NGI tube or well 
 * The study was registered via the browser, using NBIS DM broker account, received accession number: `PRJEB79894`
 
 ### Submit HiFi
+#### Collect metadata
+* There were 18 BioSamples collected and registered for the species. The NGI tube register number was not possible to bridge (see above). After contact with NGI it was determined that the sample used (SAMEA115098039) was identified as TolID `heTriNodu1`, corresponding to the specimen ID `ERGA AV 5534 02`. 
+
 * Information on experiment metadata was provided by NGI via Slack and entered into a [spreadsheet](./data/PRJEB79894-experiment.tsv).
 
 * Sequence file was uploaded from Rackham to the ENA, after exporting the ENA broker password, using the command line:
@@ -47,6 +48,11 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
 * Received accession numbers: `ERX13023779`,`ERR13654568`
 
 ### Submit Hi-C
+* The sample identifier received, `2 (ID in minigrip: TN2.1)` was not possible to connect to a biosample either via biosamples database or ERGA tracking portal.
+    * For HiFi we ended up using 'SAMEA115098039', after conferring with NGI, should we use the same for Hi-C?
+    * There is another biosample, 'SAMEA115098038', which also seems to be an origin sample, from which other samples have been derived.
+    * I asked NGI and we deduced that it should be `SAMEA115098038` for HiC since this one has 2's (specimen id is 'ERGA AV 5534 02' and ToLID is 'heTriNodu2')
+    * Since this biosample isn't in ERGA tracking portal (only the derived samples are), I don't have a 'tube or well id' but will put the specimen id instead.
 
 ### Submit RNAseq
 

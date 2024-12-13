@@ -59,11 +59,17 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
 
 ### Submit Hi-C
 
+* 4 samples were used, hence a virtual sample was needed:
+    * Biosamples: SAMEA114554682, SAMEA114554684, SAMEA114554685, SAMEA114554686
+    * Biosamples were deduced given the 'tube or well id's' received from UGC and looked up in the ERGA tracking portal
+    * [icHydHamy-HiC-virtual-sample.tsv](./data/icHydHamy-HiC-virtual-sample.tsv)
+    * Accession number received: ERS22139701
+    
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
 * Create [icHydHamu-RNAseq.tsv](./data/icHydHamu-RNAseq.tsv)
     * Note: the RNAsheet delivered by SNP&SEQ indicates 2 tube or well id's `FS55571879+FS55571880`. In erga tracking portal, these point to 2 different biosamples which in turn are derived from 2 different original samples: `FS55571879 -> SAMEA114554676 -> SAMEA114554658`, `FS55571880 -> SAMEA114554677 -> SAMEA114554659`. The ToLId's varies as well, what to do? On both of these it states that they are extra sequencing exemplars of specimen id `ERGA JB 4431 00001` (`SAMEA114554670`), should I use that one instead? It is ToLId icHydHamu1, tube or well id `FS55571873`. I've asked NGI coordinators (in dedicated #bge_ngi_metadata slack channel)
-    * I had to create a virtual sample, that refers to them both, and submit to ENA: [icHydHamu-virtual-sample.tsv](./data/icHydHamu-virtual-sample.tsv)
+    * I had to create a virtual sample, that refers to them both, and submit to ENA: [icHydHamu-RNA-virtual-sample.tsv](./data/icHydHamu-RNA-virtual-sample.tsv)
     * Accession number received: ERS21379198
 * Create [submission-noHold.xml](./data/submission-noHold.xml), without any hold date since study is public already
 * Run CNAG script
