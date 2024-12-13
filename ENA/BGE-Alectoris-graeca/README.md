@@ -15,7 +15,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ## Procedure overview and links to examples
 
 * [Metadata template](./data/BGE-Alectoris-graeca-metadata.xlsx)
-* [BGE metadata](./data/bAleGra1-BGE.tsv)
+* [BGE metadata](./data/bAleGra1-hifi.tsv)
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
@@ -23,23 +23,24 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Also, saving time as well, this time the sample info name in the NGI delivery README provided enough information to fairly easy (via ERGA tracking portal) identifying which of the 20 BioSamples should be used.
 
 ## Detailed step by step description
-### Collect metadata
+### Submission HiFi
+#### Collect metadata
 * [BioSample query](https://www.ebi.ac.uk/biosamples/samples?text=Alectoris+graeca) resulted in 11 ERGA-related samples
 * NGI README (in /proj/snic2022-6-208/INBOX/BGE_Alectoris_graeca/EBP_pr_106/files/pr_106/README) say Sample info name `FS42595433`, and UGC ID `pr_106_001`.
 * Searching in [ERGA tracking portal Samples](https://genomes.cnag.cat/erga-stream/samples/) with the name as `Tube or well id`, gave [SAMEA115117745](https://www.ebi.ac.uk/biosamples/samples/SAMEA115117745) as result
 * I checked BioSamples and it seems valid
 * This time I only filled in BGE-sheet and ENA_run tabs in metadata template, to save time
-* Once filled in, I copied the BGE-sheet into [bAleGra1-BGE.tsv](./data/bAleGra1-BGE.tsv)
+* Once filled in, I copied the BGE-sheet into [bAleGra1-hifi.tsv](./data/bAleGra1-hifi.tsv)
 
-### Create xml
+#### Create xml
 * A [submission.xml](./data/submission.xml) needs to be created manually, which includes the action (ADD) and release date (HOLD). A release date of 2026-03-07 is set.
 * Command to create submission xml:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f bAleGra1-BGE.tsv -p ERGA-BGE -o bAleGra1-hifi
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f bAleGra1-hifi.tsv -p ERGA-BGE -o bAleGra1-hifi
     ```
 * Checked the output files, bAleGra1-hifi.study.xml, bAleGra1-hifi.exp.xml and bAleGra1-hifi.runs.xml, looked okay
 
-### Submit HiFi
+#### Submit HiFi
 * Created a subdirectory at ENA upload area, `bge-alectoris-graeca` using FileZilla
 * At Uppmax:
     ```
@@ -83,11 +84,49 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
 ### Submit Hi-C
+#### Metadata & XML
 * This one is a bit special since 2 libraries were created, one from tissue and one from blood.
 * The sample metadata received from NGI had the 'tube or well id' so it was a matter of looking them up in ERGA tracking portal in order to obtain the biosamples:
     * SAMEA115117743 (blood, lib1, FS42595444)
     * SAMEA115117741 (tissue, lib2, FS42594031)
 * Note to self, need to make sure that these comes out correctly from script, but since there are 2 biosamples it *should* be ok.
+* I created [bAleGra-hic.tsv](./data/bAleGra-hic.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f bAleGra-hic.tsv -p ERGA-BGE -o bAleGra-hic
+    ```
+* Valdiate xml files:
+    * Ignore the study.xml, and instead update exp.xml to refer to the accession number of previously registered study:
+        ```
+        <STUDY_REF accession="PRJEB79726"/>
+        ```
+    * The exp.xml contains 2 experiments, both of them had an additional row with <PAIRED/> that I removed (i.e. script not really working)
+    * I added ', blood' and ', tissue' in the titles, as I think it will make it easier to separate the 2
+    * I also added 'Illumina' to the library names (the other datatypes have platform in their names)
+* Conclusion: CNAG script would need some update in order to work for HiC data without manual edits
+
+#### Submit HiC
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@bAleGra-hic.exp.xml" -F "RUN=@bAleGra-hic.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"   
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-12-13T12:55:34.859Z" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX13464817" alias="exp_bAleGra_Hi-C_FS42595444_HC010-1B1A-blood" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX13464818" alias="exp_bAleGra_Hi-C_FS42594031_HC010-2A1A-tissue" status="PRIVATE"/>
+        <RUN accession="ERR14061695" alias="run_bAleGra_Hi-C_FS42595444_HC010-1B1A-blood_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR14061696" alias="run_bAleGra_Hi-C_FS42594031_HC010-2A1A-tissue_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA31041771" alias="SUBMISSION-13-12-2024-12:55:34:089"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
