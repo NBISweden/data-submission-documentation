@@ -1,0 +1,12 @@
+PS_chr01        01      Linear-Chromosome
+PS_chr02        02      Linear-Chromosome
+PS_chr03        03      Linear-Chromosome
+PS_chr04        04      Linear-Chromosome
+PS_chr05        05      Linear-Chromosome
+PS_chr06        06      Linear-Chromosome
+PS_chr07        07      Linear-Chromosome
+PS_chr08        08      Linear-Chromosome
+PS_chr09        09      Linear-Chromosome
+PS_chr10        10      Linear-Chromosome
+PS_chr11        11      Linear-Chromosome
+PS_chr12        12      Linear-Chromosome
