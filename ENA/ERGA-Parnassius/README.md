@@ -250,11 +250,102 @@ After contact with the bioinformatician who produced the .gff the overlappping i
 ```
 java -jar webin-cli-6.7.1.jar -ascp -context=genome -manifest=PARMNEM_manifest.txt -userName=[username] -password=[password] -submit
 ```
-# 8. Post-submission mop-up
 
-After submission of the assembly it was considered complete. Accession numbers were gathered and sent to the PI via email, and the assembly team was informed.
+# 7. Mitochondrial assembly submission to ENA
 
-# 9. Lessons learned, plus take-aways
+The mito assembly was finished later than the nuclear assembly, and had to be submitted separately.
+
+- The correct mito assembly was identified by the Bioinformatician with path to Rackham.
+
+- A zipped .embl file was prepared using the correct .gff and the mito fasta file. 
+
+- As required, a mito chromosome list was prepared as a .txt file containing tab separated values:
+
+  ```ptg000351l_1_rc_rotated	MIT	linear-chromosome	Mitochondrion```
+
+- A new project was registered at ENA (PRJEB76267) for the mito assembly described as:
+
+  - Name: mito-ParMnem1
+  - Title: Parnassius mnemosyne mitochondrial assembly
+  - Description: This project provides the mitochondrial assembly data for Parnassius mnemosyne. 
+
+- A manifest file was prepared:
+
+  ```
+  STUDY           PRJEB76267
+  SAMPLE          SAMEA13166629
+  ASSEMBLYNAME    Parnassius_mnemosyne_mito_2024_06
+  ASSEMBLY_TYPE   isolate
+  COVERAGE        30
+  PROGRAM         MitoHiFi, MitoFinder
+  PLATFORM        PacBio HiFi, Illumina Hi-C
+  MOLECULETYPE    genomic DNA
+  DESCRIPTION     The mitochondrial genome was recovered from the primary assembly after haplotig removal using MitoHiFi [10] v2.2. MtDNA was annotated using MitoFinder [11] v1.4.1 and reoriented to start at tRNA-Met to match Parnassius apollo (Acession: NC_024727.1)
+  RUN_REF        	ERR12146337, ERR12148427, ERR12148429
+  FASTA	      	pmnemosyne_mtdna.fasta.gz
+  CHROMOSOME_LIST mito-chromosome_list.txt.gz
+
+- Assembly was submitted to ENA using Webin-CLI with command line:
+
+```
+java -jar webin-cli-7.1.1.jar -ascp -context=genome -manifest=Parmnem_mito_manifest.txt -userName=Webin-XXXXX -password=[password] -validate
+```
+
+- An umbrella was submitted via xml...
+
+```
+<PROJECT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <PROJECT center_name="" alias="all-PARMNEM">
+        <TITLE>Parnassius mnemosyne umbrella project</TITLE>
+        <DESCRIPTION>This project connects the sequenced raw data and genome assembly of Parnassius mnemosyne, with its corresponding mitochondrial assembly</DESCRIPTION>
+        <UMBRELLA_PROJECT/>
+        <RELATED_PROJECTS>
+          <RELATED_PROJECT>
+            <CHILD_PROJECT accession="PRJEB67749"/>
+          </RELATED_PROJECT>
+          <RELATED_PROJECT>
+            <CHILD_PROJECT accession="PRJEB76267"/>
+          </RELATED_PROJECT>
+        </RELATED_PROJECTS>
+    </PROJECT>
+</PROJECT_SET>
+```
+- ... togehter with a submission xml with a defined release date: 
+
+```
+<SUBMISSION>
+   <ACTIONS>
+      <ACTION>
+         <ADD/>
+      </ACTION>
+      <ACTION>
+         <HOLD HoldUntilDate="2024-06-13"/>
+      </ACTION>
+   </ACTIONS>
+</SUBMISSION>
+```
+
+- A receipt for the submission was printed:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2024-06-03T15:16:23.420+01:00" submissionFile="submission.xml" success="true">
+     <PROJECT accession="PRJEB76269" alias="all-PARMNEM" status="PRIVATE" holdUntilDate="2024-06-13+01:00"/>
+     <SUBMISSION accession="ERA30577384" alias="SUBMISSION-03-06-2024-15:16:23:180"/>
+     <MESSAGES>
+          <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+     <ACTIONS>HOLD</ACTIONS>
+</RECEIPT>
+```                           
+
+# 9. Post-submission mop-up
+
+After submission of the assemblies the project was considered complete. Accession numbers were gathered and sent to the PI via email, and the assembly team was informed.
+
+# 10. Lessons learned, plus take-aways
 
 The first take-away lesson was that the responsibility for COPO metadata quality and submission is on the PI and no-one else. The DM-staff will only accept the COPO-submitted metadata *as is*. Any updates should be made by the PI, not the DM staff. It seems as if the content of the manifest is updated, but the manifest itself is of a more recent version than the already submitted one, COPO does not produce an update of the present record, but duplicates it. If this happens COPO needs to be contacted to manually remove the auto-generated record at ENA.
 
