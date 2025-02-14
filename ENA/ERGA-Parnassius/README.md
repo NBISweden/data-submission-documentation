@@ -251,7 +251,7 @@ After contact with the bioinformatician who produced the .gff the overlappping i
 java -jar webin-cli-6.7.1.jar -ascp -context=genome -manifest=PARMNEM_manifest.txt -userName=[username] -password=[password] -submit
 ```
 
-# 7. Mitochondrial assembly submission to ENA
+# 8. Mitochondrial assembly submission to ENA
 
 The mito assembly was finished later than the nuclear assembly, and had to be submitted separately.
 
