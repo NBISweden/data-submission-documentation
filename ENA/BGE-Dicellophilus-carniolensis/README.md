@@ -83,6 +83,15 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     
 ### Submit Hi-C
 * Recieved sample label `FS42595418` from NGI, looking it up in the ERGA tracking portal, it leads to biosample `SAMEA115117727`, from which I collected the ToLID.
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    cat sample_TAGACCAA+TCACCTTG_part*_R1.fastq.gz > ../to_ENA/dicCarn_sample_TAGACCAA+TCACCTTG_R1.fastq.gz
+    cat sample_TAGACCAA+TCACCTTG_part*_R2.fastq.gz > ../to_ENA/dicCarn_sample_TAGACCAA+TCACCTTG_R2.fastq.gz
+    cd ../to_ENA
+    lftp webin2.ebi.ac.uk -u Webin-39907
+    mput dicCarn*.fastq.gz
+    ```
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)

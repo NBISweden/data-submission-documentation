@@ -95,6 +95,15 @@ Submission will be done via CNAG script and programmatic submission route using 
     * Turns out that the samples for the material used haven't been registered in COPO (and hence does not exist in BioSamples). Only 3 samples are listed in the tracking tool, and SciLifeLab received 18 in total.
     * BGE has contacted sample provider, but no response yet. Once she uploads the updated Manifest, it will appear in the Tracking tool.
 * The HiC sequencing failed, and new library has been ordered. Since I don't know which samples to use, I will let the text above remain until new HiC dataset arrives.
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    cat sample_TCTCAGCA+CATTGTAG_part*_R1.fastq.gz > ../to_ENA/wirArge_sample_TCTCAGCA+CATTGTAG_R1.fastq.gz
+    cat sample_TCTCAGCA+CATTGTAG_part*_R2.fastq.gz > ../to_ENA/wirArge_sample_TCTCAGCA+CATTGTAG_R2.fastq.gz
+    cd ../to_ENA
+    lftp webin2.ebi.ac.uk -u Webin-39907
+    mput wirArge*.fastq.gz
+    ```
 
 #### Create xml
 **To be done**

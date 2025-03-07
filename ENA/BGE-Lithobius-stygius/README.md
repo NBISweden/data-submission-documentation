@@ -81,6 +81,15 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit HiC
 * For the sample data, `ERGA EB 5301 05` was given from NGI. I went to Biosample, and found 2 possible samples, SAMEA115117737 and SAMEA115117716
 * In the ERGA tracking portal, only the first was found (which is derived/same as the second). Hence, SAMEA115117737 with tube id FS42595408, was used.
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    cat sample_GCAGGTTC+TTGCTTCT_part*_R1.fastq.gz > ../to_ENA/litStyg_sample_GCAGGTTC+TTGCTTCT_R1.fastq.gz
+    cat sample_GCAGGTTC+TTGCTTCT_part*_R2.fastq.gz > ../to_ENA/litStyg_sample_GCAGGTTC+TTGCTTCT_R2.fastq.gz
+    cd ../to_ENA
+    lftp webin2.ebi.ac.uk -u Webin-39907
+    mput litStyg*.fastq.gz
+    ```
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)

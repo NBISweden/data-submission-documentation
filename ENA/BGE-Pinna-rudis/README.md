@@ -58,6 +58,15 @@ Submission of raw reads for *Pinna rudis* to facilitate assembly and annotation 
 
 ### Submit Hi-C
 * Since there are some sample mislabelling going on with this species, I decided to use the origin, SAMEA112748815.
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    cat sample_TCAGCATC+CGCTCCTT_part*_R1.fastq.gz > ../to_ENA/pinRudi_sample_TCAGCATC+CGCTCCTT_R1.fastq.gz
+    cat sample_TCAGCATC+CGCTCCTT_part*_R2.fastq.gz > ../to_ENA/pinRudi_sample_TCAGCATC+CGCTCCTT_R2.fastq.gz
+    cd ../to_ENA
+    lftp webin2.ebi.ac.uk -u Webin-39907
+    mput pinRudi*.fastq.gz
+    ```
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)

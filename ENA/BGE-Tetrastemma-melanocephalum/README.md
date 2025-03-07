@@ -45,6 +45,18 @@ Submission of raw reads for *Tetrastemma melanocephalum* to facilitate assembly 
 
 ### Submit Hi-C
 * Received the sample label `ERGA FAFA 7377 005` from NGI, and when looking at biosamples, there are 2 samples with this value as specimen id, SAMEA113595478 and SAMEA113595488. I looked at the ERGA tracking portal, and saw only one of them, `SAMEA113595488` with well id `FS42595037`, so this one will be used.
+* The data files in `/proj/snic2022-6-208/INBOX/BGE_HiC_firstBatch/Tetrastemma-melanocephalum/` are split into 4 parts and needs to be concatenated before data transfer:
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    mkdir to_ENA
+    cat sample_AGTCGCGA+TTGGTCTA_part*_R1.fastq.gz > to_ENA/tetMela_sample_AGTCGCGA+TTGGTCTA_R1.fastq.gz
+    cat sample_AGTCGCGA+TTGGTCTA_part*_R2.fastq.gz > to_ENA/tetMela_sample_AGTCGCGA+TTGGTCTA_R2.fastq.gz
+    cd to_ENA
+    lftp webin2.ebi.ac.uk -u Webin-39907
+    mput tetMela_sample_AGTCGCGA+TTGGTCTA_*.fastq.gz
+    ```
+    * **Note:** ascp didn't work, received `Session Stop  (Error: Client unable to connect to server (check UDP port and firewall))`, hence `lftp`
+
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)

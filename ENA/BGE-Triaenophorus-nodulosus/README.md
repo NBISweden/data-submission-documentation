@@ -54,6 +54,16 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
     * I asked NGI and we deduced that it should be `SAMEA115098038` for HiC since this one has 2's (specimen id is 'ERGA AV 5534 02' and ToLID is 'heTriNodu2')
     * Since this biosample isn't in ERGA tracking portal (only the derived samples are), I don't have a 'tube or well id' but will put the specimen id instead.
 
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    cat sample_ATGTCAAG+GAGCTCTA_part*_R1.fastq.gz > ../to_ENA/triNodu_sample_ATGTCAAG+GAGCTCTA_R1.fastq.gz
+    cat sample_ATGTCAAG+GAGCTCTA_part*_R2.fastq.gz > ../to_ENA/triNodu_sample_ATGTCAAG+GAGCTCTA_R2.fastq.gz
+    cd ../to_ENA
+    lftp webin2.ebi.ac.uk -u Webin-39907
+    mput triNodu*.fastq.gz
+    ```
+
 ### Submit RNAseq
 
 ### Submit assembly
