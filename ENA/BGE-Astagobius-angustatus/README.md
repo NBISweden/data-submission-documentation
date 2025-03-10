@@ -129,6 +129,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     * *"BGE wants us to upload the assembly for Astagobius, which I guess means that they want the reads uploaded as well. However, it should be marked as draft! This is what Christian writes: "Could you please upload the draft genomes and make them public? Additionally, it would be helpful to include a label in the BioProject description indicating the draft nature of these genomes, rather than referring to them as BGE or using other terminology."*
     * In practice I'm guessing that we remove the BGE label/keyword on study level and instead add 'draft', but not sure about the description/abstract part.
         * Done for both the so far private assembly study (also included draft in title) as well as for the public raw data study
+* Status note 2025-03-07: work is still done on the assembly, but has lower priority than the more promising species. The bioinformatician will let me know when to submit the assembly and if HiC also should be submitted.
 
 ### Register umbrella projekt
 
