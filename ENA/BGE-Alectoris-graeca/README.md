@@ -40,6 +40,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Checked the output files, bAleGra1-hifi.study.xml, bAleGra1-hifi.exp.xml and bAleGra1-hifi.runs.xml, looked okay
 
+* Update: as of 2025-03-07 the project with raw data, PRJEB79726, is public
+
 #### Submit HiFi
 * Created a subdirectory at ENA upload area, `bge-alectoris-graeca` using FileZilla
 * At Uppmax:
@@ -167,8 +169,6 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 
 * Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
-
-### Submit Hi-C
 
 ### Submit assembly
 
