@@ -31,6 +31,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     * Answer from NGI is to use [SAMEA112878228](https://www.ebi.ac.uk/biosamples/samples/SAMEA112878228)
 * Looking at the HiC delivery, they only have 8 'internal' samples, no indication on which BioSample might have been used. Need to ask NGI/SNP&SEQ.
 * There are still some missing metadata for the HiC, but HiFi is complete.
+* New HiFi data was delivered during December (2024), the sample(s) are the same as previously (ERGA_DS_328X_04_(01+02)), but I have since learned that if samples are 'pooled', a virtual sample needs to be created (see also [BGE-Hydroglyphus-hamulatus](../BGE-Hydroglyphus-hamulatus/README.md#submit-rna-seq)). Question is if it is better to stick to the previous, so that at least it is clear that both HiFi datasets comes from the same material? I asked a colleague for opinion, and then decided to continue the 'wrong/old' way for this dataset. Any new types of datasets, and all new speciesw wil have virtual samples registered when needed.
 
 ### Upload sequences to ENA
 
@@ -51,6 +52,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * In the end I decided to remove the & ending each line, in order to run sequentially, and also divided HiC into one script and HiFi into another, and just run those in background (i.e. using &). 
 * Keep track of upload success using FileZilla.
+* For the second round of HiFi data, only lftp was possible from Rackham.
 
 ### Create xml
 
@@ -59,7 +61,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
     * **Note:** The projects should be released to public as soon as there is at least one dataset registered within it, in order to be able to show progress for milestones within the BGE project. Hence, while not ideal, we will use an embargo of the raw data project only until the HiFi is uploaded. Thus, the HiFi and RNA-seq datasets will become public directly, since we will receive this data at a later stage (well, we do have HiC for this species, but not the metadata, and a deadline of July 15 is approaching fast).The assembly project however, will still be under embargo until an assembly has been registered.
 
-#### HiFi xml
+#### HiFi xml 1st
 * I started doing some [Tests](#tests) of the CNAG script using this species. Since I didn't have all the metadata, I did some (programmatic) submissions of other species before returning to this one. Hence, the original CNAG script has been edited several times. What remained, when returning back to this species, was the following:
 
     * Project attributes (Keyword:ERGA-BGE) are not registered if written in the xml as original script. I had to edit the script so that it is written on 2 rows insead of compact form
@@ -67,8 +69,37 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 * I've put  my updates to CNAG scripts in a forked repository [YvonneKallberg/ERGA-submission](https://github.com/YvonneKallberg/ERGA-submission), along with the notes I've made and the original xml file(s) (though the original will not be updated when upstream/main changes). This version works for the [qmAusTorr-HiFi-BGE.tsv](./data/qmAusTorr-HiFi-BGE.tsv) file, but might not work for the Hi-C data (for which I haven't received the full metadata yet).
     ```
-    ../../.././ERGA-submission/get_submission_xmls/get_ENA_xml_files.py/get_ENA_xml_files.py  -f qmAusTorr-HiFi-BGE.tsv -p ERGA-BGE -o qmAusTorr-HiFi
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qmAusTorr-HiFi-BGE.tsv -p ERGA-BGE -o qmAusTorr-HiFi
     ```
+#### HiFi xml 2nd
+* [qmAusTorr-HiFi-2.tsv](./data/qmAusTorr-HiFi-2.tsv)
+```
+../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qmAusTorr-HiFi-2.tsv -p ERGA-BGE -o qmAusTorr-HiFi-2
+```
+* Delete 3 extra experiments in qmAusTorr-HiFi-2.exp.xml, script isn't working correctly
+* Change study ref to accession
+
+* Submit:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml"  -F "EXPERIMENT=@qmAusTorr-HiFi-2.exp.xml" -F "RUN=@qmAusTorr-HiFi-2.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2024-12-19T16:14:00.959Z" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX13491281" alias="exp_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001" status="PRIVATE"/>
+        <RUN accession="ERR14088907" alias="run_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR14088908" alias="run_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001_bam_2" status="PRIVATE"/>
+        <RUN accession="ERR14088909" alias="run_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001_bam_3" status="PRIVATE"/>
+        <RUN accession="ERR14088910" alias="run_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001_bam_4" status="PRIVATE"/>
+        <SUBMISSION accession="ERA31047484" alias="SUBMISSION-19-12-2024-16:14:00:309"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers to BGE species list
+
 #### Hi-C xml
 
 * Figure out what needs to be done in order to create HiC and RNA-seq xml's so that it they correctly are added to the existing study. 
@@ -107,7 +138,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     * [qmAusTorr-HiC.runs.xml](./data/qmAusTorr-HiC.runs.xml)
 * `qmAusTorr-HiC.exp.xml` was manually updated, replacing 8 occurences of `<STUDY_REF refname="erga-bge-qmAusTorr-study-rawdata-2024-09-24"/>` with `<STUDY_REF accession="PRJEB77106"/>`
 
-### Programmatic submission HiFi
+### Programmatic submission HiFi 1st
 
 * Copy all xml files to Uppmax:
     ```

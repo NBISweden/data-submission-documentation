@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001_bam_1">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-austropotamobius-torrentium/m84045_241108_111648_s1.hifi_reads.bc2164.bam" checksum_method="MD5" checksum="a67e0105a0247b43861752e13b759c83" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001_bam_2">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-austropotamobius-torrentium/m84045_241112_143045_s1.hifi_reads.bc2164.bam" checksum_method="MD5" checksum="aba42920281e1d490b8f402df59bd5de" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001_bam_3">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-austropotamobius-torrentium/m84045_241112_162951_s2.hifi_reads.bc2164.bam" checksum_method="MD5" checksum="5932cb890e0a2cf1c75903cff4f314a9" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001_bam_4">
+		<EXPERIMENT_REF refname="exp_qmAusTorr_HiFi_WGS_FS42595242_FS42595243_pr_047d_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="/bge-austropotamobius-torrentium/m84045_241112_182909_s3.hifi_reads.bc2164.bam" checksum_method="MD5" checksum="898710c7e75e6bd4db0abfb73a800317" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
