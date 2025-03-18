@@ -1,0 +1,13 @@
+STUDY	ERP161594
+SAMPLE	ERS20520254
+ASSEMBLYNAME	Pinsy01
+ASSEMBLY_TYPE	clone
+COVERAGE	30
+PROGRAM	HiFiasm version 0.12-r304
+PLATFORM	PacBio Sequel II
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	We used HiFiasm version 0.12-r304 for a pure HiFi assembly, rendering an almost fully diploid assembly. Haplotig purging was done using purge_dups version 1.2.3, complemented with in-house purging using 50X Illumina reads from diploid and haploid tissues. Hi-C scaffolding was performed using Salsa2 version 2.2. The Hi-C contact map was visualised with juicer_tools version 1.14 for two rounds of manual curation for a final haploid representation of the genome.
+RUN_REF ERR13347685, ERR13347780, ERR13348231, ERR13348232, ERR13347789, ERR13348233, ERR13348518, ERR13348516, ERR13348514, ERR13348513, ERR13348515, ERR13348519, ERR13348512, ERR13348511, ERR13348517, ERR13348558, ERR13348578, ERR13348551, ERR13348552, ERR13348559, ERR13348553, ERR13348557, ERR13348579, ERR13348556, ERR13348554, ERR13348555, ERR13348580, ERR13507009, ERR13474182, ERR13464072, ERR13464055, ERR13465827
+FLATFILE	ERP161594-PSYLV.embl.gz
+CHROMOSOME_LIST	UPSC-0230.ChromosomeList.txt.gz
