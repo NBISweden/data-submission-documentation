@@ -31,6 +31,16 @@ After verificaton of submitted raw data, an assembly manifest file was created f
 
 All manifests and sample metadata files are available in the subfolders for each species.
 
+The following assembly accession numbers were received:
+
+| ASSEMBLY_NAME | ASSEMBLY_ACC | STUDY_ID | SAMPLE_ID | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC |
+| ------------- | ------------ | -------- | --------- | ---------- | ------------ | -------------- |
+| iyAntPlag1 | GCA_963995485 | PRJEB72356 | ERS18361400 | CAXEFL010000001-CAXEFL010000295 |  | 
+| iyAntQuad1 | GCA_963995475 | PRJEB72355 | ERS18418632 | CAXEFK010000001-CAXEFK010000039 |  | 
+| iyAntRet1  | GCA_963995495 | PRJEB72357 | ERS18426632 | CAXEFM010000001-CAXEFM010001422 |  | 
+
+All three projects were released to public 2025-02-05, upon request from PI.
+
 ## Lessons learned
 For *Anthophora plagiata*, the Nanopore raw data (single fastq-file, 39 Gb) initially failed ENA validation with an error due to the fastq header being longer than 256 letters (351):
 
