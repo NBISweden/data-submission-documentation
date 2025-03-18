@@ -79,9 +79,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
 ### Submit HiC
+#### Preparations
 * For the sample data, `ERGA EB 5301 05` was given from NGI. I went to Biosample, and found 2 possible samples, SAMEA115117737 and SAMEA115117716
 * In the ERGA tracking portal, only the first was found (which is derived/same as the second). Hence, SAMEA115117737 with tube id FS42595408, was used.
-* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is example of how to):
     ```
     interactive -t 08:00:00 -A uppmax2025-2-58
     cat sample_GCAGGTTC+TTGCTTCT_part*_R1.fastq.gz > ../to_ENA/litStyg_sample_GCAGGTTC+TTGCTTCT_R1.fastq.gz
@@ -90,6 +91,44 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     lftp webin2.ebi.ac.uk -u Webin-39907
     mput litStyg*.fastq.gz
     ```
+* For this species we have a second round of HiC, I transferred all of them in one go (`mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species)
+    * litStyg_XL-4185-HC011-2A1A_S79_L008_R1_001.fastq.gz
+    * litStyg_XL-4185-HC011-2A1A_S79_L008_R2_001.fastq.gz
+* We received another sample reference for this HiC
+
+#### XML
+* I created [qcLitStyg-HiC.tsv](./data/qcLitStyg-HiC.tsv) containing both 1st and 2nd round of HiC.
+* I need to make sure that they appear in separate experiments.
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qcLitStyg-HiC.tsv -p ERGA-BGE -o qcLitStyg-HiC
+    ```
+* Update qcLitStyg-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB76283"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is already public, so submission.xml without hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@qcLitStyg-HiC.exp.xml" -F "RUN=@qcLitStyg-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-03-18T11:52:20.435Z" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX14155832" alias="exp_qcLitStyg_Hi-C_FS42595408_HC011_1A1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14155833" alias="exp_qcLitStyg_Hi-C_FS42595409_HC011-2A1A" status="PRIVATE"/>
+        <RUN accession="ERR14751971" alias="run_qcLitStyg_Hi-C_FS42595408_HC011_1A1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR14751972" alias="run_qcLitStyg_Hi-C_FS42595409_HC011-2A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA31210463" alias="SUBMISSION-18-03-2025-11:52:18:172"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
