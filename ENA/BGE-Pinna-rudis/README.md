@@ -57,8 +57,9 @@ Submission of raw reads for *Pinna rudis* to facilitate assembly and annotation 
 * Added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
 ### Submit Hi-C
+#### Preparations
 * Since there are some sample mislabelling going on with this species, I decided to use the origin, SAMEA112748815.
-* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is example of how to):
     ```
     interactive -t 08:00:00 -A uppmax2025-2-58
     cat sample_TCAGCATC+CGCTCCTT_part*_R1.fastq.gz > ../to_ENA/pinRudi_sample_TCAGCATC+CGCTCCTT_R1.fastq.gz
@@ -67,6 +68,43 @@ Submission of raw reads for *Pinna rudis* to facilitate assembly and annotation 
     lftp webin2.ebi.ac.uk -u Webin-39907
     mput pinRudi*.fastq.gz
     ```
+* For this species we have a second round of HiC, I transferred all of them in one go (`mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species)
+    * pinRudi_XL-4185-HC007-4E1A_S78_L008_R1_001.fastq.gz
+    * pinRudi_XL-4185-HC007-4E1A_S78_L008_R2_001.fastq.gz
+
+#### XML
+* I created [xbPinRudi1-HiC.tsv](./data/xbPinRudi1-HiC.tsv) containing both 1st and 2nd round of HiC.
+* I need to make sure that they appear in separate experiments.
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xbPinRudi1-HiC.tsv -p ERGA-BGE -o xbPinRudi1-HiC
+    ```
+* Update xbPinRudi1-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB75035"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is already public, so submission.xml without hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@xbPinRudi1-HiC.exp.xml" -F "RUN=@xbPinRudi1-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-03-18T10:23:48.859Z" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14154828" alias="exp_xbPinRudi_Hi-C_ERGA_JdC_1421_002_HC007_4D1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14154829" alias="exp_xbPinRudi_Hi-C_ERGA_JdC_1421_002_HC007-4E1A" status="PRIVATE"/>
+        <RUN accession="ERR14750967" alias="run_xbPinRudi_Hi-C_ERGA_JdC_1421_002_HC007_4D1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR14750968" alias="run_xbPinRudi_Hi-C_ERGA_JdC_1421_002_HC007-4E1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA31210442" alias="SUBMISSION-18-03-2025-10:23:48:001"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
