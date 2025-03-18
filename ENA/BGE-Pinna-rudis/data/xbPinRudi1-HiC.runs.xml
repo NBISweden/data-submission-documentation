@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_xbPinRudi_Hi-C_ERGA_JdC_1421_002_HC007_4D1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_xbPinRudi_Hi-C_ERGA_JdC_1421_002_HC007_4D1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="pinRudi_sample_TCAGCATC+CGCTCCTT_R1.fastq.gz" checksum_method="MD5" checksum="e8f7390f904ff1d2cc9b52476c62aa2e" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="pinRudi_sample_TCAGCATC+CGCTCCTT_R2.fastq.gz" checksum_method="MD5" checksum="e2e8dc63f57a8f7b178cef72f782d194" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_xbPinRudi_Hi-C_ERGA_JdC_1421_002_HC007-4E1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_xbPinRudi_Hi-C_ERGA_JdC_1421_002_HC007-4E1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="pinRudi_XL-4185-HC007-4E1A_S78_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="458b56efb444ea0cc1c7224502e0f302" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="pinRudi_XL-4185-HC007-4E1A_S78_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="3ca5c8b763a13a6ae1ba825547d5ad78" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

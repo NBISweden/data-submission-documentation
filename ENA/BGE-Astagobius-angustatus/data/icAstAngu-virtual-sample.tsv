@@ -1,0 +1,3 @@
+Checklist	ERC000011	ENA default sample checklist					
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)	composed of
+1457099	Astagobius angustatus	icAstAngu_HiC_pool	icAstAngu HiC pool	This sample is a HiC pool of multiple samples. It is composed of samples SAMEA113399598 and SAMEA113399599	2022-09-09	Slovenia	SAMEA113399598, SAMEA113399599
