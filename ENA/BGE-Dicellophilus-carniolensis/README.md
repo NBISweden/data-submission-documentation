@@ -94,8 +94,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     mput dicCarn*.fastq.gz
     ```
 #### XML
-* I created [qcDicCarn-HiC.tsv](./data/qcDicCarn-HiC.tsv) containing both 1st and 2nd round of HiC.
-* I need to make sure that they appear in separate experiments.
+* I created [qcDicCarn-HiC.tsv](./data/qcDicCarn-HiC.tsv).
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qcDicCarn-HiC.tsv -p ERGA-BGE -o qcDicCarn-HiC
