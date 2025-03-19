@@ -54,8 +54,7 @@ Submission of raw reads for *Siphonaria pectinata* to facilitate assembly and an
     * sipPect_XL-4185-HC007-2J1A_S77_L008_R2_001.fastq.gz
 
 #### XML
-* I created [xgSipPect-HiC.tsv](./data/xgSipPect-HiC.tsv) containing both 1st and 2nd round of HiC.
-* I need to make sure that they appear in separate experiments.
+* I created [xgSipPect-HiC.tsv](./data/xgSipPect-HiC.tsv).
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xgSipPect-HiC.tsv -p ERGA-BGE -o xgSipPect-HiC
