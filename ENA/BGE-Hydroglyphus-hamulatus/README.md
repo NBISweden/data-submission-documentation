@@ -76,8 +76,7 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
     mput hydHamu*.fastq.gz
     ```
 #### XML
-* I created [icHydHamu-HiC.tsv](./data/icHydHamu-HiC.tsv) containing both 1st and 2nd round of HiC.
-* I need to make sure that they appear in separate experiments.
+* I created [icHydHamu-HiC.tsv](./data/icHydHamu-HiC.tsv).
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icHydHamu-HiC.tsv -p ERGA-BGE -o icHydHamu-HiC
