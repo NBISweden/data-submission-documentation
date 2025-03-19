@@ -59,10 +59,12 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
 
 ### Submit Hi-C
 
+#### Preparations
+
 * 4 samples were used, hence a virtual sample was needed:
     * Biosamples: SAMEA114554682, SAMEA114554684, SAMEA114554685, SAMEA114554686
     * Biosamples were deduced given the 'tube or well id's' received from UGC and looked up in the ERGA tracking portal
-    * [icHydHamy-HiC-virtual-sample.tsv](./data/icHydHamy-HiC-virtual-sample.tsv)
+    * [icHydHamu-HiC-virtual-sample.tsv](./data/icHydHamu-HiC-virtual-sample.tsv)
     * Accession number received: ERS22139701
 * First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
     ```
@@ -73,6 +75,37 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
     lftp webin2.ebi.ac.uk -u Webin-39907
     mput hydHamu*.fastq.gz
     ```
+#### XML
+* I created [icHydHamu-HiC.tsv](./data/icHydHamu-HiC.tsv) containing both 1st and 2nd round of HiC.
+* I need to make sure that they appear in separate experiments.
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icHydHamu-HiC.tsv -p ERGA-BGE -o icHydHamu-HiC
+    ```
+* Update icHydHamu-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB76972"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is already public, so submission-noHold.xml without hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@icHydHamu-HiC.exp.xml" -F "RUN=@icHydHamu-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-03-19T10:25:55.090Z" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX14162757" alias="exp_icHydHamu_Hi-C_FS55571885_FS55571887-89_HC009-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR14758863" alias="run_icHydHamu_Hi-C_FS55571885_FS55571887-89_HC009-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA31211438" alias="SUBMISSION-19-03-2025-10:25:53:396"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
