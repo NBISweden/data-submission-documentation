@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_kaClaLepa_HiFi_WGS_FS42549325_pr_168_bam_1">
+		<EXPERIMENT_REF refname="exp_kaClaLepa_HiFi_WGS_FS42549325_pr_168"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="kaClaLepa_m84045_250225_172119_s3.hifi_reads.bc2046.bam" checksum_method="MD5" checksum="50caf68b1f937d32c00ff926a61e3e2f" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
