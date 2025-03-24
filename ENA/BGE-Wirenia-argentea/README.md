@@ -96,7 +96,7 @@ Submission will be done via CNAG script and programmatic submission route using 
     * BGE has contacted sample provider, but no response yet. Once she uploads the updated Manifest, it will appear in the Tracking tool.
 * Update: Now we have 17 samples in total in the Tracking tool, and label `wargBGO23-4` is connected to BioSample `SAMEA117757069` will be used for first round of HiC, while `SAMEA117757068`	`wargBGO23-5` will be used for 2nd round of HiC
 * The HiC sequencing failed, and new library has been ordered. Since I don't know which samples to use, I will let the text above remain until new HiC dataset arrives.
-* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is example of how to):
     ```
     interactive -t 08:00:00 -A uppmax2025-2-58
     cat sample_TCTCAGCA+CATTGTAG_part*_R1.fastq.gz > ../to_ENA/wirArge_sample_TCTCAGCA+CATTGTAG_R1.fastq.gz
