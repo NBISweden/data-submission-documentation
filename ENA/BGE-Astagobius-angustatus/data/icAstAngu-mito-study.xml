@@ -1,0 +1,16 @@
+<PROJECT_SET>
+  <PROJECT center_name="SCILIFELAB" alias="erga-bge-icAstAngu6_mito-2025-05-07">
+      <NAME>icAstAngu6-mito</NAME>
+      <TITLE>Astagobius angustatus, draft mitochondrial assembly, icAstAngu6-mito.</TITLE>
+      <DESCRIPTION>This project provides a draft mitochondrial assembly of Astagobius angustatus. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+      <SUBMISSION_PROJECT>
+         <SEQUENCING_PROJECT/>
+      </SUBMISSION_PROJECT>
+      <PROJECT_ATTRIBUTES>
+         <PROJECT_ATTRIBUTE>
+            <TAG>Keyword</TAG>
+            <VALUE>draft</VALUE>
+         </PROJECT_ATTRIBUTE>
+      </PROJECT_ATTRIBUTES>
+  </PROJECT>
+</PROJECT_SET>

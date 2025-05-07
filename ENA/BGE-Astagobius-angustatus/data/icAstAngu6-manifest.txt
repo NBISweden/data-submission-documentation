@@ -1,0 +1,11 @@
+STUDY	PRJEB76282
+SAMPLE	SAMEA113399597
+RUN_REF	ERR13191070
+ASSEMBLYNAME	icAstAngu6.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	9
+PROGRAM	Hifiasm v0.24.0-r703, FCS v0.5.5-0-g0bda491, purge_dups v1.2.6, MitoHifi v3.2.3, tiara v1.0.3
+PLATFORM	PacBio
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Hifiasm (version: 0.24.0-r703) was used to create the contig assembly (additional arguments: -l3- --hom-cov 10 --telo-m GACCT --hg-size 300M). FCS (version: v0.5.5-0-g0bda491) was used to remove contaminations. Further mitochondrial contigs were removed based on the annotations from MitoHifi (version 3.2.3) and tiara (version: 1.0.3, arguments: --tf mit pla pro -t 4 -p 0.65 0.60 --probabilities). Remaining haplotypic duplications were removed with purge_dups (version: 1.2.6). Due to the low coverage only contigs tagged as HAPLOTYPE were completely removed and contigs marked as OVLP were trimmed back accordingly.'
+FASTA	icAstAngu_pri_20250422.fasta.gz

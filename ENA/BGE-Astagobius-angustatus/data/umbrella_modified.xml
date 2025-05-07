@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icAstAngu-study-umbrella-2024-07-05">
+		<NAME>icAstAngu</NAME>
+		<TITLE>Astagobius angustatus</TITLE>
+		<DESCRIPTION>This project collects the sequencing data and draft assemblies generated for Astagobius angustatus by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) for the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<UMBRELLA_PROJECT/>
+		<RELATED_PROJECTS>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB76282"/>
+			</RELATED_PROJECT>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB89356"/>
+			</RELATED_PROJECT>
+		</RELATED_PROJECTS>
+	</PROJECT>
+</PROJECT_SET>
