@@ -172,6 +172,24 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ### Submit assembly
 
+* I created a manifest file [bAleGra1-manifest.txt](./data/bAleGra1-manifest.txt), copied the files (fasta, chromosome & unlocalized list) to local laptop, gzipped all files, validated (successfully) and then submitted using Webin-CLI:
+    ```
+    java -jar ~/webin-cli-8.2.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./bAleGra1-manifest.txt -validate
+    ```
+* Receipt:
+    ```
+    INFO : Your application version is 8.2.0
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /home/yvonne/BGE/A-graeca-assembly/././webin-cli.report
+    INFO : Uploading file: /home/yvonne/BGE/A-graeca-assembly/bAleGra_freeze.fa.gz
+    INFO : Uploading file: /home/yvonne/BGE/A-graeca-assembly/chromosome_list.txt.gz
+    INFO : Uploading file: /home/yvonne/BGE/A-graeca-assembly/unlocalized_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ26867384
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Project is still private (2025-05-07), will await for ENA email before making it public. When that is done, I will add the project to the umbrella and release everything.
+
 ### Register umbrella project
 
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
@@ -201,4 +219,15 @@ For each of the BGE species, an umbrella project has to be created and linked to
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
+#### Add assembly to umbrella
 * **Note:** Add the assembly project `PRJEB79727` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* The umbrella project seems to still be under embargo, so I changed the hold date to 2025-05-10 instead
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    ```
