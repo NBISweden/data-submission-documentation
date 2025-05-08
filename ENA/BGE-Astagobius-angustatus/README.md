@@ -148,6 +148,11 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ26867398
     ```
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`
+* The assembly has been accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    icAstAngu6.1  | GCA_965278915 | PRJEB76282 | ERS15394745 | CBDIHG010000001-CBDIHG010002532 |              | 
+```
 
 #### Mito assembly
 * I manually created [icAstAngu-mito-study.xml](./data/icAstAngu-mito-study.xml) and submitted via curl (no embargo):
@@ -184,6 +189,11 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 
 * I added the accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`
+* Mito has been accessioned:
+    ```
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
+    icAstAngu-mito6.1 | GCA_965278905 | PRJEB89356 | ERS15394745 |            |              | OZ257121-OZ257121
+    ```
 
 ### Register umbrella projekt
 
