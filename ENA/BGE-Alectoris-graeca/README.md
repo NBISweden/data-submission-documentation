@@ -188,7 +188,11 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ26867384
     ```
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
-* Project is still private (2025-05-07), will await for ENA email before making it public. When that is done, I will add the project to the umbrella and release everything.
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    bAleGra1.1    | GCA_965278835 | PRJEB79727 | ERS17759205 | CBDIHD010000001-CBDIHD010000076 |              | OZ257071-OZ257110
+    ```
 
 ### Register umbrella project
 
@@ -220,8 +224,6 @@ For each of the BGE species, an umbrella project has to be created and linked to
     </RECEIPT>
     ```
 #### Add assembly to umbrella
-* **Note:** Add the assembly project `PRJEB79727` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
-
 * Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
 * The umbrella project seems to still be under embargo, so I changed the hold date to 2025-05-10 instead
 * Submit:
@@ -230,4 +232,14 @@ For each of the BGE species, an umbrella project has to be created and linked to
     ```
 * Receipt:
     ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-05-08T07:00:18.006+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB81312" alias="erga-bge-bAleGra-study-umbrella-2024-10-15" status="PRIVATE" holdUntilDate="2026-03-07Z"/>
+        <SUBMISSION accession="" alias="SUBMISSION-08-05-2025-07:00:17:773"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
+* Note: Need to check 2025-05-10 that everything is public. The umbrella can only be updated programmatically, but the child projects can be updated via browser.
