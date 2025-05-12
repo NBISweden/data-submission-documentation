@@ -152,7 +152,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
     icAstAngu6.1  | GCA_965278915 | PRJEB76282 | ERS15394745 | CBDIHG010000001-CBDIHG010002532 |              | 
-```
+    ```
 
 #### Mito assembly
 * I manually created [icAstAngu-mito-study.xml](./data/icAstAngu-mito-study.xml) and submitted via curl (no embargo):
@@ -194,6 +194,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
     icAstAngu-mito6.1 | GCA_965278905 | PRJEB89356 | ERS15394745 |            |              | OZ257121-OZ257121
     ```
+* Not sure why the study didn't become public immediately, since I used the submission-noHold.xml, but I changed the release date via the browser to 2025-05-16.
 
 ### Register umbrella projekt
 
