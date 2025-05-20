@@ -7,18 +7,18 @@ Data_generating_platforms:
 Top_level_acccession: 
 ---
 
-# BGE - *Clavelina lepadiformis*
+# BGE - *Monachus monachus*
 
 ## Submission task description
-Submission of raw reads for *Clavelina lepadiformis* to facilitate assembly and annotation as part of ERGA (https://www.erga-biodiversity.eu/) - BGE (https://biodiversitygenomics.eu/). HiFi, Hi-C and RNAseq datasets will be produced and submitted. There will also be an assembly to be submitted. For BGE projects there will be no annotation done, instead this will be handled by Ensembl. The sample used for sequencing has already been submitted via COPO.
+Submission of raw reads for *Monachus monachus* to facilitate assembly and annotation as part of ERGA (https://www.erga-biodiversity.eu/) - BGE (https://biodiversitygenomics.eu/). HiFi, Hi-C and RNAseq datasets will be produced and submitted. There will also be an assembly to be submitted. For BGE projects there will be no annotation done, instead this will be handled by Ensembl. The sample used for sequencing has already been submitted via COPO.
 Submission will be (attempted) done via CNAG script and programmatic submission route using xml files produced by the script.
 
 ## Procedure overview and links to examples
 
-* [Metadata template](./data/BGE-Clavelina-lepadiformis-metadata.xlsx)
-* [BGE HiFi metadata](./data/kaClaLepa-HiFi.tsv)
-* [BGE HiC metadata](./data/kaClaLepa-HiC.tsv)
-* [BGE RNAseq metadata](./data/kaClaLepa-RNAseq.tsv)
+* [Metadata template](./data/BGE-Monachus-monachus-metadata.xlsx)
+* [BGE HiFi metadata](./data/mMonMoa-HiFi.tsv)
+* [BGE HiC metadata](./data/mMonMoa-HiC.tsv)
+* [BGE RNAseq metadata](./data/mMonMoa-RNAseq.tsv)
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
@@ -32,30 +32,30 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ´´´
     interactive -t 08:00:00 -A uppmax2025-2-58
     lftp webin2.ebi.ac.uk -u Webin-39907
-    mput m84045_250225_172119_s3.hifi_reads.bc2046.bam
+    mput cell*/*.bam
     ```
-* Add TolID in the beginning of the file name using FileZilla
-* The README in delivery folder from NGI gave me sample id `FS42549325`
-* Looking it up in the ERGA tracker portal gave me BioSample `SAMEA115782298`
+* Add TolID `mMonMoa` in the beginning of the file name using FileZilla
+* The README in delivery folder from NGI gave me sample id `FS42549312`
+* Looking it up in the ERGA tracker portal gave me BioSample `SAMEA117387583`
 
 #### XML
-* I created [kaClaLepa-HiFi.tsv](./data/kaClaLepa-HiFi.tsv)
+* I created [mMonMoa-HiFi.tsv](./data/mMonMoa-HiFi.tsv)
 * Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f kaClaLepa-HiFi.tsv -p ERGA-BGE -o kaClaLepa-HiFi
-    ```
-* The study XML also needs to be submitted, hence need to check that kaClaLepa-HiC.study.xml seems ok
-
-* Study will be private, so submission.xml with hold date is used.
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f mMonMoa-HiFi.tsv -p ERGA-BGE -o mMonMoa-HiFi
+    ``` 
+* Note: There are 2 bam files, and the script creates 2 experiments so I had to remove one of them in the exp.xml file (runs.xml file is correct though, since I used the same library_name which is what the script makes use of when creating alias)
+* The study XML also needs to be submitted, hence need to check that study xml looks ok
+    
+* Study is private, so submission.xml with hold date is used.
 * Submit using curl: **TODO**
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@kaClaLepa-HiFi.study.xml" -F "EXPERIMENT=@kaClaLepa-HiFi.exp.xml" -F "RUN=@kaClaLepa-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@mMonMoa-HiFi.study.xml" -F "EXPERIMENT=@mMonMoa-HiFi.exp.xml" -F "RUN=@mMonMoa-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
 
     ```
-
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit HiC
@@ -66,23 +66,22 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
-* I created [kaClaLepa-HiC.tsv](./data/kaClaLepa-HiC.tsv)
+* I created [mMonMoa-HiC.tsv](./data/mMonMoa-HiC.tsv)
 * Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f kaClaLepa-HiC.tsv -p ERGA-BGE -o kaClaLepa-HiC
-    ```
-* Update kaClaLepa-HiC.exp.xml to reference accession number of previously registered study:
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f mMonMoa-HiC.tsv -p ERGA-BGE -o mMonMoa-HiC
+    ```   
+* Update mMonMoa-HiC.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
-* Study is private, so submission.xml with hold date is used.
 
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@kaClaLepa-HiC.exp.xml" -F "RUN=@kaClaLepa-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@mMonMoa-HiC.exp.xml" -F "RUN=@mMonMoa-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -96,12 +95,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 #### Preparations
 
 #### XML
-* I created [kaClaLepa-RNAseq.tsv](./data/kaClaLepa-RNAseq.tsv)
+* I created [mMonMoa-RNAseq.tsv](./data/mMonMoa-RNAseq.tsv)
 * Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f kaClaLepa-RNAseq.tsv -p ERGA-BGE -o kaClaLepa-RNAseq
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f mMonMoa-RNAseq.tsv -p ERGA-BGE -o mMonMoa-RNAseq
     ```
-* Update kaClaLepa-RNAseq.exp.xml to reference accession number of previously registered study:
+* Update mMonMoa-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
@@ -110,7 +109,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@kaClaLepa-RNAseq.exp.xml" -F "RUN=@kaClaLepa-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@mMonMoa-RNAseq.exp.xml" -F "RUN=@mMonMoa-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```

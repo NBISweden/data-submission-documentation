@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_mMonMoa_HiFi_WGS_FS42549312_pr_177_001_bam_1">
+		<EXPERIMENT_REF refname="exp_mMonMoa_HiFi_WGS_FS42549312_pr_177_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="mMonMoa_m84045_250309_083235_s2.hifi_reads.bc2047.bam" checksum_method="MD5" checksum="23d407b5f59ecebd34793c20653e1fec" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_mMonMoa_HiFi_WGS_FS42549312_pr_177_001_bam_2">
+		<EXPERIMENT_REF refname="exp_mMonMoa_HiFi_WGS_FS42549312_pr_177_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="mMonMoa_m84045_250225_192415_s4.hifi_reads.bc2047.bam" checksum_method="MD5" checksum="63df58a84decc8d443f5c8214aab4716" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
