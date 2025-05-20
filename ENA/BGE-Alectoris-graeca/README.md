@@ -243,3 +243,18 @@ For each of the BGE species, an umbrella project has to be created and linked to
     </RECEIPT>
     ```
 * Note: Need to check 2025-05-10 that everything is public. The umbrella can only be updated programmatically, but the child projects can be updated via browser.
+* For some reason it didn't work to update the hold date, instead I will try the `RELEASE` action, by creating [hold_date.xml](./data/hold_date.xml), and push via curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@hold_date.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Due to ENA submissions being down 2025-05-12--16, I will wait until after to release it though.
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2025-05-20T07:37:17.664+01:00" submissionFile="hold_date.xml" success="true">
+     <MESSAGES>
+          <INFO>project accession "PRJEB81312" is set to public status.</INFO>
+     </MESSAGES>
+     <ACTIONS>RELEASE</ACTIONS>
+</RECEIPT>
+```
