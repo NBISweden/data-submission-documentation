@@ -66,7 +66,7 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
     * Biosamples were deduced given the 'tube or well id's' received from UGC and looked up in the ERGA tracking portal
     * [icHydHamu-HiC-virtual-sample.tsv](./data/icHydHamu-HiC-virtual-sample.tsv)
     * Accession number received: ERS22139701
-* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is example of how to):
     ```
     interactive -t 08:00:00 -A uppmax2025-2-58
     cat sample_TAGAGCTC+TTCGGTAG_part*_R1.fastq.gz > ../to_ENA/hydHamu_sample_TAGAGCTC+TTCGGTAG_R1.fastq.gz

@@ -84,7 +84,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit Hi-C
 #### Preparations
 * Recieved sample label `FS42595418` from NGI, looking it up in the ERGA tracking portal, it leads to biosample `SAMEA115117727`, from which I collected the ToLID.
-* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is example of how to):
     ```
     interactive -t 08:00:00 -A uppmax2025-2-58
     cat sample_TAGACCAA+TCACCTTG_part*_R1.fastq.gz > ../to_ENA/dicCarn_sample_TAGACCAA+TCACCTTG_R1.fastq.gz
