@@ -172,6 +172,28 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ### Submit assembly
 
+* I created a manifest file [bAleGra1-manifest.txt](./data/bAleGra1-manifest.txt), copied the files (fasta, chromosome & unlocalized list) to local laptop, gzipped all files, validated (successfully) and then submitted using Webin-CLI:
+    ```
+    java -jar ~/webin-cli-8.2.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./bAleGra1-manifest.txt -validate
+    ```
+* Receipt:
+    ```
+    INFO : Your application version is 8.2.0
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /home/yvonne/BGE/A-graeca-assembly/././webin-cli.report
+    INFO : Uploading file: /home/yvonne/BGE/A-graeca-assembly/bAleGra_freeze.fa.gz
+    INFO : Uploading file: /home/yvonne/BGE/A-graeca-assembly/chromosome_list.txt.gz
+    INFO : Uploading file: /home/yvonne/BGE/A-graeca-assembly/unlocalized_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ26867384
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    bAleGra1.1    | GCA_965278835 | PRJEB79727 | ERS17759205 | CBDIHD010000001-CBDIHD010000076 |              | OZ257071-OZ257110
+    ```
+
 ### Register umbrella project
 
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
@@ -201,4 +223,38 @@ For each of the BGE species, an umbrella project has to be created and linked to
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
-* **Note:** Add the assembly project `PRJEB79727` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+#### Add assembly to umbrella
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* The umbrella project seems to still be under embargo, so I changed the hold date to 2025-05-10 instead
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-05-08T07:00:18.006+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB81312" alias="erga-bge-bAleGra-study-umbrella-2024-10-15" status="PRIVATE" holdUntilDate="2026-03-07Z"/>
+        <SUBMISSION accession="" alias="SUBMISSION-08-05-2025-07:00:17:773"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* Note: Need to check 2025-05-10 that everything is public. The umbrella can only be updated programmatically, but the child projects can be updated via browser.
+* For some reason it didn't work to update the hold date, instead I will try the `RELEASE` action, by creating [hold_date.xml](./data/hold_date.xml), and push via curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@hold_date.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Due to ENA submissions being down 2025-05-12--16, I will wait until after to release it though.
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2025-05-20T07:37:17.664+01:00" submissionFile="hold_date.xml" success="true">
+     <MESSAGES>
+          <INFO>project accession "PRJEB81312" is set to public status.</INFO>
+     </MESSAGES>
+     <ACTIONS>RELEASE</ACTIONS>
+</RECEIPT>
+```

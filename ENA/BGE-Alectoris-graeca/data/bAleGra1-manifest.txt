@@ -1,0 +1,14 @@
+STUDY	PRJEB79727
+SAMPLE	SAMEA115117745
+RUN_REF	ERR13631396,ERR14061695,ERR14061696
+ASSEMBLYNAME	bAleGra1.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	53
+PROGRAM	Hifiasm v0.25.0-r726, purge_dups v1.2.5, Yahs v1.2.2, MicroFinder v0.1, PretextView v1.0.3, GRIT_Rapid git:1a3d79a8, MitoHifi v3.2.1
+PLATFORM	PacBio, Illumina, OmniC
+MINGAPLENGTH	200
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Alectoris graeca was assembled with Hifiasm (version 0.25.0-r726). Remaining haplotypic duplications were identified with purge_dups (version 1.2.5), but manually removed in the manual curation step to avoid over purging of microchromosomes. Yahs (version 1.2.2) was used to scaffold contigs and MicroFinder (version 0.1) was used to identify microchromosome genes on short contigs. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8). For the very small microchromosomes 34-38 the manual scaffolding was also guided by the contigs alignments against the T2T chicken reference assembly (GGswu). Though microchromosomes 34-38 are probably not complete due to very low sequencing coverage 3-7X and sequencing drop outs. The assembly includes mitochondrion (MT), assembled with MitoHifi (version 3.2.1).'
+FASTA	bAleGra_freeze.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalized_list.txt.gz
