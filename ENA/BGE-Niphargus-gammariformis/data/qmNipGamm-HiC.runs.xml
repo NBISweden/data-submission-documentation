@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qmNipGamm_Hi-C_DE105_010_HC016-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qmNipGamm_Hi-C_DE105_010_HC016-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="nipGamm_XL-4185-HC016-1A1A_S81_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="beae422c906595635f82d6044ddbcee5" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="nipGamm_XL-4185-HC016-1A1A_S81_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="064b518828ae5c2546f9874fe49af157" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

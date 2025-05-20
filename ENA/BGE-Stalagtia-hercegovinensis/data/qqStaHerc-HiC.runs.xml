@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qqStaHerc_Hi-C_H000528926_HC024-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qqStaHerc_Hi-C_H000528926_HC024-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="staHerc_XL-4185-HC024-1A1A_S83_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="a78ae3b16a81ba077ccc67358f267515" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="staHerc_XL-4185-HC024-1A1A_S83_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="c6c715baafafb6f6f584a807d3a51828" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

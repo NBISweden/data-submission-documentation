@@ -44,6 +44,7 @@ Submission of raw reads for *Tetrastemma melanocephalum* to facilitate assembly 
 * Received accession number: `ERX12137345`, `ERR12764136`
 
 ### Submit Hi-C
+#### Preparations
 * Received the sample label `ERGA FAFA 7377 005` from NGI, and when looking at biosamples, there are 2 samples with this value as specimen id, SAMEA113595478 and SAMEA113595488. I looked at the ERGA tracking portal, and saw only one of them, `SAMEA113595488` with well id `FS42595037`, so this one will be used.
 * The data files in `/proj/snic2022-6-208/INBOX/BGE_HiC_firstBatch/Tetrastemma-melanocephalum/` are split into 4 parts and needs to be concatenated before data transfer:
     ```
@@ -57,6 +58,37 @@ Submission of raw reads for *Tetrastemma melanocephalum* to facilitate assembly 
     ```
     * **Note:** ascp didn't work, received `Session Stop  (Error: Client unable to connect to server (check UDP port and firewall))`, hence `lftp`
 
+#### XML
+* I created [tnTetMela-HiC.tsv](./data/tnTetMela-HiC.tsv) containing HiC from 2nd batch (but it is the first HiC for this species).
+
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f tnTetMela-HiC.tsv -p ERGA-BGE -o tnTetMela-HiC
+    ```
+* Update tnTetMela-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB74039"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is already public, so submission.xml without hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@tnTetMela-HiC.exp.xml" -F "RUN=@tnTetMela-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-03-19T08:49:32.295Z" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX14162646" alias="exp_tnTetMela_Hi-C_FS42595037_HC007_1C1A-cov2" status="PRIVATE"/>
+        <RUN accession="ERR14758751" alias="run_tnTetMela_Hi-C_FS42595037_HC007_1C1A-cov2_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA31211356" alias="SUBMISSION-19-03-2025-08:49:31:840"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)

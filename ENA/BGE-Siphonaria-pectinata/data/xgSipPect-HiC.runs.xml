@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_xgSipPect_Hi-C_Spec-3_HC007-2J1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_xgSipPect_Hi-C_Spec-3_HC007-2J1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="sipPect_XL-4185-HC007-2J1A_S77_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="839dc33ea960af0339b34817d3c62a8c" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="sipPect_XL-4185-HC007-2J1A_S77_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="3356eeb03e5fc6d4387dea1070cdc633" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

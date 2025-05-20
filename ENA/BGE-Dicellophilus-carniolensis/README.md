@@ -82,6 +82,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     
 ### Submit Hi-C
+#### Preparations
 * Recieved sample label `FS42595418` from NGI, looking it up in the ERGA tracking portal, it leads to biosample `SAMEA115117727`, from which I collected the ToLID.
 * First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
     ```
@@ -92,6 +93,36 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     lftp webin2.ebi.ac.uk -u Webin-39907
     mput dicCarn*.fastq.gz
     ```
+#### XML
+* I created [qcDicCarn-HiC.tsv](./data/qcDicCarn-HiC.tsv).
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qcDicCarn-HiC.tsv -p ERGA-BGE -o qcDicCarn-HiC
+    ```
+* Update qcDicCarn-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB77038"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is already public, so submission.xml without hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@qcDicCarn-HiC.exp.xml" -F "RUN=@qcDicCarn-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-03-19T10:59:34.738Z" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX14162836" alias="exp_qcDicCarn_Hi-C_FS42595418_HC012-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR14758876" alias="run_qcDicCarn_Hi-C_FS42595418_HC012-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA31211466" alias="SUBMISSION-19-03-2025-10:59:33:592"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)

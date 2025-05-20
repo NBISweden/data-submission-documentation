@@ -47,6 +47,42 @@ Submission of raw reads for *Siphonaria pectinata* to facilitate assembly and an
 * Received accession number: `ERX12137308`, `ERR12764099`
 
 ### Submit Hi-C
+#### Preparations
+* I received `ERGA_KE_1616_003` as sample ID from NGI, which is found in 2 biosamples (one origin and one derived from/same as), and since only the derived one is found in ERGA tracker portal, I will use that one (`SAMEA113595501`)
+* HiC received in second batch from NGI. I transferred all of them in one go (`mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species)
+    * sipPect_XL-4185-HC007-2J1A_S77_L008_R1_001.fastq.gz
+    * sipPect_XL-4185-HC007-2J1A_S77_L008_R2_001.fastq.gz
+
+#### XML
+* I created [xgSipPect-HiC.tsv](./data/xgSipPect-HiC.tsv).
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xgSipPect-HiC.tsv -p ERGA-BGE -o xgSipPect-HiC
+    ```
+* Update xgSipPect-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB74038"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is already public, so submission.xml without hold date is used.
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@xgSipPect-HiC.exp.xml" -F "RUN=@xgSipPect-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-03-19T13:15:12.444Z" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX14163134" alias="exp_xgSipPect_Hi-C_Spec-3_HC007-2J1A" status="PRIVATE"/>
+        <RUN accession="ERR14759141" alias="run_xgSipPect_Hi-C_Spec-3_HC007-2J1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA31211601" alias="SUBMISSION-19-03-2025-13:15:11:625"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)

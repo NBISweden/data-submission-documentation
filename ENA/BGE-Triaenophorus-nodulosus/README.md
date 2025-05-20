@@ -48,13 +48,15 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
 * Received accession numbers: `ERX13023779`,`ERR13654568`
 
 ### Submit Hi-C
+#### Preparations
+
 * The sample identifier received, `2 (ID in minigrip: TN2.1)` was not possible to connect to a biosample either via biosamples database or ERGA tracking portal.
     * For HiFi we ended up using 'SAMEA115098039', after conferring with NGI, should we use the same for Hi-C?
     * There is another biosample, 'SAMEA115098038', which also seems to be an origin sample, from which other samples have been derived.
     * I asked NGI and we deduced that it should be `SAMEA115098038` for HiC since this one has 2's (specimen id is 'ERGA AV 5534 02' and ToLID is 'heTriNodu2')
     * Since this biosample isn't in ERGA tracking portal (only the derived samples are), I don't have a 'tube or well id' but will put the specimen id instead.
 
-* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
+* First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is example of how to):
     ```
     interactive -t 08:00:00 -A uppmax2025-2-58
     cat sample_ATGTCAAG+GAGCTCTA_part*_R1.fastq.gz > ../to_ENA/triNodu_sample_ATGTCAAG+GAGCTCTA_R1.fastq.gz
@@ -63,6 +65,39 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
     lftp webin2.ebi.ac.uk -u Webin-39907
     mput triNodu*.fastq.gz
     ```
+#### XML
+* I created [heTriNodu-HiC.tsv](./data/heTriNodu-HiC.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f heTriNodu-HiC.tsv -p ERGA-BGE -o heTriNodu-HiC
+    ```
+* Update heTriNodu-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB79894"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is private, so submission-hold.xml with hold date 2026-09-09 is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission-hold.xml" -F "EXPERIMENT=@heTriNodu-HiC.exp.xml" -F "RUN=@heTriNodu-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-03-19T10:05:48.109Z" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14162750" alias="exp_heTriNodu_Hi-C_ERGA_AV_5534_02_HC014_1A1A" status="PRIVATE"/>
+        <RUN accession="ERR14758855" alias="run_heTriNodu_Hi-C_ERGA_AV_5534_02_HC014_1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA31211420" alias="SUBMISSION-19-03-2025-10:05:47:428"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit RNAseq
 

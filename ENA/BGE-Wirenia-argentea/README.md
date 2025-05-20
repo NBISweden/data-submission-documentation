@@ -94,6 +94,7 @@ Submission will be done via CNAG script and programmatic submission route using 
 * For the sample, I received the label `wargBGO23-4` (from an excel sheet via slack), and I'm unable to connect this to a biosample, specimen id or ToLID, so I've asked NGI for assistance.
     * Turns out that the samples for the material used haven't been registered in COPO (and hence does not exist in BioSamples). Only 3 samples are listed in the tracking tool, and SciLifeLab received 18 in total.
     * BGE has contacted sample provider, but no response yet. Once she uploads the updated Manifest, it will appear in the Tracking tool.
+* Update: Now we have 17 samples in total in the Tracking tool, and label `wargBGO23-4` is connected to BioSample `SAMEA117757069` will be used for first round of HiC, while `SAMEA117757068`	`wargBGO23-5` will be used for 2nd round of HiC
 * The HiC sequencing failed, and new library has been ordered. Since I don't know which samples to use, I will let the text above remain until new HiC dataset arrives.
 * First batch of HiC will be used, hence need to do data transfer (which I did for all first batch HiC in one go, but below is xample of how to):
     ```
@@ -104,31 +105,46 @@ Submission will be done via CNAG script and programmatic submission route using 
     lftp webin2.ebi.ac.uk -u Webin-39907
     mput wirArge*.fastq.gz
     ```
+* For this species we have a second round of HiC, I transferred all of them in one go (`mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species)
+    * wirArge_XL-4185-HC013-2A1A_S80_L008_R1_001.fastq.gz
+    * wirArge_XL-4185-HC013-2A1A_S80_L008_R2_001.fastq.gz
 
-#### Create xml
-**To be done**
-
-* Running the script:
+#### XML
+* I created [xoWirArge-HiC.tsv](./data/xoWirArge-HiC.tsv) containing both 1st and 2nd round of HiC.
+* I need to make sure that they appear in separate experiments.
+* Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-hic.tsv -p ERGA-BGE -o xoWirArge-HiC
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-HiC.tsv -p ERGA-BGE -o xoWirArge-HiC
     ```
-* Validate output (ignore the study xml)
-* Update xoWirArge-HiC.exp.xml to reference accession number of previously registered study (HiFi):
+* Update xoWirArge-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB83554"/>
     ```
-
-#### Submission
-**To be done**
-* Submit:
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is private, so submission-hold.xml will be used.
+* Submit using curl:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@xoWirArge-HiC.exp.xml" -F "RUN=@xoWirArge-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission-hold.xml" -F "EXPERIMENT=@xoWirArge-HiC.exp.xml" -F "RUN=@xoWirArge-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-03-19T15:46:57.028Z" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14163488" alias="exp_xoWirArge_Hi-C_wargBGO23-4_HC013_1A1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14163489" alias="exp_xoWirArge_Hi-C_wargBGO23-5_HC013-2A1A" status="PRIVATE"/>
+        <RUN accession="ERR14759495" alias="run_xoWirArge_Hi-C_wargBGO23-4_HC013_1A1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR14759496" alias="run_xoWirArge_Hi-C_wargBGO23-5_HC013-2A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA31211786" alias="SUBMISSION-19-03-2025-15:46:56:426"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
-* Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit RNAseq
 **To be done**

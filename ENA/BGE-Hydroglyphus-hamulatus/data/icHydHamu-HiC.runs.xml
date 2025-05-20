@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icHydHamu_Hi-C_FS55571885_FS55571887-89_HC009-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_icHydHamu_Hi-C_FS55571885_FS55571887-89_HC009-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="hydHamu_sample_TAGAGCTC+TTCGGTAG_R1.fastq.gz" checksum_method="MD5" checksum="b37befd9397f136c112d3ac544778892" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="hydHamu_sample_TAGAGCTC+TTCGGTAG_R2.fastq.gz" checksum_method="MD5" checksum="524b968d6f0a294c1ab25e0e43ee67e4" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
