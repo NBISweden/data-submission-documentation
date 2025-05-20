@@ -1,0 +1,12 @@
+STUDY	PRJEB89356
+SAMPLE	SAMEA113399597
+RUN_REF	ERR13191070
+ASSEMBLYNAME	icAstAngu-mito6.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	707
+PROGRAM	MitoHifi v3.2.3
+PLATFORM	PacBio
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The mitochondrion was assembled with MitoHifi (version 3.2.3) based on the contig assembly and a related species Sciodrepoides watsoni (NCBI: NC_028610.1).'
+FASTA	icAstAngu_mito_20250422.fasta.gz
+CHROMOSOME_LIST	mito_chromosome_list.txt.gz
