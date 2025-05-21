@@ -25,20 +25,22 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 
 #### Preparations
+* Sample ID gave me the BioSample ID via ERGA tracker portal
 
 #### XML
+* I created [icProCypr-HiFi.tsv](./data/icProCypr-HiFi.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icProCypr-HiFi.tsv -p ERGA-BGE -o icProCypr-HiFi
+    ```
 
-* Update icProCypr-HiFi.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession=""/>
-    ```
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@icProCypr-HiFi.exp.xml" -F "RUN=@icProCypr-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@icProCypr-HiFi.study.xml" -F "EXPERIMENT=@icProCypr-HiFi.exp.xml" -F "RUN=@icProCypr-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -59,16 +61,18 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icProCypr-HiC.tsv -p ERGA-BGE -o icProCypr-HiC
     ```
-* The study XML also needs to be submitted, since HiC is the first data type we have received.
-    * I will not create the study for the assembly, since I don't yet know (no HiFi data yet, where we usually start, only HiC) which ToLID should be used (the script took `icProCypr10`)
-    * Hence, removed that project from icProCypr-HiC.study.xml
+* Update icProCypr-HiFi.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession=""/>
+    ```
+* The study XML will not be submitted
 
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@icProCypr-HiC.study.xml" -F "EXPERIMENT=@icProCypr-HiC.exp.xml" -F "RUN=@icProCypr-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@icProCypr-HiC.exp.xml" -F "RUN=@icProCypr-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
