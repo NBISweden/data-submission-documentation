@@ -25,20 +25,24 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 
 #### Preparations
-
+* Sample ID, received in README of sequence delivery, was looked up in ERGA tracker portal in order to receive the BioSample ID
+* Ultra Low protocol was applied when sequencing, hence the library construction protocol needed an update, provided by UGC.
+ 
 #### XML
 
-* Update wjOphPuer-HiFi.exp.xml to reference accession number of previously registered study:
+* I created [wjOphPuer-HiFi.tsv](./data/wjOphPuer-HiFi.tsv)
+* Run script:
     ```
-    <STUDY_REF accession=""/>
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f wjOphPuer-HiFi.tsv -p ERGA-BGE -o wjOphPuer-HiFi
     ```
+* The study XML also needs to be submitted, since HiFi is the first data type we have received.
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@wjOphPuer-HiFi.exp.xml" -F "RUN=@wjOphPuer-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@wjOphPuer-HiFi.study.xml" -F "EXPERIMENT=@wjOphPuer-HiFi.exp.xml" -F "RUN=@wjOphPuer-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -46,7 +50,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC
+### Submit HiC - **TODO**
 
 #### Preparations
 * I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/10ZPAhkp1fCmpqR9GAZMRJ9wdXa8m-1G_/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA115808852](https://www.ebi.ac.uk/biosamples/samples/SAMEA115808852).
@@ -59,16 +63,17 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f wjOphPuer-HiC.tsv -p ERGA-BGE -o wjOphPuer-HiC
     ```
-* The study XML also needs to be submitted, since HiC is the first data type we have received.
-    * I will not create the study for the assembly, since I don't yet know (no HiFi data yet, where we usually start, only HiC) which ToLID should be used (the script took `wjOphPuer10`)
-    * Hence, removed that project from wjOphPuer-HiC.study.xml
+* Update wjOphPuer-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession=""/>
+    ```
 
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@wjOphPuer-HiC.study.xml" -F "EXPERIMENT=@wjOphPuer-HiC.exp.xml" -F "RUN=@wjOphPuer-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@wjOphPuer-HiC.exp.xml" -F "RUN=@wjOphPuer-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
