@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_gfCryBron_HiFi_WGS_DSM_104551_14-DSM_104551_15_pr_159_bam_1">
+		<EXPERIMENT_REF refname="exp_gfCryBron_HiFi_WGS_DSM_104551_14-DSM_104551_15_pr_159"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="m84045_250317_183907_s2.hifi_reads.bc2048.bam" checksum_method="MD5" checksum="4305f91b386a8e7b5dd85422b61be84f" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
