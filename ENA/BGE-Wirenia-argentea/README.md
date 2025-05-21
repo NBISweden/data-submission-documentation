@@ -57,7 +57,7 @@ Submission will be done via CNAG script and programmatic submission route using 
 #### Programmatic submission HiFi
 * Submit both projects and experiment in one go, i.e:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@xoWirArge-HiFi.study.xml" -F "EXPERIMENT=@xoWirArge-HiFi.exp.xml" -F "RUN=@xoWirArge-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@xoWirArge-HiFi.study.xml" -F "EXPERIMENT=@xoWirArge-HiFi.exp.xml" -F "RUN=@xoWirArge-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 
 * Receipt:
@@ -83,6 +83,36 @@ Submission will be done via CNAG script and programmatic submission route using 
     ```
 
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+
+### HiFi v2 submission - **TODO**
+
+* Another sample (wargBGO23-6) has been used to produce HiFi data
+* **I don't know yet if it will be used together with the other HiFi or should replace (but will be difficult to retract so perhaps not refer to it from assembly?)**
+
+#### Preparations
+* Sample ID gave the BioSample ID via ERGA tracker portal
+* Ultra low protocol has been used, have to wait for UGC to provide me with text for library construction protocol
+
+#### XML
+* Created the tsv file [xoWirArge-hifi-2.tsv](./data/xoWirArge-hifi-2.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-hifi-2.tsv -p ERGA-BGE -o xoWirArge-hifi-2
+    ```
+* Update xoWirArge-hifi-2.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB83554"/>
+    ```
+* Study is private, so submission.xml with hold date is used.
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@xoWirArge-hifi-2.exp.xml" -F "RUN=@xoWirArge-hifi-2.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### HiC submission
 #### Collect metadata
