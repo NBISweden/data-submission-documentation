@@ -25,20 +25,23 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 
 #### Preparations
+* There are 2 bam files for this library, need to make sure it works in the xml files
+* The sample ID leed to the BioSample ID via the ERGA tracker portal
 
 #### XML
+* I created [qqLycPrae-HiFi.tsv](./data/qqLycPrae-HiFi.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqLycPrae-HiFi.tsv -p ERGA-BGE -o qqLycPrae-HiFi
+    ```
 
-* Update qqLycPrae-HiFi.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession=""/>
-    ```
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qqLycPrae-HiFi.exp.xml" -F "RUN=@qqLycPrae-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@qqLycPrae-HiFi.study.xml" -F "EXPERIMENT=@qqLycPrae-HiFi.exp.xml" -F "RUN=@qqLycPrae-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -59,16 +62,17 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqLycPrae-HiC.tsv -p ERGA-BGE -o qqLycPrae-HiC
     ```
-* The study XML also needs to be submitted, since HiC is the first data type we have received.
-    * I will not create the study for the assembly, since I don't yet know (no HiFi data yet, where we usually start, only HiC) which ToLID should be used (the script took `qqLycPrae10`)
-    * Hence, removed that project from qqLycPrae-HiC.study.xml
-
+* Update qqLycPrae-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession=""/>
+    ```
+* The study XML also needs to be submitted
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@qqLycPrae-HiC.study.xml" -F "EXPERIMENT=@qqLycPrae-HiC.exp.xml" -F "RUN=@qqLycPrae-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qqLycPrae-HiC.exp.xml" -F "RUN=@qqLycPrae-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```

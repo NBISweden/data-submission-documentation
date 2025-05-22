@@ -1,0 +1,16 @@
+interactive -t 08:00:00 -A uppmax2025-2-58
+lftp webin2.ebi.ac.uk -u Webin-39907
+mput 
+* /proj/snic2022-6-208/INBOX/BGE_Cryptotrichosporon-brontae_ULI/*/*/*/*bam
+* /proj/snic2022-6-208/INBOX/BGE_Ophryotrocha-puerilis_ULI/*/*/*/*bam
+* /proj/snic2022-6-208/INBOX/BGE_Agelena-orientalis/*/*/*/*/*bam
+* /proj/snic2022-6-208/INBOX/BGE_Artema-nephilit/*/*/*/*bam
+* /proj/snic2022-6-208/INBOX/BGE_Lycosa-praegrandis/*/*/*/*/*bam
+* /proj/snic2022-6-208/INBOX/BGE_Propomacrus-cypriacus/*/*/*/*bam
+* /proj/snic2022-6-208/INBOX/BGE_Decticus-albifrons/*/*/*/*/*bam
+* /proj/snic2022-6-208/INBOX/BGE_Platycleis-falx/*/*/*/*/*bam
+* /proj/snic2022-6-208/INBOX/BGE_Sphingonotus-rubescens/*/*/*/*/*bam
+* /proj/snic2022-6-208/INBOX/BGE_Wirenia-argentea_ULI/pr_172/*/*/*bam
+
+Add the ToLID to the beginning of the respective file, using FileZilla, 
+in order to make it more human readable
