@@ -16,58 +16,93 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ## Procedure overview and links to examples
 
 * [Metadata template](./data/BGE--metadata.xlsx)
-* [BGE HiFi metadata](./data/-hifi.tsv)
-* [BGE HiC metadata](./data/-hic.tsv)
-* [BGE RNAseq metadata](./data/-rnaseq.tsv)
+* [BGE HiFi metadata](./data/-HiFi.tsv)
+* [BGE HiC metadata](./data/-HiC.tsv)
+* [BGE RNAseq metadata](./data/-RNAseq.tsv)
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
 
 ## Detailed step by step description
 
-### Collecting metadata
-* I went to [BioSamples](https://www.ebi.ac.uk/biosamples/samples?text=) and extracted all samples for this species, where SCILIFELAB was the GAL. I then looked at the delivery README for the HiFi dataset (on Uppmax) and extracted the Name (``). This I then pasted as filter in `Tube or well id` field, in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [](https://www.ebi.ac.uk/biosamples/samples/).
+### Submit HiFi - **TODO**
+#### Preparations
+* Sample ID gave BioSample ID via ERGA tracker portal
+* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+#### XML
+* I created [-HiFi.tsv](./data/-HiFi.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f -HiFi.tsv -p ERGA-BGE -o -HiFi
+    ```
 
-### Creating xml
-#### HiFi xml
-* I copied [submission.xml](./data/submission.xml) from BGE-Crayfish, using the same embargo date
-* Running the script:
-    ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f -hifi.tsv -p ERGA-BGE -o -HiFi
-    ```
-#### HiC xml
+* Study is private, so submission.xml with hold date is used.
 
-#### RNAseq xml
-
-### Data transfer
-* Create folder `bge-` at ENA upload area using Filezilla
-* Using aspera from Uppmax to ENA upload area:
-    ```
-    interactive -t 03:00:00 -A naiss2024-22-345
-    module load ascp
-    export ASPERA_SCP_PASS='password'
-    ascp -k 3 -d -q --mode=send -QT -l300M --host=webin.ebi.ac.uk --user=Webin-XXXX /proj/snic2021-6-194/INBOX/BGE_.bam /bge-/ &
-    ```
-* Keep track of progress using FileZilla
-
-### Programmatic submission HiFi
-* Copy all xml files to Uppmax:
-    ```
-    scp submission.xml -HiFi*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-/
-    ```
 * Submit both projects and experiment in one go, i.e:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@-HiFi.study.xml" -F "EXPERIMENT=@-HiFi.exp.xml" -F "RUN=@-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@-HiFi.study.xml" -F "EXPERIMENT=@-HiFi.exp.xml" -F "RUN=@-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
     
     ```
-* Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Programmatic submission HiC
+### Submit HiC - **TODO**
+#### Preparations
+* Sample ID gave BioSample ID via ERGA tracker portal
+* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
-### Programmatic submission RNAseq
+#### XML
+* I created [-HiC.tsv](./data/-HiC.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f -HiC.tsv -p ERGA-BGE -o -HiC
+    ```
+* Update -HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession=""/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study will be private, so submission.xml with hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@-HiC.exp.xml" -F "RUN=@-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+
+### Submit RNAseq - **TODO**
+#### Preparations
+* Sample ID gave BioSample ID via ERGA tracker portal
+* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+
+#### XML
+* I created [-RNAseq.tsv](./data/-RNAseq.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f -RNAseq.tsv -p ERGA-BGE -o -RNAseq
+    ```
+* Update -RNAseq.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession=""/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is private, so submission.xml with hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@-RNAseq.exp.xml" -F "RUN=@-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
