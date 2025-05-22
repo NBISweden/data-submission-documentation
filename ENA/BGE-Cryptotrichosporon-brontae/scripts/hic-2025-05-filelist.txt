@@ -1,0 +1,41 @@
+/proj/snic2022-6-208/INBOX/BGE_HiC_20250521/DataDelivery_2025-05-21_10-21-26_snpseq01224_download/files/YD-4287/20250425_LH00179_0260_B22MYFJLT4/
+
+interactive -t 08:00:00 -A uppmax2025-2-58
+lftp webin2.ebi.ac.uk -u Webin-39907
+mput Sample_YD-4287-*/*.gz 
+
+HC015-1A1A Cryptotrichosporon brontae:
+    Sample_YD-4287-HC015-1A1A/YD-4287-HC015-1A1A_S266_L008_R1_001.fastq.gz
+    Sample_YD-4287-HC015-1A1A/YD-4287-HC015-1A1A_S266_L008_R2_001.fastq.gz
+
+HC025-1A1A-CL Omalisus fontisbellaquaei:
+    Sample_YD-4287-HC025-1A1A-CL/YD-4287-HC025-1A1A-CL_S267_L008_R1_001.fastq.gz
+    Sample_YD-4287-HC025-1A1A-CL/YD-4287-HC025-1A1A-CL_S267_L008_R2_001.fastq.gz
+
+HC033-1A2A Lycosa praegrandis:
+    Sample_YD-4287-HC033-1A2A/YD-4287-HC033-1A2A_S268_L008_R1_001.fastq.gz
+    Sample_YD-4287-HC033-1A2A/YD-4287-HC033-1A2A_S268_L008_R2_001.fastq.gz
+
+HC035-1A2A Decticus albifrons:
+    Sample_YD-4287-HC035-1A2A/YD-4287-HC035-1A2A_S269_L008_R1_001.fastq.gz
+    Sample_YD-4287-HC035-1A2A/YD-4287-HC035-1A2A_S269_L008_R2_001.fastq.gz
+
+HC037-1A2A Sphingonotus rubescens:
+    Sample_YD-4287-HC037-1A2A/YD-4287-HC037-1A2A_S270_L008_R1_001.fastq.gz
+    Sample_YD-4287-HC037-1A2A/YD-4287-HC037-1A2A_S270_L008_R2_001.fastq.gz
+
+HC037-1A2B Sphingonotus rubescens:
+    Sample_YD-4287-HC037-1A2B/YD-4287-HC037-1A2B_S271_L008_R1_001.fastq.gz
+    Sample_YD-4287-HC037-1A2B/YD-4287-HC037-1A2B_S271_L008_R2_001.fastq.gz
+
+HC042-1A1A Compsidolon pterocephali:
+    Sample_YD-4287-HC042-1A1A/YD-4287-HC042-1A1A_S272_L008_R1_001.fastq.gz
+    Sample_YD-4287-HC042-1A1A/YD-4287-HC042-1A1A_S272_L008_R2_001.fastq.gz
+
+HC044-1A1A Eutagenia annae:
+    Sample_YD-4287-HC044-1A1A/YD-4287-HC044-1A1A_S273_L008_R1_001.fastq.gz
+    Sample_YD-4287-HC044-1A1A/YD-4287-HC044-1A1A_S273_L008_R2_001.fastq.gz
+
+
+Add the ToLID to the beginning of the respective file, using FileZilla, 
+in order to make it more human readable
