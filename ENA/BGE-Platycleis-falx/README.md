@@ -48,8 +48,7 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
 ### Submit HiC - **TODO**
 
 #### Preparations
-* I received sample ID from [NGI](), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) 
-
+* Sample ID gave BioSample ID via ERGA tracker portal
 
 #### XML
 * I created [iqPlaFalx-HiC.tsv](./data/iqPlaFalx-HiC.tsv)

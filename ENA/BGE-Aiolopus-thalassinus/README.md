@@ -7,95 +7,96 @@ Data_generating_platforms:
 Top_level_acccession: 
 ---
 
-# BGE - *Artema nephilit*
+# BGE - *Aiolopus thalassinus*
 
 ## Submission task description
-Submission of raw reads for *Artema nephilit* to facilitate assembly and annotation as part of ERGA (https://www.erga-biodiversity.eu/) - BGE (https://biodiversitygenomics.eu/). HiFi, Hi-C and RNAseq datasets will be produced and submitted. There will also be an assembly to be submitted. For BGE projects there will be no annotation done, instead this will be handled by Ensembl. The sample used for sequencing has already been submitted via COPO.
+Submission of raw reads for *Aiolopus thalassinus* to facilitate assembly and annotation as part of ERGA (https://www.erga-biodiversity.eu/) - BGE (https://biodiversitygenomics.eu/). HiFi, Hi-C and RNAseq datasets will be produced and submitted. There will also be an assembly to be submitted. For BGE projects there will be no annotation done, instead this will be handled by Ensembl. The sample used for sequencing has already been submitted via COPO.
+Submission will be (attempted) done via CNAG script and programmatic submission route using xml files produced by the script.
 
 ## Procedure overview and links to examples
 
-* [ERGA-BGE_ReadData_Submission_Guide](https://github.com/ERGA-consortium/ERGA-submission/blob/main/BGE/ERGA-BGE_ReadData_Submission_Guide.md)
-* [BGE mRupRup umbrella project](https://www.ncbi.nlm.nih.gov/bioproject/1084634)
+* [Metadata template](./data/BGE-Aiolopus-thalassinus-metadata.xlsx)
+* [BGE HiFi metadata](./data/iqAioThal-HiFi.tsv)
+* [BGE HiC metadata](./data/iqAioThal-HiC.tsv)
+* [BGE RNAseq metadata](./data/iqAioThal-RNAseq.tsv)
 
 ## Lessons learned
+<!-- What went well? What did not went so well? What would you have done differently? -->
 
 ## Detailed step by step description
 
-### Submit HiFi
-
+### Submit HiFi - **TODO**
 #### Preparations
-* The sample ID from UGC was used to obtain the BioSample ID in ERGA tracker portal
-
+* Sample ID gave BioSample ID via ERGA tracker portal
+* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 #### XML
-* I created [qqArtNeph-HiFi.tsv](./data/qqArtNeph-HiFi.tsv)
+* I created [-HiFi.tsv](./data/iqAioThal-HiFi.tsv)
 * Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqArtNeph-HiFi.tsv -p ERGA-BGE -o qqArtNeph-HiFi
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iqAioThal-HiFi.tsv -p ERGA-BGE -o iqAioThal-HiFi
     ```
-* The study XML also needs to be submitted
-* Submission.xml with hold date is used.
-* Submit using curl:
+
+* Study is private, so submission.xml with hold date is used.
+
+* Submit both projects and experiment in one go, i.e:
     ```
-    curl -u username:password -F "SUBMISSION=@submission-hold.xml" -F "PROJECT=@qqArtNeph-HiFi.study.xml" -F "EXPERIMENT=@qqArtNeph-HiFi.exp.xml" -F "RUN=@qqArtNeph-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@iqAioThal-HiFi.study.xml" -F "EXPERIMENT=@iqAioThal-HiFi.exp.xml" -F "RUN=@iqAioThal-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit HiC - **TODO**
-
 #### Preparations
-* I received sample ID from NGI, which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample.
-
+* Sample ID gave BioSample ID via ERGA tracker portal
 * The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
-* I created [qqArtNeph-HiC.tsv](./data/qqArtNeph-HiC.tsv)
+* I created [-HiC.tsv](./data/iqAioThal-HiC.tsv)
 * Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqArtNeph-HiC.tsv -p ERGA-BGE -o qqArtNeph-HiC
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iqAioThal-HiC.tsv -p ERGA-BGE -o iqAioThal-HiC
     ```
-* Update qqArtNeph-HiC.exp.xml to reference accession number of previously registered study:
+* Update -HiC.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
-
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission-hold.xml with hold date is used.
+* Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission-hold.xml"  -F "EXPERIMENT=@qqArtNeph-HiC.exp.xml" -F "RUN=@qqArtNeph-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iqAioThal-HiC.exp.xml" -F "RUN=@iqAioThal-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
-
 
 ### Submit RNAseq - **TODO**
-
 #### Preparations
+* Sample ID gave BioSample ID via ERGA tracker portal
+* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
-* I created [qqArtNeph-RNAseq.tsv](./data/qqArtNeph-RNAseq.tsv)
+* I created [-RNAseq.tsv](./data/iqAioThal-RNAseq.tsv)
 * Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqArtNeph-RNAseq.tsv -p ERGA-BGE -o qqArtNeph-RNAseq
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iqAioThal-RNAseq.tsv -p ERGA-BGE -o iqAioThal-RNAseq
     ```
-* Update qqArtNeph-RNAseq.exp.xml to reference accession number of previously registered study:
+* Update -RNAseq.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission-hold.xml with hold date is used.
+* Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission-hold.xml" -F "EXPERIMENT=@qqArtNeph-RNAseq.exp.xml" -F "RUN=@qqArtNeph-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iqAioThal-RNAseq.exp.xml" -F "RUN=@iqAioThal-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -103,7 +104,7 @@ Submission of raw reads for *Artema nephilit* to facilitate assembly and annotat
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Umbrella project - **TODO**
+### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
 * There is a CNAG script, that should do the deed of creating the xml file:
