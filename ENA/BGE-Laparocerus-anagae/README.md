@@ -17,8 +17,8 @@ Submission will be done via CNAG script and programmatic submission route using 
 
 * [Metadata template](./data/BGE-Laparocerus-anagae-metadata.xlsx)
 * [BGE HiFi metadata](./data/icLapAnag-hifi.tsv)
-* [BGE HiC metadata](./data/-hic.tsv)
-* [BGE RNAseq metadata](./data/-rnaseq.tsv)
+* [BGE HiC metadata](./data/TOLID-hic.tsv)
+* [BGE RNAseq metadata](./data/TOLID-rnaseq.tsv)
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->

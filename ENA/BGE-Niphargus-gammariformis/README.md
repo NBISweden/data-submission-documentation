@@ -46,12 +46,15 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC
+### Submit HiC **TODO**
 
 #### Preparations
-* I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/15BObG5Z8CExbTa2bu4h8qvsr6xn8M0MT/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA115536145](https://www.ebi.ac.uk/biosamples/samples/SAMEA115536145).
+* I received sample IDs from [NGI](https://docs.google.com/spreadsheets/d/15BObG5Z8CExbTa2bu4h8qvsr6xn8M0MT/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA115536145](https://www.ebi.ac.uk/biosamples/samples/SAMEA115536145).
 
 * The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+
+* 2 more data sets has been produced, based on biosample SAMEA115536142
+* Note to self, need to make sure that the xmls are correct since separate samples and library names
 
 #### XML
 * I created [qmNipGamm-HiC.tsv](./data/qmNipGamm-HiC.tsv)

@@ -16,9 +16,9 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ## Procedure overview and links to examples
 
 * [Metadata template](./data/BGE--metadata.xlsx)
-* [BGE HiFi metadata](./data/-HiFi.tsv)
-* [BGE HiC metadata](./data/-HiC.tsv)
-* [BGE RNAseq metadata](./data/-RNAseq.tsv)
+* [BGE HiFi metadata](./data/TOLID-HiFi.tsv)
+* [BGE HiC metadata](./data/TOLID-HiC.tsv)
+* [BGE RNAseq metadata](./data/TOLID-RNAseq.tsv)
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
@@ -30,17 +30,17 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 #### XML
-* I created [-HiFi.tsv](./data/-HiFi.tsv)
+* I created [TOLID-HiFi.tsv](./data/TOLID-HiFi.tsv)
 * Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f -HiFi.tsv -p ERGA-BGE -o -HiFi
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f TOLID-HiFi.tsv -p ERGA-BGE -o TOLID-HiFi
     ```
 
 * Study is private, so submission.xml with hold date is used.
 
 * Submit both projects and experiment in one go, i.e:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@-HiFi.study.xml" -F "EXPERIMENT=@-HiFi.exp.xml" -F "RUN=@-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@TOLID-HiFi.study.xml" -F "EXPERIMENT=@TOLID-HiFi.exp.xml" -F "RUN=@TOLID-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -54,12 +54,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
-* I created [-HiC.tsv](./data/-HiC.tsv)
+* I created [TOLID-HiC.tsv](./data/TOLID-HiC.tsv)
 * Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f -HiC.tsv -p ERGA-BGE -o -HiC
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f TOLID-HiC.tsv -p ERGA-BGE -o TOLID-HiC
     ```
-* Update -HiC.exp.xml to reference accession number of previously registered study:
+* Update TOLID-HiC.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
@@ -68,7 +68,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@-HiC.exp.xml" -F "RUN=@-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@TOLID-HiC.exp.xml" -F "RUN=@TOLID-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -82,12 +82,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
-* I created [-RNAseq.tsv](./data/-RNAseq.tsv)
+* I created [TOLID-RNAseq.tsv](./data/TOLID-RNAseq.tsv)
 * Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f -RNAseq.tsv -p ERGA-BGE -o -RNAseq
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f TOLID-RNAseq.tsv -p ERGA-BGE -o TOLID-RNAseq
     ```
-* Update -RNAseq.exp.xml to reference accession number of previously registered study:
+* Update TOLID-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
@@ -96,7 +96,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@-RNAseq.exp.xml" -F "RUN=@-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@TOLID-RNAseq.exp.xml" -F "RUN=@TOLID-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
