@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qqLycPrae_Hi-C_LV6000912286_HC033-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qqLycPrae_Hi-C_LV6000912286_HC033-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqLycPrae_YB-4221-HC033-1A1A_S159_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="34e093bc1c94500b821a530b5a7ce846" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="qqLycPrae_YB-4221-HC033-1A1A_S159_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="dc86a75fec58d92a2c45e4496a2076eb" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qqLycPrae_Hi-C_LV6000912286_HC033-1A2A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qqLycPrae_Hi-C_LV6000912286_HC033-1A2A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqLycPrae_YD-4287-HC033-1A2A_S268_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="c9480cab034a515574993d66c45b3bc8" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="qqLycPrae_YD-4287-HC033-1A2A_S268_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="a9c681ed55f4371fa529a53ac4b9e955" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
