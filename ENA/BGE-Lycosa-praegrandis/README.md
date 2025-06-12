@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90409 (experiment), PRJEB90410 (assembly)
 ---
 
 # BGE - *Lycosa praegrandis*
@@ -37,7 +37,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqLycPrae-HiFi.tsv -p ERGA-BGE -o qqLycPrae-HiFi
     ```
-
+    * 2 experiments were created, but since it is from the same libary (i.e. identical rows), I removed the second.
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
@@ -45,7 +45,25 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-12T13:37:57.987+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14519092" alias="exp_qqLycPrae_HiFi_WGS_LV6000912294_pr_190" status="PRIVATE"/>
+        <RUN accession="ERR15114402" alias="run_qqLycPrae_HiFi_WGS_LV6000912294_pr_190_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR15114403" alias="run_qqLycPrae_HiFi_WGS_LV6000912294_pr_190_bam_2" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90409" alias="erga-bge-qqLycPrae-study-rawdata-2025-06-12" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173413" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90410" alias="erga-bge-qqLycPrae1_primary-2025-06-12" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173414" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33176679" alias="SUBMISSION-12-06-2025-13:37:57:553"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -64,19 +82,32 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update qqLycPrae-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90409"/>
     ```
-* The study XML also needs to be submitted
-* Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study will be private, so submission.xml with hold date is used.
+* I added 'Illumina' to the title and library name, since the other data types have the platform named
+* Remove additional/duplicate `<PAIRED/>` row (error in script)
+* Study is be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
     curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qqLycPrae-HiC.exp.xml" -F "RUN=@qqLycPrae-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
+    * Error, 1 pair of run files are missing from upload area, `qqLycPrae_YB-4221-HC033-1A1A_S159_L008`, must have missed them. Did an upload and renamed using FileZilla.
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-12T15:38:29.087+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14519214" alias="exp_qqLycPrae_Hi-C_LV6000912286_HC033-1A1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14519215" alias="exp_qqLycPrae_Hi-C_LV6000912286_HC033-1A2A" status="PRIVATE"/>
+        <RUN accession="ERR15114525" alias="run_qqLycPrae_Hi-C_LV6000912286_HC033-1A1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15114526" alias="run_qqLycPrae_Hi-C_LV6000912286_HC033-1A2A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33180017" alias="SUBMISSION-12-06-2025-15:38:28:602"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
