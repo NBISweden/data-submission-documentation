@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qqAgeOrie_HiFi_WGS_LV6000912393_pr_188_bam_1">
+		<EXPERIMENT_REF refname="exp_qqAgeOrie_HiFi_WGS_LV6000912393_pr_188"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqAgeOrie_m84045_250423_221737_s3.hifi_reads.bc2229.bam" checksum_method="MD5" checksum="3f579531c0633c5148f5e7d4c801123d" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qqAgeOrie_HiFi_WGS_LV6000912393_pr_188_bam_2">
+		<EXPERIMENT_REF refname="exp_qqAgeOrie_HiFi_WGS_LV6000912393_pr_188"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqAgeOrie_m84045_250423_061700_s1.hifi_reads.bc2229.bam" checksum_method="MD5" checksum="1ccc7d69f2bf58e5a244df879e42a012" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
