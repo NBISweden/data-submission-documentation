@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_ihDacCocc_HiFi_WGS_LV6000903717_pr_222_bam_1">
+		<EXPERIMENT_REF refname="exp_ihDacCocc_HiFi_WGS_LV6000903717_pr_222"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="ihDacCocc_m84045_250508_151432_s3.hifi_reads.bc2293.bam" checksum_method="MD5" checksum="f71c26bf02b6bddcb086f2137d5bcf91" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
