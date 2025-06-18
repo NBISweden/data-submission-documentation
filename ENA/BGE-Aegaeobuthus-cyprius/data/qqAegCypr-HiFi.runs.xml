@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qqAegCypr_HiFi_WGS_LV6000912378_LV6000912346_pr_203_bam_1">
+		<EXPERIMENT_REF refname="exp_qqAegCypr_HiFi_WGS_LV6000912378_LV6000912346_pr_203"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqAegCypr_m84045_250428_184123_s4.hifi_reads.bc2290.bam" checksum_method="MD5" checksum="f17b6bc5f9479a2fb8708510e396c145" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90592 (experiment), PRJEB90593 (assembly)
 ---
 
 # BGE - *Aegaeobuthus cyprius*
@@ -48,7 +48,24 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-18T14:46:18.873+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14537775" alias="exp_qqAegCypr_HiFi_WGS_LV6000912378_LV6000912346_pr_203" status="PRIVATE"/>
+        <RUN accession="ERR15132530" alias="run_qqAegCypr_HiFi_WGS_LV6000912378_LV6000912346_pr_203_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90592" alias="erga-bge-qqAegCypr-study-rawdata-2025-06-18" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173594" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90593" alias="erga-bge-qqAegCypr1_primary-2025-06-18" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173595" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33330201" alias="SUBMISSION-18-06-2025-14:46:18:477"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
