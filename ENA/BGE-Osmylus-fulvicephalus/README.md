@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90646 (experiment), PRJEB90647 (assembly)
 ---
 
 # BGE - *Osmylus fulvicephalus*
@@ -25,12 +25,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 #### XML
-* I created [-HiFi.tsv](./data/inOsmFulv-HiFi.tsv)
+* I created [inOsmFulv-HiFi.tsv](./data/inOsmFulv-HiFi.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f inOsmFulv-HiFi.tsv -p ERGA-BGE -o inOsmFulv-HiFi
@@ -44,7 +44,24 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-19T08:14:27.196+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14538627" alias="exp_inOsmFulv_HiFi_WGS_FS55571909_pr_220" status="PRIVATE"/>
+        <RUN accession="ERR15133391" alias="run_inOsmFulv_HiFi_WGS_FS55571909_pr_220_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90646" alias="erga-bge-inOsmFulv-study-rawdata-2025-06-19" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173651" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90647" alias="erga-bge-inOsmFulv5_primary-2025-06-19" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173652" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33375940" alias="SUBMISSION-19-06-2025-08:14:26:874"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
