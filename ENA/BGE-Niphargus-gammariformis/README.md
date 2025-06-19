@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90636 (experiment), PRJEB90637 (assembly)
 ---
 
 # BGE - *Niphargus gammariformis*
@@ -25,26 +25,51 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 
 #### Preparations
+* There are 2 bam files
+* Sample ID led to BioSample ID in ERGA tracker portal
 
 #### XML
+* I created [qmNipGamm-HiFi.tsv](./data/qmNipGamm-HiFi.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qmNipGamm-HiFi.tsv -p ERGA-BGE -o qmNipGamm-HiFi
+    ```
+    * Removed 1 extra experiment
 
-* Update qmNipGamm-HiFi.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession=""/>
-    ```
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qmNipGamm-HiFi.exp.xml" -F "RUN=@qmNipGamm-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@qmNipGamm-HiFi.study.xml" -F "EXPERIMENT=@qmNipGamm-HiFi.exp.xml" -F "RUN=@qmNipGamm-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-19T07:59:19.812+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14538624" alias="exp_qmNipGamm_HiFi_WGS_DE105_006_pr_148" status="PRIVATE"/>
+        <RUN accession="ERR15133387" alias="run_qmNipGamm_HiFi_WGS_DE105_006_pr_148_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR15133388" alias="run_qmNipGamm_HiFi_WGS_DE105_006_pr_148_bam_2" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90636" alias="erga-bge-qmNipGamm-study-rawdata-2025-06-19" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173641" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90637" alias="erga-bge-qmNipGamm6_primary-2025-06-19" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173642" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33375318" alias="SUBMISSION-19-06-2025-07:59:19:532"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) 
+
+* Note: More data is needed (status 'Top-up' in tracker)
+* **TODO** Update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit HiC **TODO**
 
@@ -56,22 +81,22 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * 2 more data sets has been produced, based on biosample SAMEA115536142
 * Note to self, need to make sure that the xmls are correct since separate samples and library names
 
-#### XML
+#### XML **TODO (rerun to be on the safe side)**
 * I created [qmNipGamm-HiC.tsv](./data/qmNipGamm-HiC.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qmNipGamm-HiC.tsv -p ERGA-BGE -o qmNipGamm-HiC
     ```
-* The study XML also needs to be submitted, since HiC is the first data type we have received.
-    * I will not create the study for the assembly, since I don't yet know (no HiFi data yet, where we usually start, only HiC) which ToLID should be used (the script took `qmNipGamm10`)
-    * Hence, removed that project from qmNipGamm-HiC.study.xml
-
+* Update qmNipGamm-HiFi.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession=""/>
+    ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@qmNipGamm-HiC.study.xml" -F "EXPERIMENT=@qmNipGamm-HiC.exp.xml" -F "RUN=@qmNipGamm-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qmNipGamm-HiC.exp.xml" -F "RUN=@qmNipGamm-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
