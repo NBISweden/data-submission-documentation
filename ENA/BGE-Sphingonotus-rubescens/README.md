@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90653 (experiment), PRJEB90654 (assembly)
 ---
 
 # BGE - *Sphingonotus rubescens*
@@ -37,7 +37,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iqSphRube-HiFi.tsv -p ERGA-BGE -o iqSphRube-HiFi
     ```
-
+    * 5 bam files so needed to remove 4 experiments
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
@@ -45,8 +45,30 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-19T10:14:46.291+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14538783" alias="exp_iqSphRube_HiFi_WGS_LV6000908962_pr_194" status="PRIVATE"/>
+        <RUN accession="ERR15133547" alias="run_iqSphRube_HiFi_WGS_LV6000908962_pr_194_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR15133548" alias="run_iqSphRube_HiFi_WGS_LV6000908962_pr_194_bam_2" status="PRIVATE"/>
+        <RUN accession="ERR15133549" alias="run_iqSphRube_HiFi_WGS_LV6000908962_pr_194_bam_3" status="PRIVATE"/>
+        <RUN accession="ERR15133550" alias="run_iqSphRube_HiFi_WGS_LV6000908962_pr_194_bam_4" status="PRIVATE"/>
+        <RUN accession="ERR15133551" alias="run_iqSphRube_HiFi_WGS_LV6000908962_pr_194_bam_5" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90653" alias="erga-bge-iqSphRube-study-rawdata-2025-06-19" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173658" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90654" alias="erga-bge-iqSphRube1_primary-2025-06-19" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173659" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33380838" alias="SUBMISSION-19-06-2025-10:14:45:669"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
     ```
+    * Note: I didnt get a `</RECEIPT>`but assume that it was my terminal window acting up
+
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit HiC
