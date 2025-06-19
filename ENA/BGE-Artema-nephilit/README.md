@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90607 (experiment), PRJEB90608 (assembly)
 ---
 
 # BGE - *Artema nephilit*
@@ -40,7 +40,24 @@ Submission of raw reads for *Artema nephilit* to facilitate assembly and annotat
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-18T15:44:29.572+01:00" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14538034" alias="exp_qqArtNeph_HiFi_WGS_LV6000659149_pr_189" status="PRIVATE"/>
+        <RUN accession="ERR15132795" alias="run_qqArtNeph_HiFi_WGS_LV6000659149_pr_189_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90607" alias="erga-bge-qqArtNeph-study-rawdata-2025-06-18" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP173609" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90608" alias="erga-bge-qqArtNeph1_primary-2025-06-18" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP173610" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33332717" alias="SUBMISSION-18-06-2025-15:44:29:370"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
