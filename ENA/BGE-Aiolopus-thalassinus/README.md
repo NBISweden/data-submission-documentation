@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90990 (experiment), PRJEB90991 (assembly)
 ---
 
 # BGE - *Aiolopus thalassinus*
@@ -25,17 +25,17 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 #### XML
-* I created [-HiFi.tsv](./data/iqAioThal-HiFi.tsv)
+* I created [iqAioThal-HiFi.tsv](./data/iqAioThal-HiFi.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iqAioThal-HiFi.tsv -p ERGA-BGE -o iqAioThal-HiFi
     ```
-
+    * Remove 3 extra experiments due to 4 .bam files with the same library name
 * Study is private, so submission.xml with hold date is used.
 
 * Submit both projects and experiment in one go, i.e:
@@ -44,7 +44,27 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-25T09:45:20.848+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14562376" alias="exp_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001" status="PRIVATE"/>
+        <RUN accession="ERR15157081" alias="run_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR15157082" alias="run_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001_bam_2" status="PRIVATE"/>
+        <RUN accession="ERR15157083" alias="run_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001_bam_3" status="PRIVATE"/>
+        <RUN accession="ERR15157084" alias="run_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001_bam_4" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90990" alias="erga-bge-iqAioThal-study-rawdata-2025-06-25" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173985" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90991" alias="erga-bge-iqAioThal3_primary-2025-06-25" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173986" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33518683" alias="SUBMISSION-25-06-2025-09:45:20:470"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 

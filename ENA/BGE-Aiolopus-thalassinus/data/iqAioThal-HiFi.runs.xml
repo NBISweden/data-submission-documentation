@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001_bam_1">
+		<EXPERIMENT_REF refname="exp_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqAioThal_m84045_250604_175726_s4.hifi_reads.bc2358.bam" checksum_method="MD5" checksum="123b156a9fb63af90a925f8c3fc70799" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001_bam_2">
+		<EXPERIMENT_REF refname="exp_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqAioThal_m84045_250609_150147_s2.hifi_reads.bc2358.bam" checksum_method="MD5" checksum="3cc2bcf2a478b6ee0c5989f179996242" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001_bam_3">
+		<EXPERIMENT_REF refname="exp_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqAioThal_m84045_250609_170443_s4.hifi_reads.bc2358.bam" checksum_method="MD5" checksum="71b0d73ca3919f2c62aa2816f006adb3" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001_bam_4">
+		<EXPERIMENT_REF refname="exp_iqAioThal_HiFi_WGS_LV6000904912_pr_228_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqAioThal_m84045_250609_190750_s1.hifi_reads.bc2358.bam" checksum_method="MD5" checksum="8ef32980b7e4fa120374896392408bbe" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
