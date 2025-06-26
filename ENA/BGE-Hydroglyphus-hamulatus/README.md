@@ -57,6 +57,8 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
 
 * Received accession numbers: `ERX12708954`, `ERR13337980`, `ERX12708955`, `ERR13337981`
 
+* **Note:** I was unaware that this was ULI when submitting HiFi reads. Hence, when trimmed fastq reads are available, these should be uploaded and replace .bam (or add barcode info in metadata i.e. in library_construction_protocol)
+
 ### Submit Hi-C
 
 #### Preparations
