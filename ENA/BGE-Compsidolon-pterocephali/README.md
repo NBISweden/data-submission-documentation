@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB91095 (experiment), PRJEB91096 (assembly)
 ---
 
 # BGE - *Compsidolon pterocephali*
@@ -22,13 +22,15 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
+* If trimmed reads (due to ULI) is put in column named `file_name` (as it normally should when submitting) the scripts produces an empty run .xml file. However, when put in 'native_file_name' column, the scripts complains about the file ending. Hence, need to trick the script by putting the file in `native_file_name` and change ending to `.bam`, then afterwards change to appropriate values in run .xml (rows `<RUN ` and `<FILE `)
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* ULI protocol, trimmed or untrimmed? It was decided that trimmed reads are most useful and hence should be submitted
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [ihConPter-HiFi.tsv](./data/ihConPter-HiFi.tsv)
@@ -36,7 +38,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f ihConPter-HiFi.tsv -p ERGA-BGE -o ihConPter-HiFi
     ```
-
+    * If trimmed reads (due to ULI) is put in column named `file_name` (as it normally should when submitting) the scripts produces an empty run .xml file. However, when put in 'native_file_name' column, the scripts complains about the file ending. Hence, need to trick the script by putting the file in `native_file_name` and change ending to `.bam`, then afterwards change to appropriate values in run .xml (rows `<RUN ` and `<FILE `)
+    *
 * Study is private, so submission.xml with hold date is used.
 
 * Submit both projects and experiment in one go, i.e:
@@ -45,14 +48,31 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-26T10:17:42.822+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14566103" alias="exp_ihConPter_HiFi_WGS_LV6000912658_pr_221_001" status="PRIVATE"/>
+        <RUN accession="ERR15160451" alias="run_ihConPter_HiFi_WGS_LV6000912658_pr_221_001_fastq_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB91095" alias="erga-bge-ihConPter-study-rawdata-2025-06-26" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP174087" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB91096" alias="erga-bge-ihConPter4_primary-2025-06-26" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP174088" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33523625" alias="SUBMISSION-26-06-2025-10:17:42:482"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit HiC - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [ihConPter-HiC.tsv](./data/ihConPter-HiC.tsv)
@@ -80,7 +100,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit RNAseq - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [ihConPter-RNAseq.tsv](./data/ihConPter-RNAseq.tsv)

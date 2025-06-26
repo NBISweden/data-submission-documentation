@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_ihConPter_HiFi_WGS_LV6000912658_pr_221_001_fastq_1">
+		<EXPERIMENT_REF refname="exp_ihConPter_HiFi_WGS_LV6000912658_pr_221_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="ihConPter_pr_221_001.trimmedreads.fastq.gz" checksum_method="MD5" checksum="55a69519dd44dbc93e9f1bca0159baf8" filetype="fastq"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
