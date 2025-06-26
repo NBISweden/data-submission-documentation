@@ -2,7 +2,7 @@
 <EXPERIMENT_SET>
 	<EXPERIMENT center_name="SCILIFELAB" alias="exp_gfCryBron_HiFi_WGS_DSM_104551_14-DSM_104551_15_pr_159">
 		<TITLE>Cryptotrichosporon brontae PacBio HiFi WGS data</TITLE>
-		<STUDY_REF refname="erga-bge-gfCryBron-study-rawdata-2025-05-21"/>
+		<STUDY_REF refname="erga-bge-gfCryBron-study-rawdata-2025-06-26"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="ERS24610775"/>
@@ -14,7 +14,7 @@
 				<LIBRARY_LAYOUT>
 					<SINGLE/>
 				</LIBRARY_LAYOUT>
-				<LIBRARY_CONSTRUCTION_PROTOCOL>Preparing HiFi SMRTbell® Libraries using the SMRTbell Express Template Prep Kit 3.0</LIBRARY_CONSTRUCTION_PROTOCOL>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The ultra-low input library was constructed according to the “Preparing HiFi SMRTbell libraries from ultra-low DNA input” (PN 101-987-800 Version 02 (November 2021)) from PacBio. DNA was sheared on a Megaruptor 3 (Diagenode) instrument to approximately 12kb, followed by QC on a Femto Pulse instrument (Agilent). DNA repair and ligation were performed according to the PacBio protocol “Preparing whole genome and metagenome libarires using SMRTbell prep kit 3.0” (PN 102-166-600 (April 2022)), with ligation of amplification adapters from the gDNA amplification kit (PN 101-980-000)) instead of SMRTbell adapters. Post-ligation cleanup, amplification and another cleanup were performed according to the standard protocol. DNA repair, ligation and nuclease treatment were performed according to PN 102-166-600 (April 2022). Size selection of the whole library was performed using purified AMPure beads (Beckman Coulter, 3.1X bead ratio) and the PacBio protocol PN 101-854-900 Version 02 (January 2020). QC after size selection was done on Bioanalyzer (Agilent). Primer annealing and polymerase binding were performed on the library using the Revio polymerase kit (PN 102-739-100). Finally, one SMRTcell 25M was sequenced on the PacBio Revio System.</LIBRARY_CONSTRUCTION_PROTOCOL>
 			</LIBRARY_DESCRIPTOR>
 		</DESIGN>
 		<PLATFORM>

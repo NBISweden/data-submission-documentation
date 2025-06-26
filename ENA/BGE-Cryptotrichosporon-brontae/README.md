@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB91102 (experiment), PRJEB91103 (assembly)
 ---
 
 # BGE - *Cryptotrichosporon brontae*
@@ -28,13 +28,15 @@ Submission of raw reads for *Cryptotrichosporon brontae* to facilitate assembly 
     * Biosamples were deduced given the 'tube or well id's' received from UGC (via slack) and looked up in the ERGA tracking portal: SAMEA115344702, SAMEA115344703
     * I registered the sample via browser, uploading [gfCryBron-HiFi-virtual-sample.tsv](./data/gfCryBron-HiFi-virtual-sample.tsv)
     * Accession number received: `ERS24610775`
+* Note: Ultra-low DNA input protocol has been used, and for those it is the trimmed reads that has to be submitted, not the original .bam file
 
 #### XML
-* I created [gfCryBron-HiFi.tsv](./data/gfCryBron-HiFi.tsv)
+* I created [gfCryBron-HiFi.tsv](./data/gfCryBron-HiFi.tsv), and added `.bam` to file name
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f gfCryBron-HiFi.tsv -p ERGA-BGE -o gfCryBron-HiFi
     ```
+    * Edit run .xml and change to `fastq` (2 rows)
 * The study XML also needs to be submitted
 * Submission.xml with hold date is used.
 * Submit using curl:
@@ -43,7 +45,24 @@ Submission of raw reads for *Cryptotrichosporon brontae* to facilitate assembly 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-26T11:38:04.032+01:00" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14566145" alias="exp_gfCryBron_HiFi_WGS_DSM_104551_14-DSM_104551_15_pr_159" status="PRIVATE"/>
+        <RUN accession="ERR15160492" alias="run_gfCryBron_HiFi_WGS_DSM_104551_14-DSM_104551_15_pr_159_fastq_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB91102" alias="erga-bge-gfCryBron-study-rawdata-2025-06-26" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP174093" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB91103" alias="erga-bge-gfCryBron1_primary-2025-06-26" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP174094" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33523696" alias="SUBMISSION-26-06-2025-11:38:03:685"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -52,7 +71,7 @@ Submission of raw reads for *Cryptotrichosporon brontae* to facilitate assembly 
 #### Preparations
 * I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/1z22KvtncVnJI-53qq-we5J6kC6ytuX9g/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA116283198](https://www.ebi.ac.uk/biosamples/samples/SAMEA116283198).
 
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [gfCryBron-HiC.tsv](./data/gfCryBron-HiC.tsv)
