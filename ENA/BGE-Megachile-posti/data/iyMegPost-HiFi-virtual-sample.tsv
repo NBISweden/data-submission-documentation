@@ -1,0 +1,3 @@
+Checklist	ERC000011	ENA default sample checklist					
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)	composed of
+3229175	Megachile posti	iyMegPost_HiFi_pool	iyMegPost HiFi pool	This sample is a HiFi pool of multiple samples. It is composed of samples SAMEA116289198 and SAMEA116289199	2024-06-13	Cyprus	SAMEA116289198, SAMEA116289199

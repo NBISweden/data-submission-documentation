@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iyMegPost_HiFi_WGS_LV6000912629_LV6000912621_pr_253_001_bam_1">
+		<EXPERIMENT_REF refname="exp_iyMegPost_HiFi_WGS_LV6000912629_LV6000912621_pr_253_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iyMegPost_m84045_250620_120606_s3.hifi_reads.bc2103.bam" checksum_method="MD5" checksum="7d4612a0ba1444aa7e3255014ae028d9" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
