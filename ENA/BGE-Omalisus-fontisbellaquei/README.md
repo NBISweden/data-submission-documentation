@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB91106 (experiment), PRJEB91107 (assembly)
 ---
 
 # BGE - *Omalisus fontisbellaquei*
@@ -25,33 +25,54 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 
 #### Preparations
+* The data files (trimmed reads) were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* **Note:** ULI Ampli Fi protocol has been used 
 
 #### XML
-
-* Update icOmaFont-HiFi.exp.xml to reference accession number of previously registered study:
+* I created [icOmaFont-HiFi.tsv](./data/icOmaFont-HiFi.tsv), and added `.bam` to file name
+* Run script:
     ```
-    <STUDY_REF accession=""/>
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icOmaFont-HiFi.tsv -p ERGA-BGE -o icOmaFont-HiFi
     ```
+    * Edit run .xml and change to `fastq` (2 rows)
+* The study XML also needs to be submitted
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@icOmaFont-HiFi.exp.xml" -F "RUN=@icOmaFont-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@icOmaFont-HiFi.study.xml" -F "EXPERIMENT=@icOmaFont-HiFi.exp.xml" -F "RUN=@icOmaFont-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-26T11:50:40.809+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14566158" alias="exp_icOmaFont_HiFi_WGS_FS55571907_pr_239_001" status="PRIVATE"/>
+        <RUN accession="ERR15160505" alias="run_icOmaFont_HiFi_WGS_FS55571907_pr_239_001_fastq_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB91106" alias="erga-bge-icOmaFont-study-rawdata-2025-06-26" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP174097" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB91107" alias="erga-bge-icOmaFont1_primary-2025-06-26" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP174098" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33523712" alias="SUBMISSION-26-06-2025-11:50:40:600"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC
+### Submit HiC **TODO**
 
 #### Preparations
 * There is an issue with the sample for this dataset, the sample ID given from NGI (tube or well id) is not registered in COPO/BioSamples. 2025-03-20: I've sent an email to the sample coordinator for advice on what to do.
 
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [icOmaFont-HiC.tsv](./data/icOmaFont-HiC.tsv) (**TODO**)
@@ -59,14 +80,17 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icOmaFont-HiC.tsv -p ERGA-BGE -o icOmaFont-HiC
     ```
-* The study XML also needs to be submitted, since HiC is the first data type we have received.
-
+* The study XML also needs to be submitted
+* Update icOmaFont-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession=""/>
+    ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@icOmaFont-HiC.study.xml" -F "EXPERIMENT=@icOmaFont-HiC.exp.xml" -F "RUN=@icOmaFont-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@icOmaFont-HiC.exp.xml" -F "RUN=@icOmaFont-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```

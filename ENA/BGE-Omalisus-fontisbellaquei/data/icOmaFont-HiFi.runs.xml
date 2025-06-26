@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icOmaFont_HiFi_WGS_FS55571907_pr_239_001_fastq_1">
+		<EXPERIMENT_REF refname="exp_icOmaFont_HiFi_WGS_FS55571907_pr_239_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="icOmaFont_pr_239_001.trimmedreads.fastq.gz" checksum_method="MD5" checksum="cfb46d6dc5fbccfb485c0526e0fa504a" filetype="fastq"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
