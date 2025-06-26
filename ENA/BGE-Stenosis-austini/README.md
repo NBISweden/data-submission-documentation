@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB91066 (experiment), PRJEB91067 (assembly)
 ---
 
 # BGE - *Stenosis austini*
@@ -25,7 +25,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
@@ -44,9 +44,26 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-26T05:42:35.751+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14565370" alias="exp_icSteAust_HiFi_WGS_LV6000912695_pr_231_001" status="PRIVATE"/>
+        <RUN accession="ERR15159718" alias="run_icSteAust_HiFi_WGS_LV6000912695_pr_231_001_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB91066" alias="erga-bge-icSteAust-study-rawdata-2025-06-26" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP174062" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB91067" alias="erga-bge-icSteAust9_primary-2025-06-26" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP174063" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33523128" alias="SUBMISSION-26-06-2025-05:42:35:298"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/), including a comment that Project is private
 
 ### Submit HiC - **TODO**
 #### Preparations
