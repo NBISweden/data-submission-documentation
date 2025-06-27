@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_ihConPter_Hi-C_LV6000912650_HC042-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_ihConPter_Hi-C_LV6000912650_HC042-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="ihConPter_YD-4287-HC042-1A1A_S272_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="a816432048866159c247c33b16ba68e3" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="ihConPter_YD-4287-HC042-1A1A_S272_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="c2c61098cd1bbf52d53cebecb2113942" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
