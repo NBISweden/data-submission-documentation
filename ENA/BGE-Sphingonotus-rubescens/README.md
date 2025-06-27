@@ -97,7 +97,22 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-27T14:24:41.830+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14571488" alias="exp_iqSphRube_Hi-C_LV6000908964_HC037-1A1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14571489" alias="exp_iqSphRube_Hi-C_LV6000908964_HC037-1A2A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14571490" alias="exp_iqSphRube_Hi-C_LV6000908964_HC037-1A2B" status="PRIVATE"/>
+        <RUN accession="ERR15165757" alias="run_iqSphRube_Hi-C_LV6000908964_HC037-1A1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15165758" alias="run_iqSphRube_Hi-C_LV6000908964_HC037-1A2A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15165759" alias="run_iqSphRube_Hi-C_LV6000908964_HC037-1A2B_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33529482" alias="SUBMISSION-27-06-2025-14:24:41:537"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
