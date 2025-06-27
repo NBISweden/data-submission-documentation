@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_xoWirArge_HiFi_WGS_wargBGO23-6_pr_172_fastq_1">
+		<EXPERIMENT_REF refname="exp_xoWirArge_HiFi_WGS_wargBGO23-6_pr_172"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="wirArge_pr_172_001.trimmedreads.fastq.gz" checksum_method="MD5" checksum="f088b47be94be39e52b8913b8c937994" filetype="fastq"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_xoWirArge_HiFi_WGS_FS42595739_pr_123_fastq_1">
+		<EXPERIMENT_REF refname="exp_xoWirArge_HiFi_WGS_FS42595739_pr_123"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="wirArge_pr_123_001.cleaned_reads.fastq.gz" checksum_method="MD5" checksum="d165eccb500ab7f2d901efa6fcd113fe" filetype="fastq"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
