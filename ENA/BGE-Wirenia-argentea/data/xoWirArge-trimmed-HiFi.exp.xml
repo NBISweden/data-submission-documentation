@@ -23,7 +23,7 @@
 			</PACBIO_SMRT>
 		</PLATFORM>
 	</EXPERIMENT>
-	<EXPERIMENT center_name="SCILIFELAB" alias="exp_xoWirArge_HiFi_WGS_FS42595739_pr_123">
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_xoWirArge_HiFi_WGS_FS42595739_pr_123_ULI">
 		<TITLE>Wirenia argentea PacBio HiFi WGS data</TITLE>
 		<STUDY_REF accession="PRJEB83554"/>
 		<DESIGN>

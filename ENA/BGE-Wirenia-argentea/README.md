@@ -145,9 +145,23 @@ Submission will be done via CNAG script and programmatic submission route using 
     ```
     curl -u username:password -F "SUBMISSION=@submission-hold.xml" -F "EXPERIMENT=@xoWirArge-trimmed-HiFi.exp.xml" -F "RUN=@xoWirArge-trimmed-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
+* Error upon submission since an experiment with the same name already had been submited (the cancelled one). I changed the alias, adding `_ULI` to the pr_123 experiment, and updated the run xml accordingly.
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-27T12:49:01.678+01:00" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14570654" alias="exp_xoWirArge_HiFi_WGS_wargBGO23-6_pr_172" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14570655" alias="exp_xoWirArge_HiFi_WGS_FS42595739_pr_123_ULI" status="PRIVATE"/>
+        <RUN accession="ERR15164923" alias="run_xoWirArge_HiFi_WGS_wargBGO23-6_pr_172_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15164924" alias="run_xoWirArge_HiFi_WGS_FS42595739_pr_123_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33528510" alias="SUBMISSION-27-06-2025-12:49:01:356"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
