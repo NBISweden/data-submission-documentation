@@ -66,7 +66,7 @@ Submission of raw reads for *Cryptotrichosporon brontae* to facilitate assembly 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC - **TODO**
+### Submit HiC
 
 #### Preparations
 * I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/1z22KvtncVnJI-53qq-we5J6kC6ytuX9g/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA116283198](https://www.ebi.ac.uk/biosamples/samples/SAMEA116283198).
@@ -81,11 +81,11 @@ Submission of raw reads for *Cryptotrichosporon brontae* to facilitate assembly 
     ```
 * Update gfCryBron-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB91102"/>
     ```
 
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
 * Study is private, so submission-hold.xml with hold date is used.
 * Submit using curl:
     ```
@@ -93,7 +93,18 @@ Submission of raw reads for *Cryptotrichosporon brontae* to facilitate assembly 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-27T08:34:23.426+01:00" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14570414" alias="exp_gfCryBron_Hi-C_DSM_104551_17_HC015-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR15164691" alias="run_gfCryBron_Hi-C_DSM_104551_17_HC015-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33527091" alias="SUBMISSION-27-06-2025-08:34:23:089"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -110,7 +121,7 @@ Submission of raw reads for *Cryptotrichosporon brontae* to facilitate assembly 
     ```
 * Update gfCryBron-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB91102"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named

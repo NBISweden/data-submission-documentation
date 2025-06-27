@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_gfCryBron_Hi-C_DSM_104551_17_HC015-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_gfCryBron_Hi-C_DSM_104551_17_HC015-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="gfCryBron_YD-4287-HC015-1A1A_S266_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="c6b509abff4f495862a2800e5798c60b" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="gfCryBron_YD-4287-HC015-1A1A_S266_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="f89675dfa85c56360718058c13d82493" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
