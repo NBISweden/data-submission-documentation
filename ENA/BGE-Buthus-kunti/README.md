@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90597 (experiment), PRJEB90598 (assembly)
 ---
 
 # BGE - *Buthus kunti*
@@ -25,12 +25,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 #### XML
-* I created [-HiFi.tsv](./data/qqButKunt-HiFi.tsv)
+* I created [qqButKunt-HiFi.tsv](./data/qqButKunt-HiFi.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqButKunt-HiFi.tsv -p ERGA-BGE -o qqButKunt-HiFi
@@ -44,14 +44,31 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-18T15:05:16.572+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14537940" alias="exp_qqButKunt_HiFi_WGS_LV6000912363_pr_204" status="PRIVATE"/>
+        <RUN accession="ERR15132695" alias="run_qqButKunt_HiFi_WGS_LV6000912363_pr_204_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90597" alias="erga-bge-qqButKunt-study-rawdata-2025-06-18" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173599" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90598" alias="erga-bge-qqButKunt1_primary-2025-06-18" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173600" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33331129" alias="SUBMISSION-18-06-2025-15:05:16:318"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit HiC - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [-HiC.tsv](./data/qqButKunt-HiC.tsv)
@@ -79,7 +96,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit RNAseq - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [-RNAseq.tsv](./data/qqButKunt-RNAseq.tsv)

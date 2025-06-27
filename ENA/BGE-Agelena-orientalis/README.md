@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90605 (experiment), PRJEB90606 (assembly)
 ---
 
 # BGE - *Agelena orientalis*
@@ -32,6 +32,7 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqAgeOrie-HiFi.tsv -p ERGA-BGE -o qqAgeOrie-HiFi
     ```
+    * Had to remove 1 experiment
 * The study XML also needs to be submitted
 * Submission.xml with hold date is used.
 * Submit using curl:
@@ -40,7 +41,25 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-18T15:36:00.119+01:00" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14538033" alias="exp_qqAgeOrie_HiFi_WGS_LV6000912393_pr_188" status="PRIVATE"/>
+        <RUN accession="ERR15132793" alias="run_qqAgeOrie_HiFi_WGS_LV6000912393_pr_188_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR15132794" alias="run_qqAgeOrie_HiFi_WGS_LV6000912393_pr_188_bam_2" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90605" alias="erga-bge-qqAgeOrie-study-rawdata-2025-06-18" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP173607" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90606" alias="erga-bge-qqAgeOrie5_primary-2025-06-18" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP173608" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33332387" alias="SUBMISSION-18-06-2025-15:35:59:719"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -49,7 +68,7 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
 #### Preparations
 * I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/1z22KvtncVnJI-53qq-we5J6kC6ytuX9g/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA116283198](https://www.ebi.ac.uk/biosamples/samples/SAMEA116283198).
 
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [qqAgeOrie-HiC.tsv](./data/qqAgeOrie-HiC.tsv)

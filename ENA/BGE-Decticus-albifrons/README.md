@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90632 (experiment), PRJEB90633 (assembly)
 ---
 
 # BGE - *Decticus albifrons*
@@ -25,7 +25,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 
 #### Preparations
 * There are 4 bam files
@@ -38,6 +38,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iqDecAlbi-HiFi.tsv -p ERGA-BGE -o iqDecAlbi-HiFi
     ```
+    * Removed 3 extra experiments
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
@@ -45,7 +46,27 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-19T07:08:32.911+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14538615" alias="exp_iqDecAlbi_HiFi_WGS_LV6000905101_pr_192" status="PRIVATE"/>
+        <RUN accession="ERR15133374" alias="run_iqDecAlbi_HiFi_WGS_LV6000905101_pr_192_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR15133375" alias="run_iqDecAlbi_HiFi_WGS_LV6000905101_pr_192_bam_2" status="PRIVATE"/>
+        <RUN accession="ERR15133376" alias="run_iqDecAlbi_HiFi_WGS_LV6000905101_pr_192_bam_3" status="PRIVATE"/>
+        <RUN accession="ERR15133377" alias="run_iqDecAlbi_HiFi_WGS_LV6000905101_pr_192_bam_4" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90632" alias="erga-bge-iqDecAlbi-study-rawdata-2025-06-19" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173637" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90633" alias="erga-bge-iqDecAlbi3_primary-2025-06-19" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173638" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33373288" alias="SUBMISSION-19-06-2025-07:08:32:344"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -54,7 +75,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 #### Preparations
 * I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/10ZPAhkp1fCmpqR9GAZMRJ9wdXa8m-1G_/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA116283198](https://www.ebi.ac.uk/biosamples/samples/SAMEA116283198).
 
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [iqDecAlbi-HiC.tsv](./data/iqDecAlbi-HiC.tsv)

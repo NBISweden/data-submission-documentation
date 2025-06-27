@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193_bam_1">
+		<EXPERIMENT_REF refname="exp_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqPlaFalx_m84045_250410_220601_s1.hifi_reads.bc2238.bam" checksum_method="MD5" checksum="1e06d53bbafc63412fd290b47824a4cc" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193_bam_2">
+		<EXPERIMENT_REF refname="exp_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqPlaFalx_m84045_250410_135555_s2.hifi_reads.bc2238.bam" checksum_method="MD5" checksum="a46e6c0a9bf1075073111f0d0ebd8224" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193_bam_3">
+		<EXPERIMENT_REF refname="exp_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqPlaFalx_m84045_250407_122937_s2.hifi_reads.bc2238.bam" checksum_method="MD5" checksum="fc80c6ad88f088e8a091e27da0c201b1" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193_bam_4">
+		<EXPERIMENT_REF refname="exp_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqPlaFalx_m84045_250410_002305_s4.hifi_reads.bc2238.bam" checksum_method="MD5" checksum="814f7424130d52cba35d51a4668e9ad9" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

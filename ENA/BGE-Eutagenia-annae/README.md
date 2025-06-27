@@ -28,7 +28,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit HiFi - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* **Note:** Data is delivered but bioinformatician says: *"Please skip Eutagenia annae for now. Due to some mislabeling of the tubes 2 individuals were sequenced with PacBio, i.e. we have a tetraploid problem and HiC is most probably from a 3rd individual. Lets focus on the easier species first."*. 
+  * The 2 samples also has different ToLID's so I have no idea which one to use.
+  * Virtual sample is needed
+  * Data sheet is updated and data is transferred to ENA
+  
 #### XML
 * I created [icEutAnna-HiFi.tsv](./data/icEutAnna-HiFi.tsv)
 * Run script:
@@ -54,7 +59,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Virtual sample had to be created and submitted via ENA browser:
     * [icEutAnna-HiC-virtual-sample.tsv](./data/icEutAnna-HiC-virtual-sample.tsv)
     * Accession number received: `ERS24618733`
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [icEutAnna-HiC.tsv](./data/icEutAnna-HiC.tsv)
@@ -82,7 +87,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit RNAseq - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [icEutAnna-RNAseq.tsv](./data/icEutAnna-RNAseq.tsv)

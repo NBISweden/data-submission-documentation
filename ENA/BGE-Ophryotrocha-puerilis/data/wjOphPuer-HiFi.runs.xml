@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_wjOphPuer_HiFi_WGS_FS38820318_pr_167_fastq_1">
+		<EXPERIMENT_REF refname="exp_wjOphPuer_HiFi_WGS_FS38820318_pr_167"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="wjOphPuer_pr_167_001.trimmedreads.fastq.gz" checksum_method="MD5" checksum="4343b87c8a543361531f4837d0e35773" filetype="fastq"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qqButKunt_HiFi_WGS_LV6000912363_pr_204_bam_1">
+		<EXPERIMENT_REF refname="exp_qqButKunt_HiFi_WGS_LV6000912363_pr_204"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqButKunt_m84045_250429_162544_s1.hifi_reads.bc2291.bam" checksum_method="MD5" checksum="bd6b350b6f628d123de692113c7f9f56" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

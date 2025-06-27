@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90655 (experiment), PRJEB90656 (assembly)
 ---
 
 # BGE - *Platycleis falx*
@@ -33,6 +33,7 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iqPlaFalx-HiFi.tsv -p ERGA-BGE -o iqPlaFalx-HiFi
     ```
+    * Remove 3 experiments
 * The study XML also needs to be submitted
 * Submission.xml with hold date is used.
 * Submit using curl:
@@ -41,7 +42,27 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-19T10:25:50.670+01:00" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14538784" alias="exp_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193" status="PRIVATE"/>
+        <RUN accession="ERR15133552" alias="run_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR15133553" alias="run_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193_bam_2" status="PRIVATE"/>
+        <RUN accession="ERR15133554" alias="run_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193_bam_3" status="PRIVATE"/>
+        <RUN accession="ERR15133555" alias="run_iqPlaFalx_HiFi_WGS_LV6000903690_pr_193_bam_4" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90655" alias="erga-bge-iqPlaFalx-study-rawdata-2025-06-19" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP173660" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90656" alias="erga-bge-iqPlaFalx1_primary-2025-06-19" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP173661" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33381450" alias="SUBMISSION-19-06-2025-10:25:50:285"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 

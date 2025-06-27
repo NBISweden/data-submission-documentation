@@ -28,7 +28,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit HiFi - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 #### XML
 * I created [-HiFi.tsv](./data/iyCatAphr-HiFi.tsv)
 * Run script:
@@ -51,7 +51,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit HiC - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [-HiC.tsv](./data/iyCatAphr-HiC.tsv)
@@ -79,7 +79,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit RNAseq - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [-RNAseq.tsv](./data/iyCatAphr-RNAseq.tsv)

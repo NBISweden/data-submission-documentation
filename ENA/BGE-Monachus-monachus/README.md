@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB90634 (experiment), PRJEB90635 (assembly)
 ---
 
 # BGE - *Monachus monachus*
@@ -48,13 +48,31 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * The study XML also needs to be submitted, hence need to check that study xml looks ok
     
 * Study is private, so submission.xml with hold date is used.
-* Submit using curl: **TODO**
+* Submit using curl:
     ```
     curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@mMonMoa-HiFi.study.xml" -F "EXPERIMENT=@mMonMoa-HiFi.exp.xml" -F "RUN=@mMonMoa-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-19T07:16:50.097+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14538616" alias="exp_mMonMoa_HiFi_WGS_FS42549312_pr_177_001" status="PRIVATE"/>
+        <RUN accession="ERR15133378" alias="run_mMonMoa_HiFi_WGS_FS42549312_pr_177_001_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR15133379" alias="run_mMonMoa_HiFi_WGS_FS42549312_pr_177_001_bam_2" status="PRIVATE"/>
+        <PROJECT accession="PRJEB90634" alias="erga-bge-mMonMoa-study-rawdata-2025-06-19" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173639" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB90635" alias="erga-bge-mMonMoa1_primary-2025-06-19" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP173640" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33373631" alias="SUBMISSION-19-06-2025-07:16:49:860"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -63,7 +81,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 #### Preparations
 * I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/10ZPAhkp1fCmpqR9GAZMRJ9wdXa8m-1G_/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA117387581](https://www.ebi.ac.uk/biosamples/samples/SAMEA117387581).
 
-* The data files where transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [mMonMoa-HiC.tsv](./data/mMonMoa-HiC.tsv)

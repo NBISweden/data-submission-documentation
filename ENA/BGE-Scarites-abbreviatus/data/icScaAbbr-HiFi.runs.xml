@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icScaAbbr_HiFi_WGS_LV6000905036_pr_255_001_bam_1">
+		<EXPERIMENT_REF refname="exp_icScaAbbr_HiFi_WGS_LV6000905036_pr_255_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="icScaAbbr_m84045_250620_162027_s4.hifi_reads.bc2105.bam" checksum_method="MD5" checksum="6f7e5b0e1a14c155e91e878bb9e06ec6" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

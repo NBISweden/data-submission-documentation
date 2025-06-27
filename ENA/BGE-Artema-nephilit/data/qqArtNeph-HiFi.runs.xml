@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qqArtNeph_HiFi_WGS_LV6000659149_pr_189_bam_1">
+		<EXPERIMENT_REF refname="exp_qqArtNeph_HiFi_WGS_LV6000659149_pr_189"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqArtNeph_m84045_250416_142243_s4.hifi_reads.bc2230.bam" checksum_method="MD5" checksum="5e6cc0f3f0ca620de3a7bb5c84701bfd" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

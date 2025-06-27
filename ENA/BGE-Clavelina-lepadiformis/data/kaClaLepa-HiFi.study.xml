@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <PROJECT_SET>
-	<PROJECT center_name="SCILIFELAB" alias="erga-bge-kaClaLepa-study-rawdata-2025-03-24">
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-kaClaLepa-study-rawdata-2025-06-18">
 		<NAME>kaClaLepa</NAME>
 		<TITLE>Clavelina lepadiformis, genomic and transcriptomic data. </TITLE>
 		<DESCRIPTION>This project collects the genomic and transcriptomic data generated for Clavelina lepadiformis to facilitate genome assembly and annotation as part of the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/) and organised by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) initiative.</DESCRIPTION>
@@ -14,7 +14,7 @@
 			</PROJECT_ATTRIBUTE>
 		</PROJECT_ATTRIBUTES>
 	</PROJECT>
-	<PROJECT center_name="SCILIFELAB" alias="erga-bge-kaClaLepa18_primary-2025-03-24">
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-kaClaLepa18_primary-2025-06-18">
 		<NAME>kaClaLepa18</NAME>
 		<TITLE>Clavelina lepadiformis, genome assembly, kaClaLepa18. </TITLE>
 		<DESCRIPTION>This project provides the genome assembly of Clavelina lepadiformis. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>

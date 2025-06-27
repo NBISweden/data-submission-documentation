@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qmNipGamm_HiFi_WGS_DE105_006_pr_148_bam_1">
+		<EXPERIMENT_REF refname="exp_qmNipGamm_HiFi_WGS_DE105_006_pr_148"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="nipGamm_m84045_250516_102155_s1.hifi_reads.bc2289.bam" checksum_method="MD5" checksum="c4a0cf7b5f9f0b9fd2e2daf597a2fe77" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmNipGamm_HiFi_WGS_DE105_006_pr_148_bam_2">
+		<EXPERIMENT_REF refname="exp_qmNipGamm_HiFi_WGS_DE105_006_pr_148"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="nipGamm_m84045_250428_123231_s1.hifi_reads.bc2289.bam" checksum_method="MD5" checksum="1ec95716c35045a17039a816516bafaa" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
