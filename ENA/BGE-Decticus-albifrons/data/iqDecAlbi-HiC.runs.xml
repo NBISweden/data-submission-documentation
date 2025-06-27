@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iqDecAlbi_Hi-C_LV6000905100_HC035-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqDecAlbi_Hi-C_LV6000905100_HC035-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqDecAlbi_YB-4221-HC035-1A1A_S160_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="1de7597eafe5afb956fa3c143e929ea5" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqDecAlbi_YB-4221-HC035-1A1A_S160_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="00514dd41db88c5cda0eacc04fb49781" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqDecAlbi_Hi-C_LV6000905100_HC035-1A2A_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqDecAlbi_Hi-C_LV6000905100_HC035-1A2A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqDecAlbi_YD-4287-HC035-1A2A_S269_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="28f05ef60a8d26fab35de91258d42312" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqDecAlbi_YD-4287-HC035-1A2A_S269_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="2a37b8efe4492af19143f4fcae245703" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
