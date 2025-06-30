@@ -61,7 +61,7 @@ Submission of raw reads for *Artema nephilit* to facilitate assembly and annotat
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC - **TODO**
+### Submit HiC
 
 #### Preparations
 * I received sample ID from NGI, which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample.
@@ -76,7 +76,7 @@ Submission of raw reads for *Artema nephilit* to facilitate assembly and annotat
     ```
 * Update qqArtNeph-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90607"/>
     ```
 
 * Remove row `<PAIRED/>` (error in script)
@@ -88,7 +88,18 @@ Submission of raw reads for *Artema nephilit* to facilitate assembly and annotat
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-30T09:14:43.255+01:00" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14574861" alias="exp_qqArtNeph_Hi-C_LV6000659157_HC031-1A1A-CL" status="PRIVATE"/>
+        <RUN accession="ERR15169130" alias="run_qqArtNeph_Hi-C_LV6000659157_HC031-1A1A-CL_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33538684" alias="SUBMISSION-30-06-2025-09:14:42:980"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -105,7 +116,7 @@ Submission of raw reads for *Artema nephilit* to facilitate assembly and annotat
     ```
 * Update qqArtNeph-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90607"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
