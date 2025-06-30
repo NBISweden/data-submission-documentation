@@ -66,7 +66,7 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC - **TODO**
+### Submit HiC
 
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
@@ -79,7 +79,7 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     ```
 * Update iqPlaFalx-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90655"/>
     ```
 
 * Remove row `<PAIRED/>` (error in script)
@@ -91,7 +91,20 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-30T12:00:17.817+01:00" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14576326" alias="exp_iqPlaFalx_Hi-C_LV6000903690_HC036-1A2A-CL" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14576327" alias="exp_iqPlaFalx_Hi-C_LV6000903690_HC036-1A2B-CL" status="PRIVATE"/>
+        <RUN accession="ERR15170752" alias="run_iqPlaFalx_Hi-C_LV6000903690_HC036-1A2A-CL_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15170753" alias="run_iqPlaFalx_Hi-C_LV6000903690_HC036-1A2B-CL_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33539129" alias="SUBMISSION-30-06-2025-12:00:17:349"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -108,7 +121,7 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     ```
 * Update iqPlaFalx-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90655"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
