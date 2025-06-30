@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qqButKunt_Hi-C_LV6000912380_HC032-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qqButKunt_Hi-C_LV6000912380_HC032-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqButKunt_YE-4314-HC032-1A1A_S262_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="a277830004c32dec6f5532bf770fdcbd" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="qqButKunt_YE-4314-HC032-1A1A_S262_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="cedb391fa340dec96f4c22a125ec36ea" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
