@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <EXPERIMENT_SET>
 	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmNipGamm_Hi-C_DE105_010_HC016-1A1A">
-		<TITLE>Niphargus gammariformis Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qmNipGamm-study-rawdata-2025-03-20"/>
+		<TITLE>Niphargus gammariformis Illumina Hi-C data</TITLE>
+		<STUDY_REF accession="PRJEB90636"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA115536145"/>
@@ -13,6 +13,52 @@
 				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
 				<LIBRARY_LAYOUT>
 					<PAIRED NOMINAL_LENGTH="649"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>Hi-C library was created as described in the Arima User Guide for Animal Tissues (A160162 v01) and Library Preparation for Arima High Coverage HiC Kit (A160186 v02). Library QC was performed using the Qubit dsDNA HS Assay kit and the Agilent High Sensitivity DNA Kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmNipGamm_Hi-C_DE105_013_HC016-2A1A">
+		<TITLE>Niphargus gammariformis Illumina Hi-C data</TITLE>
+		<STUDY_REF accession="PRJEB90636"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115536142"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>HC016-2A1A Illumina Hi-C</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="728"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>Hi-C library was created as described in the Arima User Guide for Animal Tissues (A160162 v01) and Library Preparation for Arima High Coverage HiC Kit (A160186 v02). Library QC was performed using the Qubit dsDNA HS Assay kit and the Agilent High Sensitivity DNA Kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmNipGamm_Hi-C_DE105_013_HC016-2A1B">
+		<TITLE>Niphargus gammariformis Illumina Hi-C data</TITLE>
+		<STUDY_REF accession="PRJEB90636"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115536142"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>HC016-2A1B Illumina Hi-C</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="745"/>
 				</LIBRARY_LAYOUT>
 				<LIBRARY_CONSTRUCTION_PROTOCOL>Hi-C library was created as described in the Arima User Guide for Animal Tissues (A160162 v01) and Library Preparation for Arima High Coverage HiC Kit (A160186 v02). Library QC was performed using the Qubit dsDNA HS Assay kit and the Agilent High Sensitivity DNA Kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
 			</LIBRARY_DESCRIPTOR>
