@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_kaMicSqua_Hi-C_FS42549338_HC019-2A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_kaMicSqua_Hi-C_FS42549338_HC019-2A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="kaMicSqua_YB-4221-HC019-2A1A_S154_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="af63b5d149d17f879105bfa5ff7f38fb" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="kaMicSqua_YB-4221-HC019-2A1A_S154_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="7a99b4102f3258ac9ba86ed0998a5311" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
