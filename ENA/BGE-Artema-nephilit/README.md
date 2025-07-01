@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB90607 (experiment), PRJEB90608 (assembly)
+Top_level_acccession: PRJEB91431 (umbrella), PRJEB90607 (experiment), PRJEB90608 (assembly)
 ---
 
 # BGE - *Artema nephilit*
