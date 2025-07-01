@@ -22,6 +22,7 @@ Submission will be done via CNAG script and programmatic submission route using 
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
+* How to programmatically cancel an experiment (that is private)
 
 ## Detailed step by step description
 
@@ -36,14 +37,14 @@ Submission will be done via CNAG script and programmatic submission route using 
     ```
 * Keep track of progress using FileZilla
 
-### HiFi submission
+### HiFi submission v1
 #### Collecting metadata
 * I looked at the delivery README for the HiFi dataset (on Uppmax) and extracted the Name (`FS42595739`). I looked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/), filtered on the organism, and saw that the Name was registered with biosample [SAMEA114530807](https://www.ebi.ac.uk/biosamples/samples/SAMEA114530807).
 * I copied the sample metadata (tube id, ToLID, BioSample id, species name) into the BGE-sheet of the metadata template.
 * NGI says that the experimental metadata is the same as previous HiFi datasets.
 * Created the tsv file [xoWirArge-hifi.tsv](./data/xoWirArge-hifi.tsv)
 
-#### HiFi xml
+#### HiFi xml 
 * I copied [submission.xml](./data/submission.xml) from BGE-Crayfish, using the same embargo date
 
 * Running the script:
@@ -84,33 +85,83 @@ Submission will be done via CNAG script and programmatic submission route using 
 
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
-### HiFi v2 submission - **TODO**
+* Note: **TODO** Apparently the trimmed reads has to be submitted, not the original .bam file. Hence I need to figure out how to replace a run file in an experiment. Can this be done via browser? The file is uploaded (and the excel sheet is updated with a duplicate row for pr_123)
+* New ULI protocol was added via browser
+
+* We have a plan:
+    * [Submission XML:cancel objects](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-v1.html#submission-xml-cancel-objects)
+    1. Cancel current HiFi experiment
+        ```
+        Create a submission-cancel.xml containing (replace the TODO with actual experiment accession number):
+
+        <SUBMISSION>
+        <ACTIONS>
+            <ACTION>
+                <CANCEL target="ERX13464201"/>
+            </ACTION>
+        </ACTIONS>
+        </SUBMISSION>
+
+        Submit via Curl:
+
+        curl -u username:password -F "SUBMISSION=@submission-cancel.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    1. Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-06-27T11:39:07.857+01:00" submissionFile="submission-cancel.xml" success="true">
+            <MESSAGES>
+                <INFO>EXPERIMENT accession "ERX13464201" is set to cancelled status.</INFO>
+                <INFO>RUN accession "ERR14061198" is set to cancelled status.</INFO>
+            </MESSAGES>
+            <ACTIONS/>
+        </RECEIPT>        
+        ```
+    1. Create a new xoWirArge-trimmed-HiFi.tsv and submit, with the trimmed reads instead. This will be done same time as the second HiFi library below
+
+### HiFi v2 submission
 
 * Another sample (wargBGO23-6) has been used to produce HiFi data
-* **I don't know yet if it will be used together with the other HiFi or should replace (but will be difficult to retract so perhaps not refer to it from assembly?)**
 
 #### Preparations
 * Sample ID gave the BioSample ID via ERGA tracker portal
-* Ultra low protocol has been used, have to wait for UGC to provide me with text for library construction protocol
+* Ultra low protocol has been used, submit the trimmed reads, not original .bam file
+* The first library, pr_123_001, does not have a file name like the others on Rackham, but after transfer to ENA I renamed it there (using FileZilla) to `wirArge_pr_123_001.cleaned_reads.fastq.gz`. I also had to calculate the md5 checksum.
 
 #### XML
-* Created the tsv file [xoWirArge-hifi-2.tsv](./data/xoWirArge-hifi-2.tsv)
+* Created the tsv file [xoWirArge-trimmed-HiFi.tsv](./data/xoWirArge-trimmed-HiFi.tsv), containing both libraries, and added `.bam` to file names (pr_123 & pr_172)
 * Run script:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-hifi-2.tsv -p ERGA-BGE -o xoWirArge-hifi-2
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-trimmed-HiFi.tsv -p ERGA-BGE -o xoWirArge-trimmed-HiFi
     ```
-* Update xoWirArge-hifi-2.exp.xml to reference accession number of previously registered study:
+    * Edit run .xml and change to `fastq` (2 rows * 2)
+* Update xoWirArge-trimmed-HiFi.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession="PRJEB83554"/>
     ```
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@xoWirArge-hifi-2.exp.xml" -F "RUN=@xoWirArge-hifi-2.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission-hold.xml" -F "EXPERIMENT=@xoWirArge-trimmed-HiFi.exp.xml" -F "RUN=@xoWirArge-trimmed-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
+* Error upon submission since an experiment with the same name already had been submited (the cancelled one). I changed the alias, adding `_ULI` to the pr_123 experiment, and updated the run xml accordingly.
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-27T12:49:01.678+01:00" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14570654" alias="exp_xoWirArge_HiFi_WGS_wargBGO23-6_pr_172" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14570655" alias="exp_xoWirArge_HiFi_WGS_FS42595739_pr_123_ULI" status="PRIVATE"/>
+        <RUN accession="ERR15164923" alias="run_xoWirArge_HiFi_WGS_wargBGO23-6_pr_172_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15164924" alias="run_xoWirArge_HiFi_WGS_FS42595739_pr_123_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33528510" alias="SUBMISSION-27-06-2025-12:49:01:356"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
