@@ -149,7 +149,7 @@ For each of the BGE species, an **umbrella** project has to be created and linke
 
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ./script/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"
