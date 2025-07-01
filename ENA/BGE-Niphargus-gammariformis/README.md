@@ -71,7 +71,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Note: More data is needed (status 'Top-up' in tracker)
 * **TODO** Update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC **TODO**
+### Submit HiC
 
 #### Preparations
 * I received sample IDs from [NGI](https://docs.google.com/spreadsheets/d/15BObG5Z8CExbTa2bu4h8qvsr6xn8M0MT/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA115536145](https://www.ebi.ac.uk/biosamples/samples/SAMEA115536145).
@@ -81,15 +81,15 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * 2 more data sets has been produced, based on biosample SAMEA115536142
 * Note to self, need to make sure that the xmls are correct since separate samples and library names
 
-#### XML **TODO (rerun to be on the safe side)**
+#### XML
 * I created [qmNipGamm-HiC.tsv](./data/qmNipGamm-HiC.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qmNipGamm-HiC.tsv -p ERGA-BGE -o qmNipGamm-HiC
     ```
-* Update qmNipGamm-HiFi.exp.xml to reference accession number of previously registered study:
+* Update qmNipGamm-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90636"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
@@ -100,7 +100,22 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-30T06:53:55.720+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14574809" alias="exp_qmNipGamm_Hi-C_DE105_010_HC016-1A1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14574810" alias="exp_qmNipGamm_Hi-C_DE105_013_HC016-2A1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14574811" alias="exp_qmNipGamm_Hi-C_DE105_013_HC016-2A1B" status="PRIVATE"/>
+        <RUN accession="ERR15169078" alias="run_qmNipGamm_Hi-C_DE105_010_HC016-1A1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15169079" alias="run_qmNipGamm_Hi-C_DE105_013_HC016-2A1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15169080" alias="run_qmNipGamm_Hi-C_DE105_013_HC016-2A1B_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33538379" alias="SUBMISSION-30-06-2025-06:53:55:382"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -117,7 +132,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update qmNipGamm-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90636"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named

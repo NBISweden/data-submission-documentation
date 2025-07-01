@@ -15,4 +15,34 @@
 			</FILES>
 		</DATA_BLOCK>
 	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmNipGamm_Hi-C_DE105_013_HC016-2A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qmNipGamm_Hi-C_DE105_013_HC016-2A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="nipGamm_YE-4314-HC016-2A1A_S257_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="2c3b1a3e27af692f6e2283fc450f18fd" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="nipGamm_YE-4314-HC016-2A1A_S257_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="23c74961a6ad7d77e50909ab5083aa5a" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qmNipGamm_Hi-C_DE105_013_HC016-2A1B_fastq_1">
+		<EXPERIMENT_REF refname="exp_qmNipGamm_Hi-C_DE105_013_HC016-2A1B"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="nipGamm_YE-4314-HC016-2A1B_S258_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="933abd3741e0760db858438870d6b1a0" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="nipGamm_YE-4314-HC016-2A1B_S258_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="f417ba186f5f9992351baa1b9f2ec749" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
 </RUN_SET>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_kaClaLepa_Hi-C_FS42549323_HC018-2A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_kaClaLepa_Hi-C_FS42549323_HC018-2A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="kaClaLepa_YB-4221-HC018-2A1A_S153_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="8ac19984859b5856f57bbabd4e8c1566" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="kaClaLepa_YB-4221-HC018-2A1A_S153_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="0bbf5d0d85a3b89ca758dd41fda1c988" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

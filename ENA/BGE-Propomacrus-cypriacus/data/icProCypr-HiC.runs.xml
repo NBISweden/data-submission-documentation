@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icProCypr_Hi-C_LV6000912289_HC028-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_icProCypr_Hi-C_LV6000912289_HC028-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="icProCypr_YB-4221-HC028-1A1A_S158_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="db71c747e204161d4714bb9a14af25c7" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="icProCypr_YB-4221-HC028-1A1A_S158_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="381842d0a715278e418a22ca9eb1fa11" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

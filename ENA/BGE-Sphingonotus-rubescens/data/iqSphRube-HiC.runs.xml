@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iqSphRube_Hi-C_LV6000908964_HC037-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqSphRube_Hi-C_LV6000908964_HC037-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqSphRube_YB-4221-HC037-1A1A_S161_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="35708269e9a0f6ace31be2849f6a71cb" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqSphRube_YB-4221-HC037-1A1A_S161_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="4d99bab318a292ac59ad320ea3b6dd78" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqSphRube_Hi-C_LV6000908964_HC037-1A2A_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqSphRube_Hi-C_LV6000908964_HC037-1A2A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqSphRube_YD-4287-HC037-1A2A_S270_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="fa73f2cf4f5ba947ea638cae58695b7e" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqSphRube_YD-4287-HC037-1A2A_S270_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="f3a51ff03c2be3c21f79aa6c5ffef572" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqSphRube_Hi-C_LV6000908964_HC037-1A2B_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqSphRube_Hi-C_LV6000908964_HC037-1A2B"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqSphRube_YD-4287-HC037-1A2B_S271_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="25fbf28d3147fc07db6c4b80b54d0253" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqSphRube_YD-4287-HC037-1A2B_S271_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="60467b2b29434370a23963ccd8812756" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

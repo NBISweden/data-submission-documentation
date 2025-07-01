@@ -17,8 +17,8 @@ Submission will be done via CNAG script and programmatic submission route using 
 
 * [Metadata template](./data/BGE-Microcosmus-squamiger-metadata.xlsx)
 * [BGE HiFi metadata](./data/kaMicSqua-hifi.tsv)
-* [BGE HiC metadata](./data/TOLID-hic.tsv)
-* [BGE RNAseq metadata](./data/TOLID-rnaseq.tsv)
+* [BGE HiC metadata](./data/kaMicSqua-hic.tsv)
+* [BGE RNAseq metadata](./data/kaMicSqua-rnaseq.tsv)
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
@@ -83,15 +83,72 @@ Submission will be done via CNAG script and programmatic submission route using 
 
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
-### HiC submission
-#### Collect metadata
-#### Create xml
-#### Submission
+### Submit HiC
+#### Preparations
+* Sample ID gave BioSample ID via ERGA tracker portal
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
-### RNAseq submission
-#### Collect metadata
-#### Create xml
-#### Submission
+#### XML
+* I created [kaMicSqua-HiC.tsv](./data/kaMicSqua-HiC.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f kaMicSqua-HiC.tsv -p ERGA-BGE -o kaMicSqua-HiC
+    ```
+* Update kaMicSqua-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB83563"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study will be private, so submission.xml with hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@kaMicSqua-HiC.exp.xml" -F "RUN=@kaMicSqua-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-07-01T14:15:33.198+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14588543" alias="exp_kaMicSqua_Hi-C_FS42549338_HC019-2A1A" status="PRIVATE"/>
+        <RUN accession="ERR15183153" alias="run_kaMicSqua_Hi-C_FS42549338_HC019-2A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33545416" alias="SUBMISSION-01-07-2025-14:15:32:922"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+
+### Submit RNAseq - **TODO**
+#### Preparations
+* Sample ID gave BioSample ID via ERGA tracker portal
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+
+#### XML
+* I created [kaMicSqua-RNAseq.tsv](./data/kaMicSqua-RNAseq.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f kaMicSqua-RNAseq.tsv -p ERGA-BGE -o kaMicSqua-RNAseq
+    ```
+* Update kaMicSqua-RNAseq.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB83563"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is private, so submission.xml with hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@kaMicSqua-RNAseq.exp.xml" -F "RUN=@kaMicSqua-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Umbrella project
 * **TODO**

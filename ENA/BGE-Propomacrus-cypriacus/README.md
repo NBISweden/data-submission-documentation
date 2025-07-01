@@ -80,7 +80,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update icProCypr-HiFi.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90649"/>
     ```
 * The study XML will not be submitted
 
@@ -93,7 +93,18 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-07-01T06:28:29.733+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14577979" alias="exp_icProCypr_Hi-C_LV6000912289_HC028-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR15172555" alias="run_icProCypr_Hi-C_LV6000912289_HC028-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33544639" alias="SUBMISSION-01-07-2025-06:28:29:468"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -110,7 +121,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update icProCypr-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90649"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named

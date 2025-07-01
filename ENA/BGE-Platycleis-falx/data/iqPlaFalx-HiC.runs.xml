@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iqPlaFalx_Hi-C_LV6000903690_HC036-1A2A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqPlaFalx_Hi-C_LV6000903690_HC036-1A2A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqPlaFalx_YE-4314-HC036-1A2A-CL_S263_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="90fc346c7eb95a4b0a499270107d2228" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqPlaFalx_YE-4314-HC036-1A2A-CL_S263_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="5ead5f82f3e2b61397ef1c958072a2cc" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqPlaFalx_Hi-C_LV6000903690_HC036-1A2B-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqPlaFalx_Hi-C_LV6000903690_HC036-1A2B-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqPlaFalx_YE-4314-HC036-1A2B-CL_S264_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="dec581c31f8ce40e63951b362ed15c07" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqPlaFalx_YE-4314-HC036-1A2B-CL_S264_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="314eca437a71bdb956f926af086cbb44" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

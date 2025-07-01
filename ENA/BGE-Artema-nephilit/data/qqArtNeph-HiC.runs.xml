@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qqArtNeph_Hi-C_LV6000659157_HC031-1A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_qqArtNeph_Hi-C_LV6000659157_HC031-1A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqArtNeph_YE-4314-HC031-1A1A-CL_S261_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="ec500b0c11c4ae6bcddf481bcc0e2925" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="qqArtNeph_YE-4314-HC031-1A1A-CL_S261_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="71338bfdff10b2bfd2421878ba779936" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

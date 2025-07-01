@@ -84,13 +84,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iqDecAlbi-HiC.tsv -p ERGA-BGE -o iqDecAlbi-HiC
     ```
 * The study XML will not be submitted
+* **Note:** There are 2 HiC datasets -> 2 experiments
 * Update iqDecAlbi-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90632"/>
     ```
 
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
+* I added 'Illumina' to the library names and titles, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
@@ -98,7 +99,20 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-06-27T09:48:05.385+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14570452" alias="exp_iqDecAlbi_Hi-C_LV6000905100_HC035-1A1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX14570453" alias="exp_iqDecAlbi_Hi-C_LV6000905100_HC035-1A2A" status="PRIVATE"/>
+        <RUN accession="ERR15164724" alias="run_iqDecAlbi_Hi-C_LV6000905100_HC035-1A1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15164725" alias="run_iqDecAlbi_Hi-C_LV6000905100_HC035-1A2A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33527309" alias="SUBMISSION-27-06-2025-09:48:05:050"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -115,7 +129,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update iqDecAlbi-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90632"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
