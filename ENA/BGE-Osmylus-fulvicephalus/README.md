@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB90646 (experiment), PRJEB90647 (assembly)
+Top_level_acccession: PRJEB91535 (umbrella), PRJEB90646 (experiment), PRJEB90647 (assembly)
 ---
 
 # BGE - *Osmylus fulvicephalus*
@@ -143,7 +143,7 @@ For each of the BGE species, an **umbrella** project has to be created and linke
 1. Copy experiment accession number from metadata in top of this README
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Osmylus fulvicephalus" -t inOsmFulv -p ERGA-BGE -c SCILIFELAB -a PRJEB90646 -x 446453
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"
@@ -158,6 +158,16 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-07-02T08:27:19.916+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB91535" alias="erga-bge-inOsmFulv-study-umbrella-2025-07-02" status="PRIVATE" holdUntilDate="2025-07-04+01:00"/>
+        <SUBMISSION accession="ERA33548753" alias="SUBMISSION-02-07-2025-08:27:19:615"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
