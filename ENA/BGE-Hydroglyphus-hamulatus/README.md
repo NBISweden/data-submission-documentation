@@ -155,7 +155,7 @@ For each of the BGE species, an umbrella project has to be created and linked to
 
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ./script/get_umbrella_xml_ENA.py -s "Hydroglyphus hamulatus" -t icHydHamu2 -p ERGA-BGE -c SCILIFELAB -a PRJEB76972 -x 3078427
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Hydroglyphus hamulatus" -t icHydHamu2 -p ERGA-BGE -c SCILIFELAB -a PRJEB76972 -x 3078427
     ```
 * Create a [submission-umbrella.xml](ENA/BGE-Hydroglyphus-hamulatus/data/submission-umbrella.xml)
 * Submit using curl:

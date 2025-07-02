@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB90592 (experiment), PRJEB90593 (assembly)
+Top_level_acccession: PRJEB91378 (umbrella), PRJEB90592 (experiment), PRJEB90593 (assembly)
 ---
 
 # BGE - *Aegaeobuthus cyprius*
@@ -139,23 +139,49 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
+* What is the best way of collecting the data, since it is even the taxonomy ID that is needed?
+    1. Collect scientific name and tolId from the metadata template sheet
+    1. Go to [ENA browser](https://www.ebi.ac.uk/ena/browser/home) and enter the scientific name as search term
+        1. To the left side, there should be a **Taxon** subheading, that gives the identifier
+    1. Copy experiment accession number from metadata in top of this README
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ./script/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Aegaeobuthus cyprius" -t qqAegCypr -p ERGA-BGE -c SCILIFELAB -a PRJEB90592 -x 3229104
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"
     * -t: tolId e.g. qcLitStyg1
     * -a: the accession number of the raw reads project e.g. PRJEB76283
     * -x: NCBI taxonomy id e.g. 2750798
+* Do I have to release the experiment study via browser, i.e. if no hold date on umbrella, will the attached children automagically be released?
+    * ENA read the docs:
+        * It is good practice to provide a specific release date for an umbrella project using the HOLD action in the submission XML. When this date arrives, the umbrella project will become public automatically. 
+        However, this is optional and **if not provided, the release date defaults to two years after registration**.
 
-* Copy `submission-umbrella.xml` from any of the previous BGE species, check that the hold date is as wanted.
+        * Each **child project is released independently** and they each have their own hold date which is determined on registration, the **umbrella** project release **does not determine** the child project(s) release.
+    * Question is if I should add also assembly project already now, even though it is not yet submitted? However, since there's always a risk that the assembly needs to be a draft, and thus should not be 'ERGA-BGE' tagged (see e.g. Astagobius angustatus), I think it's safest to add afterwards, when ready
+    * Hence
+        1. **Set hold date ~2 days ahead of registration** (guess it could be today's date as well)
+        1. **Release the child project via browser**
+
+* Copy `submission-umbrella.xml` from any of the previous BGE species, set the hold date as desired.
 * Submit using curl:
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-07-01T10:21:13.641+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB91378" alias="erga-bge-qqAegCypr-study-umbrella-2025-07-01" status="PRIVATE" holdUntilDate="2025-07-03+01:00"/>
+        <SUBMISSION accession="ERA33545029" alias="SUBMISSION-01-07-2025-10:21:13:397"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
+* Add received accession number in top of this page, in the NBIS tracking sheet, ERGA tracking sheet, and update status to public
 * **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.

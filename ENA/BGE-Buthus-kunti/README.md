@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB90597 (experiment), PRJEB90598 (assembly)
+Top_level_acccession: PRJEB91433 (umbrella), PRJEB90597 (experiment), PRJEB90598 (assembly)
 ---
 
 # BGE - *Buthus kunti*
@@ -135,9 +135,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
+1. Release the child project via browser
+1. Collect scientific name and tolId from the metadata template sheet
+1. Go to [ENA browser](https://www.ebi.ac.uk/ena/browser/home) and enter the scientific name as search term
+    1. To the left side, there should be a **Taxon** subheading, that gives the identifier
+1. Copy experiment accession number from metadata in top of this README
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ./script/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Buthus kunti" -t qqButKunt -p ERGA-BGE -c SCILIFELAB -a PRJEB90597 -x 3229130
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"
@@ -152,6 +157,16 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-07-01T12:45:02.683+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB91433" alias="erga-bge-qqButKunt-study-umbrella-2025-07-01" status="PRIVATE" holdUntilDate="2025-07-03+01:00"/>
+        <SUBMISSION accession="ERA33545307" alias="SUBMISSION-01-07-2025-12:45:02:383"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.

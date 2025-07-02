@@ -129,9 +129,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Umbrella project - **TODO**
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
+1. Release the child project via browser
+1. Collect scientific name and tolId from the metadata template sheet
+1. Go to [ENA browser](https://www.ebi.ac.uk/ena/browser/home) and enter the scientific name as search term
+    1. To the left side, there should be a **Taxon** subheading, that gives the identifier
+1. Copy experiment accession number from metadata in top of this README
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ./script/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"

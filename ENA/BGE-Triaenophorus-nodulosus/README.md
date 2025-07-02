@@ -112,7 +112,7 @@ For each of the BGE species, an umbrella project has to be created and linked to
 
 * Using the CNAG script:
     ```
-    ./script/get_umbrella_xml_ENA.py -s "Triaenophorus nodulosus" -t heTriNodu1 -p ERGA-BGE -c SCILIFELAB -a PRJEB79894 -x 56557
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Triaenophorus nodulosus" -t heTriNodu1 -p ERGA-BGE -c SCILIFELAB -a PRJEB79894 -x 56557
     ```
 * Create a [submission-umbrella.xml](./scripts/submission-umbrella.xml)
 
