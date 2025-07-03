@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-hic-course-study-2025-07-03">
+		<NAME>BGE HiC Course</NAME>
+		<TITLE>BGE Task 7.2 Lab course in advanced HiC methodology</TITLE>
+		<DESCRIPTION>The HiC course took place on June 9-14, 2024 at BMC Uppsala. AIM: To deliver an open, sustainable training in laboratory preparation of Hi-C libraries for reference genome sequencing of non-model organisms for BGE partner sequencing centers. Organizers:  Biodiversity Genomics Europe (BGE) consortium & SciLifeLab.</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<RELATED_PROJECTS>
+			<RELATED_PROJECT>
+				<PARENT_PROJECT accession="PRJEB61747"/>
+			</RELATED_PROJECT>
+		</RELATED_PROJECTS>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE TAG="Keyword" VALUE="ERGA-BGE"/>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+</PROJECT_SET>
