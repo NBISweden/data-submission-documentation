@@ -99,6 +99,40 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+### HiC version 2
+* I created [heTriNodu-2-HiC.tsv](./data/heTriNodu-2-HiC.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f heTriNodu-2-HiC.tsv -p ERGA-BGE -o heTriNodu-2-HiC
+    ```
+* Update heTriNodu-2-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB79894"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name, since the other data types have the platform named
+* Study is private, so submission-hold.xml with hold date 2026-09-09 is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission-hold.xml" -F "EXPERIMENT=@heTriNodu-2-HiC.exp.xml" -F "RUN=@heTriNodu-2-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-07-04T11:07:37.921+01:00" submissionFile="submission-hold.xml" success="true">
+        <EXPERIMENT accession="ERX14603648" alias="exp_heTriNodu_Hi-C_ERGA_AV_5534_02_HC014-2A1A" status="PRIVATE"/>
+        <RUN accession="ERR15197992" alias="run_heTriNodu_Hi-C_ERGA_AV_5534_02_HC014-2A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33558458" alias="SUBMISSION-04-07-2025-11:07:37:678"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+
 ### Submit RNAseq
 
 ### Submit assembly
