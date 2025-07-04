@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_wjOphPuer_Hi-C_FS38820322_HC021-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_wjOphPuer_Hi-C_FS38820322_HC021-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="wjOphPuer_YB-4221-HC021-1A1A_S156_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="1612a7216228e26a30cf6c84cb4f1087" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="wjOphPuer_YB-4221-HC021-1A1A_S156_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="5367262a21e7770595e2ba8e91554f79" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
