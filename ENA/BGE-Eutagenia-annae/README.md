@@ -33,6 +33,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
   * The 2 samples also has different ToLID's so I have no idea which one to use.
   * Virtual sample is needed
   * Data sheet is updated and data is transferred to ENA
+  * I asked BGE for assistance of how to handle multiple ToLID's and the answer was to create a new one at https://id.tol.sanger.ac.uk/, referring to the original ToLID's and then create a virtual sample. I'm waiting for the new ToLID to become active (will keep an eye on the search page, https://id.tol.sanger.ac.uk/search-by-tolid, expecting `icEauAnna36`)
   
 #### XML
 * I created [icEutAnna-HiFi.tsv](./data/icEutAnna-HiFi.tsv)
