@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_heTriNodu_Hi-C_ERGA_AV_5534_02_HC014-2A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_heTriNodu_Hi-C_ERGA_AV_5534_02_HC014-2A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="triNodu_YB-4221-HC014-2A1A_S152_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="c428062ad72bf913160888e55dab7b11" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="triNodu_YB-4221-HC014-2A1A_S152_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="42a3351bbd7f42c67ad376aae8fca5c4" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
