@@ -29,7 +29,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 #### Preparations
 * There are 2 sample IDs -> a virtual sample is needed
     * There is a complication though, the two sample IDs has different ToLIDs. It shouldn't happen, I don't know how to handle it. To which id will/should the assembly be connected?
-    * I've asked ERGA-BGE slack for advice, waiting for reply. The answer was to create a new one at https://id.tol.sanger.ac.uk/, referring to the original ToLID's and then create a virtual sample. I'm waiting for the new ToLID to become active (will keep an eye on the search page, https://id.tol.sanger.ac.uk/search-by-tolid, expecting `ihAphHill11`)
+    * I've asked ERGA-BGE slack for advice, waiting for reply. The answer was to create a new one at https://id.tol.sanger.ac.uk/, referring to the original ToLID's and then create a virtual sample. I'm waiting for the new ToLID to become active (will keep an eye on the search page, https://id.tol.sanger.ac.uk/search-by-tolid, expecting `ihAphHill11`, specimenID `ERGA_PR_7524_0782;ERGA_PR_7524_0787`)
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 #### XML - **TODO**
 * I created [ihAphHill-HiFi.tsv](./data/ihAphHill-HiFi.tsv)
