@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB93959 (experiment), PRJEB93960 (assembly)
 ---
 
 # BGE - *Eutagenia annae*
@@ -25,14 +25,17 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 * **Note:** Data is delivered but bioinformatician says: *"Please skip Eutagenia annae for now. Due to some mislabeling of the tubes 2 individuals were sequenced with PacBio, i.e. we have a tetraploid problem and HiC is most probably from a 3rd individual. Lets focus on the easier species first."*. 
-  * The 2 samples also has different ToLID's so I have no idea which one to use.
+  * The 2 samples also has different ToLID's so I have no idea which one to use. Asked for a new one, `icEutAnna36`
   * Virtual sample is needed
+    * I created [icEutAnna-HiFi-virtual-sample.tsv](./data/icEutAnna-HiFi-virtual-sample.tsv)
+    * Accession number received: `ERS25260776`
   * Data sheet is updated and data is transferred to ENA
+  * I asked BGE for assistance of how to handle multiple ToLID's and the answer was to create a new one at https://id.tol.sanger.ac.uk/, referring to the original ToLID's and then create a virtual sample. I'm waiting for the new ToLID to become active (will keep an eye on the search page, https://id.tol.sanger.ac.uk/search-by-tolid, expecting `icEauAnna36`, specimenID `ERGA_AP_4894_00518;ERGA_AP_4894_00519`)
   
 #### XML
 * I created [icEutAnna-HiFi.tsv](./data/icEutAnna-HiFi.tsv)
@@ -49,11 +52,28 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-07-16T08:37:13.696+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14695223" alias="exp_icEutAnna_HiFi_WGS_LV6000912019_LV6000912027_pr_229_001" status="PRIVATE"/>
+        <RUN accession="ERR15289389" alias="run_icEutAnna_HiFi_WGS_LV6000912019_LV6000912027_pr_229_001_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB93959" alias="erga-bge-icEutAnna-study-rawdata-2025-07-16" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP176838" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB93960" alias="erga-bge-icEutAnna36_primary-2025-07-16" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP176839" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33631670" alias="SUBMISSION-16-07-2025-08:37:13:404"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC - **TODO**
+### Submit HiC
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * Virtual sample had to be created and submitted via ENA browser:
@@ -69,10 +89,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update -HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB93959"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
+* I added 'Illumina' to the title and library name, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
@@ -80,7 +100,18 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-07-16T08:48:16.803+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14695257" alias="exp_icEutAnna_Hi-C_LV6000912034_LV6000912018_HC044-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR15289423" alias="run_icEutAnna_Hi-C_LV6000912034_LV6000912018_HC044-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA33631691" alias="SUBMISSION-16-07-2025-08:48:16:526"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -97,7 +128,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update -RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB93959"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named

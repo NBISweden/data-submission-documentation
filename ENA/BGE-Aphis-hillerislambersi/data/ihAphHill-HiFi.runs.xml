@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_ihAphHill_HiFi_WGS_LV6000904611_LV6000904600_pr_232_001_bam_1">
+		<EXPERIMENT_REF refname="exp_ihAphHill_HiFi_WGS_LV6000904611_LV6000904600_pr_232_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="ihAphHill_m84045_250619_121848_s4.hifi_reads.bc2367.bam" checksum_method="MD5" checksum="31e39a7b498dd88765003c10527a3d3b" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

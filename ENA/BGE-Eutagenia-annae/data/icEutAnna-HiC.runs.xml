@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icEutAnna_Hi-C_LV6000912034_LV6000912018_HC044-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_icEutAnna_Hi-C_LV6000912034_LV6000912018_HC044-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="icEutAnna_YD-4287-HC044-1A1A_S273_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="0cfd9d88ee98f3a8b4c0f54e09a6a7bd" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="icEutAnna_YD-4287-HC044-1A1A_S273_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="8e40db4abbd21cc8c5100c7307fca0e7" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

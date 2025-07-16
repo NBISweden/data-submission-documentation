@@ -1,0 +1,3 @@
+Checklist	ERC000011	ENA default sample checklist					
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)	composed of
+3229158	Eutagenia annae	icEutAnna_HiFi_pool	icEutAnna HiFi pool	This sample is a HiFi pool of multiple samples. It is composed of samples SAMEA116289253 and SAMEA116289252	2024-06-07	Cyprus	SAMEA116289253, SAMEA116289252
