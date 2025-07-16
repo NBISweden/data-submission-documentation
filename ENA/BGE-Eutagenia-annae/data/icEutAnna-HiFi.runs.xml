@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icEutAnna_HiFi_WGS_LV6000912019_LV6000912027_pr_229_001_bam_1">
+		<EXPERIMENT_REF refname="exp_icEutAnna_HiFi_WGS_LV6000912019_LV6000912027_pr_229_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="icEutAnna_m84045_250610_165153_s3.hifi_reads.bc2359.bam" checksum_method="MD5" checksum="6397acbc8029ea8e4f781d891c2d8fd2" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
