@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB93933 (experiment), PRJEB93934 (assembly)
 ---
 
 # BGE - *Aphis hillerislambersi*
@@ -30,8 +30,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * There are 2 sample IDs -> a virtual sample is needed
     * There is a complication though, the two sample IDs has different ToLIDs. It shouldn't happen, I don't know how to handle it. To which id will/should the assembly be connected?
     * I've asked ERGA-BGE slack for advice, waiting for reply. The answer was to create a new one at https://id.tol.sanger.ac.uk/, referring to the original ToLID's and then create a virtual sample. I'm waiting for the new ToLID to become active (will keep an eye on the search page, https://id.tol.sanger.ac.uk/search-by-tolid, expecting `ihAphHill11`, specimenID `ERGA_PR_7524_0782;ERGA_PR_7524_0787`)
+    * I created [ihAphHill-HiFi-virtual-sample.tsv](./data/ihAphHill-HiFi-virtual-sample.tsv) and registered the sample
+    * Accession number received: `ERS25260761`  
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
-#### XML - **TODO**
+#### XML
 * I created [ihAphHill-HiFi.tsv](./data/ihAphHill-HiFi.tsv)
 * Run script:
     ```
@@ -46,7 +48,24 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-07-16T07:25:42.609+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14694880" alias="exp_ihAphHill_HiFi_WGS_LV6000904611_LV6000904600_pr_232_001" status="PRIVATE"/>
+        <RUN accession="ERR15289046" alias="run_ihAphHill_HiFi_WGS_LV6000904611_LV6000904600_pr_232_001_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB93933" alias="erga-bge-ihAphHill-study-rawdata-2025-07-16" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP176812" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB93934" alias="erga-bge-ihAphHill11_primary-2025-07-16" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP176813" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA33631455" alias="SUBMISSION-16-07-2025-07:25:42:253"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 

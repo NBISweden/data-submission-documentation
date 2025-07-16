@@ -1,0 +1,3 @@
+Checklist	ERC000011	ENA default sample checklist					
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)	composed of
+3350012	Aphis hillerislambersi	ihAphHill_HiFi_pool	ihAphHill HiFi pool	This sample is a HiFi pool of multiple samples. It is composed of samples SAMEA116282522 and SAMEA116282517	2024-08-14	Portugal	SAMEA116282522, SAMEA116282517
