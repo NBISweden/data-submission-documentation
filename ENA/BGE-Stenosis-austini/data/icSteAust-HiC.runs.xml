@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icSteAust_Hi-C_LV6000912703_HC049-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_icSteAust_Hi-C_LV6000912703_HC049-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="icSteAust_YE-4332-HC049-1A1A_S166_L006_R1_001.fastq.gz" checksum_method="MD5" checksum="01a00b8682c1b12e1b18bda75fc6c315" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="icSteAust_YE-4332-HC049-1A1A_S166_L006_R2_001.fastq.gz" checksum_method="MD5" checksum="2e76ffeb9b425113edc8c6f43d7d73b3" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

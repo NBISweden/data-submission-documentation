@@ -76,7 +76,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC **TODO**
+### Submit HiC
 
 #### Preparations
 * I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/10ZPAhkp1fCmpqR9GAZMRJ9wdXa8m-1G_/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA117387581](https://www.ebi.ac.uk/biosamples/samples/SAMEA117387581).
@@ -91,7 +91,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```   
 * Update mMonMoa-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90634"/>
     ```
 
 * Remove row `<PAIRED/>` (error in script)
@@ -120,7 +120,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update mMonMoa-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB90634"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
