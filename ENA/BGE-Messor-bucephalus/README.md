@@ -51,6 +51,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit HiC - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
+* **Issue:** Deliveries batch 8 and 9 has same library name. I have asked about this in slack, if correct. I suggest not to submit any HiC before this has been clarified.
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
@@ -59,7 +60,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iyMesBuce-HiC.tsv -p ERGA-BGE -o iyMesBuce-HiC
     ```
-* Update -HiC.exp.xml to reference accession number of previously registered study:
+* Update iyMesBuce-HiC.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
@@ -87,7 +88,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iyMesBuce-RNAseq.tsv -p ERGA-BGE -o iyMesBuce-RNAseq
     ```
-* Update -RNAseq.exp.xml to reference accession number of previously registered study:
+* Update iyMesBuce-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
