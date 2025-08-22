@@ -52,6 +52,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * **Issue:** Deliveries batch 8 and 9 has same library name. I have asked about this in slack, if correct. I suggest not to submit any HiC before this has been clarified.
+    * Answer from NGI: *It's the same library sequenced in the two different pools. We needed to fill the second pool in batch 9 with a library containing a certain primer pair for colour balancing reasons as the library we had planned for this failed. (Should you feel that you have enough data with the first library and don't want more of Messor bucephalus, you can likely just leave it out of the analysis.)*
+    * Should we submit or not, and if so, should we wait until we get batch 9 delivery so that we can submit both runs to same experiment?
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
