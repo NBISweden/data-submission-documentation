@@ -25,12 +25,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 #### XML
-* I created [-HiFi.tsv](./data/iyEucMavr-HiFi.tsv)
+* I created [iyEucMavr-HiFi.tsv](./data/iyEucMavr-HiFi.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iyEucMavr-HiFi.tsv -p ERGA-BGE -o iyEucMavr-HiFi
@@ -54,7 +54,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
-* I created [-HiC.tsv](./data/iyEucMavr-HiC.tsv)
+* I created [iyEucMavr-HiC.tsv](./data/iyEucMavr-HiC.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iyEucMavr-HiC.tsv -p ERGA-BGE -o iyEucMavr-HiC
@@ -82,7 +82,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
-* I created [-RNAseq.tsv](./data/iyEucMavr-RNAseq.tsv)
+* I created [iyEucMavr-RNAseq.tsv](./data/iyEucMavr-RNAseq.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iyEucMavr-RNAseq.tsv -p ERGA-BGE -o iyEucMavr-RNAseq
