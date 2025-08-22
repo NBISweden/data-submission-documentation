@@ -48,7 +48,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC - **TODO**
+### Submit HiC
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
@@ -59,7 +59,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iyCatAphr-HiC.tsv -p ERGA-BGE -o iyCatAphr-HiC
     ```
-* Update -HiC.exp.xml to reference accession number of previously registered study:
+* **TODO Update iyCatAphr-HiC.exp.xml to reference accession number of previously registered study:**
     ```
     <STUDY_REF accession=""/>
     ```
@@ -87,7 +87,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iyCatAphr-RNAseq.tsv -p ERGA-BGE -o iyCatAphr-RNAseq
     ```
-* Update -RNAseq.exp.xml to reference accession number of previously registered study:
+* Update iyCatAphr-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
