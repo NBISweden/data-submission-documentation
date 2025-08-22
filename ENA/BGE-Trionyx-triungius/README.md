@@ -25,17 +25,17 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 #### XML
-* I created [-HiFi.tsv](./data/rTriTgu-HiFi.tsv)
+* I created [rTriTgu-HiFi.tsv](./data/rTriTgu-HiFi.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f rTriTgu-HiFi.tsv -p ERGA-BGE -o rTriTgu-HiFi
     ```
-
+* There are 2 .bam files and script created 2 experiments (duplicates). Hence, one of them was manually removed.
 * Study is private, so submission.xml with hold date is used.
 
 * Submit both projects and experiment in one go, i.e:
@@ -54,7 +54,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
-* I created [-HiC.tsv](./data/rTriTgu-HiC.tsv)
+* I created [rTriTgu-HiC.tsv](./data/rTriTgu-HiC.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f rTriTgu-HiC.tsv -p ERGA-BGE -o rTriTgu-HiC
@@ -82,7 +82,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
-* I created [-RNAseq.tsv](./data/rTriTgu-RNAseq.tsv)
+* I created [rTriTgu-RNAseq.tsv](./data/rTriTgu-RNAseq.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f rTriTgu-RNAseq.tsv -p ERGA-BGE -o rTriTgu-RNAseq
