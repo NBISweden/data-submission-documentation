@@ -7,15 +7,15 @@ Data_generating_platforms:
 Top_level_acccession: 
 ---
 
-# BGE - *Trionyx triungius*
+# BGE - *Trionyx triunguis*
 
 ## Submission task description
-Submission of raw reads for *Trionyx triungius* to facilitate assembly and annotation as part of ERGA (https://www.erga-biodiversity.eu/) - BGE (https://biodiversitygenomics.eu/). HiFi, Hi-C and RNAseq datasets will be produced and submitted. There will also be an assembly to be submitted. For BGE projects there will be no annotation done, instead this will be handled by Ensembl. The sample used for sequencing has already been submitted via COPO.
+Submission of raw reads for *Trionyx triunguis* to facilitate assembly and annotation as part of ERGA (https://www.erga-biodiversity.eu/) - BGE (https://biodiversitygenomics.eu/). HiFi, Hi-C and RNAseq datasets will be produced and submitted. There will also be an assembly to be submitted. For BGE projects there will be no annotation done, instead this will be handled by Ensembl. The sample used for sequencing has already been submitted via COPO.
 Submission will be (attempted) done via CNAG script and programmatic submission route using xml files produced by the script.
 
 ## Procedure overview and links to examples
 
-* [Metadata template](./data/BGE-Trionyx-triungius-metadata.xlsx)
+* [Metadata template](./data/BGE-Trionyx-triunguis-metadata.xlsx)
 * [BGE HiFi metadata](./data/rTriTgu-HiFi.tsv)
 * [BGE HiC metadata](./data/rTriTgu-HiC.tsv)
 * [BGE RNAseq metadata](./data/rTriTgu-RNAseq.tsv)
@@ -53,7 +53,9 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ### Submit HiC - **TODO**
 #### Preparations
-* Sample ID gave 4 BioSample ID:s via ERGA tracker portal --> virtual sample is needed **TODO**
+* Sample ID gave 4 BioSample ID:s via ERGA tracker portal --> virtual sample is needed
+    * I created [rTriTgu-HiC-virtual-sample.tsv](./data/rTriTgu-HiC-virtual-sample.tsv) and registered the sample
+    * Accession number received: `ERS26118849`     
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
@@ -62,7 +64,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f rTriTgu-HiC.tsv -p ERGA-BGE -o rTriTgu-HiC
     ```
-* Update -HiC.exp.xml to reference accession number of previously registered study:
+* Update rTriTgu-HiC.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
@@ -90,7 +92,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f rTriTgu-RNAseq.tsv -p ERGA-BGE -o rTriTgu-RNAseq
     ```
-* Update -RNAseq.exp.xml to reference accession number of previously registered study:
+* Update rTriTgu-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession=""/>
     ```
