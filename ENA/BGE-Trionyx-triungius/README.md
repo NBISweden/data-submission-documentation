@@ -27,11 +27,13 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ### Submit HiFi
 #### Preparations
-* Sample ID gave BioSample ID via ERGA tracker portal
+* The `tube or well id` given has been used to create 2 BioSamples -> a virtual sample is needed **TODO** (then update tsv and xml files)Sample ID gave BioSample ID via ERGA tracker portal
+    * I created [rTriTgu-HiFi-virtual-sample.tsv](./data/rTriTgu-HiFi-virtual-sample.tsv) and registered the sample
+    * Accession number received: `ERS26118506`  
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 #### XML
 * I created [rTriTgu-HiFi.tsv](./data/rTriTgu-HiFi.tsv)
-* The `tube or well id` given has been used to create 2 BioSamples -> a virtual sample is needed **TODO** (then update tsv and xml files)
+
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f rTriTgu-HiFi.tsv -p ERGA-BGE -o rTriTgu-HiFi
