@@ -71,7 +71,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ### Submit HiC - **TODO**
 #### Preparations
-* Sample ID gave BioSample ID via ERGA tracker portal
+* Sample ID gave 4 BioSample ID:s via ERGA tracker portal, and 4 different ToLID:s --> **Virtual sample is needed, and a new ToLID is needed**.
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
