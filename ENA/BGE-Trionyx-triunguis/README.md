@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB96316 (experiment), PRJEB96317 (assembly)
 ---
 
 # BGE - *Trionyx triunguis*
@@ -27,7 +27,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ### Submit HiFi
 #### Preparations
-* The `tube or well id` given has been used to create 2 BioSamples -> a virtual sample is needed **TODO** (then update tsv and xml files)Sample ID gave BioSample ID via ERGA tracker portal
+* The `tube or well id` given has been used to create 2 BioSamples -> a virtual sample is needed
     * I created [rTriTgu-HiFi-virtual-sample.tsv](./data/rTriTgu-HiFi-virtual-sample.tsv) and registered the sample
     * Accession number received: `ERS26118506`  
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
@@ -47,7 +47,25 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-24T11:16:23.825+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14868745" alias="exp_rTriTgu_HiFi_WGS_TT9_pr_259_001" status="PRIVATE"/>
+        <RUN accession="ERR15464849" alias="run_rTriTgu_HiFi_WGS_TT9_pr_259_001_bam_1" status="PRIVATE"/>
+        <RUN accession="ERR15464850" alias="run_rTriTgu_HiFi_WGS_TT9_pr_259_001_bam_2" status="PRIVATE"/>
+        <PROJECT accession="PRJEB96316" alias="erga-bge-rTriTgu-study-rawdata-2025-08-22" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP179059" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB96317" alias="erga-bge-rTriTgu1_primary-2025-08-22" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP179060" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA34528105" alias="SUBMISSION-24-08-2025-11:16:23:592"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -66,7 +84,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update rTriTgu-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB96316"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
@@ -94,7 +112,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update rTriTgu-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB96316"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
