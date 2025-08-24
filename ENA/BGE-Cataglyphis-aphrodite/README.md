@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB96318 (experiment), PRJEB96319 (assembly)
 ---
 
 # BGE - *Cataglyphis aphrodite*
@@ -44,7 +44,24 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-24T11:27:25.544+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14868746" alias="exp_iyCatAphr_HiFi_WGS_LV6000912098_pr_251_001" status="PRIVATE"/>
+        <RUN accession="ERR15464851" alias="run_iyCatAphr_HiFi_WGS_LV6000912098_pr_251_001_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB96318" alias="erga-bge-iyCatAphr-study-rawdata-2025-08-22" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP179061" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB96319" alias="erga-bge-iyCatAphr12_primary-2025-08-22" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP179062" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA34528960" alias="SUBMISSION-24-08-2025-11:27:25:397"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -59,16 +76,16 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iyCatAphr-HiC.tsv -p ERGA-BGE -o iyCatAphr-HiC
     ```
-* **TODO Update iyCatAphr-HiC.exp.xml to reference accession number of previously registered study:**
+* Update iyCatAphr-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB96318"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iyCatAphr-HiC.exp.xml" -F "RUN=@iyCatAphr-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iyCatAphr-HiC.exp.xml" -F "RUN=@iyCatAphr-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -89,7 +106,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update iyCatAphr-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB96318"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
