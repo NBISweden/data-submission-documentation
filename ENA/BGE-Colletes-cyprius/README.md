@@ -78,7 +78,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update -HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB96312"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
@@ -106,7 +106,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update -RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB96312"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named

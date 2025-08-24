@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB96314 (experiment), PRJEB96315 (assembly)
 ---
 
 # BGE - *Eucera mavromoustakisi*
@@ -44,7 +44,24 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-24T11:04:09.936+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14868744" alias="exp_iyEucMavr_HiFi_WGS_LV6000911946_pr_256_001" status="PRIVATE"/>
+        <RUN accession="ERR15464848" alias="run_iyEucMavr_HiFi_WGS_LV6000911946_pr_256_001_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB96314" alias="erga-bge-iyEucMavr-study-rawdata-2025-08-22" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP179057" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB96315" alias="erga-bge-iyEucMavr2_primary-2025-08-22" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP179058" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA34527093" alias="SUBMISSION-24-08-2025-11:04:09:759"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -61,7 +78,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update -HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB96314"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
@@ -89,7 +106,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update -RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB96314"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
