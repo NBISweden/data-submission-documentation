@@ -2,7 +2,7 @@
 <EXPERIMENT_SET>
 	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyCatAphr_Hi-C_LV6000912131_HC039-1A1A">
 		<TITLE>Cataglyphis aphrodite Illumina Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-iyCatAphr-study-rawdata-2025-08-22"/>
+		<STUDY_REF accession="PRJEB96318"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA116289141"/>
