@@ -81,7 +81,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     <STUDY_REF accession="PRJEB91066"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
@@ -89,7 +89,18 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-24T11:58:18.537+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14868750" alias="exp_icSteAust_Hi-C_LV6000912703_HC049-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR15464855" alias="run_icSteAust_Hi-C_LV6000912703_HC049-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA34531826" alias="SUBMISSION-24-08-2025-11:58:18:352"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
