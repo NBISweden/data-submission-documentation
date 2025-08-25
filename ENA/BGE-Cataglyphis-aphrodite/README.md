@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB96318 (experiment), PRJEB96319 (assembly)
+Top_level_acccession: PRJEB96352 (umbrella), PRJEB96318 (experiment), PRJEB96319 (assembly)
 ---
 
 # BGE - *Cataglyphis aphrodite*
@@ -142,7 +142,7 @@ For each of the BGE species, an **umbrella** project has to be created and linke
 1. Copy experiment accession number from metadata in top of this README
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Cataglyphis aphrodite" -t iyCatAphr12 -p ERGA-BGE -c SCILIFELAB -a PRJEB96318 -x 3229133
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"
@@ -157,6 +157,30 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-25T12:32:17.411+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB96352" alias="erga-bge-iyCatAphr-study-umbrella-2025-08-25" status="PRIVATE" holdUntilDate="2027-08-25+01:00"/>
+        <SUBMISSION accession="ERA34664529" alias="SUBMISSION-25-08-2025-12:32:17:254"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>    
     ```
+* Release the umbrella by adding the umbrella project accession number from the receipt above in file [submission-release-project.xml](./data/submission-release-project.xml)
+* Submit using curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-release-project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-25T12:35:23.705+01:00" submissionFile="submission-release-project.xml" success="true">
+        <MESSAGES>
+            <INFO>project accession "PRJEB96352" is set to public status.</INFO>
+        </MESSAGES>
+        <ACTIONS>RELEASE</ACTIONS>
+    </RECEIPT>    
+    ```
+
 * **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
