@@ -2,7 +2,7 @@
 <EXPERIMENT_SET>
 	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyEucMavr_Hi-C_LV6000911938_HC043-1A1A">
 		<TITLE>Eucera mavromoustakisi Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-iyEucMavr-study-rawdata-2025-08-25"/>
+		<STUDY_REF accession="PRJEB96314"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA116299233"/>
@@ -12,7 +12,6 @@
 				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
 				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
 				<LIBRARY_LAYOUT>
-					<PAIRED/>
 					<PAIRED NOMINAL_LENGTH="726"/>
 				</LIBRARY_LAYOUT>
 				<LIBRARY_CONSTRUCTION_PROTOCOL> Hi-C library was created as described in the Arima User Guide for Animal Tissues (A160162 v01) and Library Preparation for Arima High Coverage HiC Kit (A160186 v02). Library QC was performed using the Qubit dsDNA HS Assay kit and the Agilent High Sensitivity DNA Kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
