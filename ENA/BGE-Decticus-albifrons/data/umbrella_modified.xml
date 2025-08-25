@@ -1,0 +1,13 @@
+<PROJECT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-iqDecAlbi-study-umbrella-2025-07-02">
+		<NAME>iqDecAlbi</NAME>
+		<TITLE>Decticus albifrons</TITLE>
+		<DESCRIPTION>This project collects the sequencing data and assemblies generated for Decticus albifrons by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) for the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+        <UMBRELLA_PROJECT/>
+        <RELATED_PROJECTS>
+          <RELATED_PROJECT>
+            <CHILD_PROJECT accession="PRJEB90633"/>
+          </RELATED_PROJECT>
+        </RELATED_PROJECTS>
+    </PROJECT>
+</PROJECT_SET>

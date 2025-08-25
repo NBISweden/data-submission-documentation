@@ -1,0 +1,14 @@
+STUDY	PRJEB90633
+SAMPLE	SAMEA116283197
+RUN_REF	ERR15133374, ERR15133375, ERR15133376, ERR15133377, ERR15164724, ERR15164725
+ASSEMBLYNAME	iqDecAlbi3.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	66
+PROGRAM	Hifiasm v0.25.0-r726, purge_dups v1.2.5, Yahs v1.2.2, PretextView v1.0.3, GRIT_Rapid git:1a3d79a8
+PLATFORM	PacBio, Illumina, OmniC
+MINGAPLENGTH	200
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Decticus albifrons was assembled with Hifiasm (version 0.25.0-r726). Remaining haplotypic duplications were identified with purge_dups (version 1.2.5), but manually removed in the manual curation step to avoid over purging of highly repetitive genomic regions. Yahs (version 1.2.2) was used to scaffold contigs into chromosomes. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8).'
+FASTA	iqDecAlbi-asm.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalized_list.txt.gz
