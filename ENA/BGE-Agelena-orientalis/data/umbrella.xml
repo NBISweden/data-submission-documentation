@@ -1,18 +1,18 @@
 <?xml version="1.0" ?>
 <PROJECT_SET>
-	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icHydHamu-study-umbrella-2024-07-05">
-		<NAME>icHydHamu</NAME>
-		<TITLE>Hydroglyphus hamulatus</TITLE>
-		<DESCRIPTION>This project collects the sequencing data and assemblies generated for Hydroglyphus hamulatus by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) for the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-qqAgeOrie-study-umbrella-2025-08-27">
+		<NAME>qqAgeOrie</NAME>
+		<TITLE>Agelena orientalis</TITLE>
+		<DESCRIPTION>This project collects the sequencing data and assemblies generated for Agelena orientalis by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) for the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
 		<UMBRELLA_PROJECT>
 			<ORGANISM>
-				<TAXON_ID>3078427</TAXON_ID>
-				<SCIENTIFIC_NAME>Hydroglyphus hamulatus</SCIENTIFIC_NAME>
+				<TAXON_ID>293813</TAXON_ID>
+				<SCIENTIFIC_NAME>Agelena orientalis</SCIENTIFIC_NAME>
 			</ORGANISM>
 		</UMBRELLA_PROJECT>
 		<RELATED_PROJECTS>
 			<RELATED_PROJECT>
-				<CHILD_PROJECT accession="PRJEB76972"/>
+				<CHILD_PROJECT accession="PRJEB90605"/>
 			</RELATED_PROJECT>
 			<RELATED_PROJECT>
 				<PARENT_PROJECT accession="PRJEB61747"/>
