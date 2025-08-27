@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_mMonMoa_Hi-C_FS42549314_HC055-1B3A_fastq_1">
+		<EXPERIMENT_REF refname="exp_mMonMoa_Hi-C_FS42549314_HC055-1B3A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="mMonMoa_YE-4332-HC055-1B3A_S167_L006_R1_001.fastq.gz" checksum_method="MD5" checksum="25f206c93caac154200f7fcb1f3e633a" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="mMonMoa_YE-4332-HC055-1B3A_S167_L006_R2_001.fastq.gz" checksum_method="MD5" checksum="712b947cfe267b4fa61d6e6a7430d808" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iyAntRoge_HiFi_WGS_LV6000659252_pr_237_001_bam_1">
+		<EXPERIMENT_REF refname="exp_iyAntRoge_HiFi_WGS_LV6000659252_pr_237_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iyAntRoge_m84045_250708_181900_s3.hifi_reads.bc2107.bam" checksum_method="MD5" checksum="f2f9d9320369e8d0b4892fb5d581c0db" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

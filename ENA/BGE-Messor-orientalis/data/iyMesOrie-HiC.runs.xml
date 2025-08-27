@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iyMesOrie_Hi-C_LV6000912093_HC048-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_iyMesOrie_Hi-C_LV6000912093_HC048-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iyMesOrie_YF-4366-HC048-1A1A_S107_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="18a734581e96782c8edede3b2154a275" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iyMesOrie_YF-4366-HC048-1A1A_S107_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="dc2ff8da3badaa8d04a6168dd509de26" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

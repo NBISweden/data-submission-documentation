@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iyCerCypr_Hi-C_LV6000912591_HC040-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_iyCerCypr_Hi-C_LV6000912591_HC040-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iyCerCypr_YF-4366-HC040-1A1A_S102_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="7f3af45d95408ed4f2a738557bd652cf" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iyCerCypr_YF-4366-HC040-1A1A_S102_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="04567b3aa41325f7177e85ed9dd62ce8" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

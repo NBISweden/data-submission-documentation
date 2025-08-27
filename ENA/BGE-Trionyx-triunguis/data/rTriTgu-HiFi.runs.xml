@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_rTriTgu_HiFi_WGS_TT9_pr_259_001_bam_1">
+		<EXPERIMENT_REF refname="exp_rTriTgu_HiFi_WGS_TT9_pr_259_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="rTriTgu_m84045_250709_200914_s2.hifi_reads.bc2110.bam" checksum_method="MD5" checksum="3cd2cd2e22e5431f84ec9f27f7fb87ff" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_rTriTgu_HiFi_WGS_TT9_pr_259_001_bam_2">
+		<EXPERIMENT_REF refname="exp_rTriTgu_HiFi_WGS_TT9_pr_259_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="rTriTgu_m84045_250709_221211_s3.hifi_reads.bc2110.bam" checksum_method="MD5" checksum="5468c8270a00f5adbd9a458317564383" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

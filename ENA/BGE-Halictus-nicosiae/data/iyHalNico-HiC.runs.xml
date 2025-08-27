@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iyHalNico_Hi-C_LV6000911877_HC045-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_iyHalNico_Hi-C_LV6000911877_HC045-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iyHalNico_YE-4332-HC045-1A1A_S165_L006_R1_001.fastq.gz" checksum_method="MD5" checksum="e51d478184edc0cd56071369d66056b5" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iyHalNico_YE-4332-HC045-1A1A_S165_L006_R2_001.fastq.gz" checksum_method="MD5" checksum="ef128c47167462fbb2e60eb8f78d5e1e" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

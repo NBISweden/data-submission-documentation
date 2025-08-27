@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iyMesBuce_Hi-C_LV6000912132_HC047-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_iyMesBuce_Hi-C_LV6000912132_HC047-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iyMesBuce_YF-4366-HC047-1A1A_S106_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="dd112c6cb50f36d6bbbfc7f3d843ed94" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iyMesBuce_YF-4366-HC047-1A1A_S106_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="1d341ab6a55d281158769c874cba3385" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
