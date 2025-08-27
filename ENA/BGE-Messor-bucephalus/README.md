@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: 
+Top_level_acccession: PRJEB96532 (experiment), PRJEB96533 (assembly)
 ---
 
 # BGE - *Messor bucephalus*
@@ -25,7 +25,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
+### Submit HiFi
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput *.bam` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
@@ -36,7 +36,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iyMesBuce-HiFi.tsv -p ERGA-BGE -o iyMesBuce-HiFi
     ```
 
-* Study is private, so submission.xml with hold date is used.
+* Study will be public directly, so submission.xml without hold date is used.
 
 * Submit both projects and experiment in one go, i.e:
     ```
@@ -44,7 +44,21 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-27T15:06:09.338+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14882872" alias="exp_iyMesBuce_HiFi_WGS_LV6000912053_pr_260_001" status="PRIVATE"/>
+        <RUN accession="ERR15478975" alias="run_iyMesBuce_HiFi_WGS_LV6000912053_pr_260_001_bam_1" status="PRIVATE"/>
+        <PROJECT accession="PRJEB96532" alias="erga-bge-iyMesBuce-study-rawdata-2025-08-27" status="PRIVATE" holdUntilDate="2027-08-27+01:00">
+            <EXT_ID accession="ERP179237" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB96533" alias="erga-bge-iyMesBuce7_primary-2025-08-27" status="PRIVATE" holdUntilDate="2027-08-27+01:00">
+            <EXT_ID accession="ERP179238" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA34838469" alias="SUBMISSION-27-08-2025-15:06:09:021"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>    
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -64,14 +78,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update iyMesBuce-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB96532"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study will be private, so submission.xml with hold date is used.
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is public, so submission.xml without hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iyMesBuce-HiC.exp.xml" -F "RUN=@iyMesBuce-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iyMesBuce-HiC.exp.xml" -F "RUN=@iyMesBuce-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -92,11 +106,11 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update iyMesBuce-RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB96532"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission.xml with hold date is used.
+* Study public, so submission.xml without hold date is used.
 * Submit using curl:
     ```
         curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iyMesBuce-RNAseq.exp.xml" -F "RUN=@iyMesBuce-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
@@ -117,7 +131,7 @@ For each of the BGE species, an **umbrella** project has to be created and linke
 1. Copy experiment accession number from metadata in top of this README
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Messor bucephalus" -t iyMesBuce7 -p ERGA-BGE -c SCILIFELAB -a PRJEB96532 -x 3229181
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"
@@ -125,7 +139,7 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     * -a: the accession number of the raw reads project e.g. PRJEB76283
     * -x: NCBI taxonomy id e.g. 2750798
 
-* Copy `submission-umbrella.xml` from any of the previous BGE species, check that the hold date is as wanted.
+* Copy `submission-umbrella.xml` from any of the previous BGE species
 * Submit using curl:
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
@@ -134,4 +148,14 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     ```
     
     ```
+* Release the umbrella by adding the umbrella project accession number from the receipt above in file [submission-release-project.xml](./data/submission-release-project.xml)
+* Submit using curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-release-project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    
+    ```
+
 * **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
