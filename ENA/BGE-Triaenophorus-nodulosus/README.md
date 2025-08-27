@@ -148,7 +148,7 @@ For each of the BGE species, an umbrella project has to be created and linked to
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Triaenophorus nodulosus" -t heTriNodu1 -p ERGA-BGE -c SCILIFELAB -a PRJEB79894 -x 56557
     ```
-* Create a [submission-umbrella.xml](./scripts/submission-umbrella.xml)
+* Create a [submission-umbrella.xml](./data/submission-umbrella.xml)
 
 * Submit using curl:
     ```
@@ -168,4 +168,21 @@ For each of the BGE species, an umbrella project has to be created and linked to
      <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>  
     ```
+* Release the umbrella by adding the umbrella project accession number from the receipt above in file [submission-release-project.xml](./data/submission-release-project.xml)
+* Submit using curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-release-project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-27T12:56:53.738+01:00" submissionFile="submission-release-project.xml" success="true">
+        <MESSAGES>
+            <INFO>project accession "PRJEB80085" is set to public status.</INFO>
+        </MESSAGES>
+        <ACTIONS>RELEASE</ACTIONS>
+    </RECEIPT>    
+    ```
+
 * **TODO:** Add the assembly study `PRJEB80032` as child to the umbrella project as well (currently only the genomic sequencing project is attached)
