@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB91109 (experiment), PRJEB91110 (assembly)
+Top_level_acccession: PRJEB96499 (umbrella), PRJEB91109 (experiment), PRJEB91110 (assembly)
 ---
 
 # BGE - *Ophryotrocha puerilis*
@@ -148,7 +148,7 @@ For each of the BGE species, an **umbrella** project has to be created and linke
 1. Copy experiment accession number from metadata in top of this README
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Ophryotrocha puerilis" -t wjOphPuer18 -p ERGA-BGE -c SCILIFELAB -a PRJEB91109 -x 169124
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"
@@ -156,14 +156,21 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     * -a: the accession number of the raw reads project e.g. PRJEB76283
     * -x: NCBI taxonomy id e.g. 2750798
 
-* Copy `submission-umbrella.xml` from any of the previous BGE species, check that the hold date is as wanted.
+* Copy `submission-umbrella.xml` from any of the previous BGE species
 * Submit using curl:
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-27T11:32:31.478+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB96499" alias="erga-bge-wjOphPuer-study-umbrella-2025-08-27" status="PRIVATE" holdUntilDate="2027-08-27+01:00"/>
+        <SUBMISSION accession="ERA34838336" alias="SUBMISSION-27-08-2025-11:32:31:323"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>    
     ```
 * Release the umbrella by adding the umbrella project accession number from the receipt above in file [submission-release-project.xml](./data/submission-release-project.xml)
 * Submit using curl:
@@ -172,7 +179,14 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-27T11:33:15.184+01:00" submissionFile="submission-release-project.xml" success="true">
+        <MESSAGES>
+            <INFO>project accession "PRJEB96499" is set to public status.</INFO>
+        </MESSAGES>
+        <ACTIONS>RELEASE</ACTIONS>
+    </RECEIPT>    
     ```
 
 * **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
