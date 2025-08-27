@@ -89,7 +89,15 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-08-27T15:15:35.956+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX14882873" alias="exp_iyMesBuce_Hi-C_LV6000912132_HC047-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR15478976" alias="run_iyMesBuce_Hi-C_LV6000912132_HC047-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA34838477" alias="SUBMISSION-27-08-2025-15:15:35:517"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
