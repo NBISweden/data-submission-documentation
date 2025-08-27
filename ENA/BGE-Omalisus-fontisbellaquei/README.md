@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB91106 (experiment), PRJEB91107 (assembly)
+Top_level_acccession: PRJEB96498 (umbrella), PRJEB91106 (experiment), PRJEB91107 (assembly)
 ---
 
 # BGE - *Omalisus fontisbellaquei*
