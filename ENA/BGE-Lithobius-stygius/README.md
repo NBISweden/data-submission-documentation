@@ -172,14 +172,23 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 #### Genome assembly
 * I created a manifest file [qcLitStyg-manifest.txt](./data/qcLitStyg-manifest.txt), as well as a chromosome and unlocalised list in tab delimited format.
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/BGE-L-stygius/)
 * Then all files where gzipped and submitted (first validation then submission) from Uppmax using Webin-CLI:
     ```
     interactive -t 08:00:00 -A uppmax2025-2-58
+    module load java/OpenJDK_24+36
     java -jar ~/webin-cli-8.2.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./qcLitStyg-manifest.txt -validate
     ```
+    * I had issues with Java Runtime, that the one available at Uppmax/Rackham only supports up to version 52.0 while the webin-cli version was compiled by version 61.0. Solution is to add a newer version (module load java/OpenJDK_24+36)
 * Receipt:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/qcLitStygr_priCur_29082025.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28435528
     ```
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
@@ -207,13 +216,20 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```   
 * Though no hold, it was visible from the receipt that hold date became 2 years from now, so I manually needed to release via browser (**TODO**)
 
-* I created [qcLitStyg-mito-manifest.txt](./data/qcLitStyg-mito-manifest.txt), copied the fasta file to local laptop, created [mito_chromosome_list.txt](./data/mito_chromosome_list.txt), gzipped, validated and then submitted using Webin-CLI:
+* I created [qcLitStyg-mito-manifest.txt](./data/qcLitStyg-mito-manifest.txt), copied the fasta file to Uppmax, created [mito_chromosome_list.txt](./data/mito_chromosome_list.txt), gzipped, validated and then submitted using Webin-CLI:
     ```
-    java -jar ~/webin-cli-8.2.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./qcLitStyg-mito-manifest.txt -validate
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    module load java/OpenJDK_24+36
+    java -jar --enable-native-access=ALL-UNNAMED ~/webin-cli-8.2.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./qcLitStyg-mito-manifest.txt -validate
     ```
 * Receipt:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/qcLitStygr_mito_29082025.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/mito-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28435529
     ```
 
 * I added the accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`

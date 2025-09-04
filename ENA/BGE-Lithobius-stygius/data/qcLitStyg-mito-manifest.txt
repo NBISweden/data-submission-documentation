@@ -5,9 +5,9 @@ ASSEMBLYNAME	qcLitStyg1-mito.1
 ASSEMBLY_TYPE	isolate
 COVERAGE	308
 PROGRAM	MitoHiFi (3.2.3)
-PLATFORM	PacBio, Illumina, OmniC
+PLATFORM	PacBio, Illumina
 MINGAPLENGTH	200
 MOLECULETYPE	genomic DNA
 DESCRIPTION	'The mitochondrial genome was assembled using MitoHiFi (version 3.2.3)'
 FASTA	qcLitStygr_mito_29082025.fa.gz
-CHROMOSOME_LIST	chromosome_list.txt.gz
+CHROMOSOME_LIST	mito-chromosome_list.txt.gz

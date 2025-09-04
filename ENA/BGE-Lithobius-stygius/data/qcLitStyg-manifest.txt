@@ -8,7 +8,7 @@ PROGRAM	Hifiasm (version 0.25.0-r726), purge_dups (version 1.2.5), Yahs (version
 PLATFORM	PacBio, Illumina
 MINGAPLENGTH	100
 MOLECULETYPE	genomic DNA
-DESCRIPTION	'Lithobius stygius was assembled with Hifiasm (version 0.25.0-r726). Remaining haplotypic duplications were identified with purge_dups (version 1.2.5), but manually removed in the manual curation step to avoid over purging of highly repetitive genomic regions. Yahs (version 1.2.2) was used to scaffold contigs into chromosomes. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8).'
+DESCRIPTION	'Lithobius stygius was assembled with Hifiasm (version 0.25.0-r726). Remaining haplotypic duplications were identified with purge_dups (version 1.2.5), but manually removed in the manual curation step to avoid over purging of highly repetitive genomic regions. Yahs (version 1.2.2) was used to scaffold contigs into chromosomes. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8). The assembly coverage is 28x for HiFi and 76x for OmniC'
 FASTA	qcLitStygr_priCur_29082025.fa.gz
 CHROMOSOME_LIST	chromosome_list.txt.gz
-UNLOCALISED_LIST	unlocalized_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz
