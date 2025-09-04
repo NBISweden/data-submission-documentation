@@ -247,8 +247,16 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-04T07:24:24.434+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB77283" alias="erga-bge-qcLitStyg-study-umbrella-2024-07-05" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-04-09-2025-07:24:24:180"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
+* **Note:** The assembly studies are not visible in umbrella, is that due to them not being public yet? Need to check when they have been accessioned and made public.
 
 ## Umbrella project
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
