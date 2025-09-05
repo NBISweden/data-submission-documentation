@@ -22,6 +22,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
+* Learned how to solve issues with missing file. The files weren't missing but due to a typo in the file names of the runs.xml files, there was a mismatch btw xml files and the files in the upload area at ENA. See further [correcting-missing-file-issue](#correcting-missing-file-issue) below.
 
 ## Detailed step by step description
 
@@ -185,3 +186,63 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     ```
 
 * **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+
+## Correcting missing file issue
+Processing of the .bam file (HiFi) failed and an email was sent to us from ENA that the file was missing. The problem was that in the iyColCypr-HiFi.runs.xml the file name had a space in it (due to copy paste error). I could try add that space in the file name of the uploaded file, but that (if it even would work) might cause problems in the future reuse, if people download the file to a unix system (which really doesn't like space in file names).
+
+First attempt at correction was to edit the run file via the browser, but that was not allowed.
+
+I then tried to do the same via curl (not expecting it to work):
+1. I created [iyColCypr-HiFi.runs-modified.xml](./data/iyColCypr-HiFi.runs-modified.xml), with the only difference between the files was a correct file name, and a [submission-modify.xml](./data/submission-modify.xml) with the action MODIFY
+1. I then submitted via curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-modify.xml" -F "RUN=@iyColCypr-HiFi.runs-modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+1. Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-05T08:08:15.406+01:00" submissionFile="submission-modify.xml" success="false">
+        <RUN alias="run_iyColCypr_HiFi_WGS_LV6000911886_pr_238_001_bam_1" status="PRIVATE"/>
+        <SUBMISSION alias="SUBMISSION-05-09-2025-08:08:15:381"/>
+        <MESSAGES>
+            <ERROR>In filename: "iyColCypr_m84045_250708_202206_s4.hifi_reads.bc2108.bam", filetype: "bam". File names are not allowed to change during update. Missing file name: iyColCypr_m84045_250708_202206_s4.hifi_reads.bc2108.bam.</ERROR>
+        </MESSAGES>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
+    ```
+Next attempt was to cancel the current run, then submit a new run (i.e. not involving the experiment):
+1. Cancel the current run by creating a [submission-cancel.xml]() and submit using curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-cancel.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-09-05T08:22:13.287+01:00" submissionFile="submission-cancel.xml" success="true">
+            <MESSAGES>
+                <INFO>RUN accession "ERR15464846" is set to cancelled status.</INFO>
+            </MESSAGES>
+            <ACTIONS/>
+        </RECEIPT>
+        ````
+1. Create a new run file, with a new alias (and correct file name) [iyColCypr-HiFi.runs-new.xml](./data/iyColCypr-HiFi.runs-new.xml) and submit via curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "RUN=@iyColCypr-HiFi.runs-new.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-05T08:35:20.124+01:00" submissionFile="submission.xml" success="true">
+        <RUN accession="ERR15529400" alias="run2_iyColCypr_HiFi_WGS_LV6000911886_pr_238_001_bam_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA34894186" alias="SUBMISSION-05-09-2025-08:35:19:931"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+1. **Note:** The reason for a *new* alias is *"Each submitted object is uniquely identified within a submission account using the alias attribute. Once an object has been submitted no other object of the same type can use the same alias within the submission account."* [[ENA documentation](https://ena-docs.readthedocs.io/en/latest/submit/general-guide/programmatic.html#identifying-objects)]
+1. I checked what the experiment looks like at ENA, and it seems correct:
+    ![experiment-status](./images/experiment-status.PNG)
+1. Update accession number of run file in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
