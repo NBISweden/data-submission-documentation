@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run2_iyColCypr_HiFi_WGS_LV6000911886_pr_238_001_bam_1">
+		<EXPERIMENT_REF refname="exp_iyColCypr_HiFi_WGS_LV6000911886_pr_238_001"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iyColCypr_m84045_250708_202206_s4.hifi_reads.bc2108.bam" checksum_method="MD5" checksum="5e8a32f95c136212c1368ad86219ccce" filetype="bam"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
