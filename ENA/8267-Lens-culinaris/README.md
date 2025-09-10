@@ -16,9 +16,9 @@ Raw reads from multiple samples of a single species (*Lens culinaris*) mainly in
 
 Collected information from researcher in a google spreadsheet and converted to tsv fles:
 
-- [Study file](ENA/8267-Lens-culinaris/data/lens_study.tsv)
-- [Samples](ENA/8267-Lens-culinaris/data/lens_samples.tsv)
-- [Experiment](ENA/8267-Lens-culinaris/data/lens_exp.tsv)
+- [Study file](./data/lens_study.tsv)
+- [Samples](./data/lens_samples.tsv)
+- [Experiment](./data/lens_exp.tsv)
 
 ## Detailed step by step description
 
