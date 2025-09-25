@@ -193,7 +193,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
     ```
-
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    qcLitStyg1.1  | GCA_976940485 | PRJEB76284 | ERS17759200 | CDRHXL010000001-CDRHXL010000108 |              | OZ325067-OZ325087    
     ```
 
 #### Mito assembly
@@ -235,7 +236,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * I added the accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`
 * Mito has been accessioned:
     ```
-
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
+    qcLitStyg1-mito.1 | GCA_976940495 | PRJEB96884 | ERS17759200 |            |              | OZ325014-OZ325014
     ```
 
 #### Add assemblies to umbrella
