@@ -196,6 +196,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
     qcLitStyg1.1  | GCA_976940485 | PRJEB76284 | ERS17759200 | CDRHXL010000001-CDRHXL010000108 |              | OZ325067-OZ325087    
     ```
+* I made the assembly project public 2025-09-25
 
 #### Mito assembly
 * I manually created [qcLitStyg-mito-study.xml](./data/qcLitStyg-mito-study.xml) and submitted via curl (no embargo):
@@ -215,7 +216,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
         <ACTIONS>ADD</ACTIONS>
     </RECEIPT>
     ```   
-* Though no hold, it was visible from the receipt that hold date became 2 years from now, so I manually needed to release via browser (**TODO**)
+* Though no hold, it was visible from the receipt that hold date became 2 years from now, so I manually needed to release via browser (done 2025-09-25)
 
 * I created [qcLitStyg-mito-manifest.txt](./data/qcLitStyg-mito-manifest.txt), copied the fasta file to Uppmax, created [mito_chromosome_list.txt](./data/mito_chromosome_list.txt), gzipped, validated and then submitted using Webin-CLI:
     ```
