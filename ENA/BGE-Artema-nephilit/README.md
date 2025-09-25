@@ -110,7 +110,7 @@ Submission of raw reads for *Artema nephilit* to facilitate assembly and annotat
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqArtNeph-HiC-2.tsv -p ERGA-BGE -o qqArtNeph-HiC-2
     ```
-* Update qqArtNeph-HiC.exp.xml to reference accession number of previously registered study:
+* Update qqArtNeph-HiC-2.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession="PRJEB90607"/>
     ```
