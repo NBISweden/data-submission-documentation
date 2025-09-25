@@ -63,15 +63,16 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC - **TODO**
+### Submit HiC
 
 #### Preparations
-* I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/1z22KvtncVnJI-53qq-we5J6kC6ytuX9g/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA116283198](https://www.ebi.ac.uk/biosamples/samples/SAMEA116283198).
+* I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/15kfYnhsCpNLNrYagwWZTcVBh9CSN-Ww1/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA116289655](https://www.ebi.ac.uk/biosamples/samples/SAMEA116289655).
 
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [qqAgeOrie-HiC.tsv](./data/qqAgeOrie-HiC.tsv)
+* There are 2 libraries, need to make sure the .xml files are correct
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqAgeOrie-HiC.tsv -p ERGA-BGE -o qqAgeOrie-HiC
@@ -82,15 +83,25 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
     ```
 
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission-hold.xml with hold date is used.
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is public, so submission-noHold.xml is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission-hold.xml"  -F "EXPERIMENT=@qqAgeOrie-HiC.exp.xml" -F "RUN=@qqAgeOrie-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml"  -F "EXPERIMENT=@qqAgeOrie-HiC.exp.xml" -F "RUN=@qqAgeOrie-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-25T10:06:48.825+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX15053483" alias="exp_qqAgeOrie_Hi-C_LV6000912415_HC030-6A1B" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX15053484" alias="exp_qqAgeOrie_Hi-C_LV6000912415_HC030-6A2B" status="PRIVATE"/>
+        <RUN accession="ERR15648920" alias="run_qqAgeOrie_Hi-C_LV6000912415_HC030-6A1B_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15648921" alias="run_qqAgeOrie_Hi-C_LV6000912415_HC030-6A2B_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35017347" alias="SUBMISSION-25-09-2025-10:06:48:448"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
