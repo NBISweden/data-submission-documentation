@@ -69,9 +69,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC - **TODO**
+### Submit HiC
 #### Preparations
-* Sample ID gave 4 BioSample ID:s via ERGA tracker portal, and 4 different ToLID:s --> **Virtual sample is needed, and a new ToLID is needed**.
+* Sample ID gave 4 BioSample ID:s via ERGA tracker portal, and 4 different ToLID:s --> Virtual sample is needed, and a new ToLID is needed.
+    * New ToLID was requested by a colleague, received `ihAphHill12`
+    * I created [ihAphHill-HiC-virtual-sample.tsv](./data/ihAphHill-HiC-virtual-sample.tsv) and registered the sample
+    * Accession number received: `ERS26920718`
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
@@ -85,15 +88,23 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     <STUDY_REF accession="PRJEB93933"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study will be private, so submission.xml with hold date is used.
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is pulic, so submission-noHold.xml is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@ihAphHill-HiC.exp.xml" -F "RUN=@ihAphHill-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@ihAphHill-HiC.exp.xml" -F "RUN=@ihAphHill-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-25T13:02:29.261+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX15056023" alias="exp_ihAphHill_Hi-C_LV6000904610_LV6000904599_ LV6000902952_LV6000904603_HC050-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR15651460" alias="run_ihAphHill_Hi-C_LV6000904610_LV6000904599_ LV6000902952_LV6000904603_HC050-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35018351" alias="SUBMISSION-25-09-2025-13:02:28:992"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
