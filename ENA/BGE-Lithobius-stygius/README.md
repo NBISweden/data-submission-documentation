@@ -242,7 +242,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 
 #### Add assemblies to umbrella
-* **Note:** Add the assembly projects `PRJEB76284` and `PRJEB96884` when they have been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Add the assembly projects `PRJEB76284` and `PRJEB96884` when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
 * Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
 * Submit:
     ```
@@ -259,7 +259,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
         <ACTIONS>MODIFY</ACTIONS>
     </RECEIPT>
     ```
-* **Note:** The assembly studies are not visible in umbrella, is that due to them not being public yet? Need to check when they have been accessioned and made public.
+* **Note:** The assembly studies are not visible in umbrella, is that due to them not being public yet? Need to check when they have been accessioned and made public. True, once the studies became public, they also showed at umbrella level.
 
 ## Umbrella project
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
