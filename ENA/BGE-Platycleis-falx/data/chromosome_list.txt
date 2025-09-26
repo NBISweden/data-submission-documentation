@@ -1,0 +1,17 @@
+SUPER_1	1	Linear-Chromosome
+SUPER_2	2	Linear-Chromosome
+SUPER_3	3	Linear-Chromosome
+SUPER_4	4	Linear-Chromosome
+SUPER_5	5	Linear-Chromosome
+SUPER_6	6	Linear-Chromosome
+SUPER_7	7	Linear-Chromosome
+SUPER_8	8	Linear-Chromosome
+SUPER_9	9	Linear-Chromosome
+SUPER_10	10	Linear-Chromosome
+SUPER_11	11	Linear-Chromosome
+SUPER_12	12	Linear-Chromosome
+SUPER_13	13	Linear-Chromosome
+SUPER_14	14	Linear-Chromosome
+SUPER_15	15	Linear-Chromosome
+SUPER_X	X	Linear-Chromosome
+ptg000578l_rotated	MIT	Linear-Chromosome	Mitochondrion
