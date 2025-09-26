@@ -139,7 +139,7 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
 ### Submit assembly
 
 * I created a manifest file [iqPlaFalx1-manifest.txt](./data/iqPlaFalx1-manifest.txt)
-* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/BGE-P-falx/) and copied & gzipped manifest assembly file and chromosome list there
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/BGE-P-falx/) and copied & gzipped manifest, assembly file and chromosome list there
 * Then all files where submitted (first validation then submission) from Uppmax using Webin-CLI:
     ```
     interactive -t 08:00:00 -A uppmax2025-2-58
