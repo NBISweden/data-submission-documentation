@@ -161,13 +161,20 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 #### Add assembly to umbrella
 * Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
 * Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
-* Submit: **TODO**
+* Submit:
     ```
     curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-26T10:56:07.522+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96358" alias="erga-bge-icSteAust-study-umbrella-2025-08-25" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-26-09-2025-10:56:07:260"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
