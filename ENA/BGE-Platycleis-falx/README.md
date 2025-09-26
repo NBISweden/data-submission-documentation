@@ -166,9 +166,10 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     ```
 
     ```
+* **TODO** Release study and check that it is shown under umbrella
 
 #### Add assembly to umbrella
-* **Note:** Add the assembly project `PRJEB90633` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
 * Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
 * Submit:
     ```
@@ -176,7 +177,14 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-26T09:41:47.993+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB91538" alias="erga-bge-iqPlaFalx-study-umbrella-2025-07-02" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-26-09-2025-09:41:47:682"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
