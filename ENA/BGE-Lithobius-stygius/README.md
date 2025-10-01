@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB77283 (umbrella), PRJEB76283 (experiment), PRJEB76284 (assembly)
+Top_level_acccession: PRJEB77283 (umbrella), PRJEB76283 (experiment), PRJEB76284 (assembly), PRJEB96884 (mito assembly)
 ---
 
 # BGE - *Lithobius stygius*
@@ -167,6 +167,100 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 * Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
 
+### Submit assembly
+* There are 2 assemblies, one genome and one mitochondrial.
+
+#### Genome assembly
+* I created a manifest file [qcLitStyg-manifest.txt](./data/qcLitStyg-manifest.txt), as well as a chromosome and unlocalised list in tab delimited format.
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/BGE-L-stygius/)
+* Then all files where gzipped and submitted (first validation then submission) from Uppmax using Webin-CLI:
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    module load java/OpenJDK_24+36
+    java -jar ~/webin-cli-8.2.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./qcLitStyg-manifest.txt -validate
+    ```
+    * I had issues with Java Runtime, that the one available at Uppmax/Rackham only supports up to version 52.0 while the webin-cli version was compiled by version 61.0. Solution is to add a newer version (module load java/OpenJDK_24+36)
+* Receipt:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/qcLitStygr_priCur_29082025.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28435528
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    qcLitStyg1.1  | GCA_976940485 | PRJEB76284 | ERS17759200 | CDRHXL010000001-CDRHXL010000108 |              | OZ325067-OZ325087    
+    ```
+* I made the assembly project public 2025-09-25
+
+#### Mito assembly
+* I manually created [qcLitStyg-mito-study.xml](./data/qcLitStyg-mito-study.xml) and submitted via curl (no embargo):
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "PROJECT=@qcLitStyg-mito-study.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-02T13:55:05.622+01:00" submissionFile="submission-noHold.xml" success="true">
+        <PROJECT accession="PRJEB96884" alias="erga-bge-qcLitStyg1-mito-2025-09-03" status="PRIVATE" holdUntilDate="2027-09-02+01:00">
+            <EXT_ID accession="ERP179510" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA34865175" alias="SUBMISSION-02-09-2025-13:55:05:533"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```   
+* Though no hold, it was visible from the receipt that hold date became 2 years from now, so I manually needed to release via browser (done 2025-09-25)
+
+* I created [qcLitStyg-mito-manifest.txt](./data/qcLitStyg-mito-manifest.txt), copied the fasta file to Uppmax, created [mito_chromosome_list.txt](./data/mito_chromosome_list.txt), gzipped, validated and then submitted using Webin-CLI:
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    module load java/OpenJDK_24+36
+    java -jar --enable-native-access=ALL-UNNAMED ~/webin-cli-8.2.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./qcLitStyg-mito-manifest.txt -validate
+    ```
+* Receipt:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/qcLitStygr_mito_29082025.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-L-stygius/mito-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28435529
+    ```
+
+* I added the accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`
+* Mito has been accessioned:
+    ```
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
+    qcLitStyg1-mito.1 | GCA_976940495 | PRJEB96884 | ERS17759200 |            |              | OZ325014-OZ325014
+    ```
+
+#### Add assemblies to umbrella
+* Add the assembly projects `PRJEB76284` and `PRJEB96884` when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-04T07:24:24.434+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB77283" alias="erga-bge-qcLitStyg-study-umbrella-2024-07-05" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-04-09-2025-07:24:24:180"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
+    ```
+* **Note:** The assembly studies are not visible in umbrella, is that due to them not being public yet? Need to check when they have been accessioned and made public. True, once the studies became public, they also showed at umbrella level.
+
 ## Umbrella project
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
@@ -193,4 +287,3 @@ For each of the BGE species, an umbrella project has to be created and linked to
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
-* **Note:** Add the assembly project `PRJEB76284` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.

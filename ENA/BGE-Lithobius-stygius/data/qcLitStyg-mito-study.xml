@@ -1,0 +1,16 @@
+<PROJECT_SET>
+  <PROJECT center_name="SCILIFELAB" alias="erga-bge-qcLitStyg1-mito-2025-09-03">
+      <NAME>qcLitStyg1-mito</NAME>
+      <TITLE>Lithobius stygius, mitochondrial assembly, qcLitStyg1-mito.</TITLE>
+      <DESCRIPTION>This project provides a mitochondrial assembly of Lithobius stygius. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+      <SUBMISSION_PROJECT>
+         <SEQUENCING_PROJECT/>
+      </SUBMISSION_PROJECT>
+      <PROJECT_ATTRIBUTES>
+         <PROJECT_ATTRIBUTE>
+            <TAG>Keyword</TAG>
+            <VALUE>ERGA-BGE</VALUE>
+         </PROJECT_ATTRIBUTE>
+      </PROJECT_ATTRIBUTES>
+  </PROJECT>
+</PROJECT_SET>
