@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_rTriTgu_Hi-C_TT2_TT6_HC027-4A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_rTriTgu_Hi-C_TT2_TT6_HC027-4A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="rTriTgu_YF-4369-HC027-4A1A_S140_L007_R1_001.fastq.gz" checksum_method="MD5" checksum="0d8409103278b7981f8fbaff164392cd" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="rTriTgu_YF-4369-HC027-4A1A_S140_L007_R2_001.fastq.gz" checksum_method="MD5" checksum="1b6f6e408cb6bcaa9d3d23305fdd47cd" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

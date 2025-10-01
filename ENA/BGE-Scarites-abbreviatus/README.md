@@ -66,7 +66,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
     * **Note:** Status in Tracking sheet is 'TopUp', if valid it means that more material is needed
 
-### Submit HiC - **TODO**
+### Submit HiC
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
@@ -82,15 +82,23 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     <STUDY_REF accession="PRJEB91089"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study will be private, so submission.xml with hold date is used.
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is public, so submission-noHold.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@icScaAbbr-HiC.exp.xml" -F "RUN=@icScaAbbr-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@icScaAbbr-HiC.exp.xml" -F "RUN=@icScaAbbr-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-25T14:09:47.036+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX15056356" alias="exp_icScaAbbr_Hi-C_LV6000905035_HC054-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR15651793" alias="run_icScaAbbr_Hi-C_LV6000905035_HC054-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35019374" alias="SUBMISSION-25-09-2025-14:09:46:598"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
