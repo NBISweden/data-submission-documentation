@@ -1,0 +1,13 @@
+<PROJECT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-iyHalNico-study-umbrella-2025-08-25">
+		<NAME>iyHalNico</NAME>
+		<TITLE>Halictus nicosiae</TITLE>
+		<DESCRIPTION>This project collects the sequencing data and assemblies generated for Halictus nicosiae by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) for the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<UMBRELLA_PROJECT/>
+		<RELATED_PROJECTS>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB90996"/>
+			</RELATED_PROJECT>
+		</RELATED_PROJECTS>
+	</PROJECT>
+</PROJECT_SET>
