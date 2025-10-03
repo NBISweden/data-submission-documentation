@@ -1,0 +1,13 @@
+STUDY	PRJEB90635
+SAMPLE	SAMEA117387583
+RUN_REF	ERR15133378, ERR15133379
+ASSEMBLYNAME	mMonMoa1.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	91
+PROGRAM	Hifiasm (version 0.25.0-r726), NBIS/Earth-Biogenome-Project-pilot (version: 99c8937), FCS-GX (version 0.5.4), purge_dups (version 1.2.5), sanger-tol/curationpretext (version 1.4.2), PretextView (version 1.0.3), sanger-tol/agp-tpf-utils (version 1.2.3)
+PLATFORM	PacBio
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The assembly was produced with hifiasm, decontaminated with FCS-GX, and haplotigs removed with purge_dups. The Hi-C data originally produced for this individual did not contain informative contacts so this assembly was scaffolded with RagTag using the Hawaiian Monk Seal, Neomonachus schauinslandi, as a reference (GCA_002201575.2). RagTag was run in scaffold mode and no breaks were introduced in the hifiasm contigs. Pretext maps for curation were obtained with sanger-tol/curationpretext and visualised with sanger-tol/pretextview. Mitochondria was assembled with MitoHiFi. The assembly coverage is 91x for PacBio HiFi.'
+FASTA	mMonMoa1_pri.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
