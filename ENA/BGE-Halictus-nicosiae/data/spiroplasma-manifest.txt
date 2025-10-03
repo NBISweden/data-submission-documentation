@@ -1,0 +1,12 @@
+STUDY	
+SAMPLE	
+RUN_REF	ERR15157107, ERR15464854
+ASSEMBLYNAME	wolbachia-iyHalNico6.1
+ASSEMBLY_TYPE	isolate
+COVERAGE        37
+PROGRAM Hifiasm (version 0.25.0-r726), FCS-GX (version 0.5.4)
+PLATFORM        PacBio
+MOLECULETYPE    genomic DNA
+DESCRIPTION     'This assembly was based on 37x PacBio HiFi reads. The primary target of sequencing was Halictus nicosiae. The PacBio assembly for the target species was generated with hifiasm and the cobiont identified with FCS-GX.'
+FASTA	ptg000017c_spiroplasma.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
