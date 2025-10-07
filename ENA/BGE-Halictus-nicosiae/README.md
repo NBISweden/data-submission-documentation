@@ -155,9 +155,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
     ```
-
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    iyHalNico6.1  | GCA_976986675 | PRJEB90996 | ERS21344133 | CDRKBY010000001-CDRKBY010000045 |              | OZ336067-OZ336074
     ```
-* **TODO** Release study and check that it is shown under umbrella
+* Release study and check that it is shown under umbrella
 
 #### Add assembly to umbrella
 * Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
