@@ -162,6 +162,14 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28500353
     ```
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+
+#### **TODO** Resubmit assembly
+
+* While everything validated withour errors during submission, an email with the accession numbers didn't arrive as expected. When investigating, logging in to the account and checking status, the files were archived but the processing had status `failed`.
+* There has been some issues at ENA, due to processing overload, but we have no idea if the failed status is because of error in our files or due to ENA overload. After discussing with a colleague we came up with a 2 step plan:
+    1. Do a new submission made, using the same files. The only change is that the assembly name in manifest file has a new version (iqPlaFAlx1.2 instead of iqPlaFAlx1.1). If the failure was due to overload, this should work.
+    2. If still unsuccessful, we need to ask the bioinformatician for help trying to figure out if something is wrong with the assembly fasta file.
+
 * Accessioned:
     ```
 
