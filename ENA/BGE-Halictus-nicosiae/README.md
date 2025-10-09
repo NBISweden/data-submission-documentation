@@ -205,9 +205,9 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     description: a short description of the taxon, please provide an authority or publication where available, or any other information describing the organism
     ```
     * I did a free text search at ENA and *Halictus nicosiae* has no taxon registered for endosymbionts, hence proposed names `Wolbachia endosymbiont of Halictus nicosiae` and `Spiroplasma endosymbiont of Halictus nicosiae` should work
-    * For Stylops we referred to the raw reads study as `project_id` but should it be the study created for the symbionts' assemblies or the umbrella that will refer to both?
-    * The description field is not obvious how to fill either, I asked colleagues for help
-* In the [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html#creating-taxon-requests) they state *"If you have multiple names to request, please do this as a single request"*. Hence, logged in to ENA and went to [Register taxonomy](https://www.ebi.ac.uk/ena/submit/webin/taxonomy) in the Samples menu and downloaded a [taxonomy template](./data/taxonomy_template_1759492490477.tsv).
+    * For Stylops we referred to the raw reads study as `project_id` but should it be the study created for the symbionts' assemblies or the umbrella that will refer to both? Decision was made to use the umbrella.
+    * The description field is not obvious how to fill either, I asked colleagues for help and received a reference to use for Spiroplasma
+* In the [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html#creating-taxon-requests) they state *"If you have multiple names to request, please do this as a single request"*. Hence, I logged in to ENA and went to [Register taxonomy](https://www.ebi.ac.uk/ena/submit/webin/taxonomy) in the Samples menu and downloaded a [taxonomy template](./data/taxonomy_template_1759492490477.tsv). After filling it in, it was uploaded to ENA (2025-10-09). It is expected to take quite a while before it is granted.
 
 
 #### Register study **TODO**
