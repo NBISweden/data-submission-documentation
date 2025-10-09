@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB96495 (umbrella), PRJEB83457 (experiment), PRJEB83458 (assembly)
+Top_level_acccession: PRJEB96495 (umbrella), PRJEB83457 (experiment), PRJEB83458 (assembly), PRJEB98920 (haploid), PRJEB98919 (mito)
 ---
 
 # BGE - *Laparocerus anagae*
@@ -172,6 +172,91 @@ Submission will be done via CNAG script and programmatic submission route using 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+### Submit assembly
+
+* For this species we have 3 assemblies to submit, 2 haplotypes and 1 mito. This means we need 2 additional studies
+    * I created [icLapAnag-assembly-studies.xml](./data/icLapAnag-assembly-studies.xml) and submitted using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@icLapAnag-assembly-studies.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+    ```
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-09T13:49:52.632+01:00" submissionFile="submission.xml" success="true">
+        <PROJECT accession="PRJEB98919" alias="erga-bge-icLapAnag-study-mito-2025-10-09" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP181275" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB98920" alias="erga-bge-icLapAnag1_haplo-2025-10-09" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP181276" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA35054634" alias="SUBMISSION-09-10-2025-13:49:52:531"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+ls
+* I created 3 manifest files [icLapAnag1-hap1-manifest.txt](./data/icLapAnag1-hap1-manifest.txt), [icLapAnag1-hap2-manifest.txt](./data/icLapAnag1-hap2-manifest.txt), and [icLapAnag1-mito-manifest.txt](./data/icLapAnag1-mito-manifest.txt)
+* I also created 3 chromosome_lists: [chromosome_list_hap1.txt](./data/chromosome_list_hap1.txt), [chromosome_list_hap2.txt](./data/chromosome_list_hap2.txt), [chromosome_list_mito.txt](./data/chromosome_list_mito.txt)
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/L-anagae/) and copied & gzipped manifests, assembly files and chromosome list theres
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./icLapAnag1-hap1-manifest.txt -validate
+    ```
+* Receipt hap1:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/L-anagae/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/L-anagae/icLapAnag1_hap1_20250930_noMito.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/L-anagae/chromosome_list_hap1.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28534160
+    ```
+* Receipt hap2:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/L-anagae/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/L-anagae/icLapAnag1_hap2_20250930_noMito.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/L-anagae/chromosome_list_hap2.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28534161
+    ```
+* Receipt mito:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/L-anagae/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/L-anagae/icLapAnag1_mito_20251009.fasta.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/L-anagae/chromosome_list_mito.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28534162
+    ```
+* I added the accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+
+    ```
+* Release study and check that it is shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly projects when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
+
+
+* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+
 ### Umbrella project
 * For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
@@ -222,5 +307,3 @@ Submission will be done via CNAG script and programmatic submission route using 
         <ACTIONS>RELEASE</ACTIONS>
     </RECEIPT>    
     ```
-
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
