@@ -251,11 +251,15 @@ ls
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-09T14:25:26.413+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96495" alias="erga-bge-icLapAnag-study-umbrella-2025-08-27" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-09-10-2025-14:25:25:994"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
-
-
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
 
 ### Umbrella project
 * For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
