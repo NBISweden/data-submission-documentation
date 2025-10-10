@@ -237,8 +237,10 @@ ls
 * I added the accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
     ```
-    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    ASSEMBLY_NAME        | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    icLapAnag1.1         | GCA_976997095 | PRJEB83458 | ERS20534876 | CDRLMT010000001-CDRLMT010000245 |              | OZ344895-OZ344905
+    icLapAnag1-haploid.1 | GCA_976997085 | PRJEB98920 | ERS20534876 | CDRLMS010000001-CDRLMS010000095 |              | OZ344885-OZ344894
+    icLapAnag1-mito.1    | GCA_976997385 | PRJEB98919 | ERS20534876 |                                 |              | OZ344911-OZ344911
     ```
 * Release study and check that it is shown under umbrella
 
