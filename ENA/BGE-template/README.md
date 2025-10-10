@@ -64,7 +64,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     <STUDY_REF accession=""/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
@@ -92,7 +92,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     <STUDY_REF accession=""/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
