@@ -1,0 +1,12 @@
+STUDY	PRJEB98993
+SAMPLE	SAMEA113399591
+RUN_REF	ERR13803063, ERR15688615, ERR15688616
+ASSEMBLYNAME	jaClaCaes1-mito.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	1271
+PROGRAM	MitoHiFi (3.2.3)
+PLATFORM	PacBio, Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The mitochondrial genome was assembled using MitoHiFi (3.2.3)'
+FASTA	jaClaCaes1_mito_20251009.fa.gz
+CHROMOSOME_LIST	chromosome_list_mito.txt.gz

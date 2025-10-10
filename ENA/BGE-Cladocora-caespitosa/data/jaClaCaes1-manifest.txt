@@ -1,0 +1,13 @@
+STUDY	PRJEB81308
+SAMPLE	SAMEA113399591
+RUN_REF	ERR13803063, ERR15688615, ERR15688616
+ASSEMBLYNAME	jaClaCaes1.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	40
+PROGRAM	Hifiasm (version 0.25.0-r726), FCS-GX (version 0.5.5), sanger-tol/blobtoolkit (version 0.9.0), tiara (version 1.0.3), purge_dups (version 1.2.6), Yahs (version 1.2.2), PretextView (version 1.0.3), GRIT_Rapid (git: 1a3d79a8)
+PLATFORM	PacBio, Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Cladocora caespitosa was assembled with Hifiasm (version 0.25.0-r726). Contaminations were removed with FCS-GX (version 0.5.5) based on the ALL database released on 2023/01, sanger-tol/blobtoolkit (version 0.9.0) and tiara (version 1.0.3). Remaining haplotypic duplications were identified and removed with purge_dups (version 1.2.6). Yahs (version 1.2.2) was used to scaffold contigs into chromosomes. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8). The curation revealed many short shrapnel contigs that are contaminations, but due to their small size not reliably detectable from any of the decontamination tools. Therefore shrapnel contigs with GC-content > 45% and PacBio coverage smaller then 5 were filter out too.'
+FASTA	jaClaCaes1_pri_20251009_noMito.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz
