@@ -182,6 +182,22 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     INFO : Files have been uploaded to webin2.ebi.ac.uk.
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28532411    
     ```
+    * **Alternative 2**
+    Alternative 1 was unsuccessful. I have emailed ENA heldesk, asking if more information is available, but in the meantime the bioinformatician 'reformatted' the assembly using GAAS. 
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./iqPlaFalx1-v3-manifest.txt -validate
+    ```
+    ```
+    INFO : Submission has not been validated previously.
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/././webin-cli.report
+    INFO : Submission(s) validated successfully.
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/iqPlaFalx1_pri_purified.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28540394   
+    ```
 * Accessioned:
     ```
 
