@@ -1,0 +1,14 @@
+STUDY	PRJEB91069
+SAMPLE	SAMEA116283027
+RUN_REF	ERR15159739, ERR15651752
+ASSEMBLYNAME	iyBomRudr4.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	60
+PROGRAM	Hifiasm (version 0.25.0-r726), FCS-GX (version 0.5.5), purge_dups (version 1.2.6), Yahs (version 1.2.2), PretextView (version 1.0.3), GRIT_Rapid (git: 1a3d79a8)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Bombus ruderatus was assembled with Hifiasm (version 0.25.0-r726). Contaminations were removed with FCS-GX (version 0.5.5) based on the ALL database released on 2023/01. Remaining haplotypic duplications were identified and removed with purge_dups (version 1.2.6). Yahs (version 1.2.2) was used to scaffold contigs into chromosomes. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8).'
+FASTA	iyBomRudr4_pri_20251014.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalized_list.txt.gz
