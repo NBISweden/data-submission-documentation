@@ -162,6 +162,42 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28500353
     ```
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+
+#### Resubmit assembly
+
+* While everything validated withour errors during submission, an email with the accession numbers didn't arrive as expected. When investigating, logging in to the account and checking status, the files were archived but the processing had status `failed`.
+* There has been some issues at ENA, due to processing overload, but we have no idea if the failed status is because of error in our files or due to ENA overload. After discussing with a colleague we came up with a 2 step plan:
+    1. Do a new submission, using the same files. The only change is that the assembly name in manifest file has a new version (iqPlaFalx1.2 instead of iqPlaFalx1.1). If the failure was due to overload, this should work.
+    2. If still unsuccessful, we need to ask the bioinformatician for help trying to figure out if something is wrong with the assembly fasta file.
+    * **Alternative 1**
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./iqPlaFalx1-v2-manifest.txt -validate
+    ```
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/iqPlaFalx1_pri.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28532411    
+    ```
+    * **Alternative 2**
+    Alternative 1 was unsuccessful. I have emailed ENA heldesk, asking if more information is available, but in the meantime the bioinformatician 'reformatted' the assembly using GAAS. 
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./iqPlaFalx1-v3-manifest.txt -validate
+    ```
+    ```
+    INFO : Submission has not been validated previously.
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/././webin-cli.report
+    INFO : Submission(s) validated successfully.
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/iqPlaFalx1_pri_purified.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28540394   
+    ```
 * Accessioned:
     ```
 
