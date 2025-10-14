@@ -1,0 +1,13 @@
+STUDY	PRJEB90656
+SAMPLE	SAMEA116287182
+RUN_REF	ERR15133552, ERR15133553, ERR15133554, ERR15133555, ERR15170752, ERR15170753
+ASSEMBLYNAME	iqPlaFalx1.3
+ASSEMBLY_TYPE	isolate
+COVERAGE	89
+PROGRAM	Hifiasm (version 0.25.0-r726), NBIS/Earth-Biogenome-Project-pilot (version: 1d2a1e4), FCS-GX (version 0.5.4), purge_dups (version 1.2.5), YaHS (version 1.2a.2), sanget-tol/curationpretext (version 1.4.2), PretextView (version 1.0.3), GRIT_Rapid (git: 1a3d79a8)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'PacBio HiFi data for Platycleis was assembled with Hifiasm (version 0.25.0-r726) in Hi-C mode. The resulting collapsed p_ctg assembly was used as input to the NBIS/Earth-Biogenome-Project-pilot for contamination screening with FCS-GX, haplotig purging with purge_dups, and scaffolding with YaHS. The Hi-C contact maps were generated with sanger-tol/curationpretext and manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8). The assembly coverage is 89x for PacBio HiFi and 66x for Illumina Hi-C.'
+FASTA	iqPlaFalx1_pri_purified.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz

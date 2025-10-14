@@ -136,6 +136,93 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+### Submit assembly
+
+* I created a manifest file [iqPlaFalx1-manifest.txt](./data/iqPlaFalx1-manifest.txt)
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/BGE-P-falx/) and copied & gzipped manifest, assembly file and chromosome list there
+* Then all files where submitted (first validation then submission) from Uppmax using Webin-CLI:
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    module load java/OpenJDK_24+36
+    java -jar ~/webin-cli-8.2.0.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./iqPlaFalx1-manifest.txt -validate
+    ```
+    * I ran into issues with java heap space, when validating. I tried using webin-cli-9.0.1.jar but issue remains. Try using Pelle? Needed to [install 2FA](https://docs.uppmax.uu.se/getting_started/get_uppmax_2fa/) first. On Pelle the java is up to date, hence:
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./iqPlaFalx1-manifest.txt -validate
+    ```
+* Receipt:
+    ```
+    INFO : Your application version is 9.0.1
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/iqPlaFalx1_pri.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28500353
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+
+#### Resubmit assembly
+
+* While everything validated withour errors during submission, an email with the accession numbers didn't arrive as expected. When investigating, logging in to the account and checking status, the files were archived but the processing had status `failed`.
+* There has been some issues at ENA, due to processing overload, but we have no idea if the failed status is because of error in our files or due to ENA overload. After discussing with a colleague we came up with a 2 step plan:
+    1. Do a new submission, using the same files. The only change is that the assembly name in manifest file has a new version (iqPlaFalx1.2 instead of iqPlaFalx1.1). If the failure was due to overload, this should work.
+    2. If still unsuccessful, we need to ask the bioinformatician for help trying to figure out if something is wrong with the assembly fasta file.
+    * **Alternative 1**
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./iqPlaFalx1-v2-manifest.txt -validate
+    ```
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/iqPlaFalx1_pri.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28532411    
+    ```
+    * **Alternative 2**
+    Alternative 1 was unsuccessful. I have emailed ENA heldesk, asking if more information is available, but in the meantime the bioinformatician 'reformatted' the assembly using GAAS. 
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./iqPlaFalx1-v3-manifest.txt -validate
+    ```
+    ```
+    INFO : Submission has not been validated previously.
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/././webin-cli.report
+    INFO : Submission(s) validated successfully.
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/iqPlaFalx1_pri_purified.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/BGE-P-falx/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28540394   
+    ```
+* Accessioned:
+    ```
+
+    ```
+* **TODO** Release study and check that it is shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-26T09:41:47.993+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB91538" alias="erga-bge-iqPlaFalx-study-umbrella-2025-07-02" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-26-09-2025-09:41:47:682"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
+    ```
+
 ### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
@@ -173,4 +260,3 @@ For each of the BGE species, an **umbrella** project has to be created and linke
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>    
     ```
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
