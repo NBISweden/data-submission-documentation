@@ -104,6 +104,38 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+#### 2nd library
+* We received another library
+* I created [qqButKunt-HiC-2.tsv](./data/qqButKunt-HiC-2.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqButKunt-HiC-2.tsv -p ERGA-BGE -o qqButKunt-HiC-2
+    ```
+* Update qqButKunt-HiC-2.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB90597"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is public, so submission-noHold.xml is used.
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@qqButKunt-HiC-2.exp.xml" -F "RUN=@qqButKunt-HiC-2.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-25T12:38:37.984+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX15055933" alias="exp_qqButKunt_Hi-C_LV6000912347_HC032-2A1A" status="PRIVATE"/>
+        <RUN accession="ERR15651370" alias="run_qqButKunt_Hi-C_LV6000912347_HC032-2A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35018333" alias="SUBMISSION-25-09-2025-12:38:37:613"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+
 ### Submit RNAseq - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal

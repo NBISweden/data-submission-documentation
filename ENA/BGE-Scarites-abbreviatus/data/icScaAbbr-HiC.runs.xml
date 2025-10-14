@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icScaAbbr_Hi-C_LV6000905035_HC054-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_icScaAbbr_Hi-C_LV6000905035_HC054-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="icScaAbbr_YF-4369-HC054-1A1A_S145_L007_R1_001.fastq.gz" checksum_method="MD5" checksum="7fcf8da8009882ce4cd64ce397d54596" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="icScaAbbr_YF-4369-HC054-1A1A_S145_L007_R2_001.fastq.gz" checksum_method="MD5" checksum="7dc187c08a336f732256f834bc2a2203" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

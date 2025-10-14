@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iyBomRudr_Hi-C_LV6000905156_HC051-1A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_iyBomRudr_Hi-C_LV6000905156_HC051-1A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iyBomRudr_YF-4369-HC051-1A1A-CL_S144_L007_R1_001.fastq.gz" checksum_method="MD5" checksum="65213ba85bfe33bbfd6da1f3ef947dce" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iyBomRudr_YF-4369-HC051-1A1A-CL_S144_L007_R2_001.fastq.gz" checksum_method="MD5" checksum="a6e8c07d996cc2058cd530bc1ecfe9ef" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

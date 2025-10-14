@@ -69,7 +69,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC - **TODO**
+### Submit HiC
 #### Preparations
 * Sample ID gave 4 BioSample ID:s via ERGA tracker portal --> virtual sample is needed
     * I created [rTriTgu-HiC-virtual-sample.tsv](./data/rTriTgu-HiC-virtual-sample.tsv) and registered the sample
@@ -87,7 +87,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     <STUDY_REF accession="PRJEB96316"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
+* I added 'Illumina' to the library name and title , since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
@@ -95,7 +95,18 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-25T09:29:25.301+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX15053399" alias="exp_rTriTgu_Hi-C_TT2_TT6_HC027-4A1A" status="PRIVATE"/>
+        <RUN accession="ERR15648906" alias="run_rTriTgu_Hi-C_TT2_TT6_HC027-4A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35017333" alias="SUBMISSION-25-09-2025-09:29:24:976"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 

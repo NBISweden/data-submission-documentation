@@ -65,7 +65,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC - **TODO**
+### Submit HiC
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
@@ -81,15 +81,23 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     <STUDY_REF accession="PRJEB91068"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study will be private, so submission.xml with hold date is used.
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is public, so submission-noHold.xml is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iyBomRudr-HiC.exp.xml" -F "RUN=@iyBomRudr-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@iyBomRudr-HiC.exp.xml" -F "RUN=@iyBomRudr-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-09-25T13:14:45.251+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX15056315" alias="exp_iyBomRudr_Hi-C_LV6000905156_HC051-1A1A-CL" status="PRIVATE"/>
+        <RUN accession="ERR15651752" alias="run_iyBomRudr_Hi-C_LV6000905156_HC051-1A1A-CL_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35018355" alias="SUBMISSION-25-09-2025-13:14:44:876"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 

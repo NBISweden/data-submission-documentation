@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_ihAphHill_Hi-C_LV6000904610_LV6000904599_ LV6000902952_LV6000904603_HC050-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_ihAphHill_Hi-C_LV6000904610_LV6000904599_ LV6000902952_LV6000904603_HC050-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="ihAphHill_YF-4369-HC050-1A1A_S143_L007_R1_001.fastq.gz" checksum_method="MD5" checksum="c5f8d5f29a460c5f4c37e32fc72efeb6" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="ihAphHill_YF-4369-HC050-1A1A_S143_L007_R2_001.fastq.gz" checksum_method="MD5" checksum="0da9a9e47128954900eb7e90e5a20d0d" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
