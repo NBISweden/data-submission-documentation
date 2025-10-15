@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iyMesOrie_HiFi_WGS_LV6000912094_pr_261_003_fastq_1">
+		<EXPERIMENT_REF refname="exp_iyMesOrie_HiFi_WGS_LV6000912094_pr_261_003"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iyMesOrie_m84045_250925_001333_s4.hifi_reads.16_UDI_6_F01_F--16_UDI_6_F01_R.hifi_reads.fastq.gz" checksum_method="MD5" checksum="54dae4c89c11a30e8f175a2bb8bc0ba7" filetype="fastq"/>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
