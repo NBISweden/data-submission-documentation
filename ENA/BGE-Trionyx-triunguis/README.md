@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB96316 (experiment), PRJEB96317 (assembly)
+Top_level_acccession: PRJEB100764 (umbrella), PRJEB96316 (experiment), PRJEB96317 (assembly), PRJEB100729 (mito)
 ---
 
 # BGE - *Trionyx triunguis*
@@ -91,7 +91,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@rTriTgu-HiC.exp.xml" -F "RUN=@rTriTgu-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@rTriTgu-HiC.exp.xml" -F "RUN=@rTriTgu-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -138,6 +138,66 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+### Submit assembly
+* There is also a mitochondrial assembly, so I created a project for this:
+    * I created [rTriTgu-mito.study.xml](./data/rTriTgu-mito.study.xml) and submitted using curl:
+        ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@rTriTgu-mito.study.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+        * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-10-15T09:08:19.605+01:00" submissionFile="submission.xml" success="true">
+            <PROJECT accession="PRJEB100729" alias="erga-bge-rTriTgu-study-mito-2025-10-15" status="PRIVATE" holdUntilDate="2026-03-07Z">
+                <EXT_ID accession="ERP182185" type="study"/>
+            </PROJECT>
+            <SUBMISSION accession="ERA35060794" alias="SUBMISSION-15-10-2025-09:08:19:546"/>
+            <MESSAGES>
+                <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+            </MESSAGES>
+            <ACTIONS>ADD</ACTIONS>
+            <ACTIONS>HOLD</ACTIONS>
+        </RECEIPT>
+        ```
+* I created manifest files [rTriTgu1-manifest.txt](./data/rTriTgu1-manifest.txt) and [rTriTgu1-manifest-mito.txt](./data/rTriTgu1-manifest-mito.txt) and chromosome_list.txt for both primary and mito assembly, plus an unlocalized_list.txt for the primary assembly
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/T-triunguis/) and copied & gzipped manifest, assembly files, chromosome lists and unlocalised list there
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 02:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./rTriTgu1-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./rTriTgu1-manifest-mito.txt -validate
+    ```
+* Receipt primary:
+    ```
+    INFO : Your application version is 9.0.1
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/T-triunguis/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-triunguis/rTriTgu1_pri_20251013.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-triunguis/chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-triunguis/unlocalized_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28541639
+    ```
+* Receipt mito:
+    ```
+    INFO : Your application version is 9.0.1
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/T-triunguis/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-triunguis/rTriTgu1_mito_20251013.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-triunguis/mito-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28541640
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+
+    ```
+* Release study and check that it is shown under umbrella
+
 ### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
@@ -148,7 +208,7 @@ For each of the BGE species, an **umbrella** project has to be created and linke
 1. Copy experiment accession number from metadata in top of this README
 * There is a CNAG script, that should do the deed of creating the xml file:
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "" -t  -p ERGA-BGE -c SCILIFELAB -a  -x 
+    ../../../../ERGA-submission/get_submission_xmls/get_umbrella_xml_ENA.py -s "Trionyx triunguis" -t rTriTgu1 -p ERGA-BGE -c SCILIFELAB -a PRJEB96316 -x 101491
     ```
     Explanation of arguments:
     * -s: scientific name e.g. "Lithobius stygius"
@@ -156,14 +216,22 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     * -a: the accession number of the raw reads project e.g. PRJEB76283
     * -x: NCBI taxonomy id e.g. 2750798
 
-* Copy `submission-umbrella.xml` from any of the previous BGE species, check that the hold date is as wanted.
+* Since I already have the project accession numbers for primary and mito assemblies (and they are submitted), I add these as children as well.
+* Copy `submission-umbrella.xml` from any of the previous BGE species
 * Submit using curl:
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-15T11:22:18.764+01:00" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB100764" alias="erga-bge-rTriTgu-study-umbrella-2025-10-15" status="PRIVATE" holdUntilDate="2027-10-15+01:00"/>
+        <SUBMISSION accession="ERA35060985" alias="SUBMISSION-15-10-2025-11:22:18:408"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>    
     ```
 * Release the umbrella by adding the umbrella project accession number from the receipt above in file [submission-release-project.xml](./data/submission-release-project.xml)
 * Submit using curl:
@@ -172,7 +240,12 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-15T11:24:57.986+01:00" submissionFile="submission-release-project.xml" success="true">
+        <MESSAGES>
+            <INFO>project accession "PRJEB100764" is set to public status.</INFO>
+        </MESSAGES>
+        <ACTIONS>RELEASE</ACTIONS>
+    </RECEIPT>    
     ```
-
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.

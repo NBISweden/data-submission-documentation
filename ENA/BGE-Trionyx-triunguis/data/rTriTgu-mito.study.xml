@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-rTriTgu-study-mito-2025-10-15">
+		<NAME>rTriTgu1-mito</NAME>
+		<TITLE>Trionyx triunguis, mitochondrial assembly, rTriTgu1-mito. </TITLE>
+		<DESCRIPTION>This project collects the mitochondrial assembly of Trionyx triunguis. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+</PROJECT_SET>
