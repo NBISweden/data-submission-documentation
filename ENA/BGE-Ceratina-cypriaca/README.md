@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB96368 (umbrella), PRJEB91071 (experiment), PRJEB91072 (assembly)
+Top_level_acccession: PRJEB96368 (umbrella), PRJEB91071 (experiment)
 ---
 
 # BGE - *Ceratina cypriaca*
@@ -200,4 +200,19 @@ For each of the BGE species, an **umbrella** project has to be created and linke
             <ACTIONS>MODIFY</ACTIONS>
         </RECEIPT>
         ```
-
+* Since a assembly project was created automatically, I need to cancel it:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-cancel.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-10-15T08:09:08.027+01:00" submissionFile="submission-cancel.xml" success="true">
+            <MESSAGES>
+                <INFO>STUDY accession "ERP174068" is set to cancelled status.</INFO>
+                <INFO>PROJECT accession "PRJEB91072" is set to cancelled status.</INFO>
+            </MESSAGES>
+            <ACTIONS/>
+        </RECEIPT>
+        ````
