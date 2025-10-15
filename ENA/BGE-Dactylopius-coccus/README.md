@@ -129,6 +129,130 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+### Submit assembly
+
+* I created a manifest file [ihDacCocc15-manifest.txt](./data/ihDacCocc15-manifest.txt)
+* I added a note in the description that the quality of the HiC data is low. I also added this note to the library_construction protocol of the HiC experiment.
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/D-coccus/) and copied & gzipped manifest, assembly file and chromosome list there
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./ihDacCocc15-manifest.txt -validate
+    ```
+* Receipt:
+    ```
+    INFO : Your application version is 9.0.1
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/D-coccus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/D-coccus/ihDacCocc15_pri_20251008.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/D-coccus/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28541641
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+
+    ```
+* Release study and check that it is shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
+
+### Submit 2 endosymbionts
+* Submit Spiroplasma and Wolbachia endosymbionts, see [Stylops ater README](../ERGA-Stylops-ater/README.md/#submission-symbionts) how it was done there.
+
+#### Suggested steps
+
+1. Register new taxonomies
+1. Register 2 projects/studies
+1. Register 2 samples with fields `sample symbiont of` (with the sample accession of host) and `symbiont` (set to 'Y')
+1. Submit assemblies
+1. Add to umbrella of host
+
+#### Register new taxonomies
+* The fields to fill:
+    ```
+    proposed_name: the organism name (mandatory). We will check if there is a taxa registered with the given name.
+    name_type: allowed taxon name types are
+        Environmental Name
+        Synthetic Name
+        Novel Species
+        Unidentified Species
+        Published Name
+    host: host associated with the taxon, if applicable
+    project_id: project associated with the taxa, if applicable
+    description: a short description of the taxon, please provide an authority or publication where available, or any other information describing the organism
+    ```
+
+* In the [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html#creating-taxon-requests) they state *"If you have multiple names to request, please do this as a single request"*. Hence, I logged in to ENA and went to [Register taxonomy](https://www.ebi.ac.uk/ena/submit/webin/taxonomy) in the Samples menu and downloaded a [taxonomy template](./data/taxonomy_template_1759492490477.tsv). After filling it in, it was uploaded to ENA (2025-10-15). It is expected to take quite a while before it is granted.
+
+
+#### Register study **TODO**
+* While not necessary, since there are 2 samples, I decided to create 2 separate studies
+* I registered the them via browser, using the same release dates as the assembly project
+    ```
+    title:          Wolbachia endosymbiont of Dactylopius coccus genome assembly
+    study_name:     Wolbachia-ihDacCocc15
+    study_abstract: This project provides the genome assembly of Wolbachia endosymbiont of Dactylopius coccus.	
+    ```
+    ```
+    title:          Spiroplasma endosymbiont of Dactylopius coccus genome assembly
+    study_name:     Spiroplasma-ihDacCocc15
+    study_abstract: This project provides the genome assembly of Spiroplasma endosymbiont of Dactylopius coccus.	
+    ```
+* Accession numbers: `` for Wolbachia and `` for Spiroplasma
+* I added the accession numbers to SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+
+#### Register samples  **TODO**
+* I had to wait until the taxonomy request was approved
+* I then submitted 2 samples, by uploading the sheet [symbiont-samples.tsv](./data/symbiont-samples.tsv)
+* Accession numbers received: `` for Wolbachia and `` for Spiroplasma
+
+#### Submit assemblies  **TODO**
+* I created 2 manifest files [wolbachia-manifest.txt](./data/wolbachia-manifest.txt) and [spiroplasma-manifest.txt](./data/spiroplasma-manifest.txt)
+* I copied them to separate subfolders on Uppmax (/proj/snic2022-6-208/nobackup/submission/D-coccus) together with the chromosome lists and fasta assembly files
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./wolbachia-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./spiroplasma-manifest.txt -validate    
+    ```
+* Receipts:
+    ```
+
+    ```
+    ```
+
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+
+    ```
+#### Add to umbrella
+* I reused [update.xml](./data/update.xml) and created [umbrella_symbionts.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_symbionts.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
+ 
 ### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
@@ -182,5 +306,3 @@ For each of the BGE species, an **umbrella** project has to be created and linke
         <ACTIONS>RELEASE</ACTIONS>
     </RECEIPT>    
     ```
-
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.

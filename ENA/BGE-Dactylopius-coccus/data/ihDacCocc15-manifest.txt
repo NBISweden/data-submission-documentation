@@ -1,0 +1,13 @@
+STUDY	PRJEB90602
+SAMPLE	SAMEA116283214
+RUN_REF	ERR15132702, ERR15651791
+ASSEMBLYNAME	ihDacCocc15.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	60
+PROGRAM	Hifiasm (version 0.25.0-r726), FCS-GX (version 0.5.5), purge_dups (version 1.2.6), Yahs (version 1.2.2), PretextView (version 1.0.3), GRIT_Rapid (git: 1a3d79a8)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Dactylopius coccus was assembled with Hifiasm (version 0.25.0-r726). Contaminations were removed with FCS-GX (version 0.5.5) based on the ALL database released on 2023/01 and tiara (version 1.0.3). Remaining haplotypic duplications were identified and removed with purge_dups (version 1.2.6). Yahs (version 1.2.2, with option: --no-contig-ec enabled) was used to scaffold contigs into chromosomes. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8). Note: The HiC data (ERR15651791) is of low quality (only 258K read pairs span a region of +1Kb), and was only used for pairing four contigs.'
+FASTA	ihDacCocc15_pri_20251008.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
