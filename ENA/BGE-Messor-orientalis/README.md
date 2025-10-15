@@ -65,7 +65,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC - **TODO**
+### Submit HiC
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
@@ -76,20 +76,31 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iyMesOrie-HiC.tsv -p ERGA-BGE -o iyMesOrie-HiC
     ```
-* Update -HiC.exp.xml to reference accession number of previously registered study:
+* Update iyMesOrie-HiC.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB100781"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
 * Study will be private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iyMesOrie-HiC.exp.xml" -F "RUN=@iyMesOrie-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iyMesOrie-HiC.exp.xml" -F "RUN=@iyMesOrie-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-15T14:53:15.411+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX15107902" alias="exp_iyMesOrie_Hi-C_LV6000912093_HC048-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR15703066" alias="run_iyMesOrie_Hi-C_LV6000912093_HC048-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35061186" alias="SUBMISSION-15-10-2025-14:53:15:241"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
@@ -106,7 +117,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update -RNAseq.exp.xml to reference accession number of previously registered study:
     ```
-    <STUDY_REF accession=""/>
+    <STUDY_REF accession="PRJEB100781"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
 * I added 'Illumina' to the library name, since the other data types have the platform named
