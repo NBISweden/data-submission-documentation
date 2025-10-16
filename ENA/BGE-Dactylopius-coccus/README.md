@@ -121,7 +121,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Study is private, so submission.xml with hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@ihDacCocc-RNAseq.exp.xml" -F "RUN=@ihDacCocc-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@ihDacCocc-RNAseq.exp.xml" -F "RUN=@ihDacCocc-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -154,7 +154,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    ihDacCocc15.1 | GCA_977009245 | PRJEB90602 | ERS21327155 | CDRMXH010000001-CDRMXH010000004 |              | OZ346538-OZ346545
     ```
 * Release study and check that it is shown under umbrella
 
