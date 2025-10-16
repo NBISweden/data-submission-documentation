@@ -1,0 +1,11 @@
+STUDY	PRJEB100832
+SAMPLE	ERS27074074
+RUN_REF	ERR15132702
+ASSEMBLYNAME	wolbachia-ihDacCocc15.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	204
+PROGRAM	Hifiasm (version 0.25.0-r726), FCS-GX (version 0.5.5)
+PLATFORM	PacBio
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Dactylopius coccus was assembled with Hifiasm (version 0.25.0-r726). Contaminations were removed with FCS-GX (version 0.5.5) based on the ALL database released on 2023/01 and tiara (version 1.0.3).'
+FASTA	ihDacCocc15_contaminations_Wolbachia_endosymbiont.fasta.gz

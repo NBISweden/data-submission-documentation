@@ -196,12 +196,13 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     description: a short description of the taxon, please provide an authority or publication where available, or any other information describing the organism
     ```
 
-* In the [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html#creating-taxon-requests) they state *"If you have multiple names to request, please do this as a single request"*. Hence, I logged in to ENA and went to [Register taxonomy](https://www.ebi.ac.uk/ena/submit/webin/taxonomy) in the Samples menu and downloaded a [taxonomy template](./data/taxonomy_template_1759492490477.tsv). After filling it in, it was uploaded to ENA (2025-10-15). It is expected to take quite a while before it is granted.
+* In the [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html#creating-taxon-requests) they state *"If you have multiple names to request, please do this as a single request"*. Hence, I logged in to ENA and went to [Register taxonomy](https://www.ebi.ac.uk/ena/submit/webin/taxonomy) in the Samples menu and downloaded a [taxonomy template](./data/taxonomy_template.tsv). After filling it in, it was uploaded to ENA (2025-10-16). It is expected to take quite a while before it is granted.
+* As it turns out, there is already a taxon for Wolbachia ([Taxon:1605993](https://www.ebi.ac.uk/ena/browser/view/Taxon:1605993)), so only the Spriroplasma is necessary to apply for
 
 
-#### Register study **TODO**
+#### Register study
 * While not necessary, since there are 2 samples, I decided to create 2 separate studies
-* I registered the them via browser, using the same release dates as the assembly project
+* I registered the them via browser, set release dates to 2026-03-07 
     ```
     title:          Wolbachia endosymbiont of Dactylopius coccus genome assembly
     study_name:     Wolbachia-ihDacCocc15
@@ -212,31 +213,49 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     study_name:     Spiroplasma-ihDacCocc15
     study_abstract: This project provides the genome assembly of Spiroplasma endosymbiont of Dactylopius coccus.	
     ```
-* Accession numbers: `` for Wolbachia and `` for Spiroplasma
+* Accession numbers: `PRJEB100832` for Wolbachia and `PRJEB100833` for Spiroplasma
 * I added the accession numbers to SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
-#### Register samples  **TODO**
-* I had to wait until the taxonomy request was approved
-* I then submitted 2 samples, by uploading the sheet [symbiont-samples.tsv](./data/symbiont-samples.tsv)
-* Accession numbers received: `` for Wolbachia and `` for Spiroplasma
+#### Register samples
+**Wolbachia**
+* I submitted 1 samples, by uploading the sheet [wolbachia-sample.tsv](./data/wolbachia-sample.tsv)
+* Accession number received: `ERS27074074`
 
-#### Submit assemblies  **TODO**
-* I created 2 manifest files [wolbachia-manifest.txt](./data/wolbachia-manifest.txt) and [spiroplasma-manifest.txt](./data/spiroplasma-manifest.txt)
-* I copied them to separate subfolders on Uppmax (/proj/snic2022-6-208/nobackup/submission/D-coccus) together with the chromosome lists and fasta assembly files
-* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+**Spiroplasma** **TODO**
+* I had to wait until the taxonomy request was approved
+* I then submitted 1 sample, by uploading the sheet [spiroplasma-sample.tsv](./data/spiroplasma-sample.tsv)
+* Accession number received: `` 
+
+#### Submit assemblies
+
+**Wolbachia**
+* I created 2 manifest files [wolbachia-manifest.txt](./data/wolbachia-manifest.txt) and a chromosome_list file
+* I copied them to Uppmax (/proj/snic2022-6-208/nobackup/submission/D-coccus) 
+* Then all files were submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
 
     ```
-    interactive -t 08:00:00 -A uppmax2025-2-58
-    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./wolbachia-manifest.txt -validate
-    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./spiroplasma-manifest.txt -validate    
+    interactive -t 02:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./wolbachia-manifest.txt -validate    
     ```
 * Receipts:
     ```
 
     ```
+
+**Spiroplasma**   **TODO**
+* I created [spiroplasma-manifest.txt](./data/spiroplasma-manifest.txt) and a chromosome_list file
+* I copied them to Uppmax (/proj/snic2022-6-208/nobackup/submission/D-coccus)
+* Then all files were submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 02:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./spiroplasma-manifest.txt -validate    
+    ```
+* Receipt:
     ```
 
     ```
+
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
     ```
