@@ -9,3 +9,4 @@ PLATFORM	PacBio
 MOLECULETYPE	genomic DNA
 DESCRIPTION	'Dactylopius coccus was assembled with Hifiasm (version 0.25.0-r726). Contaminations were removed with FCS-GX (version 0.5.5) based on the ALL database released on 2023/01 and tiara (version 1.0.3).'
 FASTA	ihDacCocc15_contaminations_Wolbachia_endosymbiont.fasta.gz
+CHROMOSOME_LIST	wolbachia-chromosome_list.txt.gz

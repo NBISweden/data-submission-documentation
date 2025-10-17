@@ -239,7 +239,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipts:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/D-coccus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/D-coccus/ihDacCocc15_contaminations_Wolbachia_endosymbiont.fasta.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/D-coccus/wolbachia-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28545900
     ```
 
 **Spiroplasma**   **TODO**
