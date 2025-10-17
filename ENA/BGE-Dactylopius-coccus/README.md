@@ -246,6 +246,11 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     INFO : Files have been uploaded to webin2.ebi.ac.uk.
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28545900
     ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+* Accessioned:
+    ```
+
+    ```
 
 **Spiroplasma**   **TODO**
 * I created [spiroplasma-manifest.txt](./data/spiroplasma-manifest.txt) and a chromosome_list file
@@ -261,16 +266,34 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
     ```
 
-* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 * Accessioned:
     ```
 
     ```
 #### Add to umbrella
-* I reused [update.xml](./data/update.xml) and created [umbrella_symbionts.xml](./data/umbrella_modified.xml)
+**Wolbachia**
+* I reused [update.xml](./data/update.xml) and created [umbrella_wolbachia.xml](./data/umbrella__wolbachia.xml)
 * Submit:
     ```
-    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_symbionts.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_wolbachia.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-17T14:53:16.917+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96490" alias="erga-bge-ihDacCocc-study-umbrella-2025-08-27" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-17-10-2025-14:53:16:793"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
+    ```
+**Spiroplasma** **TODO**
+* I reused [update.xml](./data/update.xml) and created [umbrella_spiroplasma.xml](./data/umbrella_spiroplasma.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_spiroplasma.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
