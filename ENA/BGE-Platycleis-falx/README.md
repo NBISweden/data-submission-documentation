@@ -18,6 +18,7 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
 * [BGE mRupRup umbrella project](https://www.ncbi.nlm.nih.gov/bioproject/1084634)
 
 ## Lessons learned
+* The assembly required more memory than the ENA server could handle when processing, causing me to submit multiple times since I didn't understand why it failed. Having a broker back door to support helped.
 
 ## Detailed step by step description
 
@@ -198,11 +199,19 @@ Submission of raw reads for *Platycleis falx* to facilitate assembly and annotat
     INFO : Files have been uploaded to webin2.ebi.ac.uk.
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28540394   
     ```
+#### Final assembly
+* ENA support helped out, turns out there were memory issues when processing the assembly. The first assembly `ERZ28500353` went through and the other 2 versions were cancelled by ENA.
+    ```
+    The technical team has processed the assembly ERZ28500353 successfully and
+    cancelled the other two ERZs. This has been resolved now, and the GCA ID
+    is GCA_976974135, which will go public when you release your data.
+    ```
 * Accessioned:
     ```
-
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    iqPlaFalx1.1  | GCA_976974135 | PRJEB90656 | ERS21331123 | CDRMZL010000001-CDRMZL010000005 |              | OZ346699-OZ346715
     ```
-* **TODO** Release study and check that it is shown under umbrella
+* Release study (done 2025-10-20) and check that it is shown under umbrella
 
 #### Add assembly to umbrella
 * Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
