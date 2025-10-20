@@ -230,7 +230,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-20T13:48:25.725+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB91541" alias="erga-bge-iqSphRube-study-umbrella-2025-07-02" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-20-10-2025-13:48:25:387"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
@@ -269,14 +276,4 @@ For each of the BGE species, an **umbrella** project has to be created and linke
         <ACTIONS>ADD</ACTIONS>
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>    
-    ```
-#### Release umbrella
-* Release the umbrella by adding the umbrella project accession number from the receipt above in file [submission-release-project.xml](./data/submission-release-project.xml)
-* Submit using curl:
-    ```
-    curl -u Username:Password -F "SUBMISSION=@submission-release-project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* Receipt:
-    ```
-   
     ```
