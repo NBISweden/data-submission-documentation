@@ -200,7 +200,7 @@ Submission will be done via CNAG script and programmatic submission route using 
 
 * I created 3 manifest files [icLapAnag1-hap1-manifest.txt](./data/icLapAnag1-hap1-manifest.txt), [icLapAnag1-hap2-manifest.txt](./data/icLapAnag1-hap2-manifest.txt), and [icLapAnag1-mito-manifest.txt](./data/icLapAnag1-mito-manifest.txt)
 * I also created 3 chromosome_lists: [chromosome_list_hap1.txt](./data/chromosome_list_hap1.txt), [chromosome_list_hap2.txt](./data/chromosome_list_hap2.txt), [chromosome_list_mito.txt](./data/chromosome_list_mito.txt)
-* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/L-anagae/) and copied & gzipped manifests, assembly files and chromosome list theres
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/L-anagae/) and copied & gzipped manifests, assembly files and chromosome list there
 * Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
 
     ```

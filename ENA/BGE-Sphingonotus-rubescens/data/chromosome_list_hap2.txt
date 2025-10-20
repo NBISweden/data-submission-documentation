@@ -1,0 +1,12 @@
+h2s1	1	Linear-Chromosome
+h2s2	2	Linear-Chromosome
+h2s3	X	Linear-Chromosome
+h2s4	3	Linear-Chromosome
+h2s5	4	Linear-Chromosome
+h2s6	5	Linear-Chromosome
+h2s7	6	Linear-Chromosome
+h2s8	7	Linear-Chromosome
+h2s9	8	Linear-Chromosome
+h2s10	9	Linear-Chromosome
+h2s11	10	Linear-Chromosome
+h2s12	11	Linear-Chromosome
