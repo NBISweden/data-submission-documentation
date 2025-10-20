@@ -249,8 +249,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 * Accessioned:
     ```
-
+    ASSEMBLY_NAME           | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
+    wolbachia-ihDacCocc15.1 | GCA_977011065 | PRJEB100832 | ERS27074074 |            |              | OZ347065-OZ347065
     ```
+* I released the project 2025-10-20
 
 **Spiroplasma**   **TODO**
 * I created [spiroplasma-manifest.txt](./data/spiroplasma-manifest.txt) and a chromosome_list file
