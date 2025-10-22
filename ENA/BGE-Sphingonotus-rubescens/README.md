@@ -216,10 +216,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 * Accessioned:
     ```
-    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    iqSphRube1-mito.1 | GCA_977011875 | PRJEB101047 | ERS21331484 |                                 |              | OZ348237-OZ348237
     ```
-* Release studies and check that they are shown under umbrella
+* Release studies and check that they are shown under umbrella (**TODO**)
 
 #### Add assemblies to umbrella
 * Add the assembly projects when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
