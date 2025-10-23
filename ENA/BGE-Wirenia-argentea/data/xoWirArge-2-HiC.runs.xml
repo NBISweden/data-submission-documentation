@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_xoWirArge_Hi-C_wargBGO23-5_HC013-2A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_xoWirArge_Hi-C_wargBGO23-5_HC013-2A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="wirArge_YH-4400-HC013-2A1A-CL_S1351_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="3855d4a126aae9032aa768c5efcb366c" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="wirArge_YH-4400-HC013-2A1A-CL_S1351_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="52135bd0aca99389abf670603fe837d3" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_xoWirArge_Hi-C_wargBGO-11R_HC013-3A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_xoWirArge_Hi-C_wargBGO-11R_HC013-3A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="wirArge_YH-4400-HC013-3A1A-CL_S1352_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="192a3c07e613925daedd5149ccaab8a8" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="wirArge_YH-4400-HC013-3A1A-CL_S1352_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="f667edf786b35766d0a1d0bd02be7f29" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
