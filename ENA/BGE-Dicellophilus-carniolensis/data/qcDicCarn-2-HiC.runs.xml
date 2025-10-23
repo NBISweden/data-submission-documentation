@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qcDicCarn_Hi-C_FS42595417_HC012-2A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_qcDicCarn_Hi-C_FS42595417_HC012-2A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="dicCarn_YH-4400-HC012-2A1A-CL_S1350_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="5a0d513dedb4aea78ef6876ad22f11ca" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="dicCarn_YH-4400-HC012-2A1A-CL_S1350_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="27147c7e370034a50e48bf3ccfe7866a" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
