@@ -87,7 +87,7 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
 * Study is public, so submission-noHold.xml is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission-noHold.xml"  -F "EXPERIMENT=@qqAgeOrie-HiC.exp.xml" -F "RUN=@qqAgeOrie-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml"  -F "EXPERIMENT=@qqAgeOrie-HiC.exp.xml" -F "RUN=@qqAgeOrie-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
@@ -105,7 +105,41 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+#### Additional HiC
+* 2 more libraries were sequenced. Tube labels made it possible to identify biosample, and sequences were transferred to ENA in batch using lftp.
+* I created [qqAgeOrie-2-HiC.tsv](./data/qqAgeOrie-2-HiC.tsv)
+* There are 2 libraries, need to make sure the .xml files are correct
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqAgeOrie-2-HiC.tsv -p ERGA-BGE -o qqAgeOrie-2-HiC
+    ```
+* Update qqAgeOrie-2-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB90605"/>
+    ```
 
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is public, so submission-noHold.xml is used.
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml"  -F "EXPERIMENT=@qqAgeOrie-2-HiC.exp.xml" -F "RUN=@qqAgeOrie-2-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-23T08:42:22.182+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX15162329" alias="exp_qqAgeOrie_Hi-C_LV6000912424_HC030-7A1A-CL" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX15162330" alias="exp_qqAgeOrie_Hi-C_LV6000912424_HC030-7A2A" status="PRIVATE"/>
+        <RUN accession="ERR15757805" alias="run_qqAgeOrie_Hi-C_LV6000912424_HC030-7A1A-CL_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15757806" alias="run_qqAgeOrie_Hi-C_LV6000912424_HC030-7A2A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35072606" alias="SUBMISSION-23-10-2025-08:42:21:866"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 ### Submit RNAseq - **TODO**
 
 #### Preparations
