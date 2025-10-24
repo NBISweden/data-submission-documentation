@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qqAgeOrie_Hi-C_LV6000912424_HC030-7A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_qqAgeOrie_Hi-C_LV6000912424_HC030-7A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqAgeOrie_YH-4400-HC030-7A1A-CL_S1353_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="d8600c47dbb0ecc8a3e20bb4f7e749d1" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="qqAgeOrie_YH-4400-HC030-7A1A-CL_S1353_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="96b98a8e4d9974b8ef842a00bc7a0545" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qqAgeOrie_Hi-C_LV6000912424_HC030-7A2A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qqAgeOrie_Hi-C_LV6000912424_HC030-7A2A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqAgeOrie_YH-4400-HC030-7A2A_S1354_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="20c06863277c8482bbfb59c09a1c1fa6" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="qqAgeOrie_YH-4400-HC030-7A2A_S1354_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="c4b79570aca6f5abb97d8d887f1e736f" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

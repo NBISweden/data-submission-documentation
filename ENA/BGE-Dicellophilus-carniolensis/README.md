@@ -124,6 +124,39 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+#### Additional HiC
+* Additional sequencing was made for library `HC012-2A1A`. Sample is the same and sequencens was transferred in batch to ENA using lftp.
+#### XML
+* I created [qcDicCarn-2-HiC.tsv](./data/qcDicCarn-2-HiC.tsv).
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qcDicCarn-2-HiC.tsv -p ERGA-BGE -o qcDicCarn-2-HiC
+    ```
+* Update qcDicCarn-2-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB77038"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is already public, so submission.xml without hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@qcDicCarn-2-HiC.exp.xml" -F "RUN=@qcDicCarn-2-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-23T07:50:07.156+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX15162305" alias="exp_qcDicCarn_Hi-C_FS42595417_HC012-2A1A-CL" status="PRIVATE"/>
+        <RUN accession="ERR15757781" alias="run_qcDicCarn_Hi-C_FS42595417_HC012-2A1A-CL_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35072585" alias="SUBMISSION-23-10-2025-07:50:06:754"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
 * Create [qcDicCarn-RNAseq.tsv](./data/qcDicCarn-RNAseq.tsv)

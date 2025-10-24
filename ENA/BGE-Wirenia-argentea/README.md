@@ -227,6 +227,42 @@ Submission will be done via CNAG script and programmatic submission route using 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+#### Additional HiC
+* 2 more libraries were sequenced, tube labels led to sample, and the sequences were transferred in batch to ENA using lftp.
+
+* I created [xoWirArge-2-HiC.tsv](./data/xoWirArge-2-HiC.tsv) containing both 1st and 2nd round of HiC.
+* I need to make sure that they appear in separate experiments.
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-2-HiC.tsv -p ERGA-BGE -o xoWirArge-2-HiC
+    ```
+* Update xoWirArge-2-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB83554"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is public, so submission.xml, without hold date, will be used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@xoWirArge-2-HiC.exp.xml" -F "RUN=@xoWirArge-2-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-23T08:29:42.035+01:00" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX15162327" alias="exp_xoWirArge_Hi-C_wargBGO23-5_HC013-2A1A-CL" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX15162328" alias="exp_xoWirArge_Hi-C_wargBGO-11R_HC013-3A1A-CL" status="PRIVATE"/>
+        <RUN accession="ERR15757803" alias="run_xoWirArge_Hi-C_wargBGO23-5_HC013-2A1A-CL_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15757804" alias="run_xoWirArge_Hi-C_wargBGO-11R_HC013-3A1A-CL_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35072601" alias="SUBMISSION-23-10-2025-08:29:41:761"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+
 ### Submit RNAseq
 **To be done**
 * Identify which sample
