@@ -17,7 +17,7 @@ In order to link the individual studies, and have a main entry point, an umbrell
 
 
 In this case `ADD` is used along with the release date. 
-    * Set the release date to the same date as che children projects.
+    * Set the release date to the same date as the children projects.
 
 * The [umbrella.xml](./data/umbrella.xml) contains a project alias, title, description, and the accession numbers of the children projects.
     * Set `alias` to `all-<LOCUSTAG>`, e.g. `all-StyAte`
@@ -64,9 +64,20 @@ In this case `ADD` is used along with the release date.
 
 ### Making further changes to an already existing umbrella project
 
-In case an already existent umbrella project needs to be modified (e.g. release postponed, or cancelled), this is done by creating a new update.xml.
+In case an already existent umbrella project needs to be modified (e.g. released, postponed, or cancelled), this is done by creating a new update.xml.
 
-For example:
+Release:
+```
+<SUBMISSION>
+    <ACTIONS>
+            <ACTION>
+                <RELEASE target="PRJEBXXXXX" />
+            </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+```
+
+Postpone:
 ``` 
 <SUBMISSION>
     <ACTIONS>
@@ -77,8 +88,7 @@ For example:
 </SUBMISSION>
 ```
 
-Or:
-
+Cancel:
 ```
 <SUBMISSION>
     <ACTIONS>
