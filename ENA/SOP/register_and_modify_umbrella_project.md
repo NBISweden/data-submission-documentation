@@ -6,9 +6,17 @@ In order to link the individual studies, and have a main entry point, an umbrell
 
 * ENA documentation on [umbrella studies](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#umbrella-studies)
 
-* Umbrella projects can only be registered programatically, using xml files and curl command.
+* Umbrella projects can only be registered and modified programatically, using xml files and curl command.
 
-* The [submission.xml](./data/submission.xml) file contains the action to be made, in this case `ADD` and the release date. 
+* The [submission.xml](./data/submission.xml) file contains the action to be made in the ACTION section. The actions are limited to:
+
+    - ADD (create a new action)
+    - MODIFY (make changes to an already existing umbrella)
+    - HOLD (to restrict an umbrella from being made public)
+    - CANCEL (to mask an already created umbrella from becoming official)
+
+
+In this case `ADD` is used along with the release date. 
     * Set the release date to the same date as che children projects.
 
 * The [umbrella.xml](./data/umbrella.xml) contains a project alias, title, description, and the accession numbers of the children projects.
@@ -53,6 +61,39 @@ In order to link the individual studies, and have a main entry point, an umbrell
     curl -u Username:Password -F SUBMISSION=@update.xml" -F "PROJECT=@umbrella-add-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Check that the receipt contains `submissionFile="update.xml" success="true"` (i.e. no error messages or success="false"), and copy the whole receipt to the documentation (for future reference).
+
+### Making further changes to an already existing umbrella project
+
+In case an already existent umbrella project needs to be modified (e.g. release postponed, or cancelled), this is done by creating a new update.xml.
+
+For example:
+``` 
+<SUBMISSION>
+    <ACTIONS>
+        <ACTION>
+            <HOLD HoldUntilDate="YYYY-MM-DD" target="PRJEBXXXXX"/>
+        </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+```
+
+Or:
+
+```
+<SUBMISSION>
+    <ACTIONS>
+       <ACTION>
+            <CANCEL target="PRJEBXXXXX"/>
+        </ACTION>
+   </ACTIONS>
+</SUBMISSION>
+```
+
+Submit using curl:
+```
+    curl -u Username:Password -F SUBMISSION=@update.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+```
+* Check that the receipt contains `submissionFile="update.xml" success="true"` (i.e. no error messages or success="false"), and copy the whole receipt to the documentation (for future reference). 
 
 ## Swagger-UI
 
