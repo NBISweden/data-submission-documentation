@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB100781 (experiment), PRJEB100782 (assembly)
+Top_level_acccession: PRJEB101764 (umbrella), PRJEB100781 (experiment), PRJEB100782 (assembly)
 ---
 
 # BGE - *Messor orientalis*
@@ -150,13 +150,35 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     * -a: the accession number of the raw reads project e.g. PRJEB76283
     * -x: NCBI taxonomy id e.g. 2750798
 
-* Copy `submission-umbrella.xml` from any of the previous BGE species, check that the hold date is as wanted.
+* Copy `submission-umbrella.xml` from any of the previous BGE species
 * Submit using curl:
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-28T07:53:34.154Z" submissionFile="submission-umbrella.xml" success="true">
+        <PROJECT accession="PRJEB101764" alias="erga-bge-iyMesOrie-study-umbrella-2025-10-28" status="PRIVATE" holdUntilDate="2027-10-28+01:00"/>
+        <SUBMISSION accession="ERA35078353" alias="SUBMISSION-28-10-2025-07:53:33:888"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>    
     ```
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Release the umbrella by adding the umbrella project accession number from the receipt above in file [submission-release-project.xml](./data/submission-release-project.xml)
+* Submit using curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-release-project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-28T08:45:28.107Z" submissionFile="submission-release-project.xml" success="true">
+        <MESSAGES>
+            <INFO>project accession "PRJEB101764" is set to public status.</INFO>
+        </MESSAGES>
+        <ACTIONS>RELEASE</ACTIONS>
+    </RECEIPT>  
+    ```
