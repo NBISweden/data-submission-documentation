@@ -405,7 +405,26 @@ For the actual registration it seems straightforward, login to ENA and go to [Re
     java -jar ../../../Downloads/webin-cli-6.5.0.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./PRJEB71935-Wolbachia-assembly-1-manifest.txt -submit
     ```
 * Received accession numbers: assembly-1 - `ERZ22353165`, assembly-2 - `ERZ22353209`
--------------
+
+#### Add symbiont projects to umbrella
+* Copied the xml files used for adding mito project to umbrella and renamed them to [submission-add-symbionts.xml](./data/submission-add-symbionts.xml) and [umbrella-add-symbionts.xml](./data/umbrella-add-symbionts.xml)
+* Submitted using curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-add-symbionts.xml" -F "PROJECT=@umbrella-add-symbionts.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-29T10:10:59.643Z" submissionFile="submission-add-symbionts.xml" success="true">
+        <PROJECT accession="PRJEB71963" alias="all-StyAte1" status="PRIVATE" holdUntilDate="2025-11-21Z"/>
+        <SUBMISSION accession="" alias="SUBMISSION-29-10-2025-10:10:59:561"/>
+        <MESSAGES>
+            <INFO>The XML md5 checksum for the object being updated has not changed. No update required for PRJEB71963.</INFO>
+        </MESSAGES>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>    
+    ```
 ### Submission umbrella project
 
 * Umbrella at ENA [how to](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#umbrella-studies)
