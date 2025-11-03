@@ -1,0 +1,11 @@
+h1su1	1	Linear-chromosome
+h1su2	2	Linear-chromosome
+h1su3	3	Linear-chromosome
+h1su4	4	Linear-chromosome
+h1su5	5	Linear-chromosome
+h1su6	6	Linear-chromosome
+h1su7	7	Linear-chromosome
+h1su8	8	Linear-chromosome
+h1su9	9	Linear-chromosome
+h1su10	10	Linear-chromosome
+h1su11	X	Linear-chromosome

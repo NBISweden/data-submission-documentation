@@ -1,0 +1,12 @@
+STUDY	PRJEB83458
+SAMPLE	SAMEA115808865
+RUN_REF	ERR14058183, ERR14058184, ERR15196543
+ASSEMBLYNAME	icLapAnag1.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	50
+PROGRAM	Hifiasm (version 0.25.0-r726), FCS-GX (version 0.5.5), purge_dups (version 1.2.6), Yahs (version 1.2.2), PretextView (version 1.0.3), GRIT_Rapid (git: 1a3d79a8)
+PLATFORM	PacBio, Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Laparocerus anagae was assembled with Hifiasm (version 0.25.0-r726) in HiC phasing mode. Contaminations were removed with FCS-GX (version 0.5.5) based on the ALL database released on 2023/01. Remaining haplotypic duplications were identified and removed with purge_dups (version 1.2.6) on both haplotype assemblies. Yahs (version 1.2.2) was used to scaffold contigs into chromosomes. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8) based on the combined hap1and hap2 assemblies.'
+FASTA	icLapAnag1_hap1_20250930_noMito.fa.gz
+CHROMOSOME_LIST	chromosome_list_hap1.txt.gz

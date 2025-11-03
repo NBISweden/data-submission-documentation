@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB96368 (umbrella), PRJEB91071 (experiment), PRJEB91072 (assembly)
+Top_level_acccession: PRJEB96368 (umbrella), PRJEB91071 (experiment)
 ---
 
 # BGE - *Ceratina cypriaca*
@@ -183,4 +183,36 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     </RECEIPT>    
     ```
 
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* The assembly was done and submitted by another node, and I was asked to add it under our umbrella:
+    * I created [umbrella-modified.xml](./data/umbrella-modified.xml) and [submission-update.xml](./data/submission-update.xml)
+    * Submit:
+        ```
+        curl -u Username:Password -F "SUBMISSION=@submission-update.xml" -F "PROJECT=@umbrella-modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-10-13T12:15:47.134+01:00" submissionFile="submission-update.xml" success="true">
+            <PROJECT accession="PRJEB96368" alias="erga-bge-iyCerCypr-study-umbrella-2025-08-25" status="PUBLIC"/>
+            <SUBMISSION accession="" alias="SUBMISSION-13-10-2025-12:15:46:889"/>
+            <MESSAGES/>
+            <ACTIONS>MODIFY</ACTIONS>
+        </RECEIPT>
+        ```
+* Since a assembly project was created automatically, I need to cancel it:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-cancel.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-10-15T08:09:08.027+01:00" submissionFile="submission-cancel.xml" success="true">
+            <MESSAGES>
+                <INFO>STUDY accession "ERP174068" is set to cancelled status.</INFO>
+                <INFO>PROJECT accession "PRJEB91072" is set to cancelled status.</INFO>
+            </MESSAGES>
+            <ACTIONS/>
+        </RECEIPT>
+        ````

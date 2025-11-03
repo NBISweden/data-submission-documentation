@@ -1,0 +1,14 @@
+STUDY	PRJEB96533
+SAMPLE	SAMEA116289133
+RUN_REF	ERR15478975, ERR15478976
+ASSEMBLYNAME	iyMesBuce7.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	115
+PROGRAM	Hifiasm (version 0.25.0-r726), NBIS/Earth-Biogenome-Project-pilot (version: 1d2a1e4), FCS-GX (version 0.5.4), purge_dups (version 1.2.5), YaHS (version 1.2a.2), sanget-tol/curationpretext (version 1.4.1), PretextView (version 1.0.3), sanger-tol/agp-tpf-utils (version 1.2.3)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The assembly was produced with hifiasm in Hi-C mode, and the collapsed *.hic.p_ctg.gfa was selected. The assembly was screened for contamination with FCS-GX, haplotigs removed with purge_dups, and scaffolding was performed with YaHS. The scaffolds were analysed with blobtools for the presence of residual contaminants. Although no contaminants were found, scaffolds with extreme coverages (<50x and >140x) were filtered out of the assembly. The curated assembly has 21 putative chromosomes likely representing the euchromatic arms of each chromosome. The assembly also contains a large number of scaffolds that could not be assigned to chromosomes, likely representing the heterochromatic and highly repetitive fraction of this genome. Mitochondria was assembled with MitoHiFi. The assembly coverage is 115x for PacBio HiFi and 50x for Illumina Hi-C.'
+FASTA	iyMesBuce7_pri.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz

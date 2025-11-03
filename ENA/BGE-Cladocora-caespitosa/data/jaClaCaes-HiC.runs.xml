@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_jaClaCaes_Hi-C_FS42595244_HC008-3C1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_jaClaCaes_Hi-C_FS42595244_HC008-3C1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="jaClaCaes_YB-4221-HC008-3C1A_S148_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="a817989bdb091bf3d2fb73b646fb84bd" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="jaClaCaes_YB-4221-HC008-3C1A_S148_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="3fed2506445404d59fd38b55f100023d" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_jaClaCaes_Hi-C_FS42595244_HC008-3D1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_jaClaCaes_Hi-C_FS42595244_HC008-3D1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="jaClaCaes_YB-4221-HC008-3D1A_S149_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="d026be942449759f9c5ee42055cc57fc" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="jaClaCaes_YB-4221-HC008-3D1A_S149_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="13c959be82ef478fed67a06639958ef8" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

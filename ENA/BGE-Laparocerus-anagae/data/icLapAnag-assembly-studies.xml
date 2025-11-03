@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icLapAnag-study-mito-2025-10-09">
+		<NAME>icLapAnag1-mito</NAME>
+		<TITLE>Laparocerus anagae, mitochondrial assembly, icLapAnag1-mito. </TITLE>
+		<DESCRIPTION>This project collects the mitochondrial assembly of Laparocerus anagae. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icLapAnag1_haplo-2025-10-09">
+		<NAME>icLapAnag1</NAME>
+		<TITLE>Laparocerus anagae, genome assembly, icLapAnag1, alternate haplotype. </TITLE>
+		<DESCRIPTION>This project provides the genome assembly of Laparocerus anagae. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+</PROJECT_SET>

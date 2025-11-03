@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-iqSphRube1_mito-2025-10-20">
+		<NAME>iqSphRube1-mito</NAME>
+		<TITLE>Sphingonotus rubescens, mitochondrial assembly, iqSphRube1-mito. </TITLE>
+		<DESCRIPTION>This project collects the mitochondrial assembly of Sphingonotus rubescens. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-iqSphRube1_haplo-2025-10-20">
+		<NAME>iqSphRube1</NAME>
+		<TITLE>Sphingonotus rubescens, genome assembly, iqSphRube1, alternate haplotype. </TITLE>
+		<DESCRIPTION>This project provides the genome assembly of Sphingonotus rubescens. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+</PROJECT_SET>

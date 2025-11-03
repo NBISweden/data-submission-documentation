@@ -1,0 +1,14 @@
+STUDY	PRJEB101048
+SAMPLE	SAMEA116287543
+RUN_REF	ERR15133547, ERR15133548, ERR15133549, ERR15133550, ERR15133551, ERR15165757, ERR15165758, ERR15165759
+ASSEMBLYNAME	iqSphRube1-haploid.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	40
+PROGRAM	Hifiasm (version 0.25.0-r726), purge_dups (version 1.2.6), FCS-GX (version 0.5.5), HapHic (version 1.0.7)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Sphingonotus rubescens was assembled with Hifiasm (version 0.25.0-r726) in HiC phasing mode. For each haplotype purge_dups (version 1.2.6), FCS-GX (version 0.5.5) based on the ALL database released on 2023/01 and yahs was run separately. When running purge_dups with default parameter 545Mb (hap1) and 746Mb (hap2) of sequence was removed. This also resulted in the loss of several busco genes. Therefore first: contigs larger than 1Mb and second: contigs that were marked as hap but contained single Busco genes were kept. The purge_dups bed annotations was later used in the manual curation step too, in order to decide if a REPEAT tagged contig needs to be removed. The manual curation revealed many haplotype misplacements and HapHic (version 1.0.7) was used to guide those corrections. The X chromosome was identified by aligning both haplotypes to the Schistocerca gregaria assembly (GCA_023897955.2)'
+FASTA	iqSphRube1_hap2_20250930.fa.gz
+CHROMOSOME_LIST	chromosome_list_hap2.txt.gz
+UNLOCALISED_LIST	unlocalised_list_hap2.txt.gz

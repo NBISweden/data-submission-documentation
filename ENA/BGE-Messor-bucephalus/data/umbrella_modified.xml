@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-iyMesBuce-study-umbrella-2025-08-27">
+		<NAME>iyMesBuce</NAME>
+		<TITLE>Messor bucephalus</TITLE>
+		<DESCRIPTION>This project collects the sequencing data and assemblies generated for Messor bucephalus by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) for the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<UMBRELLA_PROJECT/>
+		<RELATED_PROJECTS>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB96533"/>
+			</RELATED_PROJECT>
+		</RELATED_PROJECTS>
+	</PROJECT>
+</PROJECT_SET>

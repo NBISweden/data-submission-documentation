@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-iyAntRoge-study-umbrella-2025-08-25">
+		<NAME>iyAntRoge</NAME>
+		<TITLE>Anthophora rogenhoferi</TITLE>
+		<DESCRIPTION>This project collects the sequencing data and assemblies generated for Anthophora rogenhoferi by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) for the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<UMBRELLA_PROJECT/>
+		<RELATED_PROJECTS>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB96311"/>
+			</RELATED_PROJECT>
+        </RELATED_PROJECTS>
+	</PROJECT>
+</PROJECT_SET>

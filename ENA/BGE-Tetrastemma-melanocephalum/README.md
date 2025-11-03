@@ -128,6 +128,23 @@ Submission of raw reads for *Tetrastemma melanocephalum* to facilitate assembly 
 * Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
 
 ### Submit assembly
+* Assembly was done by another node, but we need to add the assembly project to the umbrella.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-22T08:10:00.642+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB77287" alias="erga-bge-tnTetMela-study-umbrella-2024-07-05" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-22-10-2025-08:10:00:536"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
+    ```
 
 ### Umbrella project
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
@@ -155,4 +172,3 @@ For each of the BGE species, an umbrella project has to be created and linked to
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
-* **Note:** Add the assembly project when it has been created and submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.

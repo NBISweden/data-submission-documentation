@@ -1,0 +1,12 @@
+STUDY	PRJEB100729
+SAMPLE	ERS26118506
+RUN_REF	ERR15464849, ERR15464850, ERR15648906
+ASSEMBLYNAME	rTriTgu1-mito.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	66
+PROGRAM	MitoHiFi (3.2.3)
+PLATFORM	PacBio, Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The mitochondrial genome was assembled using MitoHiFi (3.2.3)'
+FASTA	rTriTgu1_mito_20251013.fa.gz
+CHROMOSOME_LIST	mito-chromosome_list.txt.gz

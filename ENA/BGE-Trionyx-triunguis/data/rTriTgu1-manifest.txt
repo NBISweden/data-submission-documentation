@@ -1,0 +1,14 @@
+STUDY	PRJEB96317
+SAMPLE	ERS26118506
+RUN_REF	ERR15464849, ERR15464850, ERR15648906
+ASSEMBLYNAME	rTriTgu1.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	80
+PROGRAM	Hifiasm (version 0.25.0-r726), FCS-GX (version 0.5.5), purge_dups (version 1.2.6), PretextView (version 1.0.3), GRIT_Rapid (git: 1a3d79a8)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Trionyx triunguis was assembled with Hifiasm (version 0.25.0-r726). Contaminations were removed with FCS-GX (version 0.5.5) based on the ALL database released on 2023/01. Remaining haplotypic duplications were identified with purge_dups (version 1.2.6) but to avoid overpurging of repetitive sequences, haplotig duplictions were removed in the manual curation step. Due to the highly contiguous contig assembly, the scaffolding was done in manual curation step as well. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8). Due to the very high quality of the assembly as well as the HiC sequencing data, more repeat structures could be resolved within the corresponding chromosomes. Though those repeat structures were mainly resolved by the HiC contact map and PacBio read coverage, there might be a risk that the order and/or orientation is not to 100% correct. Here are the coordinates of the chromosome intervals of those regions: SUPER_5 56.3Mb-59.5Mb, SUPER_11 6.1Mb-29.3Mb, SUPER_15 16.4Mb-37.7Mb, SUPER_18 0-2.8Mb, SUPER_26 14.3Mb-16.5Mb'
+FASTA	rTriTgu1_pri_20251013.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalized_list.txt.gz

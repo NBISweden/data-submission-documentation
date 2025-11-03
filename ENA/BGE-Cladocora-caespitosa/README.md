@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB81311 (umbrella), PRJEB81307 (experiment), PRJEB81308 (assembly)
+Top_level_acccession: PRJEB81311 (umbrella), PRJEB81307 (experiment), PRJEB81308 (assembly), PRJEB98993 (mito)
 ---
 
 # BGE - *Cladocora caespitosa*
@@ -23,8 +23,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Collecting metadata
-
+### Submit HiFi
+#### Preparations
 * I looked at the delivery README for the HiFi dataset (on Uppmax) and extracted the following:
   ```
   Name    UGC_ID  Barcode Comments
@@ -38,19 +38,6 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 * I filled the tab BGE-sheet with the information and created a tsv file: [jaClaCaes-hifi.tsv](./data/jaClaCaes-hifi.tsv)
 
-### Creating xml
-#### HiFi xml
-* I copied [submission.xml](./data/submission.xml) from BGE-Crayfish, using the same embargo date
-* Running the script:
-    ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f jaClaCaes-hifi.tsv -p ERGA-BGE -o jaClaCaes-HiFi
-    ```
-#### HiC xml
-
-#### RNAseq xml
-
-### Data transfer
-#### HiFi
 * Create folder `bge-cladocora` at ENA upload area using Filezilla
 * Using aspera from Uppmax to ENA upload area:
     ```
@@ -61,7 +48,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Keep track of progress using FileZilla
 
-### Programmatic submission HiFi
+#### HiFi xml
+* I copied [submission.xml](./data/submission.xml) from BGE-Crayfish, using the same embargo date
+* Running the script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f jaClaCaes-hifi.tsv -p ERGA-BGE -o jaClaCaes-HiFi
+    ```
 * Copy all xml files to Uppmax (create a folder there BGE-Cladocora-caespitosa):
     ```
     scp submission.xml jaClaCaes-HiFi*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-Cladocora-caespitosa/
@@ -96,9 +88,151 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
-### Programmatic submission HiC
+### Submit HiC
+#### Preparations
+* Sample ID has the same 'issues' as for HiFi, I will use the same sample here 
+* There are 2 libraries, using the same sample but one is with old formaldehyde and one is with new / freshly opened
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
-### Programmatic submission RNAseq
+#### XML
+* I created [jaClaCaes-HiC.tsv](./data/jaClaCaes-HiC.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f jaClaCaes-HiC.tsv -p ERGA-BGE -o jaClaCaes-HiC
+    ```
+* Update jaClaCaes-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB81307"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is public, so submission-noHold.xml is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@jaClaCaes-HiC.exp.xml" -F "RUN=@jaClaCaes-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-10T09:04:36.756+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX15093300" alias="exp_jaClaCaes_Hi-C_FS42595244_HC008-3C1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX15093301" alias="exp_jaClaCaes_Hi-C_FS42595244_HC008-3D1A" status="PRIVATE"/>
+        <RUN accession="ERR15688615" alias="run_jaClaCaes_Hi-C_FS42595244_HC008-3C1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR15688616" alias="run_jaClaCaes_Hi-C_FS42595244_HC008-3D1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35055533" alias="SUBMISSION-10-10-2025-09:04:36:354"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+
+### Submit RNAseq - **TODO**
+#### Preparations
+* Sample ID gave BioSample ID via ERGA tracker portal
+* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+
+#### XML
+* I created [jaClaCaes-RNAseq.tsv](./data/jaClaCaes-RNAseq.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f jaClaCaes-RNAseq.tsv -p ERGA-BGE -o jaClaCaes-RNAseq
+    ```
+* Update jaClaCaes-RNAseq.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB81307"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is private, so submission.xml with hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@jaClaCaes-RNAseq.exp.xml" -F "RUN=@jaClaCaes-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+
+### Submit assembly
+
+* There are one primary and one mitochondrial assembly, need to create a project for the mito.
+    * I created [jaClaes-mito.study.xml](./data/jaClaes-mito.study.xml) and submitted using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@jaClaes-mito.study.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-10T10:37:10.898+01:00" submissionFile="submission.xml" success="true">
+        <PROJECT accession="PRJEB98993" alias="erga-bge-jaClaCaes-study-mito-2025-10-10" status="PRIVATE" holdUntilDate="2026-03-07Z">
+            <EXT_ID accession="ERP181339" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA35055599" alias="SUBMISSION-10-10-2025-10:37:10:787"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* I created manifest files [jaClaCaes1-manifest.txt](./data/jaClaCaes1-manifest.txt) and [jaClaCaes1-mito-manifest.txt](./data/jaClaCaes1-mito-manifest.txt)
+* I created [chromosome_list.txt](./data/chromosome_list.txt) and [chromosome_list_mito.txt](./data/chromosome_list_mito.txt), and [unlocalised_list.txt](./data/unlocalised_list.txt)
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/C-caespitosa) and copied & gzipped manifests, assembly file and chromosome list there
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 02:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./jaClaCaes1-manifest.txt -validate
+    ```
+* Receipt primary:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/C-caespitosa/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/C-caespitosa/jaClaCaes1_pri_20251009_noMito.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/C-caespitosa/chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/C-caespitosa/unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28536405
+    ```
+* Receipt mito:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/C-caespitosa/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/C-caespitosa/jaClaCaes1_mito_20251009.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/C-caespitosa/chromosome_list_mito.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28536406
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    jaClaCaes1.1      | GCA_977000285 | PRJEB81308 | ERS15394739 | CDRLXK010000001-CDRLXK010000616 |              | OZ345028-OZ345041
+    jaClaCaes1-mito.1 | GCA_977000295 | PRJEB98993 | ERS15394739 |                                 |              | OZ345027-OZ345027
+    ```
+* Release studies and check that they are shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-10-15T07:38:27.574+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB81311" alias="erga-bge-jaClaCaes-study-umbrella-2024-10-15" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-15-10-2025-07:38:27:336"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
+    ```
 
 ### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).

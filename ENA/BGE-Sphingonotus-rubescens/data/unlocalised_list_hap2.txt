@@ -1,0 +1,13 @@
+h2s8_unloc_1	7
+h2s8_unloc_2	7
+h2s11_unloc_1	10
+h2s11_unloc_2	10
+h2s11_unloc_3	10
+h2s11_unloc_4	10
+h2s11_unloc_5	10
+h2s11_unloc_6	10
+h2s11_unloc_7	10
+h2s11_unloc_8	10
+h2s11_unloc_9	10
+h2s11_unloc_10	10
+h2s12_unloc_1	11

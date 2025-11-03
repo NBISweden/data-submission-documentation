@@ -1,0 +1,12 @@
+STUDY	PRJEB98919
+SAMPLE	SAMEA115808865
+RUN_REF	ERR14058183, ERR14058184, ERR15196543
+ASSEMBLYNAME	icLapAnag1-mito.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	402
+PROGRAM	MitoHiFi (3.2.3)
+PLATFORM	PacBio, Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The mitochondrial genome was assembled using MitoHiFi (3.2.3)'
+FASTA	icLapAnag1_mito_20251009.fasta.gz
+CHROMOSOME_LIST	chromosome_list_mito.txt.gz

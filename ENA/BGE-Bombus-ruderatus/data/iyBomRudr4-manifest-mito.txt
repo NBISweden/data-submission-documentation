@@ -1,0 +1,12 @@
+STUDY	PRJEB100690
+SAMPLE	SAMEA116283027
+RUN_REF	ERR15159739, ERR15651752
+ASSEMBLYNAME	iyBomRudr4-mito.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	4255
+PROGRAM	MitoHiFi (3.2.3)
+PLATFORM	PacBio, Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The mitochondrial genome was assembled using MitoHiFi (3.2.3)'
+FASTA	iyBomRudr4_mito_20251014.fa.gz
+CHROMOSOME_LIST	mito-chromosome_list.txt.gz

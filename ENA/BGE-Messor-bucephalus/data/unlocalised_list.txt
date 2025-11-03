@@ -1,0 +1,9 @@
+SUPER_1_unloc_1	1
+SUPER_1_unloc_2	1
+SUPER_2_unloc_1	2
+SUPER_4_unloc_1	4
+SUPER_4_unloc_2	4
+SUPER_5_unloc_1	5
+SUPER_11_unloc_1	11
+SUPER_14_unloc_2	14
+SUPER_18_unloc_1	18
