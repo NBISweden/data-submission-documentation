@@ -1,0 +1,14 @@
+STUDY	PRJEB96315
+SAMPLE	SAMEA116299232
+RUN_REF	ERR15464848, ERR15465459
+ASSEMBLYNAME	iyEucMavr2.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	50
+PROGRAM	Hifiasm (version 0.25.0-r726), FCS-GX (version 0.5.5), purge_dups (version 1.2.6), PretextView (version 1.0.3), GRIT_Rapid (git: 1a3d79a8)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Eucera mavromoustakisi was assembled with Hifiasm (version 0.25.0-r726). Contaminations were removed with FCS-GX (version 0.5.5) based on the ALL database released on 2023/01. Remaining haplotypic duplications were identified with purge_dups (version 1.2.6). The scaffolding was done manually in the curation step. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8).'
+FASTA	iyEucMavr2_pri_20251020.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz
