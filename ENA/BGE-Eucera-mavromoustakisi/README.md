@@ -190,8 +190,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Release study and check that it is shown under umbrella
 
-#### Add assembly to umbrella
-* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+#### Add assemblies to umbrella
+* Add the assembly projects when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
 * Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
 * Submit:
     ```
@@ -199,7 +199,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-11-03T16:00:59.155Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96371" alias="erga-bge-iyEucMavr-study-umbrella-2025-08-25" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-03-11-2025-16:00:58:934"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
