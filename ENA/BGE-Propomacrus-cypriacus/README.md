@@ -172,7 +172,14 @@ INFO : Connecting to FTP server : webin2.ebi.ac.uk
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-11-03T16:25:44.469Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB91540" alias="erga-bge-icProCypr-study-umbrella-2025-07-02" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-03-11-2025-16:25:44:276"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
