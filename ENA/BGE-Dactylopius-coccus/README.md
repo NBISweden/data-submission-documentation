@@ -167,7 +167,16 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-11-04T07:07:43.600Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96490" alias="erga-bge-ihDacCocc-study-umbrella-2025-08-27" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-04-11-2025-07:07:43:470"/>
+        <MESSAGES>
+            <INFO>The XML md5 checksum for the object being updated has not changed. No update required for PRJEB96490.</INFO>
+        </MESSAGES>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Submit 2 endosymbionts
