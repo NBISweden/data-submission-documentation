@@ -159,7 +159,7 @@ INFO : Connecting to FTP server : webin2.ebi.ac.uk
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    icProCypr1.1  | GCA_977019095 | PRJEB90650 | ERS21333607 | CDRNYK010000001-CDRNYK010000030 |              | OZ362850-OZ362860
     ```
 * Release study and check that it is shown under umbrella
 
