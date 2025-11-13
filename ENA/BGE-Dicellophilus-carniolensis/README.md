@@ -125,7 +125,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 #### Additional HiC
-* Additional sequencing was made for library `HC012-2A1A`. Sample is the same and sequencens was transferred in batch to ENA using lftp.
+* Additional sequencing was made for library `HC012-2A1A-CL`. Sample is the same and sequencens was transferred in batch to ENA using lftp. (**Note:** The text assumes that I had already submitted HC012-2A1A, but in reality I had not, that is done below this submission)
 #### XML
 * I created [qcDicCarn-2-HiC.tsv](./data/qcDicCarn-2-HiC.tsv).
 * Run script:
@@ -151,6 +151,36 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
         <EXPERIMENT accession="ERX15162305" alias="exp_qcDicCarn_Hi-C_FS42595417_HC012-2A1A-CL" status="PRIVATE"/>
         <RUN accession="ERR15757781" alias="run_qcDicCarn_Hi-C_FS42595417_HC012-2A1A-CL_fastq_1" status="PRIVATE"/>
         <SUBMISSION accession="ERA35072585" alias="SUBMISSION-23-10-2025-07:50:06:754"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+
+* **Note 2025-11-13**: I missed to submit one of the HiC datasets earlier, `HC012-2A1A`
+* I created [qcDicCarn-3-HiC.tsv](./data/qcDicCarn-3-HiC.tsv).
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qcDicCarn-3-HiC.tsv -p ERGA-BGE -o qcDicCarn-3-HiC
+    ```
+* Update qcDicCarn-3-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB77038"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is already public, so submission.xml without hold date is used.
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@qcDicCarn-3-HiC.exp.xml" -F "RUN=@qcDicCarn-3-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-11-13T15:37:18.796Z" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX15266298" alias="exp_qcDicCarn_Hi-C_FS42595417_HC012-2A1A" status="PRIVATE"/>
+        <RUN accession="ERR15866510" alias="run_qcDicCarn_Hi-C_FS42595417_HC012-2A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35139231" alias="SUBMISSION-13-11-2025-15:37:18:510"/>
         <MESSAGES/>
         <ACTIONS>ADD</ACTIONS>
     </RECEIPT>
@@ -195,6 +225,37 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
 
 ### Submit assembly
+* I created a manifest file [qcDicCarn1-manifest.txt](./data/qcDicCarn1-manifest.txt)
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/D-carniolensis) and copied & gzipped manifest, assembly file and chromosome list there
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./qcDicCarn1-manifest.txt -validate
+    ```
+* Receipt:
+    ```
+
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+
+    ```
+* Release study and check that it is shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
 
 ### Register umbrella projekt
 
@@ -228,4 +289,3 @@ For each of the BGE species, an umbrella project has to be created and linked to
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
-* **Note:** Add the assembly project `PRJEB77039` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
