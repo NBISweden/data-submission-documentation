@@ -104,6 +104,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+* Data producer told me that there had been a mix up regarding samples, and that 
+`LV6000911869` was correct, not `LV6000911877`. 
+    * I changed the sample descriptor and primary id, of the experiment .xml file via the browser, from SAMEA116299217 / ERS21344134 to SAMEA116299218 / ERS21344135 (i.e. I used the ERS identifier).
+
 ### Submit RNAseq - **TODO**
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
