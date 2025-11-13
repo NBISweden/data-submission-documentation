@@ -18,6 +18,7 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
 * [BGE mRupRup umbrella project](https://www.ncbi.nlm.nih.gov/bioproject/1084634)
 
 ## Lessons learned
+* How to change sample associated with an experiment after submission: use the browser to update both `SAMPLE_DESCRIPTOR` and `PRIMARY_ID` for the experiment(s) concerned.
 
 ## Detailed step by step description
 
@@ -104,6 +105,8 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
     </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+* We received information that the sample associated with the HiC data was wrong, so I had to update the sample from SAMEA116289655 / ERS21333597 to SAMEA116289650 / ERS21333592.
+    * This was done in the browser, updating both `SAMPLE_DESCRIPTOR` and `PRIMARY_ID` for the 2 experiments.
 
 #### Additional HiC
 * 2 more libraries were sequenced. Tube labels made it possible to identify biosample, and sequences were transferred to ENA in batch using lftp.
