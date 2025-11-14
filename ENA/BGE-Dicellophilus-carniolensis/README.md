@@ -260,7 +260,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-11-14T09:08:16.070Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB77282" alias="erga-bge-qcDicCarn-study-umbrella-2024-07-05" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-14-11-2025-09:08:15:858"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Register umbrella projekt
