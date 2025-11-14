@@ -125,7 +125,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 #### Additional HiC
-* Additional sequencing was made for library `HC012-2A1A-CL`. Sample is the same and sequencens was transferred in batch to ENA using lftp. (**Note:** The text assumes that I had already submitted HC012-2A1A, but in reality I had not, that is done below this submission)
+* Additional sequencing was made for library `HC012-2A1A-CL`. Sample is the same and sequences was transferred in batch to ENA using lftp. (**Note:** The text assumes that I had already submitted HC012-2A1A, but in reality I had not, that is done below this submission)
 #### XML
 * I created [qcDicCarn-2-HiC.tsv](./data/qcDicCarn-2-HiC.tsv).
 * Run script:
@@ -230,12 +230,18 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
 
     ```
-    interactive -t 08:00:00 -A uppmax2025-2-58
+    interactive -t 01:00:00 -A uppmax2025-2-58
     java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./qcDicCarn1-manifest.txt -validate
     ```
 * Receipt:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/D-carniolensis/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/D-carniolensis/qcDicCarn1_pri.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/D-carniolensis/chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/D-carniolensis/unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28562917
     ```
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
