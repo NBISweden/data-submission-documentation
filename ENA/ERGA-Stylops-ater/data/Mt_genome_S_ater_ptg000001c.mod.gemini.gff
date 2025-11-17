@@ -1,0 +1,76 @@
+##gff-version 3
+#!gff-spec-version 1.21
+ptg000001c_trnM	arwen	gene	1	62	.	+	.	ID=gene-trnM;Name=trnM
+ptg000001c_trnM	arwen	tRNA	1	62	.	+	.	ID=trna-trnM;Parent=gene-trnM;product=tRNA-Met
+ptg000001c_trnM	mitos	gene	51	1010	.	+	.	ID=gene-nad2;Name=nad2
+ptg000001c_trnM	mitos	CDS	51	1010	85667623.1	+	0	ID=cds-nad2;Parent=gene-nad2;product=NADH dehydrogenase subunit 2
+ptg000001c_trnM	arwen	gene	1012	1076	.	+	.	ID=gene-trnW;Name=trnW
+ptg000001c_trnM	arwen	tRNA	1012	1076	.	+	.	ID=trna-trnW;Parent=gene-trnW;product=tRNA-Trp
+ptg000001c_trnM	arwen	gene	1078	1142	.	+	.	ID=gene-trnI;Name=trnI
+ptg000001c_trnM	arwen	tRNA	1078	1142	.	+	.	ID=trna-trnI;Parent=gene-trnI;product=tRNA-Ile
+ptg000001c_trnM	arwen	gene	1149	1208	.	+	.	ID=gene-trnL2;Name=trnL2
+ptg000001c_trnM	arwen	tRNA	1149	1208	.	+	.	ID=trna-trnL2;Parent=gene-trnL2;product=tRNA-Leu
+ptg000001c_trnM	mitos	gene	1189	1863	.	+	.	ID=gene-cox2;Name=cox2
+ptg000001c_trnM	mitos	CDS	1189	1863	123246520.0	+	0	ID=cds-cox2;Parent=gene-cox2;product=cytochrome c oxidase subunit II
+ptg000001c_trnM	arwen	gene	1869	1935	.	+	.	ID=gene-trnD;Name=trnD
+ptg000001c_trnM	arwen	tRNA	1869	1935	.	+	.	ID=trna-trnD;Parent=gene-trnD;product=tRNA-Asp
+ptg000001c_trnM	.	gene	1945	2076	.	+	.	ID=gene-atp8;Name=atp8
+ptg000001c_trnM	.	CDS	1945	2076	.	+	0	ID=cds-atp8;Parent=gene-atp8;product=ATP synthase F0 subunit 8
+ptg000001c_trnM	mitos	gene	2073	2723	.	+	.	ID=gene-atp6;Name=atp6
+ptg000001c_trnM	mitos	CDS	2073	2723	44735834.2	+	0	ID=cds-atp6;Parent=gene-atp6;product=ATP synthase F0 subunit 6
+ptg000001c_trnM	arwen	gene	2724	2785	.	+	.	ID=gene-trnG;Name=trnG
+ptg000001c_trnM	arwen	tRNA	2724	2785	.	+	.	ID=trna-trnG;Parent=gene-trnG;product=tRNA-Gly
+ptg000001c_trnM	mitos	gene	2822	3172	.	+	.	ID=gene-nad3;Name=nad3
+ptg000001c_trnM	mitos	CDS	2822	3172	11660663.0	+	0	ID=cds-nad3;Parent=gene-nad3;product=NADH dehydrogenase subunit 3
+ptg000001c_trnM	mitfi	gene	3138	3192	.	+	.	ID=gene-trnS1;Name=trnS1
+ptg000001c_trnM	mitfi	tRNA	3138	3192	.	+	.	ID=trna-trnS1;Parent=gene-trnS1;product=tRNA-Ser
+ptg000001c_trnM	arwen	gene	3191	3260	.	+	.	ID=gene-trnR;Name=trnR
+ptg000001c_trnM	arwen	tRNA	3191	3260	.	+	.	ID=trna-trnR;Parent=gene-trnR;product=tRNA-Arg
+ptg000001c_trnM	arwen	gene	3257	3322	.	+	.	ID=gene-trnA;Name=trnA
+ptg000001c_trnM	arwen	tRNA	3257	3322	.	+	.	ID=trna-trnA;Parent=gene-trnA;product=tRNA-Ala
+ptg000001c_trnM	arwen	gene	3320	3382	.	-	.	ID=gene-trnH;Name=trnH
+ptg000001c_trnM	arwen	tRNA	3320	3382	.	-	.	ID=trna-trnH;Parent=gene-trnH;product=tRNA-His
+ptg000001c_trnM	arwen	gene	3383	3445	.	+	.	ID=gene-trnT;Name=trnT
+ptg000001c_trnM	arwen	tRNA	3383	3445	.	+	.	ID=trna-trnT;Parent=gene-trnT;product=tRNA-Thr
+ptg000001c_trnM	arwen	gene	3445	3506	.	-	.	ID=gene-trnP;Name=trnP
+ptg000001c_trnM	arwen	tRNA	3445	3506	.	-	.	ID=trna-trnP;Parent=gene-trnP;product=tRNA-Pro
+ptg000001c_trnM	mitos	gene	3496	3999	.	+	.	ID=gene-nad6;Name=nad6
+ptg000001c_trnM	mitos	CDS	3496	3999	595473.2	+	0	ID=cds-nad6;Parent=gene-nad6;product=NADH dehydrogenase subunit 6
+ptg000001c_trnM	mitos	gene	3999	5126	.	+	.	ID=gene-cob;Name=cob
+ptg000001c_trnM	mitos	CDS	3999	5126	417105264.6	+	0	ID=cds-cob;Parent=gene-cob;product=cytochrome b
+ptg000001c_trnM	arwen	gene	5124	5188	.	+	.	ID=gene-trnS2;Name=trnS2
+ptg000001c_trnM	arwen	tRNA	5124	5188	.	+	.	ID=trna-trnS2;Parent=gene-trnS2;product=tRNA-Ser
+ptg000001c_trnM	mitos	gene	5222	6148	.	-	.	ID=gene-nad1;Name=nad1
+ptg000001c_trnM	mitos	CDS	5222	6148	192415926.0	-	0	ID=cds-nad1;Parent=gene-nad1;product=NADH dehydrogenase subunit 1
+ptg000001c_trnM	arwen	gene	6169	6239	.	-	.	ID=gene-trnQ;Name=trnQ
+ptg000001c_trnM	arwen	tRNA	6169	6239	.	-	.	ID=trna-trnQ;Parent=gene-trnQ;product=tRNA-Gln
+ptg000001c_trnM	arwen	gene	6239	6301	.	-	.	ID=gene-trnC;Name=trnC
+ptg000001c_trnM	arwen	tRNA	6239	6301	.	-	.	ID=trna-trnC;Parent=gene-trnC;product=tRNA-Cys
+ptg000001c_trnM	arwen	gene	6300	6363	.	-	.	ID=gene-trnY;Name=trnY
+ptg000001c_trnM	arwen	tRNA	6300	6363	.	-	.	ID=trna-trnY;Parent=gene-trnY;product=tRNA-Tyr
+ptg000001c_trnM	mitos	gene	6334	7872	.	+	.	ID=gene-cox1;Name=cox1
+ptg000001c_trnM	mitos	CDS	6334	7872	1085325563.1	+	0	ID=cds-cox1;Parent=gene-cox1;product=cytochrome c oxidase subunit I
+ptg000001c_trnM	arwen	gene	7876	7941	.	+	.	ID=gene-trnK;Name=trnK
+ptg000001c_trnM	arwen	tRNA	7876	7941	.	+	.	ID=trna-trnK;Parent=gene-trnK;product=tRNA-Lys
+ptg000001c_trnM	mitos	gene	7941	8693	.	+	.	ID=gene-cox3;Name=cox3
+ptg000001c_trnM	mitos	CDS	7941	8693	136436159.0	+	0	ID=cds-cox3;Parent=gene-cox3;product=cytochrome c oxidase subunit III
+ptg000001c_trnM	arwen	gene	8693	8758	.	+	.	ID=gene-trnN;Name=trnN
+ptg000001c_trnM	arwen	tRNA	8693	8758	.	+	.	ID=trna-trnN;Parent=gene-trnN;product=tRNA-Asn
+ptg000001c_trnM	arwen	gene	8755	8815	.	+	.	ID=gene-trnE;Name=trnE
+ptg000001c_trnM	arwen	tRNA	8755	8815	.	+	.	ID=trna-trnE;Parent=gene-trnE;product=tRNA-Glu
+ptg000001c_trnM	arwen	gene	8814	8879	.	-	.	ID=gene-trnF;Name=trnF
+ptg000001c_trnM	arwen	tRNA	8814	8879	.	-	.	ID=trna-trnF;Parent=gene-trnF;product=tRNA-Phe
+ptg000001c_trnM	mitos	gene	8862	10481	.	-	.	ID=gene-nad5;Name=nad5
+ptg000001c_trnM	mitos	CDS	8862	10481	344436091.0	-	0	ID=cds-nad5;Parent=gene-nad5;product=NADH dehydrogenase subunit 5
+ptg000001c_trnM	mitos	gene	10523	11839	.	-	.	ID=gene-nad4;Name=nad4
+ptg000001c_trnM	mitos	CDS	10523	11839	243530583.8	-	0	ID=cds-nad4;Parent=gene-nad4;product=NADH dehydrogenase subunit 4
+ptg000001c_trnM	mitos	gene	11892	12111	.	-	.	ID=gene-nad4l;Name=nad4l
+ptg000001c_trnM	mitos	CDS	11892	12111	2301778.7	-	0	ID=cds-nad4l;Parent=gene-nad4l;product=NADH dehydrogenase subunit 4L
+ptg000001c_trnM	arwen	gene	12129	12192	.	-	.	ID=gene-trnL1;Name=trnL1
+ptg000001c_trnM	arwen	tRNA	12129	12192	.	-	.	ID=trna-trnL1;Parent=gene-trnL1;product=tRNA-Leu
+ptg000001c_trnM	mitfi	gene	12231	13459	.	-	.	ID=gene-rrnL;Name=rrnL
+ptg000001c_trnM	mitfi	rRNA	12231	13459	.	-	.	ID=rrna-rrnL;Parent=gene-rrnL;product=16S ribosomal RNA
+ptg000001c_trnM	arwen	gene	13481	13544	.	-	.	ID=gene-trnV;Name=trnV
+ptg00000nC	arwen	tRNA	13481	13544	.	-	.	ID=trna-trnV;Parent=gene-trnV;product=tRNA-Val
+ptg000001c_trnM	mitfi	gene	13542	14263	.	-	.	ID=gene-rrnS;Name=rrnS
+ptg000001c_trnM	mitfi	rRNA	13542	14263	.	-	.	ID=rrna-rrnS;Parent=gene-rrnS;product=12S ribosomal RNA

@@ -332,6 +332,51 @@ Only gives the umbrella metadata, not which children have been added:
     ASSEMBLY_NAME | ASSEMBLY_ACC | STUDY_ID | SAMPLE_ID | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
     StyAte-mito-assembly-v2 | GCA_964030495 | PRJEB71993 | ERS10521290 |  |  | OZ034823-OZ034823
     ```
+#### Update mito assembly with annotation
+* Annotations were produced for the mito assembly, so an update is needed to add these.
+* Add LOCUS TAG to the project - decided to use `STYATEMT`
+* Creating flat file using EMBLmyGFF3:
+    ```
+    conda activate py38
+    EMBLmyGFF3 Mt_genome_S_ater_ptg000001c.mod.gff ivStyAter.mito.030124.fa --topology circular --molecule_type 'genomic DNA' --transl_table 5 --species "Stylops ater" --locus_tag STYATEMT --project_id PRJEB71993 -o PRJEB71993-mito-v3.embl
+    gzip PRJEB71993-mito-v3.embl
+    ```
+    * I had error and warning messages complaining about `gene_id` and `ncRNA_gene` in the .gff file, and after trying a lot of things I contacted the bioinformatician who produced the annotation. They took help from Gemini and updated the .gff file:
+        * Changed all ncRNA_gene to gene.
+        * Changed all exon features for protein-coding genes to CDS.
+        * Removed the redundant exon lines for all tRNA and rRNA features.
+        * Removed the non-standard gene_id=... attribute from every line.
+        * Standardized all ID and Parent tags to be consistent (e.g., ID=gene-nad2 is the parent of ID=cds-nad2).
+        * Added standard product=... tags, which are required for GenBank/EMBL submission.
+    ```
+    EMBLmyGFF3 Mt_genome_S_ater_ptg000001c.mod.gemini.gff ivStyAter.mito.030124.fa --topology circular --molecule_type 'genomic DNA' --transl_table 5 --species "Stylops ater" --locus_tag STYATEMT --project_id PRJEB71993 -o PRJEB71993-mito-v3.embl
+    gzip PRJEB71993-mito-v3.embl
+    ```
+* Created a new manifest - [PRJEB71993-mito-assembly-annotation-manifest.txt](./data/PRJEB71993-mito-assembly-annotation-manifest.txt)
+* Validate and submit:
+    ```
+    java -jar /mnt/c/Users/yvonne.kallberg/Downloads/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./PRJEB71993-mito-assembly-annotation-manifest.txt -validate
+    ```
+* Validation complained that I need a chromosome list since there is only one contig
+* After correcting (and some more rounds of validation), I submitted:
+    ```
+    java -jar /mnt/c/Users/yvonne.kallberg/Downloads/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./PRJEB71993-mito-assembly-annotation-manifest.txt -submit
+    ```
+* Receipt:
+    ```
+    INFO : Your application version is 9.0.1
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /home/yvonne/BGE/S-ater/././webin-cli.report
+    INFO : Uploading file: /home/yvonne/BGE/S-ater/PRJEB71993-mito-v3.embl.gz
+    INFO : Uploading file: /home/yvonne/BGE/S-ater/chromosome_list_v3.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28562993
+    ```
+* New assembly accession:
+    ```
+    ASSEMBLY_NAME           | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
+    StyAte-mito-assembly-v3 | GCA_964030495 | PRJEB71993 | ERS10521290 |            |              | OZ034823-OZ034823
+    ```
 -------------
 ### Submission symbionts
 
