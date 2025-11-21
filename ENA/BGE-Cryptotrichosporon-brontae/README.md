@@ -159,7 +159,7 @@ Submission of raw reads for *Cryptotrichosporon brontae* to facilitate assembly 
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    gfCryBron1.1  | GCA_977066725 | PRJEB91103 | ERS24610775 | CDRURE010000001-CDRURE010000004 |              | OZ370660-OZ370672
     ```
 * Release study and check that it is shown under umbrella
 
