@@ -155,7 +155,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    iyAntRoge3.1  | GCA_977011885 | PRJEB96311 | ERS21343918 | CDRNCL010000001-CDRNCL010001068 |              | OZ348345-OZ348362
     ```
 * Release study and check that it is shown under umbrella
 
