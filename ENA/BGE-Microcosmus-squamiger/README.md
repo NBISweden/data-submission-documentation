@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB91533 (umbrella), PRJEB83563 (experiment), PRJEB83564 (assembly)
+Top_level_acccession: PRJEB91533 (umbrella), PRJEB83563 (experiment), PRJEB83564 (assembly), PRJEB104483 (mito)
 ---
 
 # BGE - *Microcosmus squamiger*
@@ -151,7 +151,54 @@ Submission will be done via CNAG script and programmatic submission route using 
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit assembly
-* There is a separate mitochondrial assembly.
+* There is a separate mitochondrial assembly:
+    * I FORGOT TO ADD MITO TO A SEPARATE PROJECT!!!
+    * I created [kaMicSqua-mito.study.xml](./data/kaMicSqua-mito.study.xml) and submitted it separately
+    * Command and Receipt:
+        ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@kaMicSqua-mito.study.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-11-28T09:08:02.998Z" submissionFile="submission.xml" success="true">
+            <PROJECT accession="PRJEB104483" alias="erga-bge-kaMicSqua1_mito-2025-11-28" status="PRIVATE" holdUntilDate="2026-03-07Z">
+                <EXT_ID accession="ERP185776" type="study"/>
+            </PROJECT>
+            <SUBMISSION accession="ERA35282209" alias="SUBMISSION-28-11-2025-09:08:02:817"/>
+            <MESSAGES>
+                <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+            </MESSAGES>
+            <ACTIONS>ADD</ACTIONS>
+            <ACTIONS>HOLD</ACTIONS>
+        </RECEIPT>
+    * I then updated the .xml file for the mito assembly to reference the newly created study accession instead of the primary assembly study. Fingers crossed that it works, it was accepted and looks ok in the analysis list... 
+        ```
+        <STUDY_REF accession="ERP185776">
+        <IDENTIFIERS>
+            <PRIMARY_ID>ERP185776</PRIMARY_ID>
+            <SECONDARY_ID>PRJEB104483</SECONDARY_ID>
+        </IDENTIFIERS>
+        </STUDY_REF>
+        ```
+    * I added also this mito assembly to the umbrella:
+        * Created [umbrella_modified-mito.xml](./data/umbrella_modified-mito.xml)
+        * Submitted:
+            ```
+            curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+            ```
+        * Receipt:
+            ```
+            <?xml version="1.0" encoding="UTF-8"?>
+            <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+            <RECEIPT receiptDate="2025-11-28T09:21:57.716Z" submissionFile="update.xml" success="true">
+                <PROJECT accession="PRJEB91533" alias="erga-bge-kaMicSqua-study-umbrella-2025-07-02" status="PUBLIC"/>
+                <SUBMISSION accession="" alias="SUBMISSION-28-11-2025-09:21:57:613"/>
+                <MESSAGES>
+                    <INFO>The XML md5 checksum for the object being updated has not changed. No update required for PRJEB91533.</INFO>
+                </MESSAGES>
+                <ACTIONS>MODIFY</ACTIONS>
+            </RECEIPT>
+            ```
 * I created manifest files [kaMicSqua1-manifest.txt](./data/kaMicSqua1-manifest.txt) and [kaMicSqua1-mito-manifest.txt](./data/kaMicSqua1-mito-manifest.txt)
 * I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/M-squamiger) and copied & gzipped manifests, assembly file unlocalised_list and chromosome lists there
 * Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
@@ -186,7 +233,7 @@ Submission will be done via CNAG script and programmatic submission route using 
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
 
     ```
-* Release study and check that it is shown under umbrella
+* Release studies and check that they are shown under umbrella
 
 #### Add assembly to umbrella
 * Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
@@ -197,7 +244,14 @@ Submission will be done via CNAG script and programmatic submission route using 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-11-28T08:08:34.184Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB91533" alias="erga-bge-kaMicSqua-study-umbrella-2025-07-02" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-28-11-2025-08:08:34:007"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
