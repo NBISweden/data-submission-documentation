@@ -171,6 +171,7 @@ Submission will be done via CNAG script and programmatic submission route using 
             <ACTIONS>ADD</ACTIONS>
             <ACTIONS>HOLD</ACTIONS>
         </RECEIPT>
+        ```
     * I then updated the .xml file for the mito assembly to reference the newly created study accession instead of the primary assembly study. Fingers crossed that it works, it was accepted and looks ok in the analysis list... 
         ```
         <STUDY_REF accession="ERP185776">
