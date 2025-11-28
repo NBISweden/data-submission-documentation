@@ -38,10 +38,6 @@ The project is already created, by another node: https://www.ebi.ac.uk/ena/brows
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqStaHerc-HiC.tsv -p ERGA-BGE -o qqStaHerc-HiC
     ```
-<!-- * The study XML also needs to be submitted, since HiC is the first data type we have received.
-    * I will not create the study for the assembly, as it will be created by another node.
-    * Hence, removed that project from qqStaHerc-HiC.study.xml -->
-
 * Change `STUDY_REF` in qqStaHerc-HiC.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession="PRJEB96407"/>
