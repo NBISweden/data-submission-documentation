@@ -1,0 +1,12 @@
+STUDY	PRJEB104486
+SAMPLE	SAMEA115755034
+RUN_REF	ERR15133391, ERR15169086
+ASSEMBLYNAME	inOsmFulv5-mito.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	55
+PROGRAM	MitoHiFi (3.2.3)
+PLATFORM	PacBio, Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The mitochondrial genome was assembled using MitoHiFi (3.2.3)'
+FASTA	inOsmFulv5_mito_20251126.fa.gz
+CHROMOSOME_LIST	mito-chromosome_list.txt.gz

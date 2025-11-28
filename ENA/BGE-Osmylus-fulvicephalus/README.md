@@ -156,17 +156,33 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
             <ACTIONS>HOLD</ACTIONS>
         </RECEIPT>    
         ```
-* I created a manifest file [inOsmFulv-manifest.txt](./data/inOsmFulv-manifest.txt)
-* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/O-fulvicephalus) and copied & gzipped manifest, assembly file and chromosome list there
+* I created manifest files [inOsmFulv5-manifest.txt](./data/inOsmFulv5-manifest.txt) and [inOsmFulv5-mito-manifest.txt](./data/inOsmFulv5-mito-manifest.txt)
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/O-fulvicephalus) and copied & gzipped manifest, assembly files, unlocalised list and chromosome lists there
 * Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
 
     ```
     interactive -t 08:00:00 -A uppmax2025-2-58
-    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./inOsmFulv-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./inOsmFulv5-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./inOsmFulv5-mito-manifest.txt -validate    
     ```
-* Receipt:
+* Receipt primary:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/O-fulvicephalus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/O-fulvicephalus/inOsmFulv5_pri_20251126.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/O-fulvicephalus/chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/O-fulvicephalus/unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28674206
+    ```
+* Receipt mito:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/O-fulvicephalus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/O-fulvicephalus/inOsmFulv5_mito_20251126.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/O-fulvicephalus/mito-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28674205
     ```
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
