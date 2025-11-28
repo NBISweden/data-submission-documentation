@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <EXPERIMENT_SET>
 	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqStaHerc_Hi-C_H000528926_HC024-1A1A">
-		<TITLE>Stalagtia hercegovinensis Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qqStaHerc-study-rawdata-2025-03-20"/>
+		<TITLE>Stalagtia hercegovinensis Illumina Hi-C data</TITLE>
+		<STUDY_REF accession="PRJEB96407"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA115527236"/>
