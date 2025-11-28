@@ -230,10 +230,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * I submitted 1 samples, by uploading the sheet [wolbachia-sample.tsv](./data/wolbachia-sample.tsv)
 * Accession number received: `ERS27074074`
 
-**Spiroplasma** **TODO**
+**Spiroplasma**
 * I had to wait until the taxonomy request was approved
 * I then submitted 1 sample, by uploading the sheet [spiroplasma-sample.tsv](./data/spiroplasma-sample.tsv)
-* Accession number received: `` 
+* Accession number received: `ERS28164373` 
 
 #### Submit assemblies
 
@@ -263,7 +263,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * I released the project 2025-10-20
 
-**Spiroplasma**   **TODO**
+**Spiroplasma**
 * I created [spiroplasma-manifest.txt](./data/spiroplasma-manifest.txt) and a chromosome_list file
 * I copied them to Uppmax (/proj/snic2022-6-208/nobackup/submission/D-coccus)
 * Then all files were submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
@@ -274,7 +274,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/D-coccus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/D-coccus/ihDacCocc15_contaminations_Spiroplasma_endosymbiont.fasta.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/D-coccus/spiroplasma-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28674384
     ```
 
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
@@ -300,7 +305,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
         <ACTIONS>MODIFY</ACTIONS>
     </RECEIPT>
     ```
-**Spiroplasma** **TODO**
+**Spiroplasma**
 * I reused [update.xml](./data/update.xml) and created [umbrella_spiroplasma.xml](./data/umbrella_spiroplasma.xml)
 * Submit:
     ```
@@ -308,7 +313,16 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-11-28T15:13:37.064Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96490" alias="erga-bge-ihDacCocc-study-umbrella-2025-08-27" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-28-11-2025-15:13:36:955"/>
+        <MESSAGES>
+            <INFO>The XML md5 checksum for the object being updated has not changed. No update required for PRJEB96490.</INFO>
+        </MESSAGES>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
  
 ### Umbrella project
