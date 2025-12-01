@@ -232,9 +232,10 @@ Submission will be done via CNAG script and programmatic submission route using 
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    kaMicSqua1.1  | GCA_977109195 | PRJEB83564 | ERS20534881 | CDSAWO010000001-CDSAWO010000098 |              | OZ372786-OZ372795
     ```
-* Release studies and check that they are shown under umbrella
+* NOTE: Mito assembly processing failed, I don't know if it has to do that I forgot to create a separate project for it before submission. I will wait and see if it gets accession numbers, if not I will contact ENA support.
+* Release studies and check that they are shown under umbrella **TODO** (when I know that mito assembly worked)
 
 #### Add assembly to umbrella
 * Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
