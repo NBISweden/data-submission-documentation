@@ -285,7 +285,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 * Accessioned:
     ```
-
+    ASSEMBLY_NAME             | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
+    spiroplasma-ihDacCocc15.1 | GCA_977110965 | PRJEB100833 | ERS28164373 |            |              | OZ373019-OZ373019
     ```
 #### Add to umbrella
 **Wolbachia**
