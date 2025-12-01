@@ -143,6 +143,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
             <ACTIONS>ADD</ACTIONS>
         </RECEIPT>
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+* One of the files had wrong checksum (3A-CL reverse file), so I updated via browser to new one.
 
 ### Submit RNAseq - **TODO**
 #### Preparations
