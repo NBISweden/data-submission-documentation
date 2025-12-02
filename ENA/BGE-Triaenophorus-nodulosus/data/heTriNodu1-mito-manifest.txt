@@ -1,0 +1,12 @@
+STUDY	PRJEB104675
+SAMPLE	SAMEA115098039
+RUN_REF	ERR13654568, ERR14758855, ERR15197992
+ASSEMBLYNAME	heTriNodu1-mito.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	405
+PROGRAM	MitoHiFi (3.2.3)
+PLATFORM	PacBio, Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The mitochondrial genome was assembled using MitoHiFi (3.2.3)'
+FASTA	heTriNodu1_mito_20251201.fa.gz
+CHROMOSOME_LIST	heTriNodu1-mito-chromosome_list.txt.gz

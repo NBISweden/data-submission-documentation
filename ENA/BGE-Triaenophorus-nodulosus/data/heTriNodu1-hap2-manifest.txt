@@ -1,0 +1,14 @@
+STUDY	PRJEB104676
+SAMPLE	SAMEA115098039
+RUN_REF	ERR13654568, ERR14758855, ERR15197992
+ASSEMBLYNAME	heTriNodu1-haploid.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	106
+PROGRAM	Hifiasm (version 0.25.0-r726), purge_dups (version 1.2.6), FCS-GX (version 0.5.5), yahs (version 1.2.2), PretextView (version 1.0.3), GRIT_Rapid (git: 1a3d79a8)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Triaenophorus nodulosus was assembled with Hifiasm (version 0.25.0-r726) in HiC phasing mode. For each haplotype purge_dups (version 1.2.6), FCS-GX (version 0.5.5) based on the ALL database released on 2023/01 and yahs was run separately. Yahs (version 1.2.2) was used to scaffold contigs into chromosomes. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8).'
+FASTA	heTriNodu1_hap2_20251201.fa.gz
+CHROMOSOME_LIST	heTriNodu1-hap2-chromosome_list.txt.gz
+UNLOCALISED_LIST	heTriNodu1-hap2-unlocalised_list.txt.gz

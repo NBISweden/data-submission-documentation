@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB80085 (umbrella), PRJEB79894 (experiment), PRJEB80032 (assembly)
+Top_level_acccession: PRJEB80085 (umbrella), PRJEB79894 (experiment), PRJEB80032 (assembly), PRJEB104675 (mito assembly), PRJEB104676 (haplotype assembly)
 ---
 
 # BGE - *Triaenophorus nodulosus*
@@ -136,9 +136,73 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
 ### Submit RNAseq
 
 ### Submit assembly
-
 * A study / project was created, receiving accession number `PRJEB80032`
 * Yvonnes note: Not sure how it was registered, hence lack of information other than the accession number. 
+* For this species both a haplotype and a mito assembly was identified, in addition to the primary assembly. Hence 2 more projects was needed:
+    * I created [heTriNodu-hapMito-assembly-studies.xml](./data/heTriNodu-assembly-studies.xml) and submitted using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-hold.xml"  -F "PROJECT=@heTriNodu-assembly-studies.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-12-02T07:41:30.195Z" submissionFile="submission-hold.xml" success="true">
+        <PROJECT accession="PRJEB104675" alias="erga-bge-heTriNodu1_mito-2025-12-02" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP185931" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB104676" alias="erga-bge-heTriNodu1_haplo-2025-12-02" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP185932" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA35288949" alias="SUBMISSION-02-12-2025-07:41:30:114"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* I created 3 manifest files [heTriNodu1-hap1-manifest.txt](./data/heTriNodu1-hap1-manifest.txt), [heTriNodu1-hap2-manifest.txt](./data/heTriNodu1-hap2-manifest.txt), [heTriNodu1-mito-manifest.txt](./data/heTriNodu1-mito-manifest.txt) as well as chromosome lists and unlocalised lists (for haploids).
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/T-nodulosus) and copied & gzipped manifest, assembly file and chromosome list there
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./heTriNodu1-hap1-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./heTriNodu1-hap2-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./heTriNodu1-mito-manifest.txt -validate
+    ```
+* Receipt hap1:
+    ```
+
+    ```
+* Receipt hap2:
+    ```
+
+    ```
+* Receipt mito:
+    ```
+
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+
+    ```
+* Release studies and check that they are shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly projects when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
 
 ### Create umbrella
 
