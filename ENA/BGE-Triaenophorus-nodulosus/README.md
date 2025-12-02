@@ -174,15 +174,32 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
     ```
 * Receipt hap1:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1_hap1_20251201.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1-hap1-chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1-hap1-unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28675713
     ```
 * Receipt hap2:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1_hap2_20251201.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1-hap2-chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1-hap2-unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28675714
     ```
 * Receipt mito:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1_mito_20251201.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1-mito-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28675715
     ```
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
@@ -193,16 +210,26 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
 * Release studies and check that they are shown under umbrella
 
 #### Add assembly to umbrella
-* Add the assembly projects when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Add the 3 assembly projects when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
 * Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
 * Submit:
     ```
     curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
-* Receipt:
+* Received a weird error message about cyclic dependency:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-12-02T12:23:58.534Z" submissionFile="update.xml" success="false">
+        <PROJECT alias="erga-bge-heTriNodu-study-umbrella-2024-09-12" status="PUBLIC"/>
+        <SUBMISSION alias="SUBMISSION-02-12-2025-12:23:58:278"/>
+        <MESSAGES>
+            <ERROR>An exception occurred: Cyclic dependency error: there is an entry with parent: PRJEB80032 and child: PRJEB80085</ERROR>
+        </MESSAGES>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
+* Seems as if, when I created the umbrella initially, I added the assembly project as a parent instead of a child. Hence, I have to remove the umbrella from the assembly project, add umbrella to the BGE project, and then finally I can add all 3 assemblies to the umbrella. Not sure I'm able to fix this so I asked ENA support for help (2025-12-02).
 
 ### Create umbrella
 
