@@ -231,11 +231,13 @@ Submission will be done via CNAG script and programmatic submission route using 
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
     ```
-    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-    kaMicSqua1.1  | GCA_977109195 | PRJEB83564 | ERS20534881 | CDSAWO010000001-CDSAWO010000098 |              | OZ372786-OZ372795
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    kaMicSqua1.1      | GCA_977109195 | PRJEB83564  | ERS20534881 | CDSAWO010000001-CDSAWO010000098 |              | OZ372786-OZ372795
+    kaMicSqua1-mito.1 | GCA_977861625 | PRJEB104483 | ERS20534881 |                                 |              | OZ374512-OZ374512
+
     ```
-* NOTE: Mito assembly processing failed, I don't know if it has to do that I forgot to create a separate project for it before submission. I will wait and see if it gets accession numbers, if not I will contact ENA support.
-* Release studies and check that they are shown under umbrella **TODO** (when I know that mito assembly worked)
+* NOTE: Mito assembly processing failed, I don't know if it has to do that I forgot to create a separate project for it before submission. I will wait and see if it gets accession numbers, if not I will contact ENA support. Update: It got accession numbers, so all is well.
+* Release studies and check that they are shown under umbrella 
 
 #### Add assembly to umbrella
 * Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
