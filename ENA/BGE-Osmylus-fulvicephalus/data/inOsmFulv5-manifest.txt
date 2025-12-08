@@ -1,0 +1,14 @@
+STUDY	PRJEB90647
+SAMPLE	SAMEA115755034
+RUN_REF	ERR15133391, ERR15169086
+ASSEMBLYNAME	inOsmFulv5.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	60
+PROGRAM	Hifiasm (version 0.25.0-r726), FCS-GX (version 0.5.5), purge_dups (version 1.2.6), PretextView (version 1.0.3), GRIT_Rapid (git: 1a3d79a8)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Osmylus fulvicephalus was assembled with Hifiasm (version 0.25.0-r726). Contaminations were removed with FCS-GX (version 0.5.5) based on the ALL database released on 2023/01. Remaining haplotypic duplications were identified with purge_dups (version 1.2.6). The scaffolding was done manually in the curation step. The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8).'
+FASTA	inOsmFulv5_pri_20251126.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz

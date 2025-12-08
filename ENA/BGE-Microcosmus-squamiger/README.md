@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB91533 (umbrella), PRJEB83563 (experiment), PRJEB83564 (assembly)
+Top_level_acccession: PRJEB91533 (umbrella), PRJEB83563 (experiment), PRJEB83564 (assembly), PRJEB104483 (mito)
 ---
 
 # BGE - *Microcosmus squamiger*
@@ -150,6 +150,114 @@ Submission will be done via CNAG script and programmatic submission route using 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+### Submit assembly
+* There is a separate mitochondrial assembly:
+    * I FORGOT TO ADD MITO TO A SEPARATE PROJECT!!!
+    * I created [kaMicSqua-mito.study.xml](./data/kaMicSqua-mito.study.xml) and submitted it separately
+    * Command and Receipt:
+        ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@kaMicSqua-mito.study.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-11-28T09:08:02.998Z" submissionFile="submission.xml" success="true">
+            <PROJECT accession="PRJEB104483" alias="erga-bge-kaMicSqua1_mito-2025-11-28" status="PRIVATE" holdUntilDate="2026-03-07Z">
+                <EXT_ID accession="ERP185776" type="study"/>
+            </PROJECT>
+            <SUBMISSION accession="ERA35282209" alias="SUBMISSION-28-11-2025-09:08:02:817"/>
+            <MESSAGES>
+                <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+            </MESSAGES>
+            <ACTIONS>ADD</ACTIONS>
+            <ACTIONS>HOLD</ACTIONS>
+        </RECEIPT>
+        ```
+    * I then updated the .xml file for the mito assembly to reference the newly created study accession instead of the primary assembly study. Fingers crossed that it works, it was accepted and looks ok in the analysis list... 
+        ```
+        <STUDY_REF accession="ERP185776">
+        <IDENTIFIERS>
+            <PRIMARY_ID>ERP185776</PRIMARY_ID>
+            <SECONDARY_ID>PRJEB104483</SECONDARY_ID>
+        </IDENTIFIERS>
+        </STUDY_REF>
+        ```
+    * I added also this mito assembly to the umbrella:
+        * Created [umbrella_modified-mito.xml](./data/umbrella_modified-mito.xml)
+        * Submitted:
+            ```
+            curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+            ```
+        * Receipt:
+            ```
+            <?xml version="1.0" encoding="UTF-8"?>
+            <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+            <RECEIPT receiptDate="2025-11-28T09:21:57.716Z" submissionFile="update.xml" success="true">
+                <PROJECT accession="PRJEB91533" alias="erga-bge-kaMicSqua-study-umbrella-2025-07-02" status="PUBLIC"/>
+                <SUBMISSION accession="" alias="SUBMISSION-28-11-2025-09:21:57:613"/>
+                <MESSAGES>
+                    <INFO>The XML md5 checksum for the object being updated has not changed. No update required for PRJEB91533.</INFO>
+                </MESSAGES>
+                <ACTIONS>MODIFY</ACTIONS>
+            </RECEIPT>
+            ```
+* I created manifest files [kaMicSqua1-manifest.txt](./data/kaMicSqua1-manifest.txt) and [kaMicSqua1-mito-manifest.txt](./data/kaMicSqua1-mito-manifest.txt)
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/M-squamiger) and copied & gzipped manifests, assembly file unlocalised_list and chromosome lists there
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./kaMicSqua1-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./kaMicSqua1-mito-manifest.txt -validate
+    ```
+* Receipt primary:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/M-squamiger/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/M-squamiger/kaMicSqua1_pri_20251126.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/M-squamiger/chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/M-squamiger/unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28674135    
+    ```
+* Receipt mito:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/M-squamiger/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/M-squamiger/kaMicSqua1_mito_20251126.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/M-squamiger/mito-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28674132
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    kaMicSqua1.1      | GCA_977109195 | PRJEB83564  | ERS20534881 | CDSAWO010000001-CDSAWO010000098 |              | OZ372786-OZ372795
+    kaMicSqua1-mito.1 | GCA_977861625 | PRJEB104483 | ERS20534881 |                                 |              | OZ374512-OZ374512
+
+    ```
+* NOTE: Mito assembly processing failed, I don't know if it has to do that I forgot to create a separate project for it before submission. I will wait and see if it gets accession numbers, if not I will contact ENA support. Update: It got accession numbers, so all is well.
+* Release studies and check that they are shown under umbrella 
+
+#### Add assembly to umbrella
+* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-11-28T08:08:34.184Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB91533" alias="erga-bge-kaMicSqua-study-umbrella-2025-07-02" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-28-11-2025-08:08:34:007"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
+    ```
+
 ### Umbrella project
 * For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
@@ -187,4 +295,3 @@ Submission will be done via CNAG script and programmatic submission route using 
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>    
     ```
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.

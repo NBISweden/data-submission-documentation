@@ -1,0 +1,13 @@
+STUDY	PRJEB90608
+SAMPLE	SAMEA116298749
+RUN_REF	ERR15132795, ERR15169130, ERR15650861
+ASSEMBLYNAME	qqArtNeph1.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	60
+PROGRAM	Hifiasm (0.25.0-r726), FCS-GX (v0.5.5), purge_dups (v1.2.5), Yahs (v1.2a.1), Sanger-tol/curationpretext (v1.5), PretextView (v1.0.4), Sanger-tol/agp-tpf-utils (commit: 35ea45dbcd8f3ece7a91104e5813541b55beb2ff)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Artema nephilit was assembled with Hifiasm (version 0.25.0-r726). The consensus assembly was checked for contaminants using FCS-GX (version 0.5.5) based on the ALL database released on 2023/01, and purged for haplotypic duplication using purge_dups (version 1.2.5). Yahs (version 1.2a.1) was used to scaffold contigs into chromosomes. The manual curation was done with Sanger-tol/curationpretext (version 1.5), PretextView (version 1.0.4) and Sanger-tol/agp-tpf-utils (commit: 35ea45dbcd8f3ece7a91104e5813541b55beb2ff). The mitochondrial genome could not be assembled using MitoHiFi (3.2.3). The sex system is X1X2 but could not be assigned through synteny.'
+FASTA	qqArtNeph.5.primary.curated.fa.gz
+CHROMOSOME_LIST	qqArtNeph.5.primary.curated-chromosome_list.txt.gz

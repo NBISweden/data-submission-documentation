@@ -109,7 +109,41 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
+* **2025-11-28** We had a final batch of HiC data for this species, so I repeated the above steps for these new files:
+    * Created [iqAioThal-HiC-2.tsv](./data/iqAioThal-HiC-2.tsv)
+    * Ran script:
+        ```
+        ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iqAioThal-HiC-2.tsv -p ERGA-BGE -o iqAioThal-HiC-2
+        ```
+    * Updated iqAioThal-HiC-2.exp.xml to reference accession number of previously registered study:
+        ```
+        <STUDY_REF accession="PRJEB90990"/>
+        ```
+    * Removed row `<PAIRED/>` (error in script)
+    * Added 'Illumina' to the library names and titles, since the other data types have the platform named
+    * Submitted using curl, using noHold submission.xml since the study is already public:
+        ```
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml"  -F "EXPERIMENT=@iqAioThal-HiC-2.exp.xml" -F "RUN=@iqAioThal-HiC-2.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-11-28T14:34:51.915Z" submissionFile="submission-noHold.xml" success="true">
+            <EXPERIMENT accession="ERX15368915" alias="exp_iqAioThal_Hi-C_LV6000904911_HC034-2C-CL" status="PRIVATE"/>
+            <EXPERIMENT accession="ERX15368916" alias="exp_iqAioThal_Hi-C_LV6000904902_HC034-3A-CL" status="PRIVATE"/>
+            <EXPERIMENT accession="ERX15368917" alias="exp_iqAioThal_Hi-C_LV6000904903_HC034-3B-CL" status="PRIVATE"/>
+            <EXPERIMENT accession="ERX15368918" alias="exp_iqAioThal_Hi-C_LV6000904901_HC034-3C-CL" status="PRIVATE"/>
+            <RUN accession="ERR15974186" alias="run_iqAioThal_Hi-C_LV6000904911_HC034-2C-CL_fastq_1" status="PRIVATE"/>
+            <RUN accession="ERR15974187" alias="run_iqAioThal_Hi-C_LV6000904902_HC034-3A-CL_fastq_1" status="PRIVATE"/>
+            <RUN accession="ERR15974188" alias="run_iqAioThal_Hi-C_LV6000904903_HC034-3B-CL_fastq_1" status="PRIVATE"/>
+            <RUN accession="ERR15974189" alias="run_iqAioThal_Hi-C_LV6000904901_HC034-3C-CL_fastq_1" status="PRIVATE"/>
+            <SUBMISSION accession="ERA35282907" alias="SUBMISSION-28-11-2025-14:34:51:587"/>
+            <MESSAGES/>
+            <ACTIONS>ADD</ACTIONS>
+        </RECEIPT>
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+* One of the files had wrong checksum (3A-CL reverse file), so I updated via browser to new one.
 
 ### Submit RNAseq - **TODO**
 #### Preparations

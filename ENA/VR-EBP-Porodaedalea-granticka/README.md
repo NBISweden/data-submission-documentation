@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, mito, assembly, umbrella # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB72049, PRJEB71491, PRJEB72043
+Top_level_acccession: PRJEB72049 (umbrella), PRJEB71491 (raw reads, primary assembly), PRJEB72043 (mito assembly)
 ---
 
 # VR-EBP - *Porodaedalea chrysoloma*
@@ -26,6 +26,21 @@ Within the VR-EBP (Earth Biogenome Project), granticka, *Porodaedalea chrysoloma
     * Genomassembly: ERZ22530149, GCA_963926545, CAWUYF010000001-CAWUYF010000025
     * Mito assembly: ERZ22530150, GCA_963926555, OZ004980-OZ004980
 
+* **Note 2025-12-08:** Pushed forward the release date of the children projects to 2026-06-02, via browser. Umbrella release date update:
+    * Created [update-umbrella-release-date.xml](./data/update-umbrella-release-date.xml)
+    * Submit using curl:
+        ```
+        curl -u Username:Password -F "SUBMISSION=@update-umbrella-release-date.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-12-08T10:45:21.958Z" submissionFile="update-umbrella-release-date.xml" success="true">
+            <MESSAGES/>
+            <ACTIONS>HOLD</ACTIONS>
+        </RECEIPT>
+        ```
 ### Steps
 * [Collect metadata](#collect-metadata)
 * [Submit 3 studies](#register-study) (umbrella, raw reads + genome assembly, mito assembly)

@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <EXPERIMENT_SET>
 	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqTroLibu_Hi-C_FF03939998_HC022-1A1A">
-		<TITLE>Troglohyphantes liburnicus Hi-C data</TITLE>
-		<STUDY_REF refname="erga-bge-qqTroLibu-study-rawdata-2025-03-20"/>
+		<TITLE>Troglohyphantes liburnicus Illumina Hi-C data</TITLE>
+		<STUDY_REF accession="PRJEB96410"/>
 		<DESIGN>
 			<DESIGN_DESCRIPTION/>
 			<SAMPLE_DESCRIPTOR accession="SAMEA115118123"/>

@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-inOsmFulv-study-umbrella-2025-07-02">
+		<NAME>inOsmFulv</NAME>
+		<TITLE>Osmylus fulvicephalus</TITLE>
+		<DESCRIPTION>This project collects the sequencing data and assemblies generated for Osmylus fulvicephalus by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) for the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<UMBRELLA_PROJECT/>
+		<RELATED_PROJECTS>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB90647"/>
+			</RELATED_PROJECT>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB104486"/>
+			</RELATED_PROJECT>
+		</RELATED_PROJECTS>
+	</PROJECT>
+</PROJECT_SET>

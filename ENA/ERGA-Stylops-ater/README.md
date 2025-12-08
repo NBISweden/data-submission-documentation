@@ -496,3 +496,20 @@ curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.
 * Received accession number: `PRJEB71963`
 
 * **Note:** according to [ENA documentation on umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#releasing-umbrella-studies): "*Umbrella studies do not appear in the list of studies shown in your Webin account.*"
+
+### Release date update
+* PI asked to push forward the release date of the umbrella project and all children. New date is 2026-11-07.
+    * The children projects were updated via browser.
+    * The umbrella project was updated via curl, using [submission-update-release-date-umbrella.xml](./data/submission-update-release-date-umbrella.xml):
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-update-release-umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-11-07T07:00:53.042Z" submissionFile="submission-update-release-umbrella.xml" success="true">
+        <MESSAGES/>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```

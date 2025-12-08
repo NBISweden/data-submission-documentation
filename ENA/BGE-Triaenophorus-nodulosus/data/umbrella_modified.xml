@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-heTriNodu-study-umbrella-2024-09-12">
+		<NAME>heTriNodu</NAME>
+		<TITLE>Triaenophorus nodulosus</TITLE>
+		<DESCRIPTION>This project collects the sequencing data and assemblies generated for Triaenophorus nodulosus by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) for the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<UMBRELLA_PROJECT/>
+		<RELATED_PROJECTS>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB80032"/>
+			</RELATED_PROJECT>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB104676"/>
+			</RELATED_PROJECT>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB104675"/>
+			</RELATED_PROJECT>
+		</RELATED_PROJECTS>
+	</PROJECT>
+</PROJECT_SET>

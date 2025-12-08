@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_iqAioThal_Hi-C_LV6000904911_HC034-2C-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqAioThal_Hi-C_LV6000904911_HC034-2C-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqAioThal_YJ-4442-HC034-2C-CL_S812_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="8afe1496b6cbeb8eb50a22cf26c01edd" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqAioThal_YJ-4442-HC034-2C-CL_S812_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="3b77a3da1e447732d5842bbfcb9b7daa" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqAioThal_Hi-C_LV6000904902_HC034-3A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqAioThal_Hi-C_LV6000904902_HC034-3A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqAioThal_YJ-4442-HC034-3A-CL_S813_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="ae30cdf5d1e715501966d83065e1837d" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqAioThal_YJ-4442-HC034-3A-CL_S813_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="ac023f4d247d694cd574f0c4f35e564c" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqAioThal_Hi-C_LV6000904903_HC034-3B-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqAioThal_Hi-C_LV6000904903_HC034-3B-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqAioThal_YJ-4442-HC034-3B-CL_S814_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="8c0bbdf10ec251cb5edddb54ccdeb615" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqAioThal_YJ-4442-HC034-3B-CL_S814_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="1a92dc0f7428d13da71cf09b1bcf2403" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqAioThal_Hi-C_LV6000904901_HC034-3C-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqAioThal_Hi-C_LV6000904901_HC034-3C-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqAioThal_YJ-4442-HC034-3C-CL_S815_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="a9d229177fef6f7148892f4e6c9810b5" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqAioThal_YJ-4442-HC034-3C-CL_S815_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="8e811d4699525e1d992a91c14c9b4427" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

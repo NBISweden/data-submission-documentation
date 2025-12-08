@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB80085 (umbrella), PRJEB79894 (experiment), PRJEB80032 (assembly)
+Top_level_acccession: PRJEB80085 (umbrella), PRJEB79894 (experiment), PRJEB80032 (assembly), PRJEB104675 (mito assembly), PRJEB104676 (haplotype assembly)
 ---
 
 # BGE - *Triaenophorus nodulosus*
@@ -136,9 +136,119 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
 ### Submit RNAseq
 
 ### Submit assembly
-
 * A study / project was created, receiving accession number `PRJEB80032`
 * Yvonnes note: Not sure how it was registered, hence lack of information other than the accession number. 
+* For this species both a haplotype and a mito assembly was identified, in addition to the primary assembly. Hence 2 more projects was needed:
+    * I created [heTriNodu-hapMito-assembly-studies.xml](./data/heTriNodu-assembly-studies.xml) and submitted using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-hold.xml"  -F "PROJECT=@heTriNodu-assembly-studies.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-12-02T07:41:30.195Z" submissionFile="submission-hold.xml" success="true">
+        <PROJECT accession="PRJEB104675" alias="erga-bge-heTriNodu1_mito-2025-12-02" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP185931" type="study"/>
+        </PROJECT>
+        <PROJECT accession="PRJEB104676" alias="erga-bge-heTriNodu1_haplo-2025-12-02" status="PRIVATE" holdUntilDate="2026-09-09+01:00">
+            <EXT_ID accession="ERP185932" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA35288949" alias="SUBMISSION-02-12-2025-07:41:30:114"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* I created 3 manifest files [heTriNodu1-hap1-manifest.txt](./data/heTriNodu1-hap1-manifest.txt), [heTriNodu1-hap2-manifest.txt](./data/heTriNodu1-hap2-manifest.txt), [heTriNodu1-mito-manifest.txt](./data/heTriNodu1-mito-manifest.txt) as well as chromosome lists and unlocalised lists (for haploids).
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/T-nodulosus) and copied & gzipped manifest, assembly file and chromosome list there
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./heTriNodu1-hap1-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./heTriNodu1-hap2-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./heTriNodu1-mito-manifest.txt -validate
+    ```
+* Receipt hap1:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1_hap1_20251201.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1-hap1-chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1-hap1-unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28675713
+    ```
+* Receipt hap2:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1_hap2_20251201.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1-hap2-chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1-hap2-unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28675714
+    ```
+* Receipt mito:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1_mito_20251201.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/T-nodulosus/heTriNodu1-mito-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28675715
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME        | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    heTriNodu1-mito.1    | GCA_977118325 | PRJEB104675 | ERS17732786 |                                 |              | OZ373898-OZ373898
+    heTriNodu1.1         | GCA_977118345 | PRJEB80032  | ERS17732786 | CDSBUN010000001-CDSBUN010000021 |              | OZ373922-OZ373934
+    heTriNodu1-haploid.1 | GCA_977118355 | PRJEB104676 | ERS17732786 | CDSBUM010000001-CDSBUM010000013 |              | OZ373909-OZ373921
+    ```
+* Release studies and check that they are shown under umbrella
+
+#### Add assembly to umbrella
+* Add the 3 assembly projects when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Received a weird error message about cyclic dependency:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-12-02T12:23:58.534Z" submissionFile="update.xml" success="false">
+        <PROJECT alias="erga-bge-heTriNodu-study-umbrella-2024-09-12" status="PUBLIC"/>
+        <SUBMISSION alias="SUBMISSION-02-12-2025-12:23:58:278"/>
+        <MESSAGES>
+            <ERROR>An exception occurred: Cyclic dependency error: there is an entry with parent: PRJEB80032 and child: PRJEB80085</ERROR>
+        </MESSAGES>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
+    ```
+* Seems as if, when I created the umbrella initially, I added the assembly project as a parent instead of a child. Hence, I have to remove the umbrella from the assembly project, add umbrella to the BGE project, and then finally I can add all 3 assemblies to the umbrella. Not sure I'm able to fix this so I asked ENA support for help (2025-12-02).
+* ENA helped but this also identified a security hole in their pipeline, we are not suposed to link bottom-up.
+* New routines are to add the umbrella to GTC tracker, via admin->sequencing, but I'm not allowed to do this. Then, also slack CNAG that there is an umbrella to link to the BGE umbrella, so they do it. I've slacked CNAG but no reply yet (2025-12-08).
+* New attempt to add assembly projects to umbrella, after ENA support removed the umbrella from the assembly projects:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-12-08T09:58:22.399Z" submissionFile="update.xml" success="true">
+            <PROJECT accession="PRJEB80085" alias="erga-bge-heTriNodu-study-umbrella-2024-09-12" status="PUBLIC"/>
+            <SUBMISSION accession="" alias="SUBMISSION-08-12-2025-09:58:21:937"/>
+            <MESSAGES/>
+            <ACTIONS>MODIFY</ACTIONS>
+        </RECEIPT>
+        ```
 
 ### Create umbrella
 
@@ -150,7 +260,7 @@ For each of the BGE species, an umbrella project has to be created and linked to
     ```
 * Create a [submission-umbrella.xml](./data/submission-umbrella.xml)
 
-* Submit using curl:
+* Submit using curl (**note** umbrella.xml has wrong parent):
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
@@ -184,5 +294,3 @@ For each of the BGE species, an umbrella project has to be created and linked to
         <ACTIONS>RELEASE</ACTIONS>
     </RECEIPT>    
     ```
-
-* **TODO:** Add the assembly study `PRJEB80032` as child to the umbrella project as well (currently only the genomic sequencing project is attached)
