@@ -240,7 +240,14 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
     ```
     * Receipt:
         ```
-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-12-08T09:58:22.399Z" submissionFile="update.xml" success="true">
+            <PROJECT accession="PRJEB80085" alias="erga-bge-heTriNodu-study-umbrella-2024-09-12" status="PUBLIC"/>
+            <SUBMISSION accession="" alias="SUBMISSION-08-12-2025-09:58:21:937"/>
+            <MESSAGES/>
+            <ACTIONS>MODIFY</ACTIONS>
+        </RECEIPT>
         ```
 
 ### Create umbrella
