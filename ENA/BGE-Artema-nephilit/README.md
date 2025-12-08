@@ -186,7 +186,7 @@ Submission of raw reads for *Artema nephilit* to facilitate assembly and annotat
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    qqArtNeph1.1  | GCA_977118365 | PRJEB90608 | ERS21343666 | CDSBUS010000001-CDSBUS010000026 |              | OZ373998-OZ374014
     ```
 * Release study and check that it is shown under umbrella
 
