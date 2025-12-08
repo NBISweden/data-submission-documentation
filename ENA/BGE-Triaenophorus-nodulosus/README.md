@@ -204,8 +204,10 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
     ```
-    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    ASSEMBLY_NAME        | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    heTriNodu1-mito.1    | GCA_977118325 | PRJEB104675 | ERS17732786 |                                 |              | OZ373898-OZ373898
+    heTriNodu1.1         | GCA_977118345 | PRJEB80032  | ERS17732786 | CDSBUN010000001-CDSBUN010000021 |              | OZ373922-OZ373934
+    heTriNodu1-haploid.1 | GCA_977118355 | PRJEB104676 | ERS17732786 | CDSBUM010000001-CDSBUM010000013 |              | OZ373909-OZ373921
     ```
 * Release studies and check that they are shown under umbrella
 
@@ -230,6 +232,16 @@ Upload was slow to begin (~25 mins) but once begun it uploaded as expected.
     </RECEIPT>
     ```
 * Seems as if, when I created the umbrella initially, I added the assembly project as a parent instead of a child. Hence, I have to remove the umbrella from the assembly project, add umbrella to the BGE project, and then finally I can add all 3 assemblies to the umbrella. Not sure I'm able to fix this so I asked ENA support for help (2025-12-02).
+* ENA helped but this also identified a security hole in their pipeline, we are not suposed to link bottom-up.
+* New routines are to add the umbrella to GTC tracker, via admin->sequencing, but I'm not allowed to do this. Then, also slack CNAG that there is an umbrella to link to the BGE umbrella, so they do it. I've slacked CNAG but no reply yet (2025-12-08).
+* New attempt to add assembly projects to umbrella, after ENA support removed the umbrella from the assembly projects:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+        ```
+
+        ```
 
 ### Create umbrella
 
@@ -241,7 +253,7 @@ For each of the BGE species, an umbrella project has to be created and linked to
     ```
 * Create a [submission-umbrella.xml](./data/submission-umbrella.xml)
 
-* Submit using curl:
+* Submit using curl (**note** umbrella.xml has wrong parent):
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-umbrella.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
@@ -275,5 +287,3 @@ For each of the BGE species, an umbrella project has to be created and linked to
         <ACTIONS>RELEASE</ACTIONS>
     </RECEIPT>    
     ```
-
-* **TODO:** Add the assembly study `PRJEB80032` as child to the umbrella project as well (currently only the genomic sequencing project is attached)
