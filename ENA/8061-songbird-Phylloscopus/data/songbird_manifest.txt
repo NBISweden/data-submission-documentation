@@ -1,0 +1,12 @@
+STUDY           PRJEB89226
+SAMPLE          P_trochiloides_viridanus_XT48080
+ASSEMBLYNAME    P_trochiloides_viridanus_25_12
+ASSEMBLY_TYPE   isolate
+COVERAGE        30
+PROGRAM         Hifiasm 0.19.5
+PLATFORM        PacBio HiFi
+MINGAPLENGTH    10
+MOLECULETYPE    genomic DNA
+DESCRIPTION     Assembly was made using Hifiasm version 0.19.5 with default settings and selecting the primary contigs.
+RUN_REF:        ERR15992181
+FASTA			hifiasm_greenish_warbler.asm.0.19.5.bp.p_ctg.fasta.gz

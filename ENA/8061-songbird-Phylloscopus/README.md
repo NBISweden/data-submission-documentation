@@ -18,11 +18,12 @@ Support issue on brokering sequence data and assembly to ENA on behalf of resear
 * Consultation on suitable ENA checklist. Decided on ToL (ERC000053)
 * Research group provided metadata in template
 * DS registered Study at ENA using information from metadata template (PRJEB89226)
+* DS registered [sample information](./data/Songbird_samples.tsv) based on metadata template
 * Research group provided list of files with md5 sums and added DS to SNIC project
-* File list was uploaded to Dardel
+* [File list](./data/file_list.txt) was uploaded to Dardel
 * DS transferred sequence files from Dardel to ENA using Aspera (see Lessons learned)
 * Due to number of files and total amount of data, submission was decided to be done programatically to ENA
-* A submission.xml was made with release date set to 2027-11-09
+* A [submission.xml](./data/submission.xml) was made with release date set to 2027-11-09
 * An xml file was made for the experiments ([Songbird_experiments.xml](./data/Songbird_experiments.xml))
 * Another xml file was made for the run files ([Songbird_runs_files.xml](./data/Songbird_runs_files.xml))
 * Submission of files was done using the curl command:
@@ -41,6 +42,7 @@ Successful submission was confirmed in the [xml receipt](./data/receipt.xml).
 * A submission.xml file was made identical to the previously used
 * An XML file was made for the experiment ([Songbird_experiments_HiFi.xml](./data/Songbird_experiments_HiFi.xml))
 * The bam file was referenced in a [Songbird_runs_files_HiFi.xml](./data/Songbird_runs_files_HiFi.xml)
+* A [manifest file](./data/songbird_manifest.txt) was made
 * Submission was done using the curl command:
 
 ```
