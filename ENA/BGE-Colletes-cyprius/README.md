@@ -185,7 +185,24 @@ For each of the BGE species, an **umbrella** project has to be created and linke
     </RECEIPT>    
     ```
 
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Assembly submission was done by other node, and I was asked to link the assembly projects (2 haplotypes) to the umbrella project:
+    * Create [update.xml](./data/update.xml) [umbrella_modified.xml](./data/umbrella_modified.xml) adding PRJEB105002 and PRJEB105003 as children
+    * Submit using curl:
+        ```
+        curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-12-09T14:36:11.972Z" submissionFile="update.xml" success="true">
+            <PROJECT accession="PRJEB96369" alias="erga-bge-iyColCypr-study-umbrella-2025-08-25" status="PUBLIC"/>
+            <SUBMISSION accession="" alias="SUBMISSION-09-12-2025-14:36:11:767"/>
+            <MESSAGES/>
+            <ACTIONS>MODIFY</ACTIONS>
+        </RECEIPT>        
+        ```
+
 
 ## Correcting missing file issue
 Processing of the .bam file (HiFi) failed and an email was sent to us from ENA that the file was missing. The problem was that in the iyColCypr-HiFi.runs.xml the file name had a space in it (due to copy paste error). I could try add that space in the file name of the uploaded file, but that (if it even would work) might cause problems in the future reuse, if people download the file to a unix system (which really doesn't like space in file names).
