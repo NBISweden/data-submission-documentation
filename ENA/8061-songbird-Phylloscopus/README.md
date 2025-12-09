@@ -51,7 +51,7 @@ curl -u [user]:[password] -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@Songbi
 * The assembly file (not annotated) was uploaded using Webin-CLI v9.0.1 and a manifest file with the proper metadata, referencing the bam file:
 
 ```
-java -jar -Xmx10G webin-cli-9.0.1.jar -ascp -context=genome -manifest=songbird_manifest.txt -userName=Webin-XXXXX -password=[password]] -validate
+java -jar -Xmx10G webin-cli-9.0.1.jar -ascp -context=genome -manifest=songbird_manifest.txt -userName=Webin-XXXXX -password=[password] -validate
 ```
 
 * After successful validation the assembly was submitted by changing the flag to -submit.
