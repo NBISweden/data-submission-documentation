@@ -1,0 +1,2720 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+        <RUN alias="run_SI-2304-1755299_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755299"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755299_S20_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="4775223ab837c09341625484728ab8ce" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755299_S20_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="2929403f138ba9bc30eb419618bbf806" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755299_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755299"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755299_S20_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="ef171b904572d28f876145ef63822e18" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755299_S20_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="f13e04fce57935341a1c200ad5759c7c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755335_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755335"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755335_S5_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="dc21ef92bf23f2cfc088d3cc982c6bf6" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755335_S5_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="8ee25e0a0033a93e736e9a9161ec7e5a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755335_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755335"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755335_S5_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="3d4196905b805c2ba77ef6a0cb85ed09" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755335_S5_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="8cb2e29c60e52b78ad62d80c206da049" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755341_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755341"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755341_S25_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="752b60d2f81dae76d8ea6deabd3fd2ad" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755341_S25_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="dc5bfc0e2c3a912d1c6d427ce98dfb38" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+         <RUN alias="run_SI-2304-1755341_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755341"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755341_S25_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="2bdcd239234667929d52da9c78f3a244" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755341_S25_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="a6cbdda198fc411995fbe35bb7065831" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755342_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755342"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755342_S12_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="8333f5f3c00b0b38d0f6b37d82eaf42d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755342_S12_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="58109aefd9932bb4e98cda1e089708e4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755342_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755342"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755342_S12_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="7e82ba8af5b6f56012bce76bebbc7632" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755342_S12_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="b58a6086ed1f22803826e9d8da9ae40e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_SI-2304-1755348_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755348"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755348_S13_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="9a98bd179f56a8fde46b0b639519466c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755348_S13_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="a5a5e74a2dd3dd18f1aed56238aa7a0f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_SI-2304-1755348_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755348"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755348_S13_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="92104e07bb88bc6789dffc9b40553430" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755348_S13_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="f96b8b11ec6f98821e95a42dd8ec79e2" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755349_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755349"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755349_S6_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="66d9de191d8d27ceee9cefc36d82c8de" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755349_S6_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="c8bf4c026f0aa2bd5d436ab4f6197c0a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755349_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755349"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755349_S6_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="082a68c31f8d6efc2c292627cc506705" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755349_S6_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="df7f39257a040ab99006702b66a57a20" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755353_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755353"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755353_S17_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="b9b450e0dc43bd5bbf52df78d0a8669f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755353_S17_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="e46eb9362f950a9bdc8daa1823ae3c1e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755353_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755353"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755353_S17_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="c7170f19472e2b93ccf54a7a0eed6f16" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755353_S17_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="33e4d49179c0390450a83e03c20dd49e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755354_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755354"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755354_S26_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="6370e19734929807b3c9693a68cd7435" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755354_S26_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="358624838ab3ba545aac223714e3126a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755354_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755354"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755354_S26_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="d9ead7d3b7cfcbf3f9f999aba343bf7d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755354_S26_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="81784af1fe10070ab83fcbd64d136a86" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755357_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755357"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755357_S8_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="3959457197eedbc19c1eeb7fe4e56f4e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755357_S8_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="13eabc58b5c8c9c33d9c42ca9ea7dc8c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755357_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755357"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755357_S8_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="97600b42d186afbd27e7d9f8728680d8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755357_S8_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="3414e0de28cd99286b23886857c9a6c8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755366_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755366"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755366_S7_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="30569b06dd3831be1db31fb48ede8242" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755366_S7_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="dbe36fa65d278223ebb6984e934b9355" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755366_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755366"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755366_S7_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="a83b78924fd72fedab87d2981ffa67cd" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755366_S7_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="3b28269000e5d039f90cbcb8806ba3e7" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755367_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755367"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755367_S14_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="014218c187d3a293cae9ff964474af10" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755367_S14_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="7b99ff0acf43dfbaf608d65f4cc5aa7a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755367_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755367"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755367_S14_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="6ac9b8fd2fc438aceb49159dec9b1aa5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755367_S14_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="9f0a952563f3b5f85c6f03ff6a266915" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755387_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755387"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755387_S22_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="961326b81531287cb7bbd8e89cb23f1d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755387_S22_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="be4b5a3cf98fad0288bdbabadec2d084" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+         </RUN>
+        <RUN alias="run_SI-2304-1755387_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755387"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755387_S22_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="4fe7f876547fcbd9a75bf8df566f4329" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755387_S22_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="bccc1d79e619e0630feaba5914adb842" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755419_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755419"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755419_S10_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="cbeefd841c8695d19f491f32bb0c40bf" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755419_S10_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="bb6c8056202b6bda8d154c6da420114b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755419_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755419"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755419_S10_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="4c18a6c13271d31a7b9c1e3780587a09" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755419_S10_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="1e949a551abcd23769c24c0853518f2b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755422_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755422"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755422_S21_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="a89d955d40a6ae63fdedef2685650b0b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755422_S21_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="6b5b88c7ed8d415f93f5371bd1206209" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755422_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755422"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755422_S21_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="b8bdee044e7be7ef7d23fb67ebe29b13" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755422_S21_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="b05bb9cc51b5752c32e1f439978c7fc5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755426_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755426"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755426_S16_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="e0b3a3d7b107e4f131a260bfda68e995" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755426_S16_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="40ae52b63e18b0848a9104491432b474" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+         </RUN>
+        <RUN alias="run_SI-2304-1755426_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755426"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755426_S16_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="479affad895a92cc34b1a085da5383ee" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755426_S16_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="43a92b6004fb4337be2a417d07f3b1d6" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755427_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755427"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755427_S27_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="b358de7f420bd01fc7acf103dc914af0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755427_S27_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="377ed65f9b52b4c40fe3828340c7a25a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755427_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755427"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755427_S27_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="ec060c49c8321c9c418283dc249a4b71" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755427_S27_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="7e4f3106d00c71fc050dc4f87854d0f5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755432_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755432"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755432_S1_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="36a5dc6c78ad83851a1d303c4217a6d1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755432_S1_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="5c88216f25d2cc593f9d19ca91e7de0f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755432_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755432"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755432_S1_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="da824c66ff0a97dd9d48840f5e9c99e2" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755432_S1_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="8093fa8fe6ffedbf3a3cda32b5de9413" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755433_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755433"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755433_S15_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="0e86fda06e63843e84956ab1a9caf46e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755433_S15_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="ce9fa75a1a056ccdfeeca47acfeddd36" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755433_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755433"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755433_S15_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="8eb15232552b4cd9beec5317c263d796" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755433_S15_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="00a9af813c00fefece5fed29e2cbc1ea" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755435_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755435"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755435_S28_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="7f544fb97d4650de7b401f5708e25059" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755435_S28_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="878c822c51bcbcd0df169c1b7507cd3e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-1755435_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-1755435"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-1755435_S28_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="a4533390b30f420192665d0a08209f23" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-1755435_S28_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="db6fc569e675fb24f62e9a0adb729002" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94700_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94700"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94700_S2_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="e28493dc536af18dd83c359069733d70" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94700_S2_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="e1b33ba2ae5516ad5b2d895d0c572b64" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+         </RUN>
+        <RUN alias="run_SI-2304-DA94700_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94700"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94700_S2_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="f59e6805ef1f5f1199dcd87cb0129f39" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94700_S2_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="bf67fc2393627b24eb07c90b5a681596" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94725_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94725"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94725_S29_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="4096120a18a814afe03b2c499536a84e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94725_S29_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="732882b2d7888ec6d15c1515f948dfa3" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94725_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94725"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94725_S29_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="4fed3ba5cd9e224830270c1ff1afb516" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94725_S29_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="af2193b1f1205100014cc870bdeaeabe" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94732_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94732"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94732_S23_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="33aa33d4488d7548d1f75c17d919a9a9" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94732_S23_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="de8ff3def50a01503d0c5316aaeb6c9b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+         </RUN>
+        <RUN alias="run_SI-2304-DA94732_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94732"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94732_S23_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="77ca8cac886adc861cb80c1b76798df0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94732_S23_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="5c76d7d32be5e081f8a17881601a1da9" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94737_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94737"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94737_S24_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="fe81a1ac1ae2a35981cbe65c83f66fd3" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94737_S24_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="9d1377194165c957f9e257520ea90145" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94737_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94737"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94737_S24_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="68cf281c7d3c0be0cce5ae1b3ed27405" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94737_S24_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="4e10ffee6d51e3ae8c35cb8f0b07356e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94751_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94751"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94751_S11_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="06cddbe01650272ae6adb945d940f5ff" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94751_S11_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="03dca18baf7d07b7fe5f67cce3a8ff40" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94751_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94751"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94751_S11_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="badcf0cc7c5ba1af21f6b5ad8f58a504" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94751_S11_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="0356dfdd1f2f73d152c8492e10bd5fc6" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94760_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94760"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94760_S18_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="97e23bcc9c18f09c274955840369a8e0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94760_S18_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="99fa844e7d2bb441aa86be1d4f68fe13" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94760_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94760"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94760_S18_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="ad08ec3723d49d549e19510457a6cc29" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94760_S18_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="9f8e8b978c40a31b243141e35cee27a7" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94774_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94774"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94774_S31_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="0a8d1b096e3491940295587aa0dd321e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94774_S31_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="42d6cf60be215a757ced7ff1fdd45973" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94774_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94774"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94774_S31_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="f23a7f6d319ba98aec1be37600d89bdc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94774_S31_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="170a7a759a353d9b6a13d6e0b0ba7388" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94776_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94776"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94776_S30_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="8f78c93e4b16353015c828446bc13fcc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94776_S30_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="dd77f2e45128d51a4db97ce129401b1c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94776_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94776"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94776_S30_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="26193835625b6615d1a7c4b0203ed222" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94776_S30_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="922eca55023c810ce7dc59df53877ef4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94786_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94786"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94786_S32_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="8d9dbe7feac9dfc5f61f25124003b5ba" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94786_S32_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="a04f5c8d7ac6c2fefe7b34d40cf9bdce" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94786_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94786"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94786_S32_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="96581c2b4a4b25a02cea04b730527f49" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94786_S32_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="b46189a0e72e19b67a75168866f04502" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94796_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94796"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94796_S19_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="9d5f4c58caa9362df77473d5463d3ce3" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94796_S19_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="6e617f2fdf113cd9db58dfe143f7d44d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94796_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94796"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94796_S19_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="79585cc8bdffbed65cf6d23a9326d61e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94796_S19_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="26504b6ec0be68a85ede74ac4b7c65e0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94804_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94804"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94804_S9_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="dcb9ffd3fdac560dbbfd988f1c0705f2" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94804_S9_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="ce9657b874f49c3f37e56c983ed2e0d4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94804_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94804"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94804_S9_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="95430191fca48775b37a05a2867825e3" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94804_S9_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="5400919813beae9fa8ff2acf0e1d1c09" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94831_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94831"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94831_S3_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="a4bf00e525d4faec57ceca30df330494" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94831_S3_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="5aa5d07d038e41a50afebfd2e684f52f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94831_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94831"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94831_S3_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="121a7060d8572d3913e462274637251b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94831_S3_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="4438544cd2845409cfd3488f2016bb33" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94832_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94832"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94832_S4_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="1e48aa2e9fa8326759167b4bffd8106c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94832_S4_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="33cd5e130108f861736e04b326af655f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SI-2304-DA94832_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_SI-2304-DA94832"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="SI-2304-DA94832_S4_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="02827cd0bba3ea7ee5ad7f2625351151" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="SI-2304-DA94832_S4_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="530b15bda397080df536a6982e61ba5b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81099">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81099"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81099_S121_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="c15dc67bbcc4e56cf21c32e677575aac" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81099_S121_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="a9e159a44935e9a8cb7b2c4d0d378e69" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81206">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81206"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81206_S122_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="0d36903aa252436caa8b175a456eb03a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81206_S122_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="875cd29074b2f0b52eaf50faa1493e34" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81258">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81258"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81258_S123_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="ed584307d73ce9c375390726ee0a837f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81258_S123_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="29a092a806d52d1185bb1113e254ae53" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81266">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81266"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81266_S124_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="ad700073b613beea658d650e222c6359" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81266_S124_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="6fa524ab09feece58ce48de6157ac763" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81269">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81269"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81269_S125_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="3a87e5c78661bdbc8b346141cc3ae96e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81269_S125_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="09f08651525a8a51d7bd6cc3b90ca3a3" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81271">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81271"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81271_S126_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="708f265d3f202cb7bda105a5767a34a3" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81271_S126_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="afd4f3d1816db1458de92f18f3cfa747" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81281">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81281"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81281_S127_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="bb0ea5eab0c722fd39d268f5b6c1a544" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81281_S127_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="be3afd6a58fb7ce11b5b1e0a4842669c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81283">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81283"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81283_S128_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="3735184c9aec22fe92d7c6ba326b7735" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81283_S128_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="76dba6393d3caef5d1c763064e207c45" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81284">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81284"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81284_S129_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="d3e25cc70aee7ec49f0ad413810809fc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81284_S129_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="5064fc0e65b95d2f9f2417c78f2d12ca" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81286">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81286"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81286_S130_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="78346f15db11784146d2216797fd93b4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81286_S130_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="c36c84d0d01083a9f3a90bbedb49c4a3" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81289">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81289"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81289_S131_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="3c763970349c72e53d3727bb80e4e9f3" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81289_S131_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="799bb79279e4b65de53a00593c42ca97" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81401">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81401"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81401_S132_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="392c31b3a2dc76f2a61fd04da4adfec4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81401_S132_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="44a46e793257ca5f1b9c1fd770ae7409" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81402">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81402"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81402_S133_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="11ff9fd00b69518c1bb50c47b0a35795" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81402_S133_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="d0355d06845c53653b3408ca402e3ff7" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81412">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81412"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81412_S134_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="17f7e29590431fd93097c3bec2d4fb3a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81412_S134_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="342a32088fb0bd3b9da853a9fc6f842c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_UJ-3101-DD81414">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81414"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81414_S135_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="214c9ea5377eec2aa3942076c7f35699" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81414_S135_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="f1aeae70361ed3e04c60727caa766b3b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UJ-3101-DD81419">
+                <EXPERIMENT_REF refname="exp_P_trochilus_UJ-3101-DD81419"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="UJ-3101-DD81419_S136_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="930e80080a3a428d74a3768a266ea7d5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="UJ-3101-DD81419_S136_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="33bff08d1c2a4c9f1309ccb2bf6865be" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10458_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10458"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10458_S1_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="0694762461e8195ebe7a7a7b0239671e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10458_S1_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="3cd570c8005314b71137ea4978d87ece" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10458_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10458"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10458_S1_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="d366ce543333e8ad06c84cff724069ac" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10458_S1_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="e22052c5fb81960c059c61b36a707b65" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10458_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10458"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10458_S1_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="d5388044062e64c57df46beb76ba4531" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10458_S1_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="f9b9ab4621ec1ba1f09475aa2cb1507c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+         </RUN>
+        <RUN alias="run_WJ-3825-LH10458_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10458"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10458_S1_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="a90c4b7f9e1d6f49adb50869e96b7ae5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10458_S1_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="8fd4478613bde50436b62b8e88729146" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10464_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10464"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10464_S3_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="d9313ce7fed3e80c8936180bd13393c2" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10464_S3_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="c8086bcade3a6791a01f18a8c0d5699e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10464_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10464"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10464_S3_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="e27a92e2377e6c74af6cab7fd18aa8c3" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10464_S3_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="5aa8c1b911bbc548ae8cf77ef544a357" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10464_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10464"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10464_S3_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="1710f25c278153659a8c9e50cbc16cfc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10464_S3_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="1a00d3ca8619ae0b9e95e869f154f71e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10464_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10464"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10464_S3_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="00d88af3a1a41dbcea1754a23df7e055" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10464_S3_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="ee1603921d8e2ef837c5ee989fa55dee" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10466_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10466"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10466_S2_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="9dd0ca50f4d116b00aa970467cfe8fb0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10466_S2_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="1cfef47cb08aa0c4783799d68043974d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10466_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10466"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10466_S2_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="7dba8ac406766672fe675f9657da9f82" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10466_S2_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="492d2e0133b44f7cdfb2dac042162c83" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10466_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10466"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10466_S2_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="08936594e977f3931351c23223a28909" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10466_S2_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="03d0a89a7fbaa3a13a2bc4d03a7b4df9" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10466_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10466"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10466_S2_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="3ba7d2cfaae1a42f4e4d6b37f7e66461" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10466_S2_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="a8727f20c2973e499a91894299232746" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10477_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10477"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10477_S7_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="70bcb6f0ae59c5a673a181de387411b4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10477_S7_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="d923b417457c5c8720eee0a42da6da73" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10477_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10477"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10477_S7_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="4f8077de0c6063a259845a51defcb30a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10477_S7_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="d33c8f70fbb187f4fe7615858d9e5566" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10477_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10477"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10477_S7_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="7c44a89cbb884b24caf393612e5c1a28" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10477_S7_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="b3acf09d578eccb93f745f1fa35e68d9" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10477_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10477"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10477_S7_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="0f0c68b9257b98e702d18076414bc4fa" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10477_S7_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="27d64a99e6b5f84272395b4a933a6459" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10483_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10483"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10483_S4_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="b617311b932565c232cce31f2acf8cb8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10483_S4_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="33397e3021a32a818107c22e0594b360" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+         </RUN>
+        <RUN alias="run_WJ-3825-LH10483_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10483"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10483_S4_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="29d0419cd3a7f41357e015b79f19922f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10483_S4_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="c85f29455c7c594e7cacc06b098e927b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10483_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10483"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10483_S4_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="9872cc2a39fd3b3c6a3c73a9558d7844" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10483_S4_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="d4ffe1ce2c744cdcd40d8fb540ce0ceb" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10483_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10483"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10483_S4_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="b67aa0e2ae64a7f987946ce2395709ac" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10483_S4_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="92a78e8dfb21ad54fec4934df84e0915" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10491_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10491"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10491_S5_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="3194da78f222ffc708a25fb077ad26a1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10491_S5_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="0480e2044aacef89fcec0ad60b75b823" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10491_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10491"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10491_S5_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="37156f927aa4284a5d9c304a40298535" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10491_S5_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="1cacfd0ef667270e99737f1765ce176e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10491_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10491"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10491_S5_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="c475068533122ef9bb29208ee7cda235" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10491_S5_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="35be4041c4441a9b41d68c7abc807622" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10491_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10491"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10491_S5_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="c465cbb198ef8c6e68de6439e98c96c4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10491_S5_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="5bafb5b8aada052cc10e795b2b5bec17" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10492_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10492"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10492_S8_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="03c9e82effd655ac2673d66c52c32dab" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10492_S8_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="9dadac8c205d1897d707883818c8cb71" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10492_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10492"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10492_S8_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="9f0cc7638810a2746468c9c41885f973" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10492_S8_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="bd5d6600082de8d5fe3b5ff2d387bed5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10492_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10492"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10492_S8_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="266d72917076b40317e5d167be3eb84b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10492_S8_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="d4ff2db9a2372f0504a1449a7be10adb" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LH10492_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10492"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10492_S8_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="b949ae2575eef461ffb45af31261ff8b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10492_S8_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="f2951a5bbcc0bbe7c3bad2577916cfc2" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LH10494_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10494"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10494_S6_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="d107d85e9d2a09ca97fbe5450ba7ed26" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10494_S6_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="2e3e5b70766af6b0068278c11873faa0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LH10494_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10494"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10494_S6_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="13285a98d54fcee6a991550c2ecb4f79" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10494_S6_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="9072ecb37068a96873e3352aebc2b5e1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LH10494_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10494"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10494_S6_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="25bee1f249fdc221ff4c6f81d4718928" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10494_S6_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="ffc5b74b4af6c224b101022316f252cb" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LH10494_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10494"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10494_S6_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="c6cd6985738a27f970760e7960510167" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10494_S6_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="3fe6e698cf1863645d6f1cb65d5bad06" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LH10499_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10499"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10499_S9_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="775c377fb3672cb58554f8f93f36daca" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10499_S9_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="068684de304a7aa097651539d52b45dc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LH10499_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10499"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10499_S9_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="bd2a5c8588eebf4e60d217d987c8e63e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10499_S9_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="8c3019af68f5fac50d7c014aff849c5d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LH10499_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10499"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10499_S9_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="e7a812096d85bce9c1c0fa1830de78da" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10499_S9_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="c0b79968541687f3fbd6e8d27a43f453" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LH10499_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LH10499"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LH10499_S9_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="f5fabb4d6e9f96887bf589ac8e030db0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LH10499_S9_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="1f504f57c35cdebcf90200734c866814" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34501_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34501"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34501_S10_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="72ec5c5b118031cd092bd837bafbb6b8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34501_S10_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="ca9f6fc560a7dd102d9ce784e6131fda" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34501_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34501"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34501_S10_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="5e5ba57801de03a15a88307001581b55" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34501_S10_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="47e44672a01dbcc4e329d21df9650174" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34501_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34501"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34501_S10_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="cd0a49e5aa27ed707cc5f266e24e8b71" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34501_S10_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="0155988a01f5c60d47a3f070731123ba" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34501_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34501"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34501_S10_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="d9f3c31e42a2831f497546da039884ff" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34501_S10_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="3fdea52241a48e4773014e5488ebc891" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34506_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34506"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34506_S11_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="45ff8a83b67dc35ebb4c24f76b062016" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34506_S11_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="c62b8500da5414fd62f5e3363b673899" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34506_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34506"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34506_S11_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="a7c17f868071662898fb02d1cd6e7514" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34506_S11_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="d634351285411d7e6ff33a9e95a4726f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34506_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34506"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34506_S11_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="aa5e5b6b7c9312f811d45fe8f2bb006c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34506_S11_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="85c0109ba633c5751f78456b2163a575" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34506_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34506"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34506_S11_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="4393d23e8968e234a7b105badcaad022" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34506_S11_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="9a98c1994935b451cfd176a07cab4b43" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LJ34507_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34507"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34507_S13_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="b39ac9ae607104f64d6d41a25f640767" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34507_S13_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="e3b89cb42120fd4821ba666ceaf26efc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LJ34507_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34507"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34507_S13_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="904f1c3bbbb2b5493ae524674eb69f37" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34507_S13_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="5d746593f4e61f914c9e5493973ceec2" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LJ34507_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34507"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34507_S13_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="2e56321f3b85036be3a0187a123ff296" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34507_S13_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="a3d8afe5be4c6db288dcc4563831731f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-LJ34507_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34507"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34507_S13_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="9d0ec8c78f06b6691e0e5ffeb3efa621" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34507_S13_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="c7562b8f9b2a79f0d04a1252ec1e1fdf" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34508_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34508"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34508_S12_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="9c5f0f3ee3951af1a15b0af956a58c70" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34508_S12_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="3b6b6edf788779bc8e0f5ae581743b51" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34508_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34508"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34508_S12_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="fd0a6e0ce2c65748f779aa0b8e178c09" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34508_S12_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="f61aafc9506ce6859cb59d828d6427a5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34508_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34508"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34508_S12_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="52009342c5d9538e29c626b93e47c43a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34508_S12_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="3a90432c1d3beaec669189105e81b5d9" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34508_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34508"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34508_S12_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="fe797a573b7795434b562dd5d7144ed8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34508_S12_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="8324103a55310c813a975e369ad4341f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34514_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34514"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34514_S14_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="f4bdd739d7976336cae34d6c0bade86c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34514_S14_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="0fc0732d9b25154f0267e53758679d3c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34514_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34514"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34514_S14_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="e384cdd925e85e52e49683cb5f551818" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34514_S14_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="d2a36cee4281ad58eab2fccc88e1e8c4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34514_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34514"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34514_S14_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="49b7a61e81c8c157f0975b7da7113dad" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34514_S14_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="7cc8e039ec75b7d946c6b5c2045c11f6" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+         </RUN>
+        <RUN alias="run_WJ-3825-LJ34514_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34514"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34514_S14_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="8511acce777f81c0e21494790e1121ef" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34514_S14_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="f9b3f02b6b7f8e21cd8f012034aecf4d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34525_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34525"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34525_S15_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="d87274fa9effdb15bda4a0e07a5d4c22" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34525_S15_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="ad0350a2a802df53edeb8443906edfd8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34525_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34525"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34525_S15_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="063ca3c32310ba48edc076eda1932605" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34525_S15_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="0139132d6d5de8b6058f421321b1f4e8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34525_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34525"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34525_S15_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="68a662e3b98ad148f716827dfcf523e0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34525_S15_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="02074f18e9f01af4d0d818ccdcfa5a45" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-LJ34525_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-LJ34525"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-LJ34525_S15_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="37e9dccdefe73f937b6086c0bd22b886" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-LJ34525_S15_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="5f1ae03352a6f00eca984949ce5abf34" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9738_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9738"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9738_S26_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="588a4d200d8a5cf61382b41c77df3589" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9738_S26_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="c52cb0c3f42fadad49fff4a49b32f39c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9738_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9738"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9738_S26_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="3950ca8a34d9e09c00bf6f25f88e00d2" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9738_S26_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="b0e226758ae5dd7847f56f55bd88e519" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+         </RUN>
+        <RUN alias="run_WJ-3825-VF9738_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9738"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9738_S26_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="bd1595d15271768ac36aa13bbd3893b5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9738_S26_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="fa0651a508093d61db902a601233f1b5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9738_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9738"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9738_S26_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="3346e34643608d7c5dd5f138e5d895b4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9738_S26_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="a1654463692cedafa2d6d420fc51d6f1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9741_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9741"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9741_S27_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="80fd71f4e4a5f2e6752a1261a5bdd006" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9741_S27_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="8d9733970dfdcac0a94396b74b9971f8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9741_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9741"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9741_S27_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="dd8063370a86f42984015e309fac94bc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9741_S27_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="210729be3530e8c68519cd4d1d54238d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9741_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9741"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9741_S27_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="93ff6c098560952fabedefea905479cc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9741_S27_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="14360c109967bd3d7fa6fe3888ab7ed9" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9741_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9741"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9741_S27_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="58a1818c675dad24cdeec3a1e7be9aef" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9741_S27_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="7249f4db20a3dee22d5e007a212b436d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9742_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9742"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9742_S28_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="183b4ee2e2141323024249abe424ff29" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9742_S28_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="4a5d29ce879fd65bb45608921d4cfc3b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9742_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9742"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9742_S28_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="41079a8615a9a2e085c72298a67aa9e5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9742_S28_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="7123c4b230447ee790d1ca3d5b79f22d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9742_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9742"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9742_S28_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="07ee0b5d6365f160554ac0407049b332" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9742_S28_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="604ce0e8120dfe7b045db8d21d3405e0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VF9742_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VF9742"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VF9742_S28_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="2a53a23762d92d5d5666e7aa307e2b9e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VF9742_S28_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="777defa2e33efda5d0bb9a46ce87d07f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VP17907_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VP17907"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VP17907_S29_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="271358938059f5be4455743fe09f94b2" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VP17907_S29_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="adf399301d3379c27eb10648eefff188" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VP17907_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VP17907"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VP17907_S29_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="089ea08acf23aa713202e2233aec8fe9" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VP17907_S29_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="6500e446fa98ab77911ac79181ee2ee4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VP17907_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VP17907"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VP17907_S29_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="a2548c529fa1bccd71bb3861bfd99d76" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VP17907_S29_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="b435bcfbdd99ae39e667eff0230254f8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VP17907_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VP17907"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VP17907_S29_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="6765059936304e4613dbf4defbf2d686" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VP17907_S29_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="1752f14d7d0a35429a466a6ed96a9b37" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VP17908_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VP17908"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VP17908_S30_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="7457dee5fa2ebd31199b62641d9c2d2f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VP17908_S30_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="c3d0cf1ed22544327b5440d22d125063" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VP17908_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VP17908"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VP17908_S30_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="11300e26521fa00a946ae48f41c79217" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VP17908_S30_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="59da2f44a69f285822dea15a8ff5664f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VP17908_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VP17908"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VP17908_S30_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="fbba0201e03b890773ce2919b2d7047d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VP17908_S30_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="ac07471d11b5df22c218fecce4be552f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-VP17908_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-VP17908"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-VP17908_S30_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="d5bcfa530b3fc7949cb8729e967ad016" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-VP17908_S30_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="6809a8fcfb1a9a8500a3cc2ca3c80e74" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48008_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48008"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48008_S17_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="bc2aad3ada7b36ab9eaad3cdeee12355" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48008_S17_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="bbd94529d55cc79a91168587b8e61d31" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48008_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48008"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48008_S17_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="a66aa32ef85dab3a7f456d9a3a622fbd" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48008_S17_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="10958fd0aa90ae7132d44e0d194db8bb" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48008_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48008"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48008_S17_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="8afce67d0b2067e9f7d64d2576df3533" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48008_S17_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="c7f47224549723785819e4ba72b8c2ef" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48008_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48008"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48008_S17_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="26d2721adb325a38c57695aa685687ea" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48008_S17_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="acfc35b38925b569233503d8dbf951e5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48012_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48012"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48012_S18_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="d52b37a383225bc099bb60baa388ca65" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48012_S18_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="a4349b51c000e50df11e1e48db50d39a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48012_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48012"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48012_S18_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="953f70b14f91632dcdc41146db2940dd" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48012_S18_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="726f05cd33db59c12aaa477463a05619" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48012_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48012"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48012_S18_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="42b7f3b7c27019852be558441be89965" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48012_S18_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="a5b3a565e90c5e7f58ae8e628c1529bc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48012_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48012"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48012_S18_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="4faba2312a6f1ba56bd300fb66b2dacd" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48012_S18_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="d8e76efb81c60e6270f4e5a162cb448d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48017_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48017"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48017_S16_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="a10aedcad2dbf6944785037873df2d7a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48017_S16_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="5766df56d2a7e5cb2650bbd4718cac5c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48017_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48017"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48017_S16_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="771e7ee84a2e47fe4f6e9f2b111cf764" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48017_S16_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="17bcf28ee24bec0e43f41f2cbc0ec698" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48017_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48017"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48017_S16_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="1c8e1d40f66243f34bd5dfcc3e000b47" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48017_S16_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="411216efe3b335d211825900d44de350" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48017_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48017"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48017_S16_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="620d97beced9fa0d7dc2f7e328eb17f1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48017_S16_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="58aa1ba5c27e549028e9bec3cde42c9d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48018_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48018"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48018_S20_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="a3259ff51902128af7564d851c5210f7" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48018_S20_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="83d7dc7254d4e67d7a85d321ceb1d7ed" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48018_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48018"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48018_S20_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="8fa3a53dde42c0e9223b5f12ecc0ea4e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48018_S20_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="b48d1b5ada97e3349ff92379f99c39bb" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48018_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48018"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48018_S20_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="9f4f9af7545e184281e3ec0924750561" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48018_S20_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="c023fee5356c85def0865ed188df216c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48018_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48018"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48018_S20_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="17d1f8b474625c9f2bbc897421fe4670" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48018_S20_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="a1c953bc2b4fb6a1f0c20c3d63c0cbea" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48021_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48021"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48021_S19_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="12f04144971498df25585bf90facfe2f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48021_S19_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="bbb919beed719ed9aed2bd78690b8061" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48021_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48021"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48021_S19_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="6ade2ceb474b56a6911f87c954809be6" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48021_S19_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="9750307db3f645262306da0407323896" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48021_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48021"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48021_S19_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="cf4efe5e712aadd03658cc2638f640cc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48021_S19_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="ff3993495c8e1fe235d5d78de3e22951" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48021_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48021"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48021_S19_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="82721be093a7a68705a7a57e6c121280" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48021_S19_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="ec77898bd5225defa914db108519f42c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48034_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48034"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48034_S21_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="dc0d4e54fb31ad4f1635e4653d6102f6" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48034_S21_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="7c88693632037225a59c3400cdb7ec99" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48034_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48034"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48034_S21_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="5c8e632da1ab9eaca7c5770022136aee" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48034_S21_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="21373fe3502bf8a23c755a60315d19e6" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+         </RUN>
+        <RUN alias="run_WJ-3825-XT48034_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48034"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48034_S21_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="bae77bc6866bdcd9bdc0a6e933f6a5f1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48034_S21_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="230fe301cc13911c1c083376dc6f84cc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+         </RUN>
+        <RUN alias="run_WJ-3825-XT48034_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48034"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48034_S21_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="86214ab6fe245b0721f3c3c44906854f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48034_S21_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="b20ad0511b10323e1d6a6956d8b8d1f1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48043_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48043"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48043_S22_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="82930eca6a8dcc8e074100b758d41016" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48043_S22_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="eac14846f8ed6725a31ee6f95ce799ab" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48043_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48043"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48043_S22_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="d81ff5fb7d0459c78723794bf9fdcb1e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48043_S22_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="02382d47b071f83c968100c9298d28ed" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48043_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48043"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48043_S22_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="960bc1f146f9afda59824cb08068ac95" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48043_S22_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="9b83a748d988ad55cfa8fa9757f94ae5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48043_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48043"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48043_S22_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="fcb7b9843b31a74a8dddc56ac9d10d70" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48043_S22_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="1622ba1cd66955034ba1a1753d556870" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-XT48059_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48059"/>
+                 <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48059_S23_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="82930eca6a8dcc8e074100b758d41016" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48059_S23_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="eac14846f8ed6725a31ee6f95ce799ab" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-XT48059_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48059"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48059_S23_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="d81ff5fb7d0459c78723794bf9fdcb1e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48059_S23_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="02382d47b071f83c968100c9298d28ed" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48059_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48059"/>
+               <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48059_S23_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="960bc1f146f9afda59824cb08068ac95" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48059_S23_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="9b83a748d988ad55cfa8fa9757f94ae5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+       </RUN>
+        <RUN alias="run_WJ-3825-XT48059_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48059"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48059_S23_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="fcb7b9843b31a74a8dddc56ac9d10d70" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48059_S23_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="1622ba1cd66955034ba1a1753d556870" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48061_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48061"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48061_S24_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="63cebd2ae4f35297675a41c0afeccdc0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48061_S24_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="997f56fa8497dcd3f465e91d714a6977" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48061_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48061"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48061_S24_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="7d34f83fcba2ddc17149a9140e2219df" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48061_S24_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="2536b6d53e8ef1f94b3c2727990548d4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48061_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48061"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48061_S24_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="3f1e62e6e5243b7a195b3625451a9b03" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48061_S24_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="db6da6ef85f2e892c2d528c84b8c4c22" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48061_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48061"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48061_S24_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="fd71edc8f2f2a156aca4030578b6b41c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48061_S24_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="e7c7d0c3c22ae372aad0bb419d0163b1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48066_1">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48066"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48066_S25_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="9b0278446ed5e454e1f63c3fceb0f24a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48066_S25_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="2f169a84e8ff96c140c1a7b457803212" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48066_2">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48066"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48066_S25_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="5a73dcb031474701b8e5839654bbc1fe" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48066_S25_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="403c8bb99cebd2f273f3307e43e2f5b0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48066_3">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48066"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48066_S25_L003_R1_001.fastq.gz" checksum_method="MD5" checksum="58ba51ea5883530a0c999b86b423ca89" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48066_S25_L003_R2_001.fastq.gz" checksum_method="MD5" checksum="783ada18bf9edb4b7f93187fc0ef3a4e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_WJ-3825-XT48066_4">
+                <EXPERIMENT_REF refname="exp_P_trochilus_WJ-3825-XT48066"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WJ-3825-XT48066_S25_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="544bbf342e6455bd2d7a29ff87ac12c7" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WJ-3825-XT48066_S25_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="1bb7ab06c4b22b4db9d620bc2f121117" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XI-4094-F90084">
+                <EXPERIMENT_REF refname="exp_P_trochilus_XI-4094-F90084"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="XI-4094-F90084_S84_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="1806ece95f7b71d380c98c262a1bcb07" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="XI-4094-F90084_S84_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="972b95b0a64baee8e6e965e7bf08f42e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XI-4094-F90087">
+                <EXPERIMENT_REF refname="exp_P_trochilus_XI-4094-F90087"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="XI-4094-F90087_S85_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="ddce71e14e124731b2097f4f3fc83649" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="XI-4094-F90087_S85_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="429c82708cdccbc2deecf422cd51b0c5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XI-4094-F90094">
+                <EXPERIMENT_REF refname="exp_P_trochilus_XI-4094-F90094"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="XI-4094-F90094_S86_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="8f57ebce28f62eb864dcb6d54fa599d1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="XI-4094-F90094_S86_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="ffff754de9d27b0c7a0500f30791cfe5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XI-4094-F90095">
+                <EXPERIMENT_REF refname="exp_P_trochilus_XI-4094-F90095"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="XI-4094-F90095_S87_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="599667134043d42b03ee625317cd4949" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="XI-4094-F90095_S87_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="faa2b4cc0a3ff205a28e53fb59762e0d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XI-4094-F90098">
+                <EXPERIMENT_REF refname="exp_P_trochilus_XI-4094-F90098"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="XI-4094-F90098_S88_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="b10dfac49167b1a684164bbc7dd408cc" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="XI-4094-F90098_S88_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="12b9983f2da778dcfdbf120d786af335" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XI-4094-R392504">
+                <EXPERIMENT_REF refname="exp_P_trochilus_XI-4094-R392504"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="XI-4094-R392504_S89_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="72234aee4ee8c661af0a25965d6437d6" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="XI-4094-R392504_S89_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="a75e94e8de9c05dbdd72156275f02728" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XI-4094-R392506">
+                <EXPERIMENT_REF refname="exp_P_trochilus_XI-4094-R392506"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="XI-4094-R392506_S90_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="52825b7f13355e4b5ca9a38557da6c2f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="XI-4094-R392506_S90_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="f40f7a1f702bb834e3d3a0574caf0813" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XI-4094-R392514">
+                <EXPERIMENT_REF refname="exp_P_trochilus_XI-4094-R392514"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="XI-4094-R392514_S91_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="31ef17b64c2b06a8868b7ea3200390fd" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="XI-4094-R392514_S91_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="f91e9f755e8793ae9f22d79073140e3a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XI-4094-R392522">
+                <EXPERIMENT_REF refname="exp_P_trochilus_XI-4094-R392522"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="XI-4094-R392522_S92_L004_R1_001.fastq.gz" checksum_method="MD5" checksum="2f6f60a4838f0705f76255c32217565a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="XI-4094-R392522_S92_L004_R2_001.fastq.gz" checksum_method="MD5" checksum="28c19ce93d63dd7e92318d5e432106f9" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+</RUN_SET>

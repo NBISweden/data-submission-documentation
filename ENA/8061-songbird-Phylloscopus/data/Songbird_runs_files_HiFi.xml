@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+        <RUN alias="run_XT48080_1" center_name="LU">
+                <EXPERIMENT_REF refname="exp_P_trochiloides_viridanus_XT48080"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="m84045_230426_130843_s2.hifi_reads.default.bam" checksum_method="MD5" checksum="179c4d9c8a15f07f208b4b9105c53c56" filetype="bam">
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+</RUN_SET>
