@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icOmaFont_Hi-C_FS55571905_HC025-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_icOmaFont_Hi-C_FS55571905_HC025-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="omaFont_XL-4185-HC025-1A1A_S84_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="b28a164a43b0f191773a0d6d44af29a4" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="omaFont_XL-4185-HC025-1A1A_S84_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="79ddaca232e450941c033eab13011981" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_icOmaFont_Hi-C_FS55571905_HC025-1A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_icOmaFont_Hi-C_FS55571905_HC025-1A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="omaFont_YD-4287-HC025-1A1A-CL_S267_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="07913734de3baf4daf7dd3789f7ca2fa" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="omaFont_YD-4287-HC025-1A1A-CL_S267_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="93f7c92a843718bf3d1b37c21c8bd508" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

@@ -67,34 +67,45 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit HiC **TODO**
+### Submit HiC
 
 #### Preparations
 * There is an issue with the sample for this dataset, the sample ID given from NGI (tube or well id) is not registered in COPO/BioSamples. 2025-03-20: I've sent an email to the sample coordinator for advice on what to do.
 
 * The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
+* I held off on submission since I had indications from bioinformatician that the sequences weren't useful. However, in the end of the project, I decided to submit anyway, but a **note** that I need to ask bioinformatician if used for assembly.
+
 #### XML
-* I created [icOmaFont-HiC.tsv](./data/icOmaFont-HiC.tsv) (**TODO**)
+* I created [icOmaFont-HiC.tsv](./data/icOmaFont-HiC.tsv)
 * Run script:
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icOmaFont-HiC.tsv -p ERGA-BGE -o icOmaFont-HiC
     ```
-* The study XML also needs to be submitted
 * Update icOmaFont-HiC.exp.xml to reference accession number of previously registered study:
     ```
     <STUDY_REF accession="PRJEB91106"/>
     ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission.xml with hold date is used.
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is public, so submission.xml without hold date is used.
 * Submit using curl:
     ```
         curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@icOmaFont-HiC.exp.xml" -F "RUN=@icOmaFont-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-12-16T12:38:17.085Z" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX15417729" alias="exp_icOmaFont_Hi-C_FS55571905_HC025-1A1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX15417730" alias="exp_icOmaFont_Hi-C_FS55571905_HC025-1A1A-CL" status="PRIVATE"/>
+        <RUN accession="ERR16027001" alias="run_icOmaFont_Hi-C_FS55571905_HC025-1A1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR16027002" alias="run_icOmaFont_Hi-C_FS55571905_HC025-1A1A-CL_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35405884" alias="SUBMISSION-16-12-2025-12:38:16:715"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
