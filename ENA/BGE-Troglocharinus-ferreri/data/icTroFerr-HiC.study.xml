@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icTroFerr-study-rawdata-2025-12-17">
+		<NAME>icTroFerr</NAME>
+		<TITLE>Troglocharinus ferreri, genomic and transcriptomic data. </TITLE>
+		<DESCRIPTION>This project collects the genomic and transcriptomic data generated for Troglocharinus ferreri to facilitate genome assembly and annotation as part of the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/) and organised by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) initiative.</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icTroFerr10_primary-2025-12-17">
+		<NAME>icTroFerr10</NAME>
+		<TITLE>Troglocharinus ferreri, genome assembly, icTroFerr10. </TITLE>
+		<DESCRIPTION>This project provides the genome assembly of Troglocharinus ferreri. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+</PROJECT_SET>
