@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qdBraStyg_Hi-C_LV6000914154_HC061-1A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_qdBraStyg_Hi-C_LV6000914154_HC061-1A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qdBraStyg_YH-4400-HC061-1A1A-CL_S1356_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="d3192d4c0815cb3801f2bbf9ce9a4f2a" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="qdBraStyg_YH-4400-HC061-1A1A-CL_S1356_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="8bc9169b6410ebf1a0f7aa4eb1df72de" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqTroOvul_Hi-C_ERGA_NT_0292_00001_HC064-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqTroOvul_Hi-C_ERGA_NT_0292_00001_HC064-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="iqTroOvul_YH-4400-HC064-1A1A_S1359_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="5a7b46816403470333fcd71e10d3c912" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="iqTroOvul_YH-4400-HC064-1A1A_S1359_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="15f2520e7469fa6fd8647af2f501de40" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_qqChaOliv_Hi-C_ERGA_AP_4894_00294_HC065-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qqChaOliv_Hi-C_ERGA_AP_4894_00294_HC065-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqChaOliv_YH-4400-HC065-1A1A_S1360_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="246e3627d4c3c8a1d41c8a1111eae6e0" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="qqChaOliv_YH-4400-HC065-1A1A_S1360_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="f7555effae65eca4a06762c459bf598c" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_wdMesRoge_Hi-C_ERGA_DM_7384_04_HC059-4A4-NI-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_wdMesRoge_Hi-C_ERGA_DM_7384_04_HC059-4A4-NI-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="wdMesRoge_YJ-4442-HC059-4A4-NI-CL_S816_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="2adf4ae77ad1412aea1ee8eb120e09c6" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="wdMesRoge_YJ-4442-HC059-4A4-NI-CL_S816_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="9d56ad0f241ef129b9525b98241c81eb" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_wdMesRoge_Hi-C_ERGA_DM_7384_03_HC059-5A-NI-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_wdMesRoge_Hi-C_ERGA_DM_7384_03_HC059-5A-NI-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="wdMesRoge_YJ-4442-HC059-5A-NI-CL_S817_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="95dd9401a6f6f4e823465a8a0622a2ae" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="wdMesRoge_YJ-4442-HC059-5A-NI-CL_S817_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="95dd9401a6f6f4e823465a8a0622a2ae" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
