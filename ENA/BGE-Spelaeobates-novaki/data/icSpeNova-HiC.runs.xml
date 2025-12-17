@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icSpeNova_Hi-C_FS42595395_HC058-2A1B_fastq_1">
+		<EXPERIMENT_REF refname="exp_icSpeNova_Hi-C_FS42595395_HC058-2A1B"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="icSpeNova_YF-4369-HC058-2A1B_S154_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="a7b57023696864c621b8f3243226ca44" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="icSpeNova_YF-4369-HC058-2A1B_S154_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="84c4d79295cb506b93fea1682619c8d6" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
