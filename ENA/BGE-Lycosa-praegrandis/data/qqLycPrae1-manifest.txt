@@ -1,0 +1,13 @@
+STUDY	PRJEB90410
+SAMPLE	SAMEA116289567
+RUN_REF	ERR15114402, ERR15114403, ERR15114525, ERR15114526
+ASSEMBLYNAME	qqLycPrae1.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	71
+PROGRAM	Hifiasm (0.25.0-r726), purge_dups (1.2.5), YaHS 1.2.2, FCS-GX (0.5.5), sanger-tol/blobtoolkit (0.9.0), tiara (1.0.3)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Lycosa praegrandis was assembled with Hifiasm (version 0.25.0-r726). Contaminations were removed with FCS-GX (version 0.5.5), sanger-tol/blobtoolkit (version 0.9.0) and tiara (version 1.0.3). Haplotypic duplications were removed with purge_dups (version 1.2.5). Scaffolding was done with Yahs (version 1.2.2). Manual curation was done with PretextView (version 1.0.3) and visually inspected with PretextViewAI (version 1.0.5). It was not possible to determine the sex chromosomes in the assembly.'
+FASTA	qqLycPrae1.2.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
