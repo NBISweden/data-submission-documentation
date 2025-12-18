@@ -64,7 +64,7 @@
 		<EXPERIMENT_REF refname="exp_wdMesRoge_Hi-C_ERGA_DM_7384_03_HC059-5A-NI-CL"/>
 		<DATA_BLOCK>
 			<FILES>
-				<FILE filename="wdMesRoge_YJ-4442-HC059-5A-NI-CL_S817_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="95dd9401a6f6f4e823465a8a0622a2ae" filetype="fastq">
+				<FILE filename="wdMesRoge_YJ-4442-HC059-5A-NI-CL_S817_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="c4697f0cb82b83d7659ef4577e5af227" filetype="fastq">
 					<READ_TYPE>paired</READ_TYPE>
 					<READ_TYPE>sample_barcode</READ_TYPE>
 				</FILE>

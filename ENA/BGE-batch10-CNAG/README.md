@@ -80,6 +80,8 @@ Submission of HiC data for a handful of species, to be added to existing project
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+* One of the files had wrong checksum, `wdMesRoge_YJ-4442-HC059-5A-NI-CL_S817_L008_R1_001.fastq.gz`, which is really weird since I see the correct checksum in .xlsx and tsv file, but not in the run file... Anyway, I changed it in run xml file, and updated the checksum via the browser.
+
 ### Submit RNAseq - **TODO** (perhaps)
 #### Preparations
 * Sample ID gave BioSample ID via ERGA tracker portal
