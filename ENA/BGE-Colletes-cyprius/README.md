@@ -202,7 +202,24 @@ For each of the BGE species, an **umbrella** project has to be created and linke
             <ACTIONS>MODIFY</ACTIONS>
         </RECEIPT>        
         ```
-
+* I also needed to cancel the project created for the assembly (since the other node had created it):
+    * Create [submission-cancel-assembly-project.xml](./data/submission-cancel-assembly-project.xml)
+    * Submit using curl:
+        ```
+        curl -u Username:Password -F "SUBMISSION=@submission-cancel-assembly-project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-12-18T13:27:56.825Z" submissionFile="submission-cancel-assembly-project.xml" success="true">
+            <MESSAGES>
+                <INFO>STUDY accession "ERP179056" is set to cancelled status.</INFO>
+                <INFO>PROJECT accession "PRJEB96313" is set to cancelled status.</INFO>
+            </MESSAGES>
+            <ACTIONS/>
+        </RECEIPT>       
+        ```
 
 ## Correcting missing file issue
 Processing of the .bam file (HiFi) failed and an email was sent to us from ENA that the file was missing. The problem was that in the iyColCypr-HiFi.runs.xml the file name had a space in it (due to copy paste error). I could try add that space in the file name of the uploaded file, but that (if it even would work) might cause problems in the future reuse, if people download the file to a unix system (which really doesn't like space in file names).
@@ -229,7 +246,7 @@ I then tried to do the same via curl (not expecting it to work):
     </RECEIPT>
     ```
 Next attempt was to cancel the current run, then submit a new run (i.e. not involving the experiment):
-1. Cancel the current run by creating a [submission-cancel.xml]() and submit using curl:
+1. Cancel the current run by creating a [submission-cancel.xml](./data/submission-cancel.xml) and submit using curl:
     ```
     curl -u Username:Password -F "SUBMISSION=@submission-cancel.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
