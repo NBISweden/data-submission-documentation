@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<PROJECT_SET>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icAgrGian-study-rawdata-2025-12-19">
+		<NAME>icAgrGian</NAME>
+		<TITLE>Agrilus gianassoi, genomic and transcriptomic data. </TITLE>
+		<DESCRIPTION>This project collects the genomic and transcriptomic data generated for Agrilus gianassoi to facilitate genome assembly and annotation as part of the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/) and organised by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) initiative.</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-icAgrGian1_primary-2025-12-19">
+		<NAME>icAgrGian1</NAME>
+		<TITLE>Agrilus gianassoi, genome assembly, icAgrGian1. </TITLE>
+		<DESCRIPTION>This project provides the genome assembly of Agrilus gianassoi. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-ilEumAren-study-rawdata-2025-12-19">
+		<NAME>ilEumAren</NAME>
+		<TITLE>Eumannia arenbergeri, genomic and transcriptomic data. </TITLE>
+		<DESCRIPTION>This project collects the genomic and transcriptomic data generated for Eumannia arenbergeri to facilitate genome assembly and annotation as part of the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/) and organised by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) initiative.</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-ilEumAren7_primary-2025-12-19">
+		<NAME>ilEumAren7</NAME>
+		<TITLE>Eumannia arenbergeri, genome assembly, ilEumAren7. </TITLE>
+		<DESCRIPTION>This project provides the genome assembly of Eumannia arenbergeri. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-ilManCypr-study-rawdata-2025-12-19">
+		<NAME>ilManCypr</NAME>
+		<TITLE>Maniola cypricola, genomic and transcriptomic data. </TITLE>
+		<DESCRIPTION>This project collects the genomic and transcriptomic data generated for Maniola cypricola to facilitate genome assembly and annotation as part of the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/) and organised by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) initiative.</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+	<PROJECT center_name="SCILIFELAB" alias="erga-bge-ilManCypr2_primary-2025-12-19">
+		<NAME>ilManCypr2</NAME>
+		<TITLE>Maniola cypricola, genome assembly, ilManCypr2. </TITLE>
+		<DESCRIPTION>This project provides the genome assembly of Maniola cypricola. The assembly is provided by the European Reference Genome Atlas (ERGA, https://www.erga-biodiversity.eu/) via the Biodiversity Genomics Europe project (BGE, https://biodiversitygenomics.eu/).</DESCRIPTION>
+		<SUBMISSION_PROJECT>
+			<SEQUENCING_PROJECT/>
+		</SUBMISSION_PROJECT>
+		<PROJECT_ATTRIBUTES>
+			<PROJECT_ATTRIBUTE>
+				<TAG>Keyword</TAG>
+				<VALUE>ERGA-BGE</VALUE>
+			</PROJECT_ATTRIBUTE>
+		</PROJECT_ATTRIBUTES>
+	</PROJECT>
+</PROJECT_SET>

@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icAgrGian_Hi-C_LV6000912588_HC060-1A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_icAgrGian_Hi-C_LV6000912588_HC060-1A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="icAgrGian_YH-4400-HC060-1A1A-CL_S1355_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="906f4635b439a1dcfe98780b10e7ac14" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="icAgrGian_YH-4400-HC060-1A1A-CL_S1355_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="5c55c6b42b41955afc71fd2d8b5b97f1" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_ilEumAren_Hi-C_LV6000912151_HC062-1A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_ilEumAren_Hi-C_LV6000912151_HC062-1A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="ilEumAren_YH-4400-HC062-1A1A-CL_S1357_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="ded6b64700be4ed539f77016d430c8f8" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="ilEumAren_YH-4400-HC062-1A1A-CL_S1357_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="576c39e150e1fb453118606ccbec473b" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_ilManCypr_Hi-C_LV6000912698_HC063-1A1A-CL_fastq_1">
+		<EXPERIMENT_REF refname="exp_ilManCypr_Hi-C_LV6000912698_HC063-1A1A-CL"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="ilManCypr_YH-4400-HC063-1A1A-CL_S1358_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="b54432994b4669afb909ef251d807e7e" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="ilManCypr_YH-4400-HC063-1A1A-CL_S1358_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="26d7f435989838be9c8abbca88a8a27e" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

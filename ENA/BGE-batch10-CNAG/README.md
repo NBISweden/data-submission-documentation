@@ -78,9 +78,44 @@ Submission of HiC data for a handful of species, to be added to existing project
         <ACTIONS>ADD</ACTIONS>
     </RECEIPT>
     ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+* Add accession numbers & update status in my lib [sheet](https://docs.google.com/spreadsheets/d/1NipgY-Ucv5pU7Z1bV2yhIYOHf_BREUVpZhhQ68Xv-Fo/edit?pli=1&gid=0#gid=0), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 * One of the files had wrong checksum, `wdMesRoge_YJ-4442-HC059-5A-NI-CL_S817_L008_R1_001.fastq.gz`, which is really weird since I see the correct checksum in .xlsx and tsv file, but not in the run file... Anyway, I changed it in run xml file, and updated the checksum via the browser.
+
+#### 2nd part - Agrilus gianassoi, Eumannia arenbergeri and Maniola cypricola
+* I created [batch10-CNAG-HiC-2.tsv](./data/batch10-CNAG-HiC-2.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f batch10-CNAG-HiC-2.tsv -p ERGA-BGE -o batch10-CNAG-HiC-2
+    ```
+* Update batch10-CNAG-HiC-2.exp.xml to reference accession number of newly registered study:
+    ```
+    <STUDY_REF accession="PRJEB105532"/> - Agrilus gianassoi, HC060-1A1A-CL
+    <STUDY_REF accession="PRJEB105540"/> - Eumannia arenbergeri, HC062-1A1A-CL
+    <STUDY_REF accession="PRJEB105548"/> - Maniola cypricola, HC063-1A1A-CL
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library names and titles, since the other data types have the platform named
+* Study is public, so submission.xml without hold date is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@batch10-CNAG-HiC-2.exp.xml" -F "RUN=@batch10-CNAG-HiC-2.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <RECEIPT receiptDate="2025-12-19T08:33:52.087Z" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX15437222" alias="exp_icAgrGian_Hi-C_LV6000912588_HC060-1A1A-CL" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX15437223" alias="exp_ilEumAren_Hi-C_LV6000912151_HC062-1A1A-CL" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX15437224" alias="exp_ilManCypr_Hi-C_LV6000912698_HC063-1A1A-CL" status="PRIVATE"/>
+        <RUN accession="ERR16046508" alias="run_icAgrGian_Hi-C_LV6000912588_HC060-1A1A-CL_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR16046509" alias="run_ilEumAren_Hi-C_LV6000912151_HC062-1A1A-CL_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR16046510" alias="run_ilManCypr_Hi-C_LV6000912698_HC063-1A1A-CL_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35411427" alias="SUBMISSION-19-12-2025-08:33:51:640"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in my lib [sheet](https://docs.google.com/spreadsheets/d/1NipgY-Ucv5pU7Z1bV2yhIYOHf_BREUVpZhhQ68Xv-Fo/edit?pli=1&gid=0#gid=0), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit RNAseq - **TODO** (perhaps)
 #### Preparations
