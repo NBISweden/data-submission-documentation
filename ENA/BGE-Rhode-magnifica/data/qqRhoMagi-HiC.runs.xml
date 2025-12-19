@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_qqRhoMagi_Hi-C_H000528888_HC023-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_qqRhoMagi_Hi-C_H000528888_HC023-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="qqRhoMagi_YB-4221-HC023-1A1A_S157_L008_R1_001.fastq.gz" checksum_method="MD5" checksum="542614c7e19874dc549df9e72ee323df" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="qqRhoMagi_YB-4221-HC023-1A1A_S157_L008_R2_001.fastq.gz" checksum_method="MD5" checksum="7fd864f2e91dcf21cb818bcacd74eb5d" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

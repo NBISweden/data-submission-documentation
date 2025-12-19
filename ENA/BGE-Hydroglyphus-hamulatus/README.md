@@ -108,6 +108,45 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
+#### Second batch
+There is an additional batch of HiC to be submitted
+
+* 4 samples were used, hence a virtual sample was needed:
+    * Biosamples: SAMEA114554675, SAMEA114554676, SAMEA114554677, SAMEA114554678
+    * Biosamples were deduced given the 'tube or well id's' received from UGC and looked up in the ERGA tracking portal
+    * [icHydHamu-HiC-2-virtual-sample.tsv](./data/icHydHamu-HiC-virtual-sample.tsv) uploaded to ENA via browser
+    * Accession number received: `ERS28358768`
+
+* I created [icHydHamu-HiC-2.tsv](./data/icHydHamu-HiC-2.tsv).
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icHydHamu-HiC-2.tsv -p ERGA-BGE -o icHydHamu-HiC-2
+    ```
+* Update icHydHamu-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB76972"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is already public, so submission-noHold.xml without hold date is used.
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@icHydHamu-HiC-2.exp.xml" -F "RUN=@icHydHamu-HiC-2.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-12-18T13:03:26.555Z" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX15433421" alias="exp_icHydHamu_Hi-C_FS55571875-78_HC009-2A1A" status="PRIVATE"/>
+        <RUN accession="ERR16042625" alias="run_icHydHamu_Hi-C_FS55571875-78_HC009-2A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35409196" alias="SUBMISSION-18-12-2025-13:03:26:328"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>    
+    ```
+* Add accession numbers in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
 * Create [icHydHamu-RNAseq.tsv](./data/icHydHamu-RNAseq.tsv)

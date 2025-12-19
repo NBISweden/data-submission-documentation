@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_icTroFerr_Hi-C_FS38819720_FS38819721_HC057-1A1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_icTroFerr_Hi-C_FS38819720_FS38819721_HC057-1A1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="icTroFerr_YF-4369-HC057-1A1A_S147_L007_R1_001.fastq.gz" checksum_method="MD5" checksum="97e553c7d15bcc82068e55ca5f24030f" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="icTroFerr_YF-4369-HC057-1A1A_S147_L007_R2_001.fastq.gz" checksum_method="MD5" checksum="0abcb1f5cac195974ecab7bbba49fdc7" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>

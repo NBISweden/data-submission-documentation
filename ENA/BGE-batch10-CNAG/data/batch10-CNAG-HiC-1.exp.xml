@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<EXPERIMENT_SET>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qdBraStyg_Hi-C_LV6000914154_HC061-1A1A-CL">
+		<TITLE>Brachydesmus stygivagus Illumina Hi-C data</TITLE>
+		<STUDY_REF accession="PRJEB96037"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115929112"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>HC061-1A1A-CL Illumina Hi-C</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="650"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>Hi-C library was created as described in the Arima User Guide for Animal Tissues (A160162 v01) and Library Preparation for Arima High Coverage HiC Kit (A160186 v02). Library QC was performed using the Qubit dsDNA HS Assay kit and the Agilent High Sensitivity DNA Kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iqTroOvul_Hi-C_ERGA_NT_0292_00001_HC064-1A1A">
+		<TITLE>Troglophilus ovuliformis Illumina Hi-C data</TITLE>
+		<STUDY_REF accession="PRJEB96082"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115873891"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>HC064-1A1A Illumina Hi-C</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="550"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>Hi-C library was created as described in the Arima User Guide for Animal Tissues (A160162 v01) and Library Preparation for Arima High Coverage HiC Kit (A160186 v02). Library QC was performed using the Qubit dsDNA HS Assay kit and the Agilent High Sensitivity DNA Kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqChaOliv_Hi-C_ERGA_AP_4894_00294_HC065-1A1A">
+		<TITLE>Chaetopelma olivaceum Illumina Hi-C data</TITLE>
+		<STUDY_REF accession="PRJEB89645"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116298547"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>HC065-1A1A Illumina Hi-C</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="625"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>Hi-C library was created as described in the Arima User Guide for Animal Tissues (A160162 v01) and Library Preparation for Arima High Coverage HiC Kit (A160186 v02). Library QC was performed using the Qubit dsDNA HS Assay kit and the Agilent High Sensitivity DNA Kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_wdMesRoge_Hi-C_ERGA_DM_7384_04_HC059-4A4-NI-CL">
+		<TITLE>Mesochaetopterus rogeri Illumina Hi-C data</TITLE>
+		<STUDY_REF accession="PRJEB96374"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA114541043"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>HC059-4A4-NI-CL Illumina Hi-C</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="490"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>Hi-C library was created as described in the Arima User Guide for Animal Tissues (A160162 v01) and Library Preparation for Arima High Coverage HiC Kit (A160186 v02). Library QC was performed using the Qubit dsDNA HS Assay kit and the Agilent High Sensitivity DNA Kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_wdMesRoge_Hi-C_ERGA_DM_7384_03_HC059-5A-NI-CL">
+		<TITLE>Mesochaetopterus rogeri Illumina Hi-C data</TITLE>
+		<STUDY_REF accession="PRJEB96374"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA114541042"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>HC059-5A-NI-CL Illumina Hi-C</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>PCR</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="663"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>Hi-C library was created as described in the Arima User Guide for Animal Tissues (A160162 v01) and Library Preparation for Arima High Coverage HiC Kit (A160186 v02). Library QC was performed using the Qubit dsDNA HS Assay kit and the Agilent High Sensitivity DNA Kit.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+</EXPERIMENT_SET>

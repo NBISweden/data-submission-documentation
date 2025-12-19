@@ -25,33 +25,13 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ## Detailed step by step description
 
-### Submit HiFi - **TODO**
-
-#### Preparations
-
-#### XML
-
-* Update qqRhoMagi-HiFi.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession=""/>
-    ```
-* Study is private, so submission.xml with hold date is used.
-* Submit using curl:
-    ```
-    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qqRhoMagi-HiFi.exp.xml" -F "RUN=@qqRhoMagi-HiFi.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* Receipt:
-    ```
-
-    ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
-
 ### Submit HiC
 
 #### Preparations
+* Project is already created, and HiFi submitted, By University of Oslo. Task is to submit to their project, PRJEB96404
 * I received sample ID from [NGI](https://docs.google.com/spreadsheets/d/10ZPAhkp1fCmpqR9GAZMRJ9wdXa8m-1G_/), which I checked in the [ERGA tracking portal](https://genomes.cnag.cat/erga-stream/samples/) which returned biosample [SAMEA115527225](https://www.ebi.ac.uk/biosamples/samples/SAMEA115527225).
 
-* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+* The data files were transferred using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
 
 #### XML
 * I created [qqRhoMagi-HiC.tsv](./data/qqRhoMagi-HiC.tsv)
@@ -59,20 +39,28 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqRhoMagi-HiC.tsv -p ERGA-BGE -o qqRhoMagi-HiC
     ```
-* The study XML also needs to be submitted, since HiC is the first data type we have received.
-    * I will not create the study for the assembly, since I don't yet know (no HiFi data yet, where we usually start, only HiC) which ToLID should be used (the script took `qqRhoMagi10`)
-    * Hence, removed that project from qqRhoMagi-HiC.study.xml
-
+* Update qqRhoMagi-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB96404"/>
+    ```
 * Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study will be private, so submission.xml with hold date is used.
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is public, so submission.xml with  no hold date is used.
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@qqRhoMagi-HiC.study.xml" -F "EXPERIMENT=@qqRhoMagi-HiC.exp.xml" -F "RUN=@qqRhoMagi-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qqRhoMagi-HiC.exp.xml" -F "RUN=@qqRhoMagi-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2025-12-16T12:22:54.824Z" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX15417723" alias="exp_qqRhoMagi_Hi-C_H000528888_HC023-1A1A" status="PRIVATE"/>
+        <RUN accession="ERR16026995" alias="run_qqRhoMagi_Hi-C_H000528888_HC023-1A1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35405876" alias="SUBMISSION-16-12-2025-12:22:54:533"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
