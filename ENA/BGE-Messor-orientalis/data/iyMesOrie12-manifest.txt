@@ -1,0 +1,14 @@
+STUDY	PRJEB100782
+SAMPLE	SAMEA116299515
+RUN_REF	ERR15701808, ERR15703066
+ASSEMBLYNAME	iyMesOrie12.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	209
+PROGRAM	Hifiasm (version 0.25.0-r726), FCS-GX (version 0.5.5), purge_dups (version 1.2.6), yahs (version 1.2.2)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Messor orientalis  was assembled with Hifiasm (version 0.25.0-r726). Contaminations were removed with FCS-GX (version 0.5.5) based on the ALL database released on 2023/01. Remaining haplotypic duplications were identified with purge_dups (version 1.2.6). The scaffolding was done with yahs (version 1.2.2). The manual curation was done with PretextView (version 1.0.3) and GRIT_Rapid (git: 1a3d79a8).'
+FASTA	iyMesOrie12.pri.20251219.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz
