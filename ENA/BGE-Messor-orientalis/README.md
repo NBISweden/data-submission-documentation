@@ -184,10 +184,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
     ```
-    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    ASSEMBLY_NAME      | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    iyMesOrie12-mito.1 | GCA_978018215 | PRJEB106245 | ERS21344432 |                                 |              | OZ389535-OZ389535
+    iyMesOrie12.1      | GCA_978018205 | PRJEB100782 | ERS21344432 | CDXDGT010000001-CDXDGT010000087 |              | OZ389536-OZ389556
 
     ```
-* Release study and check that it is shown under umbrella
+* Release studies and check that they are shown under umbrella
 
 #### Add assembly to umbrella
 * Add the assembly projects when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
