@@ -265,10 +265,21 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28782860
     ```
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) 
+* I received an email about file processing errors:
+    ```
+    FILE_NAME                                                      | ERROR                 | MD5                              | FILE_SIZE | DATE      | RUN_ID/ANALYSIS_ID
+    webin-cli/genome/wolbachia-iyHalNico6.1/chromosome_list.txt.gz | Invalid file checksum | d1bbd61fc9051911208472a7e06277c5 | 71        | 08-JAN-26 | ERZ28782859
+    ```
+    * No idea how I can fix an invalid checksum when I haven't supplied one (it is automatically calculated by Webin-CLI). I noticed that the file had ´LF´ line endings instead of ´CRLF´, so I converted it and re-uploaded. Not sure it worked because I did not get any INFO on either success or failure. Will wait and see what happens.
+  
 * Accessioned:
     ```
-
+    ASSEMBLY_NAME            | ASSEMBLY_ACC  | STUDY_ID     | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    spiroplasma-iyHalNico6.1 | GCA_978018445 | PRJEB106249  | ERS28446549 |                                 |              | OZ389573-OZ389573
     ```
+
+* After accessioned, I made the projects public via browser (**TODO for both of them, i.e I haven't released spiroplasma**)
+
 #### Add to umbrella
 * I reused [update.xml](./data/update.xml) and created [umbrella_symbionts.xml](./data/umbrella_modified.xml)
 * Submit:
