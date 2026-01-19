@@ -271,7 +271,16 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     webin-cli/genome/wolbachia-iyHalNico6.1/chromosome_list.txt.gz | Invalid file checksum | d1bbd61fc9051911208472a7e06277c5 | 71        | 08-JAN-26 | ERZ28782859
     ```
     * No idea how I can fix an invalid checksum when I haven't supplied one (it is automatically calculated by Webin-CLI). I noticed that the file had ´LF´ line endings instead of ´CRLF´, so I converted it and re-uploaded. Not sure it worked because I did not get any INFO on either success or failure. Will wait and see what happens.
-  
+* I decided to submit again, updating the ASSEMBLYNAME to `wolbachia-iyHalNico6.2`, because I also noticed that it was the sprioplasma fasta file, not the wolbachia one, that was in the ENA upload/staging area:
+    ```
+    INFO : Your application version is 9.0.1
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Wolbachia/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Wolbachia/ptg000024c_wolbachia.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Wolbachia/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28784145
+    ```
 * Accessioned:
     ```
     ASSEMBLY_NAME            | ASSEMBLY_ACC  | STUDY_ID     | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
