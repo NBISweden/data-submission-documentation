@@ -288,7 +288,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     wolbachia-iyHalNico6.2   | GCA_978021855  | PRJEB106248 | ERS28446548 |                                 |              | OZ404009-OZ404009
     ```
 
-* After accessioned, I made the projects public via browser (**TODO for Wolbachia, I want to cancel the failed ERZ28783855 first**)
+* After accessioned, I made the projects public via browser
 
 #### Add to umbrella
 * I reused [update.xml](./data/update.xml) and created [umbrella_symbionts.xml](./data/umbrella_modified.xml)
