@@ -1,0 +1,14 @@
+STUDY	PRJEB90606
+SAMPLE	SAMEA116289643
+RUN_REF	ERR15132793, ERR15132794, ERR15648920,  ERR15648921, ERR15757805, ERR15757806
+ASSEMBLYNAME	qqAgeOrie5.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	27
+PROGRAM	Hifiasm (version 0.25.0-r726), NBIS/Earth-Biogenome-Project-pilot (version: 99c8937), FCS-GX (version 0.5.4), purge_dups (version 1.2.5), YaHS (version 1.2a.2), sanget-tol/curationpretext (version 1.4.2), PretextView (version 1.0.3), sanget-tol/agp-tpf-utils (version 1.2.3)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The assembly was produced with hifiasm in Hi-C mode. The resulting collapsed *.hic.p_ctg.gfa was selected, screened for contamination with FCS-GX, and purged of haplotigs with purge_dups. Scaffolding was performed with YaHS. The X1 and X2 chromosomes were assigned based on MCscan analysis of synteny with another spider, Eratigena atrica (GCA_965122215.1). Mitochondria was assembled with MitoHiFi. PacBio HiFi coverage is 27x and Illumina Hi-C coverage is 34x (after de-duplication).'
+FASTA	qqAgeOrie5_pri.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz
