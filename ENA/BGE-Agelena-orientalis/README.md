@@ -207,7 +207,14 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-01-21T08:46:32.504Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96485" alias="erga-bge-qqAgeOrie-study-umbrella-2025-08-27" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-21-01-2026-08:46:32:339"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
