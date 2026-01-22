@@ -194,7 +194,7 @@ Submission of raw reads for *Agelena orientalis* to facilitate assembly and anno
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    qqAgeOrie5.1  | GCA_978045235 | PRJEB90606 | ERS21333585 | CDXHCA010000001-CDXHCA010000123 |              | OZ405000-OZ405022
     ```
 * Release study and check that it is shown under umbrella
 
