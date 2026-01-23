@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Isoseq, RNA, mito, assembly, umbrella # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB72359
+Top_level_acccession: PRJEB73338 (umbrella), PRJEB72359 (read + genome), PRJEB73337 (mito)
 ---
 
 # VR EBP - *Tricholoma matsutake*
@@ -42,12 +42,12 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
 
 ### Register study
 * All metadata regarding studies is in the ENA_study tab of the metadata template.
-* For the raw reads and the genome assembly a project was registered in the Webin Portal, receiving `PRJEB72359` as accession number. 
+* For the *raw reads and the genome* assembly a project was registered in the Webin Portal, receiving `PRJEB72359` as accession number. 
     * Study alias: `TriMat1` 
     * Locus tag: `TRIMAT` 
     * Release date: `2026-02-05`
-* A study for the mitochondrial assembly was registered in the Webin Portal with a release date of `2026-02-05`, study alias `mito-TriMat1`. The accession number obtained was `PRJEB73337`.
-* An umbrella study was submitted programmatically, with a release date of `2026-02-05`, using [submission.xml](./data/submission.xml) and [umbrella.xml](./data/umbrella.xml):
+* A study for the *mitochondrial* assembly was registered in the Webin Portal with a release date of `2026-02-05`, study alias `mito-TriMat1`. The accession number obtained was `PRJEB73337`.
+* An *umbrella* study was submitted programmatically, with a release date of `2026-02-05`, using [submission.xml](./data/submission.xml) and [umbrella.xml](./data/umbrella.xml):
 
     ```
     curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"    
@@ -66,6 +66,19 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
             <INFO>All objects in this submission are set to private status (HOLD).</INFO>
         </MESSAGES>
         <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+* **Update 2026-01-23:** All studies' release dates were postponed to `2026-06-03`. The umbrella project was updated using [umbrella-holdDate.xml](./data/umbrella-holdDate.xml):
+    ```
+    curl -u Username:Password -F "SUBMISSION=@umbrella-holdDate.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"    
+    ```
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-01-23T12:19:40.230Z" submissionFile="umbrella-holdDate.xml" success="true">
+        <MESSAGES/>
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
