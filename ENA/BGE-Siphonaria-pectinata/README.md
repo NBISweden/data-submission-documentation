@@ -175,7 +175,14 @@ Submission of raw reads for *Siphonaria pectinata* to facilitate assembly and an
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-01-27T10:06:28.920Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB77286" alias="erga-bge-xgSipPect-study-umbrella-2024-07-05" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-27-01-2026-10:06:28:782"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
