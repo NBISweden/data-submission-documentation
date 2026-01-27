@@ -164,6 +164,11 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Release study and check that it is shown under umbrella
 
+* Update 2026-01-27: Bioinformatician told me that the manifest should be updated:
+    * Change COVERAGE to 70 (instead of 61)
+    * Change DESCRIPTION to "The assembly was produced with hifiasm in Hi-C mode. The resulting collapsed *.hic.p_ctg.gfa was selected, screened for contamination with FCS-GX, and purged of haplotigs with purge_dups. Scaffolding was performed with YaHS. Mitochondria was assembled with Oatk. PacBio HiFi coverage is 70x and Illumina Hi-C coverage is 28x (after de-duplication)." (removing the sentence about the X chromosome and updating the coverage values)
+* I thought perhaps that we needed to contact ENA, and ask them to do it, but I could edit those fields via browser->Analysis report.
+
 #### Add assembly to umbrella
 * Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
 * Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
