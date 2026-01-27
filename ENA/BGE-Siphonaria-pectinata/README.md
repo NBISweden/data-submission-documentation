@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB77286 (umbrella), PRJEB74038 (experiment)
+Top_level_acccession: PRJEB77286 (umbrella), PRJEB74038 (experiment), PRJEB107168 (assembly)
 ---
 
 # BGE - *Siphonaria pectinata*
@@ -122,6 +122,61 @@ Submission of raw reads for *Siphonaria pectinata* to facilitate assembly and an
 * Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
 
 ### Submit assembly
+* Since this was one of the early species to be sequenced, we didn't use the full programmatic submission route. Hence, no project for the assembly was created when submitting the HiFi data. Instead, I need to create an assembly project first:
+    * I created [xgSipPect3.study.xml](./data/xgSipPect3.study.xml) and copied the assembly project info from (the not used) xgSipPect-HiC.exp.xml
+    * Submit using curl:
+        ```
+        curl -u Username:Password -F "SUBMISSION=@submission-noHold.xml" -F "PROJECT=@xgSipPect3.study.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    * Reciept:
+        ```
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2026-01-27T09:46:26.658Z" submissionFile="submission-noHold.xml" success="true">
+            <PROJECT accession="PRJEB107168" alias="erga-bge-xgSipPect3_primary-2025-03-19" status="PRIVATE" holdUntilDate="2028-01-27Z">
+                <EXT_ID accession="ERP188193" type="study"/>
+            </PROJECT>
+            <SUBMISSION accession="ERA35476445" alias="SUBMISSION-27-01-2026-09:46:26:580"/>
+            <MESSAGES/>
+            <ACTIONS>ADD</ACTIONS>
+        </RECEIPT>
+        ```
+* I created a manifest file [xgSipPect3-manifest.txt](./data/xgSipPect3-manifest.txt)
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/S-pectinata) and copied & gzipped manifest, assembly file and chromosome list there
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./xgSipPect3-manifest.txt -validate
+    ```
+* Receipt:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/S-pectinata/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/S-pectinata/xgSipPect3_primary.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/S-pectinata/chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/S-pectinata/unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28798251
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+
+    ```
+* Release study and check that it is shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
 
 ### Umbrella project
 For each of the BGE species, an umbrella project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
@@ -149,4 +204,3 @@ For each of the BGE species, an umbrella project has to be created and linked to
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
-* **Note:** Add the assembly project when it has been created and submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.

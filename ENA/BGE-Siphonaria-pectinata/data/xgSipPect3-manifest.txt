@@ -1,0 +1,14 @@
+STUDY	PRJEB107168
+SAMPLE	SAMEA113595501
+RUN_REF	ERR12764099, ERR14759141
+ASSEMBLYNAME	xgSipPect3.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	35
+PROGRAM	hifiasm (version 0.25.0-r726), purge_dups (version 1.2.6), YaHS (version 1.2a.2), NBIS/Earth-Biogenome-Project-pilot (version e6e9c1621b), sanger-tol/blobtoolkit (version 0.9.0)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The assembly was produced with hifiasm using HiFi data. The resulting collapsed *.bp.p_ctg.gfa was selected, screened for contamination with FCS-GX, and purged of haplotigs with purge_dups. Scaffolding was performed with YaHS. The HiC data was not of great use for curation, pairtools reported the fraction frac_cis_40kb+ being 0.042. 75 changes were made using PretextView.'
+FASTA	xgSipPect3_primary.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz
