@@ -161,8 +161,8 @@ Submission of raw reads for *Siphonaria pectinata* to facilitate assembly and an
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
     ```
-    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    xgSipPect3.1  | GCA_978134735 | PRJEB107168 | ERS15589861 | CDXUDP010000001-CDXUDP010000203 |              | OZ405929-OZ405945
     ```
 * Release study and check that it is shown under umbrella
 
