@@ -1,0 +1,11 @@
+SUPER_1	1	Linear-Chromosome
+SUPER_2	2	Linear-Chromosome
+SUPER_3	3	Linear-Chromosome
+SUPER_4	4	Linear-Chromosome
+SUPER_5	5	Linear-Chromosome
+SUPER_6	6	Linear-Chromosome
+SUPER_7	7	Linear-Chromosome
+SUPER_8	8	Linear-Chromosome
+SUPER_9	9	Linear-Chromosome
+SUPER_10	10	Linear-Chromosome
+ctg000001l	MIT	Linear-Chromosome	Mitochondrion

@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB96354 (umbrella), PRJEB90995 (experiment), PRJEB90996 (assembly)
+Top_level_acccession: PRJEB96354 (umbrella), PRJEB90995 (experiment), PRJEB90996 (assembly), PRJEB106249 (Wolbachia), PRJEB106249 (Spiroplasma)
 ---
 
 # BGE - *Halictus nicosiae*
@@ -212,30 +212,32 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     * For Stylops we referred to the raw reads study as `project_id` but should it be the study created for the symbionts' assemblies or the umbrella that will refer to both? Decision was made to use the umbrella.
     * The description field is not obvious how to fill either, I asked colleagues for help and received a reference to use for Spiroplasma
 * In the [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html#creating-taxon-requests) they state *"If you have multiple names to request, please do this as a single request"*. Hence, I logged in to ENA and went to [Register taxonomy](https://www.ebi.ac.uk/ena/submit/webin/taxonomy) in the Samples menu and downloaded a [taxonomy template](./data/taxonomy_template_1759492490477.tsv). After filling it in, it was uploaded to ENA (2025-10-09). It is expected to take quite a while before it is granted.
+* Recieved taxon ids:
+    * Wolbachia endosymbiont of Halictus nicosiae: `3473539`
+    * Spiroplasma endosymbiont of Halictus nicosiae: `3473538`
 
-
-#### Register study **TODO**
+#### Register study
 * While not necessary, since there are 2 samples, I decided to create 2 separate studies
-* I registered the them via browser, using the same release dates as the assembly project
+* I registered the them via browser, using 2026-02-02 as release dates
     ```
     title:          Wolbachia endosymbiont of Halictus nicosiae genome assembly
     study_name:     Wolbachia-iyHalNico6
-    study_abstract: This project provides the genome assembly of Wolbachia endosymbiont of Halictus nicosiae.	
+    study_abstract: This project provides the genome assembly of Wolbachia endosymbiont of Halictus nicosiae.
     ```
     ```
     title:          Spiroplasma endosymbiont of Halictus nicosiae genome assembly
     study_name:     Spiroplasma-iyHalNico6
-    study_abstract: This project provides the genome assembly of Spiroplasma endosymbiont of Halictus nicosiae.	
+    study_abstract: This project provides the genome assembly of Spiroplasma endosymbiont of Halictus nicosiae.
     ```
-* Accession numbers: `` for Wolbachia and `` for Spiroplasma
+* Accession numbers: `PRJEB106248` for Wolbachia and `PRJEB106249` for Spiroplasma
 * I added the accession numbers to SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 
-#### Register samples  **TODO**
+#### Register samples
 * I had to wait until the taxonomy request was approved
 * I then submitted 2 samples, by uploading the sheet [symbiont-samples.tsv](./data/symbiont-samples.tsv)
-* Accession numbers received: `` for Wolbachia and `` for Spiroplasma
+* Accession numbers received: `ERS28446548` (alias w-HalNico) for Wolbachia and `ERS28446549` (alias s-HalNico) for Spiroplasma
 
-#### Submit assemblies  **TODO**
+#### Submit assemblies
 * I created 2 manifest files [wolbachia-manifest.txt](./data/wolbachia-manifest.txt) and [spiroplasma-manifest.txt](./data/spiroplasma-manifest.txt)
 * I copied them to separate subfolders on Uppmax (/proj/snic2022-6-208/nobackup/submission/H-nicosiae/) together with the chromosome lists and fasta assembly files
 * Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
@@ -247,16 +249,47 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipts:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Wolbachia/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Wolbachia/ptg000024c_wolbachia.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Wolbachia/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28782859
     ```
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Spiroplasma/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Spiroplasma/ptg000017c_spiroplasma.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Spiroplasma/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28782860
     ```
-* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) 
+* I received an email about file processing errors:
+    ```
+    FILE_NAME                                                      | ERROR                 | MD5                              | FILE_SIZE | DATE      | RUN_ID/ANALYSIS_ID
+    webin-cli/genome/wolbachia-iyHalNico6.1/chromosome_list.txt.gz | Invalid file checksum | d1bbd61fc9051911208472a7e06277c5 | 71        | 08-JAN-26 | ERZ28782859
+    ```
+    * No idea how I can fix an invalid checksum when I haven't supplied one (it is automatically calculated by Webin-CLI). I noticed that the file had ´LF´ line endings instead of ´CRLF´, so I converted it and re-uploaded. Not sure it worked because I did not get any INFO on either success or failure. Will wait and see what happens.
+* I decided to submit again, updating the ASSEMBLYNAME to `wolbachia-iyHalNico6.2`, because I also noticed that it was the sprioplasma fasta file, not the wolbachia one, that was in the ENA upload/staging area:
+    ```
+    INFO : Your application version is 9.0.1
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Wolbachia/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Wolbachia/ptg000024c_wolbachia.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/H-nicosiae/Wolbachia/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ28784145
+    ```
 * Accessioned:
     ```
-
+    ASSEMBLY_NAME            | ASSEMBLY_ACC  | STUDY_ID     | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    spiroplasma-iyHalNico6.1 | GCA_978018445 | PRJEB106249  | ERS28446549 |                                 |              | OZ389573-OZ389573
+    wolbachia-iyHalNico6.2   | GCA_978021855  | PRJEB106248 | ERS28446548 |                                 |              | OZ404009-OZ404009
     ```
+
+* After accessioned, I made the projects public via browser
+
 #### Add to umbrella
 * I reused [update.xml](./data/update.xml) and created [umbrella_symbionts.xml](./data/umbrella_modified.xml)
 * Submit:
@@ -265,7 +298,16 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-01-07T11:19:56.603Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96354" alias="erga-bge-iyHalNico-study-umbrella-2025-08-25" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-07-01-2026-11:19:56:424"/>
+        <MESSAGES>
+            <INFO>The XML md5 checksum for the object being updated has not changed. No update required for PRJEB96354.</INFO>
+        </MESSAGES>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
     
 ### Umbrella project
