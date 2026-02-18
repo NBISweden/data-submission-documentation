@@ -136,7 +136,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
         ```
         curl -u username:password -F "SUBMISSION=@submission-hold.xml" -F "PROJECT=@iyBomRudr-mito.study.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
         ```
-        * Receipt:
+    * Receipt:
         ```
         <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
         <RECEIPT receiptDate="2025-10-14T15:21:47.260+01:00" submissionFile="submission-hold.xml" success="true">

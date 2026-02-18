@@ -112,7 +112,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
     ```
     interactive -t 08:00:00 -A uppmax2025-2-58
-    java -jar ~/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./TOLID-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./TOLID-manifest.txt -validate
     ```
 * Receipt:
     ```
