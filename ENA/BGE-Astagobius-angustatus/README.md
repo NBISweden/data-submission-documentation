@@ -87,6 +87,46 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     * Accession number received: ERS22139083
 * However, as it turned out the HiC data was useless, and there's no more material to re-sequence, so this species will not have HiC.
 
+#### Update 2026-02-18
+I was ordered to submit also the HiC.
+* I concatenated the parts into one, and calculated checksums:
+    ```
+    cd /proj/snic2022-6-208/INBOX/BGE_HiC_firstBatch/Astagobius-angustatus/
+    cat sample_CAAGGTGA+CTAACCAT_part1_R1.fastq.gz sample_CAAGGTGA+CTAACCAT_part2_R1.fastq.gz sample_CAAGGTGA+CTAACCAT_part3_R1.fastq.gz sample_CAAGGTGA+CTAACCAT_part4_R1.fastq.gz > ../../../nobackup/submission/A-angustatus/astAng_sample_CAAGGTGA+CTAACCAT_R1.fastq.gz
+    cat sample_CAAGGTGA+CTAACCAT_part1_R2.fastq.gz sample_CAAGGTGA+CTAACCAT_part2_R2.fastq.gz sample_CAAGGTGA+CTAACCAT_part3_R2.fastq.gz sample_CAAGGTGA+CTAACCAT_part4_R2.fastq.gz > ../../../nobackup/submission/A-angustatus/astAng_sample_CAAGGTGA+CTAACCAT_R2.fastq.gz
+    cd /proj/snic2022-6-208/nobackup/submission/A-angustatus/
+    md5sum astAng_sample_CAAGGTGA+CTAACCAT_R* > checksums.md5.txt
+    ```
+* I created [icAstAngu-HiC.tsv](./data/icAstAngu-HiC.tsv)
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icAstAngu-HiC.tsv -p ERGA-BGE -o icAstAngu-HiC
+    ```
+* Update icAstAngu-HiC.exp.xml to reference accession number of previously registered study:
+    ```
+    <STUDY_REF accession="PRJEB76281"/>
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I added 'Illumina' to the library name and title, since the other data types have the platform named
+* Study is pulic, so submission-noHold.xml is used.
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@icAstAngu-HiC.exp.xml" -F "RUN=@icAstAngu-HiC.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    **Note:** I received an error because my files had `+` in the names, so I had to remove them (replaced with `_`).
+* Receipt:
+    ```
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-02-18T10:42:57.221Z" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX16090587" alias="exp_icAstAngu_Hi-C_FS42595176_FS42595225_HC008_1C1A" status="PRIVATE"/>
+        <RUN accession="ERR16699704" alias="run_icAstAngu_Hi-C_FS42595176_FS42595225_HC008_1C1A_fastq_1" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35778342" alias="SUBMISSION-18-02-2026-10:42:56:996"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
+    ```
+* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+
 ### Submit RNA-Seq
 * Data transfer to ENA upload area (folder /bge-rnaseq/) was done previously for all RNAseq data (first batch)
 * Create [icAstAngu-RNAseq.tsv](./data/icAstAngu-RNAseq.tsv)
