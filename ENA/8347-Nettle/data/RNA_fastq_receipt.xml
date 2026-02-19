@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2026-02-16T13:29:50.455Z" submissionFile="submission-STOCKHOLM UNIVERSITY_1771248590455.xml" success="true">
+     <EXPERIMENT accession="ERX16077385" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:531-62260" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077386" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:532-62262" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077387" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:532-62264" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077388" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:533-62266" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077389" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:533-62268" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077390" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:534-62270" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077391" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:534-62272" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077392" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:534-62274" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077393" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:535-62276" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077394" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:535-62278" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077395" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:535-62280" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077396" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:536-62282" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077397" alias="ena-EXPERIMENT-TAB-16-02-2026-13:29:49:536-62284" status="PRIVATE"/>
+     <RUN accession="ERR16686506" alias="ena-RUN-TAB-16-02-2026-13:29:49:532-62261" status="PRIVATE"/>
+     <RUN accession="ERR16686507" alias="ena-RUN-TAB-16-02-2026-13:29:49:532-62263" status="PRIVATE"/>
+     <RUN accession="ERR16686508" alias="ena-RUN-TAB-16-02-2026-13:29:49:533-62265" status="PRIVATE"/>
+     <RUN accession="ERR16686509" alias="ena-RUN-TAB-16-02-2026-13:29:49:533-62267" status="PRIVATE"/>
+     <RUN accession="ERR16686510" alias="ena-RUN-TAB-16-02-2026-13:29:49:533-62269" status="PRIVATE"/>
+     <RUN accession="ERR16686511" alias="ena-RUN-TAB-16-02-2026-13:29:49:534-62271" status="PRIVATE"/>
+     <RUN accession="ERR16686512" alias="ena-RUN-TAB-16-02-2026-13:29:49:534-62273" status="PRIVATE"/>
+     <RUN accession="ERR16686513" alias="ena-RUN-TAB-16-02-2026-13:29:49:534-62275" status="PRIVATE"/>
+     <RUN accession="ERR16686514" alias="ena-RUN-TAB-16-02-2026-13:29:49:535-62277" status="PRIVATE"/>
+     <RUN accession="ERR16686515" alias="ena-RUN-TAB-16-02-2026-13:29:49:535-62279" status="PRIVATE"/>
+     <RUN accession="ERR16686516" alias="ena-RUN-TAB-16-02-2026-13:29:49:536-62281" status="PRIVATE"/>
+     <RUN accession="ERR16686517" alias="ena-RUN-TAB-16-02-2026-13:29:49:536-62283" status="PRIVATE"/>
+     <RUN accession="ERR16686518" alias="ena-RUN-TAB-16-02-2026-13:29:49:536-62285" status="PRIVATE"/>
+     <SUBMISSION accession="ERA35739997" alias="ena-SUBMISSION-TAB-16-02-2026-13:29:49:537-62286"/>
+     <MESSAGES>
+          <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+     <ACTIONS>HOLD</ACTIONS>
+</RECEIPT>
