@@ -15,7 +15,7 @@ Support issue on brokering sequence data for the nettle project to be uploaded t
 ## Procedure overview and links to examples
 
 * Consult with research group and decide on scope and approximate/reasonable timeline for the entire process
-* Decide together with research group on appropriate checklist (ENA000053 - ENA plant sample checklist)
+* Decide together with research group on appropriate checklist (ERC000037 - ENA plant sample checklist)
 * Research group provided metadata for samples and runs in the template
 * DS registered Study at ENA using information from metadata template (PRJEB107427)
 * DS registered [sample information](./data/nettle_samples.tsv) based on the metadata template
@@ -36,9 +36,9 @@ ascp -D -v -k2 --mode=send --file-list=nettle_for_submission.txt --host=webin2.e
 Upload speeds from Dardel to ENA varied by a large 
 factor within and betweeen days, in spite of using the Aspera protocol. Transfers were made from the Dardel login node.
 
-For samples, the checklist ERC000054 (ENA plant sample checklist) was noted to refer to a depricated [link for ontology of plant growth medium](http://purl.obolibrary.org/obo/EO_0007147). After communication, we decided to replace it with [PECO (Plant Experimental Conditions Ontology)](https://www.ebi.ac.uk/ols4/ontologies/peco/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FPECO_0007049?lang=en) as a suitable replacement. 
+For samples, the checklist ERC000037 (ENA plant sample checklist) was noted to refer to a depricated [link for ontology of plant growth medium](http://purl.obolibrary.org/obo/EO_0007147). After communication, we decided to replace it with [PECO (Plant Experimental Conditions Ontology)](https://www.ebi.ac.uk/ols4/ontologies/peco/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FPECO_0007049?lang=en) as a suitable replacement. 
 
-For some reason, when uplading the sequence files to ENA, using the command line:
+For some reason, when uploading the sequence files to ENA, using the command line:
 
 ```
 ascp -D -v -k2 --mode=send --file-list=nettle_for_submission.txt --host=webin2.ebi.ac.uk --user=[Webin-XXXXX] /.
