@@ -10,7 +10,7 @@ Top_level_acccession: Not applicable
 # BGE - multiple species
 
 ## Submission task description
-Submission of RNAseq raw reads for a mixture of species delivered 2026-02-27 to facilitate assembly and annotation as part of ERGA (https://www.erga-biodiversity.eu/) - BGE (https://biodiversitygenomics.eu/). 
+Submission of RNAseq raw reads for a mixture of species (45 in total) delivered 2026-02-27 to facilitate assembly and annotation as part of ERGA (https://www.erga-biodiversity.eu/) - BGE (https://biodiversitygenomics.eu/). 
 
 Submission will be done via CNAG script and programmatic submission route using xml files produced by the script.
 
@@ -26,13 +26,13 @@ Submission will be done via CNAG script and programmatic submission route using 
 ### Submit RNAseq 
 #### Preparations
 * Data producer provided me with a list of sample identifiers, via slack
-* Data was delivered in two rounds, where the first round contained 90 paired reads from 45 species, and the second round only contained 2 paired reads (labelled with CNAG) from one species.
+* Data was delivered in two rounds, where the first round contained 90 paired reads from 44 species, and the second round only contained 2 paired reads (labelled with CNAG) from one species.
 * With the data delivery we received checksum.md5 files containing a list of all files and the md5 sums
     * I asked Gemini to create a script to put paired read md5 sum information on one row, tab separated, which resulted in [reformat_md5.sh](./scripts/reformat_md5.sh)
 * All cleaned and transformed metadata was collected in `BGE_sheet` tab of the  .xlsx file, while semi-formatted metadata from different sources was put in the other tabs.  
 * Sample ID gave BioSample ID via ERGA tracker portal
 
-* All data files received in this batch were transferred using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz`. Given the time limitations before project ends, and that there were 46 species delivered, I did not follow previous procedures of adding ToLID to the files using rename function in FileZilla. Instead I double and triple checked that the correct files was connected to the correct sample, before creating any .xml files.
+* All data files received in this batch were transferred using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz`. Given the time limitations before project ends, and that there were 45 species delivered, I did not follow previous procedures of adding ToLID to the files using rename function in FileZilla. Instead I double and triple checked that the correct files was connected to the correct sample, before creating any .xml files.
 
 #### XML
 * I created [RNAseq.tsv](./data/RNAseq.tsv)
