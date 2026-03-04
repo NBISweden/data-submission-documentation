@@ -1,0 +1,3 @@
+Checklist	ERC000011	ENA default sample checklist					
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)	composed of
+169124	Ophryotrocha puerilis	wjOphPuer_RNAseq_pool	wjOphPuer RNAseq pool	This sample is a RNAseq pool of multiple samples. It is composed of samples SAMEA115808847 and SAMEA115808848	2023-09-01	Spain	SAMEA115808847, SAMEA115808848
