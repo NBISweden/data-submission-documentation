@@ -195,8 +195,41 @@ Submission will be done via CNAG script and programmatic submission route using 
         <ACTIONS>ADD</ACTIONS>
     ```
 * I repeated the steps with [RNAseq-add.tsv](./data/RNAseq-add.tsv)
-* Receipt:
+* Run script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f RNAseq-add.tsv -p ERGA-BGE -o RNAseq-add
+    ```
+* Remove row `<PAIRED/>` (error in script)
+* I removed duplicate experiments
+* Update RNAseq.exp.xml to reference accession number of previously registered studies (from `Species` tab in the .xlsx metadata file):
+    ```
+    <STUDY_REF accession=""/>
+    ```
+* All studies are already public, so submission.xml without hold date is used.
+* Submit using curl:
+    ```
+    curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@RNAseq-add.exp.xml" -F "RUN=@RNAseq-add.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-03-05T13:21:05.737Z" submissionFile="submission.xml" success="true">
+        <EXPERIMENT accession="ERX16167603" alias="exp_wjOphPuer_Illumina_RNA-Seq_FS38820316_FS38820317_YF-4364-RE032-2A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX16167604" alias="exp_ilEumAren_Illumina_RNA-Seq_LV6000912183_YF-4364-RE069-1A" status="PRIVATE"/>
+        <EXPERIMENT accession="ERX16167605" alias="exp_iqTroOvul_Illumina_RNA-Seq_ERGA_NT_0292_00001_YK-4511-CNAG-BGE-214-4447AK" status="PRIVATE"/>
+        <RUN accession="ERR16774630" alias="run_wjOphPuer_Illumina_RNA-Seq_FS38820316_FS38820317_YF-4364-RE032-2A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR16774631" alias="run_wjOphPuer_Illumina_RNA-Seq_FS38820316_FS38820317_YF-4364-RE032-2A_fastq_2" status="PRIVATE"/>
+        <RUN accession="ERR16774632" alias="run_ilEumAren_Illumina_RNA-Seq_LV6000912183_YF-4364-RE069-1A_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR16774633" alias="run_ilEumAren_Illumina_RNA-Seq_LV6000912183_YF-4364-RE069-1A_fastq_2" status="PRIVATE"/>
+        <RUN accession="ERR16774634" alias="run_iqTroOvul_Illumina_RNA-Seq_ERGA_NT_0292_00001_YK-4511-CNAG-BGE-214-4447AK_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR16774635" alias="run_iqTroOvul_Illumina_RNA-Seq_ERGA_NT_0292_00001_YK-4511-CNAG-BGE-214-4447AK_fastq_2" status="PRIVATE"/>
+        <SUBMISSION accession="ERA35973441" alias="SUBMISSION-05-03-2026-13:21:05:121"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
+
+* **Note:** We haven't received (now or earlier delivery) any RNAseq data for Wirenia argentea, Cladocora caespitosa and Omalisus fontisbellaquei. However, the sequencing facility told me that these 3 species already had been sequenced before BGE started.

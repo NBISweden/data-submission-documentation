@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+	<RUN center_name="SCILIFELAB" alias="run_wjOphPuer_Illumina_RNA-Seq_FS38820316_FS38820317_YF-4364-RE032-2A_fastq_1">
+		<EXPERIMENT_REF refname="exp_wjOphPuer_Illumina_RNA-Seq_FS38820316_FS38820317_YF-4364-RE032-2A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="YF-4364-RE032-2A_S52_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="83108c1853b8d81ac9fc0232e8a8f09d" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="YF-4364-RE032-2A_S52_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="a30824e1ebb5c5e6c8fa1b06c5992bbc" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_wjOphPuer_Illumina_RNA-Seq_FS38820316_FS38820317_YF-4364-RE032-2A_fastq_2">
+		<EXPERIMENT_REF refname="exp_wjOphPuer_Illumina_RNA-Seq_FS38820316_FS38820317_YF-4364-RE032-2A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="YF-4364-RE032-2A_S7_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="bae1e41b3544791f8ee1c1bac2d24edc" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="YF-4364-RE032-2A_S7_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="363b7cf44de08e6c0d712d47e1548e60" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_ilEumAren_Illumina_RNA-Seq_LV6000912183_YF-4364-RE069-1A_fastq_1">
+		<EXPERIMENT_REF refname="exp_ilEumAren_Illumina_RNA-Seq_LV6000912183_YF-4364-RE069-1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="YF-4364-RE069-1A_S43_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="955d1429d2ab46133d253bd85c16f12b" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="YF-4364-RE069-1A_S43_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="3d04ea0d643efb1daa40f4af93b9c571" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_ilEumAren_Illumina_RNA-Seq_LV6000912183_YF-4364-RE069-1A_fastq_2">
+		<EXPERIMENT_REF refname="exp_ilEumAren_Illumina_RNA-Seq_LV6000912183_YF-4364-RE069-1A"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="YF-4364-RE069-1A_S88_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="7f4e388b6ddd53385ecbb49d1851f0f9" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="YF-4364-RE069-1A_S88_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="ed7f69af42ac23d2dcb781885ed54295" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqTroOvul_Illumina_RNA-Seq_ERGA_NT_0292_00001_YK-4511-CNAG-BGE-214-4447AK_fastq_1">
+		<EXPERIMENT_REF refname="exp_iqTroOvul_Illumina_RNA-Seq_ERGA_NT_0292_00001_YK-4511-CNAG-BGE-214-4447AK"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="YK-4511-CNAG-BGE-214-4447AK_S45_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="cf9faa5d09187bd96daf33110e461338" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="YK-4511-CNAG-BGE-214-4447AK_S45_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="40f621bf1f100bda8e179f2e5f2d998c" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+	<RUN center_name="SCILIFELAB" alias="run_iqTroOvul_Illumina_RNA-Seq_ERGA_NT_0292_00001_YK-4511-CNAG-BGE-214-4447AK_fastq_2">
+		<EXPERIMENT_REF refname="exp_iqTroOvul_Illumina_RNA-Seq_ERGA_NT_0292_00001_YK-4511-CNAG-BGE-214-4447AK"/>
+		<DATA_BLOCK>
+			<FILES>
+				<FILE filename="YK-4511-CNAG-BGE-214-4447AK_S90_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="3ba390354a01a7ff6b9e884ec28ed4a6" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+				<FILE filename="YK-4511-CNAG-BGE-214-4447AK_S90_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="a78b5d48bf15958d2702e78516182c5c" filetype="fastq">
+					<READ_TYPE>paired</READ_TYPE>
+					<READ_TYPE>sample_barcode</READ_TYPE>
+				</FILE>
+			</FILES>
+		</DATA_BLOCK>
+	</RUN>
+</RUN_SET>
