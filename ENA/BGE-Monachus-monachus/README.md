@@ -119,32 +119,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 
-### Submit RNAseq - **TODO**
-
-#### Preparations
-
-#### XML
-* I created [mMonMoa-RNAseq.tsv](./data/mMonMoa-RNAseq.tsv)
-* Run script:
-    ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f mMonMoa-RNAseq.tsv -p ERGA-BGE -o mMonMoa-RNAseq
-    ```
-* Update mMonMoa-RNAseq.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession="PRJEB90634"/>
-    ```
-* Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission.xml with hold date is used.
-* Submit using curl:
-    ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@mMonMoa-RNAseq.exp.xml" -F "RUN=@mMonMoa-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* Receipt:
-    ```
-
-    ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+### Submit RNAseq
+* See [README RNAseq submission](../BGE-RNAseq-2026-02-27/README.md)
 
 ### Submit assembly
 

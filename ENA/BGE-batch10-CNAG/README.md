@@ -116,33 +116,3 @@ Submission of HiC data for a handful of species, to be added to existing project
     </RECEIPT>
     ```
 * Add accession numbers & update status in my lib [sheet](https://docs.google.com/spreadsheets/d/1NipgY-Ucv5pU7Z1bV2yhIYOHf_BREUVpZhhQ68Xv-Fo/edit?pli=1&gid=0#gid=0), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
-
-### Submit RNAseq - **TODO** (perhaps)
-#### Preparations
-* Sample ID gave BioSample ID via ERGA tracker portal
-* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
-
-#### XML
-* I created [batch10-CNAG-RNAseq.tsv](./data/batch10-CNAG-RNAseq.tsv)
-* Run script:
-    ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f batch10-CNAG-RNAseq.tsv -p ERGA-BGE -o batch10-CNAG-RNAseq
-    ```
-* Update batch10-CNAG-RNAseq.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession="PRJEB96037"/> - Brachydesmus stygivagus, HC061-1A1A-CL
-    <STUDY_REF accession="PRJEB96082"/> - Troglophilus ovuliformis, HC064-1A1A
-    <STUDY_REF accession="PRJEB89645"/> - Chaetopelma olivaceum, HC065-1A1A
-    ```
-* Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library names and titles, since the other data types have the platform named
-* Study is private, so submission.xml with hold date is used.
-* Submit using curl:
-    ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@batch10-CNAG-RNAseq.exp.xml" -F "RUN=@batch10-CNAG-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* Receipt:
-    ```
-
-    ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)

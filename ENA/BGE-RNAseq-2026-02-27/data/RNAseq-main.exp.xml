@@ -1,0 +1,969 @@
+<?xml version="1.0" ?>
+<EXPERIMENT_SET>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_heTriNodu_Illumina_RNA-Seq_TnoduSample004_YF-4364-RE026-1A">
+		<TITLE>Triaenophorus nodulosus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB79894"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115098052"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE026-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_gfCryBron_Illumina_RNA-Seq_DSM_104551_18__DSM_104551_19__DSM_104551_20__DSM_104551_21_YF-4364-RE027-1A1-2-pool">
+		<TITLE>Cryptotrichosporon brontae Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB91102"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115084251"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE027-1A1-2-pool Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qmNipGamm_Illumina_RNA-Seq_DE105_012_YF-4364-RE028-1A">
+		<TITLE>Niphargus gammariformis Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90636"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115536143"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE028-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_kaClaLepa_Illumina_RNA-Seq_FS42549324_YF-4364-RE029-1A">
+		<TITLE>Clavelina lepadiformis Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90612"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115782299"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE029-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_kaMicSqua_Illumina_RNA-Seq_FS42549335_YF-4364-RE030-1A">
+		<TITLE>Microcosmus squamiger Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB83563"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115782290"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE030-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_icLapAnag_Illumina_RNA-Seq_FS38819785_YF-4364-RE031-1A">
+		<TITLE>Laparocerus anagae Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB83457"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115808863"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE031-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqTroLibu_Illumina_RNA-Seq_FF03939993_FF03939999_YF-4364-RE033-2A">
+		<TITLE>Troglohyphantes liburnicus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96410"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115118107"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE033-2A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqRhoMagi_Illumina_RNA-Seq_H000528066_H000535907_YF-4364-RE034-2A">
+		<TITLE>Rhode magnifica Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96404"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115527213"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE034-2A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqStaHerc_Illumina_RNA-Seq_H000528904_YF-4364-RE035-1A">
+		<TITLE>Stalagtia hercegovinensis Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96407"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115527237"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE035-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_inOsmFulv_Illumina_RNA-Seq_FS55571897_YF-4364-RE036-1A">
+		<TITLE>Osmylus fulvicephalus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90646"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115755037"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE036-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_rTriTgu_Illumina_RNA-Seq_TT1_TT3_TT4_TT5_YF-4364-RE037-1A1-2-pool">
+		<TITLE>Trionyx triungius Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96316"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115737672"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE037-1A1-2-pool Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_icProCypr_Illumina_RNA-Seq_LV6000912292_YF-4364-RE038-1A">
+		<TITLE>Propomacrus cypriacus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90649"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289666"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE038-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqAegCypr_Illumina_RNA-Seq_LV6000912370_YF-4364-RE039-1A">
+		<TITLE>Aegaeobuthus cyprius Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90592"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289588"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE039-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqAgeOrie_Illumina_RNA-Seq_LV6000912408_YF-4364-RE040-1A">
+		<TITLE>Agelena orientalis Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90605"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289648"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE040-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqArtNeph_Illumina_RNA-Seq_LV6000659173_YF-4364-RE041-2A">
+		<TITLE>Artema nephilit Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90607"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116298746"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE041-2A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqButKunt_Illumina_RNA-Seq_LV6000912364_LV6000912379_LV6000912355_YF-4364-RE042-1A2-4-pool">
+		<TITLE>Buthus kunti Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90597"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289416"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE042-1A2-4-pool Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qqLycPrae_Illumina_RNA-Seq_LV6000912302_YF-4364-RE043-1A">
+		<TITLE>Lycosa praegrandis Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90409"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289566"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE043-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iqAioThal_Illumina_RNA-Seq_LV6000904914_YF-4364-RE044-1A">
+		<TITLE>Aiolopus thalassinus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90990"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116282578"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE044-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iqDecAlbi_Illumina_RNA-Seq_LV6000905102_YF-4364-RE045-1A">
+		<TITLE>Decticus albifrons Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90632"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116283196"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE045-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iqPlaFalx_Illumina_RNA-Seq_LV6000903691_YF-4364-RE046-1A">
+		<TITLE>Platycleis falx Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90655"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116287181"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE046-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iqSphRube_Illumina_RNA-Seq_LV6000908963_YF-4364-RE047-1A">
+		<TITLE>Sphingonotus rubescens Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90653"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116287544"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE047-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyAntRoge_Illumina_RNA-Seq_LV6000659260_YF-4364-RE048-1A">
+		<TITLE>Anthophora rogenhoferi Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96310"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116299000"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE048-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyCatAphr_Illumina_RNA-Seq_LV6000912123_YF-4364-RE049-1A">
+		<TITLE>Cataglyphis aphrodite Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96318"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289142"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE049-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyCerCypr_Illumina_RNA-Seq_LV6000912598_YF-4364-RE050-1A">
+		<TITLE>Ceratina cypriaca Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB91071"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289346"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE050-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyColCypr_Illumina_RNA-Seq_LV6000911862_YF-4364-RE051-1A">
+		<TITLE>Colletes cyprius Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96312"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116299214"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE051-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_ihConPter_Illumina_RNA-Seq_LV6000912627_YF-4364-RE052-1A">
+		<TITLE>Compsidolon pterocephali Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB91095"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289366"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE052-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyEucMavr_Illumina_RNA-Seq_LV6000911915_YF-4364-RE053-1A">
+		<TITLE>Eucera mavromoustakisi Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96314"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116299230"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE053-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_icEutAnna_Illumina_RNA-Seq_LV6000912026_YF-4364-RE054-2A">
+		<TITLE>Eutagenia annae Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB93959"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289258"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE054-2A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyHalNico_Illumina_RNA-Seq_LV6000911861_YF-4364-RE055-1A">
+		<TITLE>Halictus nicosiae Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90995"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116299219"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE055-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyMegPost_Illumina_RNA-Seq_LV6000912700_LV6000912692_YF-4364-RE056-1A">
+		<TITLE>Megachile posti Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB91079"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116288894"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE056-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyMesBuce_Illumina_RNA-Seq_LV6000912124_YF-4364-RE057-1A">
+		<TITLE>Messor bucephalus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96532"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289137"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE057-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyMesOrie_Illumina_RNA-Seq_LV6000912109_YF-4364-RE058-1A">
+		<TITLE>Messor orientalis Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB100781"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116299519"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE058-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_icSteAust_Illumina_RNA-Seq_LV6000912687_YF-4364-RE059-1A">
+		<TITLE>Stenosis austini Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB91066"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289230"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE059-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_ihAphHill_Illumina_RNA-Seq_LV6000904602_YF-4364-RE060-1A">
+		<TITLE>Aphis hillerislambersi Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB93933"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116282515"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE060-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iyBomRudr_Illumina_RNA-Seq_LV6000905150_YF-4364-RE061-1A">
+		<TITLE>Bombus ruderatus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB91068"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116283034"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE061-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_ihDacCocc_Illumina_RNA-Seq_LV6000903709_YF-4364-RE062-1A">
+		<TITLE>Dactylopius coccus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90601"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116283222"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE062-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_icScaAbbr_Illumina_RNA-Seq_LV6000905033_YF-4364-RE064-1A">
+		<TITLE>Scarites abbreviatus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB91089"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116326156"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE064-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_mMonMoa_Illumina_RNA-Seq_FS42549316_YF-4364-RE065-1A">
+		<TITLE>Monachus monachus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB90634"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA117387579"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE065-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_uoHydFoet_Illumina_RNA-Seq_TM2301_HydFoe_25-4-23_YF-4364-RE066-1A1-2-pool">
+		<TITLE>Hydrurus foetidus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96365"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA114553221"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE066-1A1-2-pool Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_icAgrGian_Illumina_RNA-Seq_LV6000912612_YF-4364-RE067-1A">
+		<TITLE>Agrilus gianassoi Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB105532"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289312"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE067-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_qdBraStyg_Illumina_RNA-Seq_LV6000914151_LV6000914150_YF-4364-RE068-2A">
+		<TITLE>Brachydesmus stygivagus Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96037"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115929028"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE068-2A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_ilManCypr_Illumina_RNA-Seq_LV6000912707_YF-4364-RE070-1A">
+		<TITLE>Maniola cypricola Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB105548"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116289206"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE070-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+</EXPERIMENT_SET>

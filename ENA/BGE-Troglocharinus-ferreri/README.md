@@ -1,7 +1,7 @@
 ---
 Redmine_issue: https://projects.nbis.se/issues/6716
 Repository: ENA
-Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
+Submission_type: Hi-C # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
 Top_level_acccession: 
@@ -16,7 +16,7 @@ Submission of raw reads for *Troglocharinus ferreri* to facilitate assembly and 
 
 * [Metadata template](./data/BGE-Troglocharinus-ferreri-metadata.xlsx)
 * [BGE HiC metadata](./data/icTroFerr-HiC.tsv)
-* [BGE RNAseq metadata](./data/icTroFerr-RNAseq.tsv)
+
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
@@ -58,33 +58,5 @@ Submission of raw reads for *Troglocharinus ferreri* to facilitate assembly and 
         <MESSAGES/>
         <ACTIONS>ADD</ACTIONS>
     </RECEIPT>
-    ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
-
-### Submit RNAseq - **TODO**
-#### Preparations
-* Sample ID gave BioSample ID via ERGA tracker portal
-* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
-
-#### XML
-* I created [icTroFerr-RNAseq.tsv](./data/icTroFerr-RNAseq.tsv)
-* Run script:
-    ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icTroFerr-RNAseq.tsv -p ERGA-BGE -o icTroFerr-RNAseq
-    ```
-* Update icTroFerr-RNAseq.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession="PRJEB96376"/>
-    ```
-* Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name and title, since the other data types have the platform named
-* Study is private, so submission.xml with hold date is used.
-* Submit using curl:
-    ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@icTroFerr-RNAseq.exp.xml" -F "RUN=@icTroFerr-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* Receipt:
-    ```
-
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)

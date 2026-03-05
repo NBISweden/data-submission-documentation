@@ -109,32 +109,8 @@ Submission of raw reads for *Cryptotrichosporon brontae* to facilitate assembly 
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 
-### Submit RNAseq - **TODO**
-
-#### Preparations
-
-#### XML
-* I created [gfCryBron-RNAseq.tsv](./data/gfCryBron-RNAseq.tsv)
-* Run script:
-    ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f gfCryBron-RNAseq.tsv -p ERGA-BGE -o gfCryBron-RNAseq
-    ```
-* Update gfCryBron-RNAseq.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession="PRJEB91102"/>
-    ```
-* Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission-hold.xml with hold date is used.
-* Submit using curl:
-    ```
-        curl -u username:password -F "SUBMISSION=@submission-hold.xml" -F "EXPERIMENT=@gfCryBron-RNAseq.exp.xml" -F "RUN=@gfCryBron-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* Receipt:
-    ```
-
-    ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+### Submit RNAseq
+* See [README RNAseq submission](../BGE-RNAseq-2026-02-27/README.md)
 
 ### Submit assembly
 

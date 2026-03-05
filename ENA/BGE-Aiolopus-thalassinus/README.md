@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB96346 (umbrella), PRJEB90990 (experiment), PRJEB90991 (assembly)
+Top_level_acccession: PRJEB96346 (umbrella), PRJEB90990 (experiment), PRJEB90991 (assembly), PRJEB108665 (mito)
 ---
 
 # BGE - *Aiolopus thalassinus*
@@ -145,33 +145,82 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 * One of the files had wrong checksum (3A-CL reverse file), so I updated via browser to new one.
 
-### Submit RNAseq - **TODO**
-#### Preparations
-* Sample ID gave BioSample ID via ERGA tracker portal
-* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
+### Submit RNAseq
+* See [README RNAseq submission](../BGE-RNAseq-2026-02-27/README.md)
 
-#### XML
-* I created [iqAioThal-RNAseq.tsv](./data/iqAioThal-RNAseq.tsv)
-* Run script:
+### Submit assembly
+* There is a mito assembly as well, so I had to create a project for this:
+    * I created [qAioThal-mito.study.xml](./data/qAioThal-mito.study.xml) and submitted using curl:
+        ```
+        curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@qAioThal-mito.study.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    * Receipt:
+        ```
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2026-02-23T16:00:34.847Z" submissionFile="submission.xml" success="true">
+            <PROJECT accession="PRJEB108665" alias="erga-bge-iqAioThal3_mito-2026-02-23" status="PRIVATE" holdUntilDate="2026-06-07+01:00">
+                <EXT_ID accession="ERP189502" type="study"/>
+            </PROJECT>
+            <SUBMISSION accession="ERA35847515" alias="SUBMISSION-23-02-2026-16:00:34:690"/>
+            <MESSAGES>
+                <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+            </MESSAGES>
+            <ACTIONS>ADD</ACTIONS>
+            <ACTIONS>HOLD</ACTIONS>
+        </RECEIPT>
+        ``` 
+* I created manifest files [iqAioThal3-manifest.txt](./data/iqAioThal3-manifest.txt) and [iqAioThal3-mito-manifest.txt](./data/iqAioThal3-mito-manifest.txt)
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/A-thalassinus) and copied & gzipped manifests, assembly files and chromosome lists there
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
     ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f iqAioThal-RNAseq.tsv -p ERGA-BGE -o iqAioThal-RNAseq
-    ```
-* Update -RNAseq.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession=""/>
-    ```
-* Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission.xml with hold date is used.
-* Submit using curl:
-    ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@iqAioThal-RNAseq.exp.xml" -F "RUN=@iqAioThal-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    interactive -t 02:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./iqAioThal3-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./iqAioThal3-mito-manifest.txt -validate
     ```
 * Receipt:
     ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/A-thalassinus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/A-thalassinus/iqAioThal3.priCur.20260220.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/A-thalassinus/chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/A-thalassinus/unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29118200
 
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/A-thalassinus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/A-thalassinus/iqAioThal3.mito.20260220.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/A-thalassinus/mito-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29118204
     ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    iqAioThal3-mito.1 | GCA_981173225 | PRJEB108665 | ERS21326517 |                                 |              | OZ414170-OZ414170
+    ```
+* Release study and check that it is shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-02-23T16:30:54.547Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96346" alias="erga-bge-iqAioThal-study-umbrella-2025-08-25" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-23-02-2026-16:30:54:257"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
+    ```
 
 ### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).

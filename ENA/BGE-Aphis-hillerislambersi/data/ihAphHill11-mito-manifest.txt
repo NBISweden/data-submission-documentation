@@ -1,0 +1,12 @@
+STUDY	PRJEB108460
+SAMPLE	ERS25260761
+RUN_REF	ERR15289046, ERR15651460
+ASSEMBLYNAME	ihAphHill11-mito.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	3500
+PROGRAM	MitoHiFi (3.2.3)
+PLATFORM	PacBio, Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The mitochondrial genome was assembled using MitoHiFi (3.2.3)'
+FASTA	ihAphHill11.mito.20260216.fa.gz
+CHROMOSOME_LIST	mito-chromosome_list.txt.gz

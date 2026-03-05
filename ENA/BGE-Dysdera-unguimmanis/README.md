@@ -1,7 +1,7 @@
 ---
 Redmine_issue: https://projects.nbis.se/issues/6716
 Repository: ENA
-Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
+Submission_type: Hi-C # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
 Top_level_acccession: 
@@ -16,9 +16,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ## Procedure overview and links to examples
 
 * [Metadata template](./data/BGE-Dysdera-unguimmanis-metadata.xlsx)
-* [BGE HiFi metadata](./data/qqDysUngu-HiFi.tsv)
 * [BGE HiC metadata](./data/qqDysUngu-HiC.tsv)
-* [BGE RNAseq metadata](./data/qqDysUngu-RNAseq.tsv)
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
@@ -58,33 +56,5 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
         <MESSAGES/>
         <ACTIONS>ADD</ACTIONS>
     </RECEIPT>
-    ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
-
-### Submit RNAseq - **TODO**
-#### Preparations
-* Sample ID gave BioSample ID via ERGA tracker portal
-* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
-
-#### XML
-* I created [qqDysUngu-RNAseq.tsv](./data/qqDysUngu-RNAseq.tsv)
-* Run script:
-    ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f qqDysUngu-RNAseq.tsv -p ERGA-BGE -o qqDysUngu-RNAseq
-    ```
-* Update qqDysUngu-RNAseq.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession=""/>
-    ```
-* Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission.xml with hold date is used.
-* Submit using curl:
-    ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@qqDysUngu-RNAseq.exp.xml" -F "RUN=@qqDysUngu-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* Receipt:
-    ```
-
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)

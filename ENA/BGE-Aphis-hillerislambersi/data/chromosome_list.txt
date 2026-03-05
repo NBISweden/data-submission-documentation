@@ -1,0 +1,4 @@
+SUPER_1	1	Linear-Chromosome
+SUPER_2	2	Linear-Chromosome
+SUPER_3	3	Linear-Chromosome
+SUPER_X	X	Linear-Chromosome

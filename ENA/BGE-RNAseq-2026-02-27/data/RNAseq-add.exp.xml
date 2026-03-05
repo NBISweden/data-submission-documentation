@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<EXPERIMENT_SET>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_wjOphPuer_Illumina_RNA-Seq_FS38820316_FS38820317_YF-4364-RE032-2A">
+		<TITLE>Ophryotrocha puerilis Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB91109"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="ERS29404660"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE032-2A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_ilEumAren_Illumina_RNA-Seq_LV6000912183_YF-4364-RE069-1A">
+		<TITLE>Eumannia arenbergeri Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB105540"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA116299549"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YF-4364-RE069-1A Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+	<EXPERIMENT center_name="SCILIFELAB" alias="exp_iqTroOvul_Illumina_RNA-Seq_ERGA_NT_0292_00001_YK-4511-CNAG-BGE-214-4447AK">
+		<TITLE>Troglophilus ovuliformis Illumina RNA-Seq data</TITLE>
+		<STUDY_REF accession="PRJEB96082"/>
+		<DESIGN>
+			<DESIGN_DESCRIPTION/>
+			<SAMPLE_DESCRIPTOR accession="SAMEA115873891"/>
+			<LIBRARY_DESCRIPTOR>
+				<LIBRARY_NAME>YK-4511-CNAG-BGE-214-4447AK Illumina RNA-Seq</LIBRARY_NAME>
+				<LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
+				<LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE>
+				<LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION>
+				<LIBRARY_LAYOUT>
+					<PAIRED NOMINAL_LENGTH="150"/>
+				</LIBRARY_LAYOUT>
+				<LIBRARY_CONSTRUCTION_PROTOCOL>The RNA sequencing library is prepared using the TruSeq Stranded mRNA Library Preparation Kit with poly-A selection (cat# 20020595, Illumina Inc.). Library preparation is performed according to the manufacturer's protocol (#1000000040498). Before library preparation, the quality and quantity of the samples are evaluated using either the Fragment Analyzer system (DNF-471 kit) or the TapeStation 4200 (RNA ScreenTape), both systems from Agilent Technologies.</LIBRARY_CONSTRUCTION_PROTOCOL>
+			</LIBRARY_DESCRIPTOR>
+		</DESIGN>
+		<PLATFORM>
+			<ILLUMINA>
+				<INSTRUMENT_MODEL>Illumina NovaSeq X</INSTRUMENT_MODEL>
+			</ILLUMINA>
+		</PLATFORM>
+	</EXPERIMENT>
+</EXPERIMENT_SET>
