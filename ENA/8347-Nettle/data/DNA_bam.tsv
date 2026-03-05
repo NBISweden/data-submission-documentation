@@ -1,0 +1,3 @@
+study	sample	library_name	library_strategy	library_source	library_selection	library_layout	insert_size	library_construction_protocol	platform	instrument_model	file_name	file_md5	forward_file_name	forward_file_md5	reverse_file_name	reverse_file_md5									
+PRJEB107427	JN2	pr_126_003	WGS	GENOMIC	RANDOM	SINGLE	10000	Generation of long-read sequencing data for a high quality genome-assembly	PACBIO_SMRT	Revio	/m84045_250226_170828_s1.hifi_reads.bc2045.bam	1ac468942fc7abb16f203be41d4c7d6a													
+PRJEB107427	OX	pr_126_001	WGS	GENOMIC	RANDOM	SINGLE	10000	Generation of long-read sequencing data for a high quality genome-assembly	PACBIO_SMRT	Revio	/m84045_241029_153743_s1.hifi_reads.bc2139.bam	43ecfee2401c26e7f6e9acfabf525600													

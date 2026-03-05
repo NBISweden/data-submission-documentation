@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2026-02-16T13:11:42.038Z" submissionFile="submission-STOCKHOLM UNIVERSITY_1771247502038.xml" success="true">
+     <EXPERIMENT accession="ERX16077342" alias="ena-EXPERIMENT-TAB-16-02-2026-13:11:41:491-62181" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16077343" alias="ena-EXPERIMENT-TAB-16-02-2026-13:11:41:493-62183" status="PRIVATE"/>
+     <RUN accession="ERR16686463" alias="ena-RUN-TAB-16-02-2026-13:11:41:492-62182" status="PRIVATE"/>
+     <RUN accession="ERR16686464" alias="ena-RUN-TAB-16-02-2026-13:11:41:493-62184" status="PRIVATE"/>
+     <SUBMISSION accession="ERA35739850" alias="ena-SUBMISSION-TAB-16-02-2026-13:11:41:493-62185"/>
+     <MESSAGES>
+          <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+     <ACTIONS>HOLD</ACTIONS>
+</RECEIPT>
