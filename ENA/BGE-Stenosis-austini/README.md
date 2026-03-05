@@ -104,33 +104,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
-### Submit RNAseq - **TODO**
-#### Preparations
-* Sample ID gave BioSample ID via ERGA tracker portal
-* The data files were transferred together with other species received in this batch, using `lftp webin2.ebi.ac.uk -u Webin-39907` and `mput Sample*/*.fastq.gz` and added ToLID to the files using rename function in FileZilla, to make it easier to see that right files will be submitted per species.
-
-#### XML
-* I created [icSteAust-RNAseq.tsv](./data/icSteAust-RNAseq.tsv)
-* Run script:
-    ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icSteAust-RNAseq.tsv -p ERGA-BGE -o icSteAust-RNAseq
-    ```
-* Update -RNAseq.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession="PRJEB91066"/>
-    ```
-* Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission.xml with hold date is used.
-* Submit using curl:
-    ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@icSteAust-RNAseq.exp.xml" -F "RUN=@icSteAust-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* Receipt:
-    ```
-
-    ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+### Submit RNAseq
+* See [README RNAseq submission](../BGE-RNAseq-2026-02-27/README.md)
 
 ### Submit assembly
 

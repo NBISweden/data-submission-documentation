@@ -1,7 +1,7 @@
 ---
 Redmine_issue: https://projects.nbis.se/issues/6716
 Repository: ENA
-Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
+Submission_type: HiFi, Hi-C, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
 Top_level_acccession: PRJEB96512 (umbrella), PRJEB83554 (experiment), PRJEB83555 (assembly)
@@ -18,7 +18,6 @@ Submission will be done via CNAG script and programmatic submission route using 
 * [Metadata template](./data/BGE-Wirenia-argentea-metadata.xlsx)
 * [BGE HiFi metadata](./data/xoWirArge-hifi.tsv)
 * [BGE HiC metadata](./data/xoWirArge-hic.tsv)
-* [BGE RNAseq metadata](./data/xoWirArge-rnaseq.tsv)
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
@@ -264,32 +263,8 @@ Submission will be done via CNAG script and programmatic submission route using 
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 ### Submit RNAseq
-**To be done**
-* Identify which sample
+* Not done by SciLifeLab
 
-* Run CNAG script
-    ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f xoWirArge-RNAseq.tsv -p ERGA-BGE -o xoWirArge-RNAseq
-    ```
-* Validate output (ignore the study xml)
-* Update xoWirArge-RNAseq.exp.xml to reference accession number of previously registered study (HiC):
-    ```
-    <STUDY_REF accession="PRJEB83554"/>
-    ```
-
-* Copy all xml files to Uppmax:
-    ```
-    scp submission.xml xoWirArge-RNAseq*.xml yvonnek@rackham.uppmax.uu.se:/home/yvonnek/BGE-Wirenia-argentea/
-    ```
-* Submit only experiment:
-    ```
-    curl -u username:password -F "SUBMISSION=@submission.xml"  -F "EXPERIMENT=@xoWirArge-RNAseq.exp.xml" -F "RUN=@xoWirArge-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* Receipt:
-    ```
-    
-    ```
-* Update of submission status at [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/)
 ### Umbrella project
 * For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 

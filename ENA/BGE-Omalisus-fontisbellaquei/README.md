@@ -1,7 +1,7 @@
 ---
 Redmine_issue: https://projects.nbis.se/issues/6716
 Repository: ENA
-Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
+Submission_type: HiFi, Hi-C, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
 Top_level_acccession: PRJEB96498 (umbrella), PRJEB91106 (experiment), PRJEB91107 (assembly)
@@ -18,7 +18,6 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * [Metadata template](./data/BGE-Omalisus-fontisbellaquei-metadata.xlsx)
 * [BGE HiFi metadata](./data/icOmaFont-HiFi.tsv)
 * [BGE HiC metadata](./data/icOmaFont-HiC.tsv)
-* [BGE RNAseq metadata](./data/icOmaFont-RNAseq.tsv)
 
 ## Lessons learned
 <!-- What went well? What did not went so well? What would you have done differently? -->
@@ -110,32 +109,8 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
 
 
-### Submit RNAseq - **TODO**
-
-#### Preparations
-
-#### XML
-* I created [icOmaFont-RNAseq.tsv](./data/icOmaFont-RNAseq.tsv)
-* Run script:
-    ```
-    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icOmaFont-RNAseq.tsv -p ERGA-BGE -o icOmaFont-RNAseq
-    ```
-* Update icOmaFont-RNAseq.exp.xml to reference accession number of previously registered study:
-    ```
-    <STUDY_REF accession="PRJEB91106"/>
-    ```
-* Remove row `<PAIRED/>` (error in script)
-* I added 'Illumina' to the library name, since the other data types have the platform named
-* Study is private, so submission.xml with hold date is used.
-* Submit using curl:
-    ```
-        curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@icOmaFont-RNAseq.exp.xml" -F "RUN=@icOmaFont-RNAseq.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-    ```
-* Receipt:
-    ```
-
-    ```
-* Add accession numbers & update status in SciLifeLab [sheet](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/), update status in BGE [tracking sheet](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/)
+### Submit RNAseq
+* Not done by SciLifeLab
 
 ### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
