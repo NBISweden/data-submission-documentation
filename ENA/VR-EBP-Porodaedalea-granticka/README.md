@@ -188,7 +188,7 @@ gzip PRJEB71491.embl
 
 * Validated the file, but it complained on `ERROR: "mRNA" Features locations are duplicated - consider merging qualifiers.`. When I looked at the lines concerned, I saw that there were both AUGUSTUS and GeneMark.hmm3 predictions on same location. I asked bioinformatician if it was ok to remove them from the gff file, which it was.
 
-* Rerun EMBmyGFF3:
+* Rerun EMBLmyGFF3:
     ```
     conda activate py38
     EMBLmyGFF3 gfPorChry.pri.20230929_ENAcompliant-no-mRNAdup.gff.gz gfPorChry.pri.20230803.fa.gz --topology linear --molecule_type 'genomic DNA' --transl_table 1 --species "Porodaedalea chrysoloma" --locus_tag PORCHR --project_id PRJEB71491 -o PRJEB71491.embl
