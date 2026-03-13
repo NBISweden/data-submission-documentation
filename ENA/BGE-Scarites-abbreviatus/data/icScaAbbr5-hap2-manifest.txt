@@ -1,0 +1,13 @@
+STUDY	PRJEB110036
+SAMPLE	SAMEA116326153
+RUN_REF	ERR15159844, ERR15651793
+ASSEMBLYNAME	icScaAbbr5-hap2.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	60
+PROGRAM	Hifiasm (version 0.25.0-r726), purge_dups (version 1.2.6), FCS-GX (version 0.5.5), YaHS (version 1.2.2)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Scarites abbreviatus was assembled with Hifiasm (version 0.25.0-r726) in HiC phasing mode. The two haplotype assemblies are quite in-balanced in terms of yield (hap1 - contigs: 702, yield 762Mb, N50: 17.0Mb; hap2 - contigs: 726, yield 1071Mb, N50: 10.1Mb). For each haplotype purge_dups (version 1.2.6), FCS-GX (version 0.5.5) based on the ALL database released on 2023/01 and yahs was run separately. Manual curations was done in dual-curation mode (3 rounds) to fix haplotype misplacements, and misjoins and followed by one curation round on each haplotype. The X-chromosome which was originally placed in hap2 was moved to hap1.'
+FASTA	icScaAbbr5_curated_20260216.hap2.fa.gz
+CHROMOSOME_LIST	hap2-chromosome_list.txt.gz
