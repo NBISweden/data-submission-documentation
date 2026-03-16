@@ -171,8 +171,10 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
     ```
-    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    icScaAbbr5-hap1.1 | GCA_982297005 | PRJEB91090  | ERS21374996 | CEVJTF010000001-CEVJTF010000076 |              | OZ432403-OZ432428
+    icScaAbbr5-hap2.1 | GCA_982297035 | PRJEB110036 | ERS21374996 | CEVJTH010000001-CEVJTH010000182 |              | OZ432431-OZ432454
+    icScaAbbr5-mito.1 | GCA_982297045 | PRJEB110037 | ERS21374996 |                                 |              | OZ432429-OZ432429
     ```
 * Release studies and check that they are shown under umbrella
 
