@@ -160,7 +160,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-03-17T14:52:37.707Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB91534" alias="erga-bge-qmNipGamm-study-umbrella-2025-07-02" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-17-03-2026-14:52:37:528"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
@@ -200,4 +207,3 @@ For each of the BGE species, an **umbrella** project has to be created and linke
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>    
     ```
-* **Note:** Add the assembly project `` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
