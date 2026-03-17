@@ -1,0 +1,14 @@
+STUDY	PRJEB90613
+SAMPLE	SAMEA115782298
+RUN_REF	ERR15132814, ERR15172550, ERR10501018
+ASSEMBLYNAME	kaClaLepa18-hap1.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	259
+PROGRAM	Hifiasm (v 0.25.0-r726), FCS-GX (v 0.5.5), purge_dups (v 1.2.5), Tiara (v 1.0.3), Sanger-tol/blobtoolkit (v 0.9.0), Sanger-tol/curationpretext (v 1.5), PretextView (v 1.0.4), Sanger-tol/agp-tpf-utils
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'An initial assembly indicated moderate contamination and poor quality hi-c data. The hifi data was subsampled to 130x with Rasusa 2.2.2 to remove low frequency contaminants. Clavelina lepadiformis was assembled with Hifiasm (version 0.25.0-r726) and additionally hi-c from another individual sequenced by the Sanger institute (ERR10501018: coverage 869x). The consensus assembly was checked for contaminants using FCS-GX (version 0.5.5) based on the ALL database released on 2023/01, and purged for haplotypic duplication using purge_dups (version 1.2.5). Yahs (version 1.2a.1) was used to scaffold contigs into chromosomes with the extra option --no-contig-ec. Contaminants were identified with Tiara (version 1.0.3) and Sanger-tol/blobtoolkit (version 0.9.0). The manual curation was done with Sanger-tol/curationpretext (version 1.5), PretextView (version 1.0.4) and Sanger-tol/agp-tpf-utils (commit: 35ea45dbcd8f3ece7a91104e5813541b55beb2ff). Contaminants were identified in the contact map, grouped with associated contigs, and removed.'
+FASTA	kaClaLepa1.hap1.3.primary.curated.fa.gz
+CHROMOSOME_LIST	hap1-chromosome_list.txt.gz
+UNLOCALISED_LIST	hap1-unlocalised_list.txt.gz

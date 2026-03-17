@@ -129,7 +129,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
             <ACTIONS>HOLD</ACTIONS>
         </RECEIPT>
         ```
-* I created 3 manifest files [icScaAbbr5-manifest.txt](./data/icScaAbbr5-manifest.txt)
+* I created 3 manifest files [icScaAbbr5-hap1-manifest.txt](./data/icScaAbbr5-hap1-manifest.txt), [icScaAbbr5-hap2-manifest.txt](./data/icScaAbbr5-hap2-manifest.txt) and [icScaAbbr5-mito-manifest.txt](./data/icScaAbbr5-mito-manifest.txt)
 * I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/S-abbreviatus) and copied & gzipped manifest, assembly file and chromosome list there
 * Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
 

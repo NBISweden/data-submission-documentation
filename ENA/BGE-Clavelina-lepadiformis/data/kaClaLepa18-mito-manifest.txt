@@ -1,0 +1,12 @@
+STUDY	PRJEB110123
+SAMPLE	SAMEA115782298
+RUN_REF	ERR15132814
+ASSEMBLYNAME	kaClaLepa18-mito.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	14473
+PROGRAM	MitoHiFi (3.2.3)
+PLATFORM	PacBio, Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'The mitochondrial genome was assembled using MitoHiFi (3.2.3) with the parameter -o 13.'
+FASTA	Clavelina_lepadiformis-hifiasm-raw-default.final_mitogenome.fasta.gz
+CHROMOSOME_LIST	mito-chromosome_list.txt.gz
