@@ -13,7 +13,7 @@ Top_level_acccession: PRJEB111466 (umbrella), PRJEB72358 (reads + assembly), PRJ
 Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to be submitted. There are raw reads in form of HiFi, Isoseq and Illumina RNA sequences, an annotated genome assembly and a mito assembly. An umbrella project will be created to collect the two assemblies.
 
 ## Procedure overview and links to examples
-* [Metadata template](https://docs.google.com/spreadsheets/d/1uYqRAjXW04U5RW3K_R2k89tnC6-qMtfi/edit#gid=268563316)
+* [Metadata template](./data/VR-EBP-Gomphus-clavatus-metadata.xlsx)
 * Notes on how to [Create EMBL file](https://github.com/NBISweden/annotation-cluster/wiki/ENA-submission#create-embl-file)
 * Umbrella project at ENA [how to](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#umbrella-studies)
 * [SOP Umbrella projects](../SOP/register_umbrella_projects.md)
