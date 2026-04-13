@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Isoseq, RNA, mito, assembly, umbrella # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB72358 (reads + assembly), PRJEB111463 (mito assembly)
+Top_level_acccession: PRJEB111466 (umbrella), PRJEB72358 (reads + assembly), PRJEB111463 (mito assembly)
 ---
 
 # VR EBP - *Gomphus clavatus*
@@ -51,18 +51,26 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
 
 * A study for the *mitochondrial* assembly was registered in the Webin Portal with a release date of `2026-06-03`, study alias `GomClav1-mito`. The accession number obtained was `PRJEB111463`.
 
-* **TODO** An *umbrella* study was submitted programmatically, with a release date of `2026-06-03`, using [submission.xml](./data/submission.xml) and [umbrella.xml](./data/umbrella.xml):
+* An *umbrella* study was submitted programmatically, with a release date of `2026-06-03`, using [submission.xml](./data/submission.xml) and [umbrella.xml](./data/umbrella.xml):
 
     ```
-    curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"    
+    curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 
-    * Accession number received: ``
     * Receipt of the sumbission:
-
     ```
-
+    <RECEIPT receiptDate="2026-04-13T15:13:46.401+01:00" submissionFile="submission.xml" success="true">
+        <PROJECT accession="PRJEB111466" alias="GomClav-umbrella" status="PRIVATE" holdUntilDate="2026-06-03+01:00"/>
+        <SUBMISSION accession="ERA36069970" alias="SUBMISSION-13-04-2026-15:13:46:186"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
     ```
+* Accession number received: `PRJEB111466`
+
 
 ### Register sample
 * A ToLID was not provided, so I asked for one according to [SOP](../SOP/register_ToLID.md)
@@ -137,14 +145,14 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
 * Accession number: ``
 * Note: When running webin-cli locally on my laptop, I need to do `conda deactivate` before since I otherwise have an environment loaded by default that has wrong java version, but EMBLmyGFF3 needs the python version (3.10) which I have in my automatically activated conda environment.
 
-### Mito assembly **TODO**
+### Mito assembly
 * Since mito assemblies consists of only one sequence in the sequence file, a [chromosome assembly](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#chromosome-assembly) submission is the way to go:
     * The manifest needs one additional file, therein referenced as `CHROMOSOME_LIST: chromosome_list.txt.gz`
-    * In this [chromosome_list.txt](), a single row is added `identifier	MIT	Linear-Chromosome	Mitochondrion` (note, update this when I have the identifier)
+    * In this [chromosome_list.txt](./data/chromosome_list.txt), a single row is added `1	MIT	Linear-Chromosome	Mitochondrion`
     * The [naming convention](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file)
-* Validation and submission of [PRJEBXXXX-mito-manifest.txt](./data/PRJEBXXXXX-mito-manifest.txt) was done using webin-cli
+* Validation and submission of [PRJEB111463-mito-manifest.txt](./data/PRJEB111463-mito-manifest.txt) was done using webin-cli
     ```
-    java -jar ../../../Downloads/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEBXXXX-mito-manifest.txt -validate
+    java -jar ../../../Downloads/webin-cli-9.0.1.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB111463-mito-manifest.txt -validate
     ```
 * Receipt:
     ```
@@ -156,4 +164,3 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29285835
     ```
 * Accession number: `ERZ29285835`
-
