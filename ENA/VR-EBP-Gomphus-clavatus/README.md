@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Isoseq, RNA, mito, assembly, umbrella # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB72358
+Top_level_acccession: PRJEB72358 (reads + assembly), PRJEB111463 (mito assembly)
 ---
 
 # VR EBP - *Gomphus clavatus*
@@ -49,7 +49,7 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
     * Release date: `2026-02-05`
 * **Update 2026-01-23**: The release date was changed to `2026-06-03`
 
-* **TODO** A study for the *mitochondrial* assembly was registered in the Webin Portal with a release date of `2026-06-03`, study alias `GomCla1-mito`. The accession number obtained was ``.
+* A study for the *mitochondrial* assembly was registered in the Webin Portal with a release date of `2026-06-03`, study alias `GomClav1-mito`. The accession number obtained was `PRJEB111463`.
 
 * **TODO** An *umbrella* study was submitted programmatically, with a release date of `2026-06-03`, using [submission.xml](./data/submission.xml) and [umbrella.xml](./data/umbrella.xml):
 
@@ -146,5 +146,14 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
     ```
     java -jar ../../../Downloads/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEBXXXX-mito-manifest.txt -validate
     ```
-* Accession number: ``
+* Receipt:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /home/yvonne/Gomphus-clavatus/././webin-cli.report
+    INFO : Uploading file: /home/yvonne/Gomphus-clavatus/gomcla_mtdna.fasta.gz
+    INFO : Uploading file: /home/yvonne/Gomphus-clavatus/chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29285835
+    ```
+* Accession number: `ERZ29285835`
 
