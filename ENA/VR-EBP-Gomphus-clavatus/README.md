@@ -91,11 +91,51 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
 ### Genome assembly **TODO**
 * The bioinformatician produced the embl flat file, which I copied to my laptop
 * However, it turned out that it was created without exposing variables of EMBLmyGFF3, so I redid the embl file using `sbatch run_emblmygff3_GOMCLA.sh` on nac-login cluster (script [run_emblmygff3_GOMCLA.sh](./scripts/run_emblmygff3_GOMCLA.sh))
-* Validation and submission of [PRJEB72358-genome-manifest.txt](./data/PRJEB72358-genome-manifest.txt) was done using webin-cli
+* Validation and submission of [PRJEB72358-genome-manifest.txt](./data/PRJEB72358-genome-manifest.txt) was done locally using webin-cli
     ```
-    java -jar ../../../Downloads/webin-cli-9.0.1.jar -ascp -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB72358-genome-manifest.txt -validate
+    java -jar ../../../Downloads/webin-cli-9.0.1.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB72358-genome-manifest.txt -validate
     ```
+* Validation of this file also failed, many duplicated features and they seem to be related to introns. Hence, I need to remove/ignore introns by updating the features .json file:
+    ```
+    EMBLmyGFF3 --expose_translations
+    /* update translation_gff_feature_to_embl_feature.json so that both exons and introns are ignored */
+    "exon": {
+   "remove": true
+    },
+    "intron": {
+    "remove": true
+    },
+    ```
+* However, when running EMBLmyGFF3 again I get the following:
+    ```
+    11:06:51 WARNING feature: Unknown qualifier 'makerName' - skipped              ]
+    11:06:51 ERROR feature: >>three_prime_utr<< is not a valid EMBL feature type. You can ignore this message if you don't need the feature.
+    Otherwise tell me which EMBL feature it corresponds to by adding the information within the json mapping file.
+    11:06:51 ERROR feature: >>stop_codon<< is not a valid EMBL feature type. You can ignore this message if you don't need the feature.
+    Otherwise tell me which EMBL feature it corresponds to by adding the information within the json mapping file.
+    11:06:51 ERROR feature: >>five_prime_utr<< is not a valid EMBL feature type. You can ignore this message if you don't need the feature.
+    Otherwise tell me which EMBL feature it corresponds to by adding the information within the json mapping file.
+    11:06:51 ERROR feature: >>start_codon<< is not a valid EMBL feature type. You can ignore this message if you don't need the feature.
+    Otherwise tell me which EMBL feature it corresponds to by adding the information within the json mapping file.
+    11:06:51 WARNING feature: Unknown qualifier 'uniprot_id' - skipped
+    ```
+    * While I *think* that makerName, start_codon, and stop_codon also can be ignored, I decided to fix the utr errors by changing `three_prime_UTR` to `three_prime_utr` (and dito for five prime) in translation_gff_feature_to_embl_feature.json
+* I redid the EMBLmyGFF3 and only the errors I expected remained, so I did a validation with webin-cli (version v2 was copied to PRJEB72358-GOMCLA.embl and gzipped). This resulted in three remaining errors:
+    ```
+    ERROR: "gene" Features with locations "complement(2589763..2593363)" are duplicated - consider merging qualifiers. [ line: 184423 of PRJEB72358-GOMCLA.embl.gz,  line: 184371 of PRJEB72358-GOMCLA.embl.gz]
+    ERROR: "gene" Features with locations "4332788..4336134" are duplicated - consider merging qualifiers. [ line: 212005 of PRJEB72358-GOMCLA.embl.gz, line: 211978 of PRJEB72358-GOMCLA.embl.gz]
+    ERROR: "gene" Features with locations "6178906..6182409" are duplicated - consider merging qualifiers. [ line: 1073970 of PRJEB72358-GOMCLA.embl.gz, line: 1073935 of PRJEB72358-GOMCLA.embl.gz]
+    ```
+    * Duplications (extracted gff3 is in [duplicate_genes.gff3](./data/duplicate_genes.gff3)):
+    ```
+    NBISG00000001526 and NBISG00000001527
+    NBISG00000001971 and NBISG00000001972
+    NBISG00000006661 and NBISG00000006662
+    ```
+    * I asked bioinformaticians for help
+
 * Accession number: ``
+* Note: When running webin-cli locally on my laptop, I need to do `conda deactivate` before since I otherwise have an environment loaded by default that has wrong java version, but EMBLmyGFF3 needs the python version (3.10) which I have in my automatically activated conda environment.
 
 ### Mito assembly **TODO**
 * Since mito assemblies consists of only one sequence in the sequence file, a [chromosome assembly](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#chromosome-assembly) submission is the way to go:
