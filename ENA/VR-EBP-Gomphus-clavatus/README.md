@@ -49,9 +49,9 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
     * Release date: `2026-02-05`
 * **Update 2026-01-23**: The release date was changed to `2026-06-03`
 
-* **TODO** A study for the *mitochondrial* assembly was registered in the Webin Portal with a release date of `2026-06-03`, study alias `mito-GomCla1`. The accession number obtained was ``.
+* **TODO** A study for the *mitochondrial* assembly was registered in the Webin Portal with a release date of `2026-06-03`, study alias `GomCla1-mito`. The accession number obtained was ``.
 
-* **TODO**An *umbrella* study was submitted programmatically, with a release date of `2026-06-03`, using [submission.xml](./data/submission.xml) and [umbrella.xml](./data/umbrella.xml):
+* **TODO** An *umbrella* study was submitted programmatically, with a release date of `2026-06-03`, using [submission.xml](./data/submission.xml) and [umbrella.xml](./data/umbrella.xml):
 
     ```
     curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"    
@@ -64,29 +64,29 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
 
     ```
 
-### Register sample **TODO**
+### Register sample
 * A ToLID was not provided, so I asked for one according to [SOP](../SOP/register_ToLID.md)
     * Taxonomy id: `80588`
-    * Specimen ID: ``
+    * Specimen ID: `` (this took too long to obtain, so I decided to do submission anyway, then we can **update the sample record later**)
     * Scientific name: `Gomphus clavatus`
-    * Received id: `gfGomClav1` (not done, but expected id to be received)
-* The sample was registered using the Webin Portal uploading [sample-metadata.tsv]()
-* Received accession number: ``
+    * Received id: `gfGomClav1` (requested 2026-04-13; expected id to be received, if not the sample at ENA needs to be updated with the actual id)
+* The sample was registered using the Webin Portal uploading [sample.tsv](./data/sample.tsv) (2026-04-13)
+* Received accession number: `ERS29654094`
 
-### Register experiment **TODO**
+### Register experiment
 * Manifests were created and copied to Uppmax, for each of the three types of sequences:
     * [PacBio HiFi manifest](./data/PRJEB72358-hifi-manifest.txt)
     * [PacBio Isoseq manifest](./data/PRJEB72358-isoseq-manifest.txt)
     * [Illumina RNA manifest](./data/PRJEB72358-Illumina-RNA-manifest.txt)
 * They were each submitted using Webin-CLI:
     ```
-    interactive -t 08:00:00 -A naiss2023-5-307
+    interactive -t 08:00:00 -A uppmax2025-2-58
     module load ascp
-    java -jar ../webin-cli-6.5.0.jar -ascp -context reads -userName $1 -password $2 -manifest $3 -outputDir Webin_output/ -submit
+    java -jar ../webin-cli-9.0.1.jar -context reads -userName $1 -password $2 -manifest $3 -outputDir Webin_output/ -submit
     ```
-* HiFi: ``, ``
-* Isoseq: ``, ``
-* RNA: ``, ``, ``
+* HiFi: `ERX16384961`, `ERR17001312`
+* Isoseq: `ERX16384963`, `ERR17001314`
+* RNA: `ERX16384962`, `ERR17001313`
 
 ### Genome assembly **TODO**
 * The bioinformatician produced the embl flat file, which I copied to my laptop
