@@ -181,3 +181,8 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29285835
     ```
 * Accession number: `ERZ29285835`
+* Accessioned:
+    ```
+    ASSEMBLY_NAME    | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
+    gfGomCla1-mito.1 | GCA_982449375 | PRJEB111463 | ERS29654094 |            |              | OZ457914-OZ457914
+    ´´´
