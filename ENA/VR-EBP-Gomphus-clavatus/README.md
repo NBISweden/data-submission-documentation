@@ -77,7 +77,7 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
     * Taxonomy id: `80588`
     * Specimen ID: `` (this took too long to obtain, so I decided to do submission anyway, then we can **update the sample record later**)
     * Scientific name: `Gomphus clavatus`
-    * Received id: `gfGomClav1` (requested 2026-04-13; expected id to be received, if not the sample at ENA needs to be updated with the actual id)
+    * Received id: `gfGomClav1`
 * The sample was registered using the Webin Portal uploading [sample.tsv](./data/sample.tsv) (2026-04-13)
 * Received accession number: `ERS29654094`
 
@@ -96,7 +96,7 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
 * Isoseq: `ERX16384963`, `ERR17001314`
 * RNA: `ERX16384962`, `ERR17001313`
 
-### Genome assembly **TODO**
+### Genome assembly
 * The bioinformatician produced the embl flat file, which I copied to my laptop
 * However, it turned out that it was created without exposing variables of EMBLmyGFF3, so I redid the embl file using `sbatch run_emblmygff3_GOMCLA.sh` on nac-login cluster (script [run_emblmygff3_GOMCLA.sh](./scripts/run_emblmygff3_GOMCLA.sh))
 * Validation and submission of [PRJEB72358-genome-manifest.txt](./data/PRJEB72358-genome-manifest.txt) was done locally using webin-cli
@@ -140,9 +140,26 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
     NBISG00000001971 and NBISG00000001972
     NBISG00000006661 and NBISG00000006662
     ```
-    * I asked bioinformaticians for help
+    * I asked bioinformaticians for help and received an updated .gff3 file where the script [filter_gomphus.sh](./scripts/filter_gomphus.sh) was used.
+* **Version 3:**
+    * I copied the new (filtered) .gff3 to my laptop and created a new .embl file:
+        ```
+        EMBLmyGFF3 gomcla_filtered.gff3 gomcla.fasta  --topology linear --molecule_type 'genomic DNA' --transl_table 1 --species 'Gomphus Clavatus' --locus_tag GOMCLA --project_id PRJEB72358 -o PRJEB72358-GOMCLA-v3.embl
+        cp PRJEB72358-GOMCLA-v3.embl PRJEB72358-GOMCLA.embl
+        gzip PRJEB72358-GOMCLA.embl
+        conda deactivate
+        java -jar ../webin-cli-9.0.1.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./PRJEB72358-genome-manifest.txt -validate
+        ```
+    * It finally validated without errors:
+        ```
+        INFO : Connecting to FTP server : webin2.ebi.ac.uk
+        INFO : Creating report file: /home/yvonne/Gomphus-clavatus/././webin-cli.report
+        INFO : Uploading file: /home/yvonne/Gomphus-clavatus/PRJEB72358-GOMCLA.embl.gz
+        INFO : Files have been uploaded to webin2.ebi.ac.uk.
+        INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29300436
+        ```
+* Accession number: `ERZ29300436`
 
-* Accession number: ``
 * Note: When running webin-cli locally on my laptop, I need to do `conda deactivate` before since I otherwise have an environment loaded by default that has wrong java version, but EMBLmyGFF3 needs the python version (3.10) which I have in my automatically activated conda environment.
 
 ### Mito assembly
