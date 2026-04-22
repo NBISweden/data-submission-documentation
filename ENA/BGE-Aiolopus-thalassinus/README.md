@@ -200,6 +200,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
     ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
     iqAioThal3-mito.1 | GCA_981173225 | PRJEB108665 | ERS21326517 |                                 |              | OZ414170-OZ414170
+    iqAioThal3.1      | GCA_981173635 | PRJEB90991  | ERS21326517 | CEVEHR010000001-CEVEHR010000036 |              | OZ417730-OZ417741
     ```
 * Release study and check that it is shown under umbrella
 

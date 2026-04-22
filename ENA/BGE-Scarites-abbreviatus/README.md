@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB96500 (umbrella), PRJEB91089 (experiment), PRJEB91090 (assembly)
+Top_level_acccession: PRJEB96500 (umbrella), PRJEB91089 (experiment), PRJEB91090 (assembly), PRJEB110036 (haploid), PRJEB110037 (mito)
 ---
 
 # BGE - *Scarites abbreviatus*
@@ -104,6 +104,98 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ### Submit RNAseq
 * See [README RNAseq submission](../BGE-RNAseq-2026-02-27/README.md)
+
+### Submit assembly
+* For this species there was 2 haploid assemblies as well as a mito assembly. Hence I needed to create 2 additional projects:
+    * I created [icScaAbbr-assembly-studies.xml](./data/icScaAbbr-assembly-studies.xml) and submitted via curl:
+        ```
+        curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@icScaAbbr-assembly-studies.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    * Receipt:
+        ```
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2026-03-13T09:32:47.051Z" submissionFile="submission.xml" success="true">
+            <PROJECT accession="PRJEB110036" alias="erga-bge-icScaAbbr5_haplo-2026-03-13" status="PRIVATE" holdUntilDate="2026-03-07Z">
+                <EXT_ID accession="ERP190761" type="study"/>
+            </PROJECT>
+            <PROJECT accession="PRJEB110037" alias="erga-bge-icScaAbbr5_mito-2026-03-13" status="PRIVATE" holdUntilDate="2026-03-07Z">
+                <EXT_ID accession="ERP190762" type="study"/>
+            </PROJECT>
+            <SUBMISSION accession="ERA36000231" alias="SUBMISSION-13-03-2026-09:32:46:955"/>
+            <MESSAGES>
+                <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+            </MESSAGES>
+            <ACTIONS>ADD</ACTIONS>
+            <ACTIONS>HOLD</ACTIONS>
+        </RECEIPT>
+        ```
+* I created 3 manifest files [icScaAbbr5-hap1-manifest.txt](./data/icScaAbbr5-hap1-manifest.txt), [icScaAbbr5-hap2-manifest.txt](./data/icScaAbbr5-hap2-manifest.txt) and [icScaAbbr5-mito-manifest.txt](./data/icScaAbbr5-mito-manifest.txt)
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/S-abbreviatus) and copied & gzipped manifest, assembly file and chromosome list there
+* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+
+    ```
+    interactive -t 08:00:00 -A uppmax2025-2-58
+    java -jar ~/webin-cli-9.0.1.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./icScaAbbr5-hap1-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./icScaAbbr5-hap2-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.1.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./icScaAbbr5-mito-manifest.txt -validate    
+    ```
+* Receipt hap1:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/S-abbreviatus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/S-abbreviatus/icScaAbbr5_curated_20260216.hap1.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/S-abbreviatus/hap1-chromosome_list.txt.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/S-abbreviatus/hap1-unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29236969
+    ```
+* Receipt hap2:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/S-abbreviatus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/S-abbreviatus/icScaAbbr5_curated_20260216.hap2.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/S-abbreviatus/hap2-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29236970
+    ```
+* Receipt mito:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/S-abbreviatus/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/S-abbreviatus/icScaAbbr5_mito_20251022.fa.gz
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/S-abbreviatus/mito-chromosome_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29236971
+    ```
+
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    icScaAbbr5-hap1.1 | GCA_982297005 | PRJEB91090  | ERS21374996 | CEVJTF010000001-CEVJTF010000076 |              | OZ432403-OZ432428
+    icScaAbbr5-hap2.1 | GCA_982297035 | PRJEB110036 | ERS21374996 | CEVJTH010000001-CEVJTH010000182 |              | OZ432431-OZ432454
+    icScaAbbr5-mito.1 | GCA_982297045 | PRJEB110037 | ERS21374996 |                                 |              | OZ432429-OZ432429
+    ```
+* Release studies and check that they are shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly projects when they have been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-03-13T10:26:44.932Z" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96500" alias="erga-bge-icScaAbbr-study-umbrella-2025-08-27" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-13-03-2026-10:26:44:619"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
+    ```
 
 ### Umbrella project
 For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).

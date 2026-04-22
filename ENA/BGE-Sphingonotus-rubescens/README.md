@@ -122,7 +122,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 
 ### Submit assembly
 * There are 2 haploids and 1 mito assembly to submit. Hence, need 2 more projects:
-    * I created [iqSphRube1-assembly-studies.xml](./data/iqSphRube1-assembly-studies.xml) and submitted using curl:
+    * I created [iqSphRube-assembly-studies.xml](./data/iqSphRube-assembly-studies.xml) and submitted using curl:
         ```
         curl -u username:password -F "SUBMISSION=@submission.xml"  -F "PROJECT=@iqSphRube-assembly-studies.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
         ```
