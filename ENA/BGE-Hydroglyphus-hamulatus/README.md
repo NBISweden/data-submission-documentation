@@ -57,7 +57,28 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
 
 * Received accession numbers: `ERX12708954`, `ERR13337980`, `ERX12708955`, `ERR13337981`
 
+#### Trimmed HiFi reads
 * **Note:** I was unaware that this was ULI when submitting HiFi reads. Hence, when trimmed fastq reads are available, these should be uploaded and replace .bam (or add barcode info in metadata i.e. in library_construction_protocol)
+
+* **Update 2026-04-24:** I've now gotten access to the trimmed reads. Not sure how to update the reads though, should it in fact be a separate set? Might be easier... ENA read the docs says *" If the submitted file has passed validation and been archived, it cannot be replaced"*. I wonder if I at least can add on the existing, respective, ERX? So that I use the same experiment xml and only submit a new run.xml?
+
+* I uploaded the 2 fastq files to ENA upload area from Pelle
+    ```
+    interactive -t 01:00:00 -A uppmax2025-2-58
+    cd proj/snic2021-6-194/BGE-Hydroglyphus_hamulatus-2024-assembly/data/deliveries/EBP_pr_089/files/pr_089/rawdata/
+    lftp webin2.ebi.ac.uk -u Webin-39907
+    mput */*.fastq.gz
+    ```
+* I created [icHydHamu-HiFi-2.tsv](./data/icHydHamu-HiFi-2.tsv) but I think I will try to add on current experiments.
+* I copied PRJEB76972.runs.xml to [icHydHamu-HiFi-2.runs.xml](./data/icHydHamu-HiFi-2.runs.xml), created new aliases by switching 'bam' to 'fastq', and changed the file names and md5 checksums. I will discuss with a colleague before trying
+* Submit using curl:
+    ```
+        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "RUN=@icHydHamu-HiFi-2.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
 
 ### Submit Hi-C
 
