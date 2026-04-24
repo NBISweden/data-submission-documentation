@@ -162,6 +162,12 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
 
 * Note: When running webin-cli locally on my laptop, I need to do `conda deactivate` before since I otherwise have an environment loaded by default that has wrong java version, but EMBLmyGFF3 needs the python version (3.10) which I have in my automatically activated conda environment.
 
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    gfGomCla1.1   | GCA_982584905 | PRJEB72358 | ERS29654094 | CEWXVF010000001-CEWXVF010000028 |              |
+    ```
+
 ### Mito assembly
 * Since mito assemblies consists of only one sequence in the sequence file, a [chromosome assembly](https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#chromosome-assembly) submission is the way to go:
     * The manifest needs one additional file, therein referenced as `CHROMOSOME_LIST: chromosome_list.txt.gz`
