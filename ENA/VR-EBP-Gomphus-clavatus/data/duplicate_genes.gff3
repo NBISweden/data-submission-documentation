@@ -1,0 +1,235 @@
+ptg000002l      manual  gene    2589763 2593363 .       -       .       ID=NBISG00000001526;makerName=g1526
+ptg000002l      manual  mRNA    2589763 2593355 .       -       .       ID=NBISM00000002083;Parent=NBISG00000001526;makerName=g1526.t1;product=hypot
+hetical protein
+ptg000002l      GeneMark.hmm    exon    2589763 2590619 .       -       .       ID=NBISE00000015864;Parent=NBISM00000002083;makerName=nbis-exon-2799
+ptg000002l      GeneMark.hmm    exon    2590669 2590876 .       -       .       ID=NBISE00000015865;Parent=NBISM00000002083;makerName=nbis-exon-2800
+ptg000002l      GeneMark.hmm    exon    2590923 2592050 .       -       .       ID=NBISE00000015866;Parent=NBISM00000002083;makerName=nbis-exon-2801
+ptg000002l      GeneMark.hmm    exon    2592103 2592424 .       -       .       ID=NBISE00000015867;Parent=NBISM00000002083;makerName=nbis-exon-2802
+ptg000002l      GeneMark.hmm    exon    2592478 2592547 .       -       .       ID=NBISE00000015868;Parent=NBISM00000002083;makerName=nbis-exon-2803
+ptg000002l      GeneMark.hmm    exon    2592603 2592820 .       -       .       ID=NBISE00000015869;Parent=NBISM00000002083;makerName=nbis-exon-2804
+ptg000002l      GeneMark.hmm    exon    2592881 2593355 .       -       .       ID=NBISE00000015870;Parent=NBISM00000002083;makerName=nbis-exon-2805
+ptg000002l      GeneMark.hmm    CDS     2589910 2590619 .       -       2       ID=NBISC00000002083;Parent=NBISM00000002083;makerName=g1526.t1.CDS1;
+product=hypothetical protein
+ptg000002l      GeneMark.hmm    CDS     2590669 2590876 .       -       0       ID=NBISC00000002083;Parent=NBISM00000002083;makerName=g1526.t1.CDS2;
+product=hypothetical protein
+ptg000002l      GeneMark.hmm    CDS     2590923 2590940 .       -       0       ID=NBISC00000002083;Parent=NBISM00000002083;makerName=g1526.t1.CDS3;
+product=hypothetical protein
+ptg000002l      manual  five_prime_utr  2590941 2592050 .       -       .       ID=NBISF00000002083;Parent=NBISM00000002083;makerName=g1526.t1.5UTR1
+ptg000002l      manual  five_prime_utr  2592103 2592424 .       -       .       ID=NBISF00000002083;Parent=NBISM00000002083;makerName=g1526.t1.5UTR2
+ptg000002l      manual  five_prime_utr  2592478 2592547 .       -       .       ID=NBISF00000002083;Parent=NBISM00000002083;makerName=g1526.t1.5UTR3
+ptg000002l      manual  five_prime_utr  2592603 2592820 .       -       .       ID=NBISF00000002083;Parent=NBISM00000002083;makerName=g1526.t1.5UTR4
+ptg000002l      manual  five_prime_utr  2592881 2593355 .       -       .       ID=NBISF00000002083;Parent=NBISM00000002083;makerName=g1526.t1.5UTR5
+ptg000002l      manual  intron  2590620 2590668 .       -       .       ID=NBISI00000013782;Parent=NBISM00000002083;makerName=g1526.t1.intron1
+ptg000002l      manual  intron  2590877 2590922 .       -       .       ID=NBISI00000013783;Parent=NBISM00000002083;makerName=g1526.t1.intron2
+ptg000002l      manual  intron  2592051 2592102 .       -       .       ID=NBISI00000013784;Parent=NBISM00000002083;makerName=g1526.t1.intron3
+ptg000002l      manual  intron  2592425 2592477 .       -       .       ID=NBISI00000013785;Parent=NBISM00000002083;makerName=g1526.t1.intron4
+ptg000002l      manual  intron  2592548 2592602 .       -       .       ID=NBISI00000013786;Parent=NBISM00000002083;makerName=g1526.t1.intron5
+ptg000002l      manual  intron  2592821 2592880 .       -       .       ID=NBISI00000013787;Parent=NBISM00000002083;makerName=g1526.t1.intron6
+ptg000002l      GeneMark.hmm    stop_codon      2589910 2589912 .       -       0       ID=NBISS00000002083;Parent=NBISM00000002083;makerName=g1526.
+t1.stop1
+ptg000002l      manual  three_prime_utr 2589763 2589909 .       -       .       ID=NBIST00000002083;Parent=NBISM00000002083;makerName=g1526.t1.3UTR1
+ptg000002l      manual  mRNA    2589778 2593363 .       -       .       ID=NBISM00000002084;Parent=NBISG00000001526;makerName=g1526.t2;product=hypot
+hetical protein
+ptg000002l      GeneMark.hmm    exon    2589778 2590619 .       -       .       ID=NBISE00000015871;Parent=NBISM00000002084;makerName=nbis-exon-2806
+ptg000002l      GeneMark.hmm    exon    2590669 2590876 .       -       .       ID=NBISE00000015872;Parent=NBISM00000002084;makerName=nbis-exon-2807
+ptg000002l      GeneMark.hmm    exon    2590923 2590942 .       -       .       ID=NBISE00000015873;Parent=NBISM00000002084;makerName=nbis-exon-2808
+ptg000002l      GeneMark.hmm    exon    2590993 2592050 .       -       .       ID=NBISE00000015874;Parent=NBISM00000002084;makerName=nbis-exon-2809
+ptg000002l      GeneMark.hmm    exon    2592103 2592424 .       -       .       ID=NBISE00000015875;Parent=NBISM00000002084;makerName=nbis-exon-2810
+ptg000002l      GeneMark.hmm    exon    2592478 2592547 .       -       .       ID=NBISE00000015876;Parent=NBISM00000002084;makerName=nbis-exon-2811
+ptg000002l      GeneMark.hmm    exon    2592603 2592820 .       -       .       ID=NBISE00000015877;Parent=NBISM00000002084;makerName=nbis-exon-2812
+ptg000002l      GeneMark.hmm    exon    2592881 2593363 .       -       .       ID=NBISE00000015878;Parent=NBISM00000002084;makerName=nbis-exon-2813
+ptg000002l      GeneMark.hmm    CDS     2589910 2590619 .       -       2       ID=NBISC00000002084;Parent=NBISM00000002084;makerName=g1526.t2.CDS1;
+product=hypothetical protein
+ptg000002l      GeneMark.hmm    CDS     2590669 2590876 .       -       0       ID=NBISC00000002084;Parent=NBISM00000002084;makerName=g1526.t2.CDS2;
+product=hypothetical protein
+ptg000002l      GeneMark.hmm    CDS     2590923 2590942 .       -       2       ID=NBISC00000002084;Parent=NBISM00000002084;makerName=g1526.t2.CDS3;
+product=hypothetical protein
+ptg000002l      GeneMark.hmm    CDS     2590993 2591200 .       -       0       ID=NBISC00000002084;Parent=NBISM00000002084;makerName=g1526.t2.CDS4;
+product=hypothetical protein
+ptg000002l      manual  five_prime_utr  2591201 2592050 .       -       .       ID=NBISF00000002084;Parent=NBISM00000002084;makerName=g1526.t2.5UTR1
+ptg000002l      manual  five_prime_utr  2592103 2592424 .       -       .       ID=NBISF00000002084;Parent=NBISM00000002084;makerName=g1526.t2.5UTR2
+ptg000002l      manual  five_prime_utr  2592478 2592547 .       -       .       ID=NBISF00000002084;Parent=NBISM00000002084;makerName=g1526.t2.5UTR3
+ptg000002l      manual  five_prime_utr  2592603 2592820 .       -       .       ID=NBISF00000002084;Parent=NBISM00000002084;makerName=g1526.t2.5UTR4
+ptg000002l      manual  five_prime_utr  2592881 2593363 .       -       .       ID=NBISF00000002084;Parent=NBISM00000002084;makerName=g1526.t2.5UTR5
+ptg000002l      manual  intron  2590620 2590668 .       -       .       ID=NBISI00000013788;Parent=NBISM00000002084;makerName=g1526.t2.intron1
+ptg000002l      manual  intron  2590877 2590922 .       -       .       ID=NBISI00000013789;Parent=NBISM00000002084;makerName=g1526.t2.intron2
+ptg000002l      manual  intron  2590943 2590992 .       -       .       ID=NBISI00000013790;Parent=NBISM00000002084;makerName=g1526.t2.intron3
+ptg000002l      manual  intron  2592051 2592102 .       -       .       ID=NBISI00000013791;Parent=NBISM00000002084;makerName=g1526.t2.intron4
+ptg000002l      manual  intron  2592425 2592477 .       -       .       ID=NBISI00000013792;Parent=NBISM00000002084;makerName=g1526.t2.intron5
+ptg000002l      manual  intron  2592548 2592602 .       -       .       ID=NBISI00000013793;Parent=NBISM00000002084;makerName=g1526.t2.intron6
+ptg000002l      manual  intron  2592821 2592880 .       -       .       ID=NBISI00000013794;Parent=NBISM00000002084;makerName=g1526.t2.intron7
+ptg000002l      GeneMark.hmm    stop_codon      2589910 2589912 .       -       0       ID=NBISS00000002084;Parent=NBISM00000002084;makerName=g1526.
+t2.stop1
+ptg000002l      manual  three_prime_utr 2589778 2589909 .       -       .       ID=NBIST00000002084;Parent=NBISM00000002084;makerName=g1526.t2.3UTR1
+ptg000002l      manual  gene    2589763 2593363 .       -       .       ID=NBISG00000001527;Name=SPAC4G8.07c;makerName=g1527
+ptg000002l      manual  mRNA    2589763 2593363 .       -       .       ID=NBISM00000002085;Parent=NBISG00000001527;Dbxref=CDD:cd02440,FunFam:G3DSA:
+2.40.50.140:FF:000201,Gene3D:G3DSA:3.40.50.150,Gene3D:G3DSA:2.40.50.140,Gene3D:G3DSA:2.40.50.1070,InterPro:IPR029063,InterPro:IPR002792,InterPro:IPR
+010280,InterPro:IPR025795,InterPro:IPR012340,InterPro:IPR030390,InterPro:IPR030391,MobiDBLite:mobidb-lite,PANTHER:PTHR11061,Pfam:PF05958,ProSitePatt
+erns:PS01230,ProSitePatterns:PS01231,ProSiteProfiles:PS50926,ProSiteProfiles:PS51622,ProSiteProfiles:PS51687,SUPERFAMILY:SSF50249,SUPERFAMILY:SSF533
+35;Name=SPAC4G8.07c;Ontology_term=-,GO:0006396,GO:0008173,GO:0008033,GO:0030697;makerName=g1527.t1;product=tRNA (uracil(54)-C(5))-methyltransferase;
+uniprot_id=Q09833
+ptg000002l      GeneMark.hmm    exon    2589763 2590619 .       -       .       ID=NBISE00000015879;Parent=NBISM00000002085;makerName=nbis-exon-2814
+ptg000002l      GeneMark.hmm    exon    2590669 2590876 .       -       .       ID=NBISE00000015880;Parent=NBISM00000002085;makerName=nbis-exon-2815
+ptg000002l      GeneMark.hmm    exon    2590923 2592050 .       -       .       ID=NBISE00000015881;Parent=NBISM00000002085;makerName=nbis-exon-2816
+ptg000002l      GeneMark.hmm    exon    2592103 2592167 .       -       .       ID=NBISE00000015882;Parent=NBISM00000002085;makerName=nbis-exon-2817
+ptg000002l      GeneMark.hmm    exon    2592219 2592424 .       -       .       ID=NBISE00000015883;Parent=NBISM00000002085;makerName=nbis-exon-2818
+ptg000002l      GeneMark.hmm    exon    2592478 2592547 .       -       .       ID=NBISE00000015884;Parent=NBISM00000002085;makerName=nbis-exon-2819
+ptg000002l      GeneMark.hmm    exon    2592603 2592820 .       -       .       ID=NBISE00000015885;Parent=NBISM00000002085;makerName=nbis-exon-2820
+ptg000002l      GeneMark.hmm    exon    2592881 2593363 .       -       .       ID=NBISE00000015886;Parent=NBISM00000002085;makerName=nbis-exon-2821
+ptg000002l      GeneMark.hmm    CDS     2591264 2592050 .       -       1       ID=NBISC00000002085;Parent=NBISM00000002085;makerName=g1527.t1.CDS1;
+Dbxref=CDD:cd02440,FunFam:G3DSA:2.40.50.140:FF:000201,Gene3D:G3DSA:3.40.50.150,Gene3D:G3DSA:2.40.50.140,Gene3D:G3DSA:2.40.50.1070,InterPro:IPR029063
+,InterPro:IPR002792,InterPro:IPR010280,InterPro:IPR025795,InterPro:IPR012340,InterPro:IPR030390,InterPro:IPR030391,MobiDBLite:mobidb-lite,PANTHER:PT
+HR11061,Pfam:PF05958,ProSitePatterns:PS01230,ProSitePatterns:PS01231,ProSiteProfiles:PS50926,ProSiteProfiles:PS51622,ProSiteProfiles:PS51687,SUPERFA
+MILY:SSF50249,SUPERFAMILY:SSF53335;Name=SPAC4G8.07c;Ontology_term=-,GO:0006396,GO:0008173,GO:0008033,GO:0030697;product=tRNA (uracil(54)-C(5))-methy
+ltransferase;uniprot_id=Q09833
+ptg000002l      GeneMark.hmm    CDS     2592103 2592167 .       -       0       ID=NBISC00000002085;Parent=NBISM00000002085;makerName=g1527.t1.CDS2;
+Dbxref=CDD:cd02440,FunFam:G3DSA:2.40.50.140:FF:000201,Gene3D:G3DSA:3.40.50.150,Gene3D:G3DSA:2.40.50.140,Gene3D:G3DSA:2.40.50.1070,InterPro:IPR029063
+,InterPro:IPR002792,InterPro:IPR010280,InterPro:IPR025795,InterPro:IPR012340,InterPro:IPR030390,InterPro:IPR030391,MobiDBLite:mobidb-lite,PANTHER:PT
+HR11061,Pfam:PF05958,ProSitePatterns:PS01230,ProSitePatterns:PS01231,ProSiteProfiles:PS50926,ProSiteProfiles:PS51622,ProSiteProfiles:PS51687,SUPERFA
+MILY:SSF50249,SUPERFAMILY:SSF53335;Name=SPAC4G8.07c;Ontology_term=-,GO:0006396,GO:0008173,GO:0008033,GO:0030697;product=tRNA (uracil(54)-C(5))-methy
+ltransferase;uniprot_id=Q09833
+ptg000002l      GeneMark.hmm    CDS     2592219 2592424 .       -       2       ID=NBISC00000002085;Parent=NBISM00000002085;makerName=g1527.t1.CDS3;
+Dbxref=CDD:cd02440,FunFam:G3DSA:2.40.50.140:FF:000201,Gene3D:G3DSA:3.40.50.150,Gene3D:G3DSA:2.40.50.140,Gene3D:G3DSA:2.40.50.1070,InterPro:IPR029063
+,InterPro:IPR002792,InterPro:IPR010280,InterPro:IPR025795,InterPro:IPR012340,InterPro:IPR030390,InterPro:IPR030391,MobiDBLite:mobidb-lite,PANTHER:PT
+HR11061,Pfam:PF05958,ProSitePatterns:PS01230,ProSitePatterns:PS01231,ProSiteProfiles:PS50926,ProSiteProfiles:PS51622,ProSiteProfiles:PS51687,SUPERFA
+MILY:SSF50249,SUPERFAMILY:SSF53335;Name=SPAC4G8.07c;Ontology_term=-,GO:0006396,GO:0008173,GO:0008033,GO:0030697;product=tRNA (uracil(54)-C(5))-methy
+ltransferase;uniprot_id=Q09833
+ptg000002l      GeneMark.hmm    CDS     2592478 2592547 .       -       0       ID=NBISC00000002085;Parent=NBISM00000002085;makerName=g1527.t1.CDS4;
+Dbxref=CDD:cd02440,FunFam:G3DSA:2.40.50.140:FF:000201,Gene3D:G3DSA:3.40.50.150,Gene3D:G3DSA:2.40.50.140,Gene3D:G3DSA:2.40.50.1070,InterPro:IPR029063
+,InterPro:IPR002792,InterPro:IPR010280,InterPro:IPR025795,InterPro:IPR012340,InterPro:IPR030390,InterPro:IPR030391,MobiDBLite:mobidb-lite,PANTHER:PT
+HR11061,Pfam:PF05958,ProSitePatterns:PS01230,ProSitePatterns:PS01231,ProSiteProfiles:PS50926,ProSiteProfiles:PS51622,ProSiteProfiles:PS51687,SUPERFA
+MILY:SSF50249,SUPERFAMILY:SSF53335;Name=SPAC4G8.07c;Ontology_term=-,GO:0006396,GO:0008173,GO:0008033,GO:0030697;product=tRNA (uracil(54)-C(5))-methy
+ltransferase;uniprot_id=Q09833
+ptg000002l      GeneMark.hmm    CDS     2592603 2592820 .       -       2       ID=NBISC00000002085;Parent=NBISM00000002085;makerName=g1527.t1.CDS5;
+Dbxref=CDD:cd02440,FunFam:G3DSA:2.40.50.140:FF:000201,Gene3D:G3DSA:3.40.50.150,Gene3D:G3DSA:2.40.50.140,Gene3D:G3DSA:2.40.50.1070,InterPro:IPR029063
+,InterPro:IPR002792,InterPro:IPR010280,InterPro:IPR025795,InterPro:IPR012340,InterPro:IPR030390,InterPro:IPR030391,MobiDBLite:mobidb-lite,PANTHER:PT
+HR11061,Pfam:PF05958,ProSitePatterns:PS01230,ProSitePatterns:PS01231,ProSiteProfiles:PS50926,ProSiteProfiles:PS51622,ProSiteProfiles:PS51687,SUPERFA
+MILY:SSF50249,SUPERFAMILY:SSF53335;Name=SPAC4G8.07c;Ontology_term=-,GO:0006396,GO:0008173,GO:0008033,GO:0030697;product=tRNA (uracil(54)-C(5))-methy
+ltransferase;uniprot_id=Q09833
+ptg000002l      GeneMark.hmm    CDS     2592881 2593256 .       -       0       ID=NBISC00000002085;Parent=NBISM00000002085;makerName=g1527.t1.CDS6;
+Dbxref=CDD:cd02440,FunFam:G3DSA:2.40.50.140:FF:000201,Gene3D:G3DSA:3.40.50.150,Gene3D:G3DSA:2.40.50.140,Gene3D:G3DSA:2.40.50.1070,InterPro:IPR029063
+,InterPro:IPR002792,InterPro:IPR010280,InterPro:IPR025795,InterPro:IPR012340,InterPro:IPR030390,InterPro:IPR030391,MobiDBLite:mobidb-lite,PANTHER:PT
+HR11061,Pfam:PF05958,ProSitePatterns:PS01230,ProSitePatterns:PS01231,ProSiteProfiles:PS50926,ProSiteProfiles:PS51622,ProSiteProfiles:PS51687,SUPERFA
+MILY:SSF50249,SUPERFAMILY:SSF53335;Name=SPAC4G8.07c;Ontology_term=-,GO:0006396,GO:0008173,GO:0008033,GO:0030697;product=tRNA (uracil(54)-C(5))-methy
+ltransferase;uniprot_id=Q09833
+ptg000002l      manual  five_prime_utr  2593257 2593363 .       -       .       ID=NBISF00000002085;Parent=NBISM00000002085;makerName=g1527.t1.5UTR1
+ptg000002l      manual  intron  2590620 2590668 .       -       .       ID=NBISI00000013795;Parent=NBISM00000002085;makerName=g1527.t1.intron1
+ptg000002l      manual  intron  2590877 2590922 .       -       .       ID=NBISI00000013796;Parent=NBISM00000002085;makerName=g1527.t1.intron2
+ptg000002l      manual  intron  2592051 2592102 .       -       .       ID=NBISI00000013797;Parent=NBISM00000002085;makerName=g1527.t1.intron3
+ptg000002l      manual  intron  2592168 2592218 .       -       .       ID=NBISI00000013798;Parent=NBISM00000002085;makerName=g1527.t1.intron4
+ptg000002l      manual  intron  2592425 2592477 .       -       .       ID=NBISI00000013799;Parent=NBISM00000002085;makerName=g1527.t1.intron5
+ptg000002l      manual  intron  2592548 2592602 .       -       .       ID=NBISI00000013800;Parent=NBISM00000002085;makerName=g1527.t1.intron6
+ptg000002l      manual  intron  2592821 2592880 .       -       .       ID=NBISI00000013801;Parent=NBISM00000002085;makerName=g1527.t1.intron7
+ptg000002l      GeneMark.hmm    stop_codon      2591264 2591266 .       -       0       ID=NBISS00000002085;Parent=NBISM00000002085;makerName=g1527.
+t1.stop1
+ptg000002l      manual  three_prime_utr 2589763 2590619 .       -       .       ID=NBIST00000002085;Parent=NBISM00000002085;makerName=g1527.t1.3UTR1
+ptg000002l      manual  three_prime_utr 2590669 2590876 .       -       .       ID=NBIST00000002085;Parent=NBISM00000002085;makerName=g1527.t1.3UTR2
+ptg000002l      manual  three_prime_utr 2590923 2591263 .       -       .       ID=NBIST00000002085;Parent=NBISM00000002085;makerName=g1527.t1.3UTR3
+
+****************************************
+ptg000002l      manual  gene    4332788 4336134 .       +       .       ID=NBISG00000001971;makerName=g1971
+ptg000002l      manual  mRNA    4332788 4336134 .       +       .       ID=NBISM00000002727;Parent=NBISG00000001971;Dbxref=MobiDBLite:mobidb-lite;ma
+kerName=g1971.t1;product=hypothetical protein
+ptg000002l      GeneMark.hmm    exon    4332788 4333096 .       +       .       ID=NBISE00000020544;Parent=NBISM00000002727;makerName=nbis-exon-4987
+ptg000002l      GeneMark.hmm    exon    4333192 4335324 .       +       .       ID=NBISE00000020545;Parent=NBISM00000002727;makerName=nbis-exon-4988
+ptg000002l      GeneMark.hmm    exon    4335392 4335623 .       +       .       ID=NBISE00000020546;Parent=NBISM00000002727;makerName=nbis-exon-4989
+ptg000002l      GeneMark.hmm    exon    4335697 4336134 .       +       .       ID=NBISE00000020547;Parent=NBISM00000002727;makerName=nbis-exon-4990
+ptg000002l      GeneMark.hmm    CDS     4332885 4333096 .       +       0       ID=NBISC00000002727;Parent=NBISM00000002727;makerName=g1971.t1.CDS1;
+Dbxref=MobiDBLite:mobidb-lite;product=hypothetical protein
+ptg000002l      GeneMark.hmm    CDS     4333192 4333303 .       +       1       ID=NBISC00000002727;Parent=NBISM00000002727;makerName=g1971.t1.CDS2;
+Dbxref=MobiDBLite:mobidb-lite;product=hypothetical protein
+ptg000002l      manual  five_prime_utr  4332788 4332884 .       +       .       ID=NBISF00000002727;Parent=NBISM00000002727;makerName=g1971.t1.5UTR1
+ptg000002l      manual  intron  4333097 4333191 .       +       .       ID=NBISI00000017818;Parent=NBISM00000002727;makerName=g1971.t1.intron1
+ptg000002l      manual  intron  4335325 4335391 .       +       .       ID=NBISI00000017819;Parent=NBISM00000002727;makerName=g1971.t1.intron2
+ptg000002l      manual  intron  4335624 4335696 .       +       .       ID=NBISI00000017820;Parent=NBISM00000002727;makerName=g1971.t1.intron3
+ptg000002l      GeneMark.hmm    stop_codon      4333301 4333303 .       +       0       ID=NBISS00000002727;Parent=NBISM00000002727;makerName=g1971.
+t1.stop1
+ptg000002l      manual  three_prime_utr 4333304 4335324 .       +       .       ID=NBIST00000002727;Parent=NBISM00000002727;makerName=g1971.t1.3UTR1
+ptg000002l      manual  three_prime_utr 4335392 4335623 .       +       .       ID=NBIST00000002727;Parent=NBISM00000002727;makerName=g1971.t1.3UTR2
+ptg000002l      manual  three_prime_utr 4335697 4336134 .       +       .       ID=NBIST00000002727;Parent=NBISM00000002727;makerName=g1971.t1.3UTR3
+ptg000002l      manual  gene    4332788 4336134 .       +       .       ID=NBISG00000001972;makerName=g1972
+ptg000002l      manual  mRNA    4332788 4336134 .       +       .       ID=NBISM00000002728;Parent=NBISG00000001972;Dbxref=MobiDBLite:mobidb-lite;ma
+kerName=g1972.t1;product=hypothetical protein
+ptg000002l      GeneMark.hmm    exon    4332788 4333096 .       +       .       ID=NBISE00000020548;Parent=NBISM00000002728;makerName=nbis-exon-4991
+ptg000002l      GeneMark.hmm    exon    4333168 4336134 .       +       .       ID=NBISE00000020549;Parent=NBISM00000002728;makerName=nbis-exon-4992
+ptg000002l      GeneMark.hmm    CDS     4333611 4333946 .       +       0       ID=NBISC00000002728;Parent=NBISM00000002728;makerName=g1972.t1.CDS1;
+Dbxref=MobiDBLite:mobidb-lite;product=hypothetical protein
+ptg000002l      manual  five_prime_utr  4332788 4333096 .       +       .       ID=NBISF00000002728;Parent=NBISM00000002728;makerName=g1972.t1.5UTR1
+ptg000002l      manual  five_prime_utr  4333168 4333610 .       +       .       ID=NBISF00000002728;Parent=NBISM00000002728;makerName=g1972.t1.5UTR2
+ptg000002l      manual  intron  4333097 4333167 .       +       .       ID=NBISI00000017821;Parent=NBISM00000002728;makerName=g1972.t1.intron1
+ptg000002l      GeneMark.hmm    stop_codon      4333944 4333946 .       +       0       ID=NBISS00000002728;Parent=NBISM00000002728;makerName=g1972.
+t1.stop1
+ptg000002l      manual  three_prime_utr 4333947 4336134 .       +       .       ID=NBIST00000002728;Parent=NBISM00000002728;makerName=g1972.t1.3UTR1
+
+******************************************
+ptg000010l      manual  gene    6178906 6182409 .       +       .       ID=NBISG00000006661;makerName=g6661
+ptg000010l      manual  mRNA    6178906 6182409 .       +       .       ID=NBISM00000009292;Parent=NBISG00000006661;Dbxref=InterPro:IPR039461,Pfam:PF03571;Ontology_term=-;makerName=g6661.t1;product=hypothetical protein
+ptg000010l      GeneMark.hmm    exon    6178906 6179419 .       +       .       ID=NBISE00000068650;Parent=NBISM00000009292;makerName=nbis-exon-30849
+ptg000010l      GeneMark.hmm    exon    6179474 6179496 .       +       .       ID=NBISE00000068651;Parent=NBISM00000009292;makerName=nbis-exon-30850
+ptg000010l      GeneMark.hmm    exon    6179546 6179973 .       +       .       ID=NBISE00000068652;Parent=NBISM00000009292;makerName=nbis-exon-30851
+ptg000010l      GeneMark.hmm    exon    6180030 6180700 .       +       .       ID=NBISE00000068653;Parent=NBISM00000009292;makerName=nbis-exon-30852
+ptg000010l      GeneMark.hmm    exon    6180751 6180803 .       +       .       ID=NBISE00000068654;Parent=NBISM00000009292;makerName=nbis-exon-30853
+ptg000010l      GeneMark.hmm    exon    6180861 6181092 .       +       .       ID=NBISE00000068655;Parent=NBISM00000009292;makerName=nbis-exon-30854
+ptg000010l      GeneMark.hmm    exon    6181153 6181456 .       +       .       ID=NBISE00000068656;Parent=NBISM00000009292;makerName=nbis-exon-30855
+ptg000010l      GeneMark.hmm    exon    6181506 6181793 .       +       .       ID=NBISE00000068657;Parent=NBISM00000009292;makerName=nbis-exon-30856
+ptg000010l      GeneMark.hmm    exon    6181838 6181928 .       +       .       ID=NBISE00000068658;Parent=NBISM00000009292;makerName=nbis-exon-30857
+ptg000010l      GeneMark.hmm    exon    6181983 6182109 .       +       .       ID=NBISE00000068659;Parent=NBISM00000009292;makerName=nbis-exon-30858
+ptg000010l      GeneMark.hmm    exon    6182172 6182409 .       +       .       ID=NBISE00000068660;Parent=NBISM00000009292;makerName=nbis-exon-30859
+ptg000010l      GeneMark.hmm    CDS     6179096 6179419 .       +       0       ID=NBISC00000009292;Parent=NBISM00000009292;makerName=g6661.t1.CDS1;Dbxref=InterPro:IPR039461,Pfam:PF03571;Ontology_term=-;product=hypothetical protein
+ptg000010l      GeneMark.hmm    CDS     6179474 6179496 .       +       0       ID=NBISC00000009292;Parent=NBISM00000009292;makerName=g6661.t1.CDS2;Dbxref=InterPro:IPR039461,Pfam:PF03571;Ontology_term=-;product=hypothetical protein
+ptg000010l      GeneMark.hmm    CDS     6179546 6179792 .       +       1       ID=NBISC00000009292;Parent=NBISM00000009292;makerName=g6661.t1.CDS3;Dbxref=InterPro:IPR039461,Pfam:PF03571;Ontology_term=-;product=hypothetical protein
+ptg000010l      manual  five_prime_utr  6178906 6179095 .       +       .       ID=NBISF00000009292;Parent=NBISM00000009292;makerName=g6661.t1.5UTR1
+ptg000010l      manual  intron  6179420 6179473 .       +       .       ID=NBISI00000059359;Parent=NBISM00000009292;makerName=g6661.t1.intron1
+ptg000010l      manual  intron  6179497 6179545 .       +       .       ID=NBISI00000059360;Parent=NBISM00000009292;makerName=g6661.t1.intron2
+ptg000010l      manual  intron  6179974 6180029 .       +       .       ID=NBISI00000059361;Parent=NBISM00000009292;makerName=g6661.t1.intron3
+ptg000010l      manual  intron  6180701 6180750 .       +       .       ID=NBISI00000059362;Parent=NBISM00000009292;makerName=g6661.t1.intron4
+ptg000010l      manual  intron  6180804 6180860 .       +       .       ID=NBISI00000059363;Parent=NBISM00000009292;makerName=g6661.t1.intron5
+ptg000010l      manual  intron  6181093 6181152 .       +       .       ID=NBISI00000059364;Parent=NBISM00000009292;makerName=g6661.t1.intron6
+ptg000010l      manual  intron  6181457 6181505 .       +       .       ID=NBISI00000059365;Parent=NBISM00000009292;makerName=g6661.t1.intron7
+ptg000010l      manual  intron  6181794 6181837 .       +       .       ID=NBISI00000059366;Parent=NBISM00000009292;makerName=g6661.t1.intron8
+ptg000010l      manual  intron  6181929 6181982 .       +       .       ID=NBISI00000059367;Parent=NBISM00000009292;makerName=g6661.t1.intron9
+ptg000010l      manual  intron  6182110 6182171 .       +       .       ID=NBISI00000059368;Parent=NBISM00000009292;makerName=g6661.t1.intron10
+ptg000010l      GeneMark.hmm    stop_codon      6179790 6179792 .       +       0       ID=NBISS00000009292;Parent=NBISM00000009292;makerName=g6661.t1.stop1
+ptg000010l      manual  three_prime_utr 6179793 6179973 .       +       .       ID=NBIST00000009292;Parent=NBISM00000009292;makerName=g6661.t1.3UTR1
+ptg000010l      manual  three_prime_utr 6180030 6180700 .       +       .       ID=NBIST00000009292;Parent=NBISM00000009292;makerName=g6661.t1.3UTR2
+ptg000010l      manual  three_prime_utr 6180751 6180803 .       +       .       ID=NBIST00000009292;Parent=NBISM00000009292;makerName=g6661.t1.3UTR3
+ptg000010l      manual  three_prime_utr 6180861 6181092 .       +       .       ID=NBIST00000009292;Parent=NBISM00000009292;makerName=g6661.t1.3UTR4
+ptg000010l      manual  three_prime_utr 6181153 6181456 .       +       .       ID=NBIST00000009292;Parent=NBISM00000009292;makerName=g6661.t1.3UTR5
+ptg000010l      manual  three_prime_utr 6181506 6181793 .       +       .       ID=NBIST00000009292;Parent=NBISM00000009292;makerName=g6661.t1.3UTR6
+ptg000010l      manual  three_prime_utr 6181838 6181928 .       +       .       ID=NBIST00000009292;Parent=NBISM00000009292;makerName=g6661.t1.3UTR7
+ptg000010l      manual  three_prime_utr 6181983 6182109 .       +       .       ID=NBIST00000009292;Parent=NBISM00000009292;makerName=g6661.t1.3UTR8
+ptg000010l      manual  three_prime_utr 6182172 6182409 .       +       .       ID=NBIST00000009292;Parent=NBISM00000009292;makerName=g6661.t1.3UTR9
+ptg000010l      manual  gene    6178906 6182409 .       +       .       ID=NBISG00000006662;Name=asaE;makerName=g6662
+ptg000010l      manual  mRNA    6178906 6182409 .       +       .       ID=NBISM00000009293;Parent=NBISG00000006662;Dbxref=CDD:cd17352,Gene3D:G3DSA:1.20.1250.20,InterPro:IPR036259,InterPro:IPR011701,InterPro:IPR020846,Pfam:PF07690,ProSiteProfiles:PS50850,SUPERFAMILY:SSF103473;Name=asaE;Ontology_term=-,GO:0022857,GO:0055085;makerName=g6662.t1;product=MFS transporter asaE;uniprot_id=B8N0F1
+ptg000010l      GeneMark.hmm    exon    6178906 6179496 .       +       .       ID=NBISE00000068661;Parent=NBISM00000009293;makerName=nbis-exon-30860
+ptg000010l      GeneMark.hmm    exon    6179546 6179973 .       +       .       ID=NBISE00000068662;Parent=NBISM00000009293;makerName=nbis-exon-30861
+ptg000010l      GeneMark.hmm    exon    6180030 6180700 .       +       .       ID=NBISE00000068663;Parent=NBISM00000009293;makerName=nbis-exon-30862
+ptg000010l      GeneMark.hmm    exon    6180751 6180803 .       +       .       ID=NBISE00000068664;Parent=NBISM00000009293;makerName=nbis-exon-30863
+ptg000010l      GeneMark.hmm    exon    6180861 6181092 .       +       .       ID=NBISE00000068665;Parent=NBISM00000009293;makerName=nbis-exon-30864
+ptg000010l      GeneMark.hmm    exon    6181153 6181456 .       +       .       ID=NBISE00000068666;Parent=NBISM00000009293;makerName=nbis-exon-30865
+ptg000010l      GeneMark.hmm    exon    6181506 6181793 .       +       .       ID=NBISE00000068667;Parent=NBISM00000009293;makerName=nbis-exon-30866
+ptg000010l      GeneMark.hmm    exon    6181838 6181928 .       +       .       ID=NBISE00000068668;Parent=NBISM00000009293;makerName=nbis-exon-30867
+ptg000010l      GeneMark.hmm    exon    6181983 6182109 .       +       .       ID=NBISE00000068669;Parent=NBISM00000009293;makerName=nbis-exon-30868
+ptg000010l      GeneMark.hmm    exon    6182172 6182409 .       +       .       ID=NBISE00000068670;Parent=NBISM00000009293;makerName=nbis-exon-30869
+ptg000010l      GeneMark.hmm    CDS     6180481 6180700 .       +       0       ID=NBISC00000009293;Parent=NBISM00000009293;makerName=g6662.t1.CDS1;Dbxref=CDD:cd17352,Gene3D:G3DSA:1.20.1250.20,InterPro:IPR036259,InterPro:IPR011701,InterPro:IPR020846,Pfam:PF07690,ProSiteProfiles:PS50850,SUPERFAMILY:SSF103473;Name=asaE;Ontology_term=-,GO:0022857,GO:0055085;product=MFS transporter asaE;uniprot_id=B8N0F1
+ptg000010l      GeneMark.hmm    CDS     6180751 6180803 .       +       2       ID=NBISC00000009293;Parent=NBISM00000009293;makerName=g6662.t1.CDS2;Dbxref=CDD:cd17352,Gene3D:G3DSA:1.20.1250.20,InterPro:IPR036259,InterPro:IPR011701,InterPro:IPR020846,Pfam:PF07690,ProSiteProfiles:PS50850,SUPERFAMILY:SSF103473;Name=asaE;Ontology_term=-,GO:0022857,GO:0055085;product=MFS transporter asaE;uniprot_id=B8N0F1
+ptg000010l      GeneMark.hmm    CDS     6180861 6181092 .       +       0       ID=NBISC00000009293;Parent=NBISM00000009293;makerName=g6662.t1.CDS3;Dbxref=CDD:cd17352,Gene3D:G3DSA:1.20.1250.20,InterPro:IPR036259,InterPro:IPR011701,InterPro:IPR020846,Pfam:PF07690,ProSiteProfiles:PS50850,SUPERFAMILY:SSF103473;Name=asaE;Ontology_term=-,GO:0022857,GO:0055085;product=MFS transporter asaE;uniprot_id=B8N0F1
+ptg000010l      GeneMark.hmm    CDS     6181153 6181456 .       +       2       ID=NBISC00000009293;Parent=NBISM00000009293;makerName=g6662.t1.CDS4;Dbxref=CDD:cd17352,Gene3D:G3DSA:1.20.1250.20,InterPro:IPR036259,InterPro:IPR011701,InterPro:IPR020846,Pfam:PF07690,ProSiteProfiles:PS50850,SUPERFAMILY:SSF103473;Name=asaE;Ontology_term=-,GO:0022857,GO:0055085;product=MFS transporter asaE;uniprot_id=B8N0F1
+ptg000010l      GeneMark.hmm    CDS     6181506 6181793 .       +       1       ID=NBISC00000009293;Parent=NBISM00000009293;makerName=g6662.t1.CDS5;Dbxref=CDD:cd17352,Gene3D:G3DSA:1.20.1250.20,InterPro:IPR036259,InterPro:IPR011701,InterPro:IPR020846,Pfam:PF07690,ProSiteProfiles:PS50850,SUPERFAMILY:SSF103473;Name=asaE;Ontology_term=-,GO:0022857,GO:0055085;product=MFS transporter asaE;uniprot_id=B8N0F1
+ptg000010l      GeneMark.hmm    CDS     6181838 6181928 .       +       1       ID=NBISC00000009293;Parent=NBISM00000009293;makerName=g6662.t1.CDS6;Dbxref=CDD:cd17352,Gene3D:G3DSA:1.20.1250.20,InterPro:IPR036259,InterPro:IPR011701,InterPro:IPR020846,Pfam:PF07690,ProSiteProfiles:PS50850,SUPERFAMILY:SSF103473;Name=asaE;Ontology_term=-,GO:0022857,GO:0055085;product=MFS transporter asaE;uniprot_id=B8N0F1
+ptg000010l      GeneMark.hmm    CDS     6181983 6182109 .       +       0       ID=NBISC00000009293;Parent=NBISM00000009293;makerName=g6662.t1.CDS7;Dbxref=CDD:cd17352,Gene3D:G3DSA:1.20.1250.20,InterPro:IPR036259,InterPro:IPR011701,InterPro:IPR020846,Pfam:PF07690,ProSiteProfiles:PS50850,SUPERFAMILY:SSF103473;Name=asaE;Ontology_term=-,GO:0022857,GO:0055085;product=MFS transporter asaE;uniprot_id=B8N0F1
+ptg000010l      GeneMark.hmm    CDS     6182172 6182200 .       +       2       ID=NBISC00000009293;Parent=NBISM00000009293;makerName=g6662.t1.CDS8;Dbxref=CDD:cd17352,Gene3D:G3DSA:1.20.1250.20,InterPro:IPR036259,InterPro:IPR011701,InterPro:IPR020846,Pfam:PF07690,ProSiteProfiles:PS50850,SUPERFAMILY:SSF103473;Name=asaE;Ontology_term=-,GO:0022857,GO:0055085;product=MFS transporter asaE;uniprot_id=B8N0F1
+ptg000010l      manual  five_prime_utr  6178906 6179496 .       +       .       ID=NBISF00000009293;Parent=NBISM00000009293;makerName=g6662.t1.5UTR1
+ptg000010l      manual  five_prime_utr  6179546 6179973 .       +       .       ID=NBISF00000009293;Parent=NBISM00000009293;makerName=g6662.t1.5UTR2
+ptg000010l      manual  five_prime_utr  6180030 6180480 .       +       .       ID=NBISF00000009293;Parent=NBISM00000009293;makerName=g6662.t1.5UTR3
+ptg000010l      manual  intron  6179497 6179545 .       +       .       ID=NBISI00000059369;Parent=NBISM00000009293;makerName=g6662.t1.intron1
+ptg000010l      manual  intron  6179974 6180029 .       +       .       ID=NBISI00000059370;Parent=NBISM00000009293;makerName=g6662.t1.intron2
+ptg000010l      manual  intron  6180701 6180750 .       +       .       ID=NBISI00000059371;Parent=NBISM00000009293;makerName=g6662.t1.intron3
+ptg000010l      manual  intron  6180804 6180860 .       +       .       ID=NBISI00000059372;Parent=NBISM00000009293;makerName=g6662.t1.intron4
+ptg000010l      manual  intron  6181093 6181152 .       +       .       ID=NBISI00000059373;Parent=NBISM00000009293;makerName=g6662.t1.intron5
+ptg000010l      manual  intron  6181457 6181505 .       +       .       ID=NBISI00000059374;Parent=NBISM00000009293;makerName=g6662.t1.intron6
+ptg000010l      manual  intron  6181794 6181837 .       +       .       ID=NBISI00000059375;Parent=NBISM00000009293;makerName=g6662.t1.intron7
+ptg000010l      manual  intron  6181929 6181982 .       +       .       ID=NBISI00000059376;Parent=NBISM00000009293;makerName=g6662.t1.intron8
+ptg000010l      manual  intron  6182110 6182171 .       +       .       ID=NBISI00000059377;Parent=NBISM00000009293;makerName=g6662.t1.intron9
+ptg000010l      GeneMark.hmm    stop_codon      6182198 6182200 .       +       0       ID=NBISS00000009293;Parent=NBISM00000009293;makerName=g6662.t1.stop1
+ptg000010l      manual  three_prime_utr 6182201 6182409 .       +       .       ID=NBIST00000009293;Parent=NBISM00000009293;makerName=g6662.t1.3UTR1

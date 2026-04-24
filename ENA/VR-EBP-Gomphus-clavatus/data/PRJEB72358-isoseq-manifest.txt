@@ -1,0 +1,9 @@
+STUDY:	PRJEB72358
+SAMPLE:	ERS29654094
+NAME:	PACBIO-Isoseq-gfGomCla1-1
+INSTRUMENT:	Sequel IIe
+LIBRARY_SOURCE:	TRANSCRIPTOMIC
+LIBRARY_SELECTION:	size fractionation
+LIBRARY_STRATEGY:	RNA-Seq
+DESCRIPTION:	Procedure and Checklist – Iso-Seq™ Express Template Preparation for Sequel® and Sequel II Systems
+FASTQ:	/proj/snic2021-6-194/INBOX/VR_Gomphus_clavatus/pt_140/ccsreads/pt_140_001/pt_140_001.ccsreads.fastq.gz

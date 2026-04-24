@@ -1,0 +1,11 @@
+STUDY: PRJEB72358
+SAMPLE: ERS29654094
+ASSEMBLYNAME: gfGomCla1.1
+ASSEMBLY_TYPE: isolate
+COVERAGE: 146
+PROGRAM: hifiasm (v0.19.8)
+PLATFORM: Illumina, PacBio
+MOLECULETYPE: genomic DNA
+DESCRIPTION: The genome assembly was produced from ~146X PacBio HiFi reads using hifiasm v0.19.8 with default settings. Putative contamination was removed after analysis with the blobtoolkit pipeline v4.1.7.
+RUN_REF: ERR17001312,ERR17001313,ERR17001314
+FLATFILE: PRJEB72358-GOMCLA.embl.gz
