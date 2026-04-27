@@ -3,10 +3,10 @@ SAMPLE	SAMEA115283758
 RUN_REF	ERR15160505
 ASSEMBLYNAME	icOmaFont1.1
 ASSEMBLY_TYPE	isolate
-COVERAGE	
-PROGRAM	
+COVERAGE	68
+PROGRAM	Hifiasm (version 0.25.0-r726), NBIS/Earth-Biogenome-Project-pilot (version: 27c0a0c8d9), FCS-GX (version 0.5.4), purge_dups (version 1.2.6), YaHS (version 1.2a.2)
 PLATFORM	PacBio, Illumina
-MINGAPLENGTH	(if scaffold)
+MINGAPLENGTH	100
 MOLECULETYPE	genomic DNA
-DESCRIPTION	''
+DESCRIPTION	'The assembly was produced with hifiasm, decontaminated with FCS-GX, haplotigs removed with purge_dups, and scaffolded with YaHS. No long range information from the Hi-C libraries, precluding the possibility to perform manual curation on this genome. The assembly coverage is 68x for PacBio HiFi and 195x for Illumina Hi-C.'
 FASTA	icOmaFont1.assembly.fa.gz
