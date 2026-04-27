@@ -61,6 +61,7 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
 * **Note:** I was unaware that this was ULI when submitting HiFi reads. Hence, when trimmed fastq reads are available, these should be uploaded and replace .bam (or add barcode info in metadata i.e. in library_construction_protocol)
 
 * **Update 2026-04-24:** I've now gotten access to the trimmed reads. Not sure how to update the reads though, should it in fact be a separate set? Might be easier... ENA read the docs says *" If the submitted file has passed validation and been archived, it cannot be replaced"*. I wonder if I at least can add on the existing, respective, ERX? So that I use the same experiment xml and only submit a new run.xml?
+* I discussed the situation with a colleague, and we concluded that I should submit to 1 (not divided into 2 as the untrimmed are) new experiment and update the old experiments' title and protocol så that it clearly states untrimmed (and make sure that the new experiment title and protokoll states trimmed). This way a reuser are most likely led to the right files to download.
 
 * I uploaded the 2 fastq files to ENA upload area from Pelle
     ```
@@ -69,16 +70,29 @@ curl -u Webin-39907:<password> -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@P
     lftp webin2.ebi.ac.uk -u Webin-39907
     mput */*.fastq.gz
     ```
-* I created [icHydHamu-HiFi-2.tsv](./data/icHydHamu-HiFi-2.tsv) but I think I will try to add on current experiments.
-* I copied PRJEB76972.runs.xml to [icHydHamu-HiFi-2.runs.xml](./data/icHydHamu-HiFi-2.runs.xml), created new aliases by switching 'bam' to 'fastq', and changed the file names and md5 checksums. I will discuss with a colleague before trying
+* I created [icHydHamu-HiFi-2.tsv](./data/icHydHamu-HiFi-2.tsv) and ran the CNAG script:
+    ```
+    ../../../../ERGA-submission/get_submission_xmls/get_ENA_xml_files.py -f icHydHamu-HiFi-2.tsv -p ERGA-BGE -o icHydHamu-HiFi-2
+    ```
+* I added (trimmed) in experiment title, and added a sentence in the protocol. I removed the second experiment, and changed the study reference to accession `<STUDY_REF accession="PRJEB76972"/>`
 * Submit using curl:
     ```
-        curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "RUN=@icHydHamu-HiFi-2.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u username:password -F "SUBMISSION=@submission-noHold.xml" -F "EXPERIMENT=@icHydHamu-HiFi-2.exp.xml" -F "RUN=@icHydHamu-HiFi-2.runs.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-04-27T09:26:03.934+01:00" submissionFile="submission-noHold.xml" success="true">
+        <EXPERIMENT accession="ERX16454402" alias="exp_icHydHamu_HiFi_WGS_FS55571874_pr_089_trimmed" status="PRIVATE"/>
+        <RUN accession="ERR17070810" alias="run_icHydHamu_HiFi_WGS_FS55571874_pr_089_trimmed_fastq_1" status="PRIVATE"/>
+        <RUN accession="ERR17070811" alias="run_icHydHamu_HiFi_WGS_FS55571874_pr_089_trimmed_fastq_2" status="PRIVATE"/>
+        <SUBMISSION accession="ERA36100059" alias="SUBMISSION-27-04-2026-09:26:03:636"/>
+        <MESSAGES/>
+        <ACTIONS>ADD</ACTIONS>
+    </RECEIPT>
     ```
+* I updated experiments ERX12708954 and ERX12708955, title and protocol to reflect the untrimmed status (the same way as the trimmed one).
 
 ### Submit Hi-C
 
