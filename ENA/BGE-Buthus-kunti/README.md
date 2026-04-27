@@ -142,7 +142,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit assembly
 * Only a draft assembly was possible. Hence I updated the project with 'draft' in title and as keyword.
 * I created a manifest file [qqButKunt1-manifest.txt](./data/qqButKunt1-manifest.txt)
-* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/B-kuntis) and copied & gzipped manifest and assembly filethere
+* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/B-kuntis) and copied & gzipped manifest and assembly file there
 * Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
 
     ```
@@ -151,9 +151,13 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /crex/proj/snic2021-6-194/nobackup/submission/B-kunti/././webin-cli.report
+    INFO : Uploading file: /crex/proj/snic2021-6-194/nobackup/submission/B-kunti/qqButKunt1.assembly.fa.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29309077
     ```
-* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
