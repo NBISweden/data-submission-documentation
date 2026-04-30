@@ -161,7 +161,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    qqButKunt1.1  | GCA_982656515 | PRJEB90598 | ERS21333525 | CEXHUA010000001-CEXHUA010000263 |              | 
     ```
 * Release study and check that it is shown under umbrella
 
@@ -174,7 +174,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-04-30T08:13:55.000+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB91433" alias="erga-bge-qqButKunt-study-umbrella-2025-07-01" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-30-04-2026-08:13:54:875"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
