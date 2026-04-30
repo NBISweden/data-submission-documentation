@@ -134,7 +134,7 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    icOmaFont1.1  | GCA_982657345 | PRJEB91107 | ERS18220161 | CEXHXA010000001-CEXHXA010004605 |              |
     ```
 * Release study and check that it is shown under umbrella
 
@@ -147,7 +147,14 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-04-30T08:09:46.617+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96498" alias="erga-bge-icOmaFont-study-umbrella-2025-08-27" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-30-04-2026-08:09:46:425"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
