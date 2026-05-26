@@ -82,6 +82,16 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Tricholoma matsutake*, is 
         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
+* Update **2026-05-26**, the umbrella was pushed further again, to 2027-06-03, by updating the umbrella-HoldDate.xml file and submit via curl:
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-05-26T11:14:27.510+01:00" submissionFile="umbrella-holdDate.xml" success="true">
+        <MESSAGES/>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
 
 ### Register sample
 * A ToLID was not provided, so I asked for one according to [SOP](../SOP/register_ToLID.md)
