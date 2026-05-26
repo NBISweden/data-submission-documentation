@@ -25,22 +25,7 @@ Within the VR-EBP (Earth Biogenome Project), granticka, *Porodaedalea chrysoloma
     * HiFi raw reads: ERX11903837
     * Genomassembly: ERZ22530149, GCA_963926545, CAWUYF010000001-CAWUYF010000025
     * Mito assembly: ERZ22530150, GCA_963926555, OZ004980-OZ004980
-
-* **Note 2025-12-08:** Pushed forward the release date of the children projects to 2026-06-02, via browser. Umbrella release date update:
-    * Created [update-umbrella-release-date.xml](./data/update-umbrella-release-date.xml)
-    * Submit using curl:
-        ```
-        curl -u Username:Password -F "SUBMISSION=@update-umbrella-release-date.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-        ```
-    * Receipt:
-        ```
-        <?xml version="1.0" encoding="UTF-8"?>
-        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-        <RECEIPT receiptDate="2025-12-08T10:45:21.958Z" submissionFile="update-umbrella-release-date.xml" success="true">
-            <MESSAGES/>
-            <ACTIONS>HOLD</ACTIONS>
-        </RECEIPT>
-        ```
+   
 ### Steps
 * [Collect metadata](#collect-metadata)
 * [Submit 3 studies](#register-study) (umbrella, raw reads + genome assembly, mito assembly)
@@ -108,7 +93,37 @@ Within the VR-EBP (Earth Biogenome Project), granticka, *Porodaedalea chrysoloma
      <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
     ```
+* **Note 2025-12-08:** Pushed forward the release date of the children projects to 2026-06-02, via browser. Umbrella release date update:
+    * Created [update-umbrella-release-date.xml](./data/update-umbrella-release-date.xml)
+    * Submit using curl:
+        ```
+        curl -u Username:Password -F "SUBMISSION=@update-umbrella-release-date.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2025-12-08T10:45:21.958Z" submissionFile="update-umbrella-release-date.xml" success="true">
+            <MESSAGES/>
+            <ACTIONS>HOLD</ACTIONS>
+        </RECEIPT>
+        ```
+* Update **2026-05-26**: I pushed release of the umbrella forward to 2027-06-03, using [umbrella-HoldDate.xml](./data/umbrella-HoldDate.xml)::
+    * Command
+    ```
+    curl -u Username:Password -F "SUBMISSION=@umbrella-holdDate.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"  
+    ```
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-05-26T11:25:23.572+01:00" submissionFile="umbrella-holdDate.xml" success="true">
+        <MESSAGES/>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
 ------
+
 ### Register sample
 
 * Did a copy and paste from the filled ENA_sample tab of the metadata template into [PRJEB71491-sample-metadata.tsv](./data/PRJEB71491-sample-metadata.tsv)

@@ -70,6 +70,20 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
     </RECEIPT>
     ```
 * Accession number received: `PRJEB111466`
+* Update **2026-05-26**: I pushed release of the umbrella forward to 2027-06-03, using [umbrella-HoldDate.xml](./data/umbrella-HoldDate.xml)::
+    * Command
+    ```
+    curl -u Username:Password -F "SUBMISSION=@umbrella-holdDate.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"  
+    ```
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-05-26T11:19:33.627+01:00" submissionFile="umbrella-holdDate.xml" success="true">
+        <MESSAGES/>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
 
 
 ### Register sample
