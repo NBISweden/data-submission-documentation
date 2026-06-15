@@ -298,11 +298,30 @@ Submission will be done via CNAG script and programmatic submission route using 
     ```
     curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
-* Receipt:
+* Receipt (failed):
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-06-15T18:30:08.553+01:00" submissionFile="update.xml" success="false">
+        <SUBMISSION alias="SUBMISSION-15-06-2026-18:30:08:550"/>
+        <MESSAGES>
+            <ERROR>Failed to validate project xml, error: string length (16) is less than minLength facet (20) for type of TITLE element in ProjectType</ERROR>
+        </MESSAGES>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
-
+* I added `umbrella` in title then it worked:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-06-15T18:35:41.720+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB96512" alias="erga-bge-xoWirArge-study-umbrella-2025-08-27" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-15-06-2026-18:35:41:546"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>    
+    ```
+    
 ### Umbrella project
 * For each of the BGE species, an **umbrella** project has to be created and linked to the main BGE project, [PRJEB61747](https://www.ebi.ac.uk/ena/browser/view/PRJEB61747).
 
