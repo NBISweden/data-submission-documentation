@@ -287,7 +287,7 @@ Submission will be done via CNAG script and programmatic submission route using 
 * Accessioned:
     ```
     ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    xoWirArge9.1  | GCA_985276125 | PRJEB83555 | ERS23742782 | CFMEFQ010000001-CFMEFQ010000906 |              | OZ484189-OZ484207
     ```
 * Release study and check that it is shown under umbrella
 
