@@ -89,11 +89,12 @@ Within the VR-EBP (Earth Biogenome Project) a fungi, *Gomphus clavatus*, is to b
 ### Register sample
 * A ToLID was not provided, so I asked for one according to [SOP](../SOP/register_ToLID.md)
     * Taxonomy id: `80588`
-    * Specimen ID: `` (this took too long to obtain, so I decided to do submission anyway, then we can **update the sample record later**)
+    * Specimen ID: (this took too long to obtain, so I decided to do submission anyway, then we can **update the sample record later**)
     * Scientific name: `Gomphus clavatus`
-    * Received id: `gfGomClav1`
+    * Received specimen id: `gfGomClav1`
 * The sample was registered using the Webin Portal uploading [sample.tsv](./data/sample.tsv) (2026-04-13)
 * Received accession number: `ERS29654094`
+* Update 2026-06-15: I finally received the specimen voucher `NRM: S: F505138`, so I updated the sample XML file at ENA.
 
 ### Register experiment
 * Manifests were created and copied to Uppmax, for each of the three types of sequences:

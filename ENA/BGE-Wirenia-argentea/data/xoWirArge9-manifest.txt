@@ -1,0 +1,14 @@
+STUDY	PRJEB83555
+SAMPLE	SAMEA117757067
+RUN_REF	ERR15164923, ERR14759495, ERR14759496, ERR15757803, ERR15757804
+ASSEMBLYNAME	xoWirArge9.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	29
+PROGRAM	hifiasm (version 0.25.0-r726), purge_dups (version 1.2.6), Yahs (version 1.2.2), PretextCuration (version 1.5.1), PretextView (version 1.0.3), agp-tpf-utils (version 1.3.3)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	200
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'PacBio HiFi reads from Wirenia argentea were assembled with hifiasm (version 0.25.0-r726). The primary collapsed contigs had following stats: 58004 contigs, 3.04Gb yield; n50 189K and a BUSCO of 86.59% with 61.55% duplication rate. Automatic purging with purge_dups (version 1.2.6) was suboptimal. We lost Busco genes but duplication rate was still above 30%. Therefore we did an iterative purging approach and removed junk-, haplotig-, repeat-tagged contigs that don't have any Busco genes. This approach converged after eight rounds at: 3722 contigs, 1.2Gb yield, 519Kb n50 and a BUSCO of 85.25% with 16.47% duplication rate. Yahs (version 1.2.2, args: '--no-contig-ec') was used for scaffolding. The manual curation was done with PretextCuration (version 1.5.1), PretextView (version 1.0.3) and agp-tpf-utils (version 1.3.3). Due to the low HiC quality we started the manual curation from the contigs but in the order and orientation proposed from yahs. In the first curation round all contigs were roughly assigned to putative chromosomes without splitting any contigs (because the resolution was simply too bad). The second curation round is based on smaller chunks, i.e. maps based on 2-3 chromosomes. This allowed for better detection of duplicated signals. In this step the contigs were trimmed according to the duplication HiC-signal. In order to decide which contigs should be marked as haplotig the Busco genes were checked and we tried to minimize the BUSCO duplication rate. Afterwards all curated contigs, which are sorted and oriented into putative chromosomes, were combined and two more curation rounds were done. Coverage PacBio is 29X, and HiC is 294X'
+FASTA	wirenia_cur08.1.primary.curated.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz
