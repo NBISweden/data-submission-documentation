@@ -1,0 +1,47 @@
+Checklist	ERC000011	ENA default sample checklist								
+tax_id	scientific_name	sample_alias	sample_title	sample_description	collection date	geographic location (country and/or sea)	dev_stage	tissue_type	lat_lon	geographic location (region and locality)
+3686056	Linum thracicum	Lthracicum_L160-S32_027	UC-2912-L160-thracicum_S32	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 1553 (IPK)	2019	Germany	Flowering	leaf	NA	NA
+586386	Linum maritimum	Lmaritimum_MAR12-S17_012	UC-2912-MAR12-maritimum-thrum_S17	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID MAR-12, Sóller Botanical garden	2019	Spain	Flowering	leaf	NA	Sóller Botanical garden
+586396	Linum tenue	Ltenue_L21-22-S31_ 026	UC-2912-L21-22-tenue	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID Lten-21-22, SAMEA114529652	2019	Spain	Flowering	leaf	37.89413 -5.61363	NA
+586398	Linum trigynum	Ltrigynum_TRI-10-7-S33_028	UC-2912-TRI-10-7-trigynum_S33	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID Ltri-10-7, SAMEA114529727	2019	Spain	Flowering	leaf	37.88161 -6.61900	NA
+586395	Linum suffruticosum	Lsuffruticosum_SUFF-18-5-3-S27_022	UC-2912-SUFF-18-5-3-suffricatosum-thrum_S27	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID 18-5-2 near Ronda, Spain	2018	Spain	Flowering	leaf	36.665988 -5.203511	Spain, Ronda
+586397	Linum tenuifolium	Ltenuifolium_L123-S30_025	UC-2912-L123-teniufolium_S30	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 1759 (IPK)	1985	Slovakia	Flowering	leaf	NA	IPK Gatersleben
+610152	Linum campanulatum	Lcampanulatum_L32-S11_006	UC-2912-L32-campanulatum_S11	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 1760 (IPK)	1985	France	Flowering	leaf	NA	IPK Gatersleben
+2579260	Linum capitatum	Lcapitatum_L34-S12_007	UC-2912-L34-capitatum_S12	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 1903 (IPK)	2019	France	Flowering	leaf	NA	B&T world seeds (Seed vendor in France)
+407263	Linum flavum	Lfavum_L55-S3_008	UC-2912-L55-flavum_S3	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 2001 (IPK)	2019	Germany	Flowering	leaf	NA	IPK Gatersleben
+2579285	Linum tauricum	Ltauricum_L121-S5_024	UC-2912-L121-tauricum_S5	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 1658 (IPK)	1981	Germany	Flowering	leaf	NA	IPK Gatersleben
+794874	Linum leonii	Lleonii_LEO-18-2-S35_030	UC-2912-LEO-18-2-leonii_S35	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID 18-2, pop. ger2	2018	Germany	Flowering	leaf	51.73 9.8	near Moringen, Germany
+610155	Linum hirsutum	Lhirsutum_L65-S14_009	UC-2912-L65-hirsutum-ssp-hir_S14	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 2100 (IPK)	1995	Hungary	Flowering	leaf	NA	IPK Gatersleben
+2267327	Linum austriacum	Laustriacum_L17-S7_002	UC-2912-L17-austriacum-ssp-aus_S7	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 1883 (IPK)	1995	Germany	Flowering	leaf	NA	IPK Gatersleben, but unknown
+559336	Linum grandiflorum	Lgrandiflorum_Lgra-61-04-thrum-S73	VI-3416-Lgra-61-04-thrum_S73	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 974 (IPK)	1974	Poland	Flowering	leaf	NA	Botanischer Garten Universität Lublin
+544668	Linum narbonense	Lnarbonense_L85-S18_013	UC-2912-L85-narbonense_S18	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 1807 (IPK)	1992	France	Flowering	leaf	NA	IPK Gatersleben
+35941	Linum perenne	Lperenne_L96-S22_017	UC-2912-L96-perenne-ssp-per-diploid_S22	Sample used for short read WGS chloroplast genome, chloroplast genome assembly and annotation, and target capture of 353 nuclear genes - Source ID LIN 2003 (IPK)	1992	Germany	Flowering	leaf	NA	Zierpflanzensammlung Erfurt
+794874	Linum leonii	LEO-2-29-2	LEO-2-29-2	PacBio HiFi + HiC + assembly	2018	Germany	NA	NA	51.73 9.8	near Moringen, Germany
+794874	Linum leonii	LEO-2-29-2-bud-1	Sample_UF-3013-LEO-2-29-2-bud-1	RNAseq for assembly annotation	2018	Germany	NA	NA	51.73 9.8	near Moringen, Germany
+794874	Linum leonii	LEO-2-29-2-bud-2	Sample_UF-3013-LEO-2-29-2-bud-2	RNAseq for assembly annotation	2018	Germany	NA	NA	51.73 9.8	near Moringen, Germany
+794874	Linum leonii	LEO-2-29-2-flower-1	Sample_UF-3013-LEO-2-29-2-flower-1	RNAseq for assembly annotation	2018	Germany	NA	NA	51.73 9.8	near Moringen, Germany
+794874	Linum leonii	LEO-2-29-2-flower-2	Sample_UF-3013-LEO-2-29-2-flower-2	RNAseq for assembly annotation	2018	Germany	NA	NA	51.73 9.8	near Moringen, Germany
+794874	Linum leonii	LEO-2-29-2-leaf-1	Sample_UF-3013-LEO-2-29-2-leaf-1	RNAseq for assembly annotation	2018	Germany	NA	NA	51.73 9.8	near Moringen, Germany
+794874	Linum leonii	LEO-2-29-2-leaf-2	Sample_UF-3013-LEO-2-29-2-leaf-2	RNAseq for assembly annotation	2018	Germany	NA	NA	51.73 9.8	near Moringen, Germany
+794874	Linum leonii	LEO-2-29-2-stem-1	Sample_UF-3013-LEO-2-29-2-stem-1	RNAseq for assembly annotation	2018	Germany	NA	NA	51.73 9.8	near Moringen, Germany
+794874	Linum leonii	LEO-2-29-2-stem-2	Sample_UF-3013-LEO-2-29-2-stem-2	RNAseq for assembly annotation	2018	Germany	NA	NA	51.73 9.8	near Moringen, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-02_S80	Lleo-G22-4-02	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-06_S81	Lleo-G22-4-06	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-10_S82	Lleo-G22-4-10	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-14_S83	Lleo-G22-4-14	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-15_S24	Lleo-G22-4-15	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-16_S84	Lleo-G22-4-16	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-18_S85	Lleo-G22-4-18	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-19_S86	Lleo-G22-4-19	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-20_S87	Lleo-G22-4-20	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-21_S88	Lleo-G22-4-21	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-22_S89	Lleo-G22-4-22	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-23_S90	Lleo-G22-4-23	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-24_S25	Lleo-G22-4-24	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-25_S91	Lleo-G22-4-25	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-26_S59	Lleo-G22-4-26	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-27_S60	Lleo-G22-4-27	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-28_S61	Lleo-G22-4-28	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-29_S62	Lleo-G22-4-29	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-30_S26	Lleo-G22-4-30	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany
+794874	Linum leonii	VI-3416-Lleo-G22-4-31_S63	Lleo-G22-4-31	Short-read WGS - pop. Ger4	2022	Germany	Flowering	Leaf	51.82 9.91	ger4 near Einbeck, Germany

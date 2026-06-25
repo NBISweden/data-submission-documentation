@@ -1,0 +1,9 @@
+(base) steny507@UU-C02FVGB5MD6M Desktop % java -jar webin-cli-9.0.1.jar -username Webin-[XXXXX] -password [PASSWORD] -context sequence -manifest Target_seq_manifest.txt -submit 
+INFO : Your application version is 9.0.1
+INFO : A new application version is available. Please download the latest version 9.0.3 from https://github.com/enasequence/webin-cli/releases
+INFO : Connecting to FTP server : webin2.ebi.ac.uk
+INFO : Creating report file: /Users/stephannylinder/Desktop/./webin-cli.report
+INFO : Uploading file: /Users/stephannylinder/Desktop/Single-CDS_genomic_DNA_ERT000029_1771326273165.tsv.gz
+INFO : Files have been uploaded to webin2.ebi.ac.uk. 
+INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29221441
+(base) steny507@UU-C02FVGB5MD6M Desktop % 

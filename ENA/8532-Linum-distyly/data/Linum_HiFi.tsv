@@ -1,0 +1,4 @@
+FileType	bam													
+study	sample	library_name	library_strategy	library_source	library_selection	library_layout	platform	instrument_model	file_name	file_md5				
+PRJEB108304	LEO-2-29-2	LEO-2-29-2_HiFi	WGS	GENOMIC	size fractionation	SINGLE	PACBIO_SMRT	Sequel II	/m64204e_211019_123116.hifi_reads.bam	04309417c41e18f4f80dec660b629942				
+PRJEB108304	LEO-2-29-2	LEO-2-29-2_HiFi	WGS	GENOMIC	size fractionation	SINGLE	PACBIO_SMRT	Sequel II	/m64204e_211026_131823.hifi_reads.bam	65651823e23269fcf3cb7a0c2fae2919				

@@ -1,0 +1,3 @@
+FileType	fastq													
+study	sample	library_name	library_strategy	library_source	library_selection	library_layout	insert_size	library_construction_protocol	platform	instrument_model	forward_file_name	forward_file_md5	reverse_file_name	reverse_file_md5
+PRJEB108304	LEO-2-29-2	LEO-2-29-2_HiC	Hi-C	GENOMIC	size fractionation	PAIRED	150	To produce high-quality proximity ligation (Hi-C) libraries for genome assembly scaffolding, 300 mg of fresh-frozen leaf tissue was ground to a fine powder for preparation of Hi-C libraries using the Dovetail Omni-C Kit	ILLUMINA	Illumina NovaSeq 6000	/P22661_101_S2_L001_R1_001.fastq.gz	387732234284d3cebf61bc259bd4f39f	/P22661_101_S2_L001_R2_001.fastq.gz	fd1bad81ae8092d970fe2e2f11172975

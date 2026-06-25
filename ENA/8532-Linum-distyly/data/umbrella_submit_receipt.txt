@@ -1,0 +1,13 @@
+curl -u Webin-[XXXXX]:[PASSWORD] -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2026-02-16T11:03:02.773Z" submissionFile="submission.xml" success="true">
+     <PROJECT accession="PRJEB108317" alias="Linum-distyly-study-umbrella-2026-09-01" status="PRIVATE" holdUntilDate="2026-09-01+01:00"/>
+     <SUBMISSION accession="ERA35738731" alias="SUBMISSION-16-02-2026-11:03:02:555"/>
+     <MESSAGES>
+          <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+     <ACTIONS>HOLD</ACTIONS>
+</RECEIPT>%                                                                                                                                                                                                                
