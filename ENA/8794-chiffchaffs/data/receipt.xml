@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2026-06-24T15:04:38.240+01:00" submissionFile="submission.xml" success="true">
+     <EXPERIMENT accession="ERX16831797" alias="exp_RS6125" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831798" alias="exp_RS6128" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831799" alias="exp_RS6129" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831800" alias="exp_RS6132" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831801" alias="exp_SZ8855" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831802" alias="exp_SZ8857" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831803" alias="exp_SZ8858" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831804" alias="exp_SZ8875" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831805" alias="exp_TC0163" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831806" alias="exp_RE4687" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831807" alias="exp_SZ8873" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831808" alias="exp_SZ8874" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831809" alias="exp_SZ8876" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831810" alias="exp_SZ8877" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831811" alias="exp_SZ8878" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831812" alias="exp_UR8209" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831813" alias="exp_US8624" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831814" alias="exp_US8625" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831815" alias="exp_US8626" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831816" alias="exp_LH10497" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831817" alias="exp_LJ34520" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831818" alias="exp_XT48070" status="PRIVATE"/>
+     <EXPERIMENT accession="ERX16831819" alias="exp_XT48071" status="PRIVATE"/>
+     <RUN accession="ERR17440715" alias="run_RS6125_1" status="PRIVATE"/>
+     <RUN accession="ERR17440716" alias="run_RS6125_2" status="PRIVATE"/>
+     <RUN accession="ERR17440717" alias="run_RS6128_1" status="PRIVATE"/>
+     <RUN accession="ERR17440718" alias="run_RS6128_2" status="PRIVATE"/>
+     <RUN accession="ERR17440719" alias="run_RS6129_1" status="PRIVATE"/>
+     <RUN accession="ERR17440720" alias="run_RS6129_2" status="PRIVATE"/>
+     <RUN accession="ERR17440721" alias="run_RS6132_1" status="PRIVATE"/>
+     <RUN accession="ERR17440722" alias="run_RS6132_2" status="PRIVATE"/>
+     <RUN accession="ERR17440723" alias="run_SZ8855_1" status="PRIVATE"/>
+     <RUN accession="ERR17440724" alias="run_SZ8855_2" status="PRIVATE"/>
+     <RUN accession="ERR17440725" alias="run_SZ8857_1" status="PRIVATE"/>
+     <RUN accession="ERR17440726" alias="run_SZ8857_2" status="PRIVATE"/>
+     <RUN accession="ERR17440727" alias="run_SZ8858_1" status="PRIVATE"/>
+     <RUN accession="ERR17440728" alias="run_SZ8858_2" status="PRIVATE"/>
+     <RUN accession="ERR17440729" alias="run_SZ8875_1" status="PRIVATE"/>
+     <RUN accession="ERR17440730" alias="run_SZ8875_2" status="PRIVATE"/>
+     <RUN accession="ERR17440731" alias="run_TC0163_1" status="PRIVATE"/>
+     <RUN accession="ERR17440732" alias="run_TC0163_2" status="PRIVATE"/>
+     <RUN accession="ERR17440733" alias="run_RE4687_1" status="PRIVATE"/>
+     <RUN accession="ERR17440734" alias="run_RE4687_2" status="PRIVATE"/>
+     <RUN accession="ERR17440735" alias="run_SZ8873_1" status="PRIVATE"/>
+     <RUN accession="ERR17440736" alias="run_SZ8873_2" status="PRIVATE"/>
+     <RUN accession="ERR17440737" alias="run_SZ8874_1" status="PRIVATE"/>
+     <RUN accession="ERR17440738" alias="run_SZ8874_2" status="PRIVATE"/>
+     <RUN accession="ERR17440739" alias="run_SZ8876_1" status="PRIVATE"/>
+     <RUN accession="ERR17440740" alias="run_SZ8876_2" status="PRIVATE"/>
+     <RUN accession="ERR17440741" alias="run_SZ8877_1" status="PRIVATE"/>
+     <RUN accession="ERR17440742" alias="run_SZ8877_2" status="PRIVATE"/>
+     <RUN accession="ERR17440743" alias="run_SZ8878_1" status="PRIVATE"/>
+     <RUN accession="ERR17440744" alias="run_SZ8878_2" status="PRIVATE"/>
+     <RUN accession="ERR17440745" alias="run_UR8209_1" status="PRIVATE"/>
+     <RUN accession="ERR17440746" alias="run_UR8209_2" status="PRIVATE"/>
+     <RUN accession="ERR17440747" alias="run_US8624_1" status="PRIVATE"/>
+     <RUN accession="ERR17440748" alias="run_US8624_2" status="PRIVATE"/>
+     <RUN accession="ERR17440749" alias="run_US8625_1" status="PRIVATE"/>
+     <RUN accession="ERR17440750" alias="run_US8625_2" status="PRIVATE"/>
+     <RUN accession="ERR17440751" alias="run_US8626_1" status="PRIVATE"/>
+     <RUN accession="ERR17440752" alias="run_US8626_2" status="PRIVATE"/>
+     <RUN accession="ERR17440753" alias="run_LH10497_1" status="PRIVATE"/>
+     <RUN accession="ERR17440754" alias="run_LH10497_2" status="PRIVATE"/>
+     <RUN accession="ERR17440755" alias="run_LJ34520_1" status="PRIVATE"/>
+     <RUN accession="ERR17440756" alias="run_LJ34520_2" status="PRIVATE"/>
+     <RUN accession="ERR17440757" alias="run_XT48070_1" status="PRIVATE"/>
+     <RUN accession="ERR17440758" alias="run_XT48070_2" status="PRIVATE"/>
+     <RUN accession="ERR17440759" alias="run_XT48071_1" status="PRIVATE"/>
+     <RUN accession="ERR17440760" alias="run_XT48071_2" status="PRIVATE"/>
+     <SUBMISSION accession="ERA36576984" alias="SUBMISSION-24-06-2026-15:04:35:291"/>
+     <MESSAGES>
+          <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+     <ACTIONS>HOLD</ACTIONS>
