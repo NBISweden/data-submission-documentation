@@ -1,0 +1,3 @@
+STUDY        PRJEB108312
+NAME         Linum spp. targeted sequences
+TAB          Single-CDS_genomic_DNA_ERT000029_1771326273165.tsv.gz

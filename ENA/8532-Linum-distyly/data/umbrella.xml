@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<PROJECT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<PROJECT center_name="" alias="Linum-distyly-study-umbrella-2026-09-01">
+		<TITLE>Linum distyly loss project</TITLE>
+		<DESCRIPTION> This project collects the annotated genome assembly for the species Linum leonii, and annotated chloroplast genomes for 17 species of Linum.</DESCRIPTION>
+		<UMBRELLA_PROJECT>
+			<ORGANISM>
+				<TAXON_ID>4005</TAXON_ID>
+				<SCIENTIFIC_NAME>Linum sp.</SCIENTIFIC_NAME>
+			</ORGANISM>
+		</UMBRELLA_PROJECT>
+		<RELATED_PROJECTS>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB108304"/>
+			</RELATED_PROJECT>
+			<RELATED_PROJECT>
+				<CHILD_PROJECT accession="PRJEB108312"/>
+			</RELATED_PROJECT>
+		</RELATED_PROJECTS>
+	</PROJECT>
+</PROJECT_SET>
+
+
+
+
+
+
+
+
