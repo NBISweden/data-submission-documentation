@@ -290,7 +290,87 @@ The mito assembly was finished later than the nuclear assembly, and had to be su
 ```
 java -jar webin-cli-7.1.1.jar -ascp -context=genome -manifest=Parmnem_mito_manifest.txt -userName=Webin-XXXXX -password=[password] -validate
 ```
+## Note 2026-06: Annotated mito assembly
+* It was noticed that although there exists an annotated mito assembly, only the .fasta file with the assembly was submitted.
+* The earlier attempt at creating an .embl flat file was not quite successful, no locus tag had been registered (instead the one registered for the whole genome had been used), and indexing (<TAG>_LOCUS1, <TAG>_LOCUS2, etc) didn't increase correctly, as there were several indexes within the same gene feature. This likely is due to the .gff file having more features than the EMBLmyGFF3 knows how to handle.
 
+### Solution
+1. Register a locus tag with the mito project: `PARMNEMMT`
+1. Compare preparation steps taken from a similar project (Palm tree submission), and update what is needed accordingly
+1. Select correct translational table, see <https://www.ncbi.nlm.nih.gov/Taxonomy/taxonomyhome.html/index.cgi?chapter=cgencodes>
+1. Add `--organelle mitochondrion`
+1. Create a chromosome_list.txt with the following line: `ptg000351l_1_rc_rotated	MIT Circular-Chromosome Mitochondrion`
+1. Validate and submit a new version
+
+Initial attempt at creating an embl flatfile:
+  ```
+  EMBLmyGFF3 pmnemosyne_mtdna.gff pmnemosyne_mtdna.fasta --topology circular --molecule_type 'genomic DNA' --organelle mitochondrion --transl_table 5 --species "Parnassius mnemosyne" --locus_tag PARMNEMMT --project_id PRJEB76267 -o pmnemosyne_mtdna_2026-06.embl
+  ```
+Output:
+  ```
+  09:31:02 WARNING feature: The qualifier >mol_type< is mandatory for the feature >source<. We will not report the feature.
+  09:31:02 WARNING feature: The qualifier >organism< is mandatory for the feature >source<. We will not report the feature.
+  09:31:02 WARNING EMBLmyGFF3: Sequence id <ptg000351l_1_rc_rotated mitofinder> from the gff file not found within the fasta file. Are you sure to provide the correct fasta file? The tool will create a string of ???? as sequence (its length will be the end position of the last feature). For you information, if you use the --translate option the tool will raise an error due to ??? codons that do not exist.
+  09:31:02 WARNING EMBLmyGFF3: Sequence <unknown name> too short (1 bp)! Minimum accpeted by ENA is 100, we skip it !
+  ```
+* pmnemosyne_mtdna_edit.gff:
+  * removed the first source line
+  * last row didn't have a tab but space btw identifier and `mitofinder`
+  * added `##gff-version 3` on first line
+* pmnemosyne_mtdna_edit.fasta:
+  * divided the sequence into 70 character long lines (was all on one line)
+* Column 8: “phase” The phase of the CDS feature, which is related to /codon_start in the flatfile specification. The phase is computed based on the known phase at the start of the CDS and computed for subsequent CDS rows. It may not be accurate if the CDS contains internal frameshifts, which can occur in pseudogenes and in genomes with indels, assembly gaps, and other errors. The phase is one of the integers 0, 1, or 2, indicating the number of bases that should be removed from the beginning of this CDS feature to reach the first base of the next codon. If the feature is not a CDS, this field should be set to “.”.
+  * Hence, for all rows not being a CDS I will change from `0` to `.`
+
+* Still an issue that locus tag indexes is increased within genes...
+  * I have no idea why, I can understand if it is in gene + tRNA pairs, but it is also on gene + CDS pairs, and these should (have earlier) work
+  * I really don't want to manually edit the embl file, even if doable since not so many genes
+  * I asked Gemini, who explained 
+    ```
+    The 9th column (attributes) only contains Name=.... Because there are no ID and Parent attributes linking them together, EMBLmyGFF3 has no way of knowing that the tRNA belongs to that specific gene. It treats them as two completely independent entities and increments the locus tag for each.
+
+    Example:
+    ptg000351l_1_rc_rotated mitofinder gene 1 69 . + . ID=gene_tRNA_Met;Name=tRNA-Met gene
+    ptg000351l_1_rc_rotated mitofinder tRNA 1 69 . + . ID=tRNA_Met;Parent=gene_tRNA_Met;Name=tRNA-Met
+    ```
+  * I asked Gemini to fix the file (pmnemosyne_mtdna_edit_gemini.gff)
+    ```
+    What changed?
+    * Formatting Fixes: Your raw file had line-break anomalies (e.g., splitting strands like + or - to the start of a new line), which I have safely stitched back into proper 9-column formatting.  
+    * Added IDs to Genes: ID=gene_<Name>;.  Linked Child Features: ID=<Feature>_<Name>;Parent=gene_<Name>;.  
+    * D-loop preserved: Kept D-loop at the end as its own independent component since it doesn't fall under a functional gene class. 
+    ``` 
+
+* D-loop ended up as first locus tag (index 1) which I don't want, so I asked Gemini for solution. The answer is that I can either wrap it up as a pseudogene or add the desired locus tag explicitly (change last row to `ptg000351l_1_rc_rotated	mitofinder	D-loop	14964	15425	.	+	0	Name=D-loop;locus_tag=PARMNEMMT_LOCUS38`). I decided to go with the first alternative:
+  ```
+  ptg000351l_1_rc_rotated	mitofinder	gene	14964	15425	.	+	0	ID=gene_D-loop;Name=D-loop region
+  ptg000351l_1_rc_rotated	mitofinder	D-loop	14964	15425	.	+	0	ID=D-loop;Parent=gene_D-loop;Name=D-loop
+  ```
+* I realised that I hadn't given Gemini the correct input file, with the phase set to '.' if not a CDS row. I asked Gemini to fix this, including also the removal of source line, and the pseudogene wrapping of the D-loop, output file: pmnemosyne_mtdna_toENA.gff
+* Flatfile:
+  ```
+  EMBLmyGFF3 pmnemosyne_mtdna_toENA.gff pmnemosyne_mtdna.fasta --topology circular --molecule_type 'genomic DNA' --organelle mitochondrion --transl_table 5 --species "Parnassius mnemosyne" --locus_tag PARMNEMMT --project_id PRJEB76267 -o pmnemosyne_mtdna_2026-06.embl
+  ```
+  * Note that I did not use the .fasta file where I had shortened the lines, it worked anyway without any warnings.
+
+#### Validation & submission
+
+```
+conda deactivate
+java -jar ../../../../../Downloads/webin-cli-9.0.3.jar -context=genome -manifest=pmnemosyne_mtdna-manifest.txt -userName=[username] -password=[password] -validate
+```
+* Receipt:
+  ```
+  INFO : Your application version is 9.0.3
+  INFO : Connecting to FTP server : webin2.ebi.ac.uk
+  INFO : Creating report file: /mnt/c/Users/yvonne.kallberg/GitHub/data-submission-documentation/ENA/ERGA-Parnassius/data/./webin-cli.report
+  INFO : Uploading file: /mnt/c/Users/yvonne.kallberg/GitHub/data-submission-documentation/ENA/ERGA-Parnassius/data/pmnemosyne_mtdna_2026-06.embl.gz
+  INFO : Uploading file: /mnt/c/Users/yvonne.kallberg/GitHub/data-submission-documentation/ENA/ERGA-Parnassius/data/chromosome_list.txt.gz
+  INFO : Files have been uploaded to webin2.ebi.ac.uk.
+  INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29716571
+  ```
+
+# Umbrella
 - An umbrella was submitted via xml...
 
 ```

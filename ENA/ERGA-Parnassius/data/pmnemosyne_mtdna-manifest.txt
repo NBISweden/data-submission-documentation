@@ -1,0 +1,12 @@
+  STUDY	PRJEB76267
+  SAMPLE	SAMEA13166629
+  ASSEMBLYNAME	Parnassius_mnemosyne_mito_2024_06.2
+  ASSEMBLY_TYPE	isolate
+  COVERAGE	30
+  PROGRAM	MitoHiFi, MitoFinder
+  PLATFORM	PacBio HiFi, Illumina Hi-C
+  MOLECULETYPE	genomic DNA
+  DESCRIPTION	The mitochondrial genome was recovered from the primary assembly after haplotig removal using MitoHiFi [10] v2.2. MtDNA was annotated using MitoFinder [11] v1.4.1 and reoriented to start at tRNA-Met to match Parnassius apollo (Acession: NC_024727.1)
+  RUN_REF	ERR12146337, ERR12148427, ERR12148429
+  FLATFILE	pmnemosyne_mtdna_2026-06.embl.gz
+  CHROMOSOME_LIST	chromosome_list.txt.gz
