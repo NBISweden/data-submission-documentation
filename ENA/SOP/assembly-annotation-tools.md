@@ -30,6 +30,9 @@ or:
 gunzip -c [filename].embl.gz | sed -n '18969820,18969820;18969898' > out.txt
 ```
 
+## XML validation
+* Before submitting an .xml file to ENA, they can be validated at <https://www.xmlvalidation.com>
+
 ## Installing lftp locally on Dardel (PDC)
 The *lftp* command is often the only option in order to submit sequences to ENA. Here's how to install and run it locally via conda.
 * In the home directory, on Dardel:
