@@ -90,3 +90,11 @@ An assembly can either be submitted to the same study/project as the raw data, o
     ```
 * Note down the accession number given.
 * When ENA has processed the assembly, an email will be sent to the Webin account (or rather to those listed with emails in the account), that the assembly has been accessioned. The timeline varies with ENA workload, but most often within a week.
+
+## Update assembly
+* Some of the metadata, i.e. the information found in the manifest, can be updated in the ENa portal by editing the XML file
+* If the assembly itself needs another version to be submitted, here's the steps:
+    * Copy the manifest to a new file indicating that it is an updated version
+    * Add a `.2` to the `NAME`
+    * Change the file name in `FLATFILE` and update any other field values that has changed
+    * Submit using Webin-CLI
