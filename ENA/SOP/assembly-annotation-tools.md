@@ -5,8 +5,9 @@ Annotated assemblies, no matter if a full genome or organelle assembly, most oft
 This SOP provides a collection of the tools, scripts and how-to, in order to help solve the most common issues.
 
 ## Making ENA compliant .embl flat file
-* EMBLmyGFF3, expose_translation etc
-* AGAT, annotation teams How-to on github
+* EMBLmyGFF3, expose_translation etc [EMBLmyGFF](https://github.com/NBISweden/EMBLmyGFF3)
+* AGAT, annotation teams [How-to on github](https://github.com/NBISweden/annotation-cluster/wiki/ENA-submission#create-embl-file)
+* Identify which translational table to be used at [NCBI taxonomy lookup](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi).
 
 ## Extracting genes with issues
 Since validation of the assembly is done on the .embl file, and any error messages refers to line numbers in this file, we need to map which lines this corresponds to in the .gff file.
@@ -28,3 +29,20 @@ or:
 ```
 gunzip -c [filename].embl.gz | sed -n '18969820,18969820;18969898' > out.txt
 ```
+
+## Installing lftp locally on Dardel (PDC)
+The *lftp* command is often the only option in order to submit sequences to ENA. Here's how to install and run it locally via conda.
+* In the home directory, on Dardel:
+    ```
+    ml PDC/24.11
+    ml miniconda3
+    conda create --name lftp-env -c conda-forge lftp
+    source activate lftp-env
+    ```
+* This installs and activates the lftp environment. Then files can be transferred by `cd` into directory with files on Dardel, and from there run:
+```
+lftp webin2.ebi.ac.uk -u Webin-[XXXXX]
+(enter password at prompt)
+mput *.gz
+```
+* When all files in the current directory are transferred, exit lftp with `bye`
