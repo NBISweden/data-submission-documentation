@@ -369,6 +369,11 @@ java -jar ../../../../../Downloads/webin-cli-9.0.3.jar -context=genome -manifest
   INFO : Files have been uploaded to webin2.ebi.ac.uk.
   INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29716571
   ```
+* Accession:
+  ```
+  ASSEMBLY_NAME                       | ASSEMBLY_ACC | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
+  Parnassius_mnemosyne_mito_2024_06.2 | ERZ29716571  | PRJEB76267 | ERS10770208 |            |              | OZ075093-OZ075093
+  ```
 
 # Umbrella
 - An umbrella was submitted via xml...
