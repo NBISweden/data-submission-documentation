@@ -31,7 +31,7 @@ Medium dataset (~120 files, ~400Mb data). Normally an experiment only references
 *  Ingestion of the uploaded fastq files at the ENA was done in one go using the curl command:
   
 ```
-curl -u [Username]:[password] -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@Chiffchaff_experiments.xml.xml" -F "RUN=@Chiffchaff_runs_files.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+curl -u [Username]:[password] -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@Chiffchaff_experiments.xml" -F "RUN=@Chiffchaff_runs_files.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 * Successful submission was confirmed by the [xml receipt](./data/receipt.xml)
 
