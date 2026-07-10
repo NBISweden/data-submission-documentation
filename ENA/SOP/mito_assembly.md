@@ -40,9 +40,10 @@ It is advised to submit the mito assembly using a separate project from the geno
 * The .gff file *must* have gene + CDS while mRNA is optional for mitochondrial genomes.
 * If it is not a CDS, but rather tRNA or rRNA, ensure that there is a gene + tRNA, or gene + rRNA, respectively, and that their relation is correctly specified with *ID* and *Parent*, e.g.:
     ```
-    ptg000351l_1_rc_rotated mitofinder      gene    1       69      .       +       0       ID=gene_tRNA-Met;Name=tRNA-Met gene
-    ptg000351l_1_rc_rotated mitofinder      tRNA    1       69      .       +       0       ID=tRNA-Met;Parent=gene_tRNA-Met;Name=tRNA-Met
+    ptg000351l_1_rc_rotated mitofinder      gene    1       69      .       +       .       ID=gene_tRNA-Met;Name=tRNA-Met gene
+    ptg000351l_1_rc_rotated mitofinder      tRNA    1       69      .       +       .       ID=tRNA-Met;Parent=gene_tRNA-Met;Name=tRNA-Met
     ```
+* Column 8 of the GFF file, “phase”: The phase of the CDS feature, which is related to /codon_start in the flatfile specification. The phase is computed based on the known phase at the start of the CDS and computed for subsequent CDS rows. It may not be accurate if the CDS contains internal frameshifts, which can occur in pseudogenes and in genomes with indels, assembly gaps, and other errors. The phase is one of the integers 0, 1, or 2, indicating the number of bases that should be removed from the beginning of this CDS feature to reach the first base of the next codon. **If the feature is not a CDS, this field should be set to “.”.**
 * Ensure afterwards that there is a 'OG   mitochondrion' organelle feature
 * Double check that the locus tags indeces are (increased) as expected (should be if the Parent was defined correctly in the .gff)
 
