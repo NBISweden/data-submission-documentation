@@ -2,7 +2,7 @@
 An annotated assembly typically consists of a .gff file and a .fasta file. ENA currently only accepts .embl flat file format (will likely be changed end of 2026 to accept .gff and .fasta files directly).
 Annotated assemblies, no matter if a full genome or organelle assembly, most often requires an iterative validation (using Webin-CLI) and correction process before it passes. Also, even if the file passes validation, there could still be errors in the post-submission processing step, and it has happen that this processing step removes feature annotations (i.e. the published record is missing annotation), which is only apparent when the assembly is public.
 
-This SOP provides a collection of the tools, scripts and how-to, in order to help solve the most common issues. Note, for now other, not related to assemblies, tricks are also in this file (last).
+This SOP provides a collection of the tools, scripts and how-to, in order to help solve the most common issues. Note that other tricks, not related to assemblies, are also in this file (last).
 
 ## TOC
 * [Making ENA compliant EMBL flat file](#making-ena-compliant-embl-flat-file)
@@ -12,9 +12,9 @@ This SOP provides a collection of the tools, scripts and how-to, in order to hel
 * []()
 
 ## Making ENA compliant .embl flat file
-* EMBLmyGFF3, expose_translation etc [EMBLmyGFF](https://github.com/NBISweden/EMBLmyGFF3)
-* AGAT, annotation teams [How-to on github](https://github.com/NBISweden/annotation-cluster/wiki/ENA-submission#create-embl-file)
-* Identify which translational table to be used at [NCBI taxonomy lookup](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi).
+<!-- add every tool, scripts, trick we have used or know of in order to make the GFF work as input -->
+* AGAT, [annotation team guide](https://github.com/NBISweden/annotation-cluster/wiki/ENA-submission)
+* See [GFF3 to EMBL](./GFF3-to-EMBL.md) on how to use EMBLmyGFF3 in order to create EMBL flat file from .gff and .fasta file.
 
 ## Extracting genes with validation issues
 Since validation of the assembly is done on the .embl file, and any error messages refers to line numbers in this file, we need to map which lines this corresponds to in the .gff file.
