@@ -50,7 +50,7 @@ It is advised to submit the mito assembly using a separate project from the geno
 * Also check the [assembly annotation tools](./assembly-annotation-tools.md) page for tips and tricks on annotated assemblies.
 
 ## Submit assembly
-* Validate then submit the assembly manifest using Webin-CLI:
+* Validate then submit the assembly manifest using the [latest](https://github.com/enasequence/webin-cli/releases) Webin-CLI:
     ```
     java -jar /path/to/webin-cli-9.0.3.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./mito-assembly-manifest.txt -validate 
     java -jar /path/to/webin-cli-9.0.3.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./mito-assembly-manifest.txt -submit   
