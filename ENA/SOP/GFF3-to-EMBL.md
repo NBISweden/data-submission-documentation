@@ -58,14 +58,14 @@ After installing EMBLmyGFF3, open a command line terminal and navigate to the fo
     - `--molecule_type` sets the molecule type of the sample (e.g. `genomic DNA` for nuclear genome assembly, otherwise any of: "genomic RNA", "mRNA", "tRNA", "rRNA", "other RNA", "other DNA", "transcribed RNA", "viral cRNA", "unassigned DNA", "unassigned RNA")
 
     Executing the script will take some time depending on the size of the GFF and FASTA. A small genome might take under a minute, while large genomes of several Gb is known to have taken hours, or even days.
-
+* Remember to look at the resulting output (EMBL) file. Check that the locus tags indexes works,
 * The finished EMBL file must then be compressed using gzip:
 
     ```
     gzip -k [File].embl
     ````
     With the `-k` flag active to force gzip to retain the original file. 
-* The zipped file can then be uploaded to ENA using the Webin-CLI client as described in [5894-Geodia-assembly](../5894-Geodia-assembly/README.md).
+* The zipped file can then be uploaded to ENA using the Webin-CLI client as described in [assembly submission](./assembly-submission.md) or [mito assembly](./mito_assembly.md) pages.
 
 ## Organelle genome conversion
 We have so far come across mitochondrion and chloroplast annotated assemblies, and for these there is one more parameter to set in the EMBLmyGFF3 script:
