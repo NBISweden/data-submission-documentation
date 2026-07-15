@@ -80,3 +80,5 @@ For annotated assemblies, even if validation was without errors, and accession n
     1. *General > Related ENA Records*: Gives hyperlinks to the Assembly, Coding & Non-coding (if annotated), and Sequence. If you follow the *Assembly* link, you will find all metadata that was included in the manifest, some quality statistics calculated by ENA, and have the possibility to download `All Seq EMBL` and `All Seq FASTA`. If you follow the *Sequence* link, you will see (some) sample metadata as well as have the possibility to view or download FASTA/EMBL/GFF. Both ways of downloading the EMBL format gives the same information, irrespective of if annotated or not. The GFF format is of no interest if not annotated assembly, since this file describes the features.
     1. *Data > Sequence files*: Gives the same as *General > Related ENA Records > Sequence* described above.
 1. Verify that the EMBL formatted file has the same features and annotation as the EMBL file you uploaded.
+
+**Note:** A short-cut is to paste the assembly or sequence accession after the last '/' in the following hyperlink: <https://www.ebi.ac.uk/ena/browser/view/>
