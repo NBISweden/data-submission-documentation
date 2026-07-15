@@ -11,7 +11,9 @@ It is advised to submit the mito assembly using a separate project from the geno
     1. Create manifest file
     1. Create EMBL flat file (if annotated assembly)
 1. Submit assembly
+    1. Post-submission check
 1. Add study to umbrella project
+1. Post-release check
 
 ## Register study
 * Register a study via ENA portal, remember to add a locus tag if the assembly is annotated
@@ -56,9 +58,25 @@ It is advised to submit the mito assembly using a separate project from the geno
     java -jar /path/to/webin-cli-9.0.3.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./mito-assembly-manifest.txt -submit   
     ```
 
+### Post-submission check
+* After some days, accession numbers will come via email. 
+    * The assembly will have an accession starting with `GCA_` and the level will have a span 
+    * Ensure that the level (contig, scaffold or chromosome) is as expected, for mitochondrial it will always be *chromosome* level.
+    * Note the identifiers in an appropriate place
+
 ## Add study to umbrella project
 
 * If not already done, an umbrella project should be created, see further the SOP [register_umbrella_project](./register_umbrella_project.md). 
 
 * In that SOP, please also find information on [how to update an existing umbrella project](register_umbrella_project.md#how-to-update-an-umbrella-project).
 
+## Post-release check
+It is important to verify that everything displays as it should when public.
+For annotated assemblies, even if validation was without errors, and accession numbers were assigned, the only way to verify that an assembly is displaying correctly is when it's become public.
+
+1. Enter the project accession number in [ENA browser](https://www.ebi.ac.uk/ena/browser/home)
+1. Verify that the description displays correctly
+1. To the right is the **General** and **Data** links
+    1. *General > Related ENA Records*: Gives hyperlinks to the Assembly, Coding & Non-coding (if annotated), and Sequence. If you follow the *Assembly* link, you will find all metadata that was included in the manifest, some quality statistics calculated by ENA, and have the possibility to download `All Seq EMBL` and `All Seq FASTA`. If you follow the *Sequence* link, you will see (some) sample metadata as well as have the possibility to view or download FASTA/EMBL/GFF. Both ways of downloading the EMBL format gives the same information, irrespective of if annotated or not. The GFF format is of no interest if not annotated assembly, since this file describes the features.
+    1. *Data > Sequence files*: Gives the same as *General > Related ENA Records > Sequence* described above.
+1. Verify that the EMBL formatted file has the same features and annotation as the EMBL file you uploaded.
