@@ -1,7 +1,7 @@
 ---
 Redmine_issue: -
 Repository: ENA
-Submission_type: WGS, assembly,
+Submission_type: WGS, assembly
 Data_generating_platforms:
 - NGI
 Top_level_acccession: PRJEB67749
