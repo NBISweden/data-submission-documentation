@@ -11,6 +11,9 @@ An assembly can either be submitted to the same study/project as the raw data, o
     1. Create manifest file
     1. Create EMBL flat file (if annotated assembly)
 1. Submit using Webin-CLI
+    1. Post-submission check
+1. Update assembly
+1. Post-release check
 
 ## Collect assembly metadata
 * Ask assembly bioinformatician for the assembly metadata, and to confirm which raw dataset(s) to reference.
@@ -55,13 +58,34 @@ An assembly can either be submitted to the same study/project as the raw data, o
 
     java -jar /path/to/webin-cli-9.0.3.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./assembly-manifest.txt -submit   
     ```
-* Note down the accession number given.
-* When ENA has processed the assembly, an email will be sent to the Webin account (or rather to those listed with emails in the account), that the assembly has been accessioned. The timeline varies with ENA workload, but most often within a week.
+* Note down the analysis accession number given (ERZ...).
+
+### Post-submission check
+* When ENA has processed the assembly, an email will be sent to the Webin account (or rather to those listed with emails in the account), that the assembly has been accessioned. The timeline varies with ENA workload, but most often within a week. 
+    * The assembly will have an accession starting with `GCA_` and the level will have a span 
+    * Ensure that the level (contig, scaffold or chromosome) is as expected
+    * Ensure that the span encompasses the expected number of contigs/scaffolds/chromosomes
+    * Note the identifiers in an appropriate place
+* If you don't get an email within reasonable time, login to the account and check the status in `Data Analyses > Analysis Processing Report`. This shows the processing status of archived analysis files, and you can see if it is *active*, *completed*, or *failed*. Nothe though that even if a processing has failed, the system will retry failed analyses so errors may resolve themselves. If it doesn't within a couple of weeks, you might need to contact ENA support and ask them to try to identify why processing keeps failing.
 
 ## Update assembly
-* Some of the metadata, i.e. the information found in the manifest, can be updated in the ENa portal by editing the XML file
+* Some of the metadata, i.e. the information found in the manifest, can be updated in the ENA portal by editing the XML file
 * If the assembly itself needs another version to be submitted, here's the steps:
     * Copy the manifest to a new file indicating that it is an updated version
     * Add a `.2` to the `NAME`
     * Change the file name in `FLATFILE` and update any other field values that has changed
     * Submit using Webin-CLI
+
+## Post-release check
+It is important to verify that everything displays as it should when public.
+For annotated assemblies, even if validation was without errors, and accession numbers were assigned, the only way to verify that an assembly is displaying correctly is when it's become public.
+
+1. Enter the project accession number in [ENA browser](https://www.ebi.ac.uk/ena/browser/home)
+1. Verify that the description displays correctly
+1. To the right is the **General** and **Data** links
+    1. *General > Related ENA Records*: Gives hyperlinks to the Assembly, Coding & Non-coding (if annotated), and Sequence. If you follow the *Assembly* link, you will find all metadata that was included in the manifest, some quality statistics calculated by ENA, and have the possibility to download `All Seq EMBL` and `All Seq FASTA`, and dito for the WGS set (i.e. `WGS Set EMBL` and `WGS Set FASTA`). If you follow the *Sequence* link, you will see (some) sample metadata as well as have the possibility to view or download FASTA/EMBL/GFF per level (contig/scaffold/chromosome). Both ways of downloading the EMBL format gives the same information, irrespective of if annotated or not. The GFF format is of no interest if not annotated assembly, since this file describes the features.
+    1. *Data > Sequence files*: Gives the same as *General > Related ENA Records > Sequence* described above.
+    1. *Data > Wgs files*: Gives the same as *General > Related ENA Records > Assembly* decribed above.
+1. Verify that the EMBL (annotated assembly) / FASTA (not annotated assembly) formatted file has the same features and annotation as the EMBL file you uploaded.
+
+**Note:** A short-cut is to paste the assembly or sequence accession after the last '/' in the following hyperlink: <https://www.ebi.ac.uk/ena/browser/view/>
