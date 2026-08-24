@@ -6,7 +6,7 @@ In order to link the individual studies, and have a main entry point, an umbrell
 
 * ENA documentation on [umbrella studies](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#umbrella-studies)
 
-* Umbrella projects can only be registered and modified programatically, using xml files and curl command.
+* Umbrella projects can only be registered and modified programatically, using xml files and `curl` command.
 
 * The [submission.xml](./data/submission.xml) file contains the action to be made in the ACTION section. The actions are limited to:
 
@@ -29,7 +29,7 @@ In this case `ADD` is used along with the release date.
 
 * Submit using curl:
     ```
-    curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u [Username]:[Password] -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
     * Note down the received accession number from the receipt, as well make a copy of the receipt itself.
 
@@ -37,7 +37,7 @@ In this case `ADD` is used along with the release date.
 
 ## How to update an umbrella project
 
-* ENA doc on [Adding Children To An Umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella)
+* ENA documentation on [Adding Children To An Umbrella](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella)
 
 
 * First, create an [update.xml](./data/update.xml) (or copy the linked one).
@@ -58,7 +58,7 @@ In this case `ADD` is used along with the release date.
 
 * Submit using curl:
     ```
-    curl -u Username:Password -F SUBMISSION=@update.xml" -F "PROJECT=@umbrella-add-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u [Username]:[Password] -F SUBMISSION=@update.xml" -F "PROJECT=@umbrella-add-mito.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
 * Check that the receipt contains `submissionFile="update.xml" success="true"` (i.e. no error messages or success="false"), and copy the whole receipt to the documentation (for future reference).
 
@@ -101,7 +101,7 @@ Cancel:
 
 Submit using curl:
 ```
-    curl -u Username:Password -F SUBMISSION=@update.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u [Username]:[Password] -F SUBMISSION=@update.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 * Check that the receipt contains `submissionFile="update.xml" success="true"` (i.e. no error messages or success="false"), and copy the whole receipt to the documentation (for future reference). 
 

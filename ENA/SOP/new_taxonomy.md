@@ -1,6 +1,6 @@
 # Register new taxonomy at ENA
 
-In situations where e.g. a symbiont have been identified and assembeled, a new taxonomy needs to be registered previous to submitting the assembly.
+In situations where a user want to use a new taxon name not previously present in the NCBI taxonomic database (which ENA checks against), e.g. a symbiont have been identified and assembeled, a new taxonomic name needs to be registered previous to submitting the assembly.
 
 * [ENA on registering taxonomy](https://ena-docs.readthedocs.io/en/latest/faq/taxonomy_requests.html)
 
@@ -11,14 +11,15 @@ In situations where e.g. a symbiont have been identified and assembeled, a new t
 
 
 * Instructions from ENA:
-    * `proposed_name`: the organism name (mandatory). We will check if there is a taxa registered with the given name.
+    * `proposed_name`: the organism name (mandatory). We will check if there is a taxa registered at NCBI with the given name.
     * `name_type`: allowed taxon name types are:
-    ![name type](./images/taxonomy-name-type.png)
+
+        ![name type](./images/taxonomy-name-type.png)
     * `host`: host associated with the taxon, if applicable
     * `project_id`: project associated with the taxa, if applicable
-    * `description`: a short description of the taxon, please provide an authority or publication where available, or any other information describing the organism
+    * `description`: a short description of the taxon, please provide an authority or publication where available, or any other information describing the organism (e.g. scientific article, recognised taxonomic databases, etc).
 
-* Below is an example of registering a taxonomy for the Wolbachia endosymbiont identified when *Stylops ater* was assembeled as part of the ERGA pilot:
+* Below is an example of registering a taxonomy for the *Wolbachia* endosymbiont identified when *Stylops ater* was assembeled as part of the ERGA pilot:
 
     ```
     Proposed name: Wolbachia endosymbiont of Stylops ater

@@ -4,6 +4,9 @@ This SOP describes how to handle a situation where mitochondrial data has been a
 
 It is advised to submit the mito assembly using a separate project from the genome assembly project, as both of them will be associated with the same sample accession number. Adding an assembly to an existing study + sample pair, will be interpreted as an update of existing assembly rather than an additional assembly.
 
+<!--
+Should this guide be generally written to also include chloroplasts, as both are treated as chromosome submissions by ENA? The SOP could perhaps be renamed to something like 'Organelle_assembly'?
+-->
 ## Steps
 1. Register study
 1. Prepare assembly submission
@@ -16,7 +19,7 @@ It is advised to submit the mito assembly using a separate project from the geno
 1. Post-release check
 
 ## Register study
-* Register a study via ENA portal, remember to add a locus tag if the assembly is annotated
+* Register a study via the ENA portal, remember to add a locus tag if the assembly is annotated
 
 ## Prepare assembly submission
 ### Create chromosome_list.txt
@@ -32,7 +35,7 @@ It is advised to submit the mito assembly using a separate project from the geno
 
 ### Create manifest file
 * Create a manifest file, use e.g. [mito-assembly-manifest.txt](./data/mito-assembly-manifest.txt) as template:
-    * Add the collected the metadata from the bioinformatician who did the assembly, as well as the accession numbers of the study (created above) and the sample (created earlier, either at ENA or via COPO).
+    * Add the collected the metadata from the bioinformatician/individual who did the assembly, as well as the accession numbers of the study (created above) and the sample (created earlier, either at ENA or via COPO).
     * For the `ASSEMBLY_NAME`, set a species abbreviation in combination with the type of assembly, e.g. `StyAte-mito-assembly`.
     * Add the name of the assembly file (gzipped fasta format). **Note:** If this is an annotated assembly, change `FASTA` to `FLATFILE` and add the name of the EMBL flat file instead (gzipped)
     * Add the name of the chromosome list (gzipped)
@@ -54,13 +57,14 @@ It is advised to submit the mito assembly using a separate project from the geno
 ## Submit assembly
 * Validate then submit the assembly manifest using the [latest](https://github.com/enasequence/webin-cli/releases) Webin-CLI:
     ```
-    java -jar /path/to/webin-cli-9.0.3.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./mito-assembly-manifest.txt -validate 
-    java -jar /path/to/webin-cli-9.0.3.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./mito-assembly-manifest.txt -submit   
+    java -jar /path/to/webin-cli-[version].jar -ascp -context genome -userName Webin-XXX -password [PASSWORD] -manifest ./mito-assembly-manifest.txt -validate
+
+    java -jar /path/to/webin-cli-[version].jar -ascp -context genome -userName Webin-XXX -password [PASSWORD] -manifest ./mito-assembly-manifest.txt -submit   
     ```
 
 ### Post-submission check
-* After some days, accession numbers will come via email. 
-    * The assembly will have an accession starting with `GCA_` and the level will have a span 
+* After some days, accession numbers will be received via email. 
+    * The assembly will have an accession starting with `GCA_` and the level will have a span <!-- What is meant by "have a span"? -->
     * Ensure that the level (contig, scaffold or chromosome) is as expected, for mitochondrial it will always be *chromosome* level.
     * Note the identifiers in an appropriate place
 

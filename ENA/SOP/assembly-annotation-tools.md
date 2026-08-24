@@ -5,11 +5,13 @@ Annotated assemblies, no matter if a full genome or organelle assembly, most oft
 This SOP provides a collection of the tools, scripts and how-to, in order to help solve the most common issues. Note that other tricks, not related to assemblies, are also in this file (last).
 
 ## TOC
-* [Making ENA compliant EMBL flat file](#making-ena-compliant-embl-flat-file)
-* [Extracting genes with validation issues](#extracting-genes-with-validation-issues)
-* [Installing lftp locally on Dardel](#installing-lftp-locally-on-dardel-pdc)
-* [XML validation](#xml-validation)
-* []()
+- [Tools and scripts when submitting annotated assemblies](#tools-and-scripts-when-submitting-annotated-assemblies)
+  - [TOC](#toc)
+  - [Making ENA compliant .embl flat file](#making-ena-compliant-embl-flat-file)
+  - [Extracting genes with validation issues](#extracting-genes-with-validation-issues)
+- [Other useful tips and tricks](#other-useful-tips-and-tricks)
+  - [XML validation](#xml-validation)
+  - [Installing lftp locally on Dardel (PDC)](#installing-lftp-locally-on-dardel-pdc)
 
 ## Making ENA compliant .embl flat file
 <!-- add every tool, scripts, trick we have used or know of in order to make the GFF work as input -->
@@ -20,6 +22,9 @@ This SOP provides a collection of the tools, scripts and how-to, in order to hel
 Since validation of the assembly is done on the .embl file, and any error messages refers to line numbers in this file, we need to map which lines this corresponds to in the .gff file.
 
 If validation fails with error message referring to duplicate/overlapping genes
+<!---
+Is the below an example? If so it should be defined in what way it can be modified to fit other scenarios.
+--->
 
 ```
 gunzip -c [filename].embl.gz | awk -v from=18969820 -v to=18969898 'NR>=from { print NR,$0; if (NR>=to) exit 1}' 
@@ -27,12 +32,17 @@ gunzip -c [filename].embl.gz | awk -v from=18969820 -v to=18969898 'NR>=from { p
 
 An alternative to the above is to use zgrep and point the output to a .txt-file:
 
+<!---
+Same question as above
+--->
 ```
 zgrep '18969820,18969898!d' [filename].embl.gz > out.txt
 ```
 
 or:
-
+<!--
+And here
+-->
 ```
 gunzip -c [filename].embl.gz | sed -n '18969820,18969820;18969898' > out.txt
 ```
@@ -40,7 +50,7 @@ gunzip -c [filename].embl.gz | sed -n '18969820,18969820;18969898' > out.txt
 # Other useful tips and tricks
 
 ## XML validation
-* Before submitting an .xml file to ENA, they can be validated at <https://www.xmlvalidation.com>
+* Before submitting an .xml file to ENA, they can be validated at <https://www.xmlvalidation.com>, by either copy-pasting the file content, or uploading an entire file, on the website.
 
 ## Installing lftp locally on Dardel (PDC)
 The *lftp* command is often the only option in order to submit sequences to ENA. Here's how to install and run it locally via conda.

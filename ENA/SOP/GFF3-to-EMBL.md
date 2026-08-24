@@ -6,7 +6,7 @@ The conversion requires three things:
 
 - [Download and install the EMBLmyGFF3 tool](https://github.com/NBISweden/EMBLmyGFF3)
 - A genome assembly in [GFF3 format](https://www.ncbi.nlm.nih.gov/datasets/docs/v1/reference-docs/file-formats/about-ncbi-gff3/). Additional documentation and explanation at [Sequence Ontology GitHub](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md).
-- The genome sequence in fasta format
+- The genome sequence in fasta format (.fa or .fasta)
 
 After installing EMBLmyGFF3, open a command line terminal and navigate to the folder where the GFF and FASTA files are located. 
 
@@ -43,7 +43,7 @@ After installing EMBLmyGFF3, open a command line terminal and navigate to the fo
     "dev comment": ""
     },
     ```
-    * Common error messages are warnings about duplicate and/or overlapping exons/introns as described e.g. in [5894-Geodia-assembly](../5894-Geodia-assembly/README.md) with solutions.
+    * Common error messages are warnings about duplicate and/or overlapping exons/introns as described e.g. in [5894-Geodia-assembly](../5894-Geodia-assembly/README.md), with solutions.
 
 * Run the script:
     ```

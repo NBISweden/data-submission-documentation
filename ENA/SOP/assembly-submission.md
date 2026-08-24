@@ -16,52 +16,58 @@ An assembly can either be submitted to the same study/project as the raw data, o
 1. Post-release check
 
 ## Collect assembly metadata
-* Ask assembly bioinformatician for the assembly metadata, and to confirm which raw dataset(s) to reference.
+<!--
+We have had support projects with assembly submissions where NBIS has not done the assembly nor the annotation.
+-->
+* Ask assembly bioinformatician, or responsible person in the research group, for the assembly metadata, and to confirm which raw dataset(s) to reference.
 ### Create manifest file for non-annotated assembly
 * Create a manifest file, use e.g. [assembly-manifest.txt](./data/assembly-manifest.txt) as template:
+  <!--
+  Should we mark whhich ones below are mandatory and which ones are optional?
+  -->
     * For the `ASSEMBLYNAME`, set a species abbreviation in combination with assembly, ideally add also a version number, in case there are updates e.g. `StyAte-assembly.1`.
-    * `ASSEMBLY_TYPE` is likely `isolate`.
+    * `ASSEMBLY_TYPE` is likely `isolate` (for single-organism data).
     * Ensure that also the annotation details are mentioned in the `DESCRIPTION`.
-    * For `RUN_REF`, add the run accession numbers (not experiment accession numbers) separated with comma (a span will not work, they need to be explicitly stated).
+    * For `RUN_REF`, add the run accession numbers (not experiment accession numbers) separated with comma (a whitespace or tab will not work, they need to be explicitly stated).
     * `MINGAPLENGTH` is a non-zero integer, indicating how many `N` indicates a gap between **scaffolds**. The line can be removed if the assembly is on contig level only.
     * The fasta file needs to be gzipped / compressed.
     * If the assembly is not only on scaffold level, but **chromosome** level (i.e. the most complete level), a `chromosome_list.txt` (gzipped) needs to be created, containing three columns:
         1. identifier as is in the .fasta file
-        1. which chromosome it is
-        1. if Linear or Circular, and the chromosome type
-        * EX: `SUPER_1	1	Linear-Chromosome`
-        * See ENA docs on [Chromosome list file](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file) for more information
+        2. which chromosome it is
+        3. if Linear or Circular, and the chromosome type
+           * E.g: `SUPER_1	1	Linear-Chromosome`
+           * See ENA docs on [Chromosome list file](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file) for more information
     * Also for chromosome level, any unlocalised scaffolds/contigs needs to be collected in an `unlocalised_list.txt` (gzipped). This file contains the same first two columns as the chromosome list, i.e. identifier and which chromosome it belongs to.
 
 ### Create manifest file for annotated assembly
 * Create a manifest file, use e.g. [assembly-annotated-manifest.txt](./data/assembly-annotated-manifest.txt) as template:
     * For the `ASSEMBLYNAME`, set a species abbreviation in combination with assembly, ideally add also a version number, in case there are updates e.g. `StyAte-assembly.1`.
-    * `ASSEMBLY_TYPE` is likely `isolate`.
+    * `ASSEMBLY_TYPE` is likely `isolate` (for single-organism data).
     * Ensure that also the annotation details are mentioned in the `DESCRIPTION`.
-    * For `RUN_REF`, add the run accession numbers (not experiment accession numbers) separated with comma (a span will not work, they need to be explicitly stated).
+    * For `RUN_REF`, add the run accession numbers (not experiment accession numbers) separated with comma (a whitespace or tab will not work, they need to be explicitly stated).
     * The flat file needs to be gzipped / compressed.
 
 #### Create EMBL flat file
-* Ask assembly bioinformatician where assembly files (.fa and .gff) are located.
+* Ask assembly bioinformatician, or responsible person in the research group, where assembly files (.fa and .gff) are located.
 * Ensure that a [locus tag](./locus_tag_registration.md) has been registered in the project.
 * See [GFF3 to EMBL](./GFF3-to-EMBL.md) for details on the conversion to EMBL flat file
 
 * Ensure that the annotation (in the .gff file) is also on CDS level, not only on mRNA level
-* **Note:** tRNAScan-SE (used in some annotation pipelines) produces anticodons in a format not accepted by ENA. Only solution at the moment is to not include tRNA in gff file.
+  * **Note:** tRNAScan-SE (used in some annotation pipelines) produces anticodons in a format not accepted by ENA. Only solution at the moment is to not include tRNA in gff file.
 
 * Also check the [assembly annotation tools](./assembly-annotation-tools.md) page for tips and tricks on annotated assemblies.
 
 ## Submit using Webin-CLI
-* Validate then submit the assembly manifest using the ([latest](https://github.com/enasequence/webin-cli/releases/latest)) Webin-CLI:
+* Validate then submit the assembly manifest using the ([latest](https://github.com/enasequence/webin-cli/releases/latest)) Webin-CLI, for example:
     ```
-    java -jar /path/to/webin-cli-9.0.3.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./assembly-manifest.txt -validate 
+    java -jar /path/to/webin-cli-[version].jar -ascp -context genome -userName Webin-XXX -password [PASSWORD] -manifest ./assembly-manifest.txt -validate 
 
-    java -jar /path/to/webin-cli-9.0.3.jar -ascp -context genome -userName Webin-XXX -password 'YYY' -manifest ./assembly-manifest.txt -submit   
+    java -jar /path/to/webin-cli-[version].jar -ascp -context genome -userName Webin-XXX -password [PASSWORD] -manifest ./assembly-manifest.txt -submit   
     ```
 * Note down the analysis accession number given (ERZ...).
 
 ### Post-submission check
-* When ENA has processed the assembly, an email will be sent to the Webin account (or rather to those listed with emails in the account), that the assembly has been accessioned. The timeline varies with ENA workload, but most often within a week. 
+* When ENA has processed the assembly, an automated email will be sent to the email addresses listed in the Webin account, that the assembly has been accessioned. The timeline varies with ENA workload, but most often within a week, sometimes more. 
     * The assembly will have an accession starting with `GCA_` and the level will have a span 
     * Ensure that the level (contig, scaffold or chromosome) is as expected
     * Ensure that the span encompasses the expected number of contigs/scaffolds/chromosomes
@@ -69,8 +75,8 @@ An assembly can either be submitted to the same study/project as the raw data, o
 * If you don't get an email within reasonable time, login to the account and check the status in `Data Analyses > Analysis Processing Report`. This shows the processing status of archived analysis files, and you can see if it is *active*, *completed*, or *failed*. Nothe though that even if a processing has failed, the system will retry failed analyses so errors may resolve themselves. If it doesn't within a couple of weeks, you might need to contact ENA support and ask them to try to identify why processing keeps failing.
 
 ## Update assembly
-* Some of the metadata, i.e. the information found in the manifest, can be updated in the ENA portal by editing the XML file
-* If the assembly itself needs another version to be submitted, here's the steps:
+* Some of the metadata, i.e. the information found in the manifest, can be updated in the ENA portal by manually editing the XML file
+* If the assembly itself needs another version to be submitted, here are the steps:
     * Copy the manifest to a new file indicating that it is an updated version
     * Add a `.2` to the `NAME`
     * Change the file name in `FLATFILE` and update any other field values that has changed
@@ -78,7 +84,7 @@ An assembly can either be submitted to the same study/project as the raw data, o
 
 ## Post-release check
 It is important to verify that everything displays as it should when public.
-For annotated assemblies, even if validation was without errors, and accession numbers were assigned, the only way to verify that an assembly is displaying correctly is when it's become public.
+For annotated assemblies, even if validation was without errors, and accession numbers were assigned, the only way to verify that an assembly is displaying correctly is when it has become public.
 
 1. Enter the project accession number in [ENA browser](https://www.ebi.ac.uk/ena/browser/home)
 1. Verify that the description displays correctly
@@ -88,4 +94,4 @@ For annotated assemblies, even if validation was without errors, and accession n
     1. *Data > Wgs files*: Gives the same as *General > Related ENA Records > Assembly* decribed above.
 1. Verify that the EMBL (annotated assembly) / FASTA (not annotated assembly) formatted file has the same features and annotation as the EMBL file you uploaded.
 
-**Note:** A short-cut is to paste the assembly or sequence accession after the last '/' in the following hyperlink: <https://www.ebi.ac.uk/ena/browser/view/>
+**Note:** A shortcut is to paste the assembly or sequence accession after the last '/' in the following hyperlink: <https://www.ebi.ac.uk/ena/browser/view/>
