@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2026-06-18T10:56:50.288+01:00" submissionFile="submission-LU_1781776610288.xml" success="true">
+     <SAMPLE accession="ERS30599787" alias="RS6125" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912657" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599788" alias="RS6128" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912658" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599789" alias="RS6129" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912659" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599790" alias="RS6132" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912660" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599791" alias="SZ8855" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912661" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599792" alias="SZ8857" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912662" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599793" alias="SZ8858" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912663" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599794" alias="SZ8875" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912664" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599795" alias="TC0163" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912665" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599796" alias="Z81303" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912666" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599797" alias="RE4687" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912667" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599798" alias="SZ8873" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912668" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599799" alias="SZ8874" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912669" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599800" alias="SZ8876" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912670" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599801" alias="SZ8877" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912671" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599802" alias="SZ8878" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912672" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599803" alias="UR8209" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912673" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599804" alias="US8624" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912674" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599805" alias="US8625" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912675" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599806" alias="US8626" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912676" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599807" alias="LH10497" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912677" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599808" alias="LJ34520" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912678" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599809" alias="XT48070" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912679" type="biosample"/>
+     </SAMPLE>
+     <SAMPLE accession="ERS30599810" alias="XT48071" status="PRIVATE" holdUntilDate="2028-06-18+01:00">
+          <EXT_ID accession="SAMEA122912680" type="biosample"/>
+     </SAMPLE>
+     <SUBMISSION accession="ERA36506374" alias="ena-SUBMISSION-TAB-18-06-2026-10:56:48:760-413041"/>
+     <MESSAGES>
+          <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+     <ACTIONS>HOLD</ACTIONS>
+</RECEIPT>
