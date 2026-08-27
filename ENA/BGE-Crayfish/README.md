@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB77280, PRJEB77106, PRJEB77107 
+Top_level_acccession: PRJEB77280 (umbrella), PRJEB77106 (experiment), PRJEB77107 (assembly), PRJEB124520 (mito)
 ---
 
 # BGE - *Austropotamobius torrentium* (stone crayfish)
@@ -369,6 +369,83 @@ While not complete information yet, I wanted to try using the script on this spe
 * Since it *is* possible to submit all at once, I will wait until I have all HiC metadata before I submit for real.
 
 * The xml script is not fully functioning, insert size for paired reads is missing, and read_type 'sample_barcode' should likely be added to HiFi data, hence these needs to be added manually in the output run xmls for now.
+
+### Submit assembly
+
+* There is a mitochondrial assembly as well. Hence, a new study needs to be created.
+    * I created [qmAusTorr-mito.study.xml](./data/qmAusTorr-mito.study.xml) and submitted using curl:
+        ```
+        curl -u username:password -F "SUBMISSION=@submission-hold-mito.xml" -F "PROJECT=@qmAusTorr-mito.study.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+        ```
+    * Receipt:
+        ```
+        <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+        <RECEIPT receiptDate="2026-08-26T13:34:38.303+01:00" submissionFile="submission-hold-mito.xml" success="true">
+            <PROJECT accession="PRJEB124520" alias="erga-bge-qmAusTorr9-study-mito-2026-08-26" status="PRIVATE" holdUntilDate="2026-10-01+01:00">
+                <EXT_ID accession="ERP204335" type="study"/>
+            </PROJECT>
+            <SUBMISSION accession="ERA36913237" alias="SUBMISSION-26-08-2026-13:34:38:132"/>
+            <MESSAGES>
+                <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+            </MESSAGES>
+            <ACTIONS>ADD</ACTIONS>
+            <ACTIONS>HOLD</ACTIONS>
+        </RECEIPT>
+        ```
+* I created manifest files [qmAusTorr9-manifest.txt](./data/qmAusTorr9-manifest.txt) and [qmAusTorr9-mito-manifest.txt](./data/qmAusTorr9-mito-manifest.txt). The mito is subsampled, so only HiFi file m84045_240422_144522_s1.hifi_reads.fasta.gz (corresponds to RUN accession="ERR13340181" alias="run_qmAusTorr_HiFi_WGS_pr_047_001_bam_6") should be referenced for the mito assembly, according to bioinformatician.
+* Both assemblies are chromosome level, hence chromosome and unlocalised (primary only) lists were created
+* I created a folder on nac-login and copied & gzipped all files needed 
+* Then all files where submitted (first validation then submission) from nac using Webin-CLI:
+
+    ```
+    java -jar ~/webin-cli-9.0.3.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./qmAusTorr9-manifest.txt -validate
+    ```
+    * The primary validation detected mismatches between unlocalised_list file and the fasta file. A comparison between [primary.unloc.from-csv.ids](./data/primary.unloc.from-csv.ids) and [primary.unloc.from-fa.ids](./data/primary.unloc.from-fa.ids) identified the following:
+    1. `SUPER_9_unloc_3` is missing
+    2. There are 4 `SUPER_30_unloc` which should be `SUPER_29_unloc` according to fasta file
+    3. `SUPER_81_unloc_1` is missing
+    * I received a new list with id's ([final_chromosome_report.csv](./data/final_chromosome_report.csv)) from bioinformatician, and updated the unlocalised_list accordingly.
+* Receipt primary:
+    ```
+    INFO : Your application version is 9.0.3
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /home/yvonnek/Crayfish/././webin-cli.report
+    INFO : Uploading file: /home/yvonnek/Crayfish/qmAusTorr9_cur03.8.curated_filtered.fa.gz
+    INFO : Uploading file: /home/yvonnek/Crayfish/chromosome_list.txt.gz
+    INFO : Uploading file: /home/yvonnek/Crayfish/unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29884883
+    ```
+* Receipt mito:
+    ```
+    INFO : Your application version is 9.0.3
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /home/yvonnek/Crayfish/././webin-cli.report
+    INFO : Uploading file: /home/yvonnek/Crayfish/final_mitogenome.fasta.gz
+    INFO : Uploading file: /home/yvonnek/Crayfish/chromosome_list_mito.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29884881
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+
+    ```
+* Release study and check that it is shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
 
 ### Register umbrella projekt
 
