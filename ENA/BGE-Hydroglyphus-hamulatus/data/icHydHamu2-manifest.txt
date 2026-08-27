@@ -1,0 +1,14 @@
+STUDY	PRJEB124593
+SAMPLE	SAMEA114554671
+RUN_REF	
+ASSEMBLYNAME	icHydHamu2.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	
+PROGRAM	hifiasm (v0.25.0), purge_dups (v1.2.6), YaHS (v1.2a.2), NBIS/Earth-Biogenome-Project-pilot (85e04ded1d), sanger-tol/blobtoolkit (v0.10.0), sanger-tol/curationpretext (v1.5.1)
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'Primary genome assembly was generated using hifiasm (v0.25.0) and purge_dups (v1.2.6), followed by scaffolding with YaHS (v1.2a.2). Downstream quality control, contamination screening, and curation were performed using the NBIS/Earth-Biogenome-Project-pilot workflow (commit 85e04ded1d), sanger-tol/blobtoolkit (v0.10.0), and sanger-tol/curationpretext (v1.5.1).'
+FASTA	icHydHamu2_primary.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz

@@ -222,6 +222,80 @@ There is an additional batch of HiC to be submitted
 * Add recevied accession numbers to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `RNA-seq submitted` to `yes`
 
 ### Submit assembly
+* Coverage and min gap length were unknown to the bioinformatician. Hence, I asked Gemini for guidance. It told me that I can calculate these values myself:
+    * MINGAPLENGTH
+    ```
+    python3 -c "import re, sys; seq = sys.stdin.read(); gaps = [len(m) for m in re.findall(r'[Nn]+', seq)]; print('MINGAPLENGTH:', min(gaps) if gaps else 0)" < assembly.fasta
+    ```
+    * Gave the result `1` (though these typically is 100, not sure what to do)
+    * Coverage was a bit more difficult since this is one of the species with ULI protocol, and we need to make sure that it is the trimmed reads that are used in the calculations.
+    * I downloaded the 2 fastq files with trimmed HiFi reads from ENA, ERR17070810.fastq.gz and ERR17070811.fastq.gz.
+    * I also had to install SeqKit in my Ubuntu app:
+    ```
+    conda install -c bioconda seqkit -y
+    ```
+    * Coverage caluclations require assembly size (first command) and read size (2nd command)
+    ```
+    grep -v "^>" assembly.fasta | tr -d '\n' | wc -c
+    seqkit stats ERR17070810.fastq.gz ERR17070811.fastq.gz
+    ```
+    * Coverage = (sum_len(ERR17070810) + sum_len(ERR17070811))/assembly length
+
+* This species didn't have a project for the assembly, hence I needed to first create this:
+    * I created [icHydHamu2.study.xml](./data/icHydHamu2.study.xml) and submitted via:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@submission-hold-2026.xml" -F "PROJECT=@icHydHamu2.study.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-08-27T15:55:39.696+01:00" submissionFile="submission-hold-2026.xml" success="true">
+        <PROJECT accession="PRJEB124593" alias="erga-bge-icHydHamu2_primary-2026-08-26" status="PRIVATE" holdUntilDate="2026-12-10Z">
+            <EXT_ID accession="ERP204392" type="study"/>
+        </PROJECT>
+        <SUBMISSION accession="ERA36916389" alias="SUBMISSION-27-08-2026-15:55:39:444"/>
+        <MESSAGES>
+            <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        </MESSAGES>
+        <ACTIONS>ADD</ACTIONS>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>    
+    ``` 
+* I didn't receive any description metadata, only a list of tools. I asked Gemini to put this in a couple of sentences:
+```
+Primary genome assembly was generated using hifiasm (v0.25.0) and purge_dups (v1.2.6), followed by scaffolding with YaHS (v1.2a.2). Downstream quality control, contamination screening, and curation were performed using the NBIS/Earth-Biogenome-Project-pilot workflow (commit 85e04ded1d), sanger-tol/blobtoolkit (v0.10.0), and sanger-tol/curationpretext (v1.5.1).
+```
+* I created a manifest file [icHydHamu2-manifest.txt](./data/icHydHamu2-manifest.txt)
+* I created a folder on nac-login and copied & gzipped manifest, assembly file and chromosome list there
+* Then all files where submitted (first validation then submission) from nac-login using Webin-CLI:
+
+    ```
+    java -jar ~/webin-cli-9.0.3.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./icHydHamu2-manifest.txt -validate
+    ```
+* Receipt:
+    ```
+
+    ```
+* I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
+* Accessioned:
+    ```
+    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+
+    ```
+* Release study and check that it is shown under umbrella
+
+#### Add assembly to umbrella
+* Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
+* Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
+* Submit:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    ```
+* Receipt:
+    ```
+
+    ```
 
 ### Create umbrella
 
@@ -248,13 +322,6 @@ For each of the BGE species, an umbrella project has to be created and linked to
         </MESSAGES>
         <ACTIONS>ADD</ACTIONS>
         <ACTIONS>HOLD</ACTIONS>
-    </RECEIPT>
-
- 
- 
- 
-                                                                                                                                                                                                                   
+    </RECEIPT>                                        
     ```
-
-
-
+    
