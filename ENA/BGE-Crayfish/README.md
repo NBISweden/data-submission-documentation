@@ -430,8 +430,9 @@ While not complete information yet, I wanted to try using the script on this spe
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:
     ```
-    ASSEMBLY_NAME | ASSEMBLY_ACC  | STUDY_ID   | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
-
+    ASSEMBLY_NAME     | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    qmAusTorr9-mito.1 | GCA_988222375 | PRJEB124520 | ERS14884883 |                                 |              | OZ538371-OZ538371
+    qmAusTorr9.1      | GCA_988222415 | PRJEB77107  | ERS14884883 | CGBJXN010000001-CGBJXN010001493 |              | OZ538404-OZ538493
     ```
 * Release study and check that it is shown under umbrella
 
@@ -480,4 +481,3 @@ For each of the BGE species, an umbrella project has to be created and linked to
         <ACTIONS>ADD</ACTIONS>
         <ACTIONS>HOLD</ACTIONS>
     ```
-* **Note:** Add the assembly project `PRJEB77107` when it has been submitted and made public, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
