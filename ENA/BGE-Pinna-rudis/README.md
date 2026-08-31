@@ -197,9 +197,17 @@ Submission of raw reads for *Pinna rudis* to facilitate assembly and annotation 
     ```
     curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
     ```
+* I received an error message sying that the title is less than 20 characters long (string length (11) is less than minLength facet (20) for type of TITLE element in ProjectType), but this is true for many of the umbrella projects in BGE, so not sure what to do about it... After consulting with AI Gemini, I decided to add ` - ERGA-BGE umbrella project` to the title, which worked.
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-08-31T08:44:27.132+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB77285" alias="erga-bge-xbPinRudi-study-umbrella-2024-07-05" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-31-08-2026-08:44:26:862"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Umbrella project
