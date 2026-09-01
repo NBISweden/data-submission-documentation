@@ -228,6 +228,12 @@ There is an additional batch of HiC to be submitted
     python3 -c "import re, sys; seq = sys.stdin.read(); gaps = [len(m) for m in re.findall(r'[Nn]+', seq)]; print('MINGAPLENGTH:', min(gaps) if gaps else 0)" < assembly.fasta
     ```
     * Gave the result `1` (though these typically is 100, not sure what to do)
+    * I decided to ask a bioinformatician, who told me that if I could locate a `gfastats` folder there should be a file ending with `assembly_summary`, that would give the `Smallest gap in scaffolds`. The bioinformatician also created a script, [countPolyN.pl](./scripts/countPolyN.pl), that can be run using:
+    ```
+    ./scripts/countPolyN.pl icHydHamu2_primary.fa | grep "poly-N" | cut -f 3 | sort | uniq -c
+    ```
+    * Both ways ended up with a min gap length of `200`
+
     * Coverage was a bit more difficult since this is one of the species with ULI protocol, and we need to make sure that it is the trimmed reads that are used in the calculations.
     * I downloaded the 2 fastq files with trimmed HiFi reads from ENA, ERR17070810.fastq.gz and ERR17070811.fastq.gz.
     * I also had to install SeqKit in my Ubuntu app:
@@ -236,10 +242,10 @@ There is an additional batch of HiC to be submitted
     ```
     * Coverage caluclations require assembly size (first command) and read size (2nd command)
     ```
-    grep -v "^>" assembly.fasta | tr -d '\n' | wc -c
+    grep -v "^>" icHydHamu2_primary.fa | tr -d '\n' | wc -c
     seqkit stats ERR17070810.fastq.gz ERR17070811.fastq.gz
     ```
-    * Coverage = (sum_len(ERR17070810) + sum_len(ERR17070811))/assembly length
+    * Coverage = (sum_len(ERR17070810) + sum_len(ERR17070811))/assembly length = (46286618985 + 48117159346)/472514253 = 200
 
 * This species didn't have a project for the assembly, hence I needed to first create this:
     * I created [icHydHamu2.study.xml](./data/icHydHamu2.study.xml) and submitted via:
@@ -275,7 +281,13 @@ Primary genome assembly was generated using hifiasm (v0.25.0) and purge_dups (v1
     ```
 * Receipt:
     ```
-
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /home/yvonnek/H_hamulatus/././webin-cli.report
+    INFO : Uploading file: /home/yvonnek/H_hamulatus/icHydHamu2_primary.fa.gz
+    INFO : Uploading file: /home/yvonnek/H_hamulatus/chromosome_list.txt.gz
+    INFO : Uploading file: /home/yvonnek/H_hamulatus/unlocalised_list.txt.gz
+    INFO : Files have been uploaded to webin2.ebi.ac.uk.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ29886836
     ```
 * I added the accession number to [BGE Species list for SciLifeLab](https://docs.google.com/spreadsheets/d/1mSuL_qGffscer7G1FaiEOdyR68igscJB0CjDNSCNsvg/) and set `Assembly submitted` to `Yes`, as well as set assembly as status `Submitted` in [Tracking_tool_Seq_centers](https://docs.google.com/spreadsheets/d/1IXEyg-XZfwKOtXBHAyJhJIqkmwHhaMn5uXd8GyXHSpY/edit?pli=1&gid=0#gid=0)
 * Accessioned:

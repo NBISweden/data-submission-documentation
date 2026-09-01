@@ -1,0 +1,11 @@
+TOOLS:
+  Assembly:
+    hifiasm:  0.25.0
+    purge_dups: 1.2.6
+    YaHS: 1.2a.2
+    NBIS/Earth-Biogenome-Project-pilot: 85e04ded1d
+    sanger-tol/blobtoolkit: 0.10.0
+
+
+  Curation:
+    sanger-tol/curationpretext: 1.5.1
