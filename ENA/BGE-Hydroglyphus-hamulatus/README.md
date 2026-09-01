@@ -4,7 +4,7 @@ Repository: ENA
 Submission_type: HiFi, Hi-C, RNAseq, assembly # e.g. metagenome, WGS, assembly, - IF RELEVANT
 Data_generating_platforms:
 - NGI
-Top_level_acccession: PRJEB77288 (umbrella), PRJEB76972 (experiment)
+Top_level_acccession: PRJEB77288 (umbrella), PRJEB76972 (experiment), PRJEB124593 (assembly)
 ---
 
 # BGE - *Hydropglyphus hamulatus*
@@ -306,7 +306,14 @@ Primary genome assembly was generated using hifiasm (v0.25.0) and purge_dups (v1
     ```
 * Receipt:
     ```
-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-09-01T17:56:44.906+01:00" submissionFile="update.xml" success="true">
+        <PROJECT accession="PRJEB77288" alias="erga-bge-icHydHamu-study-umbrella-2024-07-05" status="PUBLIC"/>
+        <SUBMISSION accession="" alias="SUBMISSION-01-09-2026-17:56:44:773"/>
+        <MESSAGES/>
+        <ACTIONS>MODIFY</ACTIONS>
+    </RECEIPT>
     ```
 
 ### Create umbrella
