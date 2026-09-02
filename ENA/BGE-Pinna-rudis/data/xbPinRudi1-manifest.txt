@@ -1,0 +1,13 @@
+STUDY	PRJEB124720
+SAMPLE	SAMEA112748815
+RUN_REF	ERR13151803, ERR14750967, ERR14750968
+ASSEMBLYNAME	xbPinRudi1.1
+ASSEMBLY_TYPE		isolate
+COVERAGE	76
+PROGRAM	hifiasm (v0.25.0-r726), BlobtoolKit (v0.9.0), Yahs(v1.2.2), PretextCuration (v1.5.1), PretextView (v1.0.3), agp-tpf-utils (v1.2.3) 
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	200
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'PacBio HiFi reads from Pinna rudis were assembled with hifiasm (version 0.25.0-r726). BlobtoolKit (version 0.9.0) was used to screen for contaminants. Yahs (version 1.2.2) was used in default mode to scaffold the contigs. The manual curation was done with PretextCuration (version 1.5.1), PretextView (version 1.0.3) and agp-tpf-utils (version 1.2.3).'
+FASTA	xbPinRudi.1.primary.curated.3_no_mito.1.primary.curated.fa.gz	
+CHROMOSOME_LIST	chromosome_list.txt.gz

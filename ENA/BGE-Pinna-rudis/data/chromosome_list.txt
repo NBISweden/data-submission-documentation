@@ -1,0 +1,17 @@
+SUPER_1	1	linear-chromosome
+SUPER_2	2	linear-chromosome
+SUPER_3	3	linear-chromosome
+SUPER_4	4	linear-chromosome
+SUPER_5	5	linear-chromosome
+SUPER_6	6	linear-chromosome
+SUPER_7	7	linear-chromosome
+SUPER_8	8	linear-chromosome
+SUPER_9	9	linear-chromosome
+SUPER_10	10	linear-chromosome
+SUPER_11	11	linear-chromosome
+SUPER_12	12	linear-chromosome
+SUPER_13	13	linear-chromosome
+SUPER_14	14	linear-chromosome
+SUPER_15	15	linear-chromosome
+SUPER_16	16	linear-chromosome
+SUPER_17	17	linear-chromosome

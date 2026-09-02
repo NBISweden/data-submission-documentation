@@ -1,0 +1,603 @@
+<?xml version="1.0" ?>
+<RUN_SET>
+        <RUN alias="run_RS6125_1">
+                <EXPERIMENT_REF refname="exp_RS6125"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-RS6125_S1_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="83dfe0b0486c3285f5ec94a69aa5f50c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-RS6125_S1_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="01a514e775af12795d9d2d821103a52b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_RS6125_2">
+                <EXPERIMENT_REF refname="exp_RS6125"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-RS6125_S1_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="531fcd89028412b57a391959da6c8095" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-RS6125_S1_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="168efc24576bcaa78d7088b68a1cd8b9" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_RS6128_1">
+                <EXPERIMENT_REF refname="exp_RS6128"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-RS6128_S2_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="057fdb59b2b8d5d495669d5020879905" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-RS6128_S2_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="508fddb8d0a6e4c28233b93d688b4ab1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_RS6128_2">
+                <EXPERIMENT_REF refname="exp_RS6128"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-RS6128_S2_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="80351135b103e091aa051d1445101c6f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-RS6128_S2_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="831417d67a7b9e5ce92bba5d0f63e951" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_RS6129_1">
+                <EXPERIMENT_REF refname="exp_RS6129"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-RS6129_S3_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="de3fd9daa4caa39eef647ab920f63d1f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-RS6129_S3_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="b473039aff4ebb7770dd94dcc5b27d57" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_RS6129_2">
+                <EXPERIMENT_REF refname="exp_RS6129"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-RS6129_S3_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="c640be44541503f4cc6a000bda59f353" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-RS6129_S3_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="dbef95098d53f50115ce8211b9e6e7ac" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_RS6132_1">
+                <EXPERIMENT_REF refname="exp_RS6132"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-RS6132_S4_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="76eef2d43a818c954da091079c61f043" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-RS6132_S4_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="2b68fa1d2ee3852d7301b7a44810c8ac" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_RS6132_2">
+                <EXPERIMENT_REF refname="exp_RS6132"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-RS6132_S4_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="ed125be1c1c4f3c4db53c6001cc5b6e2" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-RS6132_S4_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="89138aa52aaa905aeeaac491bdb161c8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8855_1">
+                <EXPERIMENT_REF refname="exp_SZ8855"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8855_S8_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="4670d33ca2b0e41b754dcb9ce5582d52" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8855_S8_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="48b3ae4267a404fb25b79815c81328d0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8855_2">
+                <EXPERIMENT_REF refname="exp_SZ8855"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8855_S8_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="a3116605af81a9dedd9858a0754efd09" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8855_S8_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="ec768e09ee465ef56f75a787cce1e5f0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+
+        <RUN alias="run_SZ8857_1">
+                <EXPERIMENT_REF refname="exp_SZ8857"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8857_S9_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="65186d2a695933477c68979b97d31720" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8857_S9_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="ff4982d191930e2fe971c42f54fd89bd" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8857_2">
+                <EXPERIMENT_REF refname="exp_SZ8857"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8857_S9_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="688eaa4af2ec4511edd40c04ef514de8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8857_S9_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="70eb96eb2f97764b1d3e1b1e17375fba" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8858_1">
+                <EXPERIMENT_REF refname="exp_SZ8858"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8858_S10_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="282869a88993bad4dbd8a42fe06c7f46" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8858_S10_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="20032e8a97a3945b93fd92749735d9bf" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8858_2">
+                <EXPERIMENT_REF refname="exp_SZ8858"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8858_S10_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="c51d41c7a268a4e0d01d5d9795e36d18" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8858_S10_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="dde759930241227b54b4fbcca167c3db" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8875_1">
+                <EXPERIMENT_REF refname="exp_SZ8875"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8875_S15_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="c800a197317adc913641bd47b2501ae8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8875_S15_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="2ed8485942e85166c029b39d8c77c856" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8875_2">
+                <EXPERIMENT_REF refname="exp_SZ8875"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8875_S15_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="212115f1bb7864528dc4ba0f23458dde" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8875_S15_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="da12e74ef49035fd9b3dc55329fcf799" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_TC0163_1">
+                <EXPERIMENT_REF refname="exp_TC0163"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-TC0163_S6_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="0aa395bdb0451e82a078f9a3413b5d41" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-TC0163_S6_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="834e97f8686f674f5bb80e21f791fbce" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_TC0163_2">
+                <EXPERIMENT_REF refname="exp_TC0163"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-TC0163_S6_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="0a348ff0c2155d6f6530c0f2c4660395" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-TC0163_S6_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="59ae36abecb027662d9494d79d4eadaf" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_RE4687_1">
+                <EXPERIMENT_REF refname="exp_RE4687"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-RE4687_S5_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="0d4a74e161a3b19bdb67101a452d8539" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-RE4687_S5_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="99776e8fe7b8fc0475ea4cff19f1e3eb" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_RE4687_2">
+                <EXPERIMENT_REF refname="exp_RE4687"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-RE4687_S5_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="43208249b03c224455bae454aab288c7" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-RE4687_S5_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="26abb237fea67fb3a359a820ad376be4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8873_1">
+                <EXPERIMENT_REF refname="exp_SZ8873"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8873_S13_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="cdb73e189b0caf574cce7b3258f408cb" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8873_S13_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="da86a9ddd624bb72e20f98f1221b86d0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8873_2">
+                <EXPERIMENT_REF refname="exp_SZ8873"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8873_S13_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="4655c7f2f6ab43a6b5d8d6c346968df3" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8873_S13_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="da80f6492e00ac1c17289d5dcb06b898" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8874_1">
+                <EXPERIMENT_REF refname="exp_SZ8874"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8874_S14_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="8996b42f23496ed99480cf73a0bfeeac" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8874_S14_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="50cc9492c3d0105245f20153c31abdb4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8874_2">
+                <EXPERIMENT_REF refname="exp_SZ8874"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8874_S14_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="09f6d153ad53c0aad8d73cc691ec3d27" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8874_S14_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="27a4a374e5c8ccf8b273480a3e5b90db" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8876_1">
+                <EXPERIMENT_REF refname="exp_SZ8876"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8876_S16_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="3f2b8be018dbf681108709a35b37190a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8876_S16_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="ea98b688f611bbb09225970da3994581" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8876_2">
+                <EXPERIMENT_REF refname="exp_SZ8876"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8876_S16_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="17103c4dafe2bf994fdf6ace850e95e4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8876_S16_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="4b4796acbbfc4609be22c119446931f9" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8877_1">
+                <EXPERIMENT_REF refname="exp_SZ8877"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8877_S17_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="4e40810ad332db674446b2fdf21b367f" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8877_S17_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="43b12b0a79340b987f141c338edb9804" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8877_2">
+                <EXPERIMENT_REF refname="exp_SZ8877"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8877_S17_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="a17e246450f2942439332ac1832706f0" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8877_S17_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="3db7217e0eb12143c4d336c7dd3bbf20" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8878_1">
+                <EXPERIMENT_REF refname="exp_SZ8878"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8878_S18_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="2113e2944f0c09958d224dd7d95c0e0a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8878_S18_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="a2192e6b0d4dd7ead266db8893dc2631" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_SZ8878_2">
+                <EXPERIMENT_REF refname="exp_SZ8878"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-SZ8878_S18_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="3b4eeb1e598276f217a7edcd540bb80a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-SZ8878_S18_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="1a1b6aeb4ca5f64b9b61a5b9444f80b4" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UR8209_1">
+                <EXPERIMENT_REF refname="exp_UR8209"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-UR8209_S19_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="f7210bde6eaf43826bb702072e6714e5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-UR8209_S19_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="70fe3ad2b578784bd90f09a477f64502" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_UR8209_2">
+                <EXPERIMENT_REF refname="exp_UR8209"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-UR8209_S19_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="821b91ed5c5e229b0964f0d72db5be5e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-UR8209_S19_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="71b7dc451c4fed7c62cfab542e716782" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_US8624_1">
+                <EXPERIMENT_REF refname="exp_US8624"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-US8624_S20_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="ffe986a59efec8b948507eaeba9e9a21" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-US8624_S20_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="eadfa4a90ce9ddd55b28c7402eec75ce" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_US8624_2">
+                <EXPERIMENT_REF refname="exp_US8624"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-US8624_S20_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="3f84db7f8c24dc3cfd04bfd6b4346b6c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-US8624_S20_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="8bcda81aa74881b9021e284f548ab059" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_US8625_1">
+                <EXPERIMENT_REF refname="exp_US8625"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-US8625_S21_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="e89aed08ddf9d59ff6ae6c4e51e21498" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-US8625_S21_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="5f0411268117836c51d0bb6034d4d9b1" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_US8625_2">
+                <EXPERIMENT_REF refname="exp_US8625"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-US8625_S21_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="e1ac73d1e090e7a3f5aff779dd921b3b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-US8625_S21_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="2f1cf629c50c05fd8e7f966fd437857d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_US8626_1">
+                <EXPERIMENT_REF refname="exp_US8626"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-US8626_S22_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="5fcf2cfd8761b20e7c7a4b1210b6166d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-US8626_S22_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="b9eacddebc1c588cfaaa0013545f36c5" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_US8626_2">
+                <EXPERIMENT_REF refname="exp_US8626"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-US8626_S22_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="ace28f862cfa2373b723835e6cfab31c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-US8626_S22_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="efb427d8be8b67b4500c986268538c3c" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_LH10497_1">
+                <EXPERIMENT_REF refname="exp_LH10497"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-LH10497_S25_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="aeb08fa526711c4d4dc00fe4c9dff834" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-LH10497_S25_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="1201f18b77e209a8b3c40dd86095dcaf" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_LH10497_2">
+                <EXPERIMENT_REF refname="exp_LH10497"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-LH10497_S25_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="41455190f3d14a9f363fc91ac5b0320a" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-LH10497_S25_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="c81aabdf63a461fc6396389b607d4860" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_LJ34520_1">
+                <EXPERIMENT_REF refname="exp_LJ34520"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-LJ34520_S26_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="28f8377f9322a2b3f6ae0e366fb34682" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-LJ34520_S26_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="103a8bbe1da953ac486fd0a03868c058" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_LJ34520_2">
+                <EXPERIMENT_REF refname="exp_LJ34520"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-LJ34520_S26_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="0868a809e4d243ade4f20f262060b82d" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-LJ34520_S26_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="c9c9fe11ae10cd72c1f5f1a74fd7937b" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XT48070_1">
+                <EXPERIMENT_REF refname="exp_XT48070"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-XT48070_S23_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="e3f8bbca08ad429e9a9fed75d138684e" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-XT48070_S23_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="e4b9ff074d5af7cfcb72f76f760248ec" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XT48070_2">
+                <EXPERIMENT_REF refname="exp_XT48070"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-XT48070_S23_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="69ea09a3c0d9d9ede2f8d89f636cefef" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-XT48070_S23_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="93850e2fec62285f12219f8bd7af3572" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+
+        <RUN alias="run_XT48071_1">
+                <EXPERIMENT_REF refname="exp_XT48071"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-XT48071_S24_L001_R1_001.fastq.gz" checksum_method="MD5" checksum="2bf62d5ae43b33e221f65e12bb8367fe" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-XT48071_S24_L001_R2_001.fastq.gz" checksum_method="MD5" checksum="b32cf826c45dcae749937a5009a0f023" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+        <RUN alias="run_XT48071_2">
+                <EXPERIMENT_REF refname="exp_XT48071"/>
+                <DATA_BLOCK>
+                        <FILES>
+                                <FILE filename="WA-3569-XT48071_S24_L002_R1_001.fastq.gz" checksum_method="MD5" checksum="28592bdbde0cf1564b989637ebe636b8" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                                <FILE filename="WA-3569-XT48071_S24_L002_R2_001.fastq.gz" checksum_method="MD5" checksum="12598af9febe9cdebae09c84fa021b35" filetype="fastq">
+                                	<READ_TYPE>paired</READ_TYPE>
+                                </FILE>
+                        </FILES>
+                </DATA_BLOCK>
+        </RUN>
+</RUN_SET>
