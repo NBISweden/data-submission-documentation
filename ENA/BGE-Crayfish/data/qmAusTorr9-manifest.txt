@@ -1,0 +1,14 @@
+STUDY	PRJEB77107
+SAMPLE	SAMEA112878228
+RUN_REF	ERR13340176, ERR13340177, ERR13340178, ERR13340179, ERR13340180, ERR13340181, ERR13340182, ERR14088907, ERR14088908, ERR14088909, ERR14088910, ERR13706046, ERR13706047, ERR13706048, ERR13706049, ERR13706050, ERR13706051, ERR13706052, ERR13706053, ERR13719323, ERR13719324, ERR13719325, ERR13719326, ERR13719327, ERR13719328, ERR13719329, ERR13719330
+ASSEMBLYNAME	qmAusTorr9.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	60
+PROGRAM	hifiasm (v0.25.0-r726), FCS-GX (v0.5.5), BlobtoolKit (v0.10.1), Yahs, PretextCuration (v1.5.1), PretextView (v1.0.3), agp-tpf-utils (v1.3.3) 
+PLATFORM	PacBio, Illumina
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'PacBio HiFi reads from Austropotamobius torrentium were assembled with hifiasm (version 0.25.0-r726). FCS-GX (version 0.5.5) and BlobtoolKit (version 0.10.1) was used to detect and remove contaminations. Purge_dups (version 1.2.6) was run in default mode but removed more than 25% of sequence content - primarily due to REPEAT-tagged sequences. Therefore the purging was done manually by filtering contigs based on annotations from mitohifi, btk, purge_dups and BUSCO results. Yahs was used in default mode to scaffold the contigs. The manual curation was done with PretextCuration (version 1.5.1), PretextView (version 1.0.3) and agp-tpf-utils (version 1.3.3).'
+FASTA	qmAusTorr9_cur03.8.curated_filtered.fa.gz
+CHROMOSOME_LIST	chromosome_list.txt.gz
+UNLOCALISED_LIST	unlocalised_list.txt.gz

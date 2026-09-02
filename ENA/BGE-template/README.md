@@ -107,12 +107,11 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
 ### Submit assembly
 
 * I created a manifest file [TOLID-manifest.txt](./data/TOLID-manifest.txt)
-* I created a folder on Uppmax (/proj/snic2022-6-208/nobackup/submission/) and copied & gzipped manifest, assembly file and chromosome list there
-* Then all files where submitted (first validation then submission) from Pelle on Uppmax using Webin-CLI:
+* I created a folder on nac-login and copied & gzipped manifest, assembly file and chromosome list there
+* Then all files where submitted (first validation then submission) from nac-login using Webin-CLI:
 
     ```
-    interactive -t 08:00:00 -A uppmax2025-2-58
-    java -jar ~/webin-cli-9.0.1.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./TOLID-manifest.txt -validate
+    java -jar ~/webin-cli-9.0.3.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./TOLID-manifest.txt -validate
     ```
 * Receipt:
     ```

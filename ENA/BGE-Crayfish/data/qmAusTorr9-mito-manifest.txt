@@ -1,0 +1,13 @@
+STUDY	PRJEB124520
+SAMPLE	SAMEA112878228
+RUN_REF	ERR13340181
+ASSEMBLYNAME	qmAusTorr9-mito.1
+ASSEMBLY_TYPE	isolate
+COVERAGE	300
+PROGRAM	MitoHifi (version 3.2.2, default parameter)
+PLATFORM	PacBio
+MINGAPLENGTH	100
+MOLECULETYPE	genomic DNA
+DESCRIPTION	'We used MitoHifi (version 3.2.2, default parameter) to assemble the genome based one SMRT cell
+FASTA	final_mitogenome.fasta.gz
+CHROMOSOME_LIST	chromosome_list_mito.txt.gz
