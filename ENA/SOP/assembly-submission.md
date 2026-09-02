@@ -28,8 +28,22 @@ We have had support projects with assembly submissions where NBIS has not done t
     * For the `ASSEMBLYNAME`, set a species abbreviation in combination with assembly, ideally add also a version number, in case there are updates e.g. `StyAte-assembly.1`.
     * `ASSEMBLY_TYPE` is likely `isolate` (for single-organism data).
     * Ensure that also the annotation details are mentioned in the `DESCRIPTION`.
-    * For `RUN_REF`, add the run accession numbers (not experiment accession numbers) separated with comma (a whitespace or tab will not work, they need to be explicitly stated).
-    * `MINGAPLENGTH` is a non-zero integer, indicating how many `N` indicates a gap between **scaffolds**. The line can be removed if the assembly is on contig level only.
+    * For `RUN_REF`, add the run accession numbers (not experiment accession numbers) separated with comma (a whitespace or tab will not work, nor will a span indicated wth a '-', they need to be explicitly stated).
+    * `MINGAPLENGTH` is a non-zero integer, indicating how many `N` indicates a gap between **scaffolds**. The line can be removed if the assembly is on contig level only. If there is a `gfastats` folder (if assembly is produced using pipelines) there should be a file ending with `assembly_summary`, that would give the `Smallest gap in scaffolds`. There is also a script, [countPolyN.pl](./scripts/countPolyN.pl), that can be run using:
+        ```
+        ./scripts/countPolyN.pl icHydHamu2_primary.fa | grep "poly-N" | cut -f 3 | sort | uniq -c
+        ```
+    * `COVERAGE` calculations require assembly size and read size of the HiFi dataset. 
+        * The assembly size is calculated in a terminal:
+            ```
+            grep -v "^>" assembly_filename.fa | tr -d '\n' | wc -c
+            ```
+        * Read size is calculated via seqkit, which can be installed via conda, on the (gzipped) fastq file(s):
+            ```
+            conda install -c bioconda seqkit -y
+            seqkit stats forward_filename.fastq.gz reverse_filename.fastq.gz
+            ```
+        * Coverage = (sum_len_forward_file + sum_len_reverse_file)/assembly length
     * The fasta file needs to be gzipped / compressed.
     * If the assembly is not only on scaffold level, but **chromosome** level (i.e. the most complete level), a `chromosome_list.txt` (gzipped) needs to be created, containing three columns:
         1. identifier as is in the .fasta file
