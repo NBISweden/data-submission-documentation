@@ -16,10 +16,9 @@ An assembly can either be submitted to the same study/project as the raw data, o
 1. Post-release check
 
 ## Collect assembly metadata
-<!--
-We have had support projects with assembly submissions where NBIS has not done the assembly nor the annotation.
--->
+
 * Ask assembly bioinformatician, or responsible person in the research group, for the assembly metadata, and to confirm which raw dataset(s) to reference.
+
 ### Create manifest file for non-annotated assembly
 * Create a manifest file, use e.g. [assembly-manifest.txt](./data/assembly-manifest.txt) as template:
   <!--
@@ -29,14 +28,14 @@ We have had support projects with assembly submissions where NBIS has not done t
     * `ASSEMBLY_TYPE` is likely `isolate` (for single-organism data).
     * Ensure that also the annotation details are mentioned in the `DESCRIPTION`.
     * For `RUN_REF`, add the run accession numbers (not experiment accession numbers) separated with comma (a whitespace or tab will not work, nor will a span indicated wth a '-', they need to be explicitly stated).
-    * `MINGAPLENGTH` is a non-zero integer, indicating how many `N` indicates a gap between **scaffolds**. The line can be removed if the assembly is on contig level only. If there is a `gfastats` folder (if assembly is produced using pipelines) there should be a file ending with `assembly_summary`, that would give the `Smallest gap in scaffolds`. There is also a script, [countPolyN.pl](./scripts/countPolyN.pl), that can be run using:
+    * `MINGAPLENGTH` is a non-zero integer, indicating how many `N` indicates a gap between **scaffolds**. *The line can be removed if the assembly is on contig level only.* If there is a `gfastats` folder (if assembly is produced using pipelines) there should be a file ending with `assembly_summary`, that would give the `Smallest gap in scaffolds`. There is also a script, [countPolyN.pl](./scripts/countPolyN.pl), that can be run using:
         ```
-        ./scripts/countPolyN.pl icHydHamu2_primary.fa | grep "poly-N" | cut -f 3 | sort | uniq -c
+        ./scripts/countPolyN.pl assembly_filename.fasta | grep "poly-N" | cut -f 3 | sort | uniq -c
         ```
     * `COVERAGE` calculations require assembly size and read size of the HiFi dataset. 
-        * The assembly size is calculated in a terminal:
+        * The assembly size is calculated in a terminal window:
             ```
-            grep -v "^>" assembly_filename.fa | tr -d '\n' | wc -c
+            grep -v "^>" assembly_filename.fasta | tr -d '\n' | wc -c
             ```
         * Read size is calculated via seqkit, which can be installed via conda, on the (gzipped) fastq file(s):
             ```
