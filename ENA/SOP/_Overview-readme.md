@@ -42,19 +42,19 @@ The SOP's should be seen as a work in progress, and may be changed, completed, a
 
 ## List of examples of start-to-end submissions:
 
-- [Geodia (sponge) data - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/5894-Geodia-assembly/README.md)
+- [Geodia (sponge) data - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/5894-Geodia-assembly/README.md)
 
-- [RNA-seq for potato - Raw reads](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/6793-RNAseq-potato/README.md)
+- [RNA-seq for potato - Raw reads](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/6793-RNAseq-potato/README.md)
 
-- [Spider data - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/7419-spider-WGS-assembly/README.md)
+- [Spider data - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/7419-spider-WGS-assembly/README.md)
 
-- [ERGA: Arctic fox - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/ERGA-arctic-fox/README.md)
+- [ERGA: Arctic fox - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/ERGA-arctic-fox/README.md)
 
-- [ERGA: Green toad - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/ERGA-Bufotes/README.md)
+- [ERGA: Green toad - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/ERGA-Bufotes/README.md)
 
-- [ERGA: Clouded apollo butterfly - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/ERGA-Parnassius/README.md)
+- [ERGA: Clouded apollo butterfly - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/ERGA-Parnassius/README.md)
 
-- [ERGA: Stylops (Bee parasite)- Raw reads + genome assembly + mitochondrial assembly + symbiont](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/ERGA-Stylops-ater/README.md)
+- [ERGA: Stylops (Bee parasite)- Raw reads + genome assembly + mitochondrial assembly + symbiont](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/ERGA-Stylops-ater/README.md)
 
 
 
