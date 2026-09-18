@@ -64,7 +64,7 @@ Should this guide be generally written to also include chloroplasts, as both are
 
 ### Post-submission check
 * After some days, accession numbers will be received via email. 
-    * The assembly will have an accession starting with `GCA_` and the level will have a span <!-- What is meant by "have a span"? -->
+    * The assembly will have an accession starting with `GCA_` and the level will have a span, e.g. `CGBKFZ010000001-CGBKFZ010000072` (contig level accession numbers), `OZ541269-OZ541283` (chromosome level accession numbers)
     * Ensure that the level (contig, scaffold or chromosome) is as expected, for mitochondrial it will always be *chromosome* level.
     * Note the identifiers in an appropriate place
 
