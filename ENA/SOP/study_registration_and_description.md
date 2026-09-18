@@ -1,7 +1,7 @@
 # Study registration and description for biodiversity projects
 
 <!--
-Should this SOP be written agnostically, and not specifiv for biodiversity projects?
+Should this SOP be written agnostically, and not specific for biodiversity projects?
  -->
 This SOP describes how to register a new biodiversity project at ENA and what conventions to adhere to for study title, description, release date, abstract, and a short description of locus tag registration.
 
