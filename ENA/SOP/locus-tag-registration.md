@@ -25,7 +25,7 @@ If the box is ticked a new tab becomes available below for `Locus Tag Prefix Reg
 When submitting the study, the suggested locus tag will be registered and become available.
 
 ```
-Note that a study can have multiple prefixes registered to it, but each prefix can only be registered to a single study. Also note that each prefix can only be registered to a single study; you cannot reuse a prefix from another study, or one which another user has registered.
+Note that a study can have multiple prefixes registered to it, but each prefix can only be registered to a single study. Also note that as a locus tag is tied to a specific study, you cannot reuse a prefix from another study, or one which another user has registered.
 ```
 
 2. If a study already exists but require a locus tag

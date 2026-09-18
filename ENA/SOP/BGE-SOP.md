@@ -1,5 +1,7 @@
 # BGE SOP
 
+*Note: The BGE project has ended (last submission was mede early September 2026), and this document will not be updated or completed*
+
 This SOP collects all experience and various issues with submitting data to ENA in the BGE project. It is a working document and will be continually extended as we learn new things and gather new knowledge. All information in this document is written from an NBIS perspective and may not be applicable in full by other involved BGE-node active data stewards.
 
 **Table of contents**

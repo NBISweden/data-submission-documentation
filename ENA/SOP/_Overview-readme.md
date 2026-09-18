@@ -10,46 +10,51 @@ The SOP's should be seen as a work in progress, and may be changed, completed, a
 
 ## List of SOP's:
 
-1. [Study registration and description](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/study_registration_and_description.md)
+1. [Study registration and description](study_registration_and_description.md)
 
-1. [New taxonomy registration](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/new_taxonomy.md)
+1. [New taxonomy registration](new_taxonomy.md)
 
-1. [Register a Tree of Life ID](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/register_ToLID.md)
+1. [Register a Tree of Life ID](register_ToLID.md)
 
-1. [Tree of Life metadata](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/tree_of_life_metadata_EBP.md)
+1. [Tree of Life metadata](tree_of_life_metadata_EBP.md)
 
-1. [How to reference Biosamples in ERGA submission](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/reference_biosamples_in_erga.md)
+1. [ERGA-BGE - General how-to submit data in the Biodiversity Genomics Europe project](BGE-SOP.md)
+1. [How to reference Biosamples in ERGA submission](reference_biosamples_in_erga.md)
 
-1. [Submitting an experiment](https://github.com/NBISweden/data-submission-documentation/blob/7aef3400ec6f5cc56b0d43a0f96c6ea43d80932e/ENA/SOP/experiment-submission.md)
+1. [Submitting an experiment](experiment-submission.md)
 
-1. [Convert a GFF and genome fasta to an EMBL flat file](https://github.com/NBISweden/data-submission-documentation/blob/98380c7506f43d393948712670912769d9792698/ENA/SOP/GFF3-to-EMBL.md)
+1. [Convert a GFF and genome fasta to an EMBL flat file](GFF3-to-EMBL.md)
 
-1. [Register a locus tag for assembly submission](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/locus_tag_registration.md)
+1. [Register a locus tag for assembly submission](locus_tag_registration.md)
 
-1. [How to register an umbrella project](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/register_umbrella_project.md])
+1. [How to register and modify an umbrella project](register_and_modify_umbrella_project.md)
 
-1. [Submitting a genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/assembly-submission.md)
+1. [Submitting a genome assembly](assembly-submission.md)
 
-1. [Submitting a mitochondrial assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/mito_assembly.md)
+1. [Tools and scripts when submitting annotated assemblies](assembly-annotation-tools.md)
 
-1. [Submitting a symbiont](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/SOP/symbiont-submission.md)
+1. [Submitting a mitochondrial assembly](mito_assembly.md)
+
+1. [Submitting a symbiont](symbiont-submission.md)
+
+1. [Submitting targeted sequences](targeted-sequences.md)
 
 
 ## List of examples of start-to-end submissions:
 
-- [Geodia (sponge) data - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/5894-Geodia-assembly/README.md)
+- [Geodia (sponge) data - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/5894-Geodia-assembly/README.md)
 
-- [RNA-seq for potato - Raw reads](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/6793-RNAseq-potato/README.md)
+- [RNA-seq for potato - Raw reads](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/6793-RNAseq-potato/README.md)
 
-- [Spider data - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/7419-spider-WGS-assembly/README.md)
+- [Spider data - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/7419-spider-WGS-assembly/README.md)
 
-- [ERGA: Arctic fox - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/ERGA-arctic-fox/README.md)
+- [ERGA: Arctic fox - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/ERGA-arctic-fox/README.md)
 
-- [ERGA: Green toad - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/ERGA-Bufotes/README.md)
+- [ERGA: Green toad - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/ERGA-Bufotes/README.md)
 
-- [ERGA: Clouded apollo butterfly - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/ERGA-Parnassius/README.md)
+- [ERGA: Clouded apollo butterfly - Raw reads + genome assembly](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/ERGA-Parnassius/README.md)
 
-- [ERGA: Stylops (Bee parasite)- Raw reads + genome assembly + mitochondrial assembly + symbiont](https://github.com/NBISweden/data-submission-documentation/blob/95118f344707b3a1003cd153168cb7c08d8ca55f/ENA/ERGA-Stylops-ater/README.md)
+- [ERGA: Stylops (Bee parasite)- Raw reads + genome assembly + mitochondrial assembly + symbiont](https://github.com/NBISweden/data-submission-documentation/blob/main/ENA/ERGA-Stylops-ater/README.md)
 
 
 

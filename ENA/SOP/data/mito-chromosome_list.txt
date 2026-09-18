@@ -1,1 +1,1 @@
-id	MIT	linear-chromosome	Mitochondrion
+id	MIT	Linear-Chromosome	Mitochondrion
