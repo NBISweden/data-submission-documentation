@@ -13,10 +13,10 @@ This SOP describes how to submit an experiment (raw reads) to ENA.
 
 * Create a manifest file, use e.g. [experiment-manifest.txt](./data/experiment-manifest.txt):
 <!-- 
-Much of the below is written from a BGE/ERGA perspective, but should perhaps be told from an agostic one? 
+Much of the below is written from a BGE/ERGA perspective, but should perhaps be told from an agnostic one? 
 -->
     
-* For `NAME`, set a combination of platform, data type and species/TolID, e.g. PacBio-HiFi-StyAte1 (ERGA-pilot), `Pinna rudis Hifi WGS data` (BGE).
+* For `NAME`, set a combination of platform, data type and species/TolID, e.g. `PacBio-HiFi-StyAte1` (ERGA-pilot), `Pinna rudis HiFi WGS data` (BGE).
 * Though optional field, it is recommended to use `LIBRARY_CONSTRUCTION_PROTOCOL` to describe as much as possible regarding on what has happened with the sample from when it was taken until it was sequenced. At a minimum, library preparation protocols should be added.
 * The last line indicate data type
   * For BAM files, begin row with `BAM:` and add the full path to where the sequence file resides, make sure that it is gzipped.
