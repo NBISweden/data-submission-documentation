@@ -1,0 +1,17 @@
+sed -i 's/\tregion\t.*/&;organism=Linum austriacum;mol_type=genomic DNA/' Agat-gff-output/Laustriacum-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum bienne;mol_type=genomic DNA/' Agat-gff-output/Lbienne-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum campanulatum;mol_type=genomic DNA/' Agat-gff-output/Lcampanulatum-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum capitatum;mol_type=genomic DNA/' Agat-gff-output/Lcapitatum-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum flavum;mol_type=genomic DNA/' Agat-gff-output/Lflavum-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum grandiflorum;mol_type=genomic DNA/' Agat-gff-output/Lgrandiflorum_thrum-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum hirsutum;mol_type=genomic DNA/' Agat-gff-output/Lhirsutum-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum leonii;mol_type=genomic DNA/' Agat-gff-output/Lleonii-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum maritimum;mol_type=genomic DNA/' Agat-gff-output/Lmaritimum_thrum-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum narbonense;mol_type=genomic DNA/' Agat-gff-output/Lnarbonense-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum perenne;mol_type=genomic DNA/' Agat-gff-output/Lperenne-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum suffruticosum;mol_type=genomic DNA/' Agat-gff-output/Lsuffruticosum_thrum-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum tauricum;mol_type=genomic DNA/' Agat-gff-output/Ltauricum-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum tenuifolium;mol_type=genomic DNA/' Agat-gff-output/Lteniufolium-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum tenue;mol_type=genomic DNA/' Agat-gff-output/Ltenue-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum thracicum;mol_type=genomic DNA/' Agat-gff-output/Lthracicum-agat.gff 
+sed -i 's/\tregion\t.*/&;organism=Linum trigynum;mol_type=genomic DNA/' Agat-gff-output/Ltrigynum-agat.gff 

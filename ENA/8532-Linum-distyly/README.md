@@ -55,7 +55,7 @@ Files were small, and for convenience all were downloaded locally from Dardel be
 Conversions for chloroplast assemblies were done with the input:
 
 ```
-EMBLmyGFF3 -i [LOCUS TAG] -p PRJEB108312 -r 1 -s 'Linum [SPECIES]' -t circular -g plastid:chloroplast -m 'genomic DNA' [FILENAME].gff3 [FILENAME].fasta -o Linum_[SPECIES]_chloroplast_assembly.embl
+EMBLmyGFF3 -i [LOCUS TAG] -p PRJEB108312 -r 11 -s 'Linum [SPECIES]' -t circular -g plastid:chloroplast -m 'genomic DNA' [FILENAME].gff3 [FILENAME].fasta -o Linum_[SPECIES]_chloroplast_assembly.embl
 ```
 Information on Locus tags and file names were taken from the [metadata spreadsheet](./data/Linum_distyly_metadata_template_default_ERC000011.xlsx).
 
@@ -106,7 +106,7 @@ Laustriacum	blatX	exon	6548	8155	.	-	1	ID=blatx_rpoC1_1_exon_2;Parent=gene-blatx
 Laustriacum	blatX	exon	8908	9339	.	-	1	ID=blatx_rpoC1_1_exon_1;Parent=gene-blatx_rpoC1_1;gbkey=exon;gene=rpoC1
 Laustriacum	blatX	intron	8156	8907	.	-	1	ID=blatx_rpoC1_1_intron_1;Parent=gene-blatx_rpoC1_1;gbkey`intron;gene=rpoC1
 ```
-The Problem was due to a conflicting setting in the [GeSeq 2.03 online pipeline](https://chlorobox.mpimp-golm.mpg.de/geseq.html) used for annotaion. It allowed for using separate modules (i.e. blatX and Chloe) to annotate the same features (CDS, tRNA and rRNA), effectively doubling the information in the gff, which the ENA validaton interpreted as duplication of features. Resolving the duplication issues using `agat_sp_fix_features_locations_duplicated.pl` and `(agat_convert_sp_gxf2gxf.pl)` in AGAT did not work.
+The Problem was due to a conflicting setting in the [GeSeq 2.03 online pipeline](https://chlorobox.mpimp-golm.mpg.de/geseq.html) used for annotation. It allowed for using separate modules (i.e. blatX and Chloe) to annotate the same features (CDS, tRNA and rRNA), effectively doubling the information in the gff, which the ENA validaton interpreted as duplication of features. Resolving the duplication issues using `agat_sp_fix_features_locations_duplicated.pl` and `(agat_convert_sp_gxf2gxf.pl)` in AGAT did not work.
 
 The solution was to re-run the pipeline with non-overlapping annotation features for blatX (tRNA and rRNA) and Chloe (CDS).
 
@@ -142,7 +142,17 @@ java -jar webin-cli-9.0.1.jar -username Webin-[XXXXX] -password [PASSWORD] -cont
 ```
 Successful submission was confirmed in the Webin-CLI [output](./data/receipt_target_seq_Linum_disyly_2.txt), with assigned analysis accession ERZ29221441.
 
-## Continuing and unresolved issues at ENA
+## Continuation of issues
+
+### 15 submitted assemblies
+For all 15 submitted chloroplast annotations there are mistakes in locus tag indexing (start at 2 instead of 1, unsorted genes, orphan CDSs, unjoined CDSs, etc) as well as missing inital `source` feature. For these we realised that the .gff format outputted by GeSeq is not ready 'as is' as input to EMBLmyGFF3. Initial attempts trying to fix the .gff files, using python scripts designed by Gemini as well as using AGAT (see [README-GFF-AGAT.md](README-GFF-AGAT.md)), failed. What finally worked was to not use EMBLmyGFF3 at all:
+
+* Rerun all annotations in GeSeq, adding genbank as output format
+* With assistance of Gemini create a script ([gbk2embl.py](./scripts/gbk2embl.py)) which creates the embl file. Note though that the script will **only** work for Linum species as it is written currently. 
+
+For more details on the steps, see [README-genbank.md](./README-genbank.md).
+
+### 2 failed assembly submissions
 For two species, *L. leonii* and *L. bienne*, the chloroplast assemblies failed ENA validation with the same type of error:
 
 ```
@@ -152,5 +162,19 @@ ERROR: organism classified. Submitted /transl_table "11" conflicts with translat
 Curiously, the two species experiencing this issue are the only two species where the chloroplast is derived from WGS data, and in the case of *L. bienne*, from data downloaded from the NCBI.
 The cases are still active issues for the ENA helpdesk.
 
-Additionally, all submitted chloroplast annotations passed validation, but seem have encountered processing errors in the ENA internal validation pipeline. 
-These cases are also active issues for the ENA helpdesk.
+### Looking into fasta files of leonii and bienne
+* I checked if there are any odd characters, but didn't find any
+    ```
+    grep -v "^>" file.fasta | grep -i "[^ACGTN\r\n]"
+    LC_ALL=C grep -P "[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\xFF]" file.fasta
+    ```
+* I verified that the header lines looked ok
+* I compared the lengths of the sequences:
+    * L leonii ~173000
+    * L bienne ~ 156000 (however it has some weird line ending, when I do a `cat` the next file header extends the sequence instead of ending up on a new row)
+    * The others (153000-172000)
+    * Gemini says: *If any assembly is significantly shorter (e.g., ~120 kb, indicating collapsed IRs) or much larger (indicating duplicated/unmerged contigs), the assembly process failed.*
+* Could be worth looking into Linum usitatissimum chloroplast assembly:
+  * NCBI <https://www.ncbi.nlm.nih.gov/nuccore/NC_036356.1/>
+  * ENA <https://www.ebi.ac.uk/ena/browser/view/KY849971>
+
