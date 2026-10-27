@@ -14,6 +14,21 @@ Submission of HiFi and RNAseq data for *Stylops ater*, as part of the ERGA pilot
 
 As it turned out, there are several assemblies, one annotated genome assembly, one mitochondrial assembly (unannotated), and 2 Wolbachia symbiont assemblies. At least the symbiont assemblies will be submitted in a separate project/study. Hence, an umbrella project, linking all related projects will also be created.
 
+* **Update 2026-10-27:** All 4 projects related to *Stylops ater* has been pushed forward regarding release date, to 2027-06-03 due to them being released 2026-11-07 otherwise. PRJEB70320 (main), PRJEB71935 (Wolbachia symbiont), and PRJEB71993 (mito) were updated via browser, PRJEB71963 (umbrella):
+    * Created [umbrella-holdDate.xml](./data/umbrella-holdDate.xml) and submitted using curl:
+    ```
+    curl -u Username:Password -F "SUBMISSION=@umbrella-holdDate.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"  
+    ```
+    * Receipt:
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+    <RECEIPT receiptDate="2026-10-27T14:43:38.574Z" submissionFile="umbrella-holdDate.xml" success="true">
+        <MESSAGES/>
+        <ACTIONS>HOLD</ACTIONS>
+    </RECEIPT>
+    ```
+
 ## Procedure overview and links to examples
 
 ### Links
