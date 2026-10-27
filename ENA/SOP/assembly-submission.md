@@ -45,7 +45,7 @@ An assembly can either be submitted to the same study/project as the raw data, o
         * Coverage = (sum_len_forward_file + sum_len_reverse_file)/assembly length
     * The fasta file needs to be gzipped / compressed.
     * If the assembly is not only on scaffold level, but **chromosome** level (i.e. the most complete level), a `chromosome_list.txt` (gzipped) needs to be created, containing three columns:
-        1. identifier as is in the .fasta file
+        1. identifier as is in the .fasta file (or as in `AC` feature line if annotated assembly)
         2. which chromosome it is
         3. if Linear or Circular, and the chromosome type
            * E.g: `SUPER_1	1	Linear-Chromosome`

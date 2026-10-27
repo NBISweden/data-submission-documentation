@@ -38,7 +38,7 @@ Should this guide be generally written to also include chloroplasts, as both are
     * Add the collected the metadata from the bioinformatician/individual who did the assembly, as well as the accession numbers of the study (created above) and the sample (created earlier, either at ENA or via COPO).
     * For the `ASSEMBLY_NAME`, set a species abbreviation in combination with the type of assembly, e.g. `StyAte-mito-assembly`.
     * Add the name of the assembly file (gzipped fasta format). **Note:** If this is an annotated assembly, change `FASTA` to `FLATFILE` and add the name of the EMBL flat file instead (gzipped)
-    * Add the name of the chromosome list (gzipped)
+    * Add the name of the chromosome list (gzipped). *Note: Ensure that the chromosome name match the header in the fasta file or the AC line in the embl file, if annotated assembly*
 
 ### Create EMBL flat file (if annotated assembly)
 * If the assembly is annotated, see [GFF3 to EMBL](./GFF3-to-EMBL.md) on how to transform the FASTA and GFF file into EMBL flat file format (remember especially to add `--organelle mitochondrion`).
