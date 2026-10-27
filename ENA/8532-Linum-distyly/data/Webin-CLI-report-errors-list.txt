@@ -1,0 +1,82 @@
+::::::::::::::
+../Submission/genome/Linum_bienne_chloroplast_26_04/validate/Lbienne.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 343 of Lbienne.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1100 of Lbienne.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_campanulatum_chloroplast_26_04-v2/validate/Lcampanulatum.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 398 of Lcampanulatum.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1203 of Lcampanulatum.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_capitatum_chloroplast_26_04-v2/validate/Lcapitatum.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 398 of Lcapitatum.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1203 of Lcapitatum.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_flavum_chloroplast_26_04-v2/validate/Lflavum.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 398 of Lflavum.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1203 of Lflavum.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_grandiflorum_chloroplast_26_04-v2/validate/Lgrandiflorum_thrum.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 343 of Lgrandiflorum_thrum.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1101 of Lgrandiflorum_thrum.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_hirsutum_chloroplast_26_04-v2/validate/Lhirsutum.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 330 of Lhirsutum.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1099 of Lhirsutum.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_leonii_chloroplast_26_04/validate/Lleonii.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 253 of Lleonii.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 997 of Lleonii.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_maritimum_chloroplast_26_04-v2/validate/Lmaritimum_thrum.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 397 of Lmaritimum_thrum.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1201 of Lmaritimum_thrum.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_narbonense_chloroplast_26_04-v2/validate/Lnarbonense.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 343 of Lnarbonense.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1077 of Lnarbonense.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_perenne_chloroplast_26_04-v2/validate/Lperenne.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 253 of Lperenne.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 998 of Lperenne.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_suffruticosum_chloroplast_26_04-v2/validate/Lsuffruticosum_thrum.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 399 of Lsuffruticosum_thrum.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 566 of Lsuffruticosum_thrum.embl.gz] - note: this is a ndhK gene which starts earlier compared to https://www.ncbi.nlm.nih.gov/nuccore/114107025, so I changed also this from 'V' to 'M'
+ERROR: Expected and conceptual translations are different. [ line: 1203 of Lsuffruticosum_thrum.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_tauricum_chloroplast_26_04-v2/validate/Ltauricum.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 398 of Ltauricum.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1189 of Ltauricum.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_tenue_chloroplast_26_04-v2/validate/Ltenue.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 398 of Ltenue.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 565 of Ltenue.embl.gz] - note: this is a ndhK gene which starts earlier compared to https://www.ncbi.nlm.nih.gov/nuccore/114107025, so I changed also this from 'V' to 'M'
+ERROR: Expected and conceptual translations are different. [ line: 1203 of Ltenue.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_tenuifolium_chloroplast_26_04-v2/validate/Ltenuifolium.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 398 of Ltenuifolium.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1199 of Ltenuifolium.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_thracicum_chloroplast_26_04-v2/validate/Lthracicum.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 398 of Lthracicum.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1203 of Lthracicum.embl.gz]
+::::::::::::::
+../Submission/genome/Linum_trigynum_chloroplast_26_04-v2/validate/Ltrigynum.embl.gz.report
+::::::::::::::
+ERROR: Expected and conceptual translations are different. [ line: 384 of Ltrigynum.embl.gz]
+ERROR: Expected and conceptual translations are different. [ line: 1189 of Ltrigynum.embl.gz]
