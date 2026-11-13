@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Lmaritimum_MAR12-S17_012
+RUN_REF	ERR16839227
+ASSEMBLYNAME	Linum_maritimum_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	471
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Lmaritimum_thrum.embl.gz
+CHROMOSOME_LIST	chromosome_list_maritimum.txt.gz

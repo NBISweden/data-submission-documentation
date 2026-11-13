@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Ltauricum_L121-S5_024
+RUN_REF	ERR16839231
+ASSEMBLYNAME	Linum_tauricum_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	496
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Ltauricum.embl.gz
+CHROMOSOME_LIST	chromosome_list_tauricum.txt.gz

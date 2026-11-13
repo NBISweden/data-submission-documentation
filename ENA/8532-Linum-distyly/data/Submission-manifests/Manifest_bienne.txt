@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	SAMN03083755
+RUN_REF	SRR1592607, SRR1592608, SRR1592609
+ASSEMBLYNAME	Linum_bienne_chloroplast_26_04
+ASSEMBLY_TYPE	isolate
+COVERAGE	462
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq using online available WGS short-read data (NCBI: SRR1592607)
+FLATFILE	Lbienne.embl.gz
+CHROMOSOME_LIST	chromosome_list_bienne.txt.gz

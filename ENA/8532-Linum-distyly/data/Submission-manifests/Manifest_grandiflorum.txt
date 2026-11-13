@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Lgrandiflorum_Lgra-61-04-thrum-S73
+RUN_REF	ERR16839224
+ASSEMBLYNAME	Linum_grandiflorum_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	533
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Lgrandiflorum_thrum.embl.gz
+CHROMOSOME_LIST	chromosome_list_grandiflorum.txt.gz

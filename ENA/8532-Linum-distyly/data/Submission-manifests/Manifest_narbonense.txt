@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Lnarbonense_L85-S18_013
+RUN_REF	ERR16839228
+ASSEMBLYNAME	Linum_narbonense_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	507
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Lnarbonense.embl.gz
+CHROMOSOME_LIST	chromosome_list_narbonense.txt.gz

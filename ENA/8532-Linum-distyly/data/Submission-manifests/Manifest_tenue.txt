@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Ltenue_L21-22-S31_ 026
+RUN_REF	ERR16839232
+ASSEMBLYNAME	Linum_tenue_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	486
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Ltenue.embl.gz
+CHROMOSOME_LIST	chromosome_list_tenue.txt.gz

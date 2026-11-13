@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Ltrigynum_TRI-10-7-S33_028
+RUN_REF	ERR16839235
+ASSEMBLYNAME	Linum_trigynum_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	499
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Ltrigynum.embl.gz
+CHROMOSOME_LIST	chromosome_list_trigynum.txt.gz

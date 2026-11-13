@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Lcapitatum_L34-S12_007
+RUN_REF	ERR16839222
+ASSEMBLYNAME	Linum_capitatum_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	501
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Lcapitatum.embl.gz
+CHROMOSOME_LIST	chromosome_list_capitatum.txt.gz

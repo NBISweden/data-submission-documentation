@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Lleonii_LEO-18-2-S35_030
+RUN_REF	ERR16839226
+ASSEMBLYNAME	Linum_leonii_chloroplast_26_04
+ASSEMBLY_TYPE	isolate
+COVERAGE	492
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Lleonii.embl.gz
+CHROMOSOME_LIST	chromosome_list_leonii.txt.gz

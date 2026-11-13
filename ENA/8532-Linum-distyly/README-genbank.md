@@ -17,6 +17,7 @@ Attempts trying to fix the .gff files so that they would work with EMBLmyGFF3 pr
 ## 3. Update manifest files
 * Replace the FLATFILE value with the new embl file name
 * Add `-v2` to the ASSEMBLY_NAME in order for it to be unique (for the 15 assemblies already submitted)
+* All manifests are found in[Submission-manifests/](./data/Submission-manifests/)
 
 ## 4. Validate using Webin-CLI
 ```
@@ -131,4 +132,12 @@ java -jar webin-cli-9.0.3.jar -username Webin-[XXXXX] -password [PASSWORD] -cont
     INFO : Files have been successfully uploaded.
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ30603855
     ```
-    
+
+## 6. ENA processing
+* Accession numbers or *L. bienne* and *leonii*:
+    ```
+    ASSEMBLY_NAME                  | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC | SCAFFOLD_ACC | CHROMOSOME_ACC
+    Linum_bienne_chloroplast_26_04 | GCA_990086714 | PRJEB108312 | SRS712706   |            |              | OZ577679-OZ577679
+    Linum_leonii_chloroplast_26_04 | GCA_990087612 | PRJEB108312 | ERS29478473 |            |              | OZ577680-OZ577680
+    ```
+* All others have failed processing at ENA, for some reason. I am hesitant to contact helpdesk at the moment, will give them some time to attempt re-processing (last (first) processing attempt was made 2026-10-27).

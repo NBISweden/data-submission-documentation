@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Lhirsutum_L65-S14_009
+RUN_REF	ERR16839225
+ASSEMBLYNAME	Linum_hirsutum_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	504
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Lhirsutum.embl.gz
+CHROMOSOME_LIST	chromosome_list_hirsutum.txt.gz

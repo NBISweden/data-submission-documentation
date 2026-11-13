@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Lperenne_L96-S22_017
+RUN_REF	ERR16839229
+ASSEMBLYNAME	Linum_perenne_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	478
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Lperenne.embl.gz
+CHROMOSOME_LIST	chromosome_list_perenne.txt.gz

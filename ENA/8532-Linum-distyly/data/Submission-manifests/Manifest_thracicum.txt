@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Lthracicum_L160-S32_027
+RUN_REF	ERR16839234
+ASSEMBLYNAME	Linum_thracicum_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	461
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Lthracicum.embl.gz
+CHROMOSOME_LIST	chromosome_list_thracicum.txt.gz

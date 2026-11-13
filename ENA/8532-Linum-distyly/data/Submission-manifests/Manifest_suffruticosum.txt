@@ -1,0 +1,12 @@
+STUDY	PRJEB108312
+SAMPLE	Lsuffruticosum_SUFF-18-5-3-S27_022
+RUN_REF	ERR16839229
+ASSEMBLYNAME	Linum_suffruticosum_chloroplast_26_04-v2
+ASSEMBLY_TYPE	isolate
+COVERAGE	438
+PROGRAM	GetOrganelle
+PLATFORM	Illumina
+MOLECULETYPE	genomic DNA
+DESCRIPTION	Chloroplast genome assembly with GetOrganelle and annotated with GeSeq
+FLATFILE	Lsuffruticosum_thrum.embl.gz
+CHROMOSOME_LIST	chromosome_list_suffricatosum.txt.gz
