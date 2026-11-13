@@ -162,7 +162,9 @@ ERROR: organism classified. Submitted /transl_table "11" conflicts with translat
 Curiously, the two species experiencing this issue are the only two species where the chloroplast is derived from WGS data, and in the case of *L. bienne*, from data downloaded from the NCBI.
 The cases are still active issues for the ENA helpdesk.
 
-### Looking into fasta files of leonii and bienne
+* What ever the issues were, it is now solved, they are accessioned, see further [README-genbank.md](./README-genbank.md)
+
+#### Looking into fasta files of leonii and bienne
 * I checked if there are any odd characters, but didn't find any
     ```
     grep -v "^>" file.fasta | grep -i "[^ACGTN\r\n]"
@@ -178,3 +180,7 @@ The cases are still active issues for the ENA helpdesk.
   * NCBI <https://www.ncbi.nlm.nih.gov/nuccore/NC_036356.1/>
   * ENA <https://www.ebi.ac.uk/ena/browser/view/KY849971>
 
+### 2026-11 *L. perenne* and *L. leonii* nuclear assemblies
+* We were contacted by the research group who had noticed issues with the public nuclear assemblies previously submitted:
+  1. *L. perenne* hap1 annotation for TSS1 gene (mentioned in their paper) was incorrect, and they asked us to update the annotation. See further [README-perenne.md](./README-perenne.md).
+  1. *L. leonii* annotation was completely missing. See further [README-leonii.md](./README-leonii.md).

@@ -1,0 +1,11 @@
+STUDY           PRJEB87194
+SAMPLE          SAMEA116906127
+ASSEMBLYNAME    Linum_perenne_haplotype_1_assembly_n_2026_06.2
+ASSEMBLY_TYPE   isolate
+COVERAGE        30
+PROGRAM         Hifiasm
+PLATFORM        Illumina NovaSeq 6000, Revio
+MOLECULETYPE    genomic DNA
+DESCRIPTION     Initial assembly with IPA HiFi Genome Assembler. Gene annotation was performed using a soft-masked version of the genome. Structural annotation of the protein coding genes using MAKER. RNA-Seq from tissue specific samples. Functional annotation was done with InterProScan. Note - this version does not contain a Dbxref feature due to the increase in file size. Original file can be obtained upon request.
+RUN_REF	        ERR14707595, ERR14767837, ERR14767839, ERR14672575, ERR14672576, ERR14672577, ERR14672578, ERR14672579, ERR14672580, ERR14672581, ERR14672582, ERR14672583, ERR14672584, ERR14672585, ERR14672586, ERR14672587, ERR14672588, ERR14672589, ERR14672590, ERR14672591, ERR14672592, ERR14672593, ERR14672594, ERR14672595, ERR14672596
+FLATFILE        Linum_perenne_hap1_final_cleaned_TSS_transcript_updated.embl.gz
