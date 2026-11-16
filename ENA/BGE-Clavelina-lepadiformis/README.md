@@ -223,7 +223,12 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     INFO : Files have been successfully uploaded.
     INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ30662695
     ```
-
+* Accession numbers:
+    ```
+    ASSEMBLY_NAME      | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    kaClaLepa18-hap1.2 | GCA_982319195 | PRJEB90613  | ERS20413387 | CEVNDL020000001-CEVNDL020000166 |              | OZ452633-OZ452641
+    kaClaLepa18-hap2.2 | GCA_982319175 | PRJEB110122 | ERS20413387 | CEVNDM020000001-CEVNDM020000180 |              | OZ452642-OZ452650
+    ```
 #### Add assembly to umbrella
 * Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
 * Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
