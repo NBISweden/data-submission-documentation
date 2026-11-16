@@ -196,6 +196,39 @@ Submission will be (attempted) done via CNAG script and programmatic submission 
     ```
 * Release study and check that it is shown under umbrella
 
+#### update hap1 & hap2 assemblies 2026-11-13
+* Bioinformatician has produced updated assemblies for the to haploids. I created version 2 manifests ([hap1](./data/kaClaLepa18-hap1-v2-manifest.txt) and [hap2](./data/kaClaLepa18-hap2-v2-manifest.txt)) and also updated the [unlocalised chromosome list for hap2](./data/hap2-unlocalised-v2_list.txt). In the manifests is updated assembly names, name of fasta files, and name of unlocalised file (hap2).
+* Submit (from local laptop):
+    ```
+    java -jar ~/webin-cli-10.0.0.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./kaClaLepa18-hap1-v2-manifest.txt -validate
+    java -jar ~/webin-cli-10.0.0.jar -context genome -userName Webin-XXXXX -password 'YYYYY' -manifest ./kaClaLepa18-hap2-v2-manifest.txt -validate
+    ```
+* Receipt hap1:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /home/yvonne/BGE/C-lepadiformis/././webin-cli.report
+    INFO : Uploading file: /home/yvonne/BGE/C-lepadiformis/kaClaLepa1.hap1.5.primary.curated.fa.gz
+    INFO : Uploading file: /home/yvonne/BGE/C-lepadiformis/hap1-chromosome_list.txt.gz
+    INFO : Uploading file: /home/yvonne/BGE/C-lepadiformis/hap1-unlocalised_list.txt.gz
+    INFO : Files have been successfully uploaded.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ30662694
+    ```
+* Receipt hap2:
+    ```
+    INFO : Connecting to FTP server : webin2.ebi.ac.uk
+    INFO : Creating report file: /home/yvonne/BGE/C-lepadiformis/././webin-cli.report
+    INFO : Uploading file: /home/yvonne/BGE/C-lepadiformis/kaClaLepa1.hap2.5.primary.curated.fa.gz
+    INFO : Uploading file: /home/yvonne/BGE/C-lepadiformis/hap2-chromosome_list.txt.gz
+    INFO : Uploading file: /home/yvonne/BGE/C-lepadiformis/hap2-unlocalised-v2_list.txt.gz
+    INFO : Files have been successfully uploaded.
+    INFO : The submission has been completed successfully. The following analysis accession was assigned to the submission: ERZ30662695
+    ```
+* Accession numbers:
+    ```
+    ASSEMBLY_NAME      | ASSEMBLY_ACC  | STUDY_ID    | SAMPLE_ID   | CONTIG_ACC                      | SCAFFOLD_ACC | CHROMOSOME_ACC
+    kaClaLepa18-hap1.2 | GCA_982319195 | PRJEB90613  | ERS20413387 | CEVNDL020000001-CEVNDL020000166 |              | OZ452633-OZ452641
+    kaClaLepa18-hap2.2 | GCA_982319175 | PRJEB110122 | ERS20413387 | CEVNDM020000001-CEVNDM020000180 |              | OZ452642-OZ452650
+    ```
 #### Add assembly to umbrella
 * Add the assembly project when it has been submitted, see [ENA docs](https://ena-docs.readthedocs.io/en/latest/faq/umbrella.html#adding-children-to-an-umbrella) on how to update.
 * Create [update.xml](./data/update.xml) and [umbrella_modified.xml](./data/umbrella_modified.xml)
